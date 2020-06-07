@@ -1,3 +1,23 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://toppers.github.io/hakoniwa/"
+languageCode = "ja"
+title = "Top"
+theme = "kube"
+description = "IoT／自動運転時代の仮想シミュレーション環境"
+Paginate = 4
+[Params]
+  RSSLink = "/index.xml"
+  author = "TOPPERS Projects HAKONIWA WG" # add your company name
+  email = "secretariat@toppers.jp"
+
+[[menu.main]]
+    name = "箱庭とは"
+    weight = -100
+    url = "/docs/"
+[[menu.main]]
+    name = "プロトタイプモデル"
+    weight = -100
+    url = "/prototypes/"
+[[menu.main]]
+    name = "技術情報・発表資料"
+    weight = -100
+    url = "/technical-links/"

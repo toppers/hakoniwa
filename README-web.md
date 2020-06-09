@@ -6,6 +6,10 @@
     cd hakoniwa
     git submodule update --init
 
+## Preview on localhost
+
+    hugo server -D
+
 ## Requirements
 
 [Install Hugo](https://gohugo.io/getting-started/installing/)

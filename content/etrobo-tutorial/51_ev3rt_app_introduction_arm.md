@@ -1,3 +1,11 @@
++++
+title = "ETロボコンシミュレータ導入手順"
+draft = false
+weight = 200
+toc = true
+script = 'animation'
++++
+
 ### EV3ロボット制御アプリ
 
 現時点の制御アプリの開発フォルダは以下のフォルダで，制御アプリは app.c です．  
@@ -44,10 +52,10 @@ app.c  app.cfg  app.h  arg_sakura.txt  device_config.txt  log.txt  Makefile  Mak
   - デコードエラーになった場合は，以下に issue を挙げていただければ対応します．
     - https://github.com/tmori/athrill-target
     - この際，調査用に頂きたい情報は以下になります．
-    - \1. athrillが出力したエラーメッセージ
-    - 例．CPU(pc=<アドレス>) Exception!!
-    - \2. エラー発生した箇所のアセンブラ命令コード(objdumpの結果)
-    - 例．arm-none-eabi-objdump -D asp | less
-    - objdumpの出力書式は以下の通りです．
-    - <アドレス>: <機械語(16進数) <アセンブラ命令> <オペランド>
-    - athrillのエラーメッセージ出力されたアドレスについて，上記箇所をレポート頂ければ上記命令の追加対応が可能になります．
+        1. athrillが出力したエラーメッセージ  
+            例．CPU(pc=<アドレス>) Exception!!
+        1. エラー発生した箇所のアセンブラ命令コード(objdumpの結果)  
+            例．arm-none-eabi-objdump -D asp | less  
+            objdumpの出力書式は以下の通りです．  
+            <アドレス>: <機械語(16進数) <アセンブラ命令> <オペランド>  
+            athrillのエラーメッセージ出力されたアドレスについて，上記箇所をレポート頂ければ上記命令の追加対応が可能になります．

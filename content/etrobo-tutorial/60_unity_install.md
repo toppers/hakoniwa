@@ -1,4 +1,12 @@
-# Unityのインストール・パッケージのインポート
++++
+title = "ETロボコンシミュレータ導入手順"
+draft = false
+weight = 200
+toc = true
+script = 'animation'
++++
+
+# Unityのインストール・パッケージのインポート・初回に行う設定
 
 
 
@@ -97,3 +105,11 @@ Unityのメニューから「Edit」⇒「Project Settings」と選択し，下�
 MMAP版の場合は，0.01くらいでよいと思われます．
 
 これでインポート作業終了です．
+
+
+
+## 初回に行う設定
+
+------
+- [UDP版を使用する場合はこちら]({{< ref "61_unity_install_udp.md">}})
+- [MMAP版を使用する場合はこちら]({{< ref "61_unity_install_mmap.md">}})

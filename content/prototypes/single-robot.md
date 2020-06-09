@@ -7,6 +7,6 @@ toc = true
 script = 'animation'
 +++
 
-## [導入方法](/etrobo-setup)
+## [導入方法]({{< ref "/etrobo-setup/etrobo-setup-index.md">}})
 
-## [使用方法](/etrobo-usage)
+## [使用方法]({{< ref "/etrobo-usage/etrobo-usage-index.md">}})

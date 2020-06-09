@@ -1,3 +1,11 @@
++++
+title = "ETロボコンシミュレータ導入手順"
+draft = false
+weight = 200
+toc = true
+script = 'animation'
++++
+
 # athrill2のインストール
 
 

@@ -1,3 +1,11 @@
++++
+title = "ETロボコンシミュレータ導入手順"
+draft = false
+weight = 200
+toc = true
+script = 'animation'
++++
+
 # UDP用パラメータ設定
 
 Unityとathrillをリモートで通信する場合は，以下のパラメータを設定する必要があります．

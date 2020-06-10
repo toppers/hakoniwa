@@ -1,3 +1,11 @@
++++
+title = "ETロボコンシミュレータ導入手順"
+draft = false
+weight = 200
+toc = true
+script = 'animation'
++++
+
 # 箱庭用 EV3RT 開発環境のダウンロード
 
 

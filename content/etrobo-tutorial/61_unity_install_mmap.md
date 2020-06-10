@@ -1,3 +1,11 @@
++++
+title = "ETロボコンシミュレータ導入手順"
+draft = false
+weight = 200
+toc = true
+script = 'animation'
++++
+
 # MMAP用パラメータ設定
 
 MMAP版のパッケージ[ev3rt-demo1.0-1.unitypackage]をインストールされた場合は，MMAPの設定が必要になります．  

@@ -22,11 +22,11 @@ script = 'animation'
 対応するプラットフォーム/ターゲットCPUの導入手順をご確認ください．
 
 - Windows
-    - V850版
-    - ARM版
+    - [V850版]({{< ref "etrobo-setup-index-windows-v850.md" >}})
+    - [ARM版]({{< ref "etrobo-setup-index-windows-arm.md" >}})
 - Linux
-    - V850版（非対応です）
-    - ARM版
+    - [V850版]({{< ref "etrobo-setup-index-linux-v850.md" >}})
+    - [ARM版]({{< ref "etrobo-setup-index-linux-arm.md" >}})
 - Mac
-    - V850版
-    - ARM版
+    - V850版（非対応です）
+    - [ARM版]({{< ref "etrobo-setup-index-mac-arm.md" >}})

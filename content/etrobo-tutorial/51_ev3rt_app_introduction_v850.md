@@ -1,3 +1,11 @@
++++
+title = "ETロボコンシミュレータ導入手順"
+draft = false
+weight = 200
+toc = true
+script = 'animation'
++++
+
 ### EV3ロボット制御アプリ
 
 現時点の制御アプリの開発フォルダは以下のフォルダで，制御アプリは app.c です．  

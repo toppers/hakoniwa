@@ -8,7 +8,7 @@
 
 ## Preview on localhost
 
-    hugo server -D --baseURL="localhost:1313"
+    hugo server -D
 
 ## Requirements
 

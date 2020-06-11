@@ -12,5 +12,5 @@
 
 ## Requirements
 
-[Install Hugo](https://gohugo.io/getting-started/installing/)
+[Install Hugo](https://gohugo.io/getting-started/installing/) (v0.72.0 or later)
 

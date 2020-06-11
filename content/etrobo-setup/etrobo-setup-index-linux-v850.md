@@ -1,9 +1,6 @@
 +++
 title = "ETロボコンシミュレータ導入手順(Linux/V850編)"
 draft = false
-weight = 200
-toc = true
-script = 'animation'
 +++
 
 # ETロボコンシミュレータ導入手順(Linux/V850編)

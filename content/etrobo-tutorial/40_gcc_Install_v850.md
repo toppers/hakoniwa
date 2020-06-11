@@ -1,9 +1,6 @@
 +++
 title = "ETロボコンシミュレータ導入手順"
 draft = false
-weight = 200
-toc = true
-script = 'animation'
 +++
 
 # linux版64bit gccコンパイラ(ライブラリ含む)のインストール

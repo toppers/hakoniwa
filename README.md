@@ -9,9 +9,14 @@
 
 ## 本リポジトリについて
 
-現在，本リポジトリは，[箱庭WGのWebページ](https://toppers.github.io/hakoniwa/)の運用のために利用しています．Webページの不具合や修正提案などありましたら[Issues](https://github.com/toppers/hakoniwa/issues)でお知らせください．Pull Requestもいただけますと幸いです．Pull Requestをお送り頂ける場合は，`[webのブランチ](https://github.com/toppers/hakoniwa/tree/web)`にお願いします．
+現在，本リポジトリは，[箱庭WGのWebページ](https://toppers.github.io/hakoniwa/)の運用のために利用しています．
 
-今後，箱庭実行環境のパッケージスクリプトなども提供していく予定です．
+- Webページの不具合や修正提案などありましたら[Issues](https://github.com/toppers/hakoniwa/issues)でお知らせください．
+- Pull Requestもいただけますと幸いです．
+  - Pull Requestをお送り頂ける場合は，[`web`のブランチ](https://github.com/toppers/hakoniwa/tree/web)にお願いします．
+  - Merge元のブランチ名は `web-` のprefixを付けてください．
+
+今後，本リポジトリにて，箱庭実行環境のパッケージスクリプトなども提供していく予定です．
 
 ## ライセンス
 

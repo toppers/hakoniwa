@@ -19,11 +19,11 @@ draft = false
 対応するプラットフォーム/ターゲットCPUの導入手順をご確認ください．
 
 - Windows
-    - [V850版]({{< ref "etrobo-setup-index-windows-v850.md" >}})
-    - [ARM版]({{< ref "etrobo-setup-index-windows-arm.md" >}})
+    - [V850版]({{< ref "single-robot-setup-index-windows-v850.md" >}})
+    - [ARM版]({{< ref "single-robot-setup-index-windows-arm.md" >}})
 - Linux
-    - [V850版]({{< ref "etrobo-setup-index-linux-v850.md" >}})
-    - [ARM版]({{< ref "etrobo-setup-index-linux-arm.md" >}})
+    - [V850版]({{< ref "single-robot-setup-index-linux-v850.md" >}})
+    - [ARM版]({{< ref "single-robot-setup-index-linux-arm.md" >}})
 - Mac
     - V850版（非対応です）
-    - [ARM版]({{< ref "etrobo-setup-index-mac-arm.md" >}})
+    - [ARM版]({{< ref "single-robot-setup-index-mac-arm.md" >}})

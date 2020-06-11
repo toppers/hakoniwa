@@ -27,11 +27,11 @@ script = 'animation'
 
 ### 導入方法
 
-- [導入方法(TOP)]({{< ref "/etrobo-setup/etrobo-setup-index.md">}})
+- [導入方法(TOP)]({{< ref "/single-robot-setup/single-robot-setup-index.md">}})
 
 ### 使用方法
 
-- [使用方法(TOP)]({{< ref "/etrobo-usage/etrobo-usage-index.md">}})
+- [使用方法(TOP)]({{< ref "/single-robot-usage/single-robot-usage-index.md">}})
 
 ### 動作例のデモ
 

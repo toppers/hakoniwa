@@ -6,7 +6,7 @@ description = "IoT／自動運転時代の仮想シミュレーション環境"
 Paginate = 4
 [Params]
   RSSLink = "/index.xml"
-  author = "TOPPERS Projects HAKONIWA WG" # add your company name
+  author = "TOPPERS Project HAKONIWA WG" # add your company name
   email = "secretariat@toppers.jp"
 
 [[menu.main]]

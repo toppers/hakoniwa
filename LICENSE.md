@@ -1,4 +1,4 @@
-Hakoniwa  
+hakoniwa  
     Virtual Simulation Environment for the IoT/Automatic Driving Era  
   
 Copyright (C) 2019- by Hakoniwa Working-Group, TOPPERS Project  
@@ -47,9 +47,9 @@ Copyright (C) 2019- by Hakoniwa Working-Group, TOPPERS Project
  INDIRECTLY CAUSED FROM THE USE OF THIS SOFTWARE.  
   
 ---  
-  
-箱庭  
-　IoT／自動運転時代の仮想シミュレーション環境　  
+   
+hakoniwa-Unity-HackEV  
+    IoT／自動運転時代の仮想シミュレーション環境  
   
 Copyright (C) 2019- by TOPPERSプロジェクト箱庭ワーキンググループ  
   

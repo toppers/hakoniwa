@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>箱庭 on Top</title><link>https://toppers.github.io/hakoniwa/</link><description>Recent content in 箱庭 on Top</description><generator>Hugo -- gohugo.io</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/index.xml" rel="self" type="application/rss+xml"/><item><title>技術的背景</title><link>https://toppers.github.io/hakoniwa/docs/background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/background/</guid><description>IoT (Internet of Things) は，情報技術の総合格闘技と言えます．
+IoTシステムは，多様かつ大量の情報機器が，ネットワーク通信を介して密接に絡み合っています． 様々な技術分野から多くの技術者が集まり，みんなで英知を結集してIoTシステムを構築する必要があります．
+例えば自動運転システムの例を考えてみましょう．このように様々な技術領域を横断しています．
+組込み系 自動運転の判断処理を実現するソフトウェアの開発 ECU間の通信機構の開発 制御系 メカやエレキを制御するECUハードウェアの開発 IT・ネットワーク系 Web UI・スマホアプリケーションの開発 ビッグデータの統計処理を担うクラウドサーバの管理・保守 車車間・機器間の効率的な通信制御の実現 アプリケーション系 配車管理や交通流管理アプリの開発 このようなIoTシステムを構築する際の課題として，下記が考えられます．
+問題発生経路の複雑化 全体結合しないと見えない問題が多数潜んでいる 様々な機器間の整合性を取れない 原因調査の複雑化 どこで何がおこっているのか調査困難 そもそもデバッグすること自体が難しい 実証実験のコスト増 実証実験は手軽に実施できない 各分野のエンジニアの総動員 手間，時間，費用がかかる 次に，ロボットを活用したIoTサービスの構築時に起こりえる課題を考えてみましょう．
+ロボットをどう組み合わせると，効果的な新しいサービスを創出できるかわからない 新しいサービスを検討するにしても，実物のロボットでは準備・手間がかかりすぎる 頻繁に変更されるシステム要件に対して，変更適用に時間がかかる 実証実験時には結合トラブルが頻発する 「箱庭」は，このような技術的課題を解決し，IoTのシステム開発／サービス構築を加速化することができるプラットフォームとなること目指します．</description></item><item><title>コンセプト</title><link>https://toppers.github.io/hakoniwa/docs/concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/concept/</guid><description>箱庭のコンセプトは 「箱の中に，様々なモノをみんなの好みで配置して，いろいろ試せる！」 です．
+IoT／自動運転システムを開発する際に，仮想環境である箱庭上に様々なソフトウェアやサービスを持ち寄って，机上で実証実験できる場を提供します．
+想定している利用シーンは，多様な分野から技術者が集まるIoTや自動運転システムの開発現場です． IoTの各要素が連携される複雑なシステムの事象や状態を，「箱」の中ではシナリオに応じた同じ挙動が再現されるようにします． そして，箱庭のシステム構成要素である「アセット」を差し替えることで，検証の対象／抽象度／レベルを任意に変更することができます． また，システム環境の視点（評価観点）や抽象度を，各技術者の分野や立場に応じて切り替えられるようにします．
+なお箱庭の語源は，名園や山水を模したミニチュアの庭園に由来します． 盆景や盆栽に類するもので，江戸時代後半から明治時代にかけて流行したといわれています．</description></item><item><title>目指すところ</title><link>https://toppers.github.io/hakoniwa/docs/aimat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/aimat/</guid><description>大規模かつ複雑なIoTシステムを開発／提供する技術者のための シミュレーション環境とエコシステム を構築することを目指しています．
+箱庭のターゲットは，様々な機器がネットワークで接続された情報システムです． 自動運転や物流，宇宙分野など，IoTの様々な分野を想定しています．
+箱庭は，次の利用者のための環境です．
+システム開発者：IoTシステムとその構成要素を開発する技術者 サービス提供者：IoTを活用してシステムサービスの提供を進める技術者 箱庭アセットの開発者および提供者 アセットとは，箱庭のシステム構成要素のことを指します． 箱庭プロジェクトの目指す強みと新しさとしては，IoTの各要素である箱庭アセットをそれぞれ連携させて，対象システムを任意の精度で検証可能とすることです． そして，箱庭の利用者の技術領域や評価対象に応じて，アセットを差し替えることで，検証の対象／抽象度／レベルを任意に変更できるようにします．</description></item><item><title>コア技術</title><link>https://toppers.github.io/hakoniwa/docs/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/core/</guid><description>箱庭の核となるカーネルは，次の4種類であると考えています．
+スケジューリング 同期・通信 時間管理 アセット管理 また，箱庭コア機能が備えるべき重要な機能特性は，次のものがあると考えています．
+コンポーネント化 可視化 イベント駆動化 自動化 箱庭のコア機能と機能特性については，プロトタイプモデルの開発を進めながら，WG内での設計検討を続けているところです． 詳細が固まりましたら，追って解説を加えていきます．</description></item><item><title>技術要素</title><link>https://toppers.github.io/hakoniwa/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/technical/</guid><description>TOPPERSカーネル TOPPERSプロジェクトにより開発されている，μITRON4.0仕様のスタンダードプロファイルを拡張した，オープンソースのリアルタイムカーネルです． 主な適用対象は，高い信頼性・安全性・リアルタイム性を要求される組込みシステムです．
+Athrill 箱庭の核である，CPU命令セットシミュレータです． 箱庭WGメンバが中心となって開発を進めています．組込みマイコンおよびペリフェラルの挙動を命令レベルでデバッグ・機能検証することができます．現在はV850/RH850およびARMv7-Aが主なサポート対象です．
+TOPPERSライセンスのもと，オープンソースで開発を進めています．
+https://github.com/toppers/athrill mROS ROS(ROS1)の組込み向け軽量実行環境です．ホストPC上のROSマスタおよびROSノードに対する，組込みマイコンからの出版購読型通信を実現します．京都大学情報学研究科 高木研究室が中心となって開発を進めています． ROS・マルチECUロボット向けプロトタイプモデルのようなシステムでの活用を想定しています．
+https://github.com/tlk-emb/mROS RDBOX RDBOX (Robotics Developers BOX)は，ROSロボットやIoTに最適化した，Kubernetesクラスタとセキュアで拡張性の高いWi-Fiネットワークを自動構築するためのフレームワークです．シミュレーション環境と現実の作業環境をブリッジすることを目指しています．株式会社インテックのRDBOX Projectで開発されています． ロボット間協調動作向けプロトタイプモデルの構築において，箱庭との連携を進めています．
+https://github.com/rdbox-intec/rdbox Unity リアルタイム3D開発プラットフォームです．IDEを内蔵するゲームエンジンとして有名です． 箱庭では，物理演算エンジンと空間可視化のために活用しています．
+https://unity.com/ 箱庭WGでは，この他にも，IoT／自動運転時代の仮想環境を確立するために，統合すべき技術要素を模索しているところです．
+シナジーが生まれそうな技術や，活用できそうな知見をお持ちの方がいましたら，ぜひお知らせください．
+注： このウェブページは，ユニティ テクノロジーズまたはその関連会社がスポンサーとなったり，ユニティ テクノロジーズまたはその関連会社と提携しているものではありません． このサイトに掲載された Unity の登録商標一覧に含まれる Unity の登録商標はすべて，ユニティ テクノロジーズまたはその米国や他の国々に所在する関連会社の登録商標または商標です．</description></item><item><title>ロードマップ</title><link>https://toppers.github.io/hakoniwa/docs/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/roadmap/</guid><description>箱庭は 「でっかく語って少しずつ育てて」 います．
+現在のプロジェクトの活動の中心としては，コンセプトの実現と技術研鑽のためにプロトタイプモデルを構築中です． これらの研究開発は，すべてOSSとして公開しながら進めていきます． 皆さまにそれぞれのプロトタイプモデルをご利用いただき，そしてフィードバックを得ながら，箱庭コア技術の成熟と様々な機能拡充を進めていきたいと考えています．
+箱庭プロジェクトは，まずは教育用途でのパッケージ構築と普及を図っていますが，製品開発への展開も視野に入れて研究開発を進めています． 壮大な構想を掲げていますが，全くマンパワーは足りていないのが実情です． 箱庭の成長のためにも，特にクラウド技術や可視化アセット開発に知見をお持ちの方に参画いただきたいと考えています．
+箱庭WGの狙いや趣旨にご賛同いただける方の参画をお待ちしています． 活動としては，月１回のオンラインでの定例会合と、年２回の技術検討合宿を実施しています． また，日常的な議論や情報共有と開発にはSlack，GitHubおよびGoogle Driveを活用しています．
+Slack等での議論に参加したい方，活動内容へのご要望をお持ちの方，コア技術や各アセットの開発などに参加したい方， 箱庭WGの活動で期待される技術成果を活用したい方，製品開発に展開してみたい方， ぜひともWGメンバにお声がけください． もしくは，問合せ先窓口であるTOPPERSプロジェクト事務局にご連絡ください．</description></item><item><title>単体ロボット向け</title><link>https://toppers.github.io/hakoniwa/prototypes/single-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/prototypes/single-robot/</guid><description>単体のSBCで構成される単体ロボットを対象とした箱庭プロトタイプモデルです．ETロボコンを題材としています．
+組込みマイコン上のプログラムの振る舞いを，ロボット上の挙動と連携させて検証を進めることができます．
+技術研鑽視点での狙い 物理シミュレータとマイコンシミュレータ間の連携方法の検討 異なるシミュレータ間の時間同期の検討 その他の狙い ETロボコンユーザ層に箱庭を広める（広報活動） 導入方法 導入方法(TOP) 使用方法 使用方法(TOP) 動作例のデモ 謝辞・特記事項： Unityパッケージの設計と作成にあたっては，宝塚大学 東京メディア芸術学部 吉岡章夫准教授および学部生の杉﨑涼志さん，木村明美さん，千葉純平さんにご協力いただきました．
+HackEVのUnityアセットは，ETロボコン実行委員会より提供いただいたデータを基に作成しています．実行委員会の皆さまに深く感謝いたします．
+ただし本アセットはETロボコンの本番環境とは異なりますので，大会に参加予定の方はご注意ください．また，本アセットは，個人利用または教育利用に限定してご利用ください．</description></item><item><title>ROS・マルチECUロボット向け</title><link>https://toppers.github.io/hakoniwa/prototypes/multi-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/prototypes/multi-robot/</guid><description>複数のECUで構成されるシステムや，FPGAやGPUを混載したシステムを対象とした箱庭プロトタイプモデルです． このようなヘテロ環境を机上で検証できるようにすることを目指しています． また，アセット間の通信処理の可視化技術の実現も目指しています．
+技術研鑽視点での狙い マルチECU/FPGA/GPU間の連携方法検討（シミュレーション時間同期等） 箱庭アセット間の通信可視化方法の検討（ROS/ROS2連携含む） 箱庭アセットの仕組み検討 その他の狙い ROSユーザ層に箱庭を広める（広報活動） 各種コンテストへの挑戦（つくばチャレンジ／FPGAデザインコンテスト) 現在，本プロトタイプモデルの実現に向けて鋭意開発中です．公開までしばしお待ちください．</description></item><item><title>ロボット間協調動作向け</title><link>https://toppers.github.io/hakoniwa/prototypes/harmony-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/prototypes/harmony-robot/</guid><description>クラウドとロボティクスとの連携を目指した箱庭プロトタイプモデルです．
+技術研鑽視点での狙い クラウド連携方法検討 ロボット間の連携方法検討（より複雑なロボットの動き/干渉に挑戦） 箱庭アセットを増やす仕組みの検討 その他の狙い RDBOX連携（開発支援仮想環境としての箱庭の実績作り） RDBOXユーザ層に箱庭を広める（広報活動） 現在，本プロトタイプモデルの実現に向けて鋭意開発中です．公開までしばしお待ちください．</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>単体ロボット向けシミュレータ使用手順(ARM版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
+export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major cfgフォルダの配置(初回起動時のみ) cfg ファイルの配置(Mac版の場合)
+$ pwd &amp;lt;インストールフォルダ&amp;gt;/athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm $ cp cfg/cfg-mac cfg/cfg/cfg $ chmod +x cfg/cfg/cfg cfg ファイルの配置(Windows\Linux版の場合)
+$ pwd &amp;lt;インストールフォルダ&amp;gt;/athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm $ cp cfg/cfg-linux-64 cfg/cfg/cfg $ chmod +x cfg/cfg/cfg EV3ロボット制御プログラムのビルド ターミナル上で，athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm/sdk/OBJに移動して，
+EV3ロボット制御プログラムをビルドしましょう．
+ビルドするには，以下のコマンドを実行してください．
+make clean;make ビルド成功すると，asp というバイナリができます．
+$ ls asp asp Unityのシミュレータの起動 次に，Unityをシミュレーションモードにします． Unityの画面上で　ボタンを押下してください．
+成功すると，下図のような画面に切り替わります．
+athrillの起動 WSLで，athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm/sdk/OBJに移動して，以下のコマンドを実行してください．
+unityとの通信が UDP の場合 $ athrill2 -c1 -m memory.</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</guid><description>単体ロボット向けシミュレータ使用手順(V850版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
+export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major cfgフォルダの配置(初回起動時のみ) cfg ファイルの配置(Mac版の場合)
+$ pwd &amp;lt;インストールフォルダ&amp;gt;/athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm $ cp cfg/cfg-mac cfg/cfg/cfg $ chmod +x cfg/cfg/cfg cfg ファイルの配置(Windows\Linux版の場合)
+$ pwd &amp;lt;インストールフォルダ&amp;gt;/athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm $ cp cfg/cfg-linux-64 cfg/cfg/cfg $ chmod +x cfg/cfg/cfg EV3ロボット制御プログラムのビルド athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/workspace に移動して，
+EV3ロボット制御プログラムをビルドしましょう．
+ビルドするには，以下のコマンドを実行してください．
+$ make img=athrillsample clean $ make img=athrillsample ビルド成功すると，asp というバイナリができます．
+$ ls asp asp Unityのシミュレータの起動 次に，Unityをシミュレーションモードにします． Unityの画面上で　ボタンを押下してください．
+成功すると，下図のような画面に切り替わります．
+athrillの起動 最後に，athrillを起動しましょう．</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>単体ロボット向けシミュレータ使用方法 使用手順詳細 使用するターゲットCPUの使用手順をご選択ください．
+V850版 ARM版 設定可能なパラメータについて シミュレーションに関わる変更可能なパラメータについての説明が記載されています．
+設定可能なパラメータ</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</guid><description>WSLのインストール Windows版の場合はWSLをインストールいただく必要があります．
+※注意点として，現時点(2020/3月)時点では，WSL2はご利用いただけません(WSL2とUnity間でUDP通信できないため)．
+WSLのインストール方法は色々なサイトで紹介されておりますので，Ubuntu 16.04.5 LTSをインストールください．
+以下のサイト等が参考になるかと思います．
+https://qiita.com/Aruneko/items/c79810b0b015bebf30bb</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</guid><description>Rubyのインストール v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります． ※EV3ロボット制御アプリをビルドする際に必要となります．
+Homebrewを使用してインストールします．
+$ brew install ruby</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/</guid><description>Rubyのインストール v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります． ※EV3ロボット制御アプリをビルドする際に必要となります．
+$ sudo apt install ruby</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/</guid><description>athrill2のインストール athrill2のインストール手順 athrill のチェックアウト athrill-target のチェックアウト コンパイラのインストール ビルド＆インストール athrill のチェックアウト athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．
+共通コードのチェックアウトは，以下の通りです．
+$ git clone https://github.com/tmori/athrill.git
+athrill-target のチェックアウト CPUアーキに依存するコードは，athrill-target側で管理しています． 今回のARM対応版は，ここにあります．
+$ git clone https://github.com/tmori/athrill-target.git
+なお，athrill と athrill-targetを以下のフォルダ構成にしてください．
+.
+├── athrill
+└── athrill-target
+コンパイラのインストール Linux の方は，gcc をインストールください．
+Windows の方は，WSL上で gcc をインストールください．
+Mac の方は，clang をインストールください．
+ビルド＆インストール ビルド方法ですが，端末上でathrill-target/ARMv7-A に移動してください．
+Linux/Windowsの方は，さらに build_linux に移動してください．
+Macの方は，build_mac に移動してください．
+移動終わったら，以下コマンド実行するだけです．
+make clean;make
+ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．
+$ ls -l .</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</guid><description>athrill2のインストール athrill2のインストール手順 athrill のチェックアウト athrill-target のチェックアウト コンパイラのインストール ビルド＆インストール athrill のチェックアウト athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．
+共通コードのチェックアウトは，以下の通りです．
+$ git clone https://github.com/tmori/athrill.git
+athrill-target のチェックアウト CPUアーキに依存するコードは，athrill-target側で管理しています．
+今回のV850対応版は，ここにあります．
+$ git clone https://github.com/tmori/athrill-target.git
+なお，athrill と athrill-targetを以下のフォルダ構成にしてください．
+.
+├── athrill
+└── athrill-target
+コンパイラのインストール Linux の方は，gcc をインストールください．
+Windows の方は，WSL上で gcc をインストールください．
+Mac の方は，clang をインストールください．
+ビルド＆インストール ビルド方法ですが，端末上でathrill-target/v850e2m に移動してください．
+Linux/Windowsの方は，さらに build_linux に移動してください．
+Macの方は，build_mac に移動してください．
+移動終わったら，以下コマンド実行するだけです．
+make clean;make
+ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．
+$ ls -l .</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</guid><description>linux版64bit gccコンパイラ(ライブラリ含む)のインストール ARM版のathrill2を利用される場合は，以下のサイトを参考にコンパイラおよびライブラリをインストールください．
+Windows/Linux
+https://www.yokoweb.net/2016/08/11/ubuntu-arm-gcc/ Mac
+https://www.yokoweb.net/2018/05/16/macos-gcc-arm-brew-install/</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</guid><description>linux版64bit gccコンパイラ(ライブラリ含む)のインストール v850版のathrill2を利用される場合は，以下のサイトからコンパイラおよびライブラリ(athrill-gcc-package.tar.gz)をダウンロードください．
+https://github.com/tmori/athrill-gcc/releases/tag/v1.1 $ tar xzvf athrill-gcc.tar.gz
+$ ls usr/local/athrill-gcc/
+bin include lib libexec share v850-elf
+解凍後，usr/local/athrill-gccを /usr/local 直下に移動してください．
+$ sudo mv usr/local/athrill-gcc /usr/local
+あとは，.bashrc に以下のパスを設定するだけです．
+export PATH=/usr/local/athrill-gcc/bin/:${PATH}
+export LD_LIBRARY_PATH=/usr/local/athrill-gcc:/usr/local/athrill-gcc/lib:${LD_LIBRARY_PATH}
+設定後は，パスの有効化を忘れずに行ってください．
+source ${HOME}/.bashrc</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install/</guid><description>箱庭用 EV3RT 開発環境のダウンロード 任意のフォルダ上で，athrillサンプル(athrill-sample)のプログラムを git clone してください．
+なお，cloneする場所は，以下のように athrillと同じフォルダ階層で実施してください．
+|---athril
+|---athrill-target
+└---athrill-sample
+clone方法は以下の通りです．
+$ git clone https://github.com/tmori/athrill-sample.git
+開発環境一式は以下になります．
+$ ls athrill-sample/ev3rt/ev3rt-beta7-release
+$ $ ls
+asp3 catkin_ws EV3RT_C_API_Reference hrp2.tar.xz sdcard webui
+asp_arm Changelog.txt EV3RT_CPP_API_Reference ngki_spec-171.pdf unity</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/</guid><description>EV3ロボット制御プログラム 現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．
+※まだ暫定構成です．
+ARM版のathrill2を利用される場合は，以下のフォルダで作業してください．
+$ ls athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm/sdk/OBJ1.0/
+app.c app.cfg app.h arg_sakura.txt device_config.txt log.txt Makefile Makefile.inc memory.txt
+現状は，app.c/main_task で直接制御を行っています．
+コード断片は以下の通りです．
+while(1) {
+/**
+* PID controller
+*/
+#define white 100
+#define black 10
+static float lasterror = 0, integral = 0;
+static float midpoint = (white - black) / 2 + black;
+{
+float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);
+integral = error + integral * 0.5;
+float steer = 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</guid><description>EV3ロボット制御プログラム 現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．
+※まだ暫定構成です．
+v850版のathrill2を利用される場合は，以下のフォルダで作業してください．
+$ ls athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/workspace
+appdir arg_sakura.txt asp athrillsample deps fstest log.txt Makefile
+現状は，app.c/main_task で直接制御を行っています．
+コード断片は以下の通りです．
+while(1) {
+/**
+* PID controller
+*/
+#define white 100
+#define black 10
+static float lasterror = 0, integral = 0;
+static float midpoint = (white - black) / 2 + black;
+{
+float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);
+integral = error + integral * 0.5;
+float steer = 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</guid><description>Unityのインストール・パッケージのインポート・初回に行う設定 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
+以下のサイト等が参考になるかと思います．
+https://tech-camp.in/note/technology/44408/ 使用するUnityパッケージ 今回のデモ用ののUnityパッケージ(ev3rt-demo.unitypackage)は，以下にあります．
+ls athrill-sample/ev3rt/ev3rt-beta7-release/unity/
+ev3rt-demo1.0-1.unitypackage ev3rt-demo1.0.unitypackage ev3rt-demo1.1.unitypackage
+なお，単体ロボット向けシミュレータで使用するUnityパッケージは，athrillとUnityの通信方式によって異なります．どちらかのパッケージをご選択いただき，インポートを行ってください．
+通信方式 使用するUnityパッケージ UDP通信 ev3rt-demo1.0.unitypackage MMAP ev3rt-demo1.0-1.unitypackage MMAPについて MMAPにすると嬉しい点としては以下が挙げられます．
+UDP のように通信ロストは発生しない(シミュレーション精度向上につながる) Unity と athrill 間のやりとりは共有メモリベースなので，高速になる(と思われる) 上記のとおり，精度向上と高速性を期待して試行してみましたが，精度は良くなりました(速度はあまり変化ないような?)． ただし，デメリットとして以下が挙げられます．
+1マシン前提での構成を余儀なくされる UDPであれば，athrillを別PCに配置して負荷分散可能ですので． Unityパッケージのインポート Unity 起動 まず，インストールしたUnityを起動してください．
+無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．
+次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．
+成功すると，以下のようにUnityが起動します．
+Unityパッケージのインポート Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Package&amp;hellip;」と選択し，下図のように「ev3rt-demo1.0.unitypackage」を選択してください．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>MMAP用パラメータ設定 MMAP版のパッケージ[ev3rt-demo1.0-1.unitypackage]をインストールされた場合は，MMAPの設定が必要になります．
+※なお，このページで紹介しているUnity画面の画像はWindows版のものです
+設定する場所は，Unity の以下のスクリプト・パラメータ(Filepath)部分です．
+インポート直後ですと，[EV3 Actuator] と [EV3 Sensor]の Filepath は空白です．
+ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．
+MMAPファイル自体は，以下の２ファイルが含まれています．
+$ ls athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/OBJ/*.bin
+athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/OBJ/athrill_mmap.bin
+athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/OBJ/unity_mmap.bin
+athrill_mmap.bin の絶対ファイルパスを，[EV3 Actuator]のFilepathに設定してください(設定例：下図)．
+unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定してください(設定例：下図)．
+以上でMMAPの設定は終わりです．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</guid><description>UDP用パラメータ設定 Unityとathrillをリモートで通信する場合は，以下のパラメータを設定する必要があります．
+説明する上でのIPアドレスの構成例 Unity側のIPアドレス：192.168.11.32
+athrill側のIPアドレス：192.168.11.20
+なお，IPアドレスの確認方法は以下のやり方でわかります．
+お使いのPCがLinux/WSLの場合 ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．
+$ ifconfig
+eth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96
+inet addr:192.168.11.32 Bcast:192.168.11.255 Mask:255.255.255.0
+inet6 addr: fe80::cc6d:70d3:a934:a61b/64 Scope:Unknown
+UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
+RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+collisions:0
+RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
+お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．
+&amp;gt; ipconfig
+Windows IP 構成
+イーサネット アダプター イーサネット:
+リンクローカル IPv6 アドレス. .</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index/</guid><description>単体ロボット向けシミュレータ導入手順 開発プラットフォームとターゲットCPU 開発プラットフォームは，Windows/Linux/Mac です．
+ターゲットCPUはV850/ARMの2種類が存在します．
+ご自身の環境に合わせて，プラットフォームやターゲットCPUをご選択ください．
+基本的な導入の流れは変わりありませんが，開発プラットフォームやターゲットCPU毎に
+細かい箇所での導入手順が異なります．
+対応するプラットフォーム/ターゲットCPUの導入手順をご確認ください．
+Windows V850版 ARM版 Linux V850版 ARM版 Mac V850版（非対応です） ARM版</description></item><item><title>単体ロボット向けシミュレータ導入手順(Linux/ARM編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-arm/</guid><description>単体ロボット向けシミュレータ導入手順(Linux/ARM編) 導入の流れ athrill2のインストール linux版64bit gccコンパイラ(ライブラリ含む)のインストール 箱庭用 EV3RT 開発環境のダウンロード サンプルアプリケーションの紹介 Unityのインストール・設定</description></item><item><title>単体ロボット向けシミュレータ導入手順(Linux/V850編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-v850/</guid><description>単体ロボット向けシミュレータ導入手順(Linux/V850編) 導入の流れ Rubyのインストール athrill2のインストール linux版64bit gccコンパイラ(ライブラリ含む)のインストール 箱庭用 EV3RT 開発環境のダウンロード サンプルアプリケーションの紹介 Unityのインストール・設定</description></item><item><title>単体ロボット向けシミュレータ導入手順(Mac/ARM編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-mac-arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-mac-arm/</guid><description>単体ロボット向けシミュレータ導入手順(Mac/ARM編) 導入の流れ athrill2のインストール linux版64bit gccコンパイラ(ライブラリ含む)のインストール 箱庭用 EV3RT 開発環境のダウンロード サンプルアプリケーションの紹介 Unityのインストール・設定</description></item><item><title>単体ロボット向けシミュレータ導入手順(Windows/ARM編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-arm/</guid><description>単体ロボット向けシミュレータ導入手順(Windows/ARM編) 導入の流れ WSLのインストール athrill2のインストール linux版64bit gccコンパイラ(ライブラリ含む)のインストール 箱庭用 EV3RT 開発環境のダウンロード サンプルアプリケーションの紹介 Unityのインストール・設定</description></item><item><title>単体ロボット向けシミュレータ導入手順(Windows/V850編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-v850/</guid><description>単体ロボット向けシミュレータ導入手順(Windows/V850編) 導入の流れ WSLのインストール Rubyのインストール athrill2のインストール linux版64bit gccコンパイラ(ライブラリ含む)のインストール 箱庭用 EV3RT 開発環境のダウンロード サンプルアプリケーションの紹介 Unityのインストール・設定</description></item><item><title>問合せ先</title><link>https://toppers.github.io/hakoniwa/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/contact/</guid><description>箱庭の研究開発は，TOPPERSプロジェクトのワーキンググループとして活動しています．
+箱庭WGの狙いや趣旨にご賛同いただける方の参画をお待ちしています． Slack等での議論に参加したい方，活動内容へのご要望をお持ちの方，コア技術や各アセットの開発などに参加したい方， 箱庭WGの活動で期待される技術成果を活用したい方，製品開発に展開してみたい方， ぜひともお声がけください．
+ただし，活動内容の一部については，TOPPERSプロジェクトの会員に加入いただく必要があります．
+箱庭WGへの活動の参画希望や，TOPPERSプロジェクトの加入方法については，
+TOPPERSプロジェクト事務局にご連絡ください．
+NPO法人 TOPPERSプロジェクト 〒103-0011 東京都中央区日本橋大伝馬町6-7　住長第2ビル3F （一社）組込みシステム技術協会内 TEL &amp;amp; FAX: 03-5643-5166 Email: secretariat_at_toppers.jp (_at_ を@ に置き換えてください) なお，箱庭ユーザ向けのフォーラムやコミュニティSNSを開設する予定です．</description></item><item><title>変更可能なパラメータ</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</guid><description>変更可能なパラメータ EV3のパラメータについて 今回のシミュレーション環境(Unity側)にはいくつかパラメータがありますので，その説明を行います．
+まず，パラメータを参照するには，Hierarchyビューで，「EV3」を選択してください(下図)．
+すると，InspectorビューにEV3のパラメータが表示されます．
+以下，変更可能なパラメータを説明します(説明されていないものは変更しないでください)． ※これらのパラメータは，シミュレーション実行時に動的に変更も可能なものもあります．
+EV3 Actuator(Script) Port(動的変更不可) Unity側のUDP受信ポート番号です．デフォルトでは54001です．
+この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．
+DEBUG_FUNC_VDEV_TX_PORTNO 54001 device_config.txt は，athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/OBJ直下にあります．
+EV3 Sensor(Script) Host(動的変更不可) Athrillの配置マシンのIPアドレスです． Unityと同じマシン上に配置する場合は，デフォルト値のままで良いです．
+マシン負荷が高く，athrillとUnityを別マシンで動かす場合は，このIPアドレスを変更して対応ください．
+Port(動的変更不可) Athrill側のUDP受信ポート番号です．デフォルトでは54002です．
+この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．
+DEBUG_FUNC_VDEV_RX_PORTNO 54002 device_config.txt は，athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/OBJ直下にあります．
+EV3 Monitor(Script) Power Const(動的変更可) EV3のモータのパワーです．デフォルトで40としていますが，値を変更できます．
+ただ，あまり大きい値を設定しすぎるとUnity側の問題か，物理的にありえないのかよくわかりませんが，EVロボットが吹っ飛びますので，ご注意ください．．．
+照明のON/OFFについて 先述の通り，今回のデモでは，照明を３個用意しています．
+全体照明１個 Directional Light スポットライト２個 Spot Light1 Spot Light2 それぞれの照明はシミュレーション実行時にON/OFFできます． ON/OFFのさせ方は単純で，HierachyビューでON/OFFしたいライトを選択します．
+すると，Inspectorビューに下図のように「Light」のチェックボックスが見えます． このチェックボックスを外せばOFFになります．
+カラーセンサの状態 パラメータではないですが，カラーセンサの認識している状態を知りたくなることがあるかと思います． そのため，カラーセンサの認識している値をUnityのパラメータ表示機能を利用して可視化しています．
+参照するには，下図のようにHierarchyビューでColorSensorを選択してください．</description></item><item><title>技術情報・発表資料</title><link>https://toppers.github.io/hakoniwa/technical-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/</guid><description/></item></channel></rss>

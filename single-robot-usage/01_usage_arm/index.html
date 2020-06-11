@@ -1,0 +1,53 @@
+<!doctype html><html lang=ja><head><meta name=generator content="Hugo 0.72.0"><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><meta name=author content="TOPPERS Project HAKONIWA WG"><meta property="og:title" content="単体ロボット向けシミュレータ使用手順(ARM版)"><meta property="og:description" content="単体ロボット向けシミュレータ使用手順(ARM版) 使用手順  環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動  環境変数の設定(Mac版のみ)  Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
+export GCC_PATH=<gccインストールフォルダ>/gcc-arm-none-eabi-9-2019-q4-major cfgフォルダの配置(初回起動時のみ)  cfg ファイルの配置(Mac版の場合)
+$ pwd <インストールフォルダ>/athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm $ cp cfg/cfg-mac cfg/cfg/cfg $ chmod +x cfg/cfg/cfg cfg ファイルの配置(Windows\Linux版の場合)
+$ pwd <インストールフォルダ>/athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm $ cp cfg/cfg-linux-64 cfg/cfg/cfg $ chmod +x cfg/cfg/cfg EV3ロボット制御プログラムのビルド  ターミナル上で，athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm/sdk/OBJに移動して，
+EV3ロボット制御プログラムをビルドしましょう．
+ビルドするには，以下のコマンドを実行してください．
+make clean;make ビルド成功すると，asp というバイナリができます．
+$ ls asp asp Unityのシミュレータの起動  次に，Unityをシミュレーションモードにします． Unityの画面上で　ボタンを押下してください．
+成功すると，下図のような画面に切り替わります．
+
+athrillの起動  WSLで，athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm/sdk/OBJに移動して，以下のコマンドを実行してください．
+ unityとの通信が UDP の場合  $ athrill2 -c1 -m memory."><meta property="og:type" content="article"><meta property="og:url" content="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/"><link rel=canonical href=https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/><link rel="hakoniwa logo" type=image/png href=/img/hakoniwa/icon-310x310.png><link href=/hakoniwa/css/font.css rel=stylesheet type=text/css><link href=/hakoniwa/css/kube.min.css rel=stylesheet type=text/css><link href=/hakoniwa/css/kube.legenda.css rel=stylesheet type=text/css><link href=/hakoniwa/css/highlight.css rel=stylesheet type=text/css><link href=/hakoniwa/css/master.css rel=stylesheet type=text/css><link href=/hakoniwa/css/kube.demo.css rel=stylesheet type=text/css><link href=/hakoniwa/css/custom.css rel=stylesheet type=text/css><script src=/hakoniwa/js/jquery-2.1.4.min.js type=text/javascript></script><script type=text/javascript src=/hakoniwa/js/tocbot.min.js></script></head><body class=page-kube><header><div class=show-sm><div id=nav-toggle-box><div id=nav-toggle-brand><a href=/>Top</a></div><a data-component=toggleme data-target=#top href=# id=nav-toggle><i class=kube-menu></i></a></div></div><div class=hide-sm id=top><div id=top-brand><a href=/ title=home>Top</a></div><nav id=top-nav-main><ul><li><a href=/hakoniwa/docs/>箱庭とは</a></li><li><a href=/hakoniwa/prototypes/>プロトタイプモデル</a></li><li><a href=/hakoniwa/technical-links/>技術情報・発表資料</a></li><li><a href=/hakoniwa/contact/>問合せ先</a></li></ul></nav><nav id=top-nav-extra><ul></ul></nav></div></header><main><div id=main><div id=hero><h1>単体ロボット向けシミュレータ使用手順(ARM版)</h1><p class=hero-lead>.</p></div><div id=kube-component class=content><h1 id=単体ロボット向けシミュレータ使用手順arm版>単体ロボット向けシミュレータ使用手順(ARM版)</h1><h2 id=使用手順>使用手順</h2><ol><li>環境変数の設定(Mac版のみ)</li><li>cfgフォルダの配置(初回起動時のみ)</li><li>EV3ロボット制御プログラムのビルド</li><li>Unityのシミュレータの起動</li><li>athrillの起動</li></ol><h2 id=環境変数の設定mac版のみ>環境変数の設定(Mac版のみ)</h2><hr><p>Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．</p><pre><code>export GCC_PATH=&lt;gccインストールフォルダ&gt;/gcc-arm-none-eabi-9-2019-q4-major
+</code></pre><h2 id=cfgフォルダの配置初回起動時のみ>cfgフォルダの配置(初回起動時のみ)</h2><hr><p>cfg ファイルの配置(Mac版の場合)</p><pre><code>$ pwd 
+&lt;インストールフォルダ&gt;/athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm
+$ cp cfg/cfg-mac cfg/cfg/cfg
+$ chmod +x cfg/cfg/cfg
+</code></pre><p>cfg ファイルの配置(Windows\Linux版の場合)</p><pre><code>$ pwd 
+&lt;インストールフォルダ&gt;/athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm
+$ cp cfg/cfg-linux-64 cfg/cfg/cfg
+$ chmod +x cfg/cfg/cfg
+</code></pre><h2 id=ev3ロボット制御プログラムのビルド>EV3ロボット制御プログラムのビルド</h2><hr><p>ターミナル上で，<code>athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm/sdk/OBJ</code>に移動して，<br>EV3ロボット制御プログラムをビルドしましょう．</p><p>ビルドするには，以下のコマンドを実行してください．</p><pre><code>make clean;make
+</code></pre><p>ビルド成功すると，asp というバイナリができます．</p><pre><code>$ ls asp
+asp
+</code></pre><h2 id=unityのシミュレータの起動>Unityのシミュレータの起動</h2><hr><p>次に，Unityをシミュレーションモードにします．
+Unityの画面上で<a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=d95a1ef03fd2f1640baf832491fcc986"><img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=d95a1ef03fd2f1640baf832491fcc986" alt=image.png></a>　ボタンを押下してください．</p><p>成功すると，下図のような画面に切り替わります．</p><p><a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F5fed7b18-1cbc-5fa5-a09a-9e9a66db97d7.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=7117483b2163bdcacc9e1cbb8d087bbe"><img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F5fed7b18-1cbc-5fa5-a09a-9e9a66db97d7.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=7117483b2163bdcacc9e1cbb8d087bbe" alt=image.png></a></p><h2 id=athrillの起動>athrillの起動</h2><hr><p>WSLで，<code>athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm/sdk/OBJ</code>に移動して，以下のコマンドを実行してください．</p><ul><li>unityとの通信が UDP の場合</li></ul><pre><code>$ athrill2 -c1 -m memory.txt -d device_config.txt -t -1 asp
+</code></pre><ul><li>unityとの通信が MMAPの場合</li></ul><pre><code>$  bash simstart.bash
+</code></pre><p>成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．</p><pre><code>core id num=1
+ROM : START=0x0 SIZE=512
+RAM : START=0x5ff7000 SIZE=10240
+Elf loading was succeeded:0x0 - 0xfd68 : 63.360 KB
+ELF SYMBOL SECTION LOADED:index=22
+ELF SYMBOL SECTION LOADED:sym_num=964
+ELF STRING TABLE SECTION LOADED:index=23
+athrill_device_func_call=0x60f7444
+
+TOPPERS/ASP3 Kernel Release 3.2.0 for V850-ESFK3 (Nov  6 2019, 10:56:14)
+Copyright (C) 2000-2003 by Embedded and Real-Time Systems Laboratory
+                            Toyohashi Univ. of Technology, JAPAN
+Copyright (C) 2004-2017 by Embedded and Real-Time Systems Laboratory
+            Graduate School of Information Science, Nagoya Univ., JAPAN
+
+brick_dri initialized.
+   _____   ______ ___  ______
+  / __/ | / /_  // _ \/_  __/
+ / _/ | |/ //_ &lt;/ , _/ / /
+/___/ |___/____/_/|_| /_/
+
+
+
+Powered by TOPPERS/HRP2 RTOS
+Initialization is completed..
+System logging task is started.
+</code></pre></div></div></main><footer></footer><script src=/hakoniwa/js/kube.js type=text/javascript></script><script src=/hakoniwa/js/kube.legenda.js type=text/javascript></script><script src=/hakoniwa/js/master.js type=text/javascript></script></body></html>

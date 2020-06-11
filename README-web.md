@@ -4,7 +4,6 @@
 
     git clone -b web https://github.com/toppers/hakoniwa.git
     cd hakoniwa
-    git checkout web
     git submodule update --init
 
 ## Preview on localhost

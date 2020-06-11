@@ -21,7 +21,7 @@ script = 'animation'
 - ETロボコンユーザ層に箱庭を広める（広報活動）
 
 {{< rawhtml >}}
-<img src="/img/prototypes/modelA.png" width="700">
+<img src="/hakoniwa/img/prototypes/modelA.png" width="700">
 <br>
 <br>
 {{< /rawhtml >}}
@@ -36,7 +36,7 @@ script = 'animation'
 
 ### 動作例のデモ
 
-![modelAdemo](/img/prototypes/modelAdemo.gif)
+![modelAdemo](/hakoniwa/img/prototypes/modelAdemo.gif)
 
 ---
 

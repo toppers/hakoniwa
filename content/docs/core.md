@@ -24,7 +24,7 @@ bref = "箱庭の核となるコア機能と，備えるべき機能特性を紹
 詳細が固まりましたら，追って解説を加えていきます．
 
 {{< rawhtml >}}
-<img src="/img/docs/core1.png" width="700">
+<img src="/hakoniwa/img/docs/core1.png" width="700">
 <br>
 <br>
 {{< /rawhtml >}}

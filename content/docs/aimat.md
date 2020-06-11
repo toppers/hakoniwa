@@ -11,7 +11,7 @@ bref = "箱庭の対象や利用者，本プロジェクトの目指す強みと
 大規模かつ複雑なIoTシステムを開発／提供する技術者のための **シミュレーション環境とエコシステム** を構築することを目指しています．
 
 {{< rawhtml >}}
-<img src="/img/docs/aimat1.png" width="700">
+<img src="/hakoniwa/img/docs/aimat1.png" width="700">
 <br>
 <br>
 {{< /rawhtml >}}

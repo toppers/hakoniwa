@@ -25,7 +25,7 @@ TOPPERSライセンスのもと，オープンソースで開発を進めてい�
 
 {{< rawhtml >}}
 <a href="https://github.com/toppers/athrill">
-<img src="/img/athrill.png" width="200">
+<img src="/hakoniwa/img/athrill.png" width="200">
 </a>
 <br>
 <br>
@@ -41,7 +41,7 @@ ROS(ROS1)の組込み向け軽量実行環境です．ホストPC上のROSマス
 
 {{< rawhtml >}}
 <a href="https://github.com/tlk-emb/mROS">
-<img src="/img/mROS.png" width="300">
+<img src="/hakoniwa/img/mROS.png" width="300">
 </a>
 <br>
 <br>

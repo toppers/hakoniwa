@@ -24,7 +24,7 @@ script = 'animation'
 - 各種コンテストへの挑戦（[つくばチャレンジ](https://tsukubachallenge.jp/)／[FPGAデザインコンテスト](https://wwp.shizuoka.ac.jp/fpt-design-contest/fpt20/))
 
 {{< rawhtml >}}
-<img src="/img/prototypes/modelB.png" width="700">
+<img src="/hakoniwa/img/prototypes/modelB.png" width="700">
 <br>
 <br>
 {{< /rawhtml >}}

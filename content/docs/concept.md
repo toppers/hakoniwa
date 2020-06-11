@@ -13,7 +13,7 @@ bref = "「箱庭」に込めているコンセプトと想定される利用シ
 IoT／自動運転システムを開発する際に，仮想環境である箱庭上に様々なソフトウェアやサービスを持ち寄って，机上で実証実験できる場を提供します．
 
 {{< rawhtml >}}
-<img src="/img/docs/concept1.png" width="700">
+<img src="/hakoniwa/img/docs/concept1.png" width="700">
 <br>
 <br>
 {{< /rawhtml >}}
@@ -24,7 +24,7 @@ IoTの各要素が連携される複雑なシステムの事象や状態を，�
 また，システム環境の視点（評価観点）や抽象度を，各技術者の分野や立場に応じて切り替えられるようにします．
 
 {{< rawhtml >}}
-<img src="/img/docs/concept2.png" width="600">
+<img src="/hakoniwa/img/docs/concept2.png" width="600">
 <br>
 <br>
 {{< /rawhtml >}}

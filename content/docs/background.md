@@ -26,7 +26,7 @@ IoTシステムは，多様かつ大量の情報機器が，ネットワーク�
   - 配車管理や交通流管理アプリの開発
 
 {{< rawhtml >}}
-<img src="/img/docs/back1.png" width="600">
+<img src="/hakoniwa/img/docs/back1.png" width="600">
 <br>
 <br>
 {{< /rawhtml >}}
@@ -51,7 +51,7 @@ IoTシステムは，多様かつ大量の情報機器が，ネットワーク�
 
 
 {{< rawhtml >}}
-<img src="/img/docs/back2.png" width="600">
+<img src="/hakoniwa/img/docs/back2.png" width="600">
 <br>
 <br>
 {{< /rawhtml >}}

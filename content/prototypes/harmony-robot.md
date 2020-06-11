@@ -22,7 +22,7 @@ script = 'animation'
 - RDBOXユーザ層に箱庭を広める（広報活動）
 
 {{< rawhtml >}}
-<img src="/img/prototypes/modelC.png" width="700">
+<img src="/hakoniwa/img/prototypes/modelC.png" width="700">
 <br>
 <br>
 {{< /rawhtml >}}

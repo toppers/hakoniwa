@@ -1,9 +1,9 @@
 +++
-title = "ETロボコンシミュレータ導入手順(Windows/V850編)"
+title = "単体ロボット向けシミュレータ導入手順(Windows/V850編)"
 draft = false
 +++
 
-# ETロボコンシミュレータ導入手順(Windows/V850編)
+# 単体ロボット向けシミュレータ導入手順(Windows/V850編)
 
 
 

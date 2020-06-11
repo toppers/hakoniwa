@@ -1,8 +1,8 @@
 +++
-title = "ETロボコンシミュレータ使用手順(ARM版)"
+title = "単体ロボット向けシミュレータ使用手順(ARM版)"
 draft = false
 +++
-# ETロボコンシミュレータ使用手順(ARM版)
+# 単体ロボット向けシミュレータ使用手順(ARM版)
 
 
 
@@ -10,7 +10,7 @@ draft = false
 
 1. 環境変数の設定(Mac版のみ)
 2. cfgフォルダの配置(初回起動時のみ)
-3. ETロボコン制御プログラムのビルド
+3. EV3ロボット制御プログラムのビルド
 4. Unityのシミュレータの起動
 5. athrillの起動
 
@@ -52,11 +52,12 @@ $ chmod +x cfg/cfg/cfg
 
 
 
-## ETロボコン制御プログラムのビルド
+## EV3ロボット制御プログラムのビルド
 
 ------
 
-ターミナル上で，`athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm/sdk/OBJ`に移動して，ETロボコン制御プログラムをビルドしましょう．
+ターミナル上で，`athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm/sdk/OBJ`に移動して，  
+EV3ロボット制御プログラムをビルドしましょう．
 
 ビルドするには，以下のコマンドを実行してください．
 

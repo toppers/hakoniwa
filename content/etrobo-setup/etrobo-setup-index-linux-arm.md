@@ -1,8 +1,8 @@
 +++
-title = "ETロボコンシミュレータ導入手順(Linux/ARM編)"
+title = "単体ロボット向けシミュレータ導入手順(Linux/ARM編)"
 draft = false
 +++
-# ETロボコンシミュレータ導入手順(Linux/ARM編)
+# 単体ロボット向けシミュレータ導入手順(Linux/ARM編)
 
 
 

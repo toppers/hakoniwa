@@ -1,5 +1,5 @@
 +++
-title = "ETロボコンシミュレータ導入手順"
+title = "単体ロボット向けシミュレータ導入手順"
 draft = false
 +++
 
@@ -30,7 +30,7 @@ ls athrill-sample/ev3rt/ev3rt-beta7-release/unity/
 ev3rt-demo1.0-1.unitypackage  ev3rt-demo1.0.unitypackage  ev3rt-demo1.1.unitypackage
 ```
 
-なお，ETロボコンシミュレータで使用するUnityパッケージは，athrillとUnityの通信方式によって異なります．どちらかのパッケージをご選択いただき，インポートを行ってください．
+なお，単体ロボット向けシミュレータで使用するUnityパッケージは，athrillとUnityの通信方式によって異なります．どちらかのパッケージをご選択いただき，インポートを行ってください．
 
 | 通信方式 | 使用するUnityパッケージ      |
 | -------- | ---------------------------- |

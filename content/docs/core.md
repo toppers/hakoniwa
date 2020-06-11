@@ -1,7 +1,7 @@
 +++
 title = "コア技術"
 draft = false
-weight = 200
+weight = 40
 toc = false
 script = 'animation'
 description = "箱庭の核となる機能"

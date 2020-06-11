@@ -1,7 +1,7 @@
 +++
 title = "目指すところ"
 draft = false
-weight = 200
+weight = 30
 toc = false
 script = 'animation'
 description = "箱庭のターゲットと利用者・目指す強みと新しさ"

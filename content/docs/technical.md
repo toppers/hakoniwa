@@ -1,7 +1,7 @@
 +++
 title = "技術要素"
 draft = false
-weight = 200
+weight = 50
 toc = false
 script = 'animation'
 description = "箱庭を形成する技術要素の紹介"

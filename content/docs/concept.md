@@ -1,7 +1,7 @@
 +++
 title = "コンセプト"
 draft = false
-weight = 200
+weight = 20
 toc = false
 script = 'animation'
 description = "箱庭とは何なのか？"

@@ -1,7 +1,7 @@
 +++
 title = "技術的背景"
 draft = false
-weight = 200
+weight = 10
 toc = false
 script = 'animation'
 description = "なぜ箱庭が必要なのか？"

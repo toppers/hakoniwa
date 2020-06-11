@@ -1,7 +1,7 @@
 +++
 title = "ロードマップ"
 draft = false
-weight = 200
+weight = 60
 toc = false
 script = 'animation'
 description = "研究開発の指針と計画"

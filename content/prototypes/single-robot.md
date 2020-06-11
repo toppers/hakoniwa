@@ -4,7 +4,7 @@ bref = "ETロボコンを題材とした時間同期の仕組みの確立"
 title = "単体ロボット向け"
 draft = false
 weight = 100
-toc = false
+toc = true
 script = 'animation'
 +++
 

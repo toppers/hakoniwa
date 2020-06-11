@@ -21,3 +21,7 @@ Paginate = 4
     name = "技術情報・発表資料"
     weight = -80
     url = "/technical-links/"
+[[menu.main]]
+    name = "問合せ先"
+    weight = -70
+    url = "/contact/"

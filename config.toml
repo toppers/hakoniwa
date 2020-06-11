@@ -15,9 +15,9 @@ Paginate = 4
     url = "/docs/"
 [[menu.main]]
     name = "プロトタイプモデル"
-    weight = -100
+    weight = -90
     url = "/prototypes/"
 [[menu.main]]
     name = "技術情報・発表資料"
-    weight = -100
+    weight = -80
     url = "/technical-links/"

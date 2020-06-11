@@ -4,11 +4,12 @@
 
     git clone -b web https://github.com/toppers/hakoniwa.git
     cd hakoniwa
+    git checkout web
     git submodule update --init
 
 ## Preview on localhost
 
-    hugo server -D
+    hugo server -D --baseURL="localhost:1313"
 
 ## Requirements
 

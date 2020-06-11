@@ -2,7 +2,7 @@
 description = "TODO:単体ロボット向けの説明"
 title = "単体ロボット向け"
 draft = false
-weight = 200
+weight = 100
 toc = true
 script = 'animation'
 +++

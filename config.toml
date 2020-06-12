@@ -4,6 +4,8 @@ title = "Top"
 theme = "kube"
 description = "IoT／自動運転時代の仮想シミュレーション環境"
 Paginate = 4
+googleAnalytics = "UA-169187702-1"
+
 [Params]
   RSSLink = "/index.xml"
   author = "TOPPERS Project HAKONIWA WG" # add your company name

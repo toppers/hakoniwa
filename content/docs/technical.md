@@ -35,7 +35,7 @@ TOPPERSライセンスのもと，オープンソースで開発を進めてい�
 ### mROS
 
 ROS(ROS1)の組込み向け軽量実行環境です．ホストPC上のROSマスタおよびROSノードに対する，組込みマイコンからの出版購読型通信を実現します．[京都大学情報学研究科 高木研究室](https://github.com/tlk-emb/)が中心となって開発を進めています．    
-[ROS・マルチECUロボット向けプロトタイプモデル](/prototypes/multi-robot)のようなシステムでの活用を想定しています．
+[ROS・マルチECUロボット向けプロトタイプモデル](/hakoniwa/prototypes/multi-robot)のようなシステムでの活用を想定しています．
 
 - https://github.com/tlk-emb/mROS
 
@@ -50,7 +50,7 @@ ROS(ROS1)の組込み向け軽量実行環境です．ホストPC上のROSマス
 ### RDBOX
 
 RDBOX (Robotics Developers BOX)は，ROSロボットやIoTに最適化した，Kubernetesクラスタとセキュアで拡張性の高いWi-Fiネットワークを自動構築するためのフレームワークです．シミュレーション環境と現実の作業環境をブリッジすることを目指しています．株式会社インテックの[RDBOX Project](https://rdbox-intec.github.io/homepage_jp/)で開発されています．    
-[ロボット間協調動作向けプロトタイプモデル](/prototypes/harmony-robot)の構築において，箱庭との連携を進めています．
+[ロボット間協調動作向けプロトタイプモデル](/hakoniwa/prototypes/harmony-robot)の構築において，箱庭との連携を進めています．
 
 - https://github.com/rdbox-intec/rdbox
 

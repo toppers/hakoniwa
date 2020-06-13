@@ -9,7 +9,7 @@ draft = false
 
 v850版のathrill2を利用される場合は，以下のサイトからコンパイラおよびライブラリ(athrill-gcc-package.tar.gz)をダウンロードください．
 
-- https://github.com/tmori/athrill-gcc/releases/tag/v1.1
+- https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1
 
 ```
 $ tar xzvf athrill-gcc.tar.gz

@@ -9,9 +9,12 @@ draft = false
 
 ARM版のathrill2を利用される場合は，以下のサイトを参考にコンパイラおよびライブラリをインストールください．
 
-Windows/Linux
+Windows(WSL)
 
-- https://www.yokoweb.net/2016/08/11/ubuntu-arm-gcc/
+- https://www.yokoweb.net/2018/03/07/wsl-ubuntu-arm-gcc/
+
+Linux
+- https://www.yokoweb.net/2018/05/16/ubuntu-18_04-gcc-arm-install/
 
 Mac
 

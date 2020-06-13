@@ -6,17 +6,23 @@ draft = false
 ### EV3ロボット制御プログラム
 
 現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．  
-※まだ暫定構成です．
 
 v850版のathrill2を利用される場合は，以下のフォルダで作業してください．
 
 ```
-$ ls athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/workspace
-appdir  arg_sakura.txt  asp  athrillsample  deps  fstest  log.txt  Makefile
+$ ls ev3rt-athrill-v850e2m/sdk/workspace/line_trace/
+app.c    app.h             device_config_mmap.txt  log.txt       memory_mmap.txt  unity_mmap.bin
+app.cfg  athrill_mmap.bin  device_config.txt       Makefile.inc  memory.txt
+```
+または
+```
+$ ls ev3rt-athrill-v850e2m/sdk/workspace/color_sensor/
+app.c    app.h             device_config_mmap.txt  log.txt       memory_mmap.txt  unity_mmap.bin
+app.cfg  athrill_mmap.bin  device_config.txt       Makefile.inc  memory.txt
 ```
 
 現状は，app.c/main_task で直接制御を行っています．  
-コード断片は以下の通りです．
+コード断片は以下の通りです．(line_traceの場合)
 
 ```
     while(1) {

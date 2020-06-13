@@ -11,13 +11,13 @@ draft = false
 ARM版のathrill2を利用される場合は，以下のフォルダで作業してください．
 
 ```
-$ ls athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm/sdk/OBJ1.0/
-app.c  app.cfg  app.h  arg_sakura.txt  device_config.txt  log.txt  Makefile  Makefile.inc  memory.txt
+$ ls ev3rt-athrill-ARMv7-A/sdk/OBJ1.1/
+app.c    app.h             device_config_mmap.txt  Makefile      memory_mmap.txt  simstart.bash
+app.cfg  athrill_mmap.bin  device_config.txt       Makefile.inc  memory.txt       unity_mmap.bin
 ```
 
 現状は，app.c/main_task で直接制御を行っています．  
 コード断片は以下の通りです．
-
 ```
     while(1) {
 
@@ -25,15 +25,24 @@ app.c  app.cfg  app.h  arg_sakura.txt  device_config.txt  log.txt  Makefile  Mak
      * PID controller
      */
 #define white 100
-#define black 10
+#define black 50
         static float lasterror = 0, integral = 0;
         static float midpoint = (white - black) / 2 + black;
         {
             float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);
-            integral = error + integral * 0.5;
-            float steer = 0.07 * error + 0.3 * integral + 1 * (error - lasterror);
+            integral = error + integral * 0.3;
+            float steer = 0.6 * error + 0.3 * integral + 1 * (error - lasterror);
             ev3_motor_steer(left_motor, right_motor, 10, steer);
             lasterror = error;
+
+            debug_var = ev3_gyro_sensor_get_angle(EV3_PORT_4);
+
+            int distance = ev3_ultrasonic_sensor_get_distance(EV3_PORT_2);
+            debug_var2 = distance;
+            if (distance <= 100) {
+                ev3_motor_stop(left_motor, false);
+                ev3_motor_stop(right_motor, false);
+           }
         }
         tslp_tsk(100); /* 100msec */
 
@@ -47,7 +56,7 @@ app.c  app.cfg  app.h  arg_sakura.txt  device_config.txt  log.txt  Makefile  Mak
   - ASPは，第二世代カーネルなので，単位はミリ秒です．HRPと同じですね．
   - ARM版のathrillは，利用実績が少ないので，命令セットのデコードエラーになる可能性が高いです．
   - デコードエラーになった場合は，以下に issue を挙げていただければ対応します．
-    - https://github.com/tmori/athrill-target
+    - https://github.com/toppers/athrill-target-ARMv7-A.git
     - この際，調査用に頂きたい情報は以下になります．
         1. athrillが出力したエラーメッセージ  
             例．CPU(pc=<アドレス>) Exception!!

@@ -27,7 +27,7 @@ athrill は，設計上，CPUアーキに依存しない共通コードとCPU依
 共通コードのチェックアウトは，以下の通りです．
 
 ```
-$ git clone https://github.com/tmori/athrill.git
+$ git clone https://github.com/toppers/athrill.git
 ```
 
 
@@ -40,7 +40,7 @@ CPUアーキに依存するコードは，athrill-target側で管理していま
 今回のV850対応版は，ここにあります．
 
 ```
-$ git clone https://github.com/tmori/athrill-target.git
+$ git clone https://github.com/toppers/athrill-target-v850e2m.git
 ```
 
 なお，athrill と athrill-targetを以下のフォルダ構成にしてください．
@@ -48,7 +48,7 @@ $ git clone https://github.com/tmori/athrill-target.git
 ```
 .
 ├── athrill
-└── athrill-target
+└── athrill-target-v850e2m
 ```
 
 
@@ -67,7 +67,7 @@ Mac の方は，clang をインストールください．
 
 ------
 
-ビルド方法ですが，端末上でathrill-target/v850e2m に移動してください．
+ビルド方法ですが，端末上でathrill-target-v850e2m に移動してください．
 
 Linux/Windowsの方は，さらに build_linux に移動してください．  
 Macの方は，build_mac に移動してください．
@@ -75,14 +75,15 @@ Macの方は，build_mac に移動してください．
 移動終わったら，以下コマンド実行するだけです．
 
 ```
-make clean;make
+make timer32=true clean
+make timer32=true
 ```
 
 ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．
 
 ```
-$ ls -l ../../../athrill/bin/linux/athrill2 
--rwxr-xr-x  1 tmori  staff  628260  2  2 16:40 ../../../athrill/bin/linux/athrill2
+$ ls -l ../../athrill/bin/linux/athrill2
+-rwxr-xr-x  1 user  staff  628260  2  2 16:40 ../../../athrill/bin/linux/athrill2
 ```
 
 そして，このパスを .bashrcに登録してもらえれば，インストール終了です．  

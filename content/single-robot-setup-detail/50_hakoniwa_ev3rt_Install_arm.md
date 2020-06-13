@@ -13,21 +13,12 @@ draft = false
 
 ```
  |---athril
- |---athrill-target
- └---athrill-sample
+ |---athrill-target-ARMv7-A
+ └---ev3rt-athrill-ARMv7-A
 ```
 
 clone方法は以下の通りです．
 
 ```
-$ git clone https://github.com/tmori/athrill-sample.git
-```
-
-開発環境一式は以下になります．
-
-```
-$ ls athrill-sample/ev3rt/ev3rt-beta7-release
-$ $ ls
-asp3     catkin_ws      EV3RT_C_API_Reference    hrp2.tar.xz        sdcard  webui
-asp_arm  Changelog.txt  EV3RT_CPP_API_Reference  ngki_spec-171.pdf  unity
+$ git clone https://github.com/toppers/ev3rt-athrill-ARMv7-A.git
 ```

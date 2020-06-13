@@ -3,6 +3,21 @@ title = "単体ロボット向けシミュレータ導入手順"
 draft = false
 +++
 
+# MMAP用Unity設定
+
+UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
+
+Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
+
+「Player」  
+`Other Setting`の`Scripting Define Symbols` に`VDEV_IO_UDP`と設定します．
+
+{{< rawhtml >}}
+<img src="/hakoniwa/img/single-robot/unity_setting_player_udp.png" width="700">
+<br>
+<br>
+{{< /rawhtml >}}
+
 # UDP用パラメータ設定
 
 Unityとathrillをリモートで通信する場合は，以下のパラメータを設定する必要があります．

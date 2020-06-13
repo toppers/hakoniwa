@@ -2,10 +2,24 @@
 title = "単体ロボット向けシミュレータ導入手順"
 draft = false
 +++
+# UDP用Unity設定
+
+Unityとathrillをリモートで通信する場合は，Unity側で以下の設定を行います．
+
+Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
+
+「Player」  
+`Other Setting`の`Scripting Define Symbols` に`VDEV_IO_MMAP`と設定します．
+
+{{< rawhtml >}}
+<img src="/hakoniwa/img/single-robot/unity_setting_player_mmap.png" width="700">
+<br>
+<br>
+{{< /rawhtml >}}
 
 # MMAP用パラメータ設定
 
-MMAP版のパッケージ[ev3rt-demo1.0-1.unitypackage]をインストールされた場合は，MMAPの設定が必要になります．  
+
 ※なお，このページで紹介しているUnity画面の画像はWindows版のものです
 
 設定する場所は，Unity の以下のスクリプト・パラメータ(Filepath)部分です．
@@ -15,13 +29,10 @@ MMAP版のパッケージ[ev3rt-demo1.0-1.unitypackage]をインストールさ�
 インポート直後ですと，[EV3 Actuator] と [EV3 Sensor]の Filepath は空白です．  
 ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．
 
-MMAPファイル自体は，以下の２ファイルが含まれています．
+MMAPファイル自体は，以下の２ファイルが```app.c```と同じフォルダに含まれています．
 
-```
-$ ls athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/OBJ/*.bin
-athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/OBJ/athrill_mmap.bin
-athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/OBJ/unity_mmap.bin
-```
+- athrill_mmap.bin
+- unity_mmap.bin
 
 athrill_mmap.bin の絶対ファイルパスを，[EV3 Actuator]のFilepathに設定してください(設定例：下図)．
 

@@ -8,47 +8,10 @@ draft = false
 
 ## 使用手順
 
-1. 環境変数の設定(Mac版のみ)
-2. cfgフォルダの配置(初回起動時のみ)
-3. EV3ロボット制御プログラムのビルド
-4. Unityのシミュレータの起動
-5. athrillの起動
+1. EV3ロボット制御プログラムのビルド
+1. Unityのシミュレータの起動
+1. athrillの起動
 
-
-
-## 環境変数の設定(Mac版のみ)
-
-------
-
-Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
-
-```
-export GCC_PATH=<gccインストールフォルダ>/gcc-arm-none-eabi-9-2019-q4-major
-```
-
-
-
-## cfgフォルダの配置(初回起動時のみ)
-
-------
-
-cfg ファイルの配置(Mac版の場合)
-
-```
-$ pwd 
-<インストールフォルダ>/athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm
-$ cp cfg/cfg-mac cfg/cfg/cfg
-$ chmod +x cfg/cfg/cfg
-```
-
-cfg ファイルの配置(Windows\Linux版の場合)
-
-```
-$ pwd 
-<インストールフォルダ>/athrill-sample/ev3rt/ev3rt-beta7-release/asp_arm
-$ cp cfg/cfg-linux-64 cfg/cfg/cfg
-$ chmod +x cfg/cfg/cfg
-```
 
 
 
@@ -56,16 +19,21 @@ $ chmod +x cfg/cfg/cfg
 
 ------
 
-`athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/workspace` に移動して，  
+`ev3rt-athrill-v850e2m/sdk/workspace` に移動して，  
 EV3ロボット制御プログラムをビルドしましょう．
 
 ビルドするには，以下のコマンドを実行してください．
 
 ```
-$ make img=athrillsample clean
-$ make img=athrillsample
+$ make img=＜アプリケーションフォルダ名＞ clean
+$ make img=＜アプリケーションフォルダ名＞
 ```
 
+例：`line_trace`というアプリケーションフォルダのプログラムをビルドする場合
+```
+$ make img=line_trace clean
+$ make img=line_trace
+```
 ビルド成功すると，asp というバイナリができます．
 
 ```
@@ -82,9 +50,13 @@ asp
 次に，Unityをシミュレーションモードにします．
 Unityの画面上で[![image.png](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=d95a1ef03fd2f1640baf832491fcc986)](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=d95a1ef03fd2f1640baf832491fcc986)　ボタンを押下してください．
 
-成功すると，下図のような画面に切り替わります．
+成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)
 
-[![image.png](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F5fed7b18-1cbc-5fa5-a09a-9e9a66db97d7.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=7117483b2163bdcacc9e1cbb8d087bbe)](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F5fed7b18-1cbc-5fa5-a09a-9e9a66db97d7.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=7117483b2163bdcacc9e1cbb8d087bbe)
+{{< rawhtml >}}
+<img src="/hakoniwa/img/single-robot/unity_run.png" width="900">
+<br>
+<br>
+{{< /rawhtml >}}
 
 
 
@@ -94,10 +66,16 @@ Unityの画面上で[![image.png](https://qiita-user-contents.imgix.net/https%3A
 
 最後に，athrillを起動しましょう．
 
-`athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/workspace`に移動して，以下のコマンドを実行してください．
+`ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞`に移動して，以下のコマンドを実行してください．
 
+UDP版の場合
 ```
-$ make start
+$ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp
+```
+
+MMAP版の場合
+```
+$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp
 ```
 
 成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．

@@ -39,7 +39,7 @@ Unity側のUDP受信ポート番号です．デフォルトでは54001です．
 DEBUG_FUNC_VDEV_TX_PORTNO   54001
 ```
 
-device_config.txt は，`athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/OBJ`直下にあります．
+device_config.txt は，app.cと同じフォルダにあります．
 
 
 
@@ -64,11 +64,11 @@ Athrill側のUDP受信ポート番号です．デフォルトでは54002です�
 DEBUG_FUNC_VDEV_RX_PORTNO   54002
 ```
 
-device_config.txt は，`athrill-sample/ev3rt/ev3rt-beta7-release/asp3/sdk/OBJ`直下にあります．
+device_config.txt は，app.cと同じフォルダにあります．
 
 
 
-## EV3 Monitor(Script)
+## EV3 Motor(Script)
 
 ------
 
@@ -84,7 +84,7 @@ EV3のモータのパワーです．デフォルトで40としていますが，
 
 ------
 
-先述の通り，今回のデモでは，照明を３個用意しています．
+今回のデモでは，照明を３個用意しています．
 
 - 全体照明１個
     - Directional Light

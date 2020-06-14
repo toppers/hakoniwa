@@ -1,6 +1,6 @@
 baseURL = "https://toppers.github.io/hakoniwa/"
 languageCode = "ja"
-title = "Top"
+title = "箱庭"
 theme = "kube"
 description = "IoT／自動運転時代の仮想シミュレーション環境"
 Paginate = 4

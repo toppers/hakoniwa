@@ -36,7 +36,8 @@ script = 'animation'
 
 ### 動作例のデモ
 
-![modelAdemo](/hakoniwa/img/prototypes/modelAdemo.gif)
+![modelAdemo](/hakoniwa/img/prototypes/modelAdemo1.gif)
+![modelAdemo](/hakoniwa/img/prototypes/modelAdemo2.gif)
 
 ---
 

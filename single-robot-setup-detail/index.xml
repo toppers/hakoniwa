@@ -111,7 +111,7 @@ static float lasterror = 0, integral = 0;
 static float midpoint = (white - black) / 2 + black;
 {
 float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);
-integral = error + integral * 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</guid><description>Unityのインストール・パッケージのインポート・初回に行う設定 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
+integral = error + integral * 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
 以下のサイト等が参考になるかと思います．
 https://tech-camp.in/note/technology/44408/ 使用するUnityパッケージ 単体ロボット向けシミュレータで使用するUnityパッケージを2種類用意してあります． どちらかのパッケージをご選択いただき，インポートを行ってください．
 使用するUnityパッケージ 説明 single-robot-HackEV.unitypackage HackEVを模した走行体モデルを使用しています ev3rt-simple-robot.unitypackage シンプルな走行体モデルを使用しています それぞれ下記からダウンロードしてください
@@ -126,7 +126,7 @@ Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Pa
 次に，シミュレーションに関わる設定を変更します．
 Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
 「Time」
-Fixed Timestep を 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>UDP用Unity設定 Unityとathrillをリモートで通信する場合は，Unity側で以下の設定を行います．
+Fixed Timestep を 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
 Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
 「Player」
 Other SettingのScripting Define Symbols にVDEV_IO_MMAPと設定します．
@@ -137,11 +137,11 @@ MMAP用パラメータ設定 ※なお，このページで紹介しているUni
 MMAPファイル自体は，以下の２ファイルがapp.cと同じフォルダに含まれています．
 athrill_mmap.bin unity_mmap.bin athrill_mmap.bin の絶対ファイルパスを，[EV3 Actuator]のFilepathに設定してください(設定例：下図)．
 unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定してください(設定例：下図)．
-以上でMMAPの設定は終わりです．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
+以上でMMAPの設定は終わりです．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</guid><description>UDP用Unity設定 UnityとathrillをUDPで通信する場合は，Unity側で以下の設定を行います．
 Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
 「Player」
 Other SettingのScripting Define Symbols にVDEV_IO_UDPと設定します．
-UDP用パラメータ設定 Unityとathrillをリモートで通信する場合は，以下のパラメータを設定する必要があります．
+UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
 説明する上でのIPアドレスの構成例 Unity側のIPアドレス：192.168.11.32
 athrill側のIPアドレス：192.168.11.20
 なお，IPアドレスの確認方法は以下のやり方でわかります．

@@ -3,9 +3,9 @@ title = "単体ロボット向けシミュレータ導入手順"
 draft = false
 +++
 
-# MMAP用Unity設定
+# UDP用Unity設定
 
-UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
+UnityとathrillをUDPで通信する場合は，Unity側で以下の設定を行います．
 
 Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
 
@@ -20,7 +20,7 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 
 # UDP用パラメータ設定
 
-Unityとathrillをリモートで通信する場合は，以下のパラメータを設定する必要があります．
+UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
 
 ## 説明する上でのIPアドレスの構成例
 

@@ -68,7 +68,7 @@ Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Pa
 成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．
 
 {{< rawhtml >}}
-<img src="/hakoniwa/img/single-robot/unityimport.PNG" width="300">
+<img src="/hakoniwa/img/single-robot/unity_import.png" width="300">
 <br>
 <br>
 {{< /rawhtml >}}

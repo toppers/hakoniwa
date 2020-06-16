@@ -124,9 +124,7 @@ Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Pa
 成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．
 成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます． Toppers_Courseをダブルクリックすると下図の画面が現れます．
 次に，シミュレーションに関わる設定を変更します．
-Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
-「Time」
-Fixed Timestep を 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
+Unity のメニューから，「Edit」⇒「Project Settings」を選択します．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
 Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
 「Player」
 Other SettingのScripting Define Symbols にVDEV_IO_MMAPと設定します．

@@ -7,7 +7,7 @@ IoTシステムは，多様かつ大量の情報機器が，ネットワーク�
 IoT／自動運転システムを開発する際に，仮想環境である箱庭上に様々なソフトウェアやサービスを持ち寄って，机上で実証実験できる場を提供します．
 想定している利用シーンは，多様な分野から技術者が集まるIoTや自動運転システムの開発現場です． IoTの各要素が連携される複雑なシステムの事象や状態を，「箱」の中ではシナリオに応じた同じ挙動が再現されるようにします． そして，箱庭のシステム構成要素である「アセット」を差し替えることで，検証の対象／抽象度／レベルを任意に変更することができます． また，システム環境の視点（評価観点）や抽象度を，各技術者の分野や立場に応じて切り替えられるようにします．
 なお箱庭の語源は，名園や山水を模したミニチュアの庭園に由来します． 盆景や盆栽に類するもので，江戸時代後半から明治時代にかけて流行したといわれています．</description></item><item><title>目指すところ</title><link>https://toppers.github.io/hakoniwa/docs/aimat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/aimat/</guid><description>大規模かつ複雑なIoTシステムを開発／提供する技術者のための シミュレーション環境とエコシステム を構築することを目指しています．
-箱庭のターゲットは，様々な機器がネットワークで接続された情報システムです． 自動運転や物流，宇宙分野など，IoTの様々な分野を想定しています．
+Figure: 箱庭のエコシステム 箱庭のターゲットは，様々な機器がネットワークで接続された情報システムです． 自動運転や物流，宇宙分野など，IoTの様々な分野を想定しています．
 箱庭は，次の利用者のための環境です．
 システム開発者：IoTシステムとその構成要素を開発する技術者 サービス提供者：IoTを活用してシステムサービスの提供を進める技術者 箱庭アセットの開発者および提供者 アセットとは，箱庭のシステム構成要素のことを指します． 箱庭プロジェクトの目指す強みと新しさとしては，IoTの各要素である箱庭アセットをそれぞれ連携させて，対象システムを任意の精度で検証可能とすることです． そして，箱庭の利用者の技術領域や評価対象に応じて，アセットを差し替えることで，検証の対象／抽象度／レベルを任意に変更できるようにします．</description></item><item><title>コア技術</title><link>https://toppers.github.io/hakoniwa/docs/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/core/</guid><description>箱庭の核となるカーネルは，次の4種類であると考えています．
 スケジューリング 同期・通信 時間管理 アセット管理 また，箱庭コア機能が備えるべき重要な機能特性は，次のものがあると考えています．
@@ -49,8 +49,7 @@ athrillの起動 最後に，athrillを起動しましょう．
 ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞に移動して，以下のコマンドを実行してください．
 UDP版の場合
 $ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp MMAP版の場合
-$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp 成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．
-core id num=1 ROM : START=0x0 SIZE=512 RAM : START=0x5ff7000 SIZE=10240 Elf loading was succeeded:0x0 - 0xfd68 : 63.</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>単体ロボット向けシミュレータ使用方法 使用手順詳細 使用するターゲットCPUの使用手順をご選択ください．
+$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp 成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>単体ロボット向けシミュレータ使用方法 使用手順詳細 使用するターゲットCPUの使用手順をご選択ください．
 V850版 ARM版 設定可能なパラメータについて シミュレーションに関わる変更可能なパラメータについての説明が記載されています．
 設定可能なパラメータ</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</guid><description>WSLのインストール Windows版の場合はWSLをインストールいただく必要があります．
 ※注意点として，現時点(2020/3月)時点では，WSL2はご利用いただけません(WSL2とUnity間でUDP通信できないため)．
@@ -178,9 +177,7 @@ Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Pa
 成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．
 成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます． Toppers_Courseをダブルクリックすると下図の画面が現れます．
 次に，シミュレーションに関わる設定を変更します．
-Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
-「Time」
-Fixed Timestep を 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
+Unity のメニューから，「Edit」⇒「Project Settings」を選択します．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
 Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
 「Player」
 Other SettingのScripting Define Symbols にVDEV_IO_MMAPと設定します．

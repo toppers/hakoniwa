@@ -18,8 +18,7 @@ athrillの起動 最後に，athrillを起動しましょう．
 ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞に移動して，以下のコマンドを実行してください．
 UDP版の場合
 $ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp MMAP版の場合
-$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp 成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．
-core id num=1 ROM : START=0x0 SIZE=512 RAM : START=0x5ff7000 SIZE=10240 Elf loading was succeeded:0x0 - 0xfd68 : 63.</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>単体ロボット向けシミュレータ使用方法 使用手順詳細 使用するターゲットCPUの使用手順をご選択ください．
+$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp 成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>単体ロボット向けシミュレータ使用方法 使用手順詳細 使用するターゲットCPUの使用手順をご選択ください．
 V850版 ARM版 設定可能なパラメータについて シミュレーションに関わる変更可能なパラメータについての説明が記載されています．
 設定可能なパラメータ</description></item><item><title>変更可能なパラメータ</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</guid><description>変更可能なパラメータ EV3のパラメータについて 今回のシミュレーション環境(Unity側)にはいくつかパラメータがありますので，その説明を行います．
 まず，パラメータを参照するには，Hierarchyビューで，「EV3」を選択してください(下図)．

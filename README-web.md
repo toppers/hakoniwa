@@ -8,7 +8,11 @@
 
 ## Preview on localhost
 
-    hugo server -D
+    $ hugo server -D
+
+or Reviewing the generated content.
+
+    $ hugo --minify --baseURL="$(pwd)/public"
 
 ## Requirements
 

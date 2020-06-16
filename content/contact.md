@@ -36,14 +36,17 @@ TEL & FAX: 03-5643-5166
 Email: secretariat_at_toppers.jp (_at_ を@ に置き換えてください)
 ```
 
-#### WGのメンバと役割（2020年6月現在：16名）
+#### WGの主なメンバと役割
 
 | 氏名      | 主な役割                     | 所属                | SNS |
 | -------- | -------------------------- | ------------------ | ---- |
 | 森 崇     | 主査 全体統括，Athrill        | 永和システムマネジメント | {{< snsicon github="tmori" twitter="kanetugu2020" facebook="takashi.mori.520562" >}} |
-| 高瀬 英希  | mROS，ROS                  | 京都大学/JSTさきがけ   | {{< snsicon github="takasehideki" twitter="takasehideki" facebook="takasehideki" >}} |
+| 高瀬 英希  | mROS，ROS，IoT               | 京都大学/JSTさきがけ   | {{< snsicon github="takasehideki" twitter="takasehideki" facebook="takasehideki" >}} |
 | 細合 晋太郎 | IDE，モデリング，可視化，クラウド | チェンジビジョン       | {{< snsicon github="s-hosoai" twitter="ShintaroHosoai" facebook="shintaro.hosoai" >}} |
 | 高田 光隆  | カーネル，応用検討             | 名古屋大学NCES        | {{< snsicon github="mitsut" twitter="mitsu48" linkedin="mitsu48" >}} |
 | 庭野 正義  | 車載コンポーネント，クラウド，IDE | アイコムシステック      | {{< snsicon github="mikoto2000" facebook="msysniwano" >}} |
 | 福田 ⻯也  | クラウド，ロボティクス          | インテック            | {{< snsicon github="fukuta-tatsuya-intec" twitter="fudekunjp" linkedin="fudekunjp" >}} |
 | 小森 顕博  | 可視化                      |                    | {{< snsicon github="comoc" twitter="comocc" >}} |
+
+※許諾の得られている方のみ掲載しています．
+

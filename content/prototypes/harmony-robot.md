@@ -21,11 +21,7 @@ script = 'animation'
 - RDBOX連携（開発支援仮想環境としての箱庭の実績作り）
 - RDBOXユーザ層に箱庭を広める（広報活動）
 
-{{< rawhtml >}}
-<img src="/hakoniwa/img/prototypes/modelC.png" width="700">
-<br>
-<br>
-{{< /rawhtml >}}
+{{< image src="/img/prototypes/modelC.png" width="700" >}}
 
 現在，本プロトタイプモデルの実現に向けて鋭意開発中です．公開までしばしお待ちください．
 

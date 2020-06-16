@@ -23,13 +23,7 @@ bref = "箱庭を形成する技術要素を紹介します"
 TOPPERSライセンスのもと，オープンソースで開発を進めています．
 - https://github.com/toppers/athrill
 
-{{< rawhtml >}}
-<a href="https://github.com/toppers/athrill">
-<img src="/hakoniwa/img/athrill.png" width="200">
-</a>
-<br>
-<br>
-{{< /rawhtml >}}
+{{< image src="/img/athrill.png" width="200" href="https://github.com/toppers/athrill" >}}
 
 
 ### mROS
@@ -39,13 +33,7 @@ ROS(ROS1)の組込み向け軽量実行環境です．ホストPC上のROSマス
 
 - https://github.com/tlk-emb/mROS
 
-{{< rawhtml >}}
-<a href="https://github.com/tlk-emb/mROS">
-<img src="/hakoniwa/img/mROS.png" width="300">
-</a>
-<br>
-<br>
-{{< /rawhtml >}}
+{{< image src="img/mROS.png" width="300" href="https://github.com/tlk-emb/mROS" >}}
 
 ### RDBOX
 

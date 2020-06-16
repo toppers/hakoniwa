@@ -20,11 +20,7 @@ script = 'animation'
 
 - ETロボコンユーザ層に箱庭を広める（広報活動）
 
-{{< rawhtml >}}
-<img src="/hakoniwa/img/prototypes/modelA.png" width="700">
-<br>
-<br>
-{{< /rawhtml >}}
+{{< image src="/img/prototypes/modelA.png" width="700" >}}
 
 ### 導入方法
 

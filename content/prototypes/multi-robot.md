@@ -23,11 +23,7 @@ script = 'animation'
 - ROSユーザ層に箱庭を広める（広報活動）
 - 各種コンテストへの挑戦（[つくばチャレンジ](https://tsukubachallenge.jp/)／[FPGAデザインコンテスト](https://wwp.shizuoka.ac.jp/fpt-design-contest/fpt20/))
 
-{{< rawhtml >}}
-<img src="/hakoniwa/img/prototypes/modelB.png" width="700">
-<br>
-<br>
-{{< /rawhtml >}}
+{{< image src="/img/prototypes/modelB.png" width="700" >}}
 
 現在，本プロトタイプモデルの実現に向けて鋭意開発中です．公開までしばしお待ちください．
 

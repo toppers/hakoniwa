@@ -1,0 +1,20 @@
+{{- $src := .Get "src" }}
+{{- $width := .Get "width" }}
+{{- $title := .Get "title" }}
+{{- $border := .Get "border" }}
+{{- $href := .Get "href" }}
+
+<figure>
+  {{- with $href }}
+  <a href="{{ $href }} ">
+  {{- end }}
+      <img src="{{ $src | relURL }} " border="{{ $border }}" width="{{ $width }}" />
+  {{- with $href }}
+  </a>
+  {{- end }}
+  {{- with $title }}
+    <figcaption>Figure: {{ . }}</figcaption>
+  {{- end }}
+</figure>
+<br>
+<br>

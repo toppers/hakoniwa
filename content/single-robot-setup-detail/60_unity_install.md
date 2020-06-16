@@ -67,20 +67,12 @@ Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Pa
 
 成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．
 
-{{< rawhtml >}}
-<img src="/hakoniwa/img/single-robot/unity_import.png" width="300">
-<br>
-<br>
-{{< /rawhtml >}}
+{{< image src="/img/single-robot/unityimport.png" width="300" >}}
 
 成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます．
 Toppers_Courseをダブルクリックすると下図の画面が現れます．
 
-{{< rawhtml >}}
-<img src="/hakoniwa/img/single-robot/unity_HackEV.png" width="900">
-<br>
-<br>
-{{< /rawhtml >}}
+{{< image src="/img/single-robot/unity_HackEV.png" width="900" >}}
 
 
 次に，シミュレーションに関わる設定を変更します．
@@ -91,11 +83,7 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 `Fixed Timestep` を 0.001に，
 `Time Scale` を 0.6に設定します．
 
-{{< rawhtml >}}
-<img src="/hakoniwa/img/single-robot/unity_setting_time.png" width="700">
-<br>
-<br>
-{{< /rawhtml >}}
+{{< image src="/img/single-robot/unity_setting_time.png" width="700" >}}
 
 ※`ev3rt-simple-robot.unitypackage`を使用する場合で，もしシミュレーションの動作が  
 遅い場合には，`Fixed Timestep` を 0.01に，EV3 Motor(Script)の`Interval`を 0.0005に，  
@@ -104,11 +92,7 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 「Quality」  
 `Other`の`VSync Count` を Don't Sync に設定します．
 
-{{< rawhtml >}}
-<img src="/hakoniwa/img/single-robot/unity_setting_quality.png" width="700">
-<br>
-<br>
-{{< /rawhtml >}}
+{{< image src="/img/single-robot/unity_setting_quality.png" width="700" >}}
 
 これでインポート作業終了です．
 

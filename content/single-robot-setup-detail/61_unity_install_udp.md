@@ -12,11 +12,7 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 「Player」  
 `Other Setting`の`Scripting Define Symbols` に`VDEV_IO_UDP`と設定します．
 
-{{< rawhtml >}}
-<img src="/hakoniwa/img/single-robot/unity_setting_player_udp.png" width="700">
-<br>
-<br>
-{{< /rawhtml >}}
+{{< image src="/img/single-robot/unity_setting_player_udp.png" width="700" >}}
 
 # UDP用パラメータ設定
 

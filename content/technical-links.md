@@ -81,9 +81,9 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 - [講演資料 (PDFファイル)
 {{< image src="/doc/ROSConJP2019-1.png" border="1" width="300" >}}
 ](http://roscon.jp/2019/presentations/lightning_talks/ROSCon_JP_2019_lightning_talk_13.pdf)
-- 動画 (Vimeo)  
+- 動画 (vimeo)  
 {{< rawhtml >}}
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/370250203" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/370250203" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}
 
 #### ROSノード軽量実行環境mROS update報告
@@ -91,9 +91,9 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 - [講演資料 (PDFファイル)
 {{< image src="/doc/ROSConJP2019-2.png" border="1" width="300" >}}
 ](http://roscon.jp/2019/presentations/lightning_talks/ROSCon_JP_2019_lightning_talk_12.pdf)
-- 動画 (Vimeo)  
+- 動画 (vimeo)  
 {{< rawhtml >}}
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/370250169" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/370250169" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}
 
 [このページの先頭に戻る](#top)
@@ -134,9 +134,9 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 - [講演資料 (PDFファイル)
 {{< image src="/doc/ROSConJP2018.png" border="1" width="300" >}}
 ](http://roscon.jp/2018/presentations/ROSCon_JP_2018_presentation_7.pdf)
-- 動画 (Vimeo)  
+- 動画 (vimeo)  
 {{< rawhtml >}}
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/292065411" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/292065411" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}
 
 [このページの先頭に戻る](#top)

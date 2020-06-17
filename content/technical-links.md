@@ -64,3 +64,28 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 - [スペシャルセッション講演資料 (PDFファイル)
 {{< image src="/doc/ETIoT2019-2.png" border="1" width="300" >}}
 ](/hakoniwa/doc/ETIoT2019-2.pdf)
+
+### ROSCon JP 2019
+
+2019年9月25日(水)に開催された[ROSCon JP 2019）](http://roscon.jp/2019/)の講演資料および動画です．    
+箱庭の紹介，および，技術要素のひとつであるmROSのアップデートについて，ライトニングトークを実施しました．
+
+#### 箱庭の紹介
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/ROSConJP2019-1.png" border="1" width="300" >}}
+](http://roscon.jp/2019/presentations/lightning_talks/ROSCon_JP_2019_lightning_talk_13.pdf)
+- 動画 (Vimeo)  
+{{< rawhtml >}}
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/370250203" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+#### ROSノード計量実行環境mROS update報告
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/ROSConJP2019-2.png" border="1" width="300" >}}
+](http://roscon.jp/2019/presentations/lightning_talks/ROSCon_JP_2019_lightning_talk_12.pdf)
+- 動画 (Vimeo)  
+{{< rawhtml >}}
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/370250169" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+{{< /rawhtml >}}

@@ -40,3 +40,15 @@ toc = true
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w_444K7CBsg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}
+
+### TOPPERS技術検討会議(2019年度)
+
+2019年12月19日(木)に実施した[TOPPERSプロジェクト　2019年度 技術検討会議](https://www.toppers.jp/TOPPERS-USERS-mailman/2019-November/004663.html)の資料です．    
+箱庭のアーキテクチャとコア技術の検討状況を解説し，本技術の適用可能性を議論しました．
+
+- [概要紹介 (PDFファイル)
+{{< image src="/doc/TOPPERSTechStudy2019-1.png" border="1" width="500" >}}
+](/hakoniwa/doc/TOPPERSTechStudy2019-1.pdf)
+- [コア技術紹介 (PDFファイル)
+{{< image src="/doc/TOPPERSTechStudy2019-2.png" border="1" width="500" >}}
+](/hakoniwa/doc/TOPPERSTechStudy2019-2.pdf)

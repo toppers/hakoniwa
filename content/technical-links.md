@@ -47,8 +47,20 @@ toc = true
 箱庭のアーキテクチャとコア技術の検討状況を解説し，本技術の適用可能性を議論しました．
 
 - [概要紹介 (PDFファイル)
-{{< image src="/doc/TOPPERSTechStudy2019-1.png" border="1" width="500" >}}
+{{< image src="/doc/TOPPERSTechStudy2019-1.png" border="1" width="300" >}}
 ](/hakoniwa/doc/TOPPERSTechStudy2019-1.pdf)
 - [コア技術紹介 (PDFファイル)
-{{< image src="/doc/TOPPERSTechStudy2019-2.png" border="1" width="500" >}}
+{{< image src="/doc/TOPPERSTechStudy2019-2.png" border="1" width="300" >}}
 ](/hakoniwa/doc/TOPPERSTechStudy2019-2.pdf)
+
+### ET & IoT Technology 2019
+
+2019年11月20日(水)〜22日(金)に開催された[ET & IoT Technology 2019（組込み総合技術展 ＆ IoT総合技術展 2019）](https://www.jasa.or.jp/expo/2019/)の資料です．    
+TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル展示しました．また，[スペシャルセッションC-4](https://www.jasa.or.jp/expo/2019/conference2019/confpage-c.html)において，箱庭のコンセプトの解説に関する講演を実施しました．
+
+- [パネル展示 (PDFファイル)
+{{< image src="/doc/ETIoT2019-1.png" border="1" width="500" >}}
+](/hakoniwa/doc/ETIoT2019-1.pdf)
+- [スペシャルセッション講演資料 (PDFファイル)
+{{< image src="/doc/ETIoT2019-2.png" border="1" width="300" >}}
+](/hakoniwa/doc/ETIoT2019-2.pdf)

@@ -241,4 +241,8 @@ EV3 Motor(Script) Power Const(動的変更可) EV3のモータのパワーです
 参照するには，下図のようにHierarchyビューでColorSensorを選択してください．</description></item><item><title>技術情報・発表資料</title><link>https://toppers.github.io/hakoniwa/technical-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/</guid><description>TOPPERSカンファレンス2020 2020年6月12日(金)に開催されたTOPPERSカンファレンス2020の講演資料および動画です． 箱庭WGの活動紹介，プロトタイプ開発と時間同期機構の解説，および，クラウドIDEを利用したアイデアの紹介を行いました．
 『箱庭ワーキンググループ』 目指すところと活動の紹介 講演資料 (PDFファイル) 動画 (YouTube)
 箱庭のプロトタイプ開発と異種レイヤ間の時間同期機構 講演資料 (PDFファイル) 動画 (YouTube)
-箱庭のプロトタイプ開発と異種レイヤ間の時間同期機構 講演資料 (PDFファイル) 動画 (YouTube)</description></item></channel></rss>
+クラウドIDEとエミュレータを利用した実機レス開発環境 講演資料 (PDFファイル) 動画 (YouTube)
+このページの先頭に戻る
+TOPPERS技術検討会議(2019年度) 2019年12月19日(木)に実施したTOPPERSプロジェクト　2019年度 技術検討会議の資料です． 箱庭のアーキテクチャとコア技術の検討状況を解説し，本技術の適用可能性を議論しました．
+概要紹介 (PDFファイル) コア技術紹介 (PDFファイル) このページの先頭に戻る
+ET &amp;amp; IoT Technology 2019 2019年11月20日(水)〜22日(金)に開催されたET &amp;amp; IoT Technology 2019（組込み総合技術展 ＆ IoT総合技術展 2019）の資料です． TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル展示しました．また，スペシャルセッションC-4において，箱庭のコンセプトの解説に関する講演を実施しました．</description></item></channel></rss>

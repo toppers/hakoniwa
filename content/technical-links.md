@@ -73,7 +73,7 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 
 ### ROSCon JP 2019
 
-2019年9月25日(水)に開催された[ROSCon JP 2019）](http://roscon.jp/2019/)の講演資料および動画です．    
+2019年9月25日(水)に開催された[ROSCon JP 2019](http://roscon.jp/2019/)の講演資料および動画です．    
 箱庭の紹介，および，技術要素のひとつであるmROSのアップデートについて，ライトニングトークを実施しました．
 
 #### 箱庭の紹介
@@ -123,5 +123,20 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 - [車載向けECUシミュレータAthrillの紹介 (PDFファイル)
 {{< image src="/doc/TOPPERSConf2019-2.png" border="1" width="300" >}}
 ](/hakoniwa/doc/TOPPERSConf2019-2.pdf)
+
+[このページの先頭に戻る](#top)
+
+### ROSCon JP 2018
+
+2018年9月14日(金)に開催された[ROSCon JP 2018](http://roscon.jp/2018/)の講演資料および動画です．    
+技術要素のひとつであるmROSについての講演を実施しました．
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/ROSConJP2018.png" border="1" width="300" >}}
+](http://roscon.jp/2018/presentations/ROSCon_JP_2018_presentation_7.pdf)
+- 動画 (Vimeo)  
+{{< rawhtml >}}
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/292065411" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+{{< /rawhtml >}}
 
 [このページの先頭に戻る](#top)

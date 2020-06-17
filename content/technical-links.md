@@ -111,3 +111,17 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 ](/hakoniwa/doc/SWEST21-2.pdf)
 
 [このページの先頭に戻る](#top)
+
+### TOPPERSカンファレンス2019
+
+2019年6月14日(金)に開催された[TOPPERSカンファレンス2019](https://toppers.jp/conference2019.html)の講演資料です．    
+トラックA-2：技術・事例紹介において，箱庭WGの発足に関する紹介，および，技術要素のひとつであるathrillの解説を行いました．
+
+- [新WG：箱庭ワーキンググループの紹介 (PDFファイル)
+{{< image src="/doc/TOPPERSConf2019-1.png" border="1" width="300" >}}
+](/hakoniwa/doc/TOPPERSConf2019-1.pdf)
+- [車載向けECUシミュレータAthrillの紹介 (PDFファイル)
+{{< image src="/doc/TOPPERSConf2019-2.png" border="1" width="300" >}}
+](/hakoniwa/doc/TOPPERSConf2019-2.pdf)
+
+[このページの先頭に戻る](#top)

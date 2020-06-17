@@ -14,7 +14,7 @@ toc = true
 #### 『箱庭ワーキンググループ』 目指すところと活動の紹介
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2020-1.png" border="1" width="300" >}}
+{{< image src="/doc/TOPPERSConf2020-1.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSConf2020-1.pdf)
 - 動画 (YouTube)  
 {{< rawhtml >}}
@@ -24,17 +24,17 @@ toc = true
 #### 箱庭のプロトタイプ開発と異種レイヤ間の時間同期機構
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2020-2.png" border="1" width="300" >}}
+{{< image src="/doc/TOPPERSConf2020-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSConf2020-2.pdf)
 - 動画 (YouTube)  
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iF95RGXb0_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}
 
-#### 箱庭のプロトタイプ開発と異種レイヤ間の時間同期機構
+#### クラウドIDEとエミュレータを利用した実機レス開発環境
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2020-3.png" border="1" width="300" >}}
+{{< image src="/doc/TOPPERSConf2020-3.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSConf2020-3.pdf)
 - 動画 (YouTube)  
 {{< rawhtml >}}
@@ -49,10 +49,10 @@ toc = true
 箱庭のアーキテクチャとコア技術の検討状況を解説し，本技術の適用可能性を議論しました．
 
 - [概要紹介 (PDFファイル)
-{{< image src="/doc/TOPPERSTechStudy2019-1.png" border="1" width="300" >}}
+{{< image src="/doc/TOPPERSTechStudy2019-1.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSTechStudy2019-1.pdf)
 - [コア技術紹介 (PDFファイル)
-{{< image src="/doc/TOPPERSTechStudy2019-2.png" border="1" width="300" >}}
+{{< image src="/doc/TOPPERSTechStudy2019-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSTechStudy2019-2.pdf)
 
 [このページの先頭に戻る](#top)
@@ -66,7 +66,7 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 {{< image src="/doc/ETIoT2019-1.png" border="1" width="500" >}}
 ](/hakoniwa/doc/ETIoT2019-1.pdf)
 - [スペシャルセッション講演資料 (PDFファイル)
-{{< image src="/doc/ETIoT2019-2.png" border="1" width="300" >}}
+{{< image src="/doc/ETIoT2019-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETIoT2019-2.pdf)
 
 [このページの先頭に戻る](#top)
@@ -79,7 +79,7 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 #### 箱庭の紹介
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ROSConJP2019-1.png" border="1" width="300" >}}
+{{< image src="/doc/ROSConJP2019-1.png" border="1" width="400" >}}
 ](http://roscon.jp/2019/presentations/lightning_talks/ROSCon_JP_2019_lightning_talk_13.pdf)
 - 動画 (vimeo)  
 {{< rawhtml >}}
@@ -89,7 +89,7 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 #### ROSノード軽量実行環境mROS update報告
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ROSConJP2019-2.png" border="1" width="300" >}}
+{{< image src="/doc/ROSConJP2019-2.png" border="1" width="400" >}}
 ](http://roscon.jp/2019/presentations/lightning_talks/ROSCon_JP_2019_lightning_talk_12.pdf)
 - 動画 (vimeo)  
 {{< rawhtml >}}
@@ -104,7 +104,7 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 [セッションS3b](https://swest.toppers.jp/SWEST21/program/s3b.html#s3)において，箱庭の技術要素のひとつであるathrillの紹介と箱庭への展開についての講演を実施しました．また，インタラクティブセッションにおいて箱庭WGの活動紹介を行い，ベストプロジェクト賞 シルバーを受賞しました．
 
 - [セッション講演資料 (PDFファイル)
-{{< image src="/doc/SWEST21-1.png" border="1" width="300" >}}
+{{< image src="/doc/SWEST21-1.png" border="1" width="400" >}}
 ](https://swest.toppers.jp/SWEST21/program/pdfs/s3b_proceeding.pdf)
 - [インタラクティブセッション展示ポスター (PDFファイル)
 {{< image src="/doc/SWEST21-2.png" border="1" width="500" >}}
@@ -118,10 +118,10 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 トラックA-2：技術・事例紹介において，箱庭WGの発足に関する紹介，および，技術要素のひとつであるathrillの解説を行いました．
 
 - [新WG：箱庭ワーキンググループの紹介 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2019-1.png" border="1" width="300" >}}
+{{< image src="/doc/TOPPERSConf2019-1.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSConf2019-1.pdf)
 - [車載向けECUシミュレータAthrillの紹介 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2019-2.png" border="1" width="300" >}}
+{{< image src="/doc/TOPPERSConf2019-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSConf2019-2.pdf)
 
 [このページの先頭に戻る](#top)
@@ -132,7 +132,7 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 技術要素のひとつであるmROSについての講演を実施しました．
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ROSConJP2018.png" border="1" width="300" >}}
+{{< image src="/doc/ROSConJP2018.png" border="1" width="400" >}}
 ](http://roscon.jp/2018/presentations/ROSCon_JP_2018_presentation_7.pdf)
 - 動画 (vimeo)  
 {{< rawhtml >}}

@@ -97,3 +97,17 @@ TOPPERS/SESSAMEパビリオンにおいて，箱庭WGの活動紹介をパネル
 {{< /rawhtml >}}
 
 [このページの先頭に戻る](#top)
+
+### SWEST21
+
+2019年9月5日(木)〜6日(金)に開催された[第21回 組込みシステム技術に関するサマーワークショップ (SWEST21)](https://swest.toppers.jp/old-report/report21.html)の資料です．    
+[セッションS3b](https://swest.toppers.jp/SWEST21/program/s3b.html#s3)において，箱庭の技術要素のひとつであるathrillの紹介と箱庭への展開についての講演を実施しました．また，インタラクティブセッションにおいて箱庭WGの活動紹介を行い，ベストプロジェクト賞 シルバーを受賞しました．
+
+- [セッション講演資料 (PDFファイル)
+{{< image src="/doc/SWEST21-1.png" border="1" width="300" >}}
+](https://swest.toppers.jp/SWEST21/program/pdfs/s3b_proceeding.pdf)
+- [インタラクティブセッション展示ポスター (PDFファイル)
+{{< image src="/doc/SWEST21-2.png" border="1" width="500" >}}
+](/hakoniwa/doc/SWEST21-2.pdf)
+
+[このページの先頭に戻る](#top)

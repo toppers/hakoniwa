@@ -67,7 +67,7 @@ Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Pa
 
 成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．
 
-{{< image src="/img/single-robot/unityimport.png" width="300" >}}
+{{< image src="/img/single-robot/unity_import.png" width="300" >}}
 
 成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます．
 Toppers_Courseをダブルクリックすると下図の画面が現れます．

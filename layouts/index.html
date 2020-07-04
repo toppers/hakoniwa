@@ -9,6 +9,14 @@
       <img alt="HAKONIWA logo" height="128" src="{{ "/img/hakoniwa/icon-310x310.png" | relURL }}" width="128">
     </figure>
     <p>{{.Description}}</p>
+    <h2>What's New</h2>
+    <ul style="list-style:none;">
+      {{ range first 10 .Site.Pages }}
+          <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>({{ .Description }}) (<time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>){{ if .Draft }} #Draft{{ end }}
+          </li>
+      {{ end }}
+    </ul>
   </div>
 </div>
 {{ end }}

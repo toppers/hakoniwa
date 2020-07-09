@@ -1,10 +1,14 @@
 
 {{ if and (.IsNode) (.Site.Params.images) }}
-  <meta property="og:image" content="{{ index .Site.Params.images 0 }}">
+  <meta name="twitter:card" content="summary"/>
 {{ end }}
 
 {{ if and (.IsPage) (not .Params.images) (.Site.Params.images) }}
-  <meta property="og:image" content="{{ index .Site.Params.images 0 }}">
+  <meta name="twitter:card" content="summary"/>
+{{ end }}
+
+{{ if (.Site.Params.twitter) }}
+  <meta name="twitter:site" content="{{$.Site.Params.twitter}}"/>
 {{ end }}
 
 {{ if (.Site.Params.facebookAppId) }}

@@ -10,7 +10,8 @@ googleAnalytics = "UA-169187702-1"
   RSSLink = "/index.xml"
   author = "TOPPERS Project HAKONIWA WG" # add your company name
   email = "secretariat@toppers.jp"
-  images = ["img/hakoniwa/icon-144x144.png"]
+  images = ["img/hakoniwa/icon-310x310.png"]
+  facebookAppId = "3035581286538848"
 
 [[menu.main]]
     name = "箱庭とは"

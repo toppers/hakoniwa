@@ -18,3 +18,12 @@ or Reviewing the generated content.
 
 [Install Hugo](https://gohugo.io/getting-started/installing/) (v0.72.0 or later)
 
+## Create new article
+
+    $ hugo new hoge.md
+
+### e.g. in `docs` section
+
+    $ hugo new docs/hoge.md
+
+if only text article, you can remove `images` elements at front matter.

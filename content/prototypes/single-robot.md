@@ -6,6 +6,7 @@ draft = false
 weight = 100
 toc = true
 script = 'animation'
+images = ["img/prototypes/modelAdemo1.gif"]
 +++
 
 単体のSBCで構成される単体ロボットを対象とした箱庭プロトタイプモデルです．[ETロボコン](https://www.etrobo.jp/)を題材としています．  

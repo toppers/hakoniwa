@@ -1,0 +1,24 @@
+/* 前ページ、次ページへのリンク */
+.xPrevNextLink::after {
+  /* float による回り込みの解除 */
+  display: block;
+  content: "";
+  clear: both;
+}
+.xPrevNextLink_prev {
+  display: block;
+  float: left;
+}
+.xPrevNextLink_prev::before {
+  content: "≪";
+}
+.xPrevNextLink_next {
+  display: block;
+  float: right;
+  text-align: right;
+
+}
+.xPrevNextLink_next::after {
+  content: "≫";
+}
+  

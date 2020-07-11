@@ -6,6 +6,7 @@ draft = false
 weight = 200
 toc = false
 script = 'animation'
+images = ["img/prototypes/modelB.png"]
 +++
 
 複数のECUで構成されるシステムや，FPGAやGPUを混載したシステムを対象とした箱庭プロトタイプモデルです．

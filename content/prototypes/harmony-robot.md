@@ -6,6 +6,7 @@ draft = false
 weight = 300
 toc = false
 script = 'animation'
+images = ["img/prototypes/modelC.png"]
 +++
 
 クラウドとロボティクスとの連携を目指した箱庭プロトタイプモデルです．

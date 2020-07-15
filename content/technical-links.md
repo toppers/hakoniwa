@@ -6,6 +6,31 @@ bref = "各種イベントでの講演資料や動画などを公開します"
 toc = true
 +++
 
+### ETロボコン向け TOPPERS活用セミナー
+
+2020年7月18日(土)に開催される[ETロボコン向け TOPPERS活用セミナー](https://toppers.jp/etrobo.html#seminar)の講演資料です．動画も追って公開予定です．    
+箱庭WGの狙いとプロトタイプモデルの紹介に加えて，[単体ロボット向けプロトタイプモデル](/hakoniwa/prototypes/single-robot/)の導入方法と使用方法について，詳しく紹介します．
+
+#### 『箱庭ワーキンググループ』 目指すところとプロトタイプモデルの紹介
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/ETRCSeminar2020-1.png" border="1" width="400" >}}
+](/hakoniwa/doc/ETRCSeminar2020-1.pdf)
+
+#### 単体ロボット向けプロトタイプの導入手順と使用方法の紹介
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/ETRCSeminar2020-2.png" border="1" width="400" >}}
+](/hakoniwa/doc/ETRCSeminar2020-2.pdf)
+
+#### 単体ロボット向けプロトタイプモデル 〜チューニング/注意点と今後の展開について〜
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/ETRCSeminar2020-3.png" border="1" width="400" >}}
+](/hakoniwa/doc/ETRCSeminar2020-3.pdf)
+
+[このページの先頭に戻る](#top)
+
 ### TOPPERSカンファレンス2020
 
 2020年6月12日(金)に開催された[TOPPERSカンファレンス2020](https://toppers.jp/conference2020.html)の講演資料および動画です．    

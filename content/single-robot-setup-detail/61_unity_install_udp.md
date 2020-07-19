@@ -14,6 +14,16 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 
 {{< image src="/img/single-robot/unity_setting_player_udp.png" width="700" >}}
 
+また，`Hierarchy`ビューで`Robot`配下の`RoboModel_3`を選択してください．  
+すると画面右の`Inspector`ビューに[EV3 Motor (Script)]の項目が表示されます.  
+
+{{< image src="/img/single-robot/unity_hierarchy_view.png" width="300" >}}
+
+表示されたら，項目内のプロパティ`Max Diff Time`を40000に変更します．
+
+{{< image src="/img/single-robot/unity_fix_maxdifftime.png" width="350" >}}
+
+
 # UDP用パラメータ設定
 
 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．

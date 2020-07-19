@@ -86,8 +86,8 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 {{< image src="/img/single-robot/unity_setting_time.png" width="700" >}}
 
 ※`ev3rt-simple-robot.unitypackage`を使用する場合で，もしシミュレーションの動作が  
-遅い場合には，`Fixed Timestep` を 0.01に，EV3 Motor(Script)の`Interval`を 0.0005に，  
-`Max Diff Time`を 40000に設定してください．
+遅い場合には，`Fixed Timestep` を 0.01に，EV3 Motor(Script)の`Interval`を 0.0005に  
+設定してください．
 
 「Quality」  
 `Other`の`VSync Count` を Don't Sync に設定します．

@@ -12,6 +12,8 @@ v850版のathrill2を利用される場合は，以下のサイトからコン�
 - https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1
 
 ```
+$ tar xzvf athrill-gcc-package.tar.gz
+$ cd athrill-gcc-package/
 $ tar xzvf athrill-gcc.tar.gz
 $ ls usr/local/athrill-gcc/
 bin  include  lib  libexec  share  v850-elf

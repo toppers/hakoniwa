@@ -23,11 +23,10 @@ WSLのインストール方法は色々なサイトで紹介されておりま�
 $ sudo apt update
 ```
 
-aptパッケージを更新したら，あらかじめ以下をインストールしておきます
+aptパッケージを更新したら，あらかじめ以下が使用できるようにインストールしておきます
 - gcc
 - make
 
 ```
-$ sudo apt install gcc
-$ sudo apt install make
+$ sudo apt install build-essential
 ```

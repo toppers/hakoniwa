@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Single-robot-setup-details on 箱庭</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/</link><description>Recent content in Single-robot-setup-details on 箱庭</description><generator>Hugo -- gohugo.io</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/index.xml" rel="self" type="application/rss+xml"/><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</guid><description>WSLのインストール Windows版の場合はWSLをインストールいただく必要があります．
-※注意点として，現時点(2020/3月)時点では，WSL2はご利用いただけません(WSL2とUnity間でUDP通信できないため)．
-WSLのインストール方法は色々なサイトで紹介されておりますので，Ubuntu 16.04.5 LTSをインストールください．
+※注意点として，現時点(2020/6月)時点では，WSL2はご利用いただけません(WSL2とUnity間でUDP通信できないため)．
+WSLのインストール方法は色々なサイトで紹介されておりますので，Ubuntu 18.04 LTSをインストールください．
 以下のサイト等が参考になるかと思います．
-https://qiita.com/Aruneko/items/c79810b0b015bebf30bb</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</guid><description>Rubyのインストール v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります． ※EV3ロボット制御アプリをビルドする際に必要となります．
+https://qiita.com/Aruneko/items/c79810b0b015bebf30bb インストールが完了したら，aptパッケージを更新しておきます．
+(更新しないと後ほど行うgccのインストールで失敗することがあるためです)
+$ sudo apt update
+aptパッケージを更新したら，あらかじめ以下が使用できるようにインストールしておきます
+gcc make $ sudo apt install build-essential</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</guid><description>Rubyのインストール v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります． ※EV3ロボット制御アプリをビルドする際に必要となります．
 Homebrewを使用してインストールします．
 $ brew install ruby</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/</guid><description>Rubyのインストール v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります． ※EV3ロボット制御アプリをビルドする際に必要となります．
 $ sudo apt install ruby</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/</guid><description>athrill2のインストール athrill2のインストール手順 athrill のチェックアウト athrill-target のチェックアウト コンパイラのインストール ビルド＆インストール athrill のチェックアウト athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．
@@ -47,7 +51,9 @@ Windows(WSL)
 https://www.yokoweb.net/2018/03/07/wsl-ubuntu-arm-gcc/ Linux
 https://www.yokoweb.net/2018/05/16/ubuntu-18_04-gcc-arm-install/ Mac
 https://www.yokoweb.net/2018/05/16/macos-gcc-arm-brew-install/</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</guid><description>linux版64bit gccコンパイラ(ライブラリ含む)のインストール v850版のathrill2を利用される場合は，以下のサイトからコンパイラおよびライブラリ(athrill-gcc-package.tar.gz)をダウンロードください．
-https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1 $ tar xzvf athrill-gcc.tar.gz
+https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1 $ tar xzvf athrill-gcc-package.tar.gz
+$ cd athrill-gcc-package/
+$ tar xzvf athrill-gcc.tar.gz
 $ ls usr/local/athrill-gcc/
 bin include lib libexec share v850-elf
 解凍後，usr/local/athrill-gccを /usr/local 直下に移動してください．
@@ -139,6 +145,9 @@ unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定
 Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
 「Player」
 Other SettingのScripting Define Symbols にVDEV_IO_UDPと設定します．
+また，HierarchyビューでRobot配下のRoboModel_3を選択してください．
+すると画面右のInspectorビューに[EV3 Motor (Script)]の項目が表示されます.
+表示されたら，項目内のプロパティMax Diff Timeを40000に変更します．
 UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
 説明する上でのIPアドレスの構成例 Unity側のIPアドレス：192.168.11.32
 athrill側のIPアドレス：192.168.11.20
@@ -152,5 +161,4 @@ UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
 RX packets:0 errors:0 dropped:0 overruns:0 frame:0
 TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
 collisions:0
-RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
-お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．</description></item></channel></rss>
+RX bytes:0 (0.</description></item></channel></rss>

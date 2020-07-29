@@ -246,10 +246,12 @@ EV3 Motor(Script) Power Const(動的変更可) EV3のモータのパワーです
 全体照明１個 Directional Light スポットライト２個 Spot Light1 Spot Light2 それぞれの照明はシミュレーション実行時にON/OFFできます． ON/OFFのさせ方は単純で，HierachyビューでON/OFFしたいライトを選択します．
 すると，Inspectorビューに下図のように「Light」のチェックボックスが見えます． このチェックボックスを外せばOFFになります．
 カラーセンサの状態 パラメータではないですが，カラーセンサの認識している状態を知りたくなることがあるかと思います． そのため，カラーセンサの認識している値をUnityのパラメータ表示機能を利用して可視化しています．
-参照するには，下図のようにHierarchyビューでColorSensorを選択してください．</description></item><item><title>技術情報・発表資料</title><link>https://toppers.github.io/hakoniwa/technical-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/</guid><description>ETロボコン向け TOPPERS活用セミナー 2020年7月18日(土)に開催されるETロボコン向け TOPPERS活用セミナーの講演資料です．動画も追って公開予定です． 箱庭WGの狙いとプロトタイプモデルの紹介に加えて，単体ロボット向けプロトタイプモデルの導入方法と使用方法について，詳しく紹介します．
-『箱庭ワーキンググループ』 目指すところとプロトタイプモデルの紹介 講演資料 (PDFファイル) 単体ロボット向けプロトタイプの導入手順と使用方法の紹介 講演資料 (PDFファイル) 単体ロボット向けプロトタイプモデル 〜チューニング/注意点と今後の展開について〜 講演資料 (PDFファイル) このページの先頭に戻る
+参照するには，下図のようにHierarchyビューでColorSensorを選択してください．</description></item><item><title>技術情報・発表資料</title><link>https://toppers.github.io/hakoniwa/technical-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/</guid><description>ETロボコン向け TOPPERS活用セミナー 2020年7月18日(土)に開催されるETロボコン向け TOPPERS活用セミナーの講演資料および動画です． 箱庭WGの狙いとプロトタイプモデルの紹介に加えて，単体ロボット向けプロトタイプモデルの導入方法と使用方法について，詳しく紹介しています．
+『箱庭ワーキンググループ』 目指すところとプロトタイプモデルの紹介 講演資料 (PDFファイル) 動画 (YouTube)
+単体ロボット向けプロトタイプの導入手順と使用方法の紹介 講演資料 (PDFファイル) 動画 (YouTube)
+単体ロボット向けプロトタイプモデル 〜チューニング/注意点と今後の展開について〜 講演資料 (PDFファイル) 動画 (YouTube)
+このページの先頭に戻る
 TOPPERSカンファレンス2020 2020年6月12日(金)に開催されたTOPPERSカンファレンス2020の講演資料および動画です． 箱庭WGの活動紹介，プロトタイプ開発と時間同期機構の解説，および，クラウドIDEを利用したアイデアの紹介を行いました．
 『箱庭ワーキンググループ』 目指すところと活動の紹介 講演資料 (PDFファイル) 動画 (YouTube)
 箱庭のプロトタイプ開発と異種レイヤ間の時間同期機構 講演資料 (PDFファイル) 動画 (YouTube)
-クラウドIDEとエミュレータを利用した実機レス開発環境 講演資料 (PDFファイル) 動画 (YouTube)
-このページの先頭に戻る</description></item></channel></rss>
+クラウドIDEとエミュレータを利用した実機レス開発環境 講演資料 (PDFファイル) 動画 (YouTube)</description></item></channel></rss>

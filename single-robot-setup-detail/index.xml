@@ -117,11 +117,15 @@ static float lasterror = 0, integral = 0;
 static float midpoint = (white - black) / 2 + black;
 {
 float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);
-integral = error + integral * 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
+integral = error + integral * 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityパッケージのダウンロード 単体ロボット向けシミュレータで使用するUnityパッケージを2種類用意してあります． どちらかのパッケージをご選択いただき，ダウンロードを行ってください．
+使用するUnityパッケージ 説明 single-robot-HackEV HackEVを模した走行体モデルを使用しています ev3rt-simple-robot シンプルな走行体モデルを使用しています single-robot-HackEV(v2.0) 上記２つのモデルを含んでおり自由に選択できます それぞれ下記からダウンロードしてください
+single-robot-HackEV.unitypackage https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v1.0 ev3rt-simple-robot.unitypackage https://github.com/toppers/hakoniwa-Unity-SimpleCar/releases single-robot-HackEV.unitypackage(v2.0) https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.0 使用するUnityのパッケージによって，設定画面のレイアウトが異なりますため，
+ご選択いただいたUnityパッケージに合わせた導入手順をご参照ください
+Unityのインストール・パッケージのインポート・通信方式の切替方法 single-robot-HackEV(v2.0) を使用する場合 single-robot-HackEV または ev3rt-simple-robot を使用する場合</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
 以下のサイト等が参考になるかと思います．
-https://tech-camp.in/note/technology/44408/ 使用するUnityパッケージ 単体ロボット向けシミュレータで使用するUnityパッケージを2種類用意してあります． どちらかのパッケージをご選択いただき，インポートを行ってください．
-使用するUnityパッケージ 説明 single-robot-HackEV.unitypackage HackEVを模した走行体モデルを使用しています ev3rt-simple-robot.unitypackage シンプルな走行体モデルを使用しています それぞれ下記からダウンロードしてください
-single-robot-HackEV.unitypackage https://github.com/toppers/hakoniwa-Unity-HackEV/releases ev3rt-simple-robot.unitypackage https://github.com/toppers/hakoniwa-Unity-SimpleCar/releases Unityパッケージのインポート Unity 起動 まず，インストールしたUnityを起動してください．
+https://tech-camp.in/note/technology/44408/ ※動作確認はUnity 2020.1.0b9(64bit)で行っております．
+使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．
+Unityパッケージのインポート Unity 起動 まず，インストールしたUnityを起動してください．
 無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．
 次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．
 成功すると，以下のようにUnityが起動します．
@@ -130,7 +134,36 @@ Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Pa
 成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．
 成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます． Toppers_Courseをダブルクリックすると下図の画面が現れます．
 次に，シミュレーションに関わる設定を変更します．
-Unity のメニューから，「Edit」⇒「Project Settings」を選択します．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
+Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
+「Time」
+Fixed Timestep を 0.001に， Time Scale を 0.6に設定します．
+※ev3rt-simple-robot.unitypackageを使用する場合で，もしシミュレーションの動作が
+遅い場合には，Fixed Timestep を 0.01に，EV3 Motor(Script)のIntervalを 0.0005に
+設定してください．
+「Quality」
+OtherのVSync Count を Don&amp;rsquo;t Sync に設定します．
+これでインポート作業終了です．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
+以下のサイト等が参考になるかと思います．
+https://tech-camp.in/note/technology/44408/ ※動作確認はUnity 2020.1.0b9(64bit)で行っております．
+使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．
+Unityパッケージのインポート Unity 起動 まず，インストールしたUnityを起動してください．
+無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．
+次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．
+成功すると，以下のようにUnityが起動します．
+Unityパッケージのインポート ※画像はsingle-robot-HackEV.unitypackageをインポートする際のものになります
+Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Package&amp;hellip;」と選択し，任意の unitypackageファイルを選択してください．
+成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．
+成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます． Toppers_Courseをダブルクリックすると下図の画面が現れます．
+次に，シミュレーションに関わる設定を変更します．
+Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
+「Time」
+Fixed Timestep を 0.001に， Time Scale を 0.6に設定します．
+※ev3rt-simple-robot.unitypackageを使用する場合で，もしシミュレーションの動作が
+遅い場合には，Fixed Timestep を 0.01に，EV3 Motor(Script)のIntervalを 0.0005に
+設定してください．
+「Quality」
+OtherのVSync Count を Don&amp;rsquo;t Sync に設定します．
+これでインポート作業終了です．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
 Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
 「Player」
 Other SettingのScripting Define Symbols にVDEV_IO_MMAPと設定します．
@@ -141,11 +174,20 @@ MMAP用パラメータ設定 ※なお，このページで紹介しているUni
 MMAPファイル自体は，以下の２ファイルがapp.cと同じフォルダに含まれています．
 athrill_mmap.bin unity_mmap.bin athrill_mmap.bin の絶対ファイルパスを，[EV3 Actuator]のFilepathに設定してください(設定例：下図)．
 unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定してください(設定例：下図)．
-以上でMMAPの設定は終わりです．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</guid><description>UDP用Unity設定 UnityとathrillをUDPで通信する場合は，Unity側で以下の設定を行います．
+以上でMMAPの設定は終わりです．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap_v2.0/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
 Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
 「Player」
-Other SettingのScripting Define Symbols にVDEV_IO_UDPと設定します．
-また，HierarchyビューでRobot配下のRoboModel_3を選択してください．
+Other SettingのScripting Define Symbols にVDEV_IO_MMAPと設定します．
+MMAP用パラメータ設定 ※なお，このページで紹介しているUnity画面の画像はWindows版のものです
+HierarchyビューでRobot配下のRoboModelを選択してください．
+すると画面右のInspectorビューに[Io Writer (Script)]と[Io Reader (Script)]の項目が表示されます.
+インポート直後ですと，[Io Writer (Script)] と [Io Reader (Script)]の Filepath は空白です．
+ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．
+MMAPファイル自体は，以下の２ファイルがapp.cと同じフォルダに含まれています．
+athrill_mmap.bin unity_mmap.bin unity_mmap.bin の絶対ファイルパスを，[Io Writer (Script)]のFilepathに設定してください(設定例：下図)．
+athrill_mmap.bin の絶対ファイルパスを，[Io Reader (Script)]のFilepathに設定してください(設定例：下図)．
+以上でMMAPの設定は終わりです．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</guid><description>UDP用Unity設定 UnityとathrillをUDPで通信する場合は，Unity側で以下の設定を行います．
+HierarchyビューでRobot配下のRoboModel_3を選択してください．
 すると画面右のInspectorビューに[EV3 Motor (Script)]の項目が表示されます.
 表示されたら，項目内のプロパティMax Diff Timeを40000に変更します．
 UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
@@ -161,4 +203,23 @@ UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
 RX packets:0 errors:0 dropped:0 overruns:0 frame:0
 TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
 collisions:0
-RX bytes:0 (0.</description></item></channel></rss>
+RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
+お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</guid><description>UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
+説明する上でのIPアドレスの構成例 Unity側のIPアドレス：192.168.11.32
+athrill側のIPアドレス：192.168.11.20
+なお，IPアドレスの確認方法は以下のやり方でわかります．
+お使いのPCがLinux/WSLの場合 ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．
+$ ifconfig
+eth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96
+inet addr:192.168.11.32 Bcast:192.168.11.255 Mask:255.255.255.0
+inet6 addr: fe80::cc6d:70d3:a934:a61b/64 Scope:Unknown
+UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
+RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+collisions:0
+RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
+お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．
+&amp;gt; ipconfig
+Windows IP 構成
+イーサネット アダプター イーサネット:
+リンクローカル IPv6 アドレス. .</description></item></channel></rss>

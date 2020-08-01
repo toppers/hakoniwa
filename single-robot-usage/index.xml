@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Single-robot-usages on 箱庭</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/</link><description>Recent content in Single-robot-usages on 箱庭</description><generator>Hugo -- gohugo.io</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/single-robot-usage/index.xml" rel="self" type="application/rss+xml"/><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>単体ロボット向けシミュレータ使用手順(ARM版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Single-robot-usages on 箱庭</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/</link><description>Recent content in Single-robot-usages on 箱庭</description><generator>Hugo -- gohugo.io</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/single-robot-usage/index.xml" rel="self" type="application/rss+xml"/><item><title>シミュレーションに関するチューニング</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</guid><description>変更可能なパラメータ EV3のパラメータについて 今回のシミュレーション環境(Unity側)にはいくつかパラメータがありますので，その説明を行います．
+まず，パラメータを参照するには，Hierarchyビューで，「EV3」を選択してください(下図)．
+すると，InspectorビューにEV3のパラメータが表示されます．
+以下，変更可能なパラメータを説明します(説明されていないものは変更しないでください)． ※これらのパラメータは，シミュレーション実行時に動的に変更も可能なものもあります．
+EV3 Actuator(Script) Port(動的変更不可) Unity側のUDP受信ポート番号です．デフォルトでは54001です．
+この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．
+DEBUG_FUNC_VDEV_TX_PORTNO 54001 device_config.txt は，app.cと同じフォルダにあります．
+EV3 Sensor(Script) Host(動的変更不可) Athrillの配置マシンのIPアドレスです． Unityと同じマシン上に配置する場合は，デフォルト値のままで良いです．
+マシン負荷が高く，athrillとUnityを別マシンで動かす場合は，このIPアドレスを変更して対応ください．
+Port(動的変更不可) Athrill側のUDP受信ポート番号です．デフォルトでは54002です．
+この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．
+DEBUG_FUNC_VDEV_RX_PORTNO 54002 device_config.txt は，app.cと同じフォルダにあります．
+EV3 Motor(Script) Power Const(動的変更可) EV3のモータのパワーです．デフォルトで40としていますが，値を変更できます．
+ただ，あまり大きい値を設定しすぎるとUnity側の問題か，物理的にありえないのかよくわかりませんが，EVロボットが吹っ飛びますので，ご注意ください．．．
+照明のON/OFFについて 今回のデモでは，照明を３個用意しています．
+全体照明１個 Directional Light スポットライト２個 Spot Light1 Spot Light2 それぞれの照明はシミュレーション実行時にON/OFFできます． ON/OFFのさせ方は単純で，HierachyビューでON/OFFしたいライトを選択します．
+すると，Inspectorビューに下図のように「Light」のチェックボックスが見えます． このチェックボックスを外せばOFFになります．
+カラーセンサの状態 パラメータではないですが，カラーセンサの認識している状態を知りたくなることがあるかと思います． そのため，カラーセンサの認識している値をUnityのパラメータ表示機能を利用して可視化しています．
+参照するには，下図のようにHierarchyビューでColorSensorを選択してください．</description></item><item><title>シミュレーションに関するチューニング</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/</guid><description>single-robot-HackEV(v2.0)の追加要素について Hakoniwaクラスの追加 single-robot-HackEV(v2.0) ではHakoniwaクラスが設けられました．
+Hakoniwaクラスはシミュレーション環境全体に関わる情報を持っています．
+主なフィールド 説明 Max Diff Time athrillとUnityのシミュレーション時間の最大許容誤差時間 Dbg Diff Time Msec 現在のathrillとUnityのシミュレーション時間の誤差(msec) Robotの配置方法 single-robot-HackEV(v2.0)ではあらかじめ用意されたいくつかのロボットモデルを
+ユーザの方が任意に配置することが出来ます．
+Project/Prefabs配下にいくつかのロボットモデルを用意しています． これらのロボットモデルをHierarchyビューのRobot配下にドラッグ＆ドロップすることで 簡単に配置することができます．
+変更可能なパラメータ Robot のパラメータについて 超音波センサ Ultrasonic SensorのDistance Valueでセンサ範囲を調整できます．
+モーター RigidbodyのMassでタイヤの重さを，Angular Dragで回転時の抵抗値を調整できます．
+カラーセンサ Physical CameraのSensor Sizeでセンシング範囲を調整できます．</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>単体ロボット向けシミュレータ使用手順(ARM版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
+export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major cfgフォルダの配置(初回起動時のみ) cfg ファイルの配置(Mac版の場合)
+$ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-mac cfg/cfg/cfg $ chmod +x cfg/cfg/cfg cfg ファイルの配置(Windows\Linux版の場合)
+$ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-linux-64 cfg/cfg/cfg $ chmod +x cfg/cfg/cfg EV3ロボット制御プログラムのビルド ターミナル上で，ev3rt-athrill-ARMv7-A/sdk/OBJ1.1に移動して，
+EV3ロボット制御プログラムをビルドしましょう．
+ビルドするには，以下のコマンドを実行してください．
+make clean;make ビルド成功すると，asp というバイナリができます．
+$ ls asp asp Unityのシミュレータの起動 次に，Unityをシミュレーションモードにします． Unityの画面上で　ボタンを押下してください．
+成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)
+athrillの起動 最後に，athrillを起動しましょう．</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/</guid><description>単体ロボット向けシミュレータ使用手順(ARM版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
 export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major cfgフォルダの配置(初回起動時のみ) cfg ファイルの配置(Mac版の場合)
 $ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-mac cfg/cfg/cfg $ chmod +x cfg/cfg/cfg cfg ファイルの配置(Windows\Linux版の場合)
 $ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-linux-64 cfg/cfg/cfg $ chmod +x cfg/cfg/cfg EV3ロボット制御プログラムのビルド ターミナル上で，ev3rt-athrill-ARMv7-A/sdk/OBJ1.1に移動して，
@@ -18,24 +52,21 @@ athrillの起動 最後に，athrillを起動しましょう．
 ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞に移動して，以下のコマンドを実行してください．
 UDP版の場合
 $ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp MMAP版の場合
-$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp 成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>単体ロボット向けシミュレータ使用方法 使用手順詳細 使用するターゲットCPUの使用手順をご選択ください．
-V850版 ARM版 設定可能なパラメータについて シミュレーションに関わる変更可能なパラメータについての説明が記載されています．
-設定可能なパラメータ</description></item><item><title>変更可能なパラメータ</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</guid><description>変更可能なパラメータ EV3のパラメータについて 今回のシミュレーション環境(Unity側)にはいくつかパラメータがありますので，その説明を行います．
-まず，パラメータを参照するには，Hierarchyビューで，「EV3」を選択してください(下図)．
-すると，InspectorビューにEV3のパラメータが表示されます．
-以下，変更可能なパラメータを説明します(説明されていないものは変更しないでください)． ※これらのパラメータは，シミュレーション実行時に動的に変更も可能なものもあります．
-EV3 Actuator(Script) Port(動的変更不可) Unity側のUDP受信ポート番号です．デフォルトでは54001です．
-この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．
-DEBUG_FUNC_VDEV_TX_PORTNO 54001 device_config.txt は，app.cと同じフォルダにあります．
-EV3 Sensor(Script) Host(動的変更不可) Athrillの配置マシンのIPアドレスです． Unityと同じマシン上に配置する場合は，デフォルト値のままで良いです．
-マシン負荷が高く，athrillとUnityを別マシンで動かす場合は，このIPアドレスを変更して対応ください．
-Port(動的変更不可) Athrill側のUDP受信ポート番号です．デフォルトでは54002です．
-この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．
-DEBUG_FUNC_VDEV_RX_PORTNO 54002 device_config.txt は，app.cと同じフォルダにあります．
-EV3 Motor(Script) Power Const(動的変更可) EV3のモータのパワーです．デフォルトで40としていますが，値を変更できます．
-ただ，あまり大きい値を設定しすぎるとUnity側の問題か，物理的にありえないのかよくわかりませんが，EVロボットが吹っ飛びますので，ご注意ください．．．
-照明のON/OFFについて 今回のデモでは，照明を３個用意しています．
-全体照明１個 Directional Light スポットライト２個 Spot Light1 Spot Light2 それぞれの照明はシミュレーション実行時にON/OFFできます． ON/OFFのさせ方は単純で，HierachyビューでON/OFFしたいライトを選択します．
-すると，Inspectorビューに下図のように「Light」のチェックボックスが見えます． このチェックボックスを外せばOFFになります．
-カラーセンサの状態 パラメータではないですが，カラーセンサの認識している状態を知りたくなることがあるかと思います． そのため，カラーセンサの認識している値をUnityのパラメータ表示機能を利用して可視化しています．
-参照するには，下図のようにHierarchyビューでColorSensorを選択してください．</description></item></channel></rss>
+$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp 成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/</guid><description>単体ロボット向けシミュレータ使用手順(V850版) 使用手順 EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 EV3ロボット制御プログラムのビルド ev3rt-athrill-v850e2m/sdk/workspace に移動して，
+EV3ロボット制御プログラムをビルドしましょう．
+ビルドするには，以下のコマンドを実行してください．
+$ make img=＜アプリケーションフォルダ名＞ clean $ make img=＜アプリケーションフォルダ名＞ 例：line_traceというアプリケーションフォルダのプログラムをビルドする場合
+$ make img=line_trace clean $ make img=line_trace ビルド成功すると，asp というバイナリができます．
+$ ls asp asp Unityのシミュレータの起動 次に，Unityをシミュレーションモードにします． Unityの画面上で　ボタンを押下してください．
+成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)
+athrillの起動 最後に，athrillを起動しましょう．
+ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞に移動して，以下のコマンドを実行してください．
+UDP版の場合
+$ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp MMAP版の場合
+$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp 成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>単体ロボット向けシミュレータ使用方法 使用手順詳細 single-robot-HackEV(v2.0)を使用している場合 使用しているUnityパッケージが single-robot-HackEV(v2.0) の場合は，
+こちらの使用手順をご参照ください．
+V850版 ARM版 シミュレーションに関わるチューニングについてはこちらをご参照ください．
+チューニングについて(single-robot-HackEV(v2.0)を使用している場合) single-robot-HackEV または ev3rt-simple-robotを使用している場合 使用しているUnityパッケージが single-robot-HackEV または ev3rt-simple-robot の場合は，
+こちらの使用手順をご参照ください．
+V850版 ARM版 シミュレーションに関わるチューニングについてはこちらをご参照ください．
+チューニングについて</description></item></channel></rss>

@@ -10,16 +10,28 @@ draft = false
 ## 使用手順詳細
 
 ------
+### single-robot-HackEV(v2.0)を使用している場合
 
-使用するターゲットCPUの使用手順をご選択ください．
+使用しているUnityパッケージが `single-robot-HackEV(v2.0)` の場合は，  
+こちらの使用手順をご参照ください．
+
+- [V850版]({{< ref "01_Usage_V850_v2.0.md">}})
+- [ARM版]({{< ref "01_Usage_ARM_v2.0.md">}})
+
+シミュレーションに関わるチューニングについてはこちらをご参照ください．
+
+- [チューニングについて(single-robot-HackEV(v2.0)を使用している場合)]({{< ref "02_Changed_Params_v2.0.md">}})
+
+------
+
+### single-robot-HackEV または ev3rt-simple-robotを使用している場合
+
+使用しているUnityパッケージが `single-robot-HackEV` または `ev3rt-simple-robot` の場合は，  
+こちらの使用手順をご参照ください．
 
 - [V850版]({{< ref "01_Usage_V850.md">}})
 - [ARM版]({{< ref "01_Usage_ARM.md">}})
 
-## 設定可能なパラメータについて
+シミュレーションに関わるチューニングについてはこちらをご参照ください．
 
-------
-
-シミュレーションに関わる変更可能なパラメータについての説明が記載されています．
-
-[設定可能なパラメータ]({{< ref "02_Changed_Params.md">}})
+- [チューニングについて]({{< ref "02_Changed_Params.md">}})

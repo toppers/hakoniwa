@@ -3,20 +3,6 @@ title = "単体ロボット向けシミュレータ導入手順"
 draft = false
 +++
 
-# UDP用Unity設定
-
-UnityとathrillをUDPで通信する場合は，Unity側で以下の設定を行います．
-
-`Hierarchy`ビューで`Robot`配下の`RoboModel_3`を選択してください．  
-すると画面右の`Inspector`ビューに[EV3 Motor (Script)]の項目が表示されます.  
-
-{{< image src="/img/single-robot/unity_hierarchy_view.png" width="300" >}}
-
-表示されたら，項目内のプロパティ`Max Diff Time`を40000に変更します．
-
-{{< image src="/img/single-robot/unity_fix_maxdifftime.png" width="350" >}}
-
-
 # UDP用パラメータ設定
 
 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
@@ -69,7 +55,9 @@ athrillを実行するフォルダ配下に，athrill制御用のパラメータ
 
 ```
 DEBUG_FUNC_VDEV_TX_IPADDR       192.168.11.32
+DEBUG_FUNC_VDEV_TX_PORTNO   	54001
 DEBUG_FUNC_VDEV_RX_IPADDR       192.168.11.20
+DEBUG_FUNC_VDEV_RX_PORTNO   	54002
 ```
 
 DEBUG_FUNC_VDEV_TX_IPADDR には，Unity側のIPアドレスを設定します．  
@@ -77,6 +65,16 @@ DEBUG_FUNC_VDEV_RX_IPADDR には，athrill側のIPアドレスを設定します
 
 ## Unityのパラメータ
 
-Unity側は，EV3 Sensor(Script)のHostにathrill側のIPアドレスを設定してください．
+`Hierarchy`ビューで`Robot`配下の`RoboModel`を選択してください．  
+すると画面右の`Inspector`ビューに[Io Writer (Script)]と[Io Reader (Script)]の項目が表示されます. 
 
-[![image.png](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fb60b76a3-b1d0-5fdf-c885-64bf5fd243d5.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=d5c2d376d13276fbd02721e42d698c1b)](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fb60b76a3-b1d0-5fdf-c885-64bf5fd243d5.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=d5c2d376d13276fbd02721e42d698c1b)
+{{< image src="/img/single-robot/unity_hierarchy_view_robo_v2.0.png" width="300" >}}
+
+- Io Writer (Script)  
+ Hostにathrill側のIPアドレスを設定してください．  
+ Portには`DEBUG_FUNC_VDEV_RX_PORTNO`で設定した値を設定してください．
+
+- Io Reader (Script)  
+ Portには`DEBUG_FUNC_VDEV_TX_PORTNO`で設定した値を設定してください．
+	
+{{< image src="/img/single-robot/unity_setting_udp.png" width="400" >}}

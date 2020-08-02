@@ -38,4 +38,15 @@ unity_mmap.bin の絶対ファイルパスを，[Io Writer (Script)]のFilepath�
 athrill_mmap.bin の絶対ファイルパスを，[Io Reader (Script)]のFilepathに設定してください(設定例：下図)．
 
 {{< image src="/img/single-robot/unity_setting_mmap.png" width="400" >}}
+
+例えば，v850版を使用するという前提で`ev3rt-athrill-v850e2m`のローカルリポジトリが，  
+`C:\project\hakoniwa`にあり，実行したいアプリケーションのフォルダが`line_trace`の場合は，  
+以下のパスを設定します．
+
+- [Io Writer (Script)]のFilePath  
+`C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\unity_mmap.bin`
+
+- [Io Reader (Script)]のFilePath  
+`C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\athrill_mmap.bin`
+
 以上でMMAPの設定は終わりです．

@@ -172,8 +172,15 @@ MMAP用パラメータ設定 ※なお，このページで紹介しているUni
 インポート直後ですと，[EV3 Actuator] と [EV3 Sensor]の Filepath は空白です．
 ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．
 MMAPファイル自体は，以下の２ファイルがapp.cと同じフォルダに含まれています．
-athrill_mmap.bin unity_mmap.bin athrill_mmap.bin の絶対ファイルパスを，[EV3 Actuator]のFilepathに設定してください(設定例：下図)．
-unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定してください(設定例：下図)．
+athrill_mmap.bin unity_mmap.bin unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定してください(設定例：下図)．
+athrill_mmap.bin の絶対ファイルパスを，[EV3 Actuator]のFilepathに設定してください(設定例：下図)．
+例えば，v850版を使用するという前提でev3rt-athrill-v850e2mのローカルリポジトリが，
+C:\project\hakoniwaにあり，実行したいアプリケーションのフォルダがline_traceの場合は，
+以下のパスを設定します．
+[EV3 Actuator]のFilePath
+C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\unity_mmap.bin
+[EV3 Sensor]のFilePath
+C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\athrill_mmap.bin
 以上でMMAPの設定は終わりです．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap_v2.0/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
 Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
 「Player」
@@ -186,11 +193,19 @@ HierarchyビューでRobot配下のRoboModelを選択してください．
 MMAPファイル自体は，以下の２ファイルがapp.cと同じフォルダに含まれています．
 athrill_mmap.bin unity_mmap.bin unity_mmap.bin の絶対ファイルパスを，[Io Writer (Script)]のFilepathに設定してください(設定例：下図)．
 athrill_mmap.bin の絶対ファイルパスを，[Io Reader (Script)]のFilepathに設定してください(設定例：下図)．
+例えば，v850版を使用するという前提でev3rt-athrill-v850e2mのローカルリポジトリが，
+C:\project\hakoniwaにあり，実行したいアプリケーションのフォルダがline_traceの場合は，
+以下のパスを設定します．
+[Io Writer (Script)]のFilePath
+C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\unity_mmap.bin
+[Io Reader (Script)]のFilePath
+C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\athrill_mmap.bin
 以上でMMAPの設定は終わりです．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</guid><description>UDP用Unity設定 UnityとathrillをUDPで通信する場合は，Unity側で以下の設定を行います．
 HierarchyビューでRobot配下のRoboModel_3を選択してください．
 すると画面右のInspectorビューに[EV3 Motor (Script)]の項目が表示されます.
 表示されたら，項目内のプロパティMax Diff Timeを40000に変更します．
 UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
+※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．
 説明する上でのIPアドレスの構成例 Unity側のIPアドレス：192.168.11.32
 athrill側のIPアドレス：192.168.11.20
 なお，IPアドレスの確認方法は以下のやり方でわかります．
@@ -205,6 +220,7 @@ TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
 collisions:0
 RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
 お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</guid><description>UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
+※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．
 説明する上でのIPアドレスの構成例 Unity側のIPアドレス：192.168.11.32
 athrill側のIPアドレス：192.168.11.20
 なお，IPアドレスの確認方法は以下のやり方でわかります．
@@ -222,4 +238,4 @@ RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
 &amp;gt; ipconfig
 Windows IP 構成
 イーサネット アダプター イーサネット:
-リンクローカル IPv6 アドレス. .</description></item></channel></rss>
+リンクローカル IPv6 アドレス.</description></item></channel></rss>

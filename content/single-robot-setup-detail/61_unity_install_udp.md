@@ -21,14 +21,16 @@ UnityとathrillをUDPで通信する場合は，Unity側で以下の設定を行
 
 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
 
-## 説明する上でのIPアドレスの構成例
+**※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．**
+
+### 説明する上でのIPアドレスの構成例
 
 Unity側のIPアドレス：192.168.11.32  
 athrill側のIPアドレス：192.168.11.20
 
 なお，IPアドレスの確認方法は以下のやり方でわかります．
 
-### お使いのPCがLinux/WSLの場合
+#### お使いのPCがLinux/WSLの場合
 
 ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．
 
@@ -44,7 +46,7 @@ eth0      Link encap:Ethernet  HWaddr 54:ee:75:b4:3c:96
           RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
 ```
 
-### お使いのPCがWindowsの場合
+#### お使いのPCがWindowsの場合
 
 Windows PowerShell を開いて，ipconfigを叩きます．
 
@@ -62,7 +64,7 @@ Windows IP 構成
    デフォルト ゲートウェイ . . . . . . .: 192.168.11.1
 ```
 
-## athrillのパラメータ
+### athrillのパラメータ
 
 athrillを実行するフォルダ配下に，athrill制御用のパラメータ設定ファイル device_config.txt があります．  
 そこに，以下のようにIPアドレスを定義してください．
@@ -75,7 +77,7 @@ DEBUG_FUNC_VDEV_RX_IPADDR       192.168.11.20
 DEBUG_FUNC_VDEV_TX_IPADDR には，Unity側のIPアドレスを設定します．  
 DEBUG_FUNC_VDEV_RX_IPADDR には，athrill側のIPアドレスを設定します．
 
-## Unityのパラメータ
+### Unityのパラメータ
 
 Unity側は，EV3 Sensor(Script)のHostにathrill側のIPアドレスを設定してください．
 

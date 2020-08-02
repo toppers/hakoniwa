@@ -31,12 +31,23 @@ MMAPファイル自体は，以下の２ファイルが```app.c```と同じフ�
 - athrill_mmap.bin
 - unity_mmap.bin
 
+unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定してください(設定例：下図)．
+
+[![image.png](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=c00912d532173b48318ebd94f6deec5a)](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=c00912d532173b48318ebd94f6deec5a)
+
 athrill_mmap.bin の絶対ファイルパスを，[EV3 Actuator]のFilepathに設定してください(設定例：下図)．
 
 [![image.png](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fbac2a522-ef60-83de-3847-593907d4caa3.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=7b5daec21b535117b589967d8817fa69)](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fbac2a522-ef60-83de-3847-593907d4caa3.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=7b5daec21b535117b589967d8817fa69)
 
-unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定してください(設定例：下図)．
 
-[![image.png](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=c00912d532173b48318ebd94f6deec5a)](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&s=c00912d532173b48318ebd94f6deec5a)
+例えば，v850版を使用するという前提で`ev3rt-athrill-v850e2m`のローカルリポジトリが，  
+`C:\project\hakoniwa`にあり，実行したいアプリケーションのフォルダが`line_trace`の場合は，  
+以下のパスを設定します．
+
+- [EV3 Actuator]のFilePath  
+`C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\unity_mmap.bin`
+
+- [EV3 Sensor]のFilePath  
+`C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\athrill_mmap.bin`
 
 以上でMMAPの設定は終わりです．

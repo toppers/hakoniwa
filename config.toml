@@ -27,6 +27,10 @@ googleAnalytics = "UA-169187702-1"
     weight = -80
     url = "/technical-links/"
 [[menu.main]]
-    name = "問合せ先"
+    name = "リポジトリ"
     weight = -70
+    url = "/repositories/"
+[[menu.main]]
+    name = "問合せ先"
+    weight = -10
     url = "/contact/"

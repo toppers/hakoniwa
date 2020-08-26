@@ -1,9 +1,9 @@
 ---
 title: "リポジトリ一覧"
-description: "箱庭WGが活動している、リポジトリを紹介します"
+description: "箱庭WGが開発・管理しているオープンソースソフトウェアを紹介します"
 date: 2020-08-26T15:09:42+09:00
 draft: true
-bref: "箱庭WGが活動しているリポジトリを紹介します"
+bref: "箱庭WGが開発・管理しているオープンソースソフトウェアを紹介します"
 toc: true
 images: [""]
 
@@ -12,19 +12,18 @@ images: [""]
 ### Athrill
 |略称・リンク|概要|備考|
 |:--|:--|:--|
-| [athrill](https://github.com/toppers/athrill) | athrill本体(ターゲット非依存部) |   |
-| [athrill-target-v850e2m](https://github.com/toppers/athrill-target-v850e2m) | athrill v850ターゲット依存部 | |
-| [athrill-target-ARMv7-A](https://github.com/toppers/athrill-target-ARMv7-A) | athrill ARMv7ターゲット依存 | |
-| [athrill-target-rh850f1x](https://github.com/toppers/athrill-target-rh850f1x) | athrill RH850F1xターゲット依存部 | |
+| [athrill](https://github.com/toppers/athrill) | Athrill本体(ターゲット非依存部) |   |
+| [athrill-target-v850e2m](https://github.com/toppers/athrill-target-v850e2m) | Athrill V850E2Mターゲット依存部 | |
+| [athrill-target-ARMv7-A](https://github.com/toppers/athrill-target-ARMv7-A) | Athrill ARMv7-Aターゲット依存部 | |
+| [athrill-target-rh850f1x](https://github.com/toppers/athrill-target-rh850f1x) | Athrill RH850F1xターゲット依存部 | |
+| [athrill-gcc-v850e2m](https://github.com/toppers/athrill-gcc-v850e2m) | Athrill V850E2Mターゲット対応のgccパッケージ |   |
 
-### mROS
+### TOPPERS kernel
 |略称・リンク|概要|備考|
 |:--|:--|:--|
-
-### TOPPERS OS
-|略称・リンク|概要|備考|
-|:--|:--|:--|
-| [ev3rt-athrill-ARMv7-A](https://github.com/toppers/ev3rt-athrill-ARMv7-A) | TOPPERS/EV3RT for Athrill (ARMv7-A ver.) |   |
+| [ev3rt-athrill-v850e2m](https://github.com/toppers/ev3rt-athrill-v850e2m) | TOPPERS/EV3RTプラットフォームのAthrill向けV850E2M版 | ASP3カーネルを代用  |
+| [ev3rt-athrill-ARMv7-A](https://github.com/toppers/ev3rt-athrill-ARMv7-A) | TOPPERS/EV3RTプラットフォームのAthrill向けARMv7-A版 | ASP3カーネルを代用  |
+| [asp-athrill-mbed](https://github.com/toppers/asp-athrill-mbed) | Athrill向けTOPPERS/ASPカーネルとmbedライブラリのパッケージ |   |
 
 ### Unity
 |略称・リンク|概要|備考|
@@ -32,10 +31,13 @@ images: [""]
 | [hakoniwa-Unity-HackEV](https://github.com/toppers/hakoniwa-Unity-HackEV) | 箱庭向けHackEVのUnityアセットファイル | |
 | [hakoniwa-Unity-SimpleCar](https://github.com/toppers/hakoniwa-Unity-SimpleCar) | 箱庭向けSimpleCarのUnityアセットファイル | |
 
-### Others
+### mROS
 |略称・リンク|概要|備考|
 |:--|:--|:--|
-| [hakoniwa-scenario-samples](https://github.com/toppers/hakoniwa-scenario-samples) | Sample collection of scenario for Hakoniwa | |
-| [athrill-gcc-v850e2m](https://github.com/toppers/athrill-gcc-v850e2m) | gcc for athrill(v850) |   |
-| [asp-athrill-mbed](https://github.com/toppers/asp-athrill-mbed) | mbed Libraries for TOPPERS/ASP kernel on Athrill |   |
+| [mROS](https://github.com/tlk-emb/mROS) | 組込みデバイス向けROS 1ノード軽量実行環境 | |
+
+### Samples
+|略称・リンク|概要|備考|
+|:--|:--|:--|
+| [hakoniwa-scenario-samples](https://github.com/toppers/hakoniwa-scenario-samples) | 箱庭の動作シナリオのサンプル集 | |
 

@@ -2,7 +2,7 @@
 title: "リポジトリ一覧"
 description: "箱庭WGが開発・管理しているオープンソースソフトウェアを紹介します"
 date: 2020-08-26T15:09:42+09:00
-draft: true
+draft: false
 bref: "箱庭WGが開発・管理しているオープンソースソフトウェアを紹介します"
 toc: true
 images: [""]

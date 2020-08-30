@@ -10,6 +10,19 @@ draft = false
 ## 使用手順詳細
 
 ------
+### single-robot-HackEV(v2.1)を使用している場合(Windows, Mac向け)
+
+使用しているUnityパッケージが `single-robot-HackEV(v2.1)` の場合は，  
+こちらの使用手順をご参照ください．
+
+- [使用手順]({{< ref "01_Usage_v2.1.md">}})
+
+シミュレーションに関わるチューニングについてはこちらをご参照ください．
+
+- [チューニングについて(single-robot-HackEV(v2.0)を使用している場合)]({{< ref "02_Changed_Params_v2.0.md">}})
+
+------
+
 ### single-robot-HackEV(v2.0)を使用している場合
 
 使用しているUnityパッケージが `single-robot-HackEV(v2.0)` の場合は，  

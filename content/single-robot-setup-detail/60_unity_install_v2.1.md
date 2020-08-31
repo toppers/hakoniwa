@@ -135,9 +135,10 @@ athrillとUnity間での通信方式に設定を行います．
 - **RobotName**  
   Unity上のRobot配下のロボットの名前を設定します．
 - **WorkspacePathWin**  
-  動作させるアプリケーションの実行環境のファイルパスを記述します．(Windowsの場合のみ)
+  動作させるアプリケーションの実行環境のファイルパスを記述します．Windows版の場合はWindows上でのパスを設定します．  
+  それ以外のプラットフォームの場合は，下記の`WorkspacePathUnix`と同じ値を設定してください．
 - **WorkspacePathUnix**  
-  動作させるアプリケーションの実行環境のファイルパスを記述します．Windows版の場合はこちらにもwsl上でのパスを設定します．
+  動作させるアプリケーションの実行環境のファイルパスを記述します．Windows版の場合はwsl上でのパスを設定します．
 - **ApplicationName**  
   動作させるアプリケーションのフォルダ名を設定します．
 - **BinaryName**  

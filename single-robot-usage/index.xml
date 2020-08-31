@@ -41,7 +41,29 @@ EV3ロボット制御プログラムをビルドしましょう．
 make clean;make ビルド成功すると，asp というバイナリができます．
 $ ls asp asp Unityのシミュレータの起動 ※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください
 次に，Unityをシミュレーションモードにします． Unityの画面上で　ボタンを押下してください．
-成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</guid><description>単体ロボット向けシミュレータ使用手順(V850版) 使用手順 EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 EV3ロボット制御プログラムのビルド ev3rt-athrill-v850e2m/sdk/workspace に移動して，
+成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/</guid><description>単体ロボット向けシミュレータ使用手順 V2.1での変更点について v2.1 で，Unityでのシミュレーション実行をビルドしてバイナリ実行できるようになりました．
+バイナリ実行でシミュレーション実行を行う場合，
+制御アプリのビルド Unityシミュレーションの実行， athrillの実行 をひとまとめにして実行することができます．
+なお，従来の使用方法でもシミュレーションを実行することは可能ですので，
+その場合は下記をご参照いただき，使用してください．
+V850版 ARM版 これ以降は，バイナリ実行を行うための手順の紹介となります．
+使用手順 ビルド設定 ビルドの実行，config.jsonの配置 シミュレーションの実行 ビルド設定 ビルドを実施する前に，バイナリ実行時のウィンドウサイズに関する設定を行います．
+Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
+「Player」
+Resolution and PresentationのFullscreen Mode をWindowedと設定します． その下の詳細なウィンドウサイズは基本そのままでもよいですが，サイズを変更したい場合は，
+お使いの環境に合わせて変更してください．
+ビルドの実行，config.jsonの配置 設定が完了したら，Unityプロジェクトのビルドを行います．
+Unity のメニューから，「File」⇒「Build Settings」を選択します．
+Platform は[PC,Mac &amp;amp; Linux Standalone]のままとします．
+Architectureは実行するPCのアーキテクチャに合わせて設定しますが，
+どちらか分からないという方は，x86_64を選択してください．
+設定を終えたら，Buildを押下してビルドを実行します．
+すると，どの場所にビルドしたバイナリを配置するか，選択ダイアログが表示されますので， 任意の場所を選択します．
+今回は例として，ビルドするUnityプロジェクトのあるフォルダ内に，Buildフォルダを作成し，
+その中にビルドしたバイナリを配置するようにします．
+フォルダを選択すると，ビルドが実行されます．
+シミュレーションの実行 ビルドが完了したら，シミュレーションを実行します．
+先ほど選択したフォルダにビルドしたバイナリが作成されていますので， &amp;lt;プロジェクト名&amp;gt;.exeまたは&amp;lt;プロジェクト名&amp;gt;.appのファイルを実行することでシミュレータが起動します．</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</guid><description>単体ロボット向けシミュレータ使用手順(V850版) 使用手順 EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 EV3ロボット制御プログラムのビルド ev3rt-athrill-v850e2m/sdk/workspace に移動して，
 EV3ロボット制御プログラムをビルドしましょう．
 ビルドするには，以下のコマンドを実行してください．
 $ make img=＜アプリケーションフォルダ名＞ clean $ make img=＜アプリケーションフォルダ名＞ 例：line_traceというアプリケーションフォルダのプログラムをビルドする場合
@@ -65,7 +87,10 @@ athrillの起動 最後に，athrillを起動しましょう．
 ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞に移動して，以下のコマンドを実行してください．
 UDP版の場合
 $ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp MMAP版の場合
-$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt .</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>単体ロボット向けシミュレータ使用方法 使用手順詳細 single-robot-HackEV(v2.0)を使用している場合 使用しているUnityパッケージが single-robot-HackEV(v2.0) の場合は，
+$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt .</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>単体ロボット向けシミュレータ使用方法 使用手順詳細 single-robot-HackEV(v2.1)を使用している場合(Windows, Mac向け) 使用しているUnityパッケージが single-robot-HackEV(v2.1) の場合は，
+こちらの使用手順をご参照ください．
+使用手順 シミュレーションに関わるチューニングについてはこちらをご参照ください．
+チューニングについて(single-robot-HackEV(v2.0)を使用している場合) single-robot-HackEV(v2.0)を使用している場合 使用しているUnityパッケージが single-robot-HackEV(v2.0) の場合は，
 こちらの使用手順をご参照ください．
 V850版 ARM版 シミュレーションに関わるチューニングについてはこちらをご参照ください．
 チューニングについて(single-robot-HackEV(v2.0)を使用している場合) single-robot-HackEV または ev3rt-simple-robotを使用している場合 使用しているUnityパッケージが single-robot-HackEV または ev3rt-simple-robot の場合は，

@@ -72,7 +72,29 @@ EV3ロボット制御プログラムをビルドしましょう．
 make clean;make ビルド成功すると，asp というバイナリができます．
 $ ls asp asp Unityのシミュレータの起動 ※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください
 次に，Unityをシミュレーションモードにします． Unityの画面上で　ボタンを押下してください．
-成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</guid><description>単体ロボット向けシミュレータ使用手順(V850版) 使用手順 EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 EV3ロボット制御プログラムのビルド ev3rt-athrill-v850e2m/sdk/workspace に移動して，
+成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/</guid><description>単体ロボット向けシミュレータ使用手順 V2.1での変更点について v2.1 で，Unityでのシミュレーション実行をビルドしてバイナリ実行できるようになりました．
+バイナリ実行でシミュレーション実行を行う場合，
+制御アプリのビルド Unityシミュレーションの実行， athrillの実行 をひとまとめにして実行することができます．
+なお，従来の使用方法でもシミュレーションを実行することは可能ですので，
+その場合は下記をご参照いただき，使用してください．
+V850版 ARM版 これ以降は，バイナリ実行を行うための手順の紹介となります．
+使用手順 ビルド設定 ビルドの実行，config.jsonの配置 シミュレーションの実行 ビルド設定 ビルドを実施する前に，バイナリ実行時のウィンドウサイズに関する設定を行います．
+Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
+「Player」
+Resolution and PresentationのFullscreen Mode をWindowedと設定します． その下の詳細なウィンドウサイズは基本そのままでもよいですが，サイズを変更したい場合は，
+お使いの環境に合わせて変更してください．
+ビルドの実行，config.jsonの配置 設定が完了したら，Unityプロジェクトのビルドを行います．
+Unity のメニューから，「File」⇒「Build Settings」を選択します．
+Platform は[PC,Mac &amp;amp; Linux Standalone]のままとします．
+Architectureは実行するPCのアーキテクチャに合わせて設定しますが，
+どちらか分からないという方は，x86_64を選択してください．
+設定を終えたら，Buildを押下してビルドを実行します．
+すると，どの場所にビルドしたバイナリを配置するか，選択ダイアログが表示されますので， 任意の場所を選択します．
+今回は例として，ビルドするUnityプロジェクトのあるフォルダ内に，Buildフォルダを作成し，
+その中にビルドしたバイナリを配置するようにします．
+フォルダを選択すると，ビルドが実行されます．
+シミュレーションの実行 ビルドが完了したら，シミュレーションを実行します．
+先ほど選択したフォルダにビルドしたバイナリが作成されていますので， &amp;lt;プロジェクト名&amp;gt;.exeまたは&amp;lt;プロジェクト名&amp;gt;.appのファイルを実行することでシミュレータが起動します．</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</guid><description>単体ロボット向けシミュレータ使用手順(V850版) 使用手順 EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 EV3ロボット制御プログラムのビルド ev3rt-athrill-v850e2m/sdk/workspace に移動して，
 EV3ロボット制御プログラムをビルドしましょう．
 ビルドするには，以下のコマンドを実行してください．
 $ make img=＜アプリケーションフォルダ名＞ clean $ make img=＜アプリケーションフォルダ名＞ 例：line_traceというアプリケーションフォルダのプログラムをビルドする場合
@@ -96,7 +118,10 @@ athrillの起動 最後に，athrillを起動しましょう．
 ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞に移動して，以下のコマンドを実行してください．
 UDP版の場合
 $ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp MMAP版の場合
-$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt .</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>単体ロボット向けシミュレータ使用方法 使用手順詳細 single-robot-HackEV(v2.0)を使用している場合 使用しているUnityパッケージが single-robot-HackEV(v2.0) の場合は，
+$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt .</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>単体ロボット向けシミュレータ使用方法 使用手順詳細 single-robot-HackEV(v2.1)を使用している場合(Windows, Mac向け) 使用しているUnityパッケージが single-robot-HackEV(v2.1) の場合は，
+こちらの使用手順をご参照ください．
+使用手順 シミュレーションに関わるチューニングについてはこちらをご参照ください．
+チューニングについて(single-robot-HackEV(v2.0)を使用している場合) single-robot-HackEV(v2.0)を使用している場合 使用しているUnityパッケージが single-robot-HackEV(v2.0) の場合は，
 こちらの使用手順をご参照ください．
 V850版 ARM版 シミュレーションに関わるチューニングについてはこちらをご参照ください．
 チューニングについて(single-robot-HackEV(v2.0)を使用している場合) single-robot-HackEV または ev3rt-simple-robotを使用している場合 使用しているUnityパッケージが single-robot-HackEV または ev3rt-simple-robot の場合は，
@@ -222,10 +247,10 @@ static float midpoint = (white - black) / 2 + black;
 {
 float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);
 integral = error + integral * 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityパッケージのダウンロード 単体ロボット向けシミュレータで使用するUnityパッケージを2種類用意してあります． どちらかのパッケージをご選択いただき，ダウンロードを行ってください．
-使用するUnityパッケージ 説明 single-robot-HackEV HackEVを模した走行体モデルを使用しています ev3rt-simple-robot シンプルな走行体モデルを使用しています single-robot-HackEV(v2.0) 上記２つのモデルを含んでおり自由に選択できます それぞれ下記からダウンロードしてください
-single-robot-HackEV.unitypackage https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v1.0 ev3rt-simple-robot.unitypackage https://github.com/toppers/hakoniwa-Unity-SimpleCar/releases single-robot-HackEV.unitypackage(v2.0) https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.0 使用するUnityのパッケージによって，設定画面のレイアウトが異なりますため，
+使用するUnityパッケージ 説明 single-robot-HackEV HackEVを模した走行体モデルを使用しています ev3rt-simple-robot シンプルな走行体モデルを使用しています single-robot-HackEV(v2.0) 上記２つのモデルを含んでおり自由に選択できます single-robot-HackEV(v2.1) single-robot-HackEV(v2.0)の内容に加え，シミュレータのコンフィグ機能，バイナリ実行機能を追加したものとなっております．(Windows, Mac対応済み．Linux版は開発中です) それぞれ下記からダウンロードしてください
+single-robot-HackEV.unitypackage https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v1.0 ev3rt-simple-robot.unitypackage https://github.com/toppers/hakoniwa-Unity-SimpleCar/releases single-robot-HackEV.unitypackage(v2.0) https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.0 single-robot-HackEV.unitypackage(v2.1) (Windows, Mac対応済み) https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.1 使用するUnityのパッケージによって，設定画面のレイアウトが異なりますため，
 ご選択いただいたUnityパッケージに合わせた導入手順をご参照ください
-Unityのインストール・パッケージのインポート・通信方式の切替方法 single-robot-HackEV(v2.0) を使用する場合 single-robot-HackEV または ev3rt-simple-robot を使用する場合</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
+Unityのインストール・パッケージのインポート・通信方式の切替方法 single-robot-HackEV(v2.1) を使用する場合 single-robot-HackEV(v2.0) を使用する場合 single-robot-HackEV または ev3rt-simple-robot を使用する場合</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
 以下のサイト等が参考になるかと思います．
 https://tech-camp.in/note/technology/44408/ ※動作確認はUnity 2020.1.0b9(64bit)で行っております．
 使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．
@@ -247,6 +272,27 @@ Fixed Timestep を 0.001に， Time Scale を 0.6に設定します．
 「Quality」
 OtherのVSync Count を Don&amp;rsquo;t Sync に設定します．
 これでインポート作業終了です．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
+以下のサイト等が参考になるかと思います．
+https://tech-camp.in/note/technology/44408/ ※動作確認はUnity 2020.1.0b9(64bit)で行っております．
+使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．
+Unityパッケージのインポート Unity 起動 まず，インストールしたUnityを起動してください．
+無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．
+次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．
+成功すると，以下のようにUnityが起動します．
+Unityパッケージのインポート ※画像はsingle-robot-HackEV.unitypackageをインポートする際のものになります
+Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Package&amp;hellip;」と選択し，任意の unitypackageファイルを選択してください．
+成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．
+成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます． Toppers_Courseをダブルクリックすると下図の画面が現れます．
+次に，シミュレーションに関わる設定を変更します．
+Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
+「Time」
+Fixed Timestep を 0.001に， Time Scale を 0.6に設定します．
+※ev3rt-simple-robot.unitypackageを使用する場合で，もしシミュレーションの動作が
+遅い場合には，Fixed Timestep を 0.01に，EV3 Motor(Script)のIntervalを 0.0005に
+設定してください．
+「Quality」
+OtherのVSync Count を Don&amp;rsquo;t Sync に設定します．
+これでインポート作業終了です．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
 以下のサイト等が参考になるかと思います．
 https://tech-camp.in/note/technology/44408/ ※動作確認はUnity 2020.1.0b9(64bit)で行っております．
 使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．

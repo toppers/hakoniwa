@@ -87,35 +87,47 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 athrillとUnity間での通信方式に設定を行います．  
 設定は`config.json`という設定ファイルを作成し，設定を行います．
 
-#### config.json の設定例
+#### config.json の設定例(通信方式がMMAPの場合)
+
+設定するファイルパスは全て絶対パスで記述します．
+
+```json
+{
+	"AthrillPath":"/mnt/c/project/esm/athrill/bin/linux/athrill2",
+	"TerminalPath":"C:\\Windows\\System32\\wsl.exe",
+	"robots":[
+		{
+			"RobotName":"RoboModel",
+			"WorkspacePathWin":"C:\\project\\esm\\ev3rt-athrill-v850e2m\\sdk\\workspace",
+			"WorkspacePathUnix":"/mnt/c/project/esm/ev3rt-athrill-v850e2m/sdk/workspace",
+			"ApplicationName":"touch_sensor",
+			"BinaryName":"asp"
+		}
+	]
+}
+```
+
+#### config.json の設定例(通信方式がUDPの場合)
 
 設定するファイルパスは全て絶対パスで記述します．
 
 ```json
 {
 	"AthrillPath":"/mnt/c/project/hakoniwa/athrill/bin/linux/athrill2",
-	"TerminalPath":"c:\\Windows\\System32\\wsl.exe",
+	"TerminalPath":"C:\\Windows\\System32\\wsl.exe",
 	"robots":[
 		{
 			"RobotName":"RoboModel",
-			"WorkspacePathWin":"C:\\project\\hakoniwa\\ev3rt-athrill-ARMv7-A\\sdk",
-			"WorkspacePathUnix":"/mnt/c/project/hakoniwa/ev3rt-athrill-ARMv7-A/sdk",
-			"ApplicationName":"line_trace",
+			"WorkspacePathWin":"C:\\project\\hakoniwa\\ev3rt-athrill-v850e2m\\sdk\\workspace",
+			"WorkspacePathUnix":"/mnt/c/project/hakoniwa/ev3rt-athrill-v850e2m/sdk/workspace",
+			"ApplicationName":"touch_sensor",
 			"BinaryName":"asp",
 			"Udp":
 			{
-				"AthrillIpAddr":"192.168.11.48",
+				"AthrillIpAddr":"127.0.0.1",
 				"AthrillPort":54002,
 				"UnityPort":54001
 			}
-		},
-		{
-			"RobotName":"RoboModel_udp",
-			"WorkspacePathWin":"C:\\project\\hakoniwa\\ev3rt-athrill-ARMv7-A\\sdk",
-			"WorkspacePathUnix":"/mnt/c/project/hakoniwa/ev3rt-athrill-ARMv7-A/sdk",
-			"ApplicationName":"line_trace",
-			"BinaryName":"asp_robot",
-			"Udp":null
 		}
 	]
 }
@@ -144,7 +156,7 @@ athrillとUnity間での通信方式に設定を行います．
 - **BinaryName**  
   athrillが実行するバイナリファイルの名前を設定します．特に名前変更などをしていない限り，ファイル名は`asp`となります．
 - **Udp**  
-  UDPとMMAPどちらの通信方式を使用するか設定します．MMAPを使用する場合は，`null`と設定します．
+  UDPとMMAPどちらの通信方式を使用するか設定します．MMAPを使用する場合は，この項目を省略してください．
 - **AthrillIpAddr**  
   athrillを実行する端末のIPアドレスです．athrillを実行する端末とUnityを実行する端末が同じ場合は，`127.0.0.1`と設定していれば問題ありません．
 - **AthrillPort**  

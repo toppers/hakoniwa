@@ -10,7 +10,6 @@ draft = false
 v2.1 で，Unityでのシミュレーション実行をビルドしてバイナリ実行できるようになりました．  
 バイナリ実行でシミュレーション実行を行う場合，
 
-- 制御アプリのビルド
 - Unityシミュレーションの実行，  
 - athrillの実行
 
@@ -68,6 +67,39 @@ Platform は[PC,Mac & Linux Standalone]のままとします．
 {{< image src="/img/single-robot/unity_build_import.png" width="400" >}}
 
 フォルダを選択すると，ビルドが実行されます．
+
+------
+ビルドが完了したら，バイナリが出力されたフォルダ(今回の例では`Build`フォルダ)内に  
+先ほど，Unityプロジェクトフォルダ配下に配置した**config.json**をコピーします．
+
+## 制御アプリのビルド
+
+------
+シミュレーションの実行の前に制御アプリのビルドを行います．  
+ビルド手順は，以下の`EV3ロボット制御プログラムのビルド`をご参照ください．
+
+- [V850版]({{< ref "01_Usage_V850_v2.0.md">}})
+- [ARM版]({{< ref "01_Usage_ARM_v2.0.md">}})
+
+
+### memory_mmap.txtの編集(通信方式にMMAPを使用する場合のみ)
+------
+
+制御アプリのビルドが完了したら，Unityバイナリ実行のためにアプリケーションフォルダにある  
+`memory_mmap.txt`を編集します．  
+使用するMMAPファイルのパスを記述するのですが，Unityバイナリを使用する場合には，  
+MMAPファイルのパスを**絶対パス**で記述するように変更します．
+
+**例：アプリケーション名が`line_tarce`の場合のmemory_mmap.txt**
+
+```
+ROM, 0x00000000, 512
+RAM, 0x00200000, 512
+RAM, 0x05FF7000, 10240
+RAM, 0x07FF7000, 10240
+MMAP, 0x40000000, /mnt/c/project/hakoniwa/ev3rt-athrill-v850e2m/sdk/workspace/line_trace/athrill_mmap.bin
+MMAP, 0x40010000, /mnt/c/project/hakoniwa/ev3rt-athrill-v850e2m/sdk/workspace/line_trace/unity_mmap.bin
+```
 
 ## シミュレーションの実行
 

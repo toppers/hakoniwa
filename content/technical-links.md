@@ -6,9 +6,27 @@ bref = "各種イベントでの講演資料や動画などを公開します"
 toc = true
 +++
 
+    - IoT/クラウドロボティクス時代の仮想シミュレーション環境・箱庭のご紹介
+### Unity道場 ロボティクススペシャル
+
+2020年10月10日(土)に開催された[「Unity道場 ロボティクススペシャル 龍の巻」](https://meetup.unity3d.jp/jp/events/1257)の講演資料および動画です．[Unity Learning Materials](https://learning.unity3d.jp/5167/) の掲載ページも合わせてご覧ください．    
+箱庭WGの狙いとコンセプトおよび最新のプロトタイプモデルの開発状況を解説し，特に成果を挙げている[単体ロボット向けプロトタイプモデル](/hakoniwa/prototypes/single-robot/)のオンラインロボット教育演習への導入事例を紹介しました．
+
+- [講演資料 (SlideShare)](https://www.slideshare.net/UnityTechnologiesJapan002)  
+{{< rawhtml >}}
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/6T5DONu6wQx4Kk" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<p>
+<br>
+<p>
+{{< /rawhtml >}}
+- [動画 (YouTube)](https://www.youtube.com/watch?v=X-Q2d885Duc)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X-Q2d885Duc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
 ### ETロボコン向け TOPPERS活用セミナー
 
-2020年7月18日(土)に開催される[ETロボコン向け TOPPERS活用セミナー](https://toppers.jp/etrobo.html#seminar)の講演資料および動画です．    
+2020年7月18日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](https://toppers.jp/etrobo.html#seminar)の講演資料および動画です．    
 箱庭WGの狙いとプロトタイプモデルの紹介に加えて，[単体ロボット向けプロトタイプモデル](/hakoniwa/prototypes/single-robot/)の導入方法と使用方法について，詳しく紹介しています．
 
 #### 『箱庭ワーキンググループ』 目指すところとプロトタイプモデルの紹介

@@ -6,11 +6,37 @@ bref = "各種イベントでの講演資料や動画などを公開します"
 toc = true
 +++
 
-    - IoT/クラウドロボティクス時代の仮想シミュレーション環境・箱庭のご紹介
+### Modeling Forum 2020
+
+2020年11月26日(木)に開催された「[Modeling Forum 2020 〜モデリング x ニューノーマル〜](https://umtp-japan.org/event-seminar/9106)」（主催：UMLモデリング推進協議会(UMTP)）における、講演資料および動画アーカイブです。
+
+- 組込みシステムのモデリング／シミュレーションをデスクトップにもたらす＜箱庭＞の新世界
+- 森 崇（(株) 永和システムマネジメント）・久保秋 真（(株) チェンジビジョン）
+- 概要：IoT／クラウド時代に入り、組込みシステム開発は，より複雑で複合的なシステムになってきています。このようなシステムの開発には、対象となるシステムを取り巻く環境・機器等もモデル化した「動くモデル」によるシミュレーションが欠かせません。HILS/SILSのような環境は既にありますが，多人数で安価に利用できるものではありません．箱庭は，このような環境を誰でも手軽に使えることを目指した環境です。 ロボット教育の取り組み等の事例を含めて箱庭の新世界を紹介いたします。
+
+箱庭の新世界と、ロボット教育への取り組み等の事例について紹介しました。
+
+- [講演資料１ (PDFファイル)
+{{< image src="/doc/MF2020-1.png" border="1" width="400" >}}
+](/hakoniwa/doc/MF2020-1.pdf)
+- [講演資料１ (PDFファイル)
+{{< image src="/doc/MF2020-2.png" border="1" width="400" >}}
+](/hakoniwa/doc/MF2020-2.pdf)
+- [動画 (YouTube)](https://youtu.be/RWaf_kMs8yI)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RWaf_kMs8yI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
 ### Unity道場 ロボティクススペシャル
 
-2020年10月10日(土)に開催された[「Unity道場 ロボティクススペシャル 龍の巻」](https://meetup.unity3d.jp/jp/events/1257)の講演資料および動画です．[Unity Learning Materials](https://learning.unity3d.jp/5167/) の掲載ページも合わせてご覧ください．    
+2020年10月10日(土)に開催された[「Unity道場 ロボティクススペシャル 龍の巻」](https://meetup.unity3d.jp/jp/events/1257)の講演資料および動画です．
+
+- IoT/クラウドロボティクス時代の仮想シミュレーション環境・箱庭のご紹介
+- 概要：ロボット開発は，IoT/クラウド時代に入り，様々な機器が絡んだ複雑なシステムと向き合う必要があります．TOPPERSプロジェクトでは，このようなシステムを手軽にシミュレーションできる環境である「箱庭」の構築に取り組んでいます．本発表では，「箱庭」で掲げるコンセプトを実証するプロトタイプ・モデルの開発状況を紹介し，その応用事例として，組込みロボット教育向けのシミュレーション環境について紹介します．本シミュレーション環境では，Unityを積極的に採用し，ライントレース等のロボット演習を実施可能な素材をオープンソースで公開しています．オンラインで組込みロボット教育を検討されておられる方には必見です！
+- 森 崇（(株) 永和システムマネジメント）・高瀬 英希（京都大学）
+
 箱庭WGの狙いとコンセプトおよび最新のプロトタイプモデルの開発状況を解説し，特に成果を挙げている[単体ロボット向けプロトタイプモデル](/hakoniwa/prototypes/single-robot/)のオンラインロボット教育演習への導入事例を紹介しました．
+[Unity Learning Materials](https://learning.unity3d.jp/5167/) の掲載ページも合わせてご覧ください．
 
 - [講演資料 (SlideShare)](https://www.slideshare.net/UnityTechnologiesJapan002)  
 {{< rawhtml >}}
@@ -34,7 +60,7 @@ toc = true
 - [講演資料 (PDFファイル)
 {{< image src="/doc/ETRCSeminar2020-1.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETRCSeminar2020-1.pdf)
-- 動画 (YouTube)  
+- [動画 (YouTube)](https://www.youtube.com/watch?v=v_TkuzILvD4)  
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/v_TkuzILvD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}
@@ -44,7 +70,7 @@ toc = true
 - [講演資料 (PDFファイル)
 {{< image src="/doc/ETRCSeminar2020-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETRCSeminar2020-2.pdf)
-- 動画 (YouTube)  
+- [動画 (YouTube)](https://www.youtube.com/watch?v=v3PV2sbNrxg)  
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/v3PV2sbNrxg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}
@@ -54,7 +80,7 @@ toc = true
 - [講演資料 (PDFファイル)
 {{< image src="/doc/ETRCSeminar2020-3.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETRCSeminar2020-3.pdf)
-- 動画 (YouTube)  
+- [動画 (YouTube)](https://www.youtube.com/watch?v=Cs_4BrP8xwQ)  
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Cs_4BrP8xwQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}

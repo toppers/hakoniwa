@@ -11,6 +11,7 @@ draft = false
   - IoT／クラウドロボティクス時代の仮想シミュレーション環境「箱庭」のご紹介
   - 箱庭プロトタイプの紹介と開発状況
   - RDBOXが供するクラウドネイティブ環境を活用し「箱庭」を動かす
+- [TOPPERS Advent Calendar 2020 ](https://qiita.com/advent-calendar/2020/toppers)が開催されています。TOPPERSを使って作ってみた経験談やTIPS情報など、もちろん箱庭に関する話題の投稿をお待ちしています。
 
 ### 更新情報
 
@@ -18,6 +19,7 @@ draft = false
   - 2020年11月26日(木)に開催された「[Modeling Forum 2020 〜モデリング x ニューノーマル〜](https://umtp-japan.org/event-seminar/9106)」における、箱庭の紹介とロボット教育への取り組み等の事例についての[講演資料および動画アーカイブ](/hakoniwa/technical-links/#modeling-forum-2020)を掲載しました。
     - 組込みシステムのモデリング／シミュレーションをデスクトップにもたらす＜箱庭＞の新世界
     - 森 崇（(株) 永和システムマネジメント）・久保秋 真（(株) チェンジビジョン）
+  - [Unity開発事例ムービー "Made with Unity Reel 2020 [Industry]" ](https://www.youtube.com/watch?v=XlpoEYoVF7I)にて、箱庭が取り上げられています。箱庭の紹介は0:58頃の"Robot"にて登場します。ぜひご視聴ください。
 - 2020.10.27
   - 2020年10月10日(土)に開催された[「Unity道場 ロボティクススペシャル 龍の巻」](https://meetup.unity3d.jp/jp/events/1257)の登壇レポートおよび動画が [Unity Learning Materials](https://learning.unity3d.jp/5167/) に掲載されました。
     - IoT/クラウドロボティクス時代の仮想シミュレーション環境・箱庭のご紹介

@@ -31,5 +31,5 @@
 ## ライセンス
 
 [TOPPERSライセンス](https://www.toppers.jp/license.html)で公開しています．  
-著作権者はTOPPERSプロジェクト箱庭ワーキンググループです．詳細は[LICENSE.md](./LICENSE.md)をご参照ください．
+著作権者は「TOPPERSプロジェクト箱庭ワーキンググループ」です．詳細は[LICENSE.md](./LICENSE.md)をご参照ください．
 

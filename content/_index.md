@@ -5,6 +5,7 @@ draft = false
 
 +++
 
+<!--
 ### イベント案内
 
 - 2020年11月16日(月)から開催される ET & IoT Digital 2020 の[TOPPERSプロジェクトの展示ブース](https://f2ff.jp/etexpo/2020/exhibitors/detail.php?id=557&lang=ja)において、箱庭の紹介や最新の研究開発の状況について紹介します。
@@ -12,6 +13,7 @@ draft = false
   - 箱庭プロトタイプの紹介と開発状況
   - RDBOXが供するクラウドネイティブ環境を活用し「箱庭」を動かす
 - [TOPPERS Advent Calendar 2020 ](https://qiita.com/advent-calendar/2020/toppers)が開催されています。TOPPERSを使って作ってみた経験談やTIPS情報など、もちろん箱庭に関する話題の投稿をお待ちしています。
+-->
 
 ### 更新情報
 

@@ -18,6 +18,7 @@ draft = false
 ### 更新情報
 
 - 2020.03.20
+  - 最新の技術情報をフォローするための[Qiita記事へのリンク](/hakoniwa/technical-links/#qiita記事)を掲載しました。
   - [情報処理学会 第56回組込みシステム研究会 (ETNET2021)](https://www.ipsj.or.jp/kenkyukai/event/arc236sldm194emb56.html)にて発表した[研究論文](/hakoniwa/technical-links/#etnet2021)を掲載しました。
     - IoT仮想環境「箱庭」による自律移動ロボットの制御パラメータの自動探索手法
     - 立川 悠輝（京都大学）, 福田 竜也（インテック）, 森 崇（永和システムマネジメント）, 高瀬 英希（京都大学／JSTさきがけ）

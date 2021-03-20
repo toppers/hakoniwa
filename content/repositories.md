@@ -13,7 +13,7 @@ images: [""]
 |略称・リンク|概要|備考|
 |:--|:--|:--|
 | [hakoniwa](https://github.com/toppers/hakoniwa) | 全般的なサポート対応と本Webサイトのコンテンツ管理のためのリポジトリ |   |
-| [hakoniwa-core](https://github.com/toppers/hakoniwa-core) | [箱庭コア機能](hakoniwa/docs/core)の試作開発用リポジトリ |   |
+| [hakoniwa-core](https://github.com/toppers/hakoniwa-core) | [箱庭コア機能](/hakoniwa/docs/core)の試作開発用リポジトリ |   |
 
 ### Athrill
 |略称・リンク|概要|備考|

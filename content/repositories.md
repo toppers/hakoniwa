@@ -9,10 +9,17 @@ images: [""]
 
 ---
 
+### 箱庭本体
+|略称・リンク|概要|備考|
+|:--|:--|:--|
+| [hakoniwa](https://github.com/toppers/hakoniwa) | 全般的なサポート対応と本Webサイトのコンテンツ管理のためのリポジトリ |   |
+| [hakoniwa-core](https://github.com/toppers/hakoniwa-core) | [箱庭コア機能](/hakoniwa/docs/core)の試作開発用リポジトリ |   |
+
 ### Athrill
 |略称・リンク|概要|備考|
 |:--|:--|:--|
 | [athrill](https://github.com/toppers/athrill) | Athrill本体(ターゲット非依存部) |   |
+| [athrill-device](https://github.com/toppers/athrill-device) | 外部デバイス連携のためのgRPCライブラリ |   |
 | [athrill-target-v850e2m](https://github.com/toppers/athrill-target-v850e2m) | Athrill V850E2Mターゲット依存部 | |
 | [athrill-target-ARMv7-A](https://github.com/toppers/athrill-target-ARMv7-A) | Athrill ARMv7-Aターゲット依存部 | |
 | [athrill-target-rh850f1x](https://github.com/toppers/athrill-target-rh850f1x) | Athrill RH850F1xターゲット依存部 | |

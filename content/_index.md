@@ -5,6 +5,7 @@ draft = false
 
 +++
 
+<!--
 ### イベント案内
 
 - 2020年11月16日(月)から開催される ET & IoT Digital 2020 の[TOPPERSプロジェクトの展示ブース](https://f2ff.jp/etexpo/2020/exhibitors/detail.php?id=557&lang=ja)において、箱庭の紹介や最新の研究開発の状況について紹介します。
@@ -12,9 +13,23 @@ draft = false
   - 箱庭プロトタイプの紹介と開発状況
   - RDBOXが供するクラウドネイティブ環境を活用し「箱庭」を動かす
 - [TOPPERS Advent Calendar 2020 ](https://qiita.com/advent-calendar/2020/toppers)が開催されています。TOPPERSを使って作ってみた経験談やTIPS情報など、もちろん箱庭に関する話題の投稿をお待ちしています。
+-->
 
 ### 更新情報
 
+- 2020.03.20
+  - 最新の技術情報をフォローするための[Qiita記事へのリンク](/hakoniwa/technical-links/#qiita記事)を掲載しました。
+  - [情報処理学会 第56回組込みシステム研究会 (ETNET2021)](https://www.ipsj.or.jp/kenkyukai/event/arc236sldm194emb56.html)にて発表した[研究論文](/hakoniwa/technical-links/#etnet2021)を掲載しました。
+    - IoT仮想環境「箱庭」による自律移動ロボットの制御パラメータの自動探索手法
+    - 立川 悠輝（京都大学）, 福田 竜也（インテック）, 森 崇（永和システムマネジメント）, 高瀬 英希（京都大学／JSTさきがけ）
+  - [情報処理学会 第55回組込みシステム研究会](https://www.ipsj.or.jp/kenkyukai/event/emb55.html)にて発表した[研究論文およびスライド資料](/hakoniwa/technical-links/#情報処理学会-第55回emb研究会)を掲載しました。
+    - IoT時代の仮想シミュレーション環境「箱庭」の実現に向けた検討および初期実装
+    - 高瀬英希（京都大学／JSTさきがけ）, 細合晋太郎（チェンジビジョン）, 高田光隆（名古屋大学）, 庭野正義（アイコムシステック）, 辻悠斗, 森崇（永和システムマネジメント）
+  - 2020年11月16日(月)から12月18日(金)にオンライン開催された[ET & IoT Digital 2020](https://www.jasa.or.jp/expo/2020/)の併設カンファレンス・スペシャルセッションにおける[講演資料および動画アーカイブ](/hakoniwa/technical-links/#et--iot-digital-2020)を掲載しました。
+    - IoT/クラウドロボティクス時代の仮想シミュレーション環境「箱庭」のご紹介
+    - 箱庭プロトタイプの紹介と開発状況
+    - RDBOXが供するクラウドネイティブ環境を活用し「箱庭」を動かす
+  - ユニティ・テクノロジーズ・ジャパン様のWebページ「[Unityを活用した開発事例](https://industry.unity3d.jp/case.html)」にて、箱庭の活動が取り上げられています。"MANUFACTURE 製造分野でのUnity開発事例" の項目に掲載されています。
 - 2020.12.13
   - 2020年11月26日(木)に開催された「[Modeling Forum 2020 〜モデリング x ニューノーマル〜](https://umtp-japan.org/event-seminar/9106)」における、箱庭の紹介とロボット教育への取り組み等の事例についての[講演資料および動画アーカイブ](/hakoniwa/technical-links/#modeling-forum-2020)を掲載しました。
     - 組込みシステムのモデリング／シミュレーションをデスクトップにもたらす＜箱庭＞の新世界

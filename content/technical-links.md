@@ -2,9 +2,98 @@
 description = "IoT／自動運転時代の仮想シミュレーション環境"
 title = "技術情報・発表資料"
 draft = false
-bref = "各種イベントでの講演資料や動画などを公開します"
+bref = "最新の技術情報、講演資料や動画などを公開します"
 toc = true
 +++
+
+## 最新の技術情報
+
+### Qiita記事
+
+最新の開発状況は、主にQiitaで発信しています。  
+次のタグやOrganizationをフォローされると、最新情報が得やすくなります．
+
+- [tag: 箱庭](https://qiita.com/tags/%e7%ae%b1%e5%ba%ad)
+- [tag: athrill](https://qiita.com/tags/athrill)
+- [tag: mROS](https://qiita.com/tags/mROS)
+- [organization: TOPPERSプロジェクト](https://qiita.com/organizations/toppers)
+
+なお、Qiita記事では開発途上の試行版であったり古い情報が記載されていることがあります。
+
+## 講演資料や動画など
+
+### ETNET2021
+
+2021年3月25日(木)〜26日(金)に開催された[情報処理学会 第236回システム・アーキテクチャ・第194回システムとLSIの設計技術・第56回組込みシステム合同研究発表会（ETNET2021）](https://www.ipsj.or.jp/kenkyukai/event/arc236sldm194emb56.html)において、箱庭を活用した自律移動ロボットの制御パラメータ探索手法に関する研究成果の発表を行いました。
+
+- IoT仮想環境「箱庭」による自律移動ロボットの制御パラメータの自動探索手法
+  - 立川 悠輝（京都大学）, 福田 竜也（インテック）, 森 崇（永和システムマネジメント）, 高瀬 英希（京都大学／JSTさきがけ）
+IoT時代の仮想シミュレーション環境「箱庭」の実現に向けた検討および初期実装
+  - 情報処理学会研究報告組込みシステム（EMB）, Vol. 2021-EMB-56, No. 223, pp. 1-8 (2021).
+  - 概要：「箱庭」とは，IoT/自動運転時代の包括的な仮想シミュレーション環境である．箱庭プロトタイプモデルのひとつとして，マイコンシミュレータAthrillおよび物理演算エンジンUnityで構成される単体ロボットシミュレータが成果物として公開されている．本研究では，単体ロボットシミュレータを活用した自律移動ロボットの開発において，その制御パラメータを自動探索する手法を提案する．まず，単体ロボットシミュレータの通信方式を拡張し，シミュレータ上のテストを制御できるようにする．そして，自律移動ロボットの制御パラメータを変更してテストを繰り返し実行することで，適切な値の探索を実現する．提案手法の有効性を議論するため，ステアリング量の計算のためのPIDパラメータに提案手法を適用した．その結果，コースの周回時間を最短にできる制御パラメータを探索できることを確認した．
+
+　
+
+- [発表論文](/hakoniwa/doc/IPSJ-EMB21056023.pdf) / [情報処理学会 電子図書館](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=210521&item_no=1&page_id=13&block_id=8)
+  - 本論文PDFファイルの二次利用にあたっては[著作権に係る注意事項](#著作権に係る注意事項)をご確認ください。
+
+[このページの先頭に戻る](#top)
+
+### 情報処理学会 第55回EMB研究会
+
+2020年12月11日(金)に開催された[情報処理学会 第55回組込みシステム研究会 (IPSJ-SIGEMB55)](https://www.ipsj.or.jp/kenkyukai/event/emb55.html)において、箱庭のコンセプト検討および初期実装に関する研究成果の発表を行いました。
+
+- IoT時代の仮想シミュレーション環境「箱庭」の実現に向けた検討および初期実装
+  - 高瀬英希（京都大学／JSTさきがけ）, 細合晋太郎（チェンジビジョン）, 高田光隆（名古屋大学）, 庭野正義（アイコムシステック）, 辻悠斗・森崇（永和システムマネジメント）
+  - 情報処理学会研究報告組込みシステム（EMB）, Vol. 2020-EMB-55, No. 3, pp. 1-7 (2020).
+  - 概要：IoTの新たな時代を迎え，開発現場では様々な機器が絡んだ複雑なシステムと向き合う必要がある．我々は，このようなシステムを効率的にシミュレーションできる環境である「箱庭」の研究開発の構想に取り組んでいる．本環境では，IoT システムの全体像を机上で仮想化できるようにして，多様な領域からの技術者が集まって構築される IoT システムの振る舞いや問題経路を，各自の開発対象や興味から多様に観察できるようにする．本稿では，これまで我々が検討を進めてきた「箱庭」の狙いや基本構想を紹介する．その後，これらを実証する応用事例として開発を進めているプロトタイプについて共有する．最後に，単体ロボットを題材としたプロトタイプの開発状況を紹介し，その技術的有意点を議論する．
+
+　
+
+- [発表論文](/hakoniwa/doc/IPSJ-EMB20055003.pdf) / [情報処理学会 電子図書館](https://ipsj.ixsq.nii.ac.jp/ej/index.php?active_action=repository_view_main_item_detail&page_id=13&block_id=8&item_id=208717&item_no=1)
+  - 本論文PDFファイルの二次利用にあたっては[著作権に係る注意事項](#著作権に係る注意事項)をご確認ください。
+- [発表資料 (PDFファイル)
+{{< image src="/doc/IPSJ-EMB55-slide.png" border="1" width="400" >}}
+](/hakoniwa/doc/IPSJ-EMB55-slide.pdf)
+
+[このページの先頭に戻る](#top)
+
+### ET & IoT Digital 2020
+
+2020年11月16日(月)から12月18日(金)にオンライン開催された[ET & IoT Digital 2020](https://www.jasa.or.jp/expo/2020/)の併設カンファレンス・スペシャルセッションにおいて、TOPPERSプロジェクトの活動紹介を行いました。    
+箱庭のコンセプトと狙い、WGの最新の研究開発の成果を紹介しました。
+
+#### IoT/クラウドロボティクス時代の仮想シミュレーション環境「箱庭」のご紹介
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/ETIoT2020-1.png" border="1" width="400" >}}
+](/hakoniwa/doc/ETIoT2020-1.pdf)
+- [動画 (YouTube)](https://www.youtube.com/watch?v=_GEFnyYx5h4)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_GEFnyYx5h4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+#### 箱庭プロトタイプの紹介と開発状況
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/ETIoT2020-2.png" border="1" width="400" >}}
+](/hakoniwa/doc/ETIoT2020-2.pdf)
+- [動画 (YouTube)](https://www.youtube.com/watch?v=B2WGDvwjh2Y)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B2WGDvwjh2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+#### RDBOXが供するクラウドネイティブ環境を活用し「箱庭」を動かす
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/ETIoT2020-3.png" border="1" width="400" >}}
+](/hakoniwa/doc/ETIoT2020-3.pdf)
+- [動画 (YouTube)](https://www.youtube.com/watch?v=ytH9thl9w_0)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ytH9thl9w_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
 
 ### Modeling Forum 2020
 
@@ -19,13 +108,15 @@ toc = true
 - [講演資料１ (PDFファイル)
 {{< image src="/doc/MF2020-1.png" border="1" width="400" >}}
 ](/hakoniwa/doc/MF2020-1.pdf)
-- [講演資料１ (PDFファイル)
+- [講演資料２ (PDFファイル)
 {{< image src="/doc/MF2020-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/MF2020-2.pdf)
 - [動画 (YouTube)](https://youtu.be/RWaf_kMs8yI)  
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RWaf_kMs8yI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
 
 ### Unity道場 ロボティクススペシャル
 
@@ -49,6 +140,8 @@ toc = true
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/X-Q2d885Duc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
 
 ### ETロボコン向け TOPPERS活用セミナー
 
@@ -219,5 +312,13 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 {{< rawhtml >}}
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/292065411" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
+### 著作権に係る注意事項
+
+本ページに掲載されている情報処理学会に投稿された論文について、著作権は情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「情報処理学会倫理綱領」に従うことをお願いいたします。[情報処理学会著作権規程](http://www.ipsj.or.jp/copyright/ronbun/copyright.html)もご参照ください。
+
+The copyright of papers published from the Information Processing Society of Japan (IPSJ) and attached in this page is retained by IPSJ. This material is published on this web site with the agreement of the author(s) and the IPSJ. Please be complied with Copyright Law of Japan and the Code of Ethics of the IPSJ if any users wish to reproduce, make derivative work, distribute or make available to the public any part or whole thereof.
 
 [このページの先頭に戻る](#top)

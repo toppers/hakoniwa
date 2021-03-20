@@ -6,6 +6,43 @@ bref = "各種イベントでの講演資料や動画などを公開します"
 toc = true
 +++
 
+### ET & IoT Digital 2020
+
+2020年11月16日(月)から12月18日(金)にオンライン開催された[ET & IoT Digital 2020](https://www.jasa.or.jp/expo/2020/)における併設カンファレンス・スペシャルセッションにおいて、TOPPERSプロジェクトの活動紹介を行いました。    
+箱庭のコンセプトと狙い、WGの最新の研究開発の成果を紹介しました。
+
+#### IoT/クラウドロボティクス時代の仮想シミュレーション環境「箱庭」のご紹介
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/ETIoT2020-1.png" border="1" width="400" >}}
+](/hakoniwa/doc/ETIoT2020-1.pdf)
+- [動画 (YouTube)](https://www.youtube.com/watch?v=_GEFnyYx5h4)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_GEFnyYx5h4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+#### 箱庭プロトタイプの紹介と開発状況
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/ETIoT2020-2.png" border="1" width="400" >}}
+](/hakoniwa/doc/ETIoT2020-2.pdf)
+- [動画 (YouTube)](https://www.youtube.com/watch?v=B2WGDvwjh2Y)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B2WGDvwjh2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+#### RDBOXが供するクラウドネイティブ環境を活用し「箱庭」を動かす
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/ETIoT2020-3.png" border="1" width="400" >}}
+](/hakoniwa/doc/ETIoT2020-3.pdf)
+- [動画 (YouTube)](https://www.youtube.com/watch?v=ytH9thl9w_0)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ytH9thl9w_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
 ### Modeling Forum 2020
 
 2020年11月26日(木)に開催された「[Modeling Forum 2020 〜モデリング x ニューノーマル〜](https://umtp-japan.org/event-seminar/9106)」（主催：UMLモデリング推進協議会(UMTP)）における、講演資料および動画アーカイブです。

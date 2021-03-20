@@ -19,7 +19,7 @@ toc = true
 - [講演資料１ (PDFファイル)
 {{< image src="/doc/MF2020-1.png" border="1" width="400" >}}
 ](/hakoniwa/doc/MF2020-1.pdf)
-- [講演資料１ (PDFファイル)
+- [講演資料２ (PDFファイル)
 {{< image src="/doc/MF2020-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/MF2020-2.pdf)
 - [動画 (YouTube)](https://youtu.be/RWaf_kMs8yI)  

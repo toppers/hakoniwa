@@ -20,6 +20,30 @@ toc = true
 
 なお、Qiita記事では開発途上の試行版であったり古い情報が記載されていることがあります。
 
+[このページの先頭に戻る](#top)
+
+## メディア掲載
+
+### MONOistでの連載
+
+モノづくりスペシャリストのための情報ポータル「[MONOist](https://monoist.atmarkit.co.jp/)」に連載記事を寄稿しています。「仮想環境を使ったクラウド時代の組み込み開発のススメ」という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介していきます。ぜひご覧ください。
+
+- 第1回「[IoTシステムの開発はなぜ難しいのか、ITと組み込みの相克を克服せよ](https://monoist.atmarkit.co.jp/mn/articles/2105/25/news005.html)」 (2021年05月25日 10時00分 公開)
+
+[このページの先頭に戻る](#top)
+
+### Unity開発事例集
+
+ユニティ・テクノロジーズ・ジャパン株式会社のWebページ「[Unityを活用した開発事例 | Unity for Industry](https://industry.unity3d.jp/case.html)」において、箱庭の単体ロボット向けシミュレータが取り上げられています。
+
+「MANUFACTURE 製造分野でのUnity開発事例」の項目をご覧ください。
+
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p04clt9zr0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
 ## 講演資料や動画など
 
 ### ETNET2021
@@ -31,8 +55,6 @@ toc = true
 IoT時代の仮想シミュレーション環境「箱庭」の実現に向けた検討および初期実装
   - 情報処理学会研究報告組込みシステム（EMB）, Vol. 2021-EMB-56, No. 223, pp. 1-8 (2021).
   - 概要：「箱庭」とは，IoT/自動運転時代の包括的な仮想シミュレーション環境である．箱庭プロトタイプモデルのひとつとして，マイコンシミュレータAthrillおよび物理演算エンジンUnityで構成される単体ロボットシミュレータが成果物として公開されている．本研究では，単体ロボットシミュレータを活用した自律移動ロボットの開発において，その制御パラメータを自動探索する手法を提案する．まず，単体ロボットシミュレータの通信方式を拡張し，シミュレータ上のテストを制御できるようにする．そして，自律移動ロボットの制御パラメータを変更してテストを繰り返し実行することで，適切な値の探索を実現する．提案手法の有効性を議論するため，ステアリング量の計算のためのPIDパラメータに提案手法を適用した．その結果，コースの周回時間を最短にできる制御パラメータを探索できることを確認した．
-
-　
 
 - [発表論文](/hakoniwa/doc/IPSJ-EMB21056023.pdf) / [情報処理学会 電子図書館](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=210521&item_no=1&page_id=13&block_id=8)
   - 本論文PDFファイルの二次利用にあたっては[著作権に係る注意事項](#著作権に係る注意事項)をご確認ください。

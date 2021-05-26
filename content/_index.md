@@ -27,6 +27,9 @@ https://roscon.jp
 
 ### 更新情報
 
+- 2021.05.26
+  - [箱庭プロトタイプモデルA：単体ロボット向けシミュレータ](/hakoniwa/prototypes/single-robot/)を最小の構成・手順で試行できるパッケージをGitHubに公開しました。ぜひ試してみてください。  
+  [toppers/hakoniwa-single_robot: 箱庭プロトタイプモデルA：単体ロボット向けシミュレータ](https://github.com/toppers/hakoniwa-single_robot)
 - 2021.03.20
   - 最新の技術情報をフォローするための[Qiita記事へのリンク](/hakoniwa/technical-links/#qiita記事)を掲載しました。
   - [情報処理学会 第56回組込みシステム研究会 (ETNET2021)](https://www.ipsj.or.jp/kenkyukai/event/arc236sldm194emb56.html)にて発表した[研究論文](/hakoniwa/technical-links/#etnet2021)を掲載しました。
@@ -55,9 +58,7 @@ https://roscon.jp
     - ベストプロジェクト賞 ゴールド：TOPPERS箱庭WG紹介（発表者：細合晋太郎・森崇）
     - ベストポスター賞 ゴールド：TOPPERS/Athrillを使用したAUTOSARモデルカー演習の実機レス化（発表者：庭野正義・安井大介）
 - 2020.07.29
-  - [ETロボコン向け TOPPERS活用セミナー](/hakoniwa/technical-links/#et%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B3%E5%90%91%E3%81%91-toppers%E6%B4%BB%E7%94%A8%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC)の動画アーカイブを公開しました。
-- 2020.07.18
-  - [ETロボコン向け TOPPERS活用セミナー](/hakoniwa/technical-links/#et%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B3%E5%90%91%E3%81%91-toppers%E6%B4%BB%E7%94%A8%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC)の講演資料を公開しました。
+  - [ETロボコン向け TOPPERS活用セミナー](/hakoniwa/technical-links/#et%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B3%E5%90%91%E3%81%91-toppers%E6%B4%BB%E7%94%A8%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC)の動画アーカイブと講演資料を公開しました。
 - 2020.06.12
   - 箱庭のWebサイトを立ち上げました。
 

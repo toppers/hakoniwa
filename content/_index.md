@@ -27,6 +27,9 @@ https://roscon.jp
 
 ### 更新情報
 
+- 2021.05.26
+  - [箱庭プロトタイプモデルA：単体ロボット向けシミュレータ](/hakoniwa/prototypes/single-robot/)を最小の構成・手順で試行できるパッケージをGitHubに公開しました。ぜひ試してみてください。  
+  [toppers/hakoniwa-single_robot: 箱庭プロトタイプモデルA：単体ロボット向けシミュレータ](https://github.com/toppers/hakoniwa-single_robot)
 - 2021.03.20
   - 最新の技術情報をフォローするための[Qiita記事へのリンク](/hakoniwa/technical-links/#qiita記事)を掲載しました。
   - [情報処理学会 第56回組込みシステム研究会 (ETNET2021)](https://www.ipsj.or.jp/kenkyukai/event/arc236sldm194emb56.html)にて発表した[研究論文](/hakoniwa/technical-links/#etnet2021)を掲載しました。

@@ -23,17 +23,18 @@ images = ["img/prototypes/modelAdemo1.gif"]
 
 {{< image src="/img/prototypes/modelA.png" width="700" >}}
 
-### 導入方法
+### 導入方法と使用方法
 
-- [導入方法(TOP)]({{< ref "/single-robot-setup/single-robot-setup-index.md">}})
+最小の構成と手順で単体ロボット向けシミュレータを試行できるパッケージを，下記のGitHubリポジトリで公開しています．ぜひ試してみてください．
 
-### 使用方法
-
-- [使用方法(TOP)]({{< ref "/single-robot-usage/single-robot-usage-index.md">}})
+- [toppers/hakoniwa-single_robot: 箱庭プロトタイプモデルA：単体ロボット向けシミュレータ](https://github.com/toppers/hakoniwa-single_robot)
 
 ### 動作例のデモ
 
+![modelAdemo](/hakoniwa/img/prototypes/modelAdemo.gif)
+
 ![modelAdemo1](/hakoniwa/img/prototypes/modelAdemo1.gif)
+
 ![modelAdemo2](/hakoniwa/img/prototypes/modelAdemo2.gif)
 
 ---

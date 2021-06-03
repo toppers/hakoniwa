@@ -46,6 +46,33 @@ toc = true
 
 ## 講演資料や動画など
 
+### TOPPERSカンファレンス2021
+
+2021年6月4日(金)に開催された[TOPPERSカンファレンス2021](https://toppers.jp/conference2021.html)の講演資料です。    
+箱庭WGの活動紹介、箱庭コア技術の最新の開発状況、および、教育機会への箱庭成果物の活用事例についての紹介を行いました。
+
+#### 『箱庭』Epilogue & Update
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/TOPPERSConf2021-1.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-1.pdf)
+
+#### 最新の箱庭コア技術紹介
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/TOPPERSConf2021-2.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-2.pdf)
+
+#### 箱庭技術の教育への活⽤事例
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/TOPPERSConf2021-3.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-3.pdf)
+
+#### ETロボコンでのathrill活⽤
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/TOPPERSConf2021-4.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-4.pdf)
+
+[このページの先頭に戻る](#top)
+
 ### ETNET2021
 
 2021年3月25日(木)〜26日(金)に開催された[情報処理学会 第236回システム・アーキテクチャ・第194回システムとLSIの設計技術・第56回組込みシステム合同研究発表会（ETNET2021）](https://www.ipsj.or.jp/kenkyukai/event/arc236sldm194emb56.html)において、箱庭を活用した自律移動ロボットの制御パラメータ探索手法に関する研究成果の発表を行いました。

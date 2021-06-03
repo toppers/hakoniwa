@@ -22,29 +22,34 @@ toc = true
 
 [このページの先頭に戻る](#top)
 
-## メディア掲載
-
-### MONOistでの連載
-
-モノづくりスペシャリストのための情報ポータル「[MONOist](https://monoist.atmarkit.co.jp/)」に連載記事を寄稿しています。「仮想環境を使ったクラウド時代の組み込み開発のススメ」という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介していきます。ぜひご覧ください。
-
-- 第1回「[IoTシステムの開発はなぜ難しいのか、ITと組み込みの相克を克服せよ](https://monoist.atmarkit.co.jp/mn/articles/2105/25/news005.html)」 (2021年05月25日 10時00分 公開)
-
-[このページの先頭に戻る](#top)
-
-### Unity開発事例集
-
-ユニティ・テクノロジーズ・ジャパン株式会社のWebページ「[Unityを活用した開発事例 | Unity for Industry](https://industry.unity3d.jp/case.html)」において、箱庭の単体ロボット向けシミュレータが取り上げられています。
-
-「MANUFACTURE 製造分野でのUnity開発事例」の項目をご覧ください。
-
-{{< rawhtml >}}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p04clt9zr0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-{{< /rawhtml >}}
-
-[このページの先頭に戻る](#top)
-
 ## 講演資料や動画など
+
+### TOPPERSカンファレンス2021
+
+2021年6月4日(金)に開催された[TOPPERSカンファレンス2021](https://toppers.jp/conference2021.html)の講演資料です。    
+箱庭WGの活動紹介、箱庭コア技術の最新の開発状況、および、教育機会への箱庭成果物の活用事例についての紹介を行いました。
+
+#### 『箱庭』Epilogue & Update
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/TOPPERSConf2021-1.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-1.pdf)
+
+#### 最新の箱庭コア技術紹介
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/TOPPERSConf2021-2.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-2.pdf)
+
+#### 箱庭技術の教育への活⽤事例
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/TOPPERSConf2021-3.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-3.pdf)
+
+#### ETロボコンでのathrill活⽤
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/TOPPERSConf2021-4.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-4.pdf)
+
+[このページの先頭に戻る](#top)
 
 ### ETNET2021
 
@@ -69,8 +74,6 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
   - 高瀬英希（京都大学／JSTさきがけ）, 細合晋太郎（チェンジビジョン）, 高田光隆（名古屋大学）, 庭野正義（アイコムシステック）, 辻悠斗・森崇（永和システムマネジメント）
   - 情報処理学会研究報告組込みシステム（EMB）, Vol. 2020-EMB-55, No. 3, pp. 1-7 (2020).
   - 概要：IoTの新たな時代を迎え，開発現場では様々な機器が絡んだ複雑なシステムと向き合う必要がある．我々は，このようなシステムを効率的にシミュレーションできる環境である「箱庭」の研究開発の構想に取り組んでいる．本環境では，IoT システムの全体像を机上で仮想化できるようにして，多様な領域からの技術者が集まって構築される IoT システムの振る舞いや問題経路を，各自の開発対象や興味から多様に観察できるようにする．本稿では，これまで我々が検討を進めてきた「箱庭」の狙いや基本構想を紹介する．その後，これらを実証する応用事例として開発を進めているプロトタイプについて共有する．最後に，単体ロボットを題材としたプロトタイプの開発状況を紹介し，その技術的有意点を議論する．
-
-　
 
 - [発表論文](/hakoniwa/doc/IPSJ-EMB20055003.pdf) / [情報処理学会 電子図書館](https://ipsj.ixsq.nii.ac.jp/ej/index.php?active_action=repository_view_main_item_detail&page_id=13&block_id=8&item_id=208717&item_no=1)
   - 本論文PDFファイルの二次利用にあたっては[著作権に係る注意事項](#著作権に係る注意事項)をご確認ください。

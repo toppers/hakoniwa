@@ -27,6 +27,10 @@ googleAnalytics = "UA-169187702-1"
     weight = -80
     url = "/technical-links/"
 [[menu.main]]
+    name = "ショーケース"
+    weight = -75
+    url = "/showcase/"
+[[menu.main]]
     name = "リポジトリ"
     weight = -70
     url = "/repositories/"

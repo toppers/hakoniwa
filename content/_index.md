@@ -16,12 +16,14 @@ https://roscon.jp
 ### 更新情報
 
 - 2021.06.04
-  - 2021年6月4日(金)に開催された[TOPPERSカンファレンス2021](https://toppers.jp/conference.html)の[講演資料](/hakoniwa/technical-links/##toppersカンファレンス2020)を掲載しました。
+  - 2021年6月4日(金)に開催された[TOPPERSカンファレンス2021の講演資料](/hakoniwa/technical-links/#toppersカンファレンス2021)を掲載しました。
     - 「箱庭WG　プロローグ」 高瀬 英希（箱庭WG/東京大学)
     - 「最新の箱庭コア技術紹介」 森 崇（箱庭WG/永和システムマネジメント）
     - 「大学におけるシステム開発演習に箱庭を活用する」 久保秋 真（(株)チェンジビジョン）
     - 「ETロボコンでのathrill活用」 土樋 祐希（ETロボコン実行委員会）
+  - [ショーケース](/hakoniwa/showcase/)のページを作成しました。デモ動画やメディア掲載情報などを紹介していきます。
   - 箱庭の活動に協力いただいている宝塚大学より以下のプレスリリースが発表されました。  
+    [「TOPPERSプロジェクト」単体ロボット向けシミュレータにデモ用モデルデータ制作で参加！宝塚大学東京メディア芸術学部ゲーム分野 学生の活躍](https://www.value-press.com/pressrelease/272584)
 - 2021.05.26
   - [箱庭プロトタイプモデルA：単体ロボット向けシミュレータ](/hakoniwa/prototypes/single-robot/)を最小の構成・手順で試行できるパッケージをGitHubに公開しました。ぜひ試してみてください。  
   [toppers/hakoniwa-single_robot: 箱庭プロトタイプモデルA：単体ロボット向けシミュレータ](https://github.com/toppers/hakoniwa-single_robot)

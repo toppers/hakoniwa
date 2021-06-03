@@ -21,6 +21,7 @@ https://roscon.jp
     - 「最新の箱庭コア技術紹介」 森 崇（箱庭WG/永和システムマネジメント）
     - 「大学におけるシステム開発演習に箱庭を活用する」 久保秋 真（(株)チェンジビジョン）
     - 「ETロボコンでのathrill活用」 土樋 祐希（ETロボコン実行委員会）
+  - 箱庭の活動に協力いただいている宝塚大学より以下のプレスリリースが発表されました。  
 - 2021.05.26
   - [箱庭プロトタイプモデルA：単体ロボット向けシミュレータ](/hakoniwa/prototypes/single-robot/)を最小の構成・手順で試行できるパッケージをGitHubに公開しました。ぜひ試してみてください。  
   [toppers/hakoniwa-single_robot: 箱庭プロトタイプモデルA：単体ロボット向けシミュレータ](https://github.com/toppers/hakoniwa-single_robot)

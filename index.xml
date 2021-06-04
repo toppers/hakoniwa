@@ -55,7 +55,13 @@ Hakoniwaクラスはシミュレーション環境全体に関わる情報を持
 Project/Prefabs配下にいくつかのロボットモデルを用意しています． これらのロボットモデルをHierarchyビューのRobot配下にドラッグ＆ドロップすることで 簡単に配置することができます．
 変更可能なパラメータ Robot のパラメータについて 超音波センサ Ultrasonic SensorのDistance Valueでセンサ範囲を調整できます．
 モーター RigidbodyのMassでタイヤの重さを，Angular Dragで回転時の抵抗値を調整できます．
-カラーセンサ Physical CameraのSensor Sizeでセンシング範囲を調整できます．</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>単体ロボット向けシミュレータ使用手順(ARM版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
+カラーセンサ Physical CameraのSensor Sizeでセンシング範囲を調整できます．</description></item><item><title>ショーケース</title><link>https://toppers.github.io/hakoniwa/showcase/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/showcase/</guid><description>「箱庭」コンセプトムービー2021 最新の箱庭の成果物で実現されることをデモ動画としてまとめました（2021/06/01公開）
+このページの先頭に戻る
+MONOistでの連載 モノづくりスペシャリストのための情報ポータル「MONOist」に連載記事を寄稿しています。「仮想環境を使ったクラウド時代の組み込み開発のススメ」という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介していきます。ぜひご覧ください。
+第1回「IoTシステムの開発はなぜ難しいのか、ITと組み込みの相克を克服せよ」 (2021年05月25日 10時00分 公開) このページの先頭に戻る
+Unity開発事例集 ユニティ・テクノロジーズ・ジャパン株式会社のWebページ「Unityを活用した開発事例 | Unity for Industry」において、箱庭の単体ロボット向けシミュレータが取り上げられています。
+「MANUFACTURE 製造分野でのUnity開発事例」の項目をご覧ください。
+このページの先頭に戻る</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>単体ロボット向けシミュレータ使用手順(ARM版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
 export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major cfgフォルダの配置(初回起動時のみ) cfg ファイルの配置(Mac版の場合)
 $ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-mac cfg/cfg/cfg $ chmod +x cfg/cfg/cfg cfg ファイルの配置(Windows\Linux版の場合)
 $ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-linux-64 cfg/cfg/cfg $ chmod +x cfg/cfg/cfg EV3ロボット制御プログラムのビルド ターミナル上で，ev3rt-athrill-ARMv7-A/sdk/OBJ1.1に移動して，

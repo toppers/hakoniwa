@@ -16,6 +16,8 @@ https://roscon.jp
 
 ### 更新情報
 
+- 2021.06.28
+  - 「[ROS で TOPPERS/箱庭・単体ロボット向けシミュレータを動かす！](https://qiita.com/kanetugu2018/items/a2a069dba6e26c4e7eda)」という解説記事をQiitaで公開しました。箱庭WGにおけるROSへの取り組みの最新情報をぜひチェックしてみてください。
 - 2021.06.04
   - 2021年6月4日(金)に開催された[TOPPERSカンファレンス2021の講演資料](/hakoniwa/technical-links/#toppersカンファレンス2021)を掲載しました。
     - 「箱庭WG　プロローグ」 高瀬 英希（箱庭WG/東京大学)

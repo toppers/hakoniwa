@@ -9,12 +9,15 @@ draft = false
 
 - モノづくりスペシャリストのための情報ポータル「[MONOist](https://monoist.atmarkit.co.jp/)」に連載記事を寄稿しています。「仮想環境を使ったクラウド時代の組み込み開発のススメ」という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介していきます。ぜひご覧ください。
   - 第1回「[IoTシステムの開発はなぜ難しいのか、ITと組み込みの相克を克服せよ](https://monoist.atmarkit.co.jp/mn/articles/2105/25/news005.html)」 (2021年05月25日 10時00分 公開)
+  - 第2回「[日本の伝統を受け継ぐ仮想環境「箱庭」でIoTシステムの統合開発を加速する](https://monoist.atmarkit.co.jp/mn/articles/2106/28/news012.html)」 (2021年06月28日 10時00分 公開)
 - **[ROSCon JP 2021](https://roscon.jp)** が2021年9月16日(木)に開催されます。  
 https://roscon.jp
   - ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する開発者会議の日本版です。TOPPERSプロジェクトはROSCon JP 2021にフレンドシップスポンサーとして協力しており、箱庭WGではROSの諸技術の発展・普及に貢献しています。
 
 ### 更新情報
 
+- 2021.06.28
+  - 「[ROS で TOPPERS/箱庭・単体ロボット向けシミュレータを動かす！](https://qiita.com/kanetugu2018/items/a2a069dba6e26c4e7eda)」という解説記事をQiitaで公開しました。箱庭WGにおけるROSへの取り組みの最新情報をぜひチェックしてみてください。
 - 2021.06.04
   - 2021年6月4日(金)に開催された[TOPPERSカンファレンス2021の講演資料](/hakoniwa/technical-links/#toppersカンファレンス2021)を掲載しました。
     - 「箱庭WG　プロローグ」 高瀬 英希（箱庭WG/東京大学)

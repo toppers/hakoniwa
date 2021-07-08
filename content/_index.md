@@ -16,6 +16,8 @@ https://roscon.jp
 
 ### 更新情報
 
+- 2021.07.08
+  - 2021年6月26日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](/hakoniwa/technical-links/#2021年度-etロボコン向け-toppers活用セミナー)の講義資料を公開しました。
 - 2021.06.28
   - 「[ROS で TOPPERS/箱庭・単体ロボット向けシミュレータを動かす！](https://qiita.com/kanetugu2018/items/a2a069dba6e26c4e7eda)」という解説記事をQiitaで公開しました。箱庭WGにおけるROSへの取り組みの最新情報をぜひチェックしてみてください。
 - 2021.06.04
@@ -58,7 +60,7 @@ https://roscon.jp
     - ベストプロジェクト賞 ゴールド：TOPPERS箱庭WG紹介（発表者：細合晋太郎・森崇）
     - ベストポスター賞 ゴールド：TOPPERS/Athrillを使用したAUTOSARモデルカー演習の実機レス化（発表者：庭野正義・安井大介）
 - 2020.07.29
-  - [ETロボコン向け TOPPERS活用セミナー](/hakoniwa/technical-links/#et%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B3%E5%90%91%E3%81%91-toppers%E6%B4%BB%E7%94%A8%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC)の動画アーカイブと講演資料を公開しました。
+  - 2020年7月18日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](/hakoniwa/technical-links/#2020年度-etロボコン向け-toppers活用セミナー)の動画アーカイブと講演資料を公開しました。
 - 2020.06.12
   - 箱庭のWebサイトを立ち上げました。
 

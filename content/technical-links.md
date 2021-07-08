@@ -24,6 +24,21 @@ toc = true
 
 ## 講演資料や動画など
 
+### 2021年度 ETロボコン向け TOPPERS活用セミナー
+
+2021年6月26日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](https://toppers.jp/etrobo.html#seminar)の講義資料です。    
+箱庭プロトタイプモデルの単体ロボット向けシミュレータの紹介と、ETロボコン大会のシミュレータ環境に採用されているマイコンシミュレータAthrillについて、そのデバッグ機能や進んだ使い方を詳しく解説しました。
+
+- [講義資料 (PDFファイル)
+{{< image src="/doc/ETRCSeminar2021.png" border="1" width="400" >}}
+](/hakoniwa/doc/ETRCSeminar2021.pdf)
+<!--
+- [動画 (YouTube)](https://www.youtube.com/watch?v=v_TkuzILvD4)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v_TkuzILvD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+-->
+
 ### TOPPERSカンファレンス2021
 
 2021年6月4日(金)に開催された[TOPPERSカンファレンス2021](https://toppers.jp/conference2021.html)の講演資料です。    
@@ -168,7 +183,7 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 
 [このページの先頭に戻る](#top)
 
-### ETロボコン向け TOPPERS活用セミナー
+### 2020年度 ETロボコン向け TOPPERS活用セミナー
 
 2020年7月18日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](https://toppers.jp/etrobo.html#seminar)の講演資料および動画です。    
 箱庭WGの狙いとプロトタイプモデルの紹介に加えて、[単体ロボット向けプロトタイプモデル](/hakoniwa/prototypes/single-robot/)の導入方法と使用方法について、詳しく紹介しています。

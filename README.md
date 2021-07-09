@@ -13,13 +13,14 @@
 
 箱庭に関わる開発者や技術者，ユーザのためのSNSになることを目指して，本リポジトリにて[GitHub Discussions](https://github.com/toppers/hakoniwa/discussions)を運用しています．
 
-次のカテゴリを用意していますので，適切と思われるものを選択して投稿してください．
+次のカテゴリを用意していますので，適切と思われるものを選択してお気軽に投稿してください．
 
 - [Announcements](https://github.com/toppers/hakoniwa/discussions/categories/announcements): 箱庭メンバからの最新情報のお知らせ
-- [General](https://github.com/toppers/hakoniwa/discussions/categories/general): 箱庭や要素技術に関する全般的な話題 a.k.a 雑談場所
-- [Idea&Request](https://github.com/toppers/hakoniwa/discussions/categories/idea-request): 箱庭こう使えない？こう使いたい！のアイデアを募集します
-- [Inquiry](https://github.com/toppers/hakoniwa/discussions/categories/inquiry): 箱庭WGへの関する問合せや活動参画の希望など．技術的な質問は Q&A をご利用ください．
-- [Q&A](https://github.com/toppers/hakoniwa/discussions/categories/q-a): 技術的な質問など：箱庭プロトタイプモデルの試用で発生したトラブルなどを投げてください．Athrillを含む要素技術全般に関する質問も歓迎します！
+- [General](https://github.com/toppers/hakoniwa/discussions/categories/general): 箱庭や要素技術に関する全般的な話題の提供 a.k.a 雑談場所
+- [Idea&Request](https://github.com/toppers/hakoniwa/discussions/categories/idea-request): 箱庭こう使えない？こう使いたい！のアイデアを話し合いましょう
+- [Inquiry](https://github.com/toppers/hakoniwa/discussions/categories/inquiry): 箱庭WGへの関する問合せや活動参画の希望など（技術的な質問は"Q&A"をご利用ください）
+- [Q&A](https://github.com/toppers/hakoniwa/discussions/categories/q-a): 技術的な質問（Athrillを含む要素技術単体に関する質問も歓迎！箱庭プロトタイプモデルの試用で発生したトラブルなどお知らせください）
+
 
 ### 箱庭の利用方法の質問や技術的な問合せについて
 

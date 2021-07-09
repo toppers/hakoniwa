@@ -32,12 +32,10 @@ toc = true
 - [講義資料 (PDFファイル)
 {{< image src="/doc/ETRCSeminar2021.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETRCSeminar2021.pdf)
-<!--
-- [動画 (YouTube)](https://www.youtube.com/watch?v=v_TkuzILvD4)  
+- [動画 (YouTube)](https://www.youtube.com/watch?v=hxD0LFYuuok)  
 {{< rawhtml >}}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v_TkuzILvD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hxD0LFYuuok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}
--->
 
 ### TOPPERSカンファレンス2021
 

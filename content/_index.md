@@ -24,8 +24,8 @@ https://roscon.jp
 
 ### 更新情報
 
-- 2021.07.08
-  - 2021年6月26日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](/hakoniwa/technical-links/#2021年度-etロボコン向け-toppers活用セミナー)の講義資料を公開しました。
+- 2021.07.09
+  - 2021年6月26日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](/hakoniwa/technical-links/#2021年度-etロボコン向け-toppers活用セミナー)の講義資料と動画を公開しました。
 - 2021.06.28
   - 「[ROS で TOPPERS/箱庭・単体ロボット向けシミュレータを動かす！](https://qiita.com/kanetugu2018/items/a2a069dba6e26c4e7eda)」という解説記事をQiitaで公開しました。箱庭WGにおけるROSへの取り組みの最新情報をぜひチェックしてみてください。
 - 2021.06.04

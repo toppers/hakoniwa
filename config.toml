@@ -23,7 +23,7 @@ googleAnalytics = "UA-169187702-1"
     weight = -90
     url = "/prototypes/"
 [[menu.main]]
-    name = "技術情報・発表資料"
+    name = "技術情報"
     weight = -80
     url = "/technical-links/"
 [[menu.main]]
@@ -35,6 +35,6 @@ googleAnalytics = "UA-169187702-1"
     weight = -70
     url = "/repositories/"
 [[menu.main]]
-    name = "問合せ先"
+    name = "SNS・問合せ先"
     weight = -10
     url = "/contact/"

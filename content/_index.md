@@ -10,14 +10,22 @@ draft = false
 - モノづくりスペシャリストのための情報ポータル「[MONOist](https://monoist.atmarkit.co.jp/)」に連載記事を寄稿しています。「仮想環境を使ったクラウド時代の組み込み開発のススメ」という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介していきます。ぜひご覧ください。
   - 第1回「[IoTシステムの開発はなぜ難しいのか、ITと組み込みの相克を克服せよ](https://monoist.atmarkit.co.jp/mn/articles/2105/25/news005.html)」 (2021年05月25日 10時00分 公開)
   - 第2回「[日本の伝統を受け継ぐ仮想環境「箱庭」でIoTシステムの統合開発を加速する](https://monoist.atmarkit.co.jp/mn/articles/2106/28/news012.html)」 (2021年06月28日 10時00分 公開)
+- **[SWEST23（第23回 組込みシステム技術に関するサマーワークショップ）](https://swest.toppers.jp)** が2021年9月2日(木)-3日(金)にオンライン開催されます。
+SWESTとは、大学の研究者や学生、企業の技術者や管理者、その他、組込みシステムに関わる全ての人達が、徹底的に議論できる場を提供することを主な目的とした合宿型のワークショップです。箱庭WGのメンバが企画・実施するセッションもありますので、ぜひご参加ください。
+  - s1b：[「箱庭」でなにができる？最新動向をキャッチアップしてこれからを語り合おう](https://swest.toppers.jp/SWEST23/program/s1b.html#s1)   
+  コーディネータ：森 崇（永和システムマネジメント）・高瀬 英希（東京大学／JSTさきがけ）
+  - s2c：[オンラインでの組込み教育・モデリング教育について](https://swest.toppers.jp/SWEST23/program/s2c.html#s2)  
+  講師：久保秋 真（株式会社チェンジビジョン）
+  - s5b：[言語紹介N連発！](https://swest.toppers.jp/SWEST23/program/s5b.html#s5)  
+  講師：細合 晋太郎（株式会社チェンジビジョン）
 - **[ROSCon JP 2021](https://roscon.jp)** が2021年9月16日(木)に開催されます。  
 https://roscon.jp
   - ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する開発者会議の日本版です。TOPPERSプロジェクトはROSCon JP 2021にフレンドシップスポンサーとして協力しており、箱庭WGではROSの諸技術の発展・普及に貢献しています。
 
 ### 更新情報
 
-- 2021.07.08
-  - 2021年6月26日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](/hakoniwa/technical-links/#2021年度-etロボコン向け-toppers活用セミナー)の講義資料を公開しました。
+- 2021.07.09
+  - 2021年6月26日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](/hakoniwa/technical-links/#2021年度-etロボコン向け-toppers活用セミナー)の講義資料と動画を公開しました。
 - 2021.06.28
   - 「[ROS で TOPPERS/箱庭・単体ロボット向けシミュレータを動かす！](https://qiita.com/kanetugu2018/items/a2a069dba6e26c4e7eda)」という解説記事をQiitaで公開しました。箱庭WGにおけるROSへの取り組みの最新情報をぜひチェックしてみてください。
 - 2021.06.04

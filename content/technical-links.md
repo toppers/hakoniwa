@@ -42,25 +42,48 @@ toc = true
 2021年6月4日(金)に開催された[TOPPERSカンファレンス2021](https://toppers.jp/conference2021.html)の講演資料です。    
 箱庭WGの活動紹介、箱庭コア技術の最新の開発状況、および、教育機会への箱庭成果物の活用事例についての紹介を行いました。
 
+#### ［特別講演］Roboticsエンジニアチームの知的創造をブーストする ～クラウドネイティブ技術による開発革命～
+
+- [動画 (YouTube)](https://www.youtube.com/watch?v=n4h0N6GqRl4)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n4h0N6GqRl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
 #### 『箱庭』Epilogue & Update
 
 - [講演資料 (PDFファイル)
 {{< image src="/doc/TOPPERSConf2021-1.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-1.pdf)
+- [動画 (YouTube)](https://www.youtube.com/watch?v=Lu2P2pNtWZU)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lu2P2pNtWZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
 
 #### 最新の箱庭コア技術紹介
 
 - [講演資料 (PDFファイル)
 {{< image src="/doc/TOPPERSConf2021-2.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-2.pdf)
+- [動画 (YouTube)](https://www.youtube.com/watch?v=McOMRpQnft8)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/McOMRpQnft8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
 
-#### 箱庭技術の教育への活⽤事例
+#### 大学におけるシステム開発演習に箱庭を活用する
 
 - [講演資料 (PDFファイル)
 {{< image src="/doc/TOPPERSConf2021-3.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-3.pdf)
+- [動画 (YouTube)](https://www.youtube.com/watch?v=vS8bun3K2us)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vS8bun3K2us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
 
 #### ETロボコンでのathrill活⽤
 
 - [講演資料 (PDFファイル)
 {{< image src="/doc/TOPPERSConf2021-4.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-4.pdf)
+- [動画 (YouTube)](https://www.youtube.com/watch?v=3xPJYQKn5KA)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3xPJYQKn5KA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
 
 [このページの先頭に戻る](#top)
 

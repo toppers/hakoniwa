@@ -32,6 +32,7 @@ https://roscon.jp
     - 「最新の箱庭コア技術紹介」 森 崇（箱庭WG/永和システムマネジメント）
     - 「大学におけるシステム開発演習に箱庭を活用する」 久保秋 真（(株)チェンジビジョン）
     - 「ETロボコンでのathrill活用」 土樋 祐希（ETロボコン実行委員会）
+  - [GitHub Discussions](https://github.com/toppers/hakoniwa/discussions)の運用を開始しました。箱庭に関わる開発者や技術者、ユーザのためのSNSになることを目指しています。お気軽にご投稿ください。
 - 2021.06.28
   - 「[ROS で TOPPERS/箱庭・単体ロボット向けシミュレータを動かす！](https://qiita.com/kanetugu2018/items/a2a069dba6e26c4e7eda)」という解説記事をQiitaで公開しました。箱庭WGにおけるROSへの取り組みの最新情報をぜひチェックしてみてください。
 - 2021.06.04

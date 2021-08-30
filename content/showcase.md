@@ -23,6 +23,7 @@ toc = true
 - 第1回「[IoTシステムの開発はなぜ難しいのか、ITと組み込みの相克を克服せよ](https://monoist.atmarkit.co.jp/mn/articles/2105/25/news005.html)」 (2021年05月25日 10時00分 公開)
 - 第2回「[日本の伝統を受け継ぐ仮想環境「箱庭」でIoTシステムの統合開発を加速する](https://monoist.atmarkit.co.jp/mn/articles/2106/28/news012.html)」 (2021年06月28日 10時00分 公開)
 - 第3回「[組み込みエンジニアも知っておきたい「クラウドネイティブ」とは](https://monoist.atmarkit.co.jp/mn/articles/2107/28/news016.html)」 (2021年07月28日 10時00分 公開)
+- 第4回「[クラウドネイティブで実現する、シミュレーションと実機テストのボーダーレス開発](https://monoist.atmarkit.co.jp/mn/articles/2108/30/news016.html)」 (2021年08月30日 10時00分 公開)
 
 [このページの先頭に戻る](#top)
 

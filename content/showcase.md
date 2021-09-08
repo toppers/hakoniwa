@@ -8,10 +8,22 @@ toc = true
 
 ### 「箱庭」コンセプトムービー2021
 
-最新の箱庭の成果物で実現されることをデモ動画としてまとめました（2021/06/01公開）
+2021年6月時点での箱庭の成果物で実現できることを、デモ動画としてまとめました。
 
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/89PjrCqILj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
+### シミュレーション環境：箱庭を使ったROSロボットのCI（継続的インテグレーション）
+
+クラウドネイティブ環境上に構築した「箱庭」と合わせて、コミュニティ版GitLab（MIT Licence）が提供する、ソースコード管理機能及び、CI Runner機能を使ってCI（Continuous Integration，継続的インテグレーション）を実現しています。
+
+クラウドネイティブ環境はOSSである[RDBOX（Robotics Developer BOX）](https://github.com/rdbox-intec/rdbox)を使って構築しています。
+
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9OTbq5J1QH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}
 
 [このページの先頭に戻る](#top)

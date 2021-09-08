@@ -31,6 +31,8 @@ SWESTとは、大学の研究者や学生、企業の技術者や管理者、そ
 
 ### 更新情報
 
+- 2021.09.08
+  - [ショーケース](/hakoniwa/showcase/)のページに、クラウドネイティブ環境上に構築した「箱庭」と「[RDBOX（Robotics Developer BOX）](https://github.com/rdbox-intec/rdbox)」を使って構築して実現したROSロボットのCI（Continuous Integration，継続的インテグレーション）のデモ動画を掲載しました。
 - 2021.09.05
   - 2021年9月2日(木)-3日(金)にオンライン開催された[SWEST23（第23回 組込みシステム技術に関するサマーワークショップ）](https://swest.toppers.jp/SWEST23/program/)のインタラクティブセッションにおいて、箱庭WGの活動およびWGメンバの研究開発の成果に関する次の発表が受賞しました。
     - ベストプロジェクト賞 ゴールド：TOPPERS箱庭WG紹介（発表者：森崇）

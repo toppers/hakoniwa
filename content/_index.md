@@ -22,15 +22,15 @@ SWESTとは、大学の研究者や学生、企業の技術者や管理者、そ
   - s5b：[言語紹介N連発！](https://swest.toppers.jp/SWEST23/program/s5b.html#s5)  
   講師：細合 晋太郎（株式会社チェンジビジョン）
 -->
-- **[ROSCon JP 2021](https://roscon.jp)** が2021年9月16日(木)に開催されます。  
-  ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する開発者会議の日本版です。TOPPERSプロジェクトはROSCon JP 2021にフレンドシップスポンサーとして協力しており、箱庭WGではROSの諸技術の発展・普及に貢献しており、次のセッションで登壇予定です。ぜひ参加をご検討ください。
-  - 箱庭:IoT/クラウドロボティクス時代の仮想シミュレーション環境  
-  森崇 (永和システムマネジメント)・高瀬英希 (東京大学/JSTさきがけ)・福田⻯也 (インテック)
-  - ROS 2 Client Library for E^2  
-  高瀬 英希(東京大学/JSTさきがけ)、武田 大輝・今西 洋偉・祐源 英俊(京都大学)
 
 ### 更新情報
 
+- 2021.09.16
+  - [ROSCon JP 2021の講演資料](/hakoniwa/technical-links/#roscon-jp-2021)を掲載しました。
+    - 箱庭:IoT/クラウドロボティクス時代の仮想シミュレーション環境  
+    森崇 (永和システムマネジメント)・高瀬英希 (東京大学/JSTさきがけ)・福田⻯也 (インテック)
+    - ROS 2 Client Library for E^2  
+    高瀬 英希(東京大学/JSTさきがけ)、武田 大輝・今西 洋偉・祐源 英俊(京都大学)
 - 2021.09.08
   - [ショーケース](/hakoniwa/showcase/)のページに、クラウドネイティブ環境上に構築した「箱庭」と「[RDBOX（Robotics Developer BOX）](https://github.com/rdbox-intec/rdbox)」を使って構築して実現したROSロボットのCI（Continuous Integration，継続的インテグレーション）のデモ動画を掲載しました。
 - 2021.09.05

@@ -1,5 +1,5 @@
 +++
-description = "IoT／自動運転時代の仮想シミュレーション環境"
+description = "IoT／クラウドロボティクス時代の仮想シミュレーション環境"
 title = "ショーケース"
 draft = false
 bref = "デモ動画やメディア掲載情報などを紹介します"

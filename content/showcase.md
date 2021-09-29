@@ -30,12 +30,14 @@ toc = true
 
 ### MONOistでの連載
 
-モノづくりスペシャリストのための情報ポータル「[MONOist](https://monoist.atmarkit.co.jp/)」に連載記事を寄稿しています。「仮想環境を使ったクラウド時代の組み込み開発のススメ」という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介していきます。ぜひご覧ください。
+モノづくりスペシャリストのための情報ポータル「[MONOist](https://monoist.atmarkit.co.jp/)」に連載記事を寄稿しています。  
+「[仮想環境を使ったクラウド時代の組み込み開発のススメ](https://monoist.atmarkit.co.jp/mn/series/23683/)」という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介しています。ぜひご覧ください。
 
 - 第1回「[IoTシステムの開発はなぜ難しいのか、ITと組み込みの相克を克服せよ](https://monoist.atmarkit.co.jp/mn/articles/2105/25/news005.html)」 (2021年05月25日 10時00分 公開)
 - 第2回「[日本の伝統を受け継ぐ仮想環境「箱庭」でIoTシステムの統合開発を加速する](https://monoist.atmarkit.co.jp/mn/articles/2106/28/news012.html)」 (2021年06月28日 10時00分 公開)
 - 第3回「[組み込みエンジニアも知っておきたい「クラウドネイティブ」とは](https://monoist.atmarkit.co.jp/mn/articles/2107/28/news016.html)」 (2021年07月28日 10時00分 公開)
 - 第4回「[クラウドネイティブで実現する、シミュレーションと実機テストのボーダーレス開発](https://monoist.atmarkit.co.jp/mn/articles/2108/30/news016.html)」 (2021年08月30日 10時00分 公開)
+- 第5回「[誰もが手軽にROSロボット／IoTシステムの開発に取り組める「RDBOX」とは](https://monoist.atmarkit.co.jp/mn/articles/2109/29/news006.html)」 (2021年09月29日 10時00分 公開)
 
 [このページの先頭に戻る](#top)
 

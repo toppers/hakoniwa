@@ -29,28 +29,27 @@ toc = true
 **[ROSCon JP 2021](https://roscon.jp)** が2021年9月16日(木)に開催されました。  
 ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する開発者会議の日本版です。TOPPERSプロジェクトはROSCon JP 2021にフレンドシップスポンサーとして協力しており、箱庭WGではROSの諸技術の発展・普及に貢献しています。
 
-講演資料とともに講演動画がROSCon JP 2021のWebサイトより公開される予定です。
-
 #### 箱庭:IoT/クラウドロボティクス時代の仮想シミュレーション環境
 
 - [講演資料 (PDFファイル)
 {{< image src="/doc/ROSConJP2021.png" border="1" width="400" >}}](/hakoniwa/doc/ROSConJP2021.pdf)
+- [動画 (Vimeo)](https://vimeo.com/638041034/469a7b3c48)  
+{{< rawhtml >}}
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/638041034?h=469a7b3c48" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+{{< /rawhtml >}}
 
 #### ROS 2 Client Library for E^2
 
 - [講演資料 (SlideShare)](https://www.slideshare.net/takasehideki/ros-2-client-library-for-e2-250206371)  
 {{< rawhtml >}}
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/dcW1YJJBS1i1ty" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-<p>
 <br>
 <p>
 {{< /rawhtml >}}
-<!--
-- [動画 (YouTube)](https://www.youtube.com/watch?v=X-Q2d885Duc)  
+- [動画 (Vimeo)](https://vimeo.com/638040779/8a10335711)  
 {{< rawhtml >}}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/X-Q2d885Duc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/638040779?h=8a10335711" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 {{< /rawhtml >}}
--->
 
 ### 2021年度 ETロボコン向け TOPPERS活用セミナー
 

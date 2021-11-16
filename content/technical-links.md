@@ -24,6 +24,30 @@ toc = true
 
 ## 講演資料や動画など
 
+### Unity道場 ロボティクス 秋のLT祭り 2021
+
+2021年10月19日(火) に開催された「[Unity道場 ロボティクス 秋のLT祭り 2021](https://meetup.unity3d.jp/jp/events/1332)」にて、箱庭の最新の活動状況や研究開発成果に関するLightning Talk講演を実施しました。箱庭では、物理演算と可視化のエンジンとしてUnityの技術を積極的に活用しています。
+
+- 「**集まれ！Dreamingエンジニア！  
+　〜箱庭で紡ぎ出されるIoT/クラウドロボティクス開発の新しいカタチ〜**」  
+  - 講演者：森 崇（株式会社永和システムマネジメント TechLead）  
+  - 『箱庭』とは、IoT/クラウドロボティクス時代の仮想シミュレーション環境です。「箱の中に、様々なモノをみんなの好みで配置して、いろいろ試せる！」ようになれることを目指しています。Unityはそのコンセプトを実現する上で要となる技術です。箱庭を利用するとUnity上で手軽にロボットを配置し，物理エンジンで動作させながらマイコンシミュレータ/ROS/クラウド連携できます。箱庭で紡ぎだされるロボット開発の新しいカタチ/夢を語りながら、最新の箱庭成果をどうやれば利用/開発できるようになるか説明します。箱庭成果はOSSとしてUnityパッケージと併せて一般公開中です。
+
+講演スライドおよび動画アーカイブが[Unity Learning Materials](https://learning.unity3d.jp/event/unity-dojo/)に公開されています。ぜひご覧ください。  
+https://learning.unity3d.jp/7915/
+
+- [講演資料 (SlideShare)](https://www.slideshare.net/UnityTechnologiesJapan002/unity-robotics-lt20212)  
+{{< rawhtml >}}
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/671ikzeb1yscMe" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<br>
+<p>
+{{< /rawhtml >}}
+- [動画 (YouTube)](https://www.youtube.com/watch?v=Aa_1K9xDkCc)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Aa_1K9xDkCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+
 ### ROSCon JP 2021
 
 **[ROSCon JP 2021](https://roscon.jp)** が2021年9月16日(木)に開催されました。  

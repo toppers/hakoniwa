@@ -31,6 +31,13 @@ SWESTとは、大学の研究者や学生、企業の技術者や管理者、そ
 
 ### 更新情報
 
+- 2022.05.09
+  - 2022年5月28日(土)に開催される[オープンソースカンファレンス 2022 Nagoya](https://event.ospn.jp/osc2022-online-nagoya/)にてセッションを実施します。ぜひご参加ください。
+    - [箱庭VR空間で、ロボット・マルチプレイ開発をゲーム感覚でやってみよう](https://event.ospn.jp/osc2022-online-nagoya/session/579215)  
+    講師： 森 崇　(（株）永和システムマネジメント)  
+    日時： 2022年5月28日(土) 10:00 〜 10:45
+    事前登録： https://register.ospn.jp/osc2022-online-nagoya/modules/eventrsv/1.html
+  - [hakoniwa-ros2sim](https://github.com/toppers/hakoniwa-ros2sim) を公開しました。箱庭上で ROS 2 プログラムを手軽にシミュレーションできます。ぜひお試しください。
 - 2021.11.16
   - [Unity道場 ロボティクス 秋のLT祭り 2021](/hakoniwa/technical-links/#unity道場-ロボティクス-秋のlt祭り-2021)の講演資料および動画アーカイブが公開されました。
 - 2021.11.10

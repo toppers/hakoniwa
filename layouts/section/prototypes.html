@@ -4,12 +4,11 @@
 {{ define "main" }}
 
 <div id="hero" class="wrap">
-  <h1>プロトタイプモデル</h1>
+  <h1>{{ .Title }}</h1>
 </div>
 <ul id="posts">
 <h5>
-箱庭の掲げるコンセプトを実現するために，またWGメンバの技術研鑽のために，
-以下のプロトタイプモデルの構築を進めています．
+  {{ .Description }}
 </h5>
 
  {{ range .Paginator.Pages.ByWeight }} {{ partial "page-summary" . }} {{ end }}

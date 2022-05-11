@@ -16,7 +16,13 @@ or Reviewing the generated content.
 
 ## Requirements
 
-[Install Hugo](https://gohugo.io/getting-started/installing/) (v0.72.0 or later)
+[Install Hugo](https://gohugo.io/getting-started/installing/) (v0.98.0 or later)
+
+## or Open in Gitpod
+
+Click the button below to start "web branch" development environment:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/toppers/hakoniwa/tree/web)
 
 ## Create new article
 

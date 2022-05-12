@@ -6,13 +6,15 @@ draft = false
 weight = 300
 toc = false
 script = 'animation'
-images = ["img/prototypes/modelB.png"]
+images = ["img/prototypes/modelBoverview.png"]
 github = "https://github.com/toppers/hakoniwa-ros-multiplay"
 +++
 
 複数のロボット，複数の制御プログラムによるシミュレーションを同じ環境で行うプロトタイプモデルです．
 UnityのPhotonライブラリを用いて複数のUnity環境の同期を行っており，加えてアセット間の時間同期も実現しています．
 またVRによるシミュレーション環境へのダイブも試行しています．
+
+{{< image src="/img/prototypes/modelBoverview.png" width="700" >}}
 
 ### 技術研鑽視点での狙い
 
@@ -24,10 +26,17 @@ UnityのPhotonライブラリを用いて複数のUnity環境の同期を行っ�
 
 - ROSユーザ層に箱庭を広める（広報活動）
 
-{{< image src="/img/prototypes/modelB.png" width="700" >}}
-
 ### 導入方法と使用方法
 
 以下のGithubリポジトリにて，各種デモを公開しています．ぜひお試し下さい．
 
 ‐ [toppers/hakoniwa-ros-multiplay]("https://github.com/toppers/hakoniwa-ros-multiplay")
+
+### 動作例のデモ
+- photonによる複数ロボットの連携
+{{< video src="/img/prototypes/modelBdemo1.mp4">}}
+- Oculus Questとの接続の様子
+{{< video src="/img/prototypes/modelBdemo2.mp4">}}
+- VRで箱庭内に入った様子
+{{< video src="/img/prototypes/modelBdemo3.mp4">}}
+

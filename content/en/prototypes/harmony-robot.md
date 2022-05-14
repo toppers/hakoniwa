@@ -1,9 +1,9 @@
 +++
 description = "クラウドとロボティクスとの連携"
 bref = "クラウドとロボティクスとの連携"
-title = "ロボット間協調動作向け"
+title = "ロボット間協調動作シミュレーション"
 draft = false
-weight = 300
+weight = 400
 toc = false
 script = 'animation'
 images = ["img/prototypes/modelC.png"]

@@ -1,12 +1,13 @@
 +++
-description = "ETロボコンを題材とした時間同期の仕組みの確立"
-bref = "ETロボコンを題材とした時間同期の仕組みの確立"
-title = "単体ロボット向け"
+description = "マイコンシミュレータと箱庭の連携事例"
+bref = "マイコンシミュレータと箱庭の連携事例"
+title = "マイコン制御ロボットシミュレーション"
 draft = false
 weight = 100
 toc = true
 script = 'animation'
 images = ["img/prototypes/modelAdemo1.gif"]
+github =  "https://github.com/toppers/hakoniwa-single_robot"
 +++
 
 単体のSBCで構成される単体ロボットを対象とした箱庭プロトタイプモデルです．[ETロボコン](https://www.etrobo.jp/)を題材としています．  

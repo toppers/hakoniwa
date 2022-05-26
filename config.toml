@@ -31,8 +31,12 @@ googleAnalytics = "UA-169187702-1"
     weight = -75
     url = "/showcase/"
 [[menu.main]]
-    name = "リポジトリ"
+    name = "Getting Started"
     weight = -70
+    url = "/getting-started/"
+[[menu.main]]
+    name = "リポジトリ"
+    weight = -60
     url = "/repositories/"
 [[menu.main]]
     name = "SNS・問合せ先"

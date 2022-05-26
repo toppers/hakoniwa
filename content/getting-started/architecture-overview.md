@@ -2,7 +2,7 @@
 title: "箱庭のアーキテクチャ"
 description: "[Getting Started 0] 箱庭のシステムアーキテクチャと動作の仕組みを紹介します"
 date: 2022-05-14T13:26:27+09:00
-draft: true
+draft: false
 bref: "[Getting Started 0] 箱庭のシステムアーキテクチャと動作の仕組みを紹介します"
 weight: 10
 toc: false

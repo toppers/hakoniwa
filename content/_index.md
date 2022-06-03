@@ -31,6 +31,8 @@ SWESTとは、大学の研究者や学生、企業の技術者や管理者、そ
 
 ### 更新情報
 
+- 2022.05.26
+  - [Getting Started](/hakoniwa/getting-started) のページを公開しました。[hakoniwa-ros2sim](https://github.com/toppers/hakoniwa-ros2sim) を題材として、箱庭を用いたシミュレーションの進め方やカスタマイズ方法を案内していきます。コンテンツ内容は随時更新・追加していきますので、ぜひご確認ください。
 - 2022.05.09
   - 2022年5月28日(土)に開催される[オープンソースカンファレンス 2022 Nagoya](https://event.ospn.jp/osc2022-online-nagoya/)にてセッションを実施します。ぜひご参加ください。
     - [箱庭VR空間で、ロボット・マルチプレイ開発をゲーム感覚でやってみよう](https://event.ospn.jp/osc2022-online-nagoya/session/579215)  

@@ -24,6 +24,23 @@ toc = true
 
 ## 講演資料や動画など
 
+### オープンソースカンファレンス 2022 Nagoya
+
+2022年5月28日(土)に開催された[オープンソースカンファレンス 2022 Nagoya](https://event.ospn.jp/osc2022-online-nagoya/)にて、箱庭のVR展開に関するセッションを実施しました。
+
+- 「[箱庭VR空間で、ロボット・マルチプレイ開発をゲーム感覚でやってみよう](https://event.ospn.jp/osc2022-online-nagoya/session/579215)」
+  - 講師：森 崇　(（株）永和システムマネジメント)
+  - セッション概要：メタバースという言葉が流行っていますが、VR空間に入って新しい価値観や体験ができるようになりました。このような体験をロボット開発でもやってみたくなりませんか？TOPPERS／箱庭WGでは、このような新しい技術を好き勝手に取り入れながら、箱庭コンセプトの実現に向けて日々自己研鑽をしています。  
+  2022年初頭、複数の拠点にいる開発者が、箱庭VR空間に入って、ロボット開発できるようになりました！本セミナーでは、この開発環境の説明と共に、どうやって利用できるようになるか説明したいと思います。ゲーミングPCがあれば100%無料でお試しできます！
+
+<p></p>
+
+- [講演資料 (PDFファイル){{< image src="/doc/OSCNagoya2022.png" border="1" width="400" >}}](/hakoniwa/doc/OSCNagoya2022.pdf)
+- [動画 (YouTube)](https://www.youtube.com/watch?v=ZMTDRBrRGhY)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZMTDRBrRGhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
 ### Unity道場 ロボティクス 秋のLT祭り 2021
 
 2021年10月19日(火) に開催された「[Unity道場 ロボティクス 秋のLT祭り 2021](https://meetup.unity3d.jp/jp/events/1332)」にて、箱庭の最新の活動状況や研究開発成果に関するLightning Talk講演を実施しました。箱庭では、物理演算と可視化のエンジンとしてUnityの技術を積極的に活用しています。

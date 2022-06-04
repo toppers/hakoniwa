@@ -22,7 +22,9 @@ Linux/Windowsの方は，さらに build_linux に移動してください．
 Macの方は，build_mac に移動してください．
 移動終わったら，以下コマンド実行するだけです．
 make timer32=true clean
-make timer32=true ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</guid><description>athrill2のインストール athrill2のインストール手順 athrill のチェックアウト athrill-target のチェックアウト コンパイラのインストール ビルド＆インストール athrill のチェックアウト athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．
+make timer32=true ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．
+$ ls -l ../../athrill/bin/linux/athrill2
+-rwxr-xr-x 1 user staff 628260 2 2 16:40 .</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</guid><description>athrill2のインストール athrill2のインストール手順 athrill のチェックアウト athrill-target のチェックアウト コンパイラのインストール ビルド＆インストール athrill のチェックアウト athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．
 共通コードのチェックアウトは，以下の通りです．
 $ git clone https://github.com/toppers/athrill.git athrill-target のチェックアウト CPUアーキに依存するコードは，athrill-target側で管理しています．
 今回のV850対応版は，ここにあります．
@@ -37,7 +39,9 @@ Linux/Windowsの方は，さらに build_linux に移動してください．
 Macの方は，build_mac に移動してください．
 移動終わったら，以下コマンド実行するだけです．
 make timer32=true clean
-make timer32=true ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</guid><description>linux版64bit gccコンパイラ(ライブラリ含む)のインストール ARM版のathrill2を利用される場合は，以下のサイトを参考にコンパイラおよびライブラリをインストールください．
+make timer32=true ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．
+$ ls -l ../../athrill/bin/linux/athrill2
+-rwxr-xr-x 1 user staff 628260 2 2 16:40 .</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</guid><description>linux版64bit gccコンパイラ(ライブラリ含む)のインストール ARM版のathrill2を利用される場合は，以下のサイトを参考にコンパイラおよびライブラリをインストールください．
 Windows(WSL)
 https://www.yokoweb.net/2018/03/07/wsl-ubuntu-arm-gcc/ Linux
 https://www.yokoweb.net/2018/05/16/ubuntu-18_04-gcc-arm-install/ Mac
@@ -80,7 +84,8 @@ static float lasterror = 0, integral = 0;
 static float midpoint = (white - black) / 2 + black;
 {
 float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);
-integral = error + integral * 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</guid><description>EV3ロボット制御プログラム 現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．
+integral = error + integral * 0.3;
+float steer = 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</guid><description>EV3ロボット制御プログラム 現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．
 v850版のathrill2を利用される場合は，以下のフォルダで作業してください．
 $ ls ev3rt-athrill-v850e2m/sdk/workspace/line_trace/
 app.c app.h device_config_mmap.txt log.txt memory_mmap.txt unity_mmap.bin
@@ -124,7 +129,11 @@ Fixed Timestep を 0.001に， Time Scale を 0.6に設定します．
 設定してください．
 「Quality」
 OtherのVSync Count を Don&amp;rsquo;t Sync に設定します．
-これでインポート作業終了です．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
+これでインポート作業終了です．
+通信方式の切替方法 athrillとUnity間での通信方式によって設定が異なります． ご自身の環境に合わせて，どちらかの通信方式をご選択ください．
+UDP版を使用する場合はこちら MMAP版を使用する場合はこちら MMAPについて MMAPにすると嬉しい点としては以下が挙げられます．
+UDP のように通信ロストは発生しない(シミュレーション精度向上につながる) Unity と athrill 間のやりとりは共有メモリベースなので，高速になる(と思われる) 上記のとおり，精度向上と高速性を期待して試行してみましたが，精度は良くなりました(速度はあまり変化ないような?)． ただし，デメリットとして以下が挙げられます．
+1マシン前提での構成を余儀なくされる UDPであれば，athrillを別PCに配置して負荷分散可能ですので．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
 以下のサイト等が参考になるかと思います．
 https://tech-camp.in/note/technology/44408/ ※動作確認はUnity 2020.1.0b9(64bit)で行っております．
 使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．
@@ -145,7 +154,11 @@ Fixed Timestep を 0.001に， Time Scale を 0.6に設定します．
 設定してください．
 「Quality」
 OtherのVSync Count を Don&amp;rsquo;t Sync に設定します．
-これでインポート作業終了です．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
+これでインポート作業終了です．
+通信方式の切替方法 athrillとUnity間での通信方式によって設定が異なります． ご自身の環境に合わせて，どちらかの通信方式をご選択ください．
+UDP版を使用する場合はこちら MMAP版を使用する場合はこちら MMAPについて MMAPにすると嬉しい点としては以下が挙げられます．
+UDP のように通信ロストは発生しない(シミュレーション精度向上につながる) Unity と athrill 間のやりとりは共有メモリベースなので，高速になる(と思われる) 上記のとおり，精度向上と高速性を期待して試行してみましたが，精度は良くなりました(速度はあまり変化ないような?)． ただし，デメリットとして以下が挙げられます．
+1マシン前提での構成を余儀なくされる UDPであれば，athrillを別PCに配置して負荷分散可能ですので．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
 以下のサイト等が参考になるかと思います．
 https://tech-camp.in/note/technology/44408/ ※動作確認はUnity 2020.1.0b9(64bit)で行っております．
 使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．
@@ -166,7 +179,11 @@ Fixed Timestep を 0.001に， Time Scale を 0.6に設定します．
 設定してください．
 「Quality」
 OtherのVSync Count を Don&amp;rsquo;t Sync に設定します．
-これでインポート作業終了です．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
+これでインポート作業終了です．
+通信方式の切替方法 athrillとUnity間での通信方式に設定を行います．
+設定はconfig.jsonという設定ファイルを作成し，設定を行います．
+config.json の設定例(通信方式がMMAPの場合) 設定するファイルパスは全て絶対パスで記述します．
+{ &amp;#34;AthrillPath&amp;#34;:&amp;#34;/mnt/c/project/esm/athrill/bin/linux/athrill2&amp;#34;, &amp;#34;TerminalPath&amp;#34;:&amp;#34;C:\\Windows\\System32\\wsl.exe&amp;#34;, &amp;#34;robots&amp;#34;:[ { &amp;#34;RobotName&amp;#34;:&amp;#34;RoboModel&amp;#34;, &amp;#34;WorkspacePathWin&amp;#34;:&amp;#34;C:\\project\\esm\\ev3rt-athrill-v850e2m\\sdk\\workspace&amp;#34;, &amp;#34;WorkspacePathUnix&amp;#34;:&amp;#34;/mnt/c/project/esm/ev3rt-athrill-v850e2m/sdk/workspace&amp;#34;, &amp;#34;ApplicationName&amp;#34;:&amp;#34;touch_sensor&amp;#34;, &amp;#34;BinaryName&amp;#34;:&amp;#34;asp&amp;#34; } ] } config.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
 Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
 「Player」
 Other SettingのScripting Define Symbols にVDEV_IO_MMAPと設定します．
@@ -221,7 +238,11 @@ UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
 RX packets:0 errors:0 dropped:0 overruns:0 frame:0
 TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
 collisions:0
-RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</guid><description>UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
+RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．
+&amp;gt; ipconfig
+Windows IP 構成
+イーサネット アダプター イーサネット:
+リンクローカル IPv6 アドレス.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</guid><description>UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
 ※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．
 説明する上でのIPアドレスの構成例 Unity側のIPアドレス：192.168.11.32
 athrill側のIPアドレス：192.168.11.20

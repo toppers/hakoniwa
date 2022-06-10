@@ -1,25 +1,25 @@
 +++
-title = "目指すところ"
+title = "Our Goal"
 draft = false
 weight = 30
 toc = false
 script = 'animation'
-description = "箱庭のターゲットと利用者・目指す強みと新しさ"
-bref = "箱庭の対象や利用者，本プロジェクトの目指す強みと新しさを紹介します"
+description = "Target users, strengths, and novelty of Hakoniwa"
+bref = "Describe the target users, strengths, and novelty of Hakoniwa"
 +++
 
-大規模かつ複雑なIoTシステムを開発／提供する技術者のための **シミュレーション環境とエコシステム** を構築することを目指しています．
+Our goal is to establish a **simulation environment and ecosystem** for engineers who develop/provide massive and complex IoT systems.
 
 {{< image src="/img/docs/aimat1.png" width="700" title="箱庭のエコシステム" >}}
 
-箱庭のターゲットは，様々な機器がネットワークで接続された情報システムです．
-自動運転や物流，宇宙分野など，IoTの様々な分野を想定しています．
+Hakoniwa's target is an information system with various devices connected by a network.
+We envision IoT applications in various fields, such as autonomous driving, logistics, and space development.
 
-箱庭は，次の利用者のための環境です．
-- システム開発者：IoTシステムとその構成要素を開発する技術者
-- サービス提供者：IoTを活用してシステムサービスの提供を進める技術者
-- 箱庭アセットの開発者および提供者
-  - アセットとは，箱庭のシステム構成要素のことを指します．
+Hakoniwa targets the following users
+- System developers: engineers who develop IoT systems and their components
+- Service providers: Engineers who promote the provision of system services using the IoT.
+- Developers and providers of Hakoniwa assets
+  - Assets here refer to the system components of Hakoniwa.
 
-箱庭プロジェクトの目指す強みと新しさとしては，IoTの各要素である箱庭アセットをそれぞれ連携させて，対象システムを**任意の精度で検証可能**とすることです．
-そして，箱庭の利用者の技術領域や評価対象に応じて，アセットを差し替えることで，**検証の対象／抽象度／レベルを任意に変更できる**ようにします．
+The strength and novelty of the Hakoniwa project is the ability to verify the target system with **arbitrary accuracy** by linking the Hakoniwa Asset.
+Then, according to technical domain and evaluation target, users can replace the Hakoniwa assets and verify them at any **target/abstraction level/accuracy**.

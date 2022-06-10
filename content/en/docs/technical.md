@@ -4,23 +4,24 @@ draft = false
 weight = 50
 toc = false
 script = 'animation'
-description = "箱庭を形成する技術要素の紹介"
-bref = "箱庭を形成する技術要素を紹介します"
+description = "Introduction to the technical elements comprising Hakoniwa"
+bref = "Introduction to the technical elements comprising Hakoniwa"
 +++
 
-### TOPPERSカーネル
+### TOPPERS Kernel
 
-[TOPPERSプロジェクト](https://toppers.jp)により開発されている，μITRON4.0仕様のスタンダードプロファイルを拡張した，オープンソースのリアルタイムカーネルです．
-主な適用対象は，高い信頼性・安全性・リアルタイム性を要求される組込みシステムです．
+Developed by the [TOPPERS Project](https://toppers.jp), it is an open-source real-time kernel that extends the standard profile of the µITRON4.0 specification.
+It primarily targeted embedded systems that require high reliability, safety, and real-time performance.
 
 [![TOPPERS](https://www.toppers.jp/imgs/logo.gif)](https://toppers.jp/)
 
 ### Athrill
 
-箱庭の核である，CPU命令セットシミュレータです．    
-箱庭WGメンバが中心となって開発を進めています．組込みマイコンおよびペリフェラルの挙動を命令レベルでデバッグ・機能検証することができます．現在はV850/RH850およびARMv7-Aが主なサポート対象です．
+The CPU instruction set simulator is the core of Hakoniwa.    
+Members of Hokoniwa WG mainly develop it. It enables debugging and functional verification of the behavior of embedded microcontrollers and peripherals at the instruction level. Currently, V850/RH850 and ARMv7-A are mainly supported.
 
-TOPPERSライセンスのもと，オープンソースで開発を進めています．
+
+The software is being developed as open source under the TOPPERS license.
 - https://github.com/toppers/athrill
 
 {{< image src="/img/athrill.png" width="200" href="https://github.com/toppers/athrill" >}}
@@ -28,8 +29,10 @@ TOPPERSライセンスのもと，オープンソースで開発を進めてい�
 
 ### mROS
 
-ROS(ROS1)の組込み向け軽量実行環境です．ホストPC上のROSマスタおよびROSノードに対する，組込みマイコンからの出版購読型通信を実現します．[京都大学情報学研究科 高木研究室](https://github.com/tlk-emb/)が中心となって開発を進めています．    
-[ROS・マルチECUロボット向けプロトタイプモデル](/hakoniwa/prototypes/multi-robot)のようなシステムでの活用を想定しています．
+ｍROS is a lightweight ROS (ROS1) execution environment for embedded systems.
+It enables publication-subscription communication from an embedded microcontroller to a ROS master and ROS nodes on a host PC. 
+[Takagi Laboratory, Graduate School of Informatics, Kyoto University](https://github.com/tlk-emb/) plays a leading role in the development.    
+It targets systems such as [Prototype model for ROS and multi-ECU robots](/hakoniwa/prototypes/multi-robot).
 
 - https://github.com/tlk-emb/mROS
 
@@ -37,8 +40,10 @@ ROS(ROS1)の組込み向け軽量実行環境です．ホストPC上のROSマス
 
 ### RDBOX
 
-RDBOX (Robotics Developers BOX)は，ROSロボットやIoTに最適化した，Kubernetesクラスタとセキュアで拡張性の高いWi-Fiネットワークを自動構築するためのフレームワークです．シミュレーション環境と現実の作業環境をブリッジすることを目指しています．株式会社インテックの[RDBOX Project](https://rdbox-intec.github.io/homepage_jp/)で開発されています．    
-[ロボット間協調動作向けプロトタイプモデル](/hakoniwa/prototypes/harmony-robot)の構築において，箱庭との連携を進めています．
+RDBOX (Robotics Developers BOX) is a framework for automatically building Kubernetes clusters and secure, scalable Wi-Fi networks optimized for ROS robots and IoT. 
+It aims to bridge simulation and real-world work environments. 
+Intec Inc. is developing [RDBOX Project](https://rdbox-intec.github.io/homepage_jp/).    
+We are collaborating with Hakoniwa to construct [prototype model for cooperative behavior among robots](/hakoniwa/prototypes/harmony-robot).
 
 - https://github.com/rdbox-intec/rdbox
 
@@ -52,8 +57,8 @@ RDBOX (Robotics Developers BOX)は，ROSロボットやIoTに最適化した，K
 
 ### Unity
 
-リアルタイム3D開発プラットフォームです．IDEを内蔵するゲームエンジンとして有名です．    
-箱庭では，物理演算エンジンと空間可視化のために活用しています．
+It is a real-time 3D development platform, famous as a game engine with a built-in IDE.    
+Hakoniwa uses it for its physics engine and spatial visualization.
 
 - https://unity.com/
 
@@ -68,15 +73,14 @@ RDBOX (Robotics Developers BOX)は，ROSロボットやIoTに最適化した，K
 {{< /rawhtml >}}
 
 ---
-箱庭WGでは，この他にも，IoT／クラウドロボティクス時代の仮想環境を確立するために，統合すべき技術要素を模索しているところです．   
-シナジーが生まれそうな技術や，活用できそうな知見をお持ちの方がいましたら，ぜひお知らせください．
+The Hokoniwa WG is currently looking into other technological elements helpful in building virtual environments in the age of IoT/Cloud Robotics.
+If you know of any technologies that can generate synergies or have sound knowledge, please let us know.
 
 
 {{< rawhtml >}}
 <span style="font-size: 70%">
-注：
-このウェブページは，ユニティ テクノロジーズまたはその関連会社がスポンサーとなったり，ユニティ テクノロジーズまたはその関連会社と提携しているものではありません．
-このサイトに掲載された <a href="https://unity3d.com/jp/legal/trademarks" target="_blank">Unity の登録商標一覧</a>に含まれる Unity の登録商標はすべて，ユニティ テクノロジーズまたはその米国や他の国々に所在する関連会社の登録商標または商標です．
+Note: This web page is not sponsored by or affiliated with Unity Technologies or its affiliates.
+All Unity trademarks included in <a href="https://unity3d.com/jp/legal/trademarks" target="_blank">the list of Unity trademarks</a> on this site are registered trademarks or trademarks of Unity Technologies or its affiliates in the United States and/or other countries.
 </span>
 {{< /rawhtml >}}
 

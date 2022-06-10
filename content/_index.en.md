@@ -1,23 +1,23 @@
 +++
-description = "IoT／クラウドロボティクス時代の仮想シミュレーション環境"
-title = "HAKONIWA"
+description = "A virtual simulation environment in the age of IoT and cloud robotics"
+title = "Hakoniwa"
 draft = false
 
 +++
 
-### トピックス・イベント案内
+### Topics & Events
 
-- 箱庭のもくもく会を不定期に開催しています。connpassにて一般公開しており、箱庭WGの開発メンバも参加しています。
+- Hakoniwa WG holds "Mokumoku-kai" irregularly, which is open to the public via connpass and attended by the development members of Hakoniwa WG.
   - https://hakoniwa.connpass.com/
-  - もくもく会とは、各自のやりたいことや知りたいことを持ち寄って、まず自己紹介とやりたいことの表明を行い、それぞれ自由にやりたいことを進めて、そして最後にはもくもくの進捗を共有する会です。  
-  - 箱庭のことはいろいろなイベントで見聞きして気になっているんだけど,,, よし動かしてみよう！と思っているけども幾数月,,, 箱庭はさておき Unity x ROS がとっても気になる！！という方々、ぜひともご参加ください。特に定まった議題などはありませんので、とりま開発メンバと雑談してみたい方々の参加も大歓迎です。
-- モノづくりスペシャリストのための情報ポータル「[MONOist](https://monoist.atmarkit.co.jp/)」に連載記事を寄稿しています。  
-「[仮想環境を使ったクラウド時代の組み込み開発のススメ](https://monoist.atmarkit.co.jp/mn/series/23683/)」という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介しています。ぜひご覧ください。
-  - 第1回「[IoTシステムの開発はなぜ難しいのか、ITと組み込みの相克を克服せよ](https://monoist.atmarkit.co.jp/mn/articles/2105/25/news005.html)」 (2021年05月25日 10時00分 公開)
-  - 第2回「[日本の伝統を受け継ぐ仮想環境「箱庭」でIoTシステムの統合開発を加速する](https://monoist.atmarkit.co.jp/mn/articles/2106/28/news012.html)」 (2021年06月28日 10時00分 公開)
-  - 第3回「[組み込みエンジニアも知っておきたい「クラウドネイティブ」とは](https://monoist.atmarkit.co.jp/mn/articles/2107/28/news016.html)」 (2021年07月28日 10時00分 公開)
-  - 第4回「[クラウドネイティブで実現する、シミュレーションと実機テストのボーダーレス開発](https://monoist.atmarkit.co.jp/mn/articles/2108/30/news016.html)」 (2021年08月30日 10時00分 公開)
-  - 第5回「[誰もが手軽にROSロボット／IoTシステムの開発に取り組める「RDBOX」とは](https://monoist.atmarkit.co.jp/mn/articles/2109/29/news006.html)」 (2021年09月29日 10時00分 公開)
+  - "Mokumoku" means "to do something quietly by oneself," and "kai" means "meeting." So, "mokumoku-kai" is generally a meetup to study, work, read, etc., casually and alone. In Hakoniwa WG, we bring up what we want to do or want to know, express it with light self-introductions, and after a short period of "mokumoku," share the progress.
+  - If you have heard about Hakoniwa at various events and are curious about it, or if you are just curious about Unity x ROS aside from Hakoniwa, please join us. There is no specific schedule, so those who want to chat with the development team members are welcome to join us.
+- I contribute a series of articles to "[MONOist](https://monoist.atmarkit.co.jp/)," an information portal for manufacturing specialists.  
+In the series titled "[Recommendations for Embedded Development in the Cloud Age Using Virtual Environments](https://monoist.atmarkit.co.jp/mn/series/23683/)," we introduce the future of IoT system development while interweaving Hakoniwa's activities. Please take a look.
+  - Part 1 "[Why Developing IoT Systems is Difficult, Overcome the Conflict between IT and Embedded Systems](https://monoist.atmarkit.co.jp/mn/articles/2105/25/news005.html)" (published May 25, 2021, 10:00 AM)
+  - Part 2 "[Accelerating Integrated Development of IoT Systems using the Virtual Environment "Hakoniwa" handing down Japanese Traditions](https://monoist.atmarkit.co.jp/mn/articles/2106/28/news012.html)" (Published: Jun 28, 2021, 10:00 AM)
+  - Part 3 "[What Embedded Engineers Also Need to Know About "Cloud Native"](https://monoist.atmarkit.co.jp/mn/articles/2107/28/news016.html)" (Published: Jul 28, 2021, 10:00 AM)
+  - Part 4 "[Borderless Development Between Virtual Simulation and Real Device Testing by Utilizing Cloud Native](https://monoist.atmarkit.co.jp/mn/articles/2108/30/news016.html)" (Published: Aug 30, 2021, 10:00 AM)
+  - Part 5 "[What is "RDBOX," an easy way for anyone to develop ROS robotics/IoT systems?](https://monoist.atmarkit.co.jp/mn/articles/2109/29/news006.html)" (Published: Sep 29, 2021, 10:00 AM)
 <!--
 - **[SWEST23（第23回 組込みシステム技術に関するサマーワークショップ）](https://swest.toppers.jp)** が2021年9月2日(木)-3日(金)にオンライン開催されます。  
 SWESTとは、大学の研究者や学生、企業の技術者や管理者、その他、組込みシステムに関わる全ての人達が、徹底的に議論できる場を提供することを主な目的とした合宿型のワークショップです。箱庭WGのメンバが企画・実施するセッションもありますので、ぜひご参加ください。
@@ -29,15 +29,15 @@ SWESTとは、大学の研究者や学生、企業の技術者や管理者、そ
   講師：細合 晋太郎（株式会社チェンジビジョン）
 -->
 
-### 更新情報
+### What's New
 
-- 2022.05.09
-  - 2022年5月28日(土)に開催される[オープンソースカンファレンス 2022 Nagoya](https://event.ospn.jp/osc2022-online-nagoya/)にてセッションを実施します。ぜひご参加ください。
-    - [箱庭VR空間で、ロボット・マルチプレイ開発をゲーム感覚でやってみよう](https://event.ospn.jp/osc2022-online-nagoya/session/579215)  
-    講師： 森 崇　(（株）永和システムマネジメント)  
-    日時： 2022年5月28日(土) 10:00 〜 10:45
-    事前登録： https://register.ospn.jp/osc2022-online-nagoya/modules/eventrsv/1.html
-  - [hakoniwa-ros2sim](https://github.com/toppers/hakoniwa-ros2sim) を公開しました。箱庭上で ROS 2 プログラムを手軽にシミュレーションできます。ぜひお試しください。
+- 05/09/2022
+  - We will hold a session at [Open Source Conference 2022 Nagoya](https://event.ospn.jp/osc2022-online-nagoya/) on Saturday, May 28, 2022. We look forward to seeing you there.
+    - [Let's try multiplayer robot development in a boxy VR space, just like a game](https://event.ospn.jp/osc2022-online-nagoya/session/579215)  
+    Instructor: Takashi MORI (ESM, Inc.) 
+    Data: Saturday, May 28, 2022 10:00 - 10:45  
+    Pre-registration: https://register.ospn.jp/osc2022-online-nagoya/modules/eventrsv/1.html
+  - [hakoniwa-ros2sim](https://github.com/toppers/hakoniwa-ros2sim) is now available. You can easily simulate ROS 2 programs on Hakoniwa. Please try it out.
 - 2021.11.16
   - [Unity道場 ロボティクス 秋のLT祭り 2021](/hakoniwa/technical-links/#unity道場-ロボティクス-秋のlt祭り-2021)の講演資料および動画アーカイブが公開されました。
 - 2021.11.10

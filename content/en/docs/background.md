@@ -1,50 +1,50 @@
 +++
-title = "技術的背景"
+title = "Technical Background"
 draft = false
 weight = 10
 toc = false
 script = 'animation'
-description = "なぜ箱庭が必要なのか？"
-bref = "私たちが「箱庭」の構築を目指すことに至った背景を紹介します"
+description = "Why Hakoniwa is essential"
+bref = "Here is some background on how we reached our Hakoniwa concept"
 +++
 
-IoT (Internet of Things) は，情報技術の総合格闘技と言えます．   
-IoTシステムは，多様かつ大量の情報機器が，ネットワーク通信を介して密接に絡み合っています．
-様々な技術分野から多くの技術者が集まり，みんなで英知を結集してIoTシステムを構築する必要があります．
+The Internet of Things (IoT) is the mixed martial art of information technology.
+It is because IoT systems are composed of diverse and large numbers of information devices that are intricately intertwined through network communications, requiring many engineers from various technical fields to gather together and pool their wisdom to build an IoT system.
 
-例えば自動運転システムの例を考えてみましょう．このように様々な技術領域を横断しています．
-- 組込み系
-  - 自動運転の判断処理を実現するソフトウェアの開発
-  - ECU間の通信機構の開発
-- 制御系
-  - メカやエレキを制御するECUハードウェアの開発
-- IT・ネットワーク系
-  - Web UI・スマホアプリケーションの開発
-  - ビッグデータの統計処理を担うクラウドサーバの管理・保守
-  - 車車間・機器間の効率的な通信制御の実現
-- アプリケーション系
-  - 配車管理や交通流管理アプリの開発
+Consider, as an example, an autonomous driving system. 
+It crosses various technical domains as follows.
+- Embedded Systems
+  - Development of autonomous determination software for driving
+  - Development of communication system between ECUs
+- Control Systems
+  - Development of ECU hardware to control mechanical and electrical systems
+- IT & Network
+  - Development of Web UI and smartphone applications
+  - Management and maintenance of cloud servers for statistical processing of big data
+  - Realization of efficient inter-vehicle and inter-device communication control
+- application Systems
+  - Development of vehicle assignment management and traffic flow management applications
 
 {{< image src="/img/docs/back1.png" width="600" >}}
 
-このようなIoTシステムを構築する際の課題として，下記が考えられます．
-- 問題発生経路の複雑化
-  - 全体結合しないと見えない問題が多数潜んでいる
-  - 様々な機器間の整合性を取れない
-- 原因調査の複雑化 
-  - どこで何がおこっているのか調査困難
-  - そもそもデバッグすること自体が難しい
-- 実証実験のコスト増
-  - 実証実験は手軽に実施できない
-  - 各分野のエンジニアの総動員
-  - 手間，時間，費用がかかる
+However, we face the following challenges to realizing such an IoT system.
+- Complexity of the problem path
+  - It can hold potential problems that only become visible when integrated.
+  - Inconsistency between various devices.
+- Complexity of cause investigation 
+  - Difficult to investigate what and where is going on.
+  - Debugging an entire system is complicated by nature.
+- Costs of verification and experimentation
+  - Engineers in various fields are needed
+  - labor-intensive, time-consuming, and expensive.
+  - Thus, it is not easy to verification
 
-次に，ロボットを活用したIoTサービスの構築時に起こりえる課題を考えてみましょう．
-- ロボットをどう組み合わせると，効果的な新しいサービスを創出できるかわからない
-- 新しいサービスを検討するにしても，実物のロボットでは準備・手間がかかりすぎる
-- 頻繁に変更されるシステム要件に対して，変更適用に時間がかかる
-- 実証実験時には結合トラブルが頻発する
+Next, consider the potential challenges when building IoT services using robots.
+- No one knows how to create effective new services using robots.
+- When considering a new service, it takes too much preparation and time to test it with an actual robot.
+- System requirements may change frequently, requiring high effort to apply changes
+- Difficulty in combining causes frequent trouble during testing.
 
 {{< image src="/img/docs/back2.png" width="600" >}}
 
-**「箱庭」は，このような技術的課題を解決し，IoTのシステム開発／サービス構築を加速化することができるプラットフォームとなること目指します．**
+**Hakoniwa intends to solve such technical issues and accelerate the development of IoT systems and the construction of services.**

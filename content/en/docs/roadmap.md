@@ -1,30 +1,27 @@
 +++
-title = "ロードマップ"
+title = "Roadmap"
 draft = false
 weight = 60
 toc = false
 script = 'animation'
-description = "研究開発の指針と計画"
-bref = "箱庭の研究開発のロードマップを紹介します"
+description = "R&D Guideline and roadmap"
+bref = "Here is a roadmap for Hakoniwa's R&D"
 +++
 
-箱庭は **「でっかく語って少しずつ育てて」** います．
+Hokoniwa WG is working on "big goals, little by little."
 
-現在のプロジェクトの活動の中心としては，コンセプトの実現と技術研鑽のために[プロトタイプモデル](/hakoniwa/prototypes)を構築中です．
-これらの研究開発は，すべてOSSとして公開しながら進めていきます．
-皆さまにそれぞれのプロトタイプモデルをご利用いただき，そしてフィードバックを得ながら，箱庭コア技術の成熟と様々な機能拡充を進めていきたいと考えています．
+Our current main activity is to create [prototype models](/hakoniwa/en/prototypes) to realize the concept and to examine the technology.
+All of these R&D results are released as OSS.
+We desire continuous maturation of the core technologies and expansion of the various functions of Hakoniwa by sharing each prototype model and receiving feedback on it.
 
 ![roadmap](/hakoniwa/img/docs/roadmap1.png)
 
+The Hakoniwa Project is engaged in research and development, first constructing and disseminating educational packages and then expanding into product development.
+We have a big vision, but to be honest, we are somewhat short on the workforce.
+We are looking for various technical personnel (especially those with knowledge of cloud technologies and visualization asset development) to help us grow Hakoniwa.
 
-箱庭プロジェクトは，まずは教育用途でのパッケージ構築と普及を図っていますが，製品開発への展開も視野に入れて研究開発を進めています．
-壮大な構想を掲げていますが，全くマンパワーは足りていないのが実情です．
-箱庭の成長のためにも，特にクラウド技術や可視化アセット開発に知見をお持ちの方に参画いただきたいと考えています．
+If you agree with the aims and objectives of Hokoniwa WG, we welcome your participation. 
+We have monthly online meetings and biannual technical review camps.
+In addition, we continuously discuss, share and develop information using Slack, GitHub, and Google Drive.
 
-箱庭WGの狙いや趣旨にご賛同いただける方の参画をお待ちしています．
-活動としては，月１回のオンラインでの定例会合と、年２回の技術検討合宿を実施しています．
-また，日常的な議論や情報共有と開発にはSlack，GitHubおよびGoogle Driveを活用しています．
-
-Slack等での議論に参加したい方，活動内容へのご要望をお持ちの方，コア技術や各アセットの開発などに参加したい方，
-箱庭WGの活動で期待される技術成果を活用したい方，製品開発に展開してみたい方，
-ぜひとも[問合せ先](/hakoniwa/contact/)よりご連絡ください．
+If you would like to participate in discussions on Slack, request our activities, join in the development of core technologies and assets, utilize the technical results of the activities of the Hokoniwa WG, or develop products, please get in touch with us at [contact information](/hakoniwa/en/contact/). 

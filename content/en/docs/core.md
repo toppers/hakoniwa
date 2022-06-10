@@ -1,26 +1,26 @@
 +++
-title = "コア技術"
+title = "Core Technologies"
 draft = false
 weight = 40
 toc = false
 script = 'animation'
-description = "箱庭の核となる機能"
-bref = "箱庭の核となるコア機能と，備えるべき機能特性を紹介します"
+description = "Core functions of Hakoniwa"
+bref = "Here are the core functions and the functional characteristics  of Hakoniwa"
 +++
 
-箱庭の核となるカーネルは，次の4種類であると考えています．
-1. スケジューリング
-2. 同期・通信
-3. 時間管理
-4. アセット管理
+The four core functions of Hakoniwa are as follows.
+1. Scheduling
+2. Synchronization and Communication
+3. Time Management
+4. Asset Management
 
-また，箱庭コア機能が備えるべき重要な機能特性は，次のものがあると考えています．
-1. コンポーネント化
-2. 可視化
-3. イベント駆動化
-4. 自動化
+Also, we believe that the following functional characteristics are essential for Hakoniwa's core functions.
+1. Componentization
+2. Visualization
+3. Event Driven
+4. Automation
 
-箱庭のコア機能と機能特性については，[プロトタイプモデル](/hakoniwa/prototypes/)の開発を進めながら，WG内での設計検討を続けているところです．
-詳細が固まりましたら，追って解説を加えていきます．
+The core functions and functional characteristics of HAKONIWA are still under design study in the WG while developing the [prototype model](/hakoniwa/prototypes/).
+We will add more details as we progress.
 
 {{< image src="/img/docs/core1.png" width="700" >}}

@@ -1,25 +1,23 @@
 +++
-title = "コンセプト"
+title = "Concept"
 draft = false
 weight = 20
 toc = false
 script = 'animation'
-description = "箱庭とは何なのか？"
-bref = "「箱庭」に込めているコンセプトと想定される利用シーンを紹介します"
+description = "What is Hakoniwa?"
+bref = "The concept and usage of Hakoniwa"
 +++
 
-箱庭のコンセプトは **「箱の中に，様々なモノをみんなの好みで配置して，いろいろ試せる！」** です．
+The concept of Hakoniwa is **"Put mixed things as you like, and try various things with ease !"**
 
-IoTや自動運転システム，クラウドロボティクスシステムを開発する際に，仮想環境である箱庭上に様々なソフトウェアやサービスを持ち寄って，机上で実証実験できる場を提供します．
+We provide a virtual environment, which makes it easy to combine and demonstrate different software and services when developing IoT, automated driving systems, cloud robotics systems, etc.
 
 {{< image src="/img/docs/concept1.png" width="700" >}}
 
-想定している利用シーンは，多様な分野から技術者が集まるIoTシステムの開発現場です．    
-IoTの各要素が連携される複雑なシステムの事象や状態を，「箱」の中ではシナリオに応じた同じ挙動が再現されるようにします．
-そして，箱庭のシステム構成要素である「アセット」を差し替えることで，検証の対象／抽象度／レベルを任意に変更することができます．
-また，システム環境の視点（評価観点）や抽象度を，各技術者の分野や立場に応じて切り替えられるようにします．
+We envision a use scenario where engineers from diverse fields gather to develop IoT systems.        
+The "box" simulates the events and states of complex federated IoT systems according to the desired scenario.
+And, by just replacing the "assets" that are the system components of Hakoniwa, the user can arbitrarily change the validation's target/abstraction level /accuracy.
 
 {{< image src="/img/docs/concept2.png" width="600" >}}
 
-なお箱庭の語源は，名園や山水を模したミニチュアの庭園に由来します．
-盆景や盆栽に類するもので，江戸時代後半から明治時代にかけて流行したといわれています．
+For your information, the origin of Hakoniwa is one of the traditional Japanese cultures in which various elements such as small trees, dolls, bridges, and boats are arranged in a miniature garden in a small box to recreate a picturesque scene.

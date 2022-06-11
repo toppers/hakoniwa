@@ -58,10 +58,10 @@ Email: secretariat_at_toppers.jp (Replace _at_ with @)
 | Members      | Roles                     | Organization                | SNS |
 | -------- | -------------------------- | ------------------ | ---- |
 | Takashi MORI     | Project General Manager, Athrill        | ESM, Inc. | {{< snsicon github="tmori" twitter="kanetugu2020" facebook="takashi.mori.520562" >}} |
-| Hideki TAKASE  | mROS, ROS, IoT               | the University of Tokyo / JST PRESTO | {{< snsicon github="takasehideki" twitter="takasehideki" facebook="takasehideki" >}} |
+| Hideki TAKASE  | mROS, ROS, IoT               | The University of Tokyo / JST PRESTO | {{< snsicon github="takasehideki" twitter="takasehideki" facebook="takasehideki" >}} |
 | Shintaro HOSOAI | IDE, Modeling, Visualization, Cloud | Change Vision, Inc.       | {{< snsicon github="s-hosoai" twitter="ShintaroHosoai" facebook="shintaro.hosoai" >}} |
-| Hiroaki TAKADA | Kernel, Application          | Center for Embedded Computing Systems, Nagoya Univ. | {{< snsicon github="mitsut" twitter="mitsu48" linkedin="mitsu48" >}} |
-| Masayoshi NIWANO | Automotive components, Cloud, IDE| アイコムシステック      | {{< snsicon github="mikoto2000" facebook="msysniwano" >}} |
+| Mitsutaka TAKADA | Kernel, Application          | Center for Embedded Computing Systems, Nagoya Univ. | {{< snsicon github="mitsut" twitter="mitsu48" linkedin="mitsu48" >}} |
+| Masayoshi NIWANO | Automotive components, Cloud, IDE| EXEO Digital Solutions      | {{< snsicon github="mikoto2000" facebook="msysniwano" >}} |
 | Tatsuya HUKUDA | Cloud, Robotics          | INTEC Inc.            | {{< snsicon github="fukuta-tatsuya-intec" twitter="fudekunjp" linkedin="fudekunjp" >}} |
 | Akihiro KOMORI | Visualization                      |                    | {{< snsicon github="comoc" twitter="comocc" >}} |
 

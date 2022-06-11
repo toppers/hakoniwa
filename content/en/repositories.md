@@ -9,7 +9,7 @@ images: [""]
 
 ---
 
-### 箱庭本体
+### Hakoniwa
 |Links|Outline|Notes|
 |:--|:--|:--|
 | [hakoniwa](https://github.com/toppers/hakoniwa) | Repository for general support handling and content management of this website |   |

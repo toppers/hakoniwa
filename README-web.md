@@ -1,4 +1,4 @@
-# HAKONIWA Web Setup
+# Hakoniwa Web Setup
 
 ## Setup
 

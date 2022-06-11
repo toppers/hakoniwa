@@ -1,8 +1,8 @@
 
 +++
-description = "ROSと箱庭の連携シミュレーション例"
-bref = "ROSと箱庭の連携シミュレーション例"
-title = "ROS制御ロボットシミュレーション"
+description = "Example of simulation by collaboration between ROS and Hakoniwa"
+bref = "Example of simulation by collaboration between ROS and Hakoniwa"
+title = "ROS control robot simulation"
 draft = false
 weight = 200
 toc = true
@@ -11,31 +11,34 @@ images = ["img/prototypes/modelROS.gif"]
 github = "https://github.com/toppers/hakoniwa-ros2sim"
 +++
 
-ロボットの制御にROS/ROS2を用いた箱庭プロトタイプモデルです．単体のロボットだけでなく，複数のロボットの連携動作も可能です．
-ROSで一般的に用いられているGazeboよりも軽量でロボットや環境もUnity上で容易にカスタマイズすることができ、URDF形式のモデルの導入も行うことができます。
+This prototype model uses ROS/ROS2 to collaborate with multiple and single robots.
+This prototype is lighter than Gazebo, often used with ROS, and allows for easy customization of robots and environments in Unity and the introduction of URDF format models.
 
-### 技術研鑽視点での狙い
+### Design intent from a technical study perspective
 
-- 一般的なロボット制御に用いられているROSも含めたシミュレーションの実行
-- 複数のロボットを連携させたシミュレーションの実行
+- Running simulations using ROS, which is commonly used for robot control
+- Study on how to coordinate with other robots 
 
-### その他の狙い
-- ROSのロボットも導入可能とすることで、複数の制御機構が混在したシミュレーション環境を実現する
+### Other design intent
 
-### 導入方法と使用方法
+- Introduce robots controlled by ROS to create a simulation environment that mixes multiple control mechanisms
 
-最小の構成と手順で試行できるパッケージを，下記のGitHubリポジトリで公開しています．ぜひ試してみてください．
+### Installation & Usage
+
+A trial package with minimal configuration and procedures is available in the GitHub repository below.
+We encourage you to try it out.
 
 - [toppers/hakoniwa-ros2sim: 箱庭 ROS シミュレータ](https://github.com/toppers/hakoniwa-ros2sim)
 
-### 動作例のデモ
+### Demonstration of examples
 
 ![modelROSdemo](/hakoniwa/img/prototypes/modelROS.gif)
 
 ---
 
-#### 謝辞・特記事項：
+#### Acknowledgments & Notes
 
-TurtleBot3 の Unity パッケージの設計と作成にあたっては，宝塚大学 東京メディア芸術学部 吉岡章夫准教授および学部生の杉崎涼志さん，木村明美さんにご協力いただきました．
+We want to thank Associate Professor Akio YOSHIOKA and undergraduate students Ryoji SUGISAKI and Akemi KIMURA of Takarazuka University school of media art in Tokyo for their cooperation in designing the Unity package for TurtleBot3.
 
-TurtleBot3 のUnity アセットは，株式会社ロボティズ様より提供いただいたデータを基に作成しています．ご協力いただき深く感謝いたします．
+TurtleBot3's Unity assets are based on data provided by Robotiz, Inc. 
+We sincerely appreciate their cooperation.

@@ -20,7 +20,7 @@ Also, we believe that the following functional characteristics are essential for
 3. Event Driven
 4. Automation
 
-The core functions and functional characteristics of HAKONIWA are still under design study in the WG while developing the [prototype model](/hakoniwa/prototypes/).
+The core functions and functional characteristics of Hakoniwa are still under design study in the WG while developing the [prototype model](/hakoniwa/prototypes/).
 We will add more details as we progress.
 
 {{< image src="/img/docs/core1.png" width="700" >}}

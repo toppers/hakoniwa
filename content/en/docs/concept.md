@@ -8,7 +8,7 @@ description = "What is Hakoniwa?"
 bref = "The concept and usage of Hakoniwa"
 +++
 
-The concept of Hakoniwa is **"Put mixed things as you like, and try various things with ease !"**
+The concept of Hakoniwa is **"Put mixed things as you like, and try various concepts with ease !"**
 
 We provide a virtual environment, which makes it easy to combine and demonstrate different software and services when developing IoT, automated driving systems, cloud robotics systems, etc.
 

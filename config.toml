@@ -14,12 +14,12 @@ DefaultContentLanguage = "ja"
     weight = 1
   [languages.en]
     languageName = "English"
-    title = "HAKONIWA"
+    title = "Hakoniwa"
     contentDir = 'content/en'
     weight = 2
     [languages.en.menu]
 [[languages.en.menu.main]]
-    name = "About HAKONIWA"
+    name = "About Hakoniwa"
     weight = -100
     url = "/en/docs/"
 [[languages.en.menu.main]]
@@ -37,7 +37,7 @@ DefaultContentLanguage = "ja"
 
 [Params]
   RSSLink = "/index.xml"
-  author = "TOPPERS Project HAKONIWA WG" # add your company name
+  author = "TOPPERS Project Hakoniwa WG" # add your company name
   email = "secretariat@toppers.jp"
   twitter = "@toppersjp" # add your twitter pro
   images = ["img/hakoniwa/icon-310x310.png"]

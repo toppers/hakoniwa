@@ -1,4 +1,4 @@
 ---
 title: "Prototype model"
-description: "『箱庭の掲げるコンセプトを実現するために，またWGメンバの技術研鑽のために，以下のプロトタイプモデルの構築を進めています．"
+description: "We are building the following prototype model to realize the Hokoniwa concept and for the technical review of the WG members."
 ---

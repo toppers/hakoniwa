@@ -1,5 +1,4 @@
 ---
-title: "About HAKONIWA"
-description: "『箱庭』とは，IoT／クラウドロボティクス時代の仮想シミュレーション環境です．
-「箱の中に，様々なモノをみんなの好みで配置して，いろいろ試せる！」ようになれることを目指しています．"
+title: "About Hakoniwa"
+description: "Hakoniwa is a virtual simulation environment in the age of IoT and cloud robotics. The concept of Hakoniwa is Put mixed things as you like, and try various concepts with ease !"
 ---

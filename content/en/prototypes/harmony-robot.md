@@ -1,7 +1,7 @@
 +++
-description = "クラウドとロボティクスとの連携"
-bref = "クラウドとロボティクスとの連携"
-title = "ロボット間協調動作シミュレーション"
+description = "Integration of cloud computing and robotics"
+bref = "Integration of cloud computing and robotics"
+title = "Simulation of inter-robot cooperative operation"
 draft = false
 weight = 400
 toc = false
@@ -9,20 +9,19 @@ script = 'animation'
 images = ["img/prototypes/modelC.png"]
 +++
 
-クラウドとロボティクスとの連携を目指した箱庭プロトタイプモデルです．
+This is a Hakoniwa prototype model for integration of cloud computing and robotics.
 
-### 技術研鑽視点での狙い
+### Design intent from a technical study perspective
 
-- クラウド連携方法検討
-- ロボット間の連携方法検討（より複雑なロボットの動き/干渉に挑戦）
-- 箱庭アセットを増やす仕組みの検討
+- Study of specific methods of cloud computing integration
+- Study on how to coordinate with other robots (challenge to more complex robot operation/interference)
+- Study of mechanisms to augment Hakoniwa assets
 
-### その他の狙い
+### Other design intent
 
-- RDBOX連携（開発支援仮想環境としての箱庭の実績作り）
-- RDBOXユーザ層に箱庭を広める（広報活動）
+- Interaction with RDBOX ( establish a track record of Hakoniwa as a development virtual environment)
+- Promote Hakoniwa to the RDBOX user base (PR activities)
 
 {{< image src="/img/prototypes/modelC.png" width="700" >}}
 
-現在，本プロトタイプモデルの実現に向けて鋭意開発中です．公開までしばしお待ちください．
-
+The prototype model is currently under development. So please wait for its release.

@@ -1,11 +1,11 @@
 +++
-title = "技術要素"
+title = "Underlying technology"
 draft = false
 weight = 50
 toc = false
 script = 'animation'
-description = "Introduction to the technical elements comprising Hakoniwa"
-bref = "Introduction to the technical elements comprising Hakoniwa"
+description = "Introduction to the underlying technology comprising Hakoniwa"
+bref = "Introduction to the underlying technology comprising Hakoniwa"
 +++
 
 ### TOPPERS Kernel

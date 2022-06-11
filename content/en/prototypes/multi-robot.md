@@ -1,7 +1,7 @@
 +++
-description = "Photonライブラリによる複数のROSロボットの連携とVR環境"
-bref = "Photonライブラリによる複数のROSロボットの連携とVR環境"
-title = "複数ロボットの連携制御シミュレーション"
+description = "Collaborative operation of multiple ROS robots using the Photon library and VR environment"
+bref = "Collaborative operation of multiple ROS robots using the Photon library and VR environment"
+title = "Simulation of collaborative operation of multiple robots"
 draft = false
 weight = 300
 toc = false
@@ -10,33 +10,32 @@ images = ["img/prototypes/modelBoverview.png"]
 github = "https://github.com/toppers/hakoniwa-ros-multiplay"
 +++
 
-複数のロボット，複数の制御プログラムによるシミュレーションを同じ環境で行うプロトタイプモデルです．
-UnityのPhotonライブラリを用いて複数のUnity環境の同期を行っており，加えてアセット間の時間同期も実現しています．
-またVRによるシミュレーション環境へのダイブも試行しています．
+This prototype model simulates multiple robots and control programs in the same environment.
+This prototype uses Unity's Photon library to synchronize multiple Unity environments and even time synchronization among assets and uses VR technology to dive into the simulation environment for verification.
 
 {{< image src="/img/prototypes/modelBoverview.png" width="700" >}}
 
-### 技術研鑽視点での狙い
+### Design intent from a technical study perspective
 
-- マルチ環境での連携方法検討（シミュレーション時間同期等）
-- 箱庭アセット間の通信可視化方法の検討（ROS/ROS2連携含む）
-- 箱庭アセットの仕組み検討
+- Study of methods of collaboration in multiple environments (e.g., simulation time synchronization)
+- Study on how visualize communication among Hakoniwa assets (including ROS/ROS2 collaboration)/ROS2連携含む）
+- Study of mechanisms to augment Hakoniwa assets
 
-### その他の狙い
+### Other design intent
 
-- ROSユーザ層に箱庭を広める（広報活動）
+- Promote Hakoniwa to the ROS user base (PR activities)
 
-### 導入方法と使用方法
+### Installation & Usage
 
-以下のGithubリポジトリにて，各種デモを公開しています．ぜひお試し下さい．
+Various demos are available at the following Github repository. Try them out.
 
 ‐ [toppers/hakoniwa-ros-multiplay]("https://github.com/toppers/hakoniwa-ros-multiplay")
 
-### 動作例のデモ
-- photonによる複数ロボットの連携
+### Demonstration of examples
+- Multiple robot collaboration with photon
 {{< video src="/img/prototypes/modelBdemo1.mp4">}}
-- Oculus Questとの接続の様子
+- Scene of connection with Oculus Quest
 {{< video src="/img/prototypes/modelBdemo2.mp4">}}
-- VRで箱庭内に入った様子
+- Scene diving into Hakoniwa using VR
 {{< video src="/img/prototypes/modelBdemo3.mp4">}}
 

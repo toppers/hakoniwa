@@ -1,10 +1,10 @@
 +++
-title = "Core Technologies"
+title = "Hakoniwa Core"
 draft = false
 weight = 40
 toc = false
 script = 'animation'
-description = "Core functions of Hakoniwa"
+description = "Core technologies of Hakoniwa"
 bref = "Here are the core functions and the functional characteristics  of Hakoniwa"
 +++
 
@@ -23,4 +23,4 @@ Also, we believe that the following functional characteristics are essential for
 The core functions and functional characteristics of Hakoniwa are still under design study in the WG while developing the [prototype model](/hakoniwa/prototypes/).
 We will add more details as we progress.
 
-{{< image src="/img/docs/core1.png" width="700" >}}
+{{< image src="/img/docs/core1.en.png" width="800" >}}

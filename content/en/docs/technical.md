@@ -31,19 +31,19 @@ The software is being developed as open source under the TOPPERS license.
 
 ｍROS is a lightweight ROS (ROS1) execution environment for embedded systems.
 It enables publication-subscription communication from an embedded microcontroller to a ROS master and ROS nodes on a host PC. 
-[Takagi Laboratory, Graduate School of Informatics, Kyoto University](https://github.com/tlk-emb/) plays a leading role in the development.    
-It targets systems such as [Prototype model for ROS and multi-ECU robots](/hakoniwa/prototypes/multi-robot).
+[Computing System Laboratory, Graduate School of IST, The University of Tokyo](http://www.hal.ipc.i.u-tokyo.ac.jp/index-e.html) plays a leading role in the development.    
+It targets systems such as [Simulation of collaborative operation of multiple robots](/hakoniwa/en/prototypes/multi-robot).
 
-- https://github.com/tlk-emb/mROS
+- https://github.com/mROS-base
 
-{{< image src="img/mROS.png" width="300" href="https://github.com/tlk-emb/mROS" >}}
+{{< image src="img/mROS.png" width="300" href="https://github.com/mROS-base" >}}
 
 ### RDBOX
 
 RDBOX (Robotics Developers BOX) is a framework for automatically building Kubernetes clusters and secure, scalable Wi-Fi networks optimized for ROS robots and IoT. 
 It aims to bridge simulation and real-world work environments. 
 Intec Inc. is developing [RDBOX Project](https://rdbox-intec.github.io/homepage_jp/).    
-We are collaborating with Hakoniwa to construct [prototype model for cooperative behavior among robots](/hakoniwa/prototypes/harmony-robot).
+We are collaborating with Hakoniwa to construct prototype model for [Simulation of inter-robot cooperative operation](/hakoniwa/en/prototypes/harmony-robot).
 
 - https://github.com/rdbox-intec/rdbox
 

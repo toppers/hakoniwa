@@ -14,7 +14,9 @@ Our current main activity is to create [prototype models](/hakoniwa/en/prototype
 All of these R&D results are released as OSS.
 We desire continuous maturation of the core technologies and expansion of the various functions of Hakoniwa by sharing each prototype model and receiving feedback on it.
 
+<!--
 ![roadmap](/hakoniwa/img/docs/roadmap1.png)
+-->
 
 The Hakoniwa Project is engaged in research and development, first constructing and disseminating educational packages and then expanding into product development.
 We have a big vision, but to be honest, we are somewhat short on the workforce.

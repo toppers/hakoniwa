@@ -42,7 +42,8 @@ images: [""]
 ### mROS
 |略称・リンク|概要|備考|
 |:--|:--|:--|
-| [mROS](https://github.com/tlk-emb/mROS) | 組込みデバイス向けROS 1ノード軽量実行環境 | |
+| [mROS](https://github.com/mROS-base/mROS) | 組込みデバイス向けROS 1ノード軽量実行環境 | |
+| [mROS 2](https://github.com/mROS-base/mros2) | 組込みデバイス向けROS 2ノード軽量実行環境 | |
 
 ### Samples
 |略称・リンク|概要|備考|

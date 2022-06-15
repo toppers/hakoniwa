@@ -24,6 +24,43 @@ toc = true
 
 ## 講演資料や動画など
 
+### TOPPERSカンファレンス2022
+
+2022年6月10日(金)に開催された[TOPPERSカンファレンス2022](https://toppers.jp/conference2022.html)の講演資料です。    
+箱庭WGの活動紹介、最新の開発状況であるゲーム技術との統合、および、組込み向けのROS 2軽量実行環境についてそれぞれ紹介しました。
+
+#### 箱庭WGの活動紹介
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/TOPPERSConf2022-1.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2022-1.pdf)
+- 動画 (YouTube)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oEM7k5uM0kA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+
+#### ゲーム技術（VR/Photon）がもたらす箱庭ワールドの now and future
+
+- [講演資料 (PDFファイル)
+{{< image src="/doc/TOPPERSConf2022-2.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2022-2.pdf)
+- 動画 (YouTube)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eITUDuRmczI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+#### mROS 2：ロボットソフトウェアの組込みデバイス向け軽量実行環境
+
+- 講演資料 (Speaker Deck)  
+{{< rawhtml >}}
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/6167dc492f1e46d19b4f15bede431b28" title="mROS 2：ロボットソフトウェアの組込みデバイス向け軽量実行環境" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 560px; height: 314px;" data-ratio="1.78343949044586"></iframe>
+{{< /rawhtml >}}  
+- 動画 (YouTube)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RbMYe4FWtc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
 ### オープンソースカンファレンス 2022 Nagoya
 
 2022年5月28日(土)に開催された[オープンソースカンファレンス 2022 Nagoya](https://event.ospn.jp/osc2022-online-nagoya/)にて、箱庭のVR展開に関するセッションを実施しました。
@@ -40,6 +77,8 @@ toc = true
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZMTDRBrRGhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
 
 ### Unity道場 ロボティクス 秋のLT祭り 2021
 
@@ -64,6 +103,7 @@ https://learning.unity3d.jp/7915/
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Aa_1K9xDkCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}
 
+[このページの先頭に戻る](#top)
 
 ### ROSCon JP 2021
 
@@ -92,6 +132,8 @@ ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Op
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/638040779?h=8a10335711" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 {{< /rawhtml >}}
 
+[このページの先頭に戻る](#top)
+
 ### 2021年度 ETロボコン向け TOPPERS活用セミナー
 
 2021年6月26日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](https://toppers.jp/etrobo.html#seminar)の講義資料です。    
@@ -104,6 +146,8 @@ ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Op
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hxD0LFYuuok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
 
 ### TOPPERSカンファレンス2021
 

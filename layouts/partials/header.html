@@ -24,6 +24,17 @@
             <a href="{{ .Permalink }}">{{ .Name }}</a>
           </li>
         {{ end }}  
+        {{ if .Site.IsMultiLingual }}
+          {{ range .Site.Languages }}
+          {{ if eq . $.Site.Language }}
+            <li><a href="#" class="active language">{{ .LanguageName }}</a></li>
+          {{ else }}
+            {{ range $.Translations }}
+            <li><a href="{{ .Permalink }}" class="">{{ .Language.LanguageName }}</a></li>
+            {{ end }}
+          {{ end }}
+          {{ end }}
+        {{ end }}
       </ul>
     </nav>
   </div>

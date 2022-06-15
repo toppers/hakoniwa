@@ -6,9 +6,38 @@ description = "IoT／クラウドロボティクス時代の仮想シミュレ�
 Paginate = 4
 googleAnalytics = "UA-169187702-1"
 
+DefaultContentLanguage = "ja"
+
+[languages]
+  [languages.ja]
+    languageName = "Japanese"
+    weight = 1
+  [languages.en]
+    languageName = "English"
+    title = "Hakoniwa"
+    contentDir = 'content/en'
+    weight = 2
+    [languages.en.menu]
+[[languages.en.menu.main]]
+    name = "What's Hakoniwa"
+    weight = -100
+    url = "/en/docs/"
+[[languages.en.menu.main]]
+    name = "Prototype models"
+    weight = -90
+    url = "/en/prototypes/"
+[[languages.en.menu.main]]
+    name = "Repository"
+    weight = -70
+    url = "/en/repositories/"
+[[languages.en.menu.main]]
+    name = "Contact us"
+    weight = -10
+    url = "/en/contact/"
+
 [Params]
   RSSLink = "/index.xml"
-  author = "TOPPERS Project HAKONIWA WG" # add your company name
+  author = "TOPPERS Project Hakoniwa WG" # add your company name
   email = "secretariat@toppers.jp"
   twitter = "@toppersjp" # add your twitter pro
   images = ["img/hakoniwa/icon-310x310.png"]

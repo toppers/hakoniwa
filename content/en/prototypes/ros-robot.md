@@ -2,7 +2,7 @@
 +++
 description = "Example of simulation by collaboration between ROS and Hakoniwa"
 bref = "Example of simulation by collaboration between ROS and Hakoniwa"
-title = "ROS control robot simulation"
+title = "ROS controlled robot simulation"
 draft = false
 weight = 200
 toc = true
@@ -28,7 +28,7 @@ This prototype is lighter than Gazebo, often used with ROS, and allows for easy 
 A trial package with minimal configuration and procedures is available in the GitHub repository below.
 We encourage you to try it out.
 
-- [toppers/hakoniwa-ros2sim: 箱庭 ROS シミュレータ](https://github.com/toppers/hakoniwa-ros2sim)
+- [toppers/hakoniwa-ros2sim](https://github.com/toppers/hakoniwa-ros2sim)
 
 ### Demonstration of examples
 

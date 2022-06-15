@@ -6,14 +6,14 @@ draft = false
 weight = 300
 toc = false
 script = 'animation'
-images = ["img/prototypes/modelBoverview.png"]
+images = ["img/prototypes/modelBoverview.en.png"]
 github = "https://github.com/toppers/hakoniwa-ros-multiplay"
 +++
 
 This prototype model simulates multiple robots and control programs in the same environment.
 This prototype uses Unity's Photon library to synchronize multiple Unity environments and even time synchronization among assets and uses VR technology to dive into the simulation environment for verification.
 
-{{< image src="/img/prototypes/modelBoverview.png" width="700" >}}
+{{< image src="/img/prototypes/modelBoverview.en.png" width="700" >}}
 
 ### Design intent from a technical study perspective
 

@@ -22,14 +22,14 @@ This prototype can verify by linking the program's behavior on the embedded micr
 
 - Promote Hakoniwa to ET Robot contenst participants (PR activities)
 
-{{< image src="/img/prototypes/modelA.png" width="700" >}}
+{{< image src="/img/prototypes/modelA.en.png" width="700" >}}
 
 ###  Installation & Usage
 
 A trial package with minimal configuration and procedures is available in the GitHub repository below.
 We encourage you to try it out.
 
-- [toppers/hakoniwa-single_robot: 箱庭プロトタイプモデルA：単体ロボット向けシミュレータ](https://github.com/toppers/hakoniwa-single_robot)
+- [toppers/hakoniwa-single_robot](https://github.com/toppers/hakoniwa-single_robot)
 
 ### Demonstration of examples
 

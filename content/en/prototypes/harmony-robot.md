@@ -6,7 +6,7 @@ draft = false
 weight = 400
 toc = false
 script = 'animation'
-images = ["img/prototypes/modelC.png"]
+images = ["img/prototypes/modelC.en.png"]
 +++
 
 This is a Hakoniwa prototype model for integration of cloud computing and robotics.
@@ -22,6 +22,6 @@ This is a Hakoniwa prototype model for integration of cloud computing and roboti
 - Interaction with RDBOX ( establish a track record of Hakoniwa as a development virtual environment)
 - Promote Hakoniwa to the RDBOX user base (PR activities)
 
-{{< image src="/img/prototypes/modelC.png" width="700" >}}
+{{< image src="/img/prototypes/modelC.en.png" width="700" >}}
 
 The prototype model is currently under development. So please wait for its release.

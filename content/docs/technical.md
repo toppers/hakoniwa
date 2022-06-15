@@ -28,12 +28,12 @@ TOPPERSライセンスのもと，オープンソースで開発を進めてい�
 
 ### mROS
 
-ROS(ROS1)の組込み向け軽量実行環境です．ホストPC上のROSマスタおよびROSノードに対する，組込みマイコンからの出版購読型通信を実現します．[京都大学情報学研究科 高木研究室](https://github.com/tlk-emb/)が中心となって開発を進めています．    
-[ROS・マルチECUロボット向けプロトタイプモデル](/hakoniwa/prototypes/multi-robot)のようなシステムでの活用を想定しています．
+ROS(Robot Operating System)の組込み向け軽量実行環境です．ホストPC上のROSマスタおよびROSノードに対する，組込みマイコンからの出版購読型通信を実現します．[東京大学 情報理工学系研究科 システム情報第8研究室](http://www.hal.ipc.i.u-tokyo.ac.jp)が中心となって開発を進めています．    
+[複数ロボットの連携制御シミュレーション](/hakoniwa/prototypes/multi-robot)のようなシステムでの活用を想定しています．
 
-- https://github.com/tlk-emb/mROS
+- https://github.com/mROS-base
 
-{{< image src="img/mROS.png" width="300" href="https://github.com/tlk-emb/mROS" >}}
+{{< image src="img/mROS.png" width="300" href="https://github.com/mROS-base" >}}
 
 ### RDBOX
 

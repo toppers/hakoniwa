@@ -1,5 +1,5 @@
 +++
-title = "コア技術"
+title = "箱庭コア技術"
 draft = false
 weight = 40
 toc = false

@@ -10,10 +10,10 @@ DefaultContentLanguage = "ja"
 
 [languages]
   [languages.ja]
-    languageName = "Japanese"
+    languageName = "JP"
     weight = 1
   [languages.en]
-    languageName = "English"
+    languageName = "EN"
     title = "Hakoniwa"
     contentDir = 'content/en'
     weight = 2

@@ -23,7 +23,7 @@ bref = "箱庭を形成する技術要素を紹介します"
 TOPPERSライセンスのもと，オープンソースで開発を進めています．
 - https://github.com/toppers/athrill
 
-{{< image src="/img/athrill.png" width="200" href="https://github.com/toppers/athrill" >}}
+{{< image src="img/athrill.png" width="200" href="https://github.com/toppers/athrill" >}}
 
 
 ### mROS

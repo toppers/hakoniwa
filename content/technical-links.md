@@ -47,7 +47,7 @@ toc = true
 #### 箱庭WGの活動紹介
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2022-1.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2022-1.pdf)
+{{< image src="doc/TOPPERSConf2022-1.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2022-1.pdf)
 - 動画 (YouTube)  
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oEM7k5uM0kA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -57,7 +57,7 @@ toc = true
 #### ゲーム技術（VR/Photon）がもたらす箱庭ワールドの now and future
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2022-2.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2022-2.pdf)
+{{< image src="doc/TOPPERSConf2022-2.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2022-2.pdf)
 - 動画 (YouTube)  
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eITUDuRmczI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -87,7 +87,7 @@ toc = true
 
 <p></p>
 
-- [講演資料 (PDFファイル){{< image src="/doc/OSCNagoya2022.png" border="1" width="400" >}}](/hakoniwa/doc/OSCNagoya2022.pdf)
+- [講演資料 (PDFファイル){{< image src="doc/OSCNagoya2022.png" border="1" width="400" >}}](/hakoniwa/doc/OSCNagoya2022.pdf)
 - [動画 (YouTube)](https://www.youtube.com/watch?v=ZMTDRBrRGhY)  
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZMTDRBrRGhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -128,7 +128,7 @@ ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Op
 #### 箱庭:IoT/クラウドロボティクス時代の仮想シミュレーション環境
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ROSConJP2021.png" border="1" width="400" >}}](/hakoniwa/doc/ROSConJP2021.pdf)
+{{< image src="doc/ROSConJP2021.png" border="1" width="400" >}}](/hakoniwa/doc/ROSConJP2021.pdf)
 - [動画 (Vimeo)](https://vimeo.com/638041034/469a7b3c48)  
 {{< rawhtml >}}
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/638041034?h=469a7b3c48" width="640" height="360" frameborder="0" allowfullscreen></iframe>
@@ -155,7 +155,7 @@ ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Op
 箱庭プロトタイプモデルの単体ロボット向けシミュレータの紹介と、ETロボコン大会のシミュレータ環境に採用されているマイコンシミュレータAthrillについて、そのデバッグ機能や進んだ使い方を詳しく解説しました。
 
 - [講義資料 (PDFファイル)
-{{< image src="/doc/ETRCSeminar2021.png" border="1" width="400" >}}
+{{< image src="doc/ETRCSeminar2021.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETRCSeminar2021.pdf)
 - [動画 (YouTube)](https://www.youtube.com/watch?v=hxD0LFYuuok)  
 {{< rawhtml >}}
@@ -179,7 +179,7 @@ ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Op
 #### 『箱庭』Epilogue & Update
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2021-1.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-1.pdf)
+{{< image src="doc/TOPPERSConf2021-1.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-1.pdf)
 - [動画 (YouTube)](https://www.youtube.com/watch?v=Lu2P2pNtWZU)  
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Lu2P2pNtWZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -188,7 +188,7 @@ ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Op
 #### 最新の箱庭コア技術紹介
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2021-2.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-2.pdf)
+{{< image src="doc/TOPPERSConf2021-2.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-2.pdf)
 - [動画 (YouTube)](https://www.youtube.com/watch?v=McOMRpQnft8)  
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/McOMRpQnft8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -197,7 +197,7 @@ ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Op
 #### 大学におけるシステム開発演習に箱庭を活用する
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2021-3.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-3.pdf)
+{{< image src="doc/TOPPERSConf2021-3.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-3.pdf)
 - [動画 (YouTube)](https://www.youtube.com/watch?v=vS8bun3K2us)  
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vS8bun3K2us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -206,7 +206,7 @@ ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Op
 #### ETロボコンでのathrill活⽤
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2021-4.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-4.pdf)
+{{< image src="doc/TOPPERSConf2021-4.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2021-4.pdf)
 - [動画 (YouTube)](https://www.youtube.com/watch?v=3xPJYQKn5KA)  
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3xPJYQKn5KA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -239,7 +239,7 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
   - [発表論文](/hakoniwa/doc/IPSJ-EMB20055003.pdf) / [情報処理学会 電子図書館](https://ipsj.ixsq.nii.ac.jp/ej/index.php?active_action=repository_view_main_item_detail&page_id=13&block_id=8&item_id=208717&item_no=1)
     - 本論文PDFファイルの二次利用にあたっては[著作権に係る注意事項](#著作権に係る注意事項)をご確認ください。
   - [発表資料 (PDFファイル)
-{{< image src="/doc/IPSJ-EMB55-slide.png" border="1" width="400" >}}
+{{< image src="doc/IPSJ-EMB55-slide.png" border="1" width="400" >}}
 ](/hakoniwa/doc/IPSJ-EMB55-slide.pdf)
 
 [このページの先頭に戻る](#top)
@@ -252,7 +252,7 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 #### IoT/クラウドロボティクス時代の仮想シミュレーション環境「箱庭」のご紹介
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ETIoT2020-1.png" border="1" width="400" >}}
+{{< image src="doc/ETIoT2020-1.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETIoT2020-1.pdf)
 - [動画 (YouTube)](https://www.youtube.com/watch?v=_GEFnyYx5h4)  
 {{< rawhtml >}}
@@ -262,7 +262,7 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 #### 箱庭プロトタイプの紹介と開発状況
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ETIoT2020-2.png" border="1" width="400" >}}
+{{< image src="doc/ETIoT2020-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETIoT2020-2.pdf)
 - [動画 (YouTube)](https://www.youtube.com/watch?v=B2WGDvwjh2Y)  
 {{< rawhtml >}}
@@ -272,7 +272,7 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 #### RDBOXが供するクラウドネイティブ環境を活用し「箱庭」を動かす
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ETIoT2020-3.png" border="1" width="400" >}}
+{{< image src="doc/ETIoT2020-3.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETIoT2020-3.pdf)
 - [動画 (YouTube)](https://www.youtube.com/watch?v=ytH9thl9w_0)  
 {{< rawhtml >}}
@@ -292,10 +292,10 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 箱庭の新世界と、ロボット教育への取り組み等の事例について紹介しました。
 
 - [講演資料１ (PDFファイル)
-{{< image src="/doc/MF2020-1.png" border="1" width="400" >}}
+{{< image src="doc/MF2020-1.png" border="1" width="400" >}}
 ](/hakoniwa/doc/MF2020-1.pdf)
 - [講演資料２ (PDFファイル)
-{{< image src="/doc/MF2020-2.png" border="1" width="400" >}}
+{{< image src="doc/MF2020-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/MF2020-2.pdf)
 - [動画 (YouTube)](https://youtu.be/RWaf_kMs8yI)  
 {{< rawhtml >}}
@@ -337,7 +337,7 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 #### 『箱庭ワーキンググループ』 目指すところとプロトタイプモデルの紹介
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ETRCSeminar2020-1.png" border="1" width="400" >}}
+{{< image src="doc/ETRCSeminar2020-1.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETRCSeminar2020-1.pdf)
 - [動画 (YouTube)](https://www.youtube.com/watch?v=v_TkuzILvD4)  
 {{< rawhtml >}}
@@ -347,7 +347,7 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 #### 単体ロボット向けプロトタイプの導入手順と使用方法の紹介
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ETRCSeminar2020-2.png" border="1" width="400" >}}
+{{< image src="doc/ETRCSeminar2020-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETRCSeminar2020-2.pdf)
 - [動画 (YouTube)](https://www.youtube.com/watch?v=v3PV2sbNrxg)  
 {{< rawhtml >}}
@@ -357,7 +357,7 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 #### 単体ロボット向けプロトタイプモデル 〜チューニング/注意点と今後の展開について〜
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ETRCSeminar2020-3.png" border="1" width="400" >}}
+{{< image src="doc/ETRCSeminar2020-3.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETRCSeminar2020-3.pdf)
 - [動画 (YouTube)](https://www.youtube.com/watch?v=Cs_4BrP8xwQ)  
 {{< rawhtml >}}
@@ -374,7 +374,7 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 #### 『箱庭ワーキンググループ』 目指すところと活動の紹介
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2020-1.png" border="1" width="400" >}}
+{{< image src="doc/TOPPERSConf2020-1.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSConf2020-1.pdf)
 - 動画 (YouTube)  
 {{< rawhtml >}}
@@ -384,7 +384,7 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 #### 箱庭のプロトタイプ開発と異種レイヤ間の時間同期機構
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2020-2.png" border="1" width="400" >}}
+{{< image src="doc/TOPPERSConf2020-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSConf2020-2.pdf)
 - 動画 (YouTube)  
 {{< rawhtml >}}
@@ -394,7 +394,7 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 #### クラウドIDEとエミュレータを利用した実機レス開発環境
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2020-3.png" border="1" width="400" >}}
+{{< image src="doc/TOPPERSConf2020-3.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSConf2020-3.pdf)
 - 動画 (YouTube)  
 {{< rawhtml >}}
@@ -409,10 +409,10 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 箱庭のアーキテクチャとコア技術の検討状況を解説し、本技術の適用可能性を議論しました。
 
 - [概要紹介 (PDFファイル)
-{{< image src="/doc/TOPPERSTechStudy2019-1.png" border="1" width="400" >}}
+{{< image src="doc/TOPPERSTechStudy2019-1.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSTechStudy2019-1.pdf)
 - [コア技術紹介 (PDFファイル)
-{{< image src="/doc/TOPPERSTechStudy2019-2.png" border="1" width="400" >}}
+{{< image src="doc/TOPPERSTechStudy2019-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSTechStudy2019-2.pdf)
 
 [このページの先頭に戻る](#top)
@@ -423,10 +423,10 @@ IoT時代の仮想シミュレーション環境「箱庭」の実現に向け�
 TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル展示しました。また、[スペシャルセッションC-4](https://www.jasa.or.jp/expo/2019/conference2019/confpage-c.html)において、箱庭のコンセプトの解説に関する講演を実施しました。
 
 - [パネル展示 (PDFファイル)
-{{< image src="/doc/ETIoT2019-1.png" border="1" width="500" >}}
+{{< image src="doc/ETIoT2019-1.png" border="1" width="500" >}}
 ](/hakoniwa/doc/ETIoT2019-1.pdf)
 - [スペシャルセッション講演資料 (PDFファイル)
-{{< image src="/doc/ETIoT2019-2.png" border="1" width="400" >}}
+{{< image src="doc/ETIoT2019-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/ETIoT2019-2.pdf)
 
 [このページの先頭に戻る](#top)
@@ -439,7 +439,7 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 #### 箱庭の紹介
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ROSConJP2019-1.png" border="1" width="400" >}}
+{{< image src="doc/ROSConJP2019-1.png" border="1" width="400" >}}
 ](http://roscon.jp/2019/presentations/lightning_talks/ROSCon_JP_2019_lightning_talk_13.pdf)
 - 動画 (vimeo)  
 {{< rawhtml >}}
@@ -449,7 +449,7 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 #### ROSノード軽量実行環境mROS update報告
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ROSConJP2019-2.png" border="1" width="400" >}}
+{{< image src="doc/ROSConJP2019-2.png" border="1" width="400" >}}
 ](http://roscon.jp/2019/presentations/lightning_talks/ROSCon_JP_2019_lightning_talk_12.pdf)
 - 動画 (vimeo)  
 {{< rawhtml >}}
@@ -465,7 +465,7 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 また、[セッションS3b](https://swest.toppers.jp/SWEST21/program/s3b.html#s3)において、箱庭の技術要素のひとつであるathrillの紹介と箱庭への展開についての講演を実施しました。
 
 - [インタラクティブセッション展示ポスター (PDFファイル)
-{{< image src="/doc/SWEST21-2.png" border="1" width="500" >}}
+{{< image src="doc/SWEST21-2.png" border="1" width="500" >}}
 ](/hakoniwa/doc/SWEST21-2.pdf)
 
 [このページの先頭に戻る](#top)
@@ -476,10 +476,10 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 トラックA-2：技術・事例紹介において、箱庭WGの発足に関する紹介、および、技術要素のひとつであるathrillの解説を行いました。
 
 - [新WG：箱庭ワーキンググループの紹介 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2019-1.png" border="1" width="400" >}}
+{{< image src="doc/TOPPERSConf2019-1.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSConf2019-1.pdf)
 - [車載向けECUシミュレータAthrillの紹介 (PDFファイル)
-{{< image src="/doc/TOPPERSConf2019-2.png" border="1" width="400" >}}
+{{< image src="doc/TOPPERSConf2019-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/TOPPERSConf2019-2.pdf)
 
 [このページの先頭に戻る](#top)
@@ -490,7 +490,7 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 技術要素のひとつであるmROSについての講演を実施しました。
 
 - [講演資料 (PDFファイル)
-{{< image src="/doc/ROSConJP2018.png" border="1" width="400" >}}
+{{< image src="doc/ROSConJP2018.png" border="1" width="400" >}}
 ](http://roscon.jp/2018/presentations/ROSCon_JP_2018_presentation_7.pdf)
 - 動画 (vimeo)  
 {{< rawhtml >}}

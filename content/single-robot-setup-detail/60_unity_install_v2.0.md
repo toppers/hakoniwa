@@ -29,15 +29,15 @@ Unityのインストール方法は色々なサイト・書籍で紹介されて
 まず，インストールしたUnityを起動してください．  
 無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．
 
-{{< image src="/img/single-robot/unity_invoke.png" width="800" >}}
+{{< image src="img/single-robot/unity_invoke.png" width="800" >}}
 
 次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．
 
-{{< image src="/img/single-robot/unity_create_project.png" width="800" >}}
+{{< image src="img/single-robot/unity_create_project.png" width="800" >}}
 
 成功すると，以下のようにUnityが起動します．
 
-{{< image src="/img/single-robot/unity_start.png" width="800" >}}
+{{< image src="img/single-robot/unity_start.png" width="800" >}}
 
 
 
@@ -49,12 +49,12 @@ Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Pa
 
 成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．
 
-{{< image src="/img/single-robot/unity_import.png" width="300" >}}
+{{< image src="img/single-robot/unity_import.png" width="300" >}}
 
 成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます．
 Toppers_Courseをダブルクリックすると下図の画面が現れます．
 
-{{< image src="/img/single-robot/unity_HackEV.png" width="900" >}}
+{{< image src="img/single-robot/unity_HackEV.png" width="900" >}}
 
 
 次に，シミュレーションに関わる設定を変更します．
@@ -65,7 +65,7 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 `Fixed Timestep` を 0.001に，
 `Time Scale` を 0.6に設定します．
 
-{{< image src="/img/single-robot/unity_setting_time.png" width="700" >}}
+{{< image src="img/single-robot/unity_setting_time.png" width="700" >}}
 
 ※`ev3rt-simple-robot.unitypackage`を使用する場合で，もしシミュレーションの動作が  
 遅い場合には，`Fixed Timestep` を 0.01に，EV3 Motor(Script)の`Interval`を 0.0005に  
@@ -74,7 +74,7 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 「Quality」  
 `Other`の`VSync Count` を Don't Sync に設定します．
 
-{{< image src="/img/single-robot/unity_setting_quality.png" width="700" >}}
+{{< image src="img/single-robot/unity_setting_quality.png" width="700" >}}
 
 これでインポート作業終了です．
 

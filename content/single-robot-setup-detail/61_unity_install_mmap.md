@@ -12,7 +12,7 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 「Player」  
 `Other Setting`の`Scripting Define Symbols` に`VDEV_IO_MMAP`と設定します．
 
-{{< image src="/img/single-robot/unity_setting_player_mmap.png" width="700" >}}
+{{< image src="img/single-robot/unity_setting_player_mmap.png" width="700" >}}
 
 # MMAP用パラメータ設定
 

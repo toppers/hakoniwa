@@ -54,7 +54,7 @@ Unityの画面上で[![image.png](https://qiita-user-contents.imgix.net/https%3A
 
 成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)
 
-{{< image src="/img/single-robot/unity_run.png" width="900" >}}
+{{< image src="img/single-robot/unity_run.png" width="900" >}}
 
 
 

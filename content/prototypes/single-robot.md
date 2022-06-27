@@ -22,7 +22,7 @@ github =  "https://github.com/toppers/hakoniwa-single_robot"
 
 - ETロボコンユーザ層に箱庭を広める（広報活動）
 
-{{< image src="/img/prototypes/modelA.png" width="700" >}}
+{{< image src="img/prototypes/modelA.png" width="700" >}}
 
 ### 導入方法と使用方法
 

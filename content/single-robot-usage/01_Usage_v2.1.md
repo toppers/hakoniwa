@@ -40,7 +40,7 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 その下の詳細なウィンドウサイズは基本そのままでもよいですが，サイズを変更したい場合は，  
 お使いの環境に合わせて変更してください．
 
-{{< image src="/img/single-robot/unity_build_setting.png" width="600" >}}
+{{< image src="img/single-robot/unity_build_setting.png" width="600" >}}
 
 
 ## ビルドの実行，config.jsonの配置
@@ -53,18 +53,18 @@ Platform は[PC,Mac & Linux Standalone]のままとします．
 `Architecture`は実行するPCのアーキテクチャに合わせて設定しますが，  
 どちらか分からないという方は，`x86_64`を選択してください．
 
-{{< image src="/img/single-robot/unity_build_platform_setting.png" width="600" >}}
+{{< image src="img/single-robot/unity_build_platform_setting.png" width="600" >}}
 
 設定を終えたら，`Build`を押下してビルドを実行します．
 
-{{< image src="/img/single-robot/unity_build.png" width="400" >}}
+{{< image src="img/single-robot/unity_build.png" width="400" >}}
 
 すると，どの場所にビルドしたバイナリを配置するか，選択ダイアログが表示されますので，
 任意の場所を選択します．  
 今回は例として，ビルドするUnityプロジェクトのあるフォルダ内に，`Build`フォルダを作成し，  
 その中にビルドしたバイナリを配置するようにします．
 
-{{< image src="/img/single-robot/unity_build_import.png" width="400" >}}
+{{< image src="img/single-robot/unity_build_import.png" width="400" >}}
 
 フォルダを選択すると，ビルドが実行されます．
 
@@ -108,8 +108,8 @@ MMAP, 0x40010000, /mnt/c/project/hakoniwa/ev3rt-athrill-v850e2m/sdk/workspace/li
 先ほど選択したフォルダにビルドしたバイナリが作成されていますので，
 `<プロジェクト名>.exe`または`<プロジェクト名>.app`のファイルを実行することでシミュレータが起動します．
 
-{{< image src="/img/single-robot/unity_binary_start.png" width="400" >}}
+{{< image src="img/single-robot/unity_binary_start.png" width="400" >}}
 
 起動した画面上で`実行`ボタンを押下すれば，シミュレーションが実行されます．
 
-{{< image src="/img/single-robot/unity_binary_sim_start.png" width="600" >}}
+{{< image src="img/single-robot/unity_binary_sim_start.png" width="600" >}}

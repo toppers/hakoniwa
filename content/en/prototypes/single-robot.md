@@ -22,7 +22,7 @@ This prototype can verify by linking the program's behavior on the embedded micr
 
 - Promote Hakoniwa to ET Robot contenst participants (PR activities)
 
-{{< image src="/img/prototypes/modelA.en.png" width="700" >}}
+{{< image src="img/prototypes/modelA.en.png" width="700" >}}
 
 ###  Installation & Usage
 

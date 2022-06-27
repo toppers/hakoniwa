@@ -24,6 +24,21 @@ toc = true
 
 ## 講演資料や動画など
 
+### 2022年度 ETロボコン向け TOPPERS活用セミナー
+
+2022年6月25日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](https://toppers.jp/etrobo.html#seminar)の講義資料です。    
+箱庭プロトタイプモデルの単体ロボット向けシミュレータについて、その内部の詳細な仕組みと、カスタマイズ方法について詳しく解説しました。
+
+- [講義資料 (PDFファイル)
+{{< image src="doc/ETRCSeminar2022.png" border="1" width="400" >}}
+](/hakoniwa/doc/ETRCSeminar2022.pdf)
+- 動画 (YouTube)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ugVVSmnnxFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
 ### TOPPERSカンファレンス2022
 
 2022年6月10日(金)に開催された[TOPPERSカンファレンス2022](https://toppers.jp/conference2022.html)の講演資料です。    

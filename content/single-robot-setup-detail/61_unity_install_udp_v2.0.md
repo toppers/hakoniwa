@@ -70,7 +70,7 @@ DEBUG_FUNC_VDEV_RX_IPADDR には，athrill側のIPアドレスを設定します
 `Hierarchy`ビューで`Robot`配下の`RoboModel`を選択してください．  
 すると画面右の`Inspector`ビューに[Io Writer (Script)]と[Io Reader (Script)]の項目が表示されます. 
 
-{{< image src="/img/single-robot/unity_hierarchy_view_robo_v2.0.png" width="300" >}}
+{{< image src="img/single-robot/unity_hierarchy_view_robo_v2.0.png" width="300" >}}
 
 - Io Writer (Script)  
  Hostにathrill側のIPアドレスを設定してください．  
@@ -79,4 +79,4 @@ DEBUG_FUNC_VDEV_RX_IPADDR には，athrill側のIPアドレスを設定します
 - Io Reader (Script)  
  Portには`DEBUG_FUNC_VDEV_TX_PORTNO`で設定した値を設定してください．
 	
-{{< image src="/img/single-robot/unity_setting_udp.png" width="400" >}}
+{{< image src="img/single-robot/unity_setting_udp.png" width="400" >}}

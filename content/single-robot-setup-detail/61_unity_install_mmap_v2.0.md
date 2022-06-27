@@ -12,7 +12,7 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 「Player」  
 `Other Setting`の`Scripting Define Symbols` に`VDEV_IO_MMAP`と設定します．
 
-{{< image src="/img/single-robot/unity_setting_player_mmap.png" width="700" >}}
+{{< image src="img/single-robot/unity_setting_player_mmap.png" width="700" >}}
 
 # MMAP用パラメータ設定
 
@@ -22,8 +22,8 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 `Hierarchy`ビューで`Robot`配下の`RoboModel`を選択してください．  
 すると画面右の`Inspector`ビューに[Io Writer (Script)]と[Io Reader (Script)]の項目が表示されます. 
 
-{{< image src="/img/single-robot/unity_hierarchy_view_robo_v2.0.png" width="300" >}}
-{{< image src="/img/single-robot/unity_setting_mmap_emp.png" width="300" >}}
+{{< image src="img/single-robot/unity_hierarchy_view_robo_v2.0.png" width="300" >}}
+{{< image src="img/single-robot/unity_setting_mmap_emp.png" width="300" >}}
 
 インポート直後ですと，[Io Writer (Script)] と [Io Reader (Script)]の Filepath は空白です．  
 ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．
@@ -37,7 +37,7 @@ unity_mmap.bin の絶対ファイルパスを，[Io Writer (Script)]のFilepath�
 
 athrill_mmap.bin の絶対ファイルパスを，[Io Reader (Script)]のFilepathに設定してください(設定例：下図)．
 
-{{< image src="/img/single-robot/unity_setting_mmap.png" width="400" >}}
+{{< image src="img/single-robot/unity_setting_mmap.png" width="400" >}}
 
 例えば，v850版を使用するという前提で`ev3rt-athrill-v850e2m`のローカルリポジトリが，  
 `C:\project\hakoniwa`にあり，実行したいアプリケーションのフォルダが`line_trace`の場合は，  

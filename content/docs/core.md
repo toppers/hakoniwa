@@ -23,4 +23,4 @@ bref = "箱庭の核となるコア機能と，備えるべき機能特性を紹
 箱庭のコア機能と機能特性については，[プロトタイプモデル](/hakoniwa/prototypes/)の開発を進めながら，WG内での設計検討を続けているところです．
 詳細が固まりましたら，追って解説を加えていきます．
 
-{{< image src="/img/docs/core1.png" width="700" >}}
+{{< image src="img/docs/core1.png" width="700" >}}

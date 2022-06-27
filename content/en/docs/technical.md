@@ -24,7 +24,7 @@ Members of Hokoniwa WG mainly develop it. It enables debugging and functional ve
 The software is being developed as open source under the TOPPERS license.
 - https://github.com/toppers/athrill
 
-{{< image src="/img/athrill.png" width="200" href="https://github.com/toppers/athrill" >}}
+{{< image src="img/athrill.png" width="200" href="https://github.com/toppers/athrill" >}}
 
 
 ### mROS

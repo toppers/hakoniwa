@@ -10,7 +10,7 @@ bref = "Target users, strengths, and novelty of Hakoniwa"
 
 Our goal is to establish a **simulation environment and ecosystem** for engineers who develop/provide massive and complex IoT systems.
 
-{{< image src="/img/docs/aimat1.en.png" width="700" >}}
+{{< image src="img/docs/aimat1.en.png" width="700" >}}
 
 Hakoniwa's target is an information system with various devices connected by a network.
 We envision IoT applications in various fields, such as autonomous driving, logistics, and space development.

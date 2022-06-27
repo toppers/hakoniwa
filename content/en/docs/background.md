@@ -25,7 +25,7 @@ It crosses various technical domains as follows.
 - application Systems
   - Development of vehicle assignment management and traffic flow management applications
 
-{{< image src="/img/docs/back1.en.png" width="600" >}}
+{{< image src="img/docs/back1.en.png" width="600" >}}
 
 However, we face the following challenges to realizing such an IoT system.
 - Complexity of the problem path
@@ -45,6 +45,6 @@ Next, consider the potential challenges when building IoT services using robots.
 - System requirements may change frequently, requiring high effort to apply changes
 - Difficulty in combining causes frequent trouble during testing.
 
-{{< image src="/img/docs/back2.en.png" width="600" >}}
+{{< image src="img/docs/back2.en.png" width="600" >}}
 
 **Hakoniwa intends to solve such technical issues and accelerate the development of IoT systems and the construction of services.**

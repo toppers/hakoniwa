@@ -14,7 +14,7 @@ github = "https://github.com/toppers/hakoniwa-ros-multiplay"
 UnityのPhotonライブラリを用いて複数のUnity環境の同期を行っており，加えてアセット間の時間同期も実現しています．
 またVRによるシミュレーション環境へのダイブも試行しています．
 
-{{< image src="/img/prototypes/modelBoverview.png" width="700" >}}
+{{< image src="img/prototypes/modelBoverview.png" width="700" >}}
 
 ### 技術研鑽視点での狙い
 

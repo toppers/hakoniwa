@@ -23,4 +23,4 @@ Also, we believe that the following functional characteristics are essential for
 The core functions and functional characteristics of Hakoniwa are still under design study in the WG while developing the [prototype model](/hakoniwa/prototypes/).
 We will add more details as we progress.
 
-{{< image src="/img/docs/core1.en.png" width="800" >}}
+{{< image src="img/docs/core1.en.png" width="800" >}}

@@ -24,6 +24,16 @@ toc = true
 
 ## 講演資料や動画など
 
+### ROS Japan UG #47 シミュレータ特集！
+
+2021年8月26日(金) に開催された「[ROS Japan UG #47 シミュレータ特集！](https://rosjp.connpass.com/event/253372/)」にて、「箱庭ショーケース」と銘打ったLightning Talkを発表しました。これまでの箱庭の成果物や今後のロードマップを紹介しています。
+
+- [講義資料 (PDFファイル)
+{{< image src="doc/rosjp47.png" border="1" width="400" >}}
+](/hakoniwa/doc/rosjp47.pdf)
+
+[このページの先頭に戻る](#top)
+
 ### 2022年度 ETロボコン向け TOPPERS活用セミナー
 
 2022年6月25日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](https://toppers.jp/etrobo.html#seminar)の講義資料です。    

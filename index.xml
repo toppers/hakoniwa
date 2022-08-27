@@ -115,7 +115,9 @@ Project/Prefabs配下にいくつかのロボットモデルを用意してい�
 次のタグやOrganizationをフォローされると、最新情報が得やすくなります．
 tag: 箱庭 tag: athrill tag: mROS organization: TOPPERSプロジェクト なお、Qiita記事では開発途上の試行版であったり古い情報が記載されていることがあります。
 このページの先頭に戻る
-講演資料や動画など 2022年度 ETロボコン向け TOPPERS活用セミナー 2022年6月25日(土)に開催されたETロボコン向け TOPPERS活用セミナーの講義資料です。 箱庭プロトタイプモデルの単体ロボット向けシミュレータについて、その内部の詳細な仕組みと、カスタマイズ方法について詳しく解説しました。
+講演資料や動画など ROS Japan UG #47 シミュレータ特集！ 2021年8月26日(金) に開催された「ROS Japan UG #47 シミュレータ特集！」にて、「箱庭ショーケース」と銘打ったLightning Talkを発表しました。これまでの箱庭の成果物や今後のロードマップを紹介しています。
+講義資料 (PDFファイル) このページの先頭に戻る
+2022年度 ETロボコン向け TOPPERS活用セミナー 2022年6月25日(土)に開催されたETロボコン向け TOPPERS活用セミナーの講義資料です。 箱庭プロトタイプモデルの単体ロボット向けシミュレータについて、その内部の詳細な仕組みと、カスタマイズ方法について詳しく解説しました。
 講義資料 (PDFファイル) 動画 (YouTube)
 このページの先頭に戻る
 TOPPERSカンファレンス2022 2022年6月10日(金)に開催されたTOPPERSカンファレンス2022の講演資料です。 箱庭WGの活動紹介、最新の開発状況であるゲーム技術との統合、および、組込み向けのROS 2軽量実行環境についてそれぞれ紹介しました。
@@ -124,11 +126,7 @@ TOPPERSカンファレンス2022 2022年6月10日(金)に開催されたTOPPERS�
 mROS 2：ロボットソフトウェアの組込みデバイス向け軽量実行環境 講演資料 (Speaker Deck)
 動画 (YouTube)
 このページの先頭に戻る
-オープンソースカンファレンス 2022 Nagoya 2022年5月28日(土)に開催されたオープンソースカンファレンス 2022 Nagoyaにて、箱庭のVR展開に関するセッションを実施しました。
-「箱庭VR空間で、ロボット・マルチプレイ開発をゲーム感覚でやってみよう」 講師：森 崇　(（株）永和システムマネジメント) セッション概要：メタバースという言葉が流行っていますが、VR空間に入って新しい価値観や体験ができるようになりました。このような体験をロボット開発でもやってみたくなりませんか？TOPPERS／箱庭WGでは、このような新しい技術を好き勝手に取り入れながら、箱庭コンセプトの実現に向けて日々自己研鑽をしています。
-2022年初頭、複数の拠点にいる開発者が、箱庭VR空間に入って、ロボット開発できるようになりました！本セミナーでは、この開発環境の説明と共に、どうやって利用できるようになるか説明したいと思います。ゲーミングPCがあれば100%無料でお試しできます！ 講演資料 (PDFファイル) 動画 (YouTube)
-このページの先頭に戻る
-Unity道場 ロボティクス 秋のLT祭り 2021 2021年10月19日(火) に開催された「Unity道場 ロボティクス 秋のLT祭り 2021」にて、箱庭の最新の活動状況や研究開発成果に関するLightning Talk講演を実施しました。箱庭では、物理演算と可視化のエンジンとしてUnityの技術を積極的に活用しています。</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>単体ロボット向けシミュレータ使用手順(ARM版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
+オープンソースカンファレンス 2022 Nagoya 2022年5月28日(土)に開催されたオープンソースカンファレンス 2022 Nagoyaにて、箱庭のVR展開に関するセッションを実施しました。</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>単体ロボット向けシミュレータ使用手順(ARM版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
 export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major cfgフォルダの配置(初回起動時のみ) cfg ファイルの配置(Mac版の場合)
 $ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-mac cfg/cfg/cfg $ chmod +x cfg/cfg/cfg cfg ファイルの配置(Windows\Linux版の場合)
 $ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-linux-64 cfg/cfg/cfg $ chmod +x cfg/cfg/cfg EV3ロボット制御プログラムのビルド ターミナル上で，ev3rt-athrill-ARMv7-A/sdk/OBJ1.1に移動して，

@@ -24,6 +24,15 @@ toc = true
 
 ## 講演資料や動画など
 
+### RSJ2022
+
+2022年9月5日(月)-9日(金)に開催された[RSJ2022 (第40回 日本ロボット学会学術講演会)](https://ac.rsj-web.org/2022/)において、[ROS制御ロボットシミュレーション](http://localhost:1313/hakoniwa/prototypes/ros-robot/)に関する研究発表を実施しました。本発表の資料を公開します。    
+
+- 論文題目『hakoniwa-ros2sim: 仮想環境を活用したROS 2アプリケーションのシミュレーション手法』
+- [発表資料 (PDFファイル)
+{{< image src="doc/RSJ2022.png" border="1" width="400" >}}
+](/hakoniwa/doc/RSJ2022.pdf)
+
 ### SWEST24
 
 2022年9月1日(木)-2日(金)に開催された[SWEST24 (第24回 組込みシステム技術に関するサマーワークショップ)](https://swest.toppers.jp/SWEST24/program/)の講演資料です。    

@@ -115,18 +115,13 @@ Project/Prefabs配下にいくつかのロボットモデルを用意してい�
 次のタグやOrganizationをフォローされると、最新情報が得やすくなります．
 tag: 箱庭 tag: athrill tag: mROS organization: TOPPERSプロジェクト なお、Qiita記事では開発途上の試行版であったり古い情報が記載されていることがあります。
 このページの先頭に戻る
-講演資料や動画など ROS Japan UG #47 シミュレータ特集！ 2021年8月26日(金) に開催された「ROS Japan UG #47 シミュレータ特集！」にて、「箱庭ショーケース」と銘打ったLightning Talkを発表しました。これまでの箱庭の成果物や今後のロードマップを紹介しています。
+講演資料や動画など RSJ2022 2022年9月5日(月)-9日(金)に開催されたRSJ2022 (第40回 日本ロボット学会学術講演会)において、ROS制御ロボットシミュレーションに関する研究発表を実施しました。本発表の資料を公開します。
+論文題目『hakoniwa-ros2sim: 仮想環境を活用したROS 2アプリケーションのシミュレーション手法』 発表資料 (PDFファイル) SWEST24 2022年9月1日(木)-2日(金)に開催されたSWEST24 (第24回 組込みシステム技術に関するサマーワークショップ)の講演資料です。
+セッションs2b: 箱庭・試行の軌跡と新たなチャレンジ ～箱庭はなぜ技術屋の心を揺さぶるのか～ 講演資料 (PDFファイル) セッションs3b: ここから始める箱庭の活用 講演資料① (PDFファイル) 講演資料② (PDFファイル) セッションs2c: 大事なのでもう一回: 振舞いのコードもモデルを使って作成しよう 講演資料 (PDFファイル) このページの先頭に戻る
+ROS Japan UG #47 シミュレータ特集！ 2021年8月26日(金) に開催された「ROS Japan UG #47 シミュレータ特集！」にて、「箱庭ショーケース」と銘打ったLightning Talkを発表しました。これまでの箱庭の成果物や今後のロードマップを紹介しています。
 講義資料 (PDFファイル) このページの先頭に戻る
 2022年度 ETロボコン向け TOPPERS活用セミナー 2022年6月25日(土)に開催されたETロボコン向け TOPPERS活用セミナーの講義資料です。 箱庭プロトタイプモデルの単体ロボット向けシミュレータについて、その内部の詳細な仕組みと、カスタマイズ方法について詳しく解説しました。
-講義資料 (PDFファイル) 動画 (YouTube)
-このページの先頭に戻る
-TOPPERSカンファレンス2022 2022年6月10日(金)に開催されたTOPPERSカンファレンス2022の講演資料です。 箱庭WGの活動紹介、最新の開発状況であるゲーム技術との統合、および、組込み向けのROS 2軽量実行環境についてそれぞれ紹介しました。
-箱庭WGの活動紹介 講演資料 (PDFファイル) 動画 (YouTube)
-ゲーム技術（VR/Photon）がもたらす箱庭ワールドの now and future 講演資料 (PDFファイル) 動画 (YouTube)
-mROS 2：ロボットソフトウェアの組込みデバイス向け軽量実行環境 講演資料 (Speaker Deck)
-動画 (YouTube)
-このページの先頭に戻る
-オープンソースカンファレンス 2022 Nagoya 2022年5月28日(土)に開催されたオープンソースカンファレンス 2022 Nagoyaにて、箱庭のVR展開に関するセッションを実施しました。</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>単体ロボット向けシミュレータ使用手順(ARM版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
+講義資料 (PDFファイル) 動画 (YouTube)</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>単体ロボット向けシミュレータ使用手順(ARM版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
 export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major cfgフォルダの配置(初回起動時のみ) cfg ファイルの配置(Mac版の場合)
 $ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-mac cfg/cfg/cfg $ chmod +x cfg/cfg/cfg cfg ファイルの配置(Windows\Linux版の場合)
 $ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-linux-64 cfg/cfg/cfg $ chmod +x cfg/cfg/cfg EV3ロボット制御プログラムのビルド ターミナル上で，ev3rt-athrill-ARMv7-A/sdk/OBJ1.1に移動して，

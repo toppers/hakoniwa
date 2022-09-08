@@ -24,6 +24,42 @@ toc = true
 
 ## 講演資料や動画など
 
+### RSJ2022
+
+2022年9月5日(月)-9日(金)に開催された[RSJ2022 (第40回 日本ロボット学会学術講演会)](https://ac.rsj-web.org/2022/)において、[ROS制御ロボットシミュレーション](http://localhost:1313/hakoniwa/prototypes/ros-robot/)に関する研究発表を実施しました。本発表の資料を公開します。    
+
+- 論文題目『hakoniwa-ros2sim: 仮想環境を活用したROS 2アプリケーションのシミュレーション手法』
+- [発表資料 (PDFファイル)
+{{< image src="doc/RSJ2022.png" border="1" width="400" >}}
+](/hakoniwa/doc/RSJ2022.pdf)
+
+### SWEST24
+
+2022年9月1日(木)-2日(金)に開催された[SWEST24 (第24回 組込みシステム技術に関するサマーワークショップ)](https://swest.toppers.jp/SWEST24/program/)の講演資料です。    
+
+#### セッションs2b: 箱庭・試行の軌跡と新たなチャレンジ ～箱庭はなぜ技術屋の心を揺さぶるのか～
+
+- [講演資料 (PDFファイル)
+{{< image src="doc/SWEST24_s2b.png" border="1" width="400" >}}
+](/hakoniwa/doc/SWEST24_s2b.pdf)
+
+#### セッションs3b: ここから始める箱庭の活用
+
+- [講演資料① (PDFファイル)
+{{< image src="doc/SWEST24_s3b-1.png" border="1" width="400" >}}
+](/hakoniwa/doc/SWEST24_s3b-1.pdf)
+- [講演資料② (PDFファイル)
+{{< image src="doc/SWEST24_s3b-2.png" border="1" width="400" >}}
+](/hakoniwa/doc/SWEST24_s3b-2.pdf)
+
+#### セッションs2c: 大事なのでもう一回: 振舞いのコードもモデルを使って作成しよう
+
+- [講演資料 (PDFファイル)
+{{< image src="doc/SWEST24_s2c.png" border="1" width="400" >}}
+](/hakoniwa/doc/SWEST24_s2c.pdf)
+
+[このページの先頭に戻る](#top)
+
 ### ROS Japan UG #47 シミュレータ特集！
 
 2021年8月26日(金) に開催された「[ROS Japan UG #47 シミュレータ特集！](https://rosjp.connpass.com/event/253372/)」にて、「箱庭ショーケース」と銘打ったLightning Talkを発表しました。これまでの箱庭の成果物や今後のロードマップを紹介しています。

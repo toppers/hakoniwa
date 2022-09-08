@@ -52,6 +52,12 @@ toc = true
 {{< image src="doc/SWEST24_s3b-2.png" border="1" width="400" >}}
 ](/hakoniwa/doc/SWEST24_s3b-2.pdf)
 
+#### セッションs2c: 大事なのでもう一回: 振舞いのコードもモデルを使って作成しよう
+
+- [講演資料 (PDFファイル)
+{{< image src="doc/SWEST24_s2c.png" border="1" width="400" >}}
+](/hakoniwa/doc/SWEST24_s2c.pdf)
+
 [このページの先頭に戻る](#top)
 
 ### ROS Japan UG #47 シミュレータ特集！

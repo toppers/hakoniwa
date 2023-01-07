@@ -44,6 +44,9 @@ SWESTとは、大学の研究者や学生、企業の技術者や管理者、そ
 
 ### 更新情報
 
+- 2023.01.07
+  - 2022年度[TOPPERS活用アイデア・アプリケーション開発コンテスト](https://www.toppers.jp/contest.html)のアプリケーション開発部門において、金賞を受賞しました。
+  - 受賞作品として[hakoniwa-ecu-multiplay](https://github.com/toppers/hakoniwa-ecu-multiplay)を公開しています。ぜひお試しください。
 - 2022.09.08
   - 2022年9月1日(木)-2日(金)に開催された[SWEST24 (第24回 組込みシステム技術に関するサマーワークショップ)](/hakoniwa/technical-links/#swest24)にて実施したセッションの資料を掲載しました。
   - 2022年9月5日(月)-9日(金)に開催された[RSJ2022 (第40回 日本ロボット学会学術講演会)](/hakoniwa/technical-links/#rsj2022)にて実施したセッションの資料を掲載しました。

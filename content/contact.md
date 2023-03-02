@@ -15,7 +15,7 @@ Slack等での議論に参加したい方、活動内容へのご要望をお持
 Email: hakoniwa.toppers_at_gmail.com (_at_ を@ に置き換えてください)
 ```
 
-[箱庭WGの活動紹介（2022年度版）](/hakoniwa/doc/hakoniwa-flyer2022.png)もご参照ください。
+[箱庭WGの活動紹介（2022年度版）](/hakoniwa/doc/hakoniwa-flyer2022.pdf)もご参照ください。
 
 #### 箱庭フォーラム：利用方法について質問したり、技術的な相談をしたい
 

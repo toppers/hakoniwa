@@ -39,7 +39,7 @@ ROSConは、ロボット開発プラットフォームであるROS（Robot Opera
 {{< /rawhtml >}}
 - 動画 (Vimeo)  
 {{< rawhtml >}}
-<iframe src="https://player.vimeo.com/video/767150435?h=f1d1e57679" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/767150435?h=f1d1e57679" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}
 
 [このページの先頭に戻る](#top)
@@ -52,7 +52,7 @@ ROSConは、ロボット開発プラットフォームであるROS（Robot Opera
 
 - 動画 (Vimeo)  
 {{< rawhtml >}}
-<iframe src="https://player.vimeo.com/video/781671524?h=c6bb3fa7f4" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/781671524?h=c6bb3fa7f4" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}
 
 #### now and next about mROS 2
@@ -65,7 +65,7 @@ ROSConは、ロボット開発プラットフォームであるROS（Robot Opera
 {{< /rawhtml >}}
 - 動画 (Vimeo)  
 {{< rawhtml >}}
-<iframe src="https://player.vimeo.com/video/781671042?h=0a033c6612" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/781671042?h=0a033c6612" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}
 
 [このページの先頭に戻る](#top)
@@ -533,7 +533,7 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 - [講演資料 (PDFファイル)
 {{< image src="doc/ROSConJP2019-1.png" border="1" width="400" >}}
 ](http://roscon.jp/2019/presentations/lightning_talks/ROSCon_JP_2019_lightning_talk_13.pdf)
-- 動画 (vimeo)  
+- 動画 (Vimeo)  
 {{< rawhtml >}}
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/370250203" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}
@@ -543,7 +543,7 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 - [講演資料 (PDFファイル)
 {{< image src="doc/ROSConJP2019-2.png" border="1" width="400" >}}
 ](http://roscon.jp/2019/presentations/lightning_talks/ROSCon_JP_2019_lightning_talk_12.pdf)
-- 動画 (vimeo)  
+- 動画 (Vimeo)  
 {{< rawhtml >}}
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/370250169" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}
@@ -584,7 +584,7 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 - [講演資料 (PDFファイル)
 {{< image src="doc/ROSConJP2018.png" border="1" width="400" >}}
 ](http://roscon.jp/2018/presentations/ROSCon_JP_2018_presentation_7.pdf)
-- 動画 (vimeo)  
+- 動画 (Vimeo)  
 {{< rawhtml >}}
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/292065411" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}

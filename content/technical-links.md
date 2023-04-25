@@ -24,6 +24,52 @@ toc = true
 
 ## 講演資料や動画など
 
+### ROSCon 2022
+
+**[ROSCon 2022](https://roscon.ros.org/2022/)** が2022年10月20日(木)-21日(金)に開催され、箱庭WGのメンバが発表を行いました。
+ROSConは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する世界的な開発者会議の日本版です。
+
+#### mROS 2: yet another runtime environment onto embedded devices
+
+- 講演資料 (Speaker Deck)  
+{{< rawhtml >}}
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/5e189c64ddbd40369584d5334fbac079" title="mROS 2: yet another runtime environment onto embedded devices" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 314;" data-ratio="1.78343949044586"></iframe>
+<br>
+<p>
+{{< /rawhtml >}}
+- 動画 (Vimeo)  
+{{< rawhtml >}}
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/767150435?h=f1d1e57679" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
+### ROSCon JP 2022
+
+**[ROSCon JP 2022](https://roscon.jp/2022/)** が2022年10月19日(水)に京都で開催され、箱庭WGのメンバが発表を行いました。
+
+#### SROS 2 with OIDC(OpenID Connect) :ロボットと人を安全に繋ぐ技術
+
+- 動画 (Vimeo)  
+{{< rawhtml >}}
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/781671524?h=c6bb3fa7f4" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+{{< /rawhtml >}}
+
+#### now and next about mROS 2
+
+- 講演資料 (Speaker Deck)  
+{{< rawhtml >}}
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/4a54b01f565947309254c0f35975aee1" title="Now and Next about mROS 2" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 314;" data-ratio="1.78343949044586"></iframe>
+<br>
+<p>
+{{< /rawhtml >}}
+- 動画 (Vimeo)  
+{{< rawhtml >}}
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/781671042?h=0a033c6612" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
 ### RSJ2022
 
 2022年9月5日(月)-9日(金)に開催された[RSJ2022 (第40回 日本ロボット学会学術講演会)](https://ac.rsj-web.org/2022/)において、[ROS制御ロボットシミュレーション](http://localhost:1313/hakoniwa/prototypes/ros-robot/)に関する研究発表を実施しました。本発表の資料を公開します。    
@@ -168,7 +214,7 @@ https://learning.unity3d.jp/7915/
 
 ### ROSCon JP 2021
 
-**[ROSCon JP 2021](https://roscon.jp)** が2021年9月16日(木)に開催されました。  
+**[ROSCon JP 2021](https://roscon.jp/2021/)** が2021年9月16日(木)に開催されました。  
 ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する開発者会議の日本版です。TOPPERSプロジェクトはROSCon JP 2021にフレンドシップスポンサーとして協力しており、箱庭WGではROSの諸技術の発展・普及に貢献しています。
 
 #### 箱庭:IoT/クラウドロボティクス時代の仮想シミュレーション環境
@@ -487,7 +533,7 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 - [講演資料 (PDFファイル)
 {{< image src="doc/ROSConJP2019-1.png" border="1" width="400" >}}
 ](http://roscon.jp/2019/presentations/lightning_talks/ROSCon_JP_2019_lightning_talk_13.pdf)
-- 動画 (vimeo)  
+- 動画 (Vimeo)  
 {{< rawhtml >}}
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/370250203" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}
@@ -497,7 +543,7 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 - [講演資料 (PDFファイル)
 {{< image src="doc/ROSConJP2019-2.png" border="1" width="400" >}}
 ](http://roscon.jp/2019/presentations/lightning_talks/ROSCon_JP_2019_lightning_talk_12.pdf)
-- 動画 (vimeo)  
+- 動画 (Vimeo)  
 {{< rawhtml >}}
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/370250169" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}
@@ -538,7 +584,7 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 - [講演資料 (PDFファイル)
 {{< image src="doc/ROSConJP2018.png" border="1" width="400" >}}
 ](http://roscon.jp/2018/presentations/ROSCon_JP_2018_presentation_7.pdf)
-- 動画 (vimeo)  
+- 動画 (Vimeo)  
 {{< rawhtml >}}
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/292065411" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 {{< /rawhtml >}}

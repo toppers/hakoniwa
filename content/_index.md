@@ -50,6 +50,12 @@ SWESTとは、大学の研究者や学生、企業の技術者や管理者、そ
 
 ### 更新情報
 
+- 2023.07.24
+  - 箱庭WGにおける研究開発の成果が[日本ロボット学会誌](https://www.rsj.or.jp/pub/jrsj/about.html)にレター論文として採録されました！
+    - 高瀬 英希, 細合 晋太郎, 福田 竜也, 高田 光隆, 久保秋 真, 森 崇, **hakoniwa-ros2sim：仮想環境を活用したROS 2アプリケーションのシミュレーション手法**, 日本ロボット学会誌, 2023年41巻4号, pp. 399-402 (2023).
+    - 論文公開先： https://www.jstage.jst.go.jp/article/jrsj/41/4/41_41_399/_article/-char/ja
+  - 箱庭WGの活動成果「箱庭上でROS 2プログラムを手軽にシミュレーションできるhakoniwa-ros2simの一般公開」が TOPPERS of the YEAR 2023 を受賞しました！
+  - 2022年6月30日(金)に開催された[TOPPERSカンファレンス2023の講演資料・動画](/hakoniwa/technical-links/#toppersカンファレンス2023)を掲載しました。
 - 2023.01.07
   - 2022年度[TOPPERS活用アイデア・アプリケーション開発コンテスト](https://www.toppers.jp/contest.html)のアプリケーション開発部門において、金賞を受賞しました。
   - 受賞作品として[hakoniwa-ecu-multiplay](https://github.com/toppers/hakoniwa-ecu-multiplay)を公開しています。ぜひお試しください。

@@ -24,6 +24,31 @@ toc = true
 
 ## 講演資料や動画など
 
+### TOPPERSカンファレンス2023
+
+2022年6月30日(金)に開催された[TOPPERSカンファレンス2023](https://toppers.jp/conference2023.html)の講演資料です。    
+箱庭WGの活動紹介、最新の開発状況とプラットフォーム化に向けた新たな展開について紹介しました。
+
+#### 箱庭 Update 2023
+
+- [講演資料 (PDFファイル)
+{{< image src="doc/TOPPERSConf2023-1.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2023-1.pdf)
+- 動画 (YouTube)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n7dR4cJzDpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+#### TOPPERS/箱庭の新たな展開：プラットフォーム化への一歩
+
+- [講演資料 (PDFファイル)
+{{< image src="doc/TOPPERSConf2023-2.png" border="1" width="400" >}}](/hakoniwa/doc/TOPPERSConf2023-2.pdf)
+- 動画 (YouTube)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZdCYpDSk0qI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
 ### ROSCon 2022
 
 **[ROSCon 2022](https://roscon.ros.org/2022/)** が2022年10月20日(木)-21日(金)に開催され、箱庭WGのメンバが発表を行いました。

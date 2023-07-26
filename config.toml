@@ -60,9 +60,13 @@ DefaultContentLanguage = "ja"
     weight = -75
     url = "/showcase/"
 [[menu.main]]
-    name = "Getting Started"
+    name = "チュートリアル"
     weight = -70
-    url = "/getting-started/"
+    url = "/tutorial/"
+#[[menu.main]]
+#    name = "Getting Started"
+#    weight = -70
+#    url = "/getting-started/"
 [[menu.main]]
     name = "リポジトリ"
     weight = -60

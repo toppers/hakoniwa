@@ -13,6 +13,27 @@ toc = true
 
 本ページでは、チュートリアル会のスライド資料や動画アーカイブなどを公開しています。
 
+### #6 SWESTとRSJで発表してきたネタを再演する会
+
+```
+この夏に箱庭の研究開発の成果を発表してきました！
+- SWEST25 『複数ロボットシミュレーションのSTAMP/STPAでの活用』
+- RSJ2023 『オープンソース仮想シミュレーション環境「箱庭」による強化学習への対応の検討』
+
+今回のチュートリアル会では，これらの発表内容を箱庭ラバーズな皆さまに再演いたしました！
+学会では発表できなかった内容も交えて？時間無制限一本勝負？で，ざっくばらんにここだけの話しを聞けるかも？？
+```
+
+- 開催日：2023/09/20(水)
+- connpassイベントページ https://hakoniwa.connpass.com/event/294089/
+- 担当： kuboakiさん, s-hosoaiさん
+- 動画 (YouTube)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bR2lI-M63Yk?si=x2syO50uKpfYEecA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
 ### #5 組込みやさんが考えるコモングラウンド！！ってなんなん？
 
 ```

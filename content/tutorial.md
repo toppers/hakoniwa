@@ -13,79 +13,23 @@ toc = true
 
 本ページでは、チュートリアル会のスライド資料や動画アーカイブなどを公開しています。
 
-### #1 RDBOX 解体新書① 〜IoTでこんなんできまっせ！〜
+### #6 SWESTとRSJで発表してきたネタを再演する会
 
 ```
-箱庭では初！シンギュラリティを支えるIT基盤こと「RDBOX」のイベントを開催します．
+この夏に箱庭の研究開発の成果を発表してきました！
+- SWEST25 『複数ロボットシミュレーションのSTAMP/STPAでの活用』
+- RSJ2023 『オープンソース仮想シミュレーション環境「箱庭」による強化学習への対応の検討』
 
-ロボットって導入ハードル高いですよね！？ということで、まずは身近なIoT機器を想定して遊んでいきましょう！仮想ネットワークや各種認証認可技術を使った高度なシステム構成も、RDBOXがあればイントラで気軽にRUN！
-
-athrillとの組み合わせで、本格的な組み込みIoT機器開発のお役にも立てるはず！？
+今回のチュートリアル会では，これらの発表内容を箱庭ラバーズな皆さまに再演いたしました！
+学会では発表できなかった内容も交えて？時間無制限一本勝負？で，ざっくばらんにここだけの話しを聞けるかも？？
 ```
 
-- 開催日：2022/12/13(火)
-- connpassイベントページ https://hakoniwa.connpass.com/event/267822/
-- 担当： [@fudekunJP](https://twitter.com/fudekunJP) さん
-- 関連情報：
-  - [RDBOX紹介ページ](https://rdbox-intec.github.io/homepage_jp/)
-
-[このページの先頭に戻る](#top)
-
-### #2 箱庭でロボットの強化学習にトライ！
-
-```
-箱庭WGでは，ただいま絶賛大hot!! なトピックとして，ロボットの強化学習のための仮想環境の構築にトライしています．
-まだできたてホヤホヤですが，どこよりも早く！この開発の最新状況をご紹介します．
-
-そもそも箱庭ってなんだっけ？の方もぜひご参加ください．
-これが育っていくとどんな未来が拡がるのか，みなさんで妄想してみませんか？？
-```
-
-- 開催日：2023/02/18(土)
-- connpassイベントページ https://hakoniwa.connpass.com/event/275029/
-- 担当： [@kanetugu2020](https://twitter.com/kanetugu2020) さん
-- 関連情報：
-  - [Tweetによるデモ動画](https://twitter.com/kanetugu2020/status/1618538671933882369)
-  - [Qiita記事（100LGTMを突破！）： Unity + Python + 箱庭でロボットを強化学習させてみよう！](https://qiita.com/kanetugu2018/items/ee9b2bf0596a35e42b03)
-
-[このページの先頭に戻る](#top)
-
-### #3 箱庭とUnityで組み立てるオレオレロボットのはじめかた
-
-```
-今回は初心に戻って，Unity上でのロボットを作る方法と箱庭との繋ぎ方を１から解説します． この会に参加すれば自分だけのオリジナルロボットが作れるようになるかもっ？
-```
-
-- 開催日：2023/04/17(月)
-- connpassイベントページ https://hakoniwa.connpass.com/event/279508/
-- 担当： [@kanetugu2020](https://twitter.com/kanetugu2020) さん
-- 関連情報：
-  - [ハンズオンの事前準備方法の案内](https://github.com/tmori/unity-tutorial)
-- [スライド資料 (PDFファイル)
-{{< image src="doc/connpass_hakoniwa_tutorial_3.png" border="1" width="400" >}}](/hakoniwa/doc/connpass_hakoniwa_tutorial_3.pdf)
+- 開催日：2023/09/20(水)
+- connpassイベントページ https://hakoniwa.connpass.com/event/294089/
+- 担当： kuboakiさん, s-hosoaiさん
 - 動画 (YouTube)  
 {{< rawhtml >}}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QAd4jFCkiBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-{{< /rawhtml >}}
-
-[このページの先頭に戻る](#top)
-
-### #4 箱庭とUnityですすめるオレオレロボットの動かしかた
-
-```
-前回のチュートリアル#3の続編です．
-Unity上でいちから作ったロボットを箱庭に繋いで，その動作の制御・シミュレーションを行う方法をイチから解説します．
-この会に参加すれば自分だけのオリジナルロボットが箱庭で動かせるようになるかも？
-```
-
-- 開催日：2023/05/08(月)
-- connpassイベントページ https://hakoniwa.connpass.com/event/281931/
-- 担当： [@kanetugu2020](https://twitter.com/kanetugu2020) さん
-- [スライド資料 (PDFファイル)
-{{< image src="doc/connpass_hakoniwa_tutorial_4.png" border="1" width="400" >}}](/hakoniwa/doc/connpass_hakoniwa_tutorial_4.pdf)
-- 動画 (YouTube)  
-{{< rawhtml >}}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/E7ncMLElKRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bR2lI-M63Yk?si=x2syO50uKpfYEecA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 {{< /rawhtml >}}
 
 [このページの先頭に戻る](#top)
@@ -113,5 +57,82 @@ Unity上でいちから作ったロボットを箱庭に繋いで，その動作
 {{< rawhtml >}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PUIiGdFVALw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 {{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
+### #4 箱庭とUnityですすめるオレオレロボットの動かしかた
+
+```
+前回のチュートリアル#3の続編です．
+Unity上でいちから作ったロボットを箱庭に繋いで，その動作の制御・シミュレーションを行う方法をイチから解説します．
+この会に参加すれば自分だけのオリジナルロボットが箱庭で動かせるようになるかも？
+```
+
+- 開催日：2023/05/08(月)
+- connpassイベントページ https://hakoniwa.connpass.com/event/281931/
+- 担当： [@kanetugu2020](https://twitter.com/kanetugu2020) さん
+- [スライド資料 (PDFファイル)
+{{< image src="doc/connpass_hakoniwa_tutorial_4.png" border="1" width="400" >}}](/hakoniwa/doc/connpass_hakoniwa_tutorial_4.pdf)
+- 動画 (YouTube)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E7ncMLElKRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
+### #3 箱庭とUnityで組み立てるオレオレロボットのはじめかた
+
+```
+今回は初心に戻って，Unity上でのロボットを作る方法と箱庭との繋ぎ方を１から解説します． この会に参加すれば自分だけのオリジナルロボットが作れるようになるかもっ？
+```
+
+- 開催日：2023/04/17(月)
+- connpassイベントページ https://hakoniwa.connpass.com/event/279508/
+- 担当： [@kanetugu2020](https://twitter.com/kanetugu2020) さん
+- 関連情報：
+  - [ハンズオンの事前準備方法の案内](https://github.com/tmori/unity-tutorial)
+- [スライド資料 (PDFファイル)
+{{< image src="doc/connpass_hakoniwa_tutorial_3.png" border="1" width="400" >}}](/hakoniwa/doc/connpass_hakoniwa_tutorial_3.pdf)
+- 動画 (YouTube)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QAd4jFCkiBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
+### #2 箱庭でロボットの強化学習にトライ！
+
+```
+箱庭WGでは，ただいま絶賛大hot!! なトピックとして，ロボットの強化学習のための仮想環境の構築にトライしています．
+まだできたてホヤホヤですが，どこよりも早く！この開発の最新状況をご紹介します．
+
+そもそも箱庭ってなんだっけ？の方もぜひご参加ください．
+これが育っていくとどんな未来が拡がるのか，みなさんで妄想してみませんか？？
+```
+
+- 開催日：2023/02/18(土)
+- connpassイベントページ https://hakoniwa.connpass.com/event/275029/
+- 担当： [@kanetugu2020](https://twitter.com/kanetugu2020) さん
+- 関連情報：
+  - [Tweetによるデモ動画](https://twitter.com/kanetugu2020/status/1618538671933882369)
+  - [Qiita記事（100LGTMを突破！）： Unity + Python + 箱庭でロボットを強化学習させてみよう！](https://qiita.com/kanetugu2018/items/ee9b2bf0596a35e42b03)
+
+[このページの先頭に戻る](#top)
+
+### #1 RDBOX 解体新書① 〜IoTでこんなんできまっせ！〜
+
+```
+箱庭では初！シンギュラリティを支えるIT基盤こと「RDBOX」のイベントを開催します．
+
+ロボットって導入ハードル高いですよね！？ということで、まずは身近なIoT機器を想定して遊んでいきましょう！仮想ネットワークや各種認証認可技術を使った高度なシステム構成も、RDBOXがあればイントラで気軽にRUN！
+
+athrillとの組み合わせで、本格的な組み込みIoT機器開発のお役にも立てるはず！？
+```
+
+- 開催日：2022/12/13(火)
+- connpassイベントページ https://hakoniwa.connpass.com/event/267822/
+- 担当： [@fudekunJP](https://twitter.com/fudekunJP) さん
+- 関連情報：
+  - [RDBOX紹介ページ](https://rdbox-intec.github.io/homepage_jp/)
 
 [このページの先頭に戻る](#top)

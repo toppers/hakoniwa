@@ -71,7 +71,7 @@ Email: secretariat_at_toppers.jp (_at_ を@ に置き換えてください)
 | 高田 光隆  | カーネル、応用検討             | 名古屋大学NCES        | {{< snsicon github="mitsut" twitter="mitsu48" linkedin="mitsu48" >}} |
 | 福田 ⻯也  | クラウド、ロボティクス          | インテック            | {{< snsicon github="fukuta-tatsuya-intec" twitter="fudekunjp" linkedin="fudekunjp" >}} |
 | 小森 顕博  | 可視化                      |                    | {{< snsicon github="comoc" twitter="comocc" >}} |
-| 久保秋 真  | モデリング、応用検討          | チェンジビジョン        |  |
+| 久保秋 真  | モデリング、応用検討          | チェンジビジョン        | {{< snsicon github="kuboaki" twitter="kuboaki" facebook="kuboaki" >}} |
 | 國井 雄介  | デジタルツイン活用            | クレスコ           　　|  |
 
 ※許諾の得られている方のみ掲載しています。

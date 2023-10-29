@@ -13,6 +13,37 @@ toc = true
 
 本ページでは、チュートリアル会のスライド資料や動画アーカイブなどを公開しています。
 
+### #7 ROSConで世界デビューしてきた！会
+
+```
+なんと箱庭が世界デビュー！！🎉
+ROSCon 2023 というROSの世界的な開発者会議に講演提案が採択されて，発表してきまっす！！
+
+Title: An Integrated Distributed Simulation Environment weaving by Hakoniwa and mROS 2
+Abstract: In the era of IoT/Cloud Robotics, the need for collaborative development among engineers from various specialized fields, such as embedded systems, control, and AI, has become increasingly crucial. However, it is not easy to integrate each engineer's diverse technical fields, development languages, and environments. In this talk, we show a successful implementation of an integrated distributed simulation environment using "Hakoniwa" and "mROS 2". This environment allows engineers to leverage their familiar development setups while working together, enabling seamless collaboration in robotics development.
+今回のチュートリアル会では，この発表内容を，もちろん日本語で！再演いたしまっす！
+この発表の成果談だけでなく，ROSConで他にどんな発表があったの？ていうか現地で参加してみてどうだったん？？てきな土産話しも聞けるかも？？
+
+なお発表中では，ROSCon JP 2023でご披露した「リアルとバーチャルの融合！」的なコチラのデモも紹介予定です．このお話しも深掘りして披露する予定です（たぶん
+
+箱庭ラボ ブログ：ROSCon JP 2023で「リアルとバーチャルを融合する技術・箱庭 & mROS 2」を紹介してきました
+https://hakoniwa-lab.net/2023/09/27/blog-rosconjp2023/
+```
+
+- 開催日：2023/10/25(水)
+- connpassイベントページ https://hakoniwa.connpass.com/event/297032/
+- 担当： takasehideki
+- 動画 (YouTube)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TqlPygZAzhs?si=gCnZ0cUJ79O8Qope" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{{< /rawhtml >}}
+- スライド資料 (SpeakerDeck)  
+{{< rawhtml >}}
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/f9fc711a518a46d7983f8f6867f83eb9" title="An Integrated Distributed Simulation Environment weaving by Hakoniwa and mROS 2" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
 ### #6 SWESTとRSJで発表してきたネタを再演する会
 
 ```

@@ -74,7 +74,7 @@ WGメンバとして参画したい 箱庭WGは、TOPPERSプロジェクトの�
 箱庭WGのメンバに加入される場合は、原則としてTOPPERSプロジェクトへの入会もお願いしています。 また、TOPPERSプロジェクト会員向けの限定イベントの開催や、箱庭WG活動成果の早期公開なども検討しています。
 TOPPERSプロジェクトの加入方法の詳細については、
 TOPPERSプロジェクト事務局にお問い合わせください。
-NPO法人 TOPPERSプロジェクト 〒103-0011 東京都中央区日本橋大伝馬町6-7　住長第2ビル3F （一社）組込みシステム技術協会内 TEL &amp;amp; FAX: 03-5643-5166 Email: secretariat_at_toppers.jp (_at_ を@ に置き換えてください) WGの主なメンバと役割 氏名 主な役割 所属 SNS 森 崇 主査 全体統括、Athrill 永和システムマネジメント/箱庭ラボ 高瀬 英希 mROS、ROS、IoT 東京大学/JSTさきがけ 細合 晋太郎 IDE、モデリング、可視化、クラウド 東京大学 高田 光隆 カーネル、応用検討 名古屋大学NCES 福田 ⻯也 クラウド、ロボティクス インテック 小森 顕博 可視化 久保秋 真 モデリング、応用検討 チェンジビジョン 國井 雄介 デジタルツイン活用 クレスコ ※許諾の得られている方のみ掲載しています。</description></item><item><title>ショーケース</title><link>https://toppers.github.io/hakoniwa/showcase/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/showcase/</guid><description>「箱庭」コンセプトムービー2021 2021年6月時点での箱庭の成果物で実現できることを、デモ動画としてまとめました。
+NPO法人 TOPPERSプロジェクト 〒103-0011 東京都中央区日本橋大伝馬町6-7　住長第2ビル3F （一社）組込みシステム技術協会内 TEL &amp;amp; FAX: 03-5643-5166 Email: secretariat_at_toppers.jp (_at_ を@ に置き換えてください) WGの主なメンバと役割 氏名 主な役割 所属 SNS 森 崇 主査 全体統括、Athrill 永和システムマネジメント/箱庭ラボ 高瀬 英希 mROS、ROS、IoT 東京大学/JSTさきがけ 細合 晋太郎 IDE、モデリング、可視化、クラウド 東京大学 高田 光隆 カーネル、応用検討 名古屋大学NCES 福田 ⻯也 クラウド、ロボティクス 小森 顕博 可視化 久保秋 真 モデリング、応用検討 チェンジビジョン 國井 雄介 デジタルツイン活用 クレスコ ※許諾の得られている方のみ掲載しています。</description></item><item><title>ショーケース</title><link>https://toppers.github.io/hakoniwa/showcase/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/showcase/</guid><description>「箱庭」コンセプトムービー2021 2021年6月時点での箱庭の成果物で実現できることを、デモ動画としてまとめました。
 このページの先頭に戻る
 シミュレーション環境：箱庭を使ったROSロボットのCI（継続的インテグレーション） クラウドネイティブ環境上に構築した「箱庭」と合わせて、コミュニティ版GitLab（MIT Licence）が提供する、ソースコード管理機能及び、CI Runner機能を使ってCI（Continuous Integration，継続的インテグレーション）を実現しています。
 クラウドネイティブ環境はOSSであるRDBOX（Robotics Developer BOX）を使って構築しています。
@@ -183,11 +183,7 @@ memory_mmap.txtを編集します．
 使用するMMAPファイルのパスを記述するのですが，Unityバイナリを使用する場合には，
 MMAPファイルのパスを絶対パスで記述するように変更します．
 例：アプリケーション名がline_tarceの場合のmemory_mmap.txt
-ROM, 0x00000000, 512
-RAM, 0x00200000, 512
-RAM, 0x05FF7000, 10240
-RAM, 0x07FF7000, 10240
-MMAP, 0x40000000, /mnt/c/project/hakoniwa/ev3rt-athrill-v850e2m/sdk/workspace/line_trace/athrill_mmap.</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</guid><description>単体ロボット向けシミュレータ使用手順(V850版) 使用手順 EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 EV3ロボット制御プログラムのビルド ev3rt-athrill-v850e2m/sdk/workspace に移動して，
+ROM, 0x00000000, 512RAM, 0x00200000, 512RAM, 0x05FF7000, 10240RAM, 0x07FF7000, 10240MMAP, 0x40000000, /mnt/c/project/hakoniwa/ev3rt-athrill-v850e2m/sdk/workspace/line_trace/athrill_mmap.</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</guid><description>単体ロボット向けシミュレータ使用手順(V850版) 使用手順 EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 EV3ロボット制御プログラムのビルド ev3rt-athrill-v850e2m/sdk/workspace に移動して，
 EV3ロボット制御プログラムをビルドしましょう．
 ビルドするには，以下のコマンドを実行してください．
 $ make img=＜アプリケーションフォルダ名＞ clean $ make img=＜アプリケーションフォルダ名＞ 例：line_traceというアプリケーションフォルダのプログラムをビルドする場合
@@ -236,99 +232,55 @@ $ sudo apt install ruby</description></item><item><title>単体ロボット向�
 共通コードのチェックアウトは，以下の通りです．
 $ git clone https://github.com/toppers/athrill.git athrill-target のチェックアウト CPUアーキに依存するコードは，athrill-target側で管理しています． 今回のARM対応版は，ここにあります．
 $ git clone https://github.com/toppers/athrill-target-ARMv7-A.git なお，athrill と athrill-targetを以下のフォルダ構成にしてください．
-.
-├── athrill
-└── athrill-target-ARMv7-A コンパイラのインストール Linux の方は，gcc をインストールください．
+.├── athrill└── athrill-target-ARMv7-A コンパイラのインストール Linux の方は，gcc をインストールください．
 Windows の方は，WSL上で gcc をインストールください．
 Mac の方は，clang をインストールください．
 ビルド＆インストール ビルド方法ですが，端末上でathrill-target-ARMv7-A に移動してください．
 Linux/Windowsの方は，さらに build_linux に移動してください．
 Macの方は，build_mac に移動してください．
 移動終わったら，以下コマンド実行するだけです．
-make timer32=true clean
-make timer32=true ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．
-$ ls -l ../../athrill/bin/linux/athrill2
--rwxr-xr-x 1 user staff 628260 2 2 16:40 .</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</guid><description>athrill2のインストール athrill2のインストール手順 athrill のチェックアウト athrill-target のチェックアウト コンパイラのインストール ビルド＆インストール athrill のチェックアウト athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．
+make timer32=true cleanmake timer32=true ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．
+$ ls -l ../../athrill/bin/linux/athrill2-rwxr-xr-x 1 user staff 628260 2 2 16:40 .</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</guid><description>athrill2のインストール athrill2のインストール手順 athrill のチェックアウト athrill-target のチェックアウト コンパイラのインストール ビルド＆インストール athrill のチェックアウト athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．
 共通コードのチェックアウトは，以下の通りです．
 $ git clone https://github.com/toppers/athrill.git athrill-target のチェックアウト CPUアーキに依存するコードは，athrill-target側で管理しています．
 今回のV850対応版は，ここにあります．
 $ git clone https://github.com/toppers/athrill-target-v850e2m.git なお，athrill と athrill-targetを以下のフォルダ構成にしてください．
-.
-├── athrill
-└── athrill-target-v850e2m コンパイラのインストール Linux の方は，gcc をインストールください．
+.├── athrill└── athrill-target-v850e2m コンパイラのインストール Linux の方は，gcc をインストールください．
 Windows の方は，WSL上で gcc をインストールください．
 Mac の方は，clang をインストールください．
 ビルド＆インストール ビルド方法ですが，端末上でathrill-target-v850e2m に移動してください．
 Linux/Windowsの方は，さらに build_linux に移動してください．
 Macの方は，build_mac に移動してください．
 移動終わったら，以下コマンド実行するだけです．
-make timer32=true clean
-make timer32=true ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．
-$ ls -l ../../athrill/bin/linux/athrill2
--rwxr-xr-x 1 user staff 628260 2 2 16:40 .</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</guid><description>linux版64bit gccコンパイラ(ライブラリ含む)のインストール ARM版のathrill2を利用される場合は，以下のサイトを参考にコンパイラおよびライブラリをインストールください．
+make timer32=true cleanmake timer32=true ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．
+$ ls -l ../../athrill/bin/linux/athrill2-rwxr-xr-x 1 user staff 628260 2 2 16:40 .</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</guid><description>linux版64bit gccコンパイラ(ライブラリ含む)のインストール ARM版のathrill2を利用される場合は，以下のサイトを参考にコンパイラおよびライブラリをインストールください．
 Windows(WSL)
 https://www.yokoweb.net/2018/03/07/wsl-ubuntu-arm-gcc/ Linux
 https://www.yokoweb.net/2018/05/16/ubuntu-18_04-gcc-arm-install/ Mac
 https://www.yokoweb.net/2018/05/16/macos-gcc-arm-brew-install/</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</guid><description>linux版64bit gccコンパイラ(ライブラリ含む)のインストール v850版のathrill2を利用される場合は，以下のサイトからコンパイラおよびライブラリ(athrill-gcc-package.tar.gz)をダウンロードください．
-https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1 $ tar xzvf athrill-gcc-package.tar.gz
-$ cd athrill-gcc-package/
-$ tar xzvf athrill-gcc.tar.gz
-$ ls usr/local/athrill-gcc/
-bin include lib libexec share v850-elf 解凍後，usr/local/athrill-gccを /usr/local 直下に移動してください．
+https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1 $ tar xzvf athrill-gcc-package.tar.gz$ cd athrill-gcc-package/$ tar xzvf athrill-gcc.tar.gz$ ls usr/local/athrill-gcc/bin include lib libexec share v850-elf 解凍後，usr/local/athrill-gccを /usr/local 直下に移動してください．
 $ sudo mv usr/local/athrill-gcc /usr/local あとは，.bashrc に以下のパスを設定するだけです．
-export PATH=/usr/local/athrill-gcc/bin/:${PATH}
-export LD_LIBRARY_PATH=/usr/local/athrill-gcc:/usr/local/athrill-gcc/lib:${LD_LIBRARY_PATH} 設定後は，パスの有効化を忘れずに行ってください．
+export PATH=/usr/local/athrill-gcc/bin/:${PATH}export LD_LIBRARY_PATH=/usr/local/athrill-gcc:/usr/local/athrill-gcc/lib:${LD_LIBRARY_PATH} 設定後は，パスの有効化を忘れずに行ってください．
 source ${HOME}/.bashrc</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/</guid><description>箱庭用 EV3RT 開発環境のダウンロード 任意のフォルダ上で，athrillサンプル(athrill-sample)のプログラムを git clone してください．
 なお，cloneする場所は，以下のように athrillと同じフォルダ階層で実施してください．
-|---athril
-|---athrill-target-ARMv7-A
-└---ev3rt-athrill-ARMv7-A clone方法は以下の通りです．
+|---athril|---athrill-target-ARMv7-A└---ev3rt-athrill-ARMv7-A clone方法は以下の通りです．
 $ git clone https://github.com/toppers/ev3rt-athrill-ARMv7-A.git</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_v850/</guid><description>箱庭用 EV3RT 開発環境のダウンロード 任意のフォルダ上で，athrillサンプル(athrill-sample)のプログラムを git clone してください．
 なお，cloneする場所は，以下のように athrillと同じフォルダ階層で実施してください．
-|---athril
-|---athrill-target-v850e2m
-└---ev3rt-athrill-v850e2m clone方法は以下の通りです．
+|---athril|---athrill-target-v850e2m└---ev3rt-athrill-v850e2m clone方法は以下の通りです．
 $ git clone https://github.com/toppers/ev3rt-athrill-v850e2m.git サンプルアプリケーションのダウンロード 2種類のサンプルアプリケーションを用意しています．
 こちらから git clone いただき，hakoniwa-scenario-samples/single-robot配下の全てのフォルダを
 ev3rt-athrill-v850e2m/sdk/workspace に配置ください．
 $ git clone https://github.com/toppers/hakoniwa-scenario-samples.git</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/</guid><description>EV3ロボット制御プログラム 現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．
 ※まだ暫定構成です．
 ARM版のathrill2を利用される場合は，以下のフォルダで作業してください．
-$ ls ev3rt-athrill-ARMv7-A/sdk/OBJ1.1/
-app.c app.h device_config_mmap.txt Makefile memory_mmap.txt simstart.bash
-app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt unity_mmap.bin 現状は，app.c/main_task で直接制御を行っています．
+$ ls ev3rt-athrill-ARMv7-A/sdk/OBJ1.1/app.c app.h device_config_mmap.txt Makefile memory_mmap.txt simstart.bashapp.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt unity_mmap.bin 現状は，app.c/main_task で直接制御を行っています．
 コード断片は以下の通りです．
-while(1) {
-/**
-* PID controller
-*/
-#define white 100
-#define black 50
-static float lasterror = 0, integral = 0;
-static float midpoint = (white - black) / 2 + black;
-{
-float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);
-integral = error + integral * 0.3;
-float steer = 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</guid><description>EV3ロボット制御プログラム 現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．
+while(1) {/*** PID controller*/#define white 100#define black 50static float lasterror = 0, integral = 0;static float midpoint = (white - black) / 2 + black;{float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);integral = error + integral * 0.3;float steer = 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</guid><description>EV3ロボット制御プログラム 現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．
 v850版のathrill2を利用される場合は，以下のフォルダで作業してください．
-$ ls ev3rt-athrill-v850e2m/sdk/workspace/line_trace/
-app.c app.h device_config_mmap.txt log.txt memory_mmap.txt unity_mmap.bin
-app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt または
-$ ls ev3rt-athrill-v850e2m/sdk/workspace/color_sensor/
-app.c app.h device_config_mmap.txt log.txt memory_mmap.txt unity_mmap.bin
-app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt 現状は，app.c/main_task で直接制御を行っています．
+$ ls ev3rt-athrill-v850e2m/sdk/workspace/line_trace/app.c app.h device_config_mmap.txt log.txt memory_mmap.txt unity_mmap.binapp.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt または
+$ ls ev3rt-athrill-v850e2m/sdk/workspace/color_sensor/app.c app.h device_config_mmap.txt log.txt memory_mmap.txt unity_mmap.binapp.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt 現状は，app.c/main_task で直接制御を行っています．
 コード断片は以下の通りです．(line_traceの場合)
-while(1) {
-/**
-* PID controller
-*/
-#define white 100
-#define black 10
-static float lasterror = 0, integral = 0;
-static float midpoint = (white - black) / 2 + black;
-{
-float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);
-integral = error + integral * 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityパッケージのダウンロード 単体ロボット向けシミュレータで使用するUnityパッケージを2種類用意してあります． どちらかのパッケージをご選択いただき，ダウンロードを行ってください．
+while(1) {/*** PID controller*/#define white 100#define black 10static float lasterror = 0, integral = 0;static float midpoint = (white - black) / 2 + black;{float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);integral = error + integral * 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityパッケージのダウンロード 単体ロボット向けシミュレータで使用するUnityパッケージを2種類用意してあります． どちらかのパッケージをご選択いただき，ダウンロードを行ってください．
 使用するUnityパッケージ 説明 single-robot-HackEV HackEVを模した走行体モデルを使用しています ev3rt-simple-robot シンプルな走行体モデルを使用しています single-robot-HackEV(v2.0) 上記２つのモデルを含んでおり自由に選択できます single-robot-HackEV(v2.1) single-robot-HackEV(v2.0)の内容に加え，シミュレータのコンフィグ機能，バイナリ実行機能を追加したものとなっております．(Windows, Mac対応済み．Linux版は開発中です) それぞれ下記からダウンロードしてください
 single-robot-HackEV.unitypackage https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v1.0 ev3rt-simple-robot.unitypackage https://github.com/toppers/hakoniwa-Unity-SimpleCar/releases single-robot-HackEV.unitypackage(v2.0) https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.0 single-robot-HackEV.unitypackage(v2.1) (Windows, Mac対応済み) https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.1 使用するUnityのパッケージによって，設定画面のレイアウトが異なりますため，
 ご選択いただいたUnityパッケージに合わせた導入手順をご参照ください
@@ -454,37 +406,15 @@ UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以�
 athrill側のIPアドレス：192.168.11.20
 なお，IPアドレスの確認方法は以下のやり方でわかります．
 お使いのPCがLinux/WSLの場合 ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．
-$ ifconfig
-eth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96
-inet addr:192.168.11.32 Bcast:192.168.11.255 Mask:255.255.255.0
-inet6 addr: fe80::cc6d:70d3:a934:a61b/64 Scope:Unknown
-UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
-RX packets:0 errors:0 dropped:0 overruns:0 frame:0
-TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
-collisions:0
-RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．
-&amp;gt; ipconfig
-Windows IP 構成
-イーサネット アダプター イーサネット:
-リンクローカル IPv6 アドレス.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</guid><description>UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
+$ ifconfigeth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96inet addr:192.168.11.32 Bcast:192.168.11.255 Mask:255.255.255.0inet6 addr: fe80::cc6d:70d3:a934:a61b/64 Scope:UnknownUP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1RX packets:0 errors:0 dropped:0 overruns:0 frame:0TX packets:0 errors:0 dropped:0 overruns:0 carrier:0collisions:0RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．
+&amp;gt; ipconfigWindows IP 構成イーサネット アダプター イーサネット:リンクローカル IPv6 アドレス.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</guid><description>UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
 ※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．
 説明する上でのIPアドレスの構成例 Unity側のIPアドレス：192.168.11.32
 athrill側のIPアドレス：192.168.11.20
 なお，IPアドレスの確認方法は以下のやり方でわかります．
 お使いのPCがLinux/WSLの場合 ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．
-$ ifconfig
-eth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96
-inet addr:192.168.11.32 Bcast:192.168.11.255 Mask:255.255.255.0
-inet6 addr: fe80::cc6d:70d3:a934:a61b/64 Scope:Unknown
-UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
-RX packets:0 errors:0 dropped:0 overruns:0 frame:0
-TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
-collisions:0
-RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．
-&amp;gt; ipconfig
-Windows IP 構成
-イーサネット アダプター イーサネット:
-リンクローカル IPv6 アドレス.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index/</guid><description>単体ロボット向けシミュレータ導入手順 開発プラットフォームとターゲットCPU 開発プラットフォームは，Windows/Linux/Mac です．
+$ ifconfigeth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96inet addr:192.168.11.32 Bcast:192.168.11.255 Mask:255.255.255.0inet6 addr: fe80::cc6d:70d3:a934:a61b/64 Scope:UnknownUP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1RX packets:0 errors:0 dropped:0 overruns:0 frame:0TX packets:0 errors:0 dropped:0 overruns:0 carrier:0collisions:0RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．
+&amp;gt; ipconfigWindows IP 構成イーサネット アダプター イーサネット:リンクローカル IPv6 アドレス.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index/</guid><description>単体ロボット向けシミュレータ導入手順 開発プラットフォームとターゲットCPU 開発プラットフォームは，Windows/Linux/Mac です．
 ターゲットCPUはV850/ARMの2種類が存在します．
 ご自身の環境に合わせて，プラットフォームやターゲットCPUをご選択ください．
 基本的な導入の流れは変わりありませんが，開発プラットフォームやターゲットCPU毎に

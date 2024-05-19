@@ -4,9 +4,11 @@ title = "箱庭"
 theme = "kube"
 description = "IoT／クラウドロボティクス時代の仮想シミュレーション環境"
 Paginate = 4
-GoogleAnalytics = "G-57DLKTNNK8"
 
 DefaultContentLanguage = "ja"
+
+[Services.GoogleAnalytics]
+  ID = "G-57DLKTNNK8"
 
 [languages]
   [languages.ja]

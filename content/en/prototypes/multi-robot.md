@@ -29,7 +29,7 @@ This prototype uses Unity's Photon library to synchronize multiple Unity environ
 
 Various demos are available at the following Github repository. Try them out.
 
-‐ [toppers/hakoniwa-ros-multiplay]("https://github.com/toppers/hakoniwa-ros-multiplay")
+‐ [toppers/hakoniwa-ros-multiplay](https://github.com/toppers/hakoniwa-ros-multiplay)
 
 ### Demonstration of examples
 - Multiple robot collaboration with photon

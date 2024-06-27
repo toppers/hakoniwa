@@ -41,6 +41,21 @@ SWESTとは、大学の研究者や学生、企業の技術者や管理者、そ
 -->
 
 ### 更新情報
+- 2024.06.24
+  - リポジトリの更新リリース情報です。
+    - 箱庭PDUで可変長データを対応しました。そのためPDUの構造が変更になりバージョンをv2系にしています。1系と2系の混在ではPDUの通信ができませんのでご注意ください。他の変更内容については各リポジトリのリリースノートを参照ください。
+    - [hakoniwa-px4sim v2.5.0](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.5.0) (2024.06.25)
+    - [hakoniwa-unity-drone-model v2.1.0](https://github.com/toppers/hakoniwa-unity-drone-model/releases/tag/v2.1.0) (2024.06.25)
+    - [hakoniwa-unity-tb3model v2.0.0](https://github.com/toppers/hakoniwa-unity-tb3model/releases/tag/v2.0.0) (2024.06.23)
+    - [hakoniwa-px4sim v2.4.0](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.4.0) (2024.06.14)
+    - [hakoniwa-bridge v2.0.0](https://github.com/toppers/hakoniwa-bridge/releases/tag/v2.0.0) (2024.06.14)
+    - [hakoniwa-core-cpp-client v2.0.0](https://github.com/toppers/hakoniwa-core-cpp-client/releases/tag/v2.0.0) (2024.06.14)
+    - [hakoniwa-unity-simasset-plugin v2.0.0](https://github.com/toppers/hakoniwa-unity-simasset-plugin/releases/tag/v2.0.0) (2024.06.14)
+    - [hakoniwa-ros2pdu v2.0.0](https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/v2.0.0) (2024.06.14)
+    - v1系のリリースとなります。
+    - [hakoniwa-unity-simasset-plugin v1.0.1](https://github.com/toppers/hakoniwa-unity-simasset-plugin/releases/tag/v1.0.1)
+    - [hakoniwa-ros2pdu v1.1.1](https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/v1.1.1)
+    - [hakoniwa-core-cpp-client v1.3.1](https://github.com/toppers/hakoniwa-core-cpp-client/releases/tag/v1.3.1)
 - 2024.05.16
   - [リポジトリ一覧](/hakoniwa/repositories/)に開発中のリポジトリを追加しました。
 - 2023.07.25

@@ -115,10 +115,11 @@ Project/Prefabs配下にいくつかのロボットモデルを用意してい�
 センサ用ライト LightのRangeで光が届く範囲の距離を，SpotAngleで光が届く範囲の広さを調整できます．</description></item><item><title>チュートリアル</title><link>https://toppers.github.io/hakoniwa/tutorial/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial/</guid><description>箱庭チュートリアル会とは？ 箱庭WGのメンバが持ち回りで担当して、自身の取り組みや最新の動向、そしていろんな野望などなどを、自由に語り尽くします！
 皆さんでフランクに情報交換や議論などできればと思っています。
 本ページでは、チュートリアル会のスライド資料や動画アーカイブなどを公開しています。
-#9 箱庭ドローンシミュレータを徹底解剖！する会 今回のチュートリアル会では、オープンソースを使ったドローンシミュレータの作り方を徹底解説します！ドローンの飛行の仕組みから始めて、必要なソフトウェアや開発環境/ツール類などを一巡りします。フライトコントローラ向けのファームウェアとしては、PX4というオープンソースを使います。物理的な機体の動きの再現は、物理式をベースにイチからC言語でコーディングします。機体の動きのビジュアライズには、個人向けにフリーで利用できるUnityやUnreal Engineを使います。そして、これらの要素技術を組み合わせる仕組みには、箱庭というオープンソースを使います。 開催日：2024/2/15(木) connpassイベントページ https://hakoniwa.connpass.com/event/308790/ 担当： @kanetugu2020 さん、hiranabe さん 動画 (YouTube)
-スライド資料 (SpeakerDeck)
-このページの先頭に戻る
-#8 なんなら宇宙に飛び出すぜ！会 なんなら箱庭は宇宙に飛び出しまっす！！🚀 10月17日(火)-20日(金)に富山で開催された第67回宇宙科学技術連合講演会（通称 宇科連） にて，次の発表を行いました！！ - オープンソース仮想環境「箱庭」を用いた搭載ソフトウェアへの適用 - ○高田 光隆(名大), 細合 晋太郎, 高瀬 英希(東大), 福田 竜也(インテック), 久保秋 真(チェンジビジョン), 森 崇(永和システムマネジメント) - 概要(英文のみ): When using simulations in flight software development, most cases are created on a project-by-project basis or use the environment provided by the platform. We have been researching and developing “Hakoniwa,” a virtual simulation environment for the IoT / Cloud Robotics area.</description></item><item><title>技術情報・発表資料</title><link>https://toppers.github.io/hakoniwa/technical-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/</guid><description>最新の技術情報 Qiita記事 最新の開発状況は、主にQiitaで発信しています。
+箱庭入門会とは？ 主に初めて箱庭に触れる方を対象として、箱庭の全体像やアーキテクチャ、アセットの作成方法などを紹介する会です。 Getting Startedな内容になっていて、自分好みのシミュレーション環境を構築する方法を学ぶことができます。 すでに箱庭を知っている方も復習に最適な連弾シリーズの形式です。 30分程度のミニセミナー形式で下記の項目をひとつずつの内容を進めていき、解説パートは動画アーカイブとして公開しています。
+入門会 #10 ドローンシミュレータのUnity機体をカスタマイズする 箱庭ドローンのUnityワールド/機体をカスタマイズする方法を解説します。 - Unity - Unityシーン/スクリプト - Unityプリミティブ素材、コライダー - Unityアセットストア - Unityプロジェクト - 箱庭 - 箱庭ドローンのUnityプロジェクト - 箱庭ドローンのUnityシーン - 箱庭ドローンのプレハブ - カスタマイズ - 箱庭ワールド - 箱庭ドローン - リポジトリ管理方法 開催日：2024/7/1(月) connpassイベントページ https://hakoniwa.connpass.com/event/323046/ 担当： @kanetugu2020 さん 動画 (YouTube)
+スライド資料 (Docswell)
+Hakoniwa-drone-unity by @kanetugu2015 このページの先頭に戻る
+入門会 #9 ドローンシミュレータをPythonで制御する 箱庭ドローンを操作するPythonプログラムの作成方法を解説します。 - 箱庭ドローン・Python API 操作のユースケース説明 - ユースケース毎のAPI実装方法説明 - 機体を離陸する - 機体の現在位置を取得する - 機体を目的地へ移動する - 機体で荷物を運ぶ - 機体のカメラで撮影する - 機体のレーザセンサ(LiDAR)で周辺の障害物を検出する - 機体を着陸する 開催日：2024/6/26(水) connpassイベントページ https://hakoniwa.</description></item><item><title>技術情報・発表資料</title><link>https://toppers.github.io/hakoniwa/technical-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/</guid><description>最新の技術情報 Qiita記事 最新の開発状況は、主にQiitaで発信しています。
 次のタグやOrganizationをフォローされると、最新情報が得やすくなります．
 tag: 箱庭 tag: athrill tag: mROS organization: TOPPERSプロジェクト なお、Qiita記事では開発途上の試行版であったり古い情報が記載されていることがあります。
 このページの先頭に戻る

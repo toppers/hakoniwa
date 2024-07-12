@@ -13,6 +13,30 @@ toc = true
 
 本ページでは、チュートリアル会のスライド資料や動画アーカイブなどを公開しています。
 
+### #9 箱庭ドローンシミュレータを徹底解剖！する会
+
+```
+今回のチュートリアル会では、オープンソースを使ったドローンシミュレータの作り方を徹底解説します！ドローンの飛行の仕組みから始めて、必要なソフトウェアや開発環境/ツール類などを一巡りします。フライトコントローラ向けのファームウェアとしては、PX4というオープンソースを使います。物理的な機体の動きの再現は、物理式をベースにイチからC言語でコーディングします。機体の動きのビジュアライズには、個人向けにフリーで利用できるUnityやUnreal Engineを使います。そして、これらの要素技術を組み合わせる仕組みには、箱庭というオープンソースを使います。
+```
+
+- 開催日：2024/2/15(木) 
+- connpassイベントページ https://hakoniwa.connpass.com/event/308790/
+- 担当： [@kanetugu2020](https://twitter.com/kanetugu2020) さん、hiranabe さん
+- 動画 (YouTube)  
+{{< rawhtml >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xlg_FIMfOfs?si=qYo9wLcz7xCCWqlZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{{< /rawhtml >}}
+ - スライド資料 (SpeakerDeck)  
+{{< rawhtml >}}
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/f7dc312e2525473ea5f910a09d2bb672?slide=1" title="Mastering Drone Simulation with Hakoniwa: Step-by-Step Guide" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+{{< /rawhtml >}}
+
+{{< rawhtml >}}
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/a50db5a415bf4d4e9b3ebc21274b9d49?slide=1" title="Math, Physics, and Dynamics of Drone in Hakoniwa" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 395;" data-ratio="1.4177215189873418"></iframe>
+{{< /rawhtml >}}
+
+[このページの先頭に戻る](#top)
+
 ### #8 なんなら宇宙に飛び出すぜ！会
 
 ```

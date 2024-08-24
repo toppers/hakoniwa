@@ -20,6 +20,7 @@ images: [""]
 | [hakoniwa-core-cpp-client](https://github.com/toppers/hakoniwa-core-cpp-client) | [箱庭コア機能](/hakoniwa/docs/core)のC言語API |   |
 | [hakoniwa-conductor](https://github.com/toppers/hakoniwa-conductor) | 分散環境における箱庭実現のための調停プロセス |   |
 | [hakoniwa-bridge](https://github.com/toppers/hakoniwa-bridge) | リアル（エッジ）とバーチャル（箱庭）を接続するための通信モジュール |   |
+| [hakoniwa-webserver](https://github.com/toppers/hakoniwa-webserver) | 箱庭PDUをWebSocket経由でブラウザ上で可視化 |   |
 
 ### Athrill
 |略称・リンク|概要|備考|
@@ -37,6 +38,7 @@ images: [""]
 | [ev3rt-athrill-v850e2m](https://github.com/toppers/ev3rt-athrill-v850e2m) | TOPPERS/EV3RTプラットフォームのAthrill向けV850E2M版 | ASP3カーネルを代用  |
 | [ev3rt-athrill-ARMv7-A](https://github.com/toppers/ev3rt-athrill-ARMv7-A) | TOPPERS/EV3RTプラットフォームのAthrill向けARMv7-A版 | ASP3カーネルを代用  |
 | [asp-athrill-mbed](https://github.com/toppers/asp-athrill-mbed) | Athrill向けTOPPERS/ASPカーネルとmbedライブラリのパッケージ |   |
+| [asp3-athrill-v850e2m](https://github.com/toppers/asp3-athrill-v850e2m) | Athrill向けTOPPERS/ASP3カーネルのパッケージ |   |
 
 ### Unity
 |略称・リンク|概要|備考|

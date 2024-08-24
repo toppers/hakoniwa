@@ -6,8 +6,9 @@ draft = false
 +++
 
 ### トピックス・イベント案内
-- 2024年08月10日(土)に **現地開催オフラインイベント** を開催します！
+- 2024年08月10日(土)に **現地開催オフラインイベント** を開催しました
   - **[箱庭まつり #1 〜ドローン！デジタルツイン！箱庭のセカイを体験しよう〜](https://hakoniwa.connpass.com/event/323118/)**
+  - [アーカイブはYoutube](https://youtube.com/playlist?list=PLvZDKbhDfoh1EMBdcNBYH0RV1wSFJycW4&si=twOGQgIgvae_5MpR)からご覧いただけます。
 - 2024年7月11-12日に開催された [EdgeTech+ WEST 2024](https://www.jasa.or.jp/etwest/) のJASA(組込みシステム技術協会)パビリオンにおいてドローンWGの活動で箱庭WGの紹介と活用事例の発表を行いました。
   - [箱庭ドローンシミュレータの紹介と活用事例 ～リアル空間・バーチャル空間を使ったシミュレータの活用～](https://f2ff.jp/introduction/9242?event_id=etexpo-west-2024)
   Speaker:森 崇（箱庭ラボ)
@@ -45,6 +46,20 @@ SWESTとは、大学の研究者や学生、企業の技術者や管理者、そ
 -->
 
 ### 更新情報
+- 2024.08.24
+  - リポジトリの更新リリース情報です。
+    - [hakoniwa-unity-drone-model v2.1.1](https://github.com/toppers/hakoniwa-unity-drone-model/releases/tag/v2.1.1) (2024.08.15)
+    - [hakoniwa-px4sim v2.6.0](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.6.0) (2024.08.07)
+      - Ubuntu 22.0.4の正式対応
+      - ログリプレイ機能の追加
+      - ドローン制御プログラムの評価ツールの追加
+    - [hakoniwa-digital-twin](https://github.com/toppers/hakoniwa-digital-twin/releases/tag/digital-twin-real-model) (2024.07.01)
+  - 新規のリポジトリ情報です。
+    - [hakoniwa-webserver](https://github.com/toppers/hakoniwa-webserver) (2024.08.23)
+      - 箱庭PDUをWebSocket経由でブラウザ上で可視化します。
+    - [baremetal-athrill-v850e2m](https://github.com/toppers/baremetal-athrill-v850e2m) (2024.08.10)
+    - [asp3-athrill-v850e2m](https://github.com/toppers/asp3-athrill-v850e2m) (2024.08.10)
+      - Athrill向けTOPPERS/ASP3カーネルのパッケージ
 - 2024.07.12
   - [チュートリアル](/hakoniwa/tutorial/)のページの情報を更新しました。
   - [チュートリアル](/hakoniwa/tutorial/)のページに箱庭入門会の動画アーカイブと資料を公開しました。

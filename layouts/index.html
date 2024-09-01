@@ -4,11 +4,25 @@
 
 <div id="main">
   <div id="hero">
-    <h1><font color="#0C5AB2">{{.Title}}</font></h1>
+    <h1>
+      <font color="#0C5AB2">{{.Title}}</font>
+    </h1>
     <figure>
       <img alt="HAKONIWA logo" height="128" src="{{ "img/hakoniwa/icon-310x310.png" | relURL }}" width="128">
     </figure>
     <p>{{.Description}}</p>
+  </div>
+  <!-- 箱庭とはの内容を移植 -->
+  <div id="components">
+    <div class="row gutters">
+      {{ range where .Site.RegularPages.ByWeight "Section" "docs" }}
+      <div class="col col-4 item">
+        <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+        <p>{{ .Params.description }}</p>
+      </div>
+      {{ end }}
+
+    </div>
   </div>
   <ul id="post-box">
     {{.Content}}

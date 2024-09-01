@@ -6,6 +6,7 @@ draft = false
 +++
 
 ### トピックス・イベント案内
+
 - 2024年08月10日(土)に **現地開催オフラインイベント** を開催しました
   - **[箱庭まつり #1 〜ドローン！デジタルツイン！箱庭のセカイを体験しよう〜](https://hakoniwa.connpass.com/event/323118/)**
   - [アーカイブはYoutube](https://youtube.com/playlist?list=PLvZDKbhDfoh1EMBdcNBYH0RV1wSFJycW4&si=twOGQgIgvae_5MpR)からご覧いただけます。
@@ -46,6 +47,7 @@ SWESTとは、大学の研究者や学生、企業の技術者や管理者、そ
 -->
 
 ### 更新情報
+
 - 2024.08.24
   - リポジトリの更新リリース情報です。
     - [hakoniwa-unity-drone-model v2.1.1](https://github.com/toppers/hakoniwa-unity-drone-model/releases/tag/v2.1.1) (2024.08.15)
@@ -85,7 +87,7 @@ SWESTとは、大学の研究者や学生、企業の技術者や管理者、そ
 - 2023.07.23
   - 箱庭WGにおける研究開発の成果が[日本ロボット学会誌](https://www.rsj.or.jp/pub/jrsj/about.html)にレター論文として採録されました！
     - 高瀬 英希, 細合 晋太郎, 福田 竜也, 高田 光隆, 久保秋 真, 森 崇, **hakoniwa-ros2sim：仮想環境を活用したROS 2アプリケーションのシミュレーション手法**, 日本ロボット学会誌, 2023年41巻4号, pp. 399-402 (2023).
-    - 論文公開先： https://www.jstage.jst.go.jp/article/jrsj/41/4/41_41_399/_article/-char/ja
+    - 論文公開先： <https://www.jstage.jst.go.jp/article/jrsj/41/4/41_41_399/_article/-char/ja>
   - 箱庭WGの活動成果「箱庭上でROS 2プログラムを手軽にシミュレーションできるhakoniwa-ros2simの一般公開」が TOPPERS of the YEAR 2023 を受賞しました！
   - 2022年6月30日(金)に開催された[TOPPERSカンファレンス2023の講演資料・動画](/hakoniwa/technical-links/#toppersカンファレンス2023)を掲載しました。
 - 2023.01.07
@@ -175,4 +177,3 @@ SWESTとは、大学の研究者や学生、企業の技術者や管理者、そ
   - 2020年7月18日(土)に開催された[ETロボコン向け TOPPERS活用セミナー](/hakoniwa/technical-links/#2020年度-etロボコン向け-toppers活用セミナー)の動画アーカイブと講演資料を公開しました。
 - 2020.06.12
   - 箱庭のWebサイトを立ち上げました。
-

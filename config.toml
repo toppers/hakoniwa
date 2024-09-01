@@ -45,10 +45,10 @@ DefaultContentLanguage = "ja"
   images = ["img/hakoniwa/icon-310x310.png"]
   facebookAppId = "3035581286538848"
 
-[[menu.main]]
-    name = "箱庭とは"
-    weight = -100
-    url = "/docs/"
+# [[menu.main]]
+#     name = "箱庭とは"
+#     weight = -100
+#     url = "/docs/"
 [[menu.main]]
     name = "プロトタイプモデル"
     weight = -90

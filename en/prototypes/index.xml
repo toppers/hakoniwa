@@ -1,5 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Prototype models on Hakoniwa</title><link>https://toppers.github.io/hakoniwa/en/prototypes/</link><description>Recent content in Prototype models on Hakoniwa</description><generator>Hugo</generator><language>en</language><atom:link href="https://toppers.github.io/hakoniwa/en/prototypes/index.xml" rel="self" type="application/rss+xml"/><item><title>Microcomputer-controlled robot simulation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/single-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/single-robot/</guid><description>This is a Hakoniwa prototype model with one SBC, designed based on the challenges of ET Robocon. This prototype can verify by linking the program&amp;rsquo;s behavior on the embedded microcontroller with the robot&amp;rsquo;s behavior.
-Design intent from a technical study perspective Study on how to integrate between physical simulators and microcomputer simulators Study of time synchronization between different simulators Other design intent Promote Hakoniwa to ET Robot contenst participants (PR activities) Installation &amp;amp; Usage A trial package with minimal configuration and procedures is available in the GitHub repository below.</description></item><item><title>ROS controlled robot simulation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/ros-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/ros-robot/</guid><description>This prototype model uses ROS/ROS2 to collaborate with multiple and single robots. This prototype is lighter than Gazebo, often used with ROS, and allows for easy customization of robots and environments in Unity and the introduction of URDF format models.
-Design intent from a technical study perspective Running simulations using ROS, which is commonly used for robot control Study on how to coordinate with other robots Other design intent Introduce robots controlled by ROS to create a simulation environment that mixes multiple control mechanisms Installation &amp;amp; Usage A trial package with minimal configuration and procedures is available in the GitHub repository below.</description></item><item><title>Simulation of collaborative operation of multiple robots</title><link>https://toppers.github.io/hakoniwa/en/prototypes/multi-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/multi-robot/</guid><description>This prototype model simulates multiple robots and control programs in the same environment. This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Unity environments and even time synchronization among assets and uses VR technology to dive into the simulation environment for verification.
-Design intent from a technical study perspective Study of methods of collaboration in multiple environments (e.g., simulation time synchronization) Study on how visualize communication among Hakoniwa assets (including ROS/ROS2 collaboration)/ROS2連携含む） Study of mechanisms to augment Hakoniwa assets Other design intent Promote Hakoniwa to the ROS user base (PR activities) Installation &amp;amp; Usage Various demos are available at the following Github repository.</description></item><item><title>Simulation of inter-robot cooperative operation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/harmony-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/harmony-robot/</guid><description>This is a Hakoniwa prototype model for integration of cloud computing and robotics.
-Design intent from a technical study perspective Study of specific methods of cloud computing integration Study on how to coordinate with other robots (challenge to more complex robot operation/interference) Study of mechanisms to augment Hakoniwa assets Other design intent Interaction with RDBOX ( establish a track record of Hakoniwa as a development virtual environment) Promote Hakoniwa to the RDBOX user base (PR activities) The prototype model is currently under development.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Prototype models on Hakoniwa</title><link>https://toppers.github.io/hakoniwa/en/prototypes/</link><description>Recent content in Prototype models on Hakoniwa</description><generator>Hugo</generator><language>en</language><atom:link href="https://toppers.github.io/hakoniwa/en/prototypes/index.xml" rel="self" type="application/rss+xml"/><item><title>Microcomputer-controlled robot simulation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/single-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/single-robot/</guid><description>&lt;p>This is a Hakoniwa prototype model with one SBC, designed based on the challenges of &lt;a href="https://www.etrobo.jp/">ET Robocon&lt;/a>.
+This prototype can verify by linking the program&amp;rsquo;s behavior on the embedded microcontroller with the robot&amp;rsquo;s behavior.&lt;/p>
+&lt;h3 id="design-intent-from-a-technical-study-perspective">Design intent from a technical study perspective&lt;/h3>
+&lt;ul>
+&lt;li>Study on how to integrate between physical simulators and microcomputer simulators&lt;/li>
+&lt;li>Study of time synchronization between different simulators&lt;/li>
+&lt;/ul>
+&lt;h3 id="other-design-intent">Other design intent&lt;/h3>
+&lt;ul>
+&lt;li>Promote Hakoniwa to ET Robot contenst participants (PR activities)&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelA.en.png " border="" width="700" />
+&lt;/figure>
+
+&lt;h3 id="installation--usage">Installation &amp;amp; Usage&lt;/h3>
+&lt;p>A trial package with minimal configuration and procedures is available in the GitHub repository below.
+We encourage you to try it out.&lt;/p></description></item><item><title>ROS controlled robot simulation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/ros-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/ros-robot/</guid><description>&lt;p>This prototype model uses ROS/ROS2 to collaborate with multiple and single robots.
+This prototype is lighter than Gazebo, often used with ROS, and allows for easy customization of robots and environments in Unity and the introduction of URDF format models.&lt;/p>
+&lt;h3 id="design-intent-from-a-technical-study-perspective">Design intent from a technical study perspective&lt;/h3>
+&lt;ul>
+&lt;li>Running simulations using ROS, which is commonly used for robot control&lt;/li>
+&lt;li>Study on how to coordinate with other robots&lt;/li>
+&lt;/ul>
+&lt;h3 id="other-design-intent">Other design intent&lt;/h3>
+&lt;ul>
+&lt;li>Introduce robots controlled by ROS to create a simulation environment that mixes multiple control mechanisms&lt;/li>
+&lt;/ul>
+&lt;h3 id="installation--usage">Installation &amp;amp; Usage&lt;/h3>
+&lt;p>A trial package with minimal configuration and procedures is available in the GitHub repository below.
+We encourage you to try it out.&lt;/p></description></item><item><title>Simulation of collaborative operation of multiple robots</title><link>https://toppers.github.io/hakoniwa/en/prototypes/multi-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/multi-robot/</guid><description>&lt;p>This prototype model simulates multiple robots and control programs in the same environment.
+This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Unity environments and even time synchronization among assets and uses VR technology to dive into the simulation environment for verification.&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelBoverview.en.png " border="" width="700" />
+&lt;/figure>
+
+&lt;h3 id="design-intent-from-a-technical-study-perspective">Design intent from a technical study perspective&lt;/h3>
+&lt;ul>
+&lt;li>Study of methods of collaboration in multiple environments (e.g., simulation time synchronization)&lt;/li>
+&lt;li>Study on how visualize communication among Hakoniwa assets (including ROS/ROS2 collaboration)/ROS2連携含む）&lt;/li>
+&lt;li>Study of mechanisms to augment Hakoniwa assets&lt;/li>
+&lt;/ul>
+&lt;h3 id="other-design-intent">Other design intent&lt;/h3>
+&lt;ul>
+&lt;li>Promote Hakoniwa to the ROS user base (PR activities)&lt;/li>
+&lt;/ul>
+&lt;h3 id="installation--usage">Installation &amp;amp; Usage&lt;/h3>
+&lt;p>Various demos are available at the following Github repository. Try them out.&lt;/p></description></item><item><title>Simulation of inter-robot cooperative operation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/harmony-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/harmony-robot/</guid><description>&lt;p>This is a Hakoniwa prototype model for integration of cloud computing and robotics.&lt;/p>
+&lt;h3 id="design-intent-from-a-technical-study-perspective">Design intent from a technical study perspective&lt;/h3>
+&lt;ul>
+&lt;li>Study of specific methods of cloud computing integration&lt;/li>
+&lt;li>Study on how to coordinate with other robots (challenge to more complex robot operation/interference)&lt;/li>
+&lt;li>Study of mechanisms to augment Hakoniwa assets&lt;/li>
+&lt;/ul>
+&lt;h3 id="other-design-intent">Other design intent&lt;/h3>
+&lt;ul>
+&lt;li>Interaction with RDBOX ( establish a track record of Hakoniwa as a development virtual environment)&lt;/li>
+&lt;li>Promote Hakoniwa to the RDBOX user base (PR activities)&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelC.en.png " border="" width="700" />
+&lt;/figure>
+
+&lt;p>The prototype model is currently under development. So please wait for its release.&lt;/p></description></item></channel></rss>

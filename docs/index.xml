@@ -1,26 +1,165 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>箱庭とは on 箱庭</title><link>https://toppers.github.io/hakoniwa/docs/</link><description>Recent content in 箱庭とは on 箱庭</description><generator>Hugo</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>技術的背景</title><link>https://toppers.github.io/hakoniwa/docs/background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/background/</guid><description>IoT (Internet of Things) は，情報技術の総合格闘技と言えます．
-IoTシステムは，多様かつ大量の情報機器が，ネットワーク通信を介して密接に絡み合っています． 様々な技術分野から多くの技術者が集まり，みんなで英知を結集してIoTシステムを構築する必要があります．
-例えば自動運転システムの例を考えてみましょう．このように様々な技術領域を横断しています．
-組込み系 自動運転の判断処理を実現するソフトウェアの開発 ECU間の通信機構の開発 制御系 メカやエレキを制御するECUハードウェアの開発 IT・ネットワーク系 Web UI・スマホアプリケーションの開発 ビッグデータの統計処理を担うクラウドサーバの管理・保守 車車間・機器間の効率的な通信制御の実現 アプリケーション系 配車管理や交通流管理アプリの開発 このようなIoTシステムを構築する際の課題として，下記が考えられます．
-問題発生経路の複雑化 全体結合しないと見えない問題が多数潜んでいる 様々な機器間の整合性を取れない 原因調査の複雑化 どこで何がおこっているのか調査困難 そもそもデバッグすること自体が難しい 実証実験のコスト増 実証実験は手軽に実施できない 各分野のエンジニアの総動員 手間，時間，費用がかかる 次に，ロボットを活用したIoTサービスの構築時に起こりえる課題を考えてみましょう．
-ロボットをどう組み合わせると，効果的な新しいサービスを創出できるかわからない 新しいサービスを検討するにしても，実物のロボットでは準備・手間がかかりすぎる 頻繁に変更されるシステム要件に対して，変更適用に時間がかかる 実証実験時には結合トラブルが頻発する 「箱庭」は，このような技術的課題を解決し，IoTのシステム開発／サービス構築を加速化することができるプラットフォームとなること目指します．</description></item><item><title>コンセプト</title><link>https://toppers.github.io/hakoniwa/docs/concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/concept/</guid><description>箱庭のコンセプトは 「箱の中に，様々なモノをみんなの好みで配置して，いろいろ試せる！」 です．
-IoTや自動運転システム，クラウドロボティクスシステムを開発する際に，仮想環境である箱庭上に様々なソフトウェアやサービスを持ち寄って，机上で実証実験できる場を提供します．
-想定している利用シーンは，多様な分野から技術者が集まるIoTシステムの開発現場です． IoTの各要素が連携される複雑なシステムの事象や状態を，「箱」の中ではシナリオに応じた同じ挙動が再現されるようにします． そして，箱庭のシステム構成要素である「アセット」を差し替えることで，検証の対象／抽象度／レベルを任意に変更することができます． また，システム環境の視点（評価観点）や抽象度を，各技術者の分野や立場に応じて切り替えられるようにします．
-なお箱庭の語源は，名園や山水を模したミニチュアの庭園に由来します． 盆景や盆栽に類するもので，江戸時代後半から明治時代にかけて流行したといわれています．</description></item><item><title>目指すところ</title><link>https://toppers.github.io/hakoniwa/docs/aimat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/aimat/</guid><description>大規模かつ複雑なIoTシステムを開発／提供する技術者のための シミュレーション環境とエコシステム を構築することを目指しています．
-箱庭のターゲットは，様々な機器がネットワークで接続された情報システムです． 自動運転や物流，宇宙分野など，IoTの様々な分野を想定しています．
-箱庭は，次の利用者のための環境です．
-システム開発者：IoTシステムとその構成要素を開発する技術者 サービス提供者：IoTを活用してシステムサービスの提供を進める技術者 箱庭アセットの開発者および提供者 アセットとは，箱庭のシステム構成要素のことを指します． 箱庭プロジェクトの目指す強みと新しさとしては，IoTの各要素である箱庭アセットをそれぞれ連携させて，対象システムを任意の精度で検証可能とすることです． そして，箱庭の利用者の技術領域や評価対象に応じて，アセットを差し替えることで，検証の対象／抽象度／レベルを任意に変更できるようにします．</description></item><item><title>箱庭コア技術</title><link>https://toppers.github.io/hakoniwa/docs/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/core/</guid><description>箱庭の核となるカーネルは，次の4種類であると考えています．
-スケジューリング 同期・通信 時間管理 アセット管理 また，箱庭コア機能が備えるべき重要な機能特性は，次のものがあると考えています．
-コンポーネント化 可視化 イベント駆動化 自動化 箱庭のコア機能と機能特性については，プロトタイプモデルの開発を進めながら，WG内での設計検討を続けているところです． 詳細が固まりましたら，追って解説を加えていきます．</description></item><item><title>技術要素</title><link>https://toppers.github.io/hakoniwa/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/technical/</guid><description>TOPPERSカーネル TOPPERSプロジェクトにより開発されている，μITRON4.0仕様のスタンダードプロファイルを拡張した，オープンソースのリアルタイムカーネルです． 主な適用対象は，高い信頼性・安全性・リアルタイム性を要求される組込みシステムです．
-Athrill 箱庭の核である，CPU命令セットシミュレータです． 箱庭WGメンバが中心となって開発を進めています．組込みマイコンおよびペリフェラルの挙動を命令レベルでデバッグ・機能検証することができます．現在はV850/RH850およびARMv7-Aが主なサポート対象です．
-TOPPERSライセンスのもと，オープンソースで開発を進めています．
-https://github.com/toppers/athrill mROS ROS(Robot Operating System)の組込み向け軽量実行環境です．ホストPC上のROSマスタおよびROSノードに対する，組込みマイコンからの出版購読型通信を実現します．東京大学 情報理工学系研究科 システム情報第8研究室が中心となって開発を進めています． 複数ロボットの連携制御シミュレーションのようなシステムでの活用を想定しています．
-https://github.com/mROS-base RDBOX RDBOX (Robotics Developers BOX)は，ROSロボットやIoTに最適化した，Kubernetesクラスタとセキュアで拡張性の高いWi-Fiネットワークを自動構築するためのフレームワークです．シミュレーション環境と現実の作業環境をブリッジすることを目指しています．株式会社インテックのRDBOX Projectで開発されています． ロボット間協調動作向けプロトタイプモデルの構築において，箱庭との連携を進めています．
-https://github.com/rdbox-intec/rdbox Unity リアルタイム3D開発プラットフォームです．IDEを内蔵するゲームエンジンとして有名です． 箱庭では，物理演算エンジンと空間可視化のために活用しています．
-https://unity.com/ 箱庭WGでは，この他にも，IoT／クラウドロボティクス時代の仮想環境を確立するために，統合すべき技術要素を模索しているところです．
-シナジーが生まれそうな技術や，活用できそうな知見をお持ちの方がいましたら，ぜひお知らせください．
-注： このウェブページは，ユニティ テクノロジーズまたはその関連会社がスポンサーとなったり，ユニティ テクノロジーズまたはその関連会社と提携しているものではありません． このサイトに掲載された Unity の登録商標一覧に含まれる Unity の登録商標はすべて，ユニティ テクノロジーズまたはその米国や他の国々に所在する関連会社の登録商標または商標です．</description></item><item><title>ロードマップ</title><link>https://toppers.github.io/hakoniwa/docs/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/roadmap/</guid><description>箱庭は 「でっかく語って少しずつ育てて」 います．
-現在のプロジェクトの活動の中心としては，コンセプトの実現と技術研鑽のためにプロトタイプモデルを構築中です． これらの研究開発は，すべてOSSとして公開しながら進めていきます． 皆さまにそれぞれのプロトタイプモデルをご利用いただき，そしてフィードバックを得ながら，箱庭コア技術の成熟と様々な機能拡充を進めていきたいと考えています．
-箱庭プロジェクトは，まずは教育用途でのパッケージ構築と普及を図っていますが，製品開発への展開も視野に入れて研究開発を進めています． 壮大な構想を掲げていますが，全くマンパワーは足りていないのが実情です． 箱庭の成長のためにも，特にクラウド技術や可視化アセット開発に知見をお持ちの方に参画いただきたいと考えています．
-箱庭WGの狙いや趣旨にご賛同いただける方の参画をお待ちしています． 活動としては，月１回のオンラインでの定例会合と、年２回の技術検討合宿を実施しています． また，日常的な議論や情報共有と開発にはSlack，GitHubおよびGoogle Driveを活用しています．
-Slack等での議論に参加したい方，活動内容へのご要望をお持ちの方，コア技術や各アセットの開発などに参加したい方， 箱庭WGの活動で期待される技術成果を活用したい方，製品開発に展開してみたい方， ぜひとも問合せ先よりご連絡ください．</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>箱庭とは on 箱庭</title><link>https://toppers.github.io/hakoniwa/docs/</link><description>Recent content in 箱庭とは on 箱庭</description><generator>Hugo</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>技術的背景</title><link>https://toppers.github.io/hakoniwa/docs/background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/background/</guid><description>&lt;p>IoT (Internet of Things) は，情報技術の総合格闘技と言えます．&lt;br>
+IoTシステムは，多様かつ大量の情報機器が，ネットワーク通信を介して密接に絡み合っています．
+様々な技術分野から多くの技術者が集まり，みんなで英知を結集してIoTシステムを構築する必要があります．&lt;/p>
+&lt;p>例えば自動運転システムの例を考えてみましょう．このように様々な技術領域を横断しています．&lt;/p>
+&lt;ul>
+&lt;li>組込み系
+&lt;ul>
+&lt;li>自動運転の判断処理を実現するソフトウェアの開発&lt;/li>
+&lt;li>ECU間の通信機構の開発&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>制御系
+&lt;ul>
+&lt;li>メカやエレキを制御するECUハードウェアの開発&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>IT・ネットワーク系
+&lt;ul>
+&lt;li>Web UI・スマホアプリケーションの開発&lt;/li>
+&lt;li>ビッグデータの統計処理を担うクラウドサーバの管理・保守&lt;/li>
+&lt;li>車車間・機器間の効率的な通信制御の実現&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>アプリケーション系
+&lt;ul>
+&lt;li>配車管理や交通流管理アプリの開発&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/back1.png " border="" width="600" />
+&lt;/figure>
+
+&lt;p>このようなIoTシステムを構築する際の課題として，下記が考えられます．&lt;/p>
+&lt;ul>
+&lt;li>問題発生経路の複雑化
+&lt;ul>
+&lt;li>全体結合しないと見えない問題が多数潜んでいる&lt;/li>
+&lt;li>様々な機器間の整合性を取れない&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>原因調査の複雑化
+&lt;ul>
+&lt;li>どこで何がおこっているのか調査困難&lt;/li>
+&lt;li>そもそもデバッグすること自体が難しい&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>実証実験のコスト増
+&lt;ul>
+&lt;li>実証実験は手軽に実施できない&lt;/li>
+&lt;li>各分野のエンジニアの総動員&lt;/li>
+&lt;li>手間，時間，費用がかかる&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>次に，ロボットを活用したIoTサービスの構築時に起こりえる課題を考えてみましょう．&lt;/p></description></item><item><title>コンセプト</title><link>https://toppers.github.io/hakoniwa/docs/concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/concept/</guid><description>&lt;p>箱庭のコンセプトは &lt;strong>「箱の中に，様々なモノをみんなの好みで配置して，いろいろ試せる！」&lt;/strong> です．&lt;/p>
+&lt;p>IoTや自動運転システム，クラウドロボティクスシステムを開発する際に，仮想環境である箱庭上に様々なソフトウェアやサービスを持ち寄って，机上で実証実験できる場を提供します．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/concept1.png " border="" width="700" />
+&lt;/figure>
+
+&lt;p>想定している利用シーンは，多様な分野から技術者が集まるIoTシステムの開発現場です． &lt;br>
+IoTの各要素が連携される複雑なシステムの事象や状態を，「箱」の中ではシナリオに応じた同じ挙動が再現されるようにします．
+そして，箱庭のシステム構成要素である「アセット」を差し替えることで，検証の対象／抽象度／レベルを任意に変更することができます．
+また，システム環境の視点（評価観点）や抽象度を，各技術者の分野や立場に応じて切り替えられるようにします．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/concept2.png " border="" width="600" />
+&lt;/figure>
+
+&lt;p>なお箱庭の語源は，名園や山水を模したミニチュアの庭園に由来します．
+盆景や盆栽に類するもので，江戸時代後半から明治時代にかけて流行したといわれています．&lt;/p></description></item><item><title>目指すところ</title><link>https://toppers.github.io/hakoniwa/docs/aimat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/aimat/</guid><description>&lt;p>大規模かつ複雑なIoTシステムを開発／提供する技術者のための &lt;strong>シミュレーション環境とエコシステム&lt;/strong> を構築することを目指しています．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/aimat1.png " border="" width="700" />
+&lt;/figure>
+
+&lt;p>箱庭のターゲットは，様々な機器がネットワークで接続された情報システムです．
+自動運転や物流，宇宙分野など，IoTの様々な分野を想定しています．&lt;/p>
+&lt;p>箱庭は，次の利用者のための環境です．&lt;/p>
+&lt;ul>
+&lt;li>システム開発者：IoTシステムとその構成要素を開発する技術者&lt;/li>
+&lt;li>サービス提供者：IoTを活用してシステムサービスの提供を進める技術者&lt;/li>
+&lt;li>箱庭アセットの開発者および提供者
+&lt;ul>
+&lt;li>アセットとは，箱庭のシステム構成要素のことを指します．&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>箱庭プロジェクトの目指す強みと新しさとしては，IoTの各要素である箱庭アセットをそれぞれ連携させて，対象システムを&lt;strong>任意の精度で検証可能&lt;/strong>とすることです．
+そして，箱庭の利用者の技術領域や評価対象に応じて，アセットを差し替えることで，&lt;strong>検証の対象／抽象度／レベルを任意に変更できる&lt;/strong>ようにします．&lt;/p></description></item><item><title>箱庭コア技術</title><link>https://toppers.github.io/hakoniwa/docs/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/core/</guid><description>&lt;p>箱庭の核となるカーネルは，次の4種類であると考えています．&lt;/p>
+&lt;ol>
+&lt;li>スケジューリング&lt;/li>
+&lt;li>同期・通信&lt;/li>
+&lt;li>時間管理&lt;/li>
+&lt;li>アセット管理&lt;/li>
+&lt;/ol>
+&lt;p>また，箱庭コア機能が備えるべき重要な機能特性は，次のものがあると考えています．&lt;/p>
+&lt;ol>
+&lt;li>コンポーネント化&lt;/li>
+&lt;li>可視化&lt;/li>
+&lt;li>イベント駆動化&lt;/li>
+&lt;li>自動化&lt;/li>
+&lt;/ol>
+&lt;p>箱庭のコア機能と機能特性については，&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes/">プロトタイプモデル&lt;/a>の開発を進めながら，WG内での設計検討を続けているところです．
+詳細が固まりましたら，追って解説を加えていきます．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/core1.png " border="" width="700" />
+&lt;/figure></description></item><item><title>技術要素</title><link>https://toppers.github.io/hakoniwa/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/technical/</guid><description>&lt;h3 id="toppersカーネル">TOPPERSカーネル&lt;/h3>
+&lt;p>&lt;a href="https://toppers.jp">TOPPERSプロジェクト&lt;/a>により開発されている，μITRON4.0仕様のスタンダードプロファイルを拡張した，オープンソースのリアルタイムカーネルです．
+主な適用対象は，高い信頼性・安全性・リアルタイム性を要求される組込みシステムです．&lt;/p>
+&lt;p>&lt;a href="https://toppers.jp/">&lt;img alt="TOPPERS" src="https://www.toppers.jp/imgs/logo.gif">&lt;/a>&lt;/p>
+&lt;h3 id="athrill">Athrill&lt;/h3>
+&lt;p>箱庭の核である，CPU命令セットシミュレータです． &lt;br>
+箱庭WGメンバが中心となって開発を進めています．組込みマイコンおよびペリフェラルの挙動を命令レベルでデバッグ・機能検証することができます．現在はV850/RH850およびARMv7-Aが主なサポート対象です．&lt;/p>
+&lt;p>TOPPERSライセンスのもと，オープンソースで開発を進めています．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/toppers/athrill">https://github.com/toppers/athrill&lt;/a>&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;a href="https://github.com/toppers/athrill ">
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/athrill.png " border="" width="200" />
+ &lt;/a>
+&lt;/figure>
+
+&lt;h3 id="mros">mROS&lt;/h3>
+&lt;p>ROS(Robot Operating System)の組込み向け軽量実行環境です．ホストPC上のROSマスタおよびROSノードに対する，組込みマイコンからの出版購読型通信を実現します．&lt;a href="http://www.hal.ipc.i.u-tokyo.ac.jp">東京大学 情報理工学系研究科 システム情報第8研究室&lt;/a>が中心となって開発を進めています． &lt;br>
+&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes/multi-robot">複数ロボットの連携制御シミュレーション&lt;/a>のようなシステムでの活用を想定しています．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/mROS-base">https://github.com/mROS-base&lt;/a>&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;a href="https://github.com/mROS-base ">
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/mROS.png " border="" width="300" />
+ &lt;/a>
+&lt;/figure>
+
+&lt;h3 id="rdbox">RDBOX&lt;/h3>
+&lt;p>RDBOX (Robotics Developers BOX)は，ROSロボットやIoTに最適化した，Kubernetesクラスタとセキュアで拡張性の高いWi-Fiネットワークを自動構築するためのフレームワークです．シミュレーション環境と現実の作業環境をブリッジすることを目指しています．株式会社インテックの&lt;a href="https://rdbox-intec.github.io/homepage_jp/">RDBOX Project&lt;/a>で開発されています． &lt;br>
+&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes/harmony-robot">ロボット間協調動作向けプロトタイプモデル&lt;/a>の構築において，箱庭との連携を進めています．&lt;/p></description></item><item><title>ロードマップ</title><link>https://toppers.github.io/hakoniwa/docs/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/roadmap/</guid><description>&lt;p>箱庭は &lt;strong>「でっかく語って少しずつ育てて」&lt;/strong> います．&lt;/p>
+&lt;p>現在のプロジェクトの活動の中心としては，コンセプトの実現と技術研鑽のために&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes">プロトタイプモデル&lt;/a>を構築中です．
+これらの研究開発は，すべてOSSとして公開しながら進めていきます．
+皆さまにそれぞれのプロトタイプモデルをご利用いただき，そしてフィードバックを得ながら，箱庭コア技術の成熟と様々な機能拡充を進めていきたいと考えています．&lt;/p>
+&lt;p>&lt;img alt="roadmap" src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/roadmap1.png">&lt;/p>
+&lt;p>箱庭プロジェクトは，まずは教育用途でのパッケージ構築と普及を図っていますが，製品開発への展開も視野に入れて研究開発を進めています．
+壮大な構想を掲げていますが，全くマンパワーは足りていないのが実情です．
+箱庭の成長のためにも，特にクラウド技術や可視化アセット開発に知見をお持ちの方に参画いただきたいと考えています．&lt;/p>
+&lt;p>箱庭WGの狙いや趣旨にご賛同いただける方の参画をお待ちしています．
+活動としては，月１回のオンラインでの定例会合と、年２回の技術検討合宿を実施しています．
+また，日常的な議論や情報共有と開発にはSlack，GitHubおよびGoogle Driveを活用しています．&lt;/p>
+&lt;p>Slack等での議論に参加したい方，活動内容へのご要望をお持ちの方，コア技術や各アセットの開発などに参加したい方，
+箱庭WGの活動で期待される技術成果を活用したい方，製品開発に展開してみたい方，
+ぜひとも&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/contact/">問合せ先&lt;/a>よりご連絡ください．&lt;/p></description></item></channel></rss>

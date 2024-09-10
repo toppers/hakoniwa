@@ -1,427 +1,1874 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>箱庭</title><link>https://toppers.github.io/hakoniwa/</link><description>Recent content on 箱庭</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sat, 14 May 2022 13:26:38 +0900</lastBuildDate><atom:link href="https://toppers.github.io/hakoniwa/index.xml" rel="self" type="application/rss+xml"/><item><title>箱庭のアーキテクチャ</title><link>https://toppers.github.io/hakoniwa/getting-started/architecture-overview/</link><pubDate>Sat, 14 May 2022 13:26:27 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/architecture-overview/</guid><description>前提環境 箱庭 ROS シミュレータ:hakoniwa-ros2sim を例題に解説するため、このチュートリアルが終わっておりプロジェクトが参照できることが望ましいです。
-ROS向け箱庭のシステム構成 ros2simのプロジェクトでは、Unity上のTortleBot3(tb3)をROS2のアプリから制御するシミュレーションを行います。 以下にWindows/WSL2でのシステム構成を示しています。大まかには制御対象であるUnity上のtb3とそれを制御するtb3ctrlがROSで通信しています。
-フォルダ構成 githubからCloneしたプロジェクトのフォルダ構成は以下のようになっています。主に/ros2/workspace, /ros2/unityを扱えばよく、 他のフォルダは本説明には含まれないため一旦無視してください。
-hakowani-ros2sim/ ros2/ workspace/ : ROSのワークスペース。Docker上にマウントされる unity/tb3/ : Unityのプロジェクト workspace/はROSのワークスペースで、ここに制御用のROSアプリを作成します。src下にはいくつかアプリが入っていますが、 tb3ロボットを制御しているのはtb3フォルダ下のソースとなります。 プログラムを修正した場合はbash build.bashを行うことでビルドされアプリが更新されます。
-unity/はUnityプロジェクトが入っており、Unity Editorからtb3フォルダを開くと読み込めます。 cloneしたすぐの状態では、すべてのアセットは揃っておらずhako-install.bashによって必要なアセットのダウンロードや設定を行います。
-チュートリアルでの操作による挙動 $ bash docker/pull-image.bash : 本プロジェクトで用いるROSが入ったDockerイメージの取得を行っています。 $ bash docker/run.bash : 取得したDockerのコンテナを作成しbashでログインします。またこの時カレントディレクトリにworkspace以下をマウントしています。 # bash hako-install.bash : unityフォルダにUnityのプロジェクトを展開すると共に、ROSと繋ぐための初期設定を行います。 (Terminal A)$ bash run.bash : Dockerコンテナを起動しbashでログインします。 (Terminal A)# bash launch.bash : UnityとROSで通信するための、ROS-TCP-Endpointを起動します。またUnityプロジェクトにはこのプログラムと対になる (Terminal B)$ bash attach.bash : Terminal Aで立ち上げたコンテナに入ります。 (Terminal B)# bash run.bash : ロボットを制御するROSアプリのtb3ctrlを実行します。このプログラムのソースはworkspace/src/tb3/src/tb3ctrl.cppです。</description></item><item><title>Technical Background</title><link>https://toppers.github.io/hakoniwa/en/docs/background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/background/</guid><description>The Internet of Things (IoT) is the mixed martial art of information technology. It is because IoT systems are composed of diverse and large numbers of information devices that are intricately intertwined through network communications, requiring many engineers from various technical fields to gather together and pool their wisdom to build an IoT system.
-Consider, as an example, an autonomous driving system. It crosses various technical domains as follows.
-Embedded Systems Development of autonomous determination software for driving Development of communication system between ECUs Control Systems Development of ECU hardware to control mechanical and electrical systems IT &amp;amp; Network Development of Web UI and smartphone applications Management and maintenance of cloud servers for statistical processing of big data Realization of efficient inter-vehicle and inter-device communication control application Systems Development of vehicle assignment management and traffic flow management applications However, we face the following challenges to realizing such an IoT system.</description></item><item><title>技術的背景</title><link>https://toppers.github.io/hakoniwa/docs/background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/background/</guid><description>IoT (Internet of Things) は，情報技術の総合格闘技と言えます．
-IoTシステムは，多様かつ大量の情報機器が，ネットワーク通信を介して密接に絡み合っています． 様々な技術分野から多くの技術者が集まり，みんなで英知を結集してIoTシステムを構築する必要があります．
-例えば自動運転システムの例を考えてみましょう．このように様々な技術領域を横断しています．
-組込み系 自動運転の判断処理を実現するソフトウェアの開発 ECU間の通信機構の開発 制御系 メカやエレキを制御するECUハードウェアの開発 IT・ネットワーク系 Web UI・スマホアプリケーションの開発 ビッグデータの統計処理を担うクラウドサーバの管理・保守 車車間・機器間の効率的な通信制御の実現 アプリケーション系 配車管理や交通流管理アプリの開発 このようなIoTシステムを構築する際の課題として，下記が考えられます．
-問題発生経路の複雑化 全体結合しないと見えない問題が多数潜んでいる 様々な機器間の整合性を取れない 原因調査の複雑化 どこで何がおこっているのか調査困難 そもそもデバッグすること自体が難しい 実証実験のコスト増 実証実験は手軽に実施できない 各分野のエンジニアの総動員 手間，時間，費用がかかる 次に，ロボットを活用したIoTサービスの構築時に起こりえる課題を考えてみましょう．
-ロボットをどう組み合わせると，効果的な新しいサービスを創出できるかわからない 新しいサービスを検討するにしても，実物のロボットでは準備・手間がかかりすぎる 頻繁に変更されるシステム要件に対して，変更適用に時間がかかる 実証実験時には結合トラブルが頻発する 「箱庭」は，このような技術的課題を解決し，IoTのシステム開発／サービス構築を加速化することができるプラットフォームとなること目指します．</description></item><item><title>Concept</title><link>https://toppers.github.io/hakoniwa/en/docs/concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/concept/</guid><description>The concept of Hakoniwa is &amp;ldquo;Put mixed things as you like, and try various concepts with ease !&amp;rdquo;
-We provide a virtual environment, which makes it easy to combine and demonstrate different software and services when developing IoT, automated driving systems, cloud robotics systems, etc.
-We envision a use scenario where engineers from diverse fields gather to develop IoT systems. The &amp;ldquo;box&amp;rdquo; simulates the events and states of complex federated IoT systems according to the desired scenario.</description></item><item><title>コンセプト</title><link>https://toppers.github.io/hakoniwa/docs/concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/concept/</guid><description>箱庭のコンセプトは 「箱の中に，様々なモノをみんなの好みで配置して，いろいろ試せる！」 です．
-IoTや自動運転システム，クラウドロボティクスシステムを開発する際に，仮想環境である箱庭上に様々なソフトウェアやサービスを持ち寄って，机上で実証実験できる場を提供します．
-想定している利用シーンは，多様な分野から技術者が集まるIoTシステムの開発現場です． IoTの各要素が連携される複雑なシステムの事象や状態を，「箱」の中ではシナリオに応じた同じ挙動が再現されるようにします． そして，箱庭のシステム構成要素である「アセット」を差し替えることで，検証の対象／抽象度／レベルを任意に変更することができます． また，システム環境の視点（評価観点）や抽象度を，各技術者の分野や立場に応じて切り替えられるようにします．
-なお箱庭の語源は，名園や山水を模したミニチュアの庭園に由来します． 盆景や盆栽に類するもので，江戸時代後半から明治時代にかけて流行したといわれています．</description></item><item><title>Our Goal</title><link>https://toppers.github.io/hakoniwa/en/docs/aimat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/aimat/</guid><description>Our goal is to establish a simulation environment and ecosystem for engineers who develop/provide massive and complex IoT systems.
-Hakoniwa&amp;rsquo;s target is an information system with various devices connected by a network. We envision IoT applications in various fields, such as autonomous driving, logistics, and space development.
-Hakoniwa targets the following users
-System developers: engineers who develop IoT systems and their components Service providers: Engineers who promote the provision of system services using the IoT.</description></item><item><title>目指すところ</title><link>https://toppers.github.io/hakoniwa/docs/aimat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/aimat/</guid><description>大規模かつ複雑なIoTシステムを開発／提供する技術者のための シミュレーション環境とエコシステム を構築することを目指しています．
-箱庭のターゲットは，様々な機器がネットワークで接続された情報システムです． 自動運転や物流，宇宙分野など，IoTの様々な分野を想定しています．
-箱庭は，次の利用者のための環境です．
-システム開発者：IoTシステムとその構成要素を開発する技術者 サービス提供者：IoTを活用してシステムサービスの提供を進める技術者 箱庭アセットの開発者および提供者 アセットとは，箱庭のシステム構成要素のことを指します． 箱庭プロジェクトの目指す強みと新しさとしては，IoTの各要素である箱庭アセットをそれぞれ連携させて，対象システムを任意の精度で検証可能とすることです． そして，箱庭の利用者の技術領域や評価対象に応じて，アセットを差し替えることで，検証の対象／抽象度／レベルを任意に変更できるようにします．</description></item><item><title>Hakoniwa Core</title><link>https://toppers.github.io/hakoniwa/en/docs/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/core/</guid><description>The four core functions of Hakoniwa are as follows.
-Scheduling Synchronization and Communication Time Management Asset Management Also, we believe that the following functional characteristics are essential for Hakoniwa&amp;rsquo;s core functions.
-Componentization Visualization Event Driven Automation The core functions and functional characteristics of Hakoniwa are still under design study in the WG while developing the prototype model. We will add more details as we progress.</description></item><item><title>箱庭コア技術</title><link>https://toppers.github.io/hakoniwa/docs/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/core/</guid><description>箱庭の核となるカーネルは，次の4種類であると考えています．
-スケジューリング 同期・通信 時間管理 アセット管理 また，箱庭コア機能が備えるべき重要な機能特性は，次のものがあると考えています．
-コンポーネント化 可視化 イベント駆動化 自動化 箱庭のコア機能と機能特性については，プロトタイプモデルの開発を進めながら，WG内での設計検討を続けているところです． 詳細が固まりましたら，追って解説を加えていきます．</description></item><item><title>Underlying technology</title><link>https://toppers.github.io/hakoniwa/en/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/technical/</guid><description>TOPPERS Kernel Developed by the TOPPERS Project, it is an open-source real-time kernel that extends the standard profile of the µITRON4.0 specification. It primarily targeted embedded systems that require high reliability, safety, and real-time performance.
-Athrill The CPU instruction set simulator is the core of Hakoniwa. Members of Hokoniwa WG mainly develop it. It enables debugging and functional verification of the behavior of embedded microcontrollers and peripherals at the instruction level.</description></item><item><title>技術要素</title><link>https://toppers.github.io/hakoniwa/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/technical/</guid><description>TOPPERSカーネル TOPPERSプロジェクトにより開発されている，μITRON4.0仕様のスタンダードプロファイルを拡張した，オープンソースのリアルタイムカーネルです． 主な適用対象は，高い信頼性・安全性・リアルタイム性を要求される組込みシステムです．
-Athrill 箱庭の核である，CPU命令セットシミュレータです． 箱庭WGメンバが中心となって開発を進めています．組込みマイコンおよびペリフェラルの挙動を命令レベルでデバッグ・機能検証することができます．現在はV850/RH850およびARMv7-Aが主なサポート対象です．
-TOPPERSライセンスのもと，オープンソースで開発を進めています．
-https://github.com/toppers/athrill mROS ROS(Robot Operating System)の組込み向け軽量実行環境です．ホストPC上のROSマスタおよびROSノードに対する，組込みマイコンからの出版購読型通信を実現します．東京大学 情報理工学系研究科 システム情報第8研究室が中心となって開発を進めています． 複数ロボットの連携制御シミュレーションのようなシステムでの活用を想定しています．
-https://github.com/mROS-base RDBOX RDBOX (Robotics Developers BOX)は，ROSロボットやIoTに最適化した，Kubernetesクラスタとセキュアで拡張性の高いWi-Fiネットワークを自動構築するためのフレームワークです．シミュレーション環境と現実の作業環境をブリッジすることを目指しています．株式会社インテックのRDBOX Projectで開発されています． ロボット間協調動作向けプロトタイプモデルの構築において，箱庭との連携を進めています．
-https://github.com/rdbox-intec/rdbox Unity リアルタイム3D開発プラットフォームです．IDEを内蔵するゲームエンジンとして有名です． 箱庭では，物理演算エンジンと空間可視化のために活用しています．
-https://unity.com/ 箱庭WGでは，この他にも，IoT／クラウドロボティクス時代の仮想環境を確立するために，統合すべき技術要素を模索しているところです．
-シナジーが生まれそうな技術や，活用できそうな知見をお持ちの方がいましたら，ぜひお知らせください．
-注： このウェブページは，ユニティ テクノロジーズまたはその関連会社がスポンサーとなったり，ユニティ テクノロジーズまたはその関連会社と提携しているものではありません． このサイトに掲載された Unity の登録商標一覧に含まれる Unity の登録商標はすべて，ユニティ テクノロジーズまたはその米国や他の国々に所在する関連会社の登録商標または商標です．</description></item><item><title>Roadmap</title><link>https://toppers.github.io/hakoniwa/en/docs/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/roadmap/</guid><description>Hokoniwa WG is working on &amp;ldquo;big goals, little by little.&amp;rdquo;
-Our current main activity is to create prototype models to realize the concept and to examine the technology. All of these R&amp;amp;D results are released as OSS. We desire continuous maturation of the core technologies and expansion of the various functions of Hakoniwa by sharing each prototype model and receiving feedback on it.
-The Hakoniwa Project is engaged in research and development, first constructing and disseminating educational packages and then expanding into product development.</description></item><item><title>ロードマップ</title><link>https://toppers.github.io/hakoniwa/docs/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/roadmap/</guid><description>箱庭は 「でっかく語って少しずつ育てて」 います．
-現在のプロジェクトの活動の中心としては，コンセプトの実現と技術研鑽のためにプロトタイプモデルを構築中です． これらの研究開発は，すべてOSSとして公開しながら進めていきます． 皆さまにそれぞれのプロトタイプモデルをご利用いただき，そしてフィードバックを得ながら，箱庭コア技術の成熟と様々な機能拡充を進めていきたいと考えています．
-箱庭プロジェクトは，まずは教育用途でのパッケージ構築と普及を図っていますが，製品開発への展開も視野に入れて研究開発を進めています． 壮大な構想を掲げていますが，全くマンパワーは足りていないのが実情です． 箱庭の成長のためにも，特にクラウド技術や可視化アセット開発に知見をお持ちの方に参画いただきたいと考えています．
-箱庭WGの狙いや趣旨にご賛同いただける方の参画をお待ちしています． 活動としては，月１回のオンラインでの定例会合と、年２回の技術検討合宿を実施しています． また，日常的な議論や情報共有と開発にはSlack，GitHubおよびGoogle Driveを活用しています．
-Slack等での議論に参加したい方，活動内容へのご要望をお持ちの方，コア技術や各アセットの開発などに参加したい方， 箱庭WGの活動で期待される技術成果を活用したい方，製品開発に展開してみたい方， ぜひとも問合せ先よりご連絡ください．</description></item><item><title>制御プログラムの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/app-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/app-customize/</guid><description>ソースコードの場所 今回のサンプルのtb3の制御プログラムは、 /ros2/workspace/src/tb3/src/tb3ctrl.cpp に配置されています。 詳細は実際のコードを見て頂くとして主要な部分を紹介していきます。ページの最後にコードの抜粋を示します。
-制御プログラムの概要 Unity上のロボットと制御プログラムとは、ROSで通信しています。 Unity上のロボットからはレーザースキャナから周囲360°の距離データが送られてきます。制御プログラムからはロボットの移動量を送信します。
-この制御プログラムは、壁沿いに周回するような制御を行っています。do_forwardで前方の距離が一定以上あれば前進し、turn_rightでは右側の距離が一定以上であれば旋回します。
-このように制御部分は非常に小さく、他はROSで通信するためのボイラープレートとなっています。 制御部分のパラメータを変えることで、自由にロボットを制御することができます。いろいろと書き換えて試してみてください。 なお、コードを書き換えた後は、Dockerのコンテナ内でbuild.bashを実行してプログラムのコンパイルを行ってください。
-制御プログラムの抜粋 // ロボットのレーザースキャナから受け取る360°周囲の距離データ typedef struct { double ranges[360]; } ScanDataType; static ScanDataType scan_data; // レーザースキャナから受け取ったデータのROSのコールバック関数。取得したデータをscan_data変数に保持する。 static void scanCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg) { int i; for (i = 0; i &amp;lt; 360; i++) { scan_data.ranges[i] = msg-&amp;gt;ranges[i]; } return; } // Unity上のロボットの制御値 static geometry_msgs::msg::Twist cmd_vel; static float get_forward_distance(void) { ... // 前方向の一定角度のうち一番近い距離を取得 } static float get_right_distance(void) { ... // 右側の一定角度のうち一番近い距離を取得 } static bool do_forward(void) { .</description></item><item><title>Microcomputer-controlled robot simulation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/single-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/single-robot/</guid><description>This is a Hakoniwa prototype model with one SBC, designed based on the challenges of ET Robocon. This prototype can verify by linking the program&amp;rsquo;s behavior on the embedded microcontroller with the robot&amp;rsquo;s behavior.
-Design intent from a technical study perspective Study on how to integrate between physical simulators and microcomputer simulators Study of time synchronization between different simulators Other design intent Promote Hakoniwa to ET Robot contenst participants (PR activities) Installation &amp;amp; Usage A trial package with minimal configuration and procedures is available in the GitHub repository below.</description></item><item><title>マイコン制御ロボットシミュレーション</title><link>https://toppers.github.io/hakoniwa/prototypes/single-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/prototypes/single-robot/</guid><description>単体のSBCで構成される単体ロボットを対象とした箱庭プロトタイプモデルです．ETロボコンを題材としています． 組込みマイコン上のプログラムの振る舞いを，ロボット上の挙動と連携させて検証を進めることができます．
-技術研鑽視点での狙い 物理シミュレータとマイコンシミュレータ間の連携方法の検討 異なるシミュレータ間の時間同期の検討 その他の狙い ETロボコンユーザ層に箱庭を広める（広報活動） 導入方法と使用方法 最小の構成と手順で単体ロボット向けシミュレータを試行できるパッケージを，下記のGitHubリポジトリで公開しています．ぜひ試してみてください．
-toppers/hakoniwa-single_robot: 箱庭プロトタイプモデルA：単体ロボット向けシミュレータ 動作例のデモ 謝辞・特記事項： Unityパッケージの設計と作成にあたっては，宝塚大学 東京メディア芸術学部 吉岡章夫准教授および学部生の杉﨑涼志さん，木村明美さん，千葉純平さんにご協力いただきました．
-HackEVのUnityアセットは，ETロボコン実行委員会より提供いただいたデータを基に作成しています．実行委員会の皆さまに深く感謝いたします．
-ただし本アセットはETロボコンの本番環境とは異なりますので，大会に参加予定の方はご注意ください．また，本アセットは，個人利用または教育利用に限定してご利用ください．</description></item><item><title>コースの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/env-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/env-customize/</guid><description>執筆中</description></item><item><title>ROS controlled robot simulation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/ros-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/ros-robot/</guid><description>This prototype model uses ROS/ROS2 to collaborate with multiple and single robots. This prototype is lighter than Gazebo, often used with ROS, and allows for easy customization of robots and environments in Unity and the introduction of URDF format models.
-Design intent from a technical study perspective Running simulations using ROS, which is commonly used for robot control Study on how to coordinate with other robots Other design intent Introduce robots controlled by ROS to create a simulation environment that mixes multiple control mechanisms Installation &amp;amp; Usage A trial package with minimal configuration and procedures is available in the GitHub repository below.</description></item><item><title>ROS制御ロボットシミュレーション</title><link>https://toppers.github.io/hakoniwa/prototypes/ros-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/prototypes/ros-robot/</guid><description>ロボットの制御にROS/ROS2を用いた箱庭プロトタイプモデルです．単体のロボットだけでなく，複数のロボットの連携動作も可能です． ROSで一般的に用いられているGazeboよりも軽量でロボットや環境もUnity上で容易にカスタマイズすることができ、URDF形式のモデルの導入も行うことができます。
-技術研鑽視点での狙い 一般的なロボット制御に用いられているROSも含めたシミュレーションの実行 複数のロボットを連携させたシミュレーションの実行 その他の狙い ROSのロボットも導入可能とすることで、複数の制御機構が混在したシミュレーション環境を実現する 導入方法と使用方法 最小の構成と手順で試行できるパッケージを，下記のGitHubリポジトリで公開しています．ぜひ試してみてください．
-toppers/hakoniwa-ros2sim: 箱庭 ROS シミュレータ 動作例のデモ 謝辞・特記事項： TurtleBot3 の Unity パッケージの設計と作成にあたっては，宝塚大学 東京メディア芸術学部 吉岡章夫准教授および学部生の杉崎涼志さん，木村明美さんにご協力いただきました．
-TurtleBot3 のUnity アセットは，株式会社ロボティズ様より提供いただいたデータを基に作成しています．ご協力いただき深く感謝いたします．</description></item><item><title>ロボットのカスタマイズ方法</title><link>https://toppers.github.io/hakoniwa/getting-started/robot-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/robot-customize/</guid><description>執筆中</description></item><item><title>Simulation of collaborative operation of multiple robots</title><link>https://toppers.github.io/hakoniwa/en/prototypes/multi-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/multi-robot/</guid><description>This prototype model simulates multiple robots and control programs in the same environment. This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Unity environments and even time synchronization among assets and uses VR technology to dive into the simulation environment for verification.
-Design intent from a technical study perspective Study of methods of collaboration in multiple environments (e.g., simulation time synchronization) Study on how visualize communication among Hakoniwa assets (including ROS/ROS2 collaboration)/ROS2連携含む） Study of mechanisms to augment Hakoniwa assets Other design intent Promote Hakoniwa to the ROS user base (PR activities) Installation &amp;amp; Usage Various demos are available at the following Github repository.</description></item><item><title>複数ロボットの連携制御シミュレーション</title><link>https://toppers.github.io/hakoniwa/prototypes/multi-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/prototypes/multi-robot/</guid><description>複数のロボット，複数の制御プログラムによるシミュレーションを同じ環境で行うプロトタイプモデルです． UnityのPhotonライブラリを用いて複数のUnity環境の同期を行っており，加えてアセット間の時間同期も実現しています． またVRによるシミュレーション環境へのダイブも試行しています．
-技術研鑽視点での狙い マルチ環境での連携方法検討（シミュレーション時間同期等） 箱庭アセット間の通信可視化方法の検討（ROS/ROS2連携含む） 箱庭アセットの仕組み検討 その他の狙い ROSユーザ層に箱庭を広める（広報活動） 導入方法と使用方法 以下のGithubリポジトリにて，各種デモを公開しています．ぜひお試し下さい．
-‐ toppers/hakoniwa-ros-multiplay
-動作例のデモ photonによる複数ロボットの連携 Oculus Questとの接続の様子 VRで箱庭内に入った様子</description></item><item><title>Simulation of inter-robot cooperative operation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/harmony-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/harmony-robot/</guid><description>This is a Hakoniwa prototype model for integration of cloud computing and robotics.
-Design intent from a technical study perspective Study of specific methods of cloud computing integration Study on how to coordinate with other robots (challenge to more complex robot operation/interference) Study of mechanisms to augment Hakoniwa assets Other design intent Interaction with RDBOX ( establish a track record of Hakoniwa as a development virtual environment) Promote Hakoniwa to the RDBOX user base (PR activities) The prototype model is currently under development.</description></item><item><title>ロボット間協調動作シミュレーション</title><link>https://toppers.github.io/hakoniwa/prototypes/harmony-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/prototypes/harmony-robot/</guid><description>クラウドとロボティクスとの連携を目指した箱庭プロトタイプモデルです．
-技術研鑽視点での狙い クラウド連携方法検討 ロボット間の連携方法検討（より複雑なロボットの動き/干渉に挑戦） 箱庭アセットを増やす仕組みの検討 その他の狙い RDBOX連携（開発支援仮想環境としての箱庭の実績作り） RDBOXユーザ層に箱庭を広める（広報活動） 現在，本プロトタイプモデルの実現に向けて鋭意開発中です．公開までしばしお待ちください．</description></item><item><title>Repository List</title><link>https://toppers.github.io/hakoniwa/en/repositories/</link><pubDate>Wed, 26 Aug 2020 15:09:42 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/en/repositories/</guid><description>Hakoniwa Links Outline hakoniwa Repository for general support handling and content management of this website hakoniwa-single_robot Package that can try Hakoniwa Prototype Model A: Simulator for Single Robot with minimum configuration and procedures hakoniwa-ros2sim Environment for easy simulation of ROS 2 programs on Hakoniwa hakoniwa-core Repository for prototype development of Hakoniwa Core Function Athrill Links Outline athrill Athrill core (target-independent part) athrill-device athrill device for external shared library. athrill-target-v850e2m v850e2m Target dependencies for Athrill athrill-target-ARMv7-A ARMv7-A Target dependencies for Athrill athrill-target-rh850f1x rh850f1x Target dependencies for Athrill athrill-gcc-v850e2m gcc package for Athrill V850E2M target TOPPERS kernel Links Outline ev3rt-athrill-v850e2m V850E2M version of TOPPERS/EV3RT platform for Athrill ev3rt-athrill-ARMv7-A Arm v7-A version of TOPPERS/EV3RT platform for Athrill asp-athrill-mbed Package of TOPPERS/ASP kernel and Mbed library for Athrill Unity Links Outline hakoniwa-Unity-Package Unity Asset Package for Hakoniwa mROS Links Outline mROS A lightweight runtime environment of ROS 1 nodes onto embedded devices mROS 2 A lightweight runtime environment of ROS 1 nodes onto embedded devices Samples Links Outline hakoniwa-scenario-samples Sample collection of Hakoniwa behavior scenarios</description></item><item><title>リポジトリ一覧</title><link>https://toppers.github.io/hakoniwa/repositories/</link><pubDate>Wed, 26 Aug 2020 15:09:42 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/repositories/</guid><description>箱庭本体 略称・リンク 概要 備考 hakoniwa 全般的なサポート対応と本Webサイトのコンテンツ管理のためのリポジトリ hakoniwa-single_robot 箱庭プロトタイプモデルA：単体ロボット向けシミュレータを最小の構成・手順で試行できるパッケージ hakoniwa-ros2sim 箱庭上で ROS 2 プログラムを手軽にシミュレーションできる環境 hakoniwa-core 箱庭コア機能の試作開発用リポジトリ hakoniwa-document TOPPERS/箱庭 利用者向けの公式ドキュメント hakoniwa-core-cpp-client 箱庭コア機能のC言語API hakoniwa-conductor 分散環境における箱庭実現のための調停プロセス hakoniwa-bridge リアル（エッジ）とバーチャル（箱庭）を接続するための通信モジュール hakoniwa-webserver 箱庭PDUをWebSocket経由でブラウザ上で可視化 Athrill 略称・リンク 概要 備考 athrill Athrill本体(ターゲット非依存部) athrill-device 外部デバイス連携のためのgRPCライブラリ athrill-target-v850e2m Athrill V850E2Mターゲット依存部 athrill-target-ARMv7-A Athrill ARMv7-Aターゲット依存部 athrill-target-rh850f1x Athrill RH850F1xターゲット依存部 athrill-gcc-v850e2m Athrill V850E2Mターゲット対応のgccパッケージ TOPPERS kernel 略称・リンク 概要 備考 ev3rt-athrill-v850e2m TOPPERS/EV3RTプラットフォームのAthrill向けV850E2M版 ASP3カーネルを代用 ev3rt-athrill-ARMv7-A TOPPERS/EV3RTプラットフォームのAthrill向けARMv7-A版 ASP3カーネルを代用 asp-athrill-mbed Athrill向けTOPPERS/ASPカーネルとmbedライブラリのパッケージ asp3-athrill-v850e2m Athrill向けTOPPERS/ASP3カーネルのパッケージ Unity 略称・リンク 概要 備考 hakoniwa-Unity-Package 箱庭向けのUnityアセット・パッケージ hakoniwa-unity-drone-model PX4と連携可能なUnityドローンシミュレータ mROS 略称・リンク 概要 備考 mROS 組込みデバイス向けROS 1ノード軽量実行環境 mROS 2 組込みデバイス向けROS 2ノード軽量実行環境 Samples 略称・リンク 概要 備考 hakoniwa-scenario-samples 箱庭の動作シナリオのサンプル集 hakoniwa-px4sim PX4と連携可能なドローンのプラントモデル用シミュレーション環境</description></item><item><title>SNS &amp; Contact</title><link>https://toppers.github.io/hakoniwa/en/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/contact/</guid><description>Invitation to Hakoniwa WG We welcome the participation of those who agree with the purpose of the Hakoniwa WG. If you would like to participate in discussions on Slack, have requests for our activities, develop core technologies and assets, or utilize the technical outcomes of the Hakoniwa WG and employ them in product development, etc., don&amp;rsquo;t hesitate to get in touch with us.
-Email: hakoniwa.toppers_at_gmail.com (Replace _at_ with @) Hakoniwa Forum: Technical questions and discussions We maintain GitHub Discussions as a social networking site for developers, engineers, and users involved in Hakoniwa.</description></item><item><title>SNS・問合せ先</title><link>https://toppers.github.io/hakoniwa/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/contact/</guid><description>箱庭の活動への参画のお誘い 箱庭WGの狙いや趣旨にご賛同いただける方の参画をお待ちしています。 Slack等での議論に参加したい方、活動内容へのご要望をお持ちの方、コア技術や各アセットの開発などに参加したい方、 箱庭WGの活動で期待される技術成果を活用したい方、製品開発に展開してみたい方、 ぜひともお声がけください。
-Email: hakoniwa.toppers_at_gmail.com (_at_ を@ に置き換えてください) 箱庭WGの活動紹介（2022年度版）もご参照ください。
-箱庭フォーラム：利用方法について質問したり、技術的な相談をしたい 箱庭に関わる開発者や技術者、ユーザのためのSNSになることを目指して、GitHub Discussionsを運用しています。
-箱庭プロトタイプモデルの導入・利用にあたって不明な点や技術的な質問（Athrillを含む要素技術単体に関する質問も歓迎）や、箱庭の活用方法のアイデアや関係する全般的な話題の提供も歓迎します。
-次のカテゴリを用意していますので、適切と思われるものを選択して投稿してください。
-Announcements: 箱庭メンバからの最新情報のお知らせ General: 箱庭や要素技術に関する全般的な話題の提供 a.k.a 雑談場所 Idea&amp;amp;Request: 箱庭こう使えない？こう使いたい！のアイデアを話し合いましょう Inquiry: 箱庭WGへの関する問合せや活動参画の希望など（技術的な質問は&amp;quot;Q&amp;amp;A&amp;quot;をご利用ください） Q&amp;amp;A: 技術的な質問（Athrillを含む要素技術単体に関する質問も歓迎！箱庭プロトタイプモデルの試用で発生したトラブルなどお知らせください） 箱庭もくもく会：箱庭の開発をしてみたり、あれこれ雑談してみたい 箱庭のもくもく会を不定期に開催しています。connpassにて一般公開しており、箱庭WGの開発メンバも参加しています。ご興味のある方は、下記グループページの「メンバーになる」をクリックしてグループに参加いただくと開催情報がキャッチアップできます。
-https://hakoniwa.connpass.com/
-もくもく会とは、各自のやりたいことや知りたいことを持ち寄って、まず自己紹介とやりたいことの表明を行い、それぞれ自由にやりたいことを進めて、そして最後にはもくもくの進捗を共有する会です。
-箱庭のことはいろいろなイベントで見聞きして気になっているんだけど,,, よし動かしてみよう！と思っているけども幾数月,,, 箱庭はさておき Unity x ROS がとっても気になる！！ という方々、ぜひともご参加ください。
-特に定まった議題などはありませんので、とりま開発メンバと雑談してみたい方々の参加も大歓迎です。
-WGメンバとして参画したい 箱庭WGは、TOPPERSプロジェクトのワーキンググループとして活動しています。
-箱庭WGのメンバに加入される場合は、原則としてTOPPERSプロジェクトへの入会もお願いしています。 また、TOPPERSプロジェクト会員向けの限定イベントの開催や、箱庭WG活動成果の早期公開なども検討しています。
-TOPPERSプロジェクトの加入方法の詳細については、
-TOPPERSプロジェクト事務局にお問い合わせください。
-NPO法人 TOPPERSプロジェクト 〒103-0011 東京都中央区日本橋大伝馬町6-7　住長第2ビル3F （一社）組込みシステム技術協会内 TEL &amp;amp; FAX: 03-5643-5166 Email: secretariat_at_toppers.jp (_at_ を@ に置き換えてください) WGの主なメンバと役割 氏名 主な役割 所属 SNS 森 崇 主査 全体統括、Athrill 永和システムマネジメント/箱庭ラボ 高瀬 英希 mROS、ROS、IoT 東京大学/JSTさきがけ 細合 晋太郎 IDE、モデリング、可視化、クラウド 東京大学 高田 光隆 カーネル、応用検討 名古屋大学NCES 福田 ⻯也 クラウド、ロボティクス 小森 顕博 可視化 久保秋 真 モデリング、応用検討 チェンジビジョン 國井 雄介 デジタルツイン活用 クレスコ ※許諾の得られている方のみ掲載しています。</description></item><item><title>ショーケース</title><link>https://toppers.github.io/hakoniwa/showcase/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/showcase/</guid><description>「箱庭」コンセプトムービー2021 2021年6月時点での箱庭の成果物で実現できることを、デモ動画としてまとめました。
-このページの先頭に戻る
-シミュレーション環境：箱庭を使ったROSロボットのCI（継続的インテグレーション） クラウドネイティブ環境上に構築した「箱庭」と合わせて、コミュニティ版GitLab（MIT Licence）が提供する、ソースコード管理機能及び、CI Runner機能を使ってCI（Continuous Integration，継続的インテグレーション）を実現しています。
-クラウドネイティブ環境はOSSであるRDBOX（Robotics Developer BOX）を使って構築しています。
-このページの先頭に戻る
-MONOistでの連載 モノづくりスペシャリストのための情報ポータル「MONOist」に連載記事を寄稿しています。
-「仮想環境を使ったクラウド時代の組み込み開発のススメ」という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介しています。ぜひご覧ください。
-第1回「IoTシステムの開発はなぜ難しいのか、ITと組み込みの相克を克服せよ」 (2021年05月25日 10時00分 公開) 第2回「日本の伝統を受け継ぐ仮想環境「箱庭」でIoTシステムの統合開発を加速する」 (2021年06月28日 10時00分 公開) 第3回「組み込みエンジニアも知っておきたい「クラウドネイティブ」とは」 (2021年07月28日 10時00分 公開) 第4回「クラウドネイティブで実現する、シミュレーションと実機テストのボーダーレス開発」 (2021年08月30日 10時00分 公開) 第5回「誰もが手軽にROSロボット／IoTシステムの開発に取り組める「RDBOX」とは」 (2021年09月29日 10時00分 公開) このページの先頭に戻る
-Unity開発事例集 ユニティ・テクノロジーズ・ジャパン株式会社のWebページ「Unityを活用した開発事例 | Unity for Industry」において、箱庭の単体ロボット向けシミュレータが取り上げられています。
-「MANUFACTURE 製造分野でのUnity開発事例」の項目をご覧ください。
-このページの先頭に戻る</description></item><item><title>シミュレーションに関するチューニング</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</guid><description>変更可能なパラメータ EV3のパラメータについて 今回のシミュレーション環境(Unity側)にはいくつかパラメータがありますので，その説明を行います．
-まず，パラメータを参照するには，Hierarchyビューで，「EV3」を選択してください(下図)．
-すると，InspectorビューにEV3のパラメータが表示されます．
-以下，変更可能なパラメータを説明します(説明されていないものは変更しないでください)． ※これらのパラメータは，シミュレーション実行時に動的に変更も可能なものもあります．
-EV3 Actuator(Script) Port(動的変更不可) Unity側のUDP受信ポート番号です．デフォルトでは54001です．
-この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．
-DEBUG_FUNC_VDEV_TX_PORTNO 54001 device_config.txt は，app.cと同じフォルダにあります．
-EV3 Sensor(Script) Host(動的変更不可) Athrillの配置マシンのIPアドレスです． Unityと同じマシン上に配置する場合は，デフォルト値のままで良いです．
-マシン負荷が高く，athrillとUnityを別マシンで動かす場合は，このIPアドレスを変更して対応ください．
-Port(動的変更不可) Athrill側のUDP受信ポート番号です．デフォルトでは54002です．
-この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．
-DEBUG_FUNC_VDEV_RX_PORTNO 54002 device_config.txt は，app.cと同じフォルダにあります．
-EV3 Motor(Script) Power Const(動的変更可) EV3のモータのパワーです．デフォルトで40としていますが，値を変更できます．
-ただ，あまり大きい値を設定しすぎるとUnity側の問題か，物理的にありえないのかよくわかりませんが，EVロボットが吹っ飛びますので，ご注意ください．．．
-照明のON/OFFについて 今回のデモでは，照明を３個用意しています．
-全体照明１個 Directional Light スポットライト２個 Spot Light1 Spot Light2 それぞれの照明はシミュレーション実行時にON/OFFできます． ON/OFFのさせ方は単純で，HierachyビューでON/OFFしたいライトを選択します．
-すると，Inspectorビューに下図のように「Light」のチェックボックスが見えます． このチェックボックスを外せばOFFになります．
-カラーセンサの状態 パラメータではないですが，カラーセンサの認識している状態を知りたくなることがあるかと思います． そのため，カラーセンサの認識している値をUnityのパラメータ表示機能を利用して可視化しています．
-参照するには，下図のようにHierarchyビューでColorSensorを選択してください．
-そうすると，Inspectorビューに下図のように認識値(Rgb)が表示されます．
-Rgbは，現在認識している色をそのまま表示しています． Rgb_r,g,b には，カラーセンサで取得できる数値を表示しています．</description></item><item><title>シミュレーションに関するチューニング</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/</guid><description>single-robot-HackEV(v2.0)の追加要素について Hakoniwaクラスの追加 single-robot-HackEV(v2.0) ではHakoniwaクラスが設けられました．
-Hakoniwaクラスはシミュレーション環境全体に関わる情報を持っています．
-主なフィールド 説明 Max Diff Time athrillとUnityのシミュレーション時間の最大許容誤差時間 Dbg Diff Time Msec 現在のathrillとUnityのシミュレーション時間の誤差(msec) Robotの配置方法 single-robot-HackEV(v2.0)ではあらかじめ用意されたいくつかのロボットモデルを
-ユーザの方が任意に配置することが出来ます．
-Project/Prefabs配下にいくつかのロボットモデルを用意しています． これらのロボットモデルをHierarchyビューのRobot配下にドラッグ＆ドロップすることで 簡単に配置することができます．
-変更可能なパラメータ Robot のパラメータについて 超音波センサ Ultrasonic SensorのDistance Valueでセンサ範囲を調整できます．
-モーター RigidbodyのMassでタイヤの重さを，Angular Dragで回転時の抵抗値を調整できます．
-カラーセンサ Physical CameraのSensor Sizeでセンシング範囲を調整できます．
-センサ用ライト LightのRangeで光が届く範囲の距離を，SpotAngleで光が届く範囲の広さを調整できます．</description></item><item><title>チュートリアル</title><link>https://toppers.github.io/hakoniwa/tutorial/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial/</guid><description>箱庭チュートリアル会とは？ 箱庭WGのメンバが持ち回りで担当して、自身の取り組みや最新の動向、そしていろんな野望などなどを、自由に語り尽くします！
-皆さんでフランクに情報交換や議論などできればと思っています。
-本ページでは、チュートリアル会のスライド資料や動画アーカイブなどを公開しています。
-箱庭入門会とは？ 主に初めて箱庭に触れる方を対象として、箱庭の全体像やアーキテクチャ、アセットの作成方法などを紹介する会です。 Getting Startedな内容になっていて、自分好みのシミュレーション環境を構築する方法を学ぶことができます。 すでに箱庭を知っている方も復習に最適な連弾シリーズの形式です。 30分程度のミニセミナー形式で下記の項目をひとつずつの内容を進めていき、解説パートは動画アーカイブとして公開しています。
-入門会 #10 ドローンシミュレータのUnity機体をカスタマイズする 箱庭ドローンのUnityワールド/機体をカスタマイズする方法を解説します。 - Unity - Unityシーン/スクリプト - Unityプリミティブ素材、コライダー - Unityアセットストア - Unityプロジェクト - 箱庭 - 箱庭ドローンのUnityプロジェクト - 箱庭ドローンのUnityシーン - 箱庭ドローンのプレハブ - カスタマイズ - 箱庭ワールド - 箱庭ドローン - リポジトリ管理方法 開催日：2024/7/1(月) connpassイベントページ https://hakoniwa.connpass.com/event/323046/ 担当： @kanetugu2020 さん 動画 (YouTube)
-スライド資料 (Docswell)
-Hakoniwa-drone-unity by @kanetugu2015 このページの先頭に戻る
-入門会 #9 ドローンシミュレータをPythonで制御する 箱庭ドローンを操作するPythonプログラムの作成方法を解説します。 - 箱庭ドローン・Python API 操作のユースケース説明 - ユースケース毎のAPI実装方法説明 - 機体を離陸する - 機体の現在位置を取得する - 機体を目的地へ移動する - 機体で荷物を運ぶ - 機体のカメラで撮影する - 機体のレーザセンサ(LiDAR)で周辺の障害物を検出する - 機体を着陸する 開催日：2024/6/26(水) connpassイベントページ https://hakoniwa.</description></item><item><title>技術情報・発表資料</title><link>https://toppers.github.io/hakoniwa/technical-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/</guid><description>最新の技術情報 Qiita記事 最新の開発状況は、主にQiitaで発信しています。
-次のタグやOrganizationをフォローされると、最新情報が得やすくなります．
-tag: 箱庭 tag: athrill tag: mROS organization: TOPPERSプロジェクト なお、Qiita記事では開発途上の試行版であったり古い情報が記載されていることがあります。
-このページの先頭に戻る
-講演資料や動画など TOPPERSカンファレンス2023 2022年6月30日(金)に開催されたTOPPERSカンファレンス2023の講演資料です。 箱庭WGの活動紹介、最新の開発状況とプラットフォーム化に向けた新たな展開について紹介しました。
-箱庭 Update 2023 講演資料 (PDFファイル) 動画 (YouTube)
-TOPPERS/箱庭の新たな展開：プラットフォーム化への一歩 講演資料 (PDFファイル) 動画 (YouTube)
-このページの先頭に戻る
-ROSCon 2022 ROSCon 2022 が2022年10月20日(木)-21日(金)に開催され、箱庭WGのメンバが発表を行いました。 ROSConは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する世界的な開発者会議の日本版です。
-mROS 2: yet another runtime environment onto embedded devices 講演資料 (Speaker Deck)
-動画 (Vimeo)
-このページの先頭に戻る
-ROSCon JP 2022 ROSCon JP 2022 が2022年10月19日(水)に京都で開催され、箱庭WGのメンバが発表を行いました。
-SROS 2 with OIDC(OpenID Connect) :ロボットと人を安全に繋ぐ技術 動画 (Vimeo)
-now and next about mROS 2 講演資料 (Speaker Deck)</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>単体ロボット向けシミュレータ使用手順(ARM版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
-export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major cfgフォルダの配置(初回起動時のみ) cfg ファイルの配置(Mac版の場合)
-$ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-mac cfg/cfg/cfg $ chmod +x cfg/cfg/cfg cfg ファイルの配置(Windows\Linux版の場合)
-$ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-linux-64 cfg/cfg/cfg $ chmod +x cfg/cfg/cfg EV3ロボット制御プログラムのビルド ターミナル上で，ev3rt-athrill-ARMv7-A/sdk/OBJ1.1に移動して，
-EV3ロボット制御プログラムをビルドしましょう．
-ビルドするには，以下のコマンドを実行してください．
-make clean;make ビルド成功すると，asp というバイナリができます．
-$ ls asp asp Unityのシミュレータの起動 ※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください
-次に，Unityをシミュレーションモードにします． Unityの画面上で　ボタンを押下してください．
-成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)
-athrillの起動 最後に，athrillを起動しましょう．
-ev3rt-athrill-ARMv7-A/sdk/OBJ1.1に移動して，以下のコマンドを実行してください．
-unityとの通信が UDP の場合 UDP版の場合</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/</guid><description>単体ロボット向けシミュレータ使用手順(ARM版) 使用手順 環境変数の設定(Mac版のみ) cfgフォルダの配置(初回起動時のみ) EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 環境変数の設定(Mac版のみ) Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．
-export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major cfgフォルダの配置(初回起動時のみ) cfg ファイルの配置(Mac版の場合)
-$ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-mac cfg/cfg/cfg $ chmod +x cfg/cfg/cfg cfg ファイルの配置(Windows\Linux版の場合)
-$ pwd &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A $ mkdir cfg/cfg $ cp cfg/cfg-linux-64 cfg/cfg/cfg $ chmod +x cfg/cfg/cfg EV3ロボット制御プログラムのビルド ターミナル上で，ev3rt-athrill-ARMv7-A/sdk/OBJ1.1に移動して，
-EV3ロボット制御プログラムをビルドしましょう．
-ビルドするには，以下のコマンドを実行してください．
-make clean;make ビルド成功すると，asp というバイナリができます．
-$ ls asp asp Unityのシミュレータの起動 ※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください
-次に，Unityをシミュレーションモードにします． Unityの画面上で　ボタンを押下してください．
-成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)
-athrillの起動 最後に，athrillを起動しましょう．
-ev3rt-athrill-ARMv7-A/sdk/OBJ1.1に移動して，以下のコマンドを実行してください．
-unityとの通信が UDP の場合 UDP版の場合</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/</guid><description>単体ロボット向けシミュレータ使用手順 V2.1での変更点について v2.1 で，Unityでのシミュレーション実行をビルドしてバイナリ実行できるようになりました．
-バイナリ実行でシミュレーション実行を行う場合，
-Unityシミュレーションの実行， athrillの実行 をひとまとめにして実行することができます．
-なお，従来の使用方法でもシミュレーションを実行することは可能ですので，
-その場合は下記をご参照いただき，使用してください．
-V850版 ARM版 これ以降は，バイナリ実行を行うための手順の紹介となります．
-使用手順 ビルド設定 ビルドの実行，config.jsonの配置 シミュレーションの実行 ビルド設定 ビルドを実施する前に，バイナリ実行時のウィンドウサイズに関する設定を行います．
-Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
-「Player」
-Resolution and PresentationのFullscreen Mode をWindowedと設定します． その下の詳細なウィンドウサイズは基本そのままでもよいですが，サイズを変更したい場合は，
-お使いの環境に合わせて変更してください．
-ビルドの実行，config.jsonの配置 設定が完了したら，Unityプロジェクトのビルドを行います．
-Unity のメニューから，「File」⇒「Build Settings」を選択します．
-Platform は[PC,Mac &amp;amp; Linux Standalone]のままとします．
-Architectureは実行するPCのアーキテクチャに合わせて設定しますが，
-どちらか分からないという方は，x86_64を選択してください．
-設定を終えたら，Buildを押下してビルドを実行します．
-すると，どの場所にビルドしたバイナリを配置するか，選択ダイアログが表示されますので， 任意の場所を選択します．
-今回は例として，ビルドするUnityプロジェクトのあるフォルダ内に，Buildフォルダを作成し，
-その中にビルドしたバイナリを配置するようにします．
-フォルダを選択すると，ビルドが実行されます．
-ビルドが完了したら，バイナリが出力されたフォルダ(今回の例ではBuildフォルダ)内に
-先ほど，Unityプロジェクトフォルダ配下に配置したconfig.jsonをコピーします．
-制御アプリのビルド シミュレーションの実行の前に制御アプリのビルドを行います．
-ビルド手順は，以下のEV3ロボット制御プログラムのビルドをご参照ください．
-V850版 ARM版 memory_mmap.txtの編集(通信方式にMMAPを使用する場合のみ) 制御アプリのビルドが完了したら，Unityバイナリ実行のためにアプリケーションフォルダにある
-memory_mmap.txtを編集します．
-使用するMMAPファイルのパスを記述するのですが，Unityバイナリを使用する場合には，
-MMAPファイルのパスを絶対パスで記述するように変更します．
-例：アプリケーション名がline_tarceの場合のmemory_mmap.txt
-ROM, 0x00000000, 512RAM, 0x00200000, 512RAM, 0x05FF7000, 10240RAM, 0x07FF7000, 10240MMAP, 0x40000000, /mnt/c/project/hakoniwa/ev3rt-athrill-v850e2m/sdk/workspace/line_trace/athrill_mmap.</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</guid><description>単体ロボット向けシミュレータ使用手順(V850版) 使用手順 EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 EV3ロボット制御プログラムのビルド ev3rt-athrill-v850e2m/sdk/workspace に移動して，
-EV3ロボット制御プログラムをビルドしましょう．
-ビルドするには，以下のコマンドを実行してください．
-$ make img=＜アプリケーションフォルダ名＞ clean $ make img=＜アプリケーションフォルダ名＞ 例：line_traceというアプリケーションフォルダのプログラムをビルドする場合
-$ make img=line_trace clean $ make img=line_trace ビルド成功すると，asp というバイナリができます．
-$ ls asp asp Unityのシミュレータの起動 ※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください
-次に，Unityをシミュレーションモードにします． Unityの画面上で　ボタンを押下してください．
-成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)
-athrillの起動 最後に，athrillを起動しましょう．
-ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞に移動して，以下のコマンドを実行してください．
-UDP版の場合
-$ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp MMAP版の場合
-$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp 成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．
-core id num=1 ROM : START=0x0 SIZE=512 RAM : START=0x5ff7000 SIZE=10240 Elf loading was succeeded:0x0 - 0xfd68 : 63.</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/</guid><description>単体ロボット向けシミュレータ使用手順(V850版) 使用手順 EV3ロボット制御プログラムのビルド Unityのシミュレータの起動 athrillの起動 EV3ロボット制御プログラムのビルド ev3rt-athrill-v850e2m/sdk/workspace に移動して，
-EV3ロボット制御プログラムをビルドしましょう．
-ビルドするには，以下のコマンドを実行してください．
-$ make img=＜アプリケーションフォルダ名＞ clean $ make img=＜アプリケーションフォルダ名＞ 例：line_traceというアプリケーションフォルダのプログラムをビルドする場合
-$ make img=line_trace clean $ make img=line_trace ビルド成功すると，asp というバイナリができます．
-$ ls asp asp Unityのシミュレータの起動 ※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください
-次に，Unityをシミュレーションモードにします． Unityの画面上で　ボタンを押下してください．
-成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)
-athrillの起動 最後に，athrillを起動しましょう．
-ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞に移動して，以下のコマンドを実行してください．
-UDP版の場合
-$ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp MMAP版の場合
-$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp 成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．
-core id num=1 ROM : START=0x0 SIZE=512 RAM : START=0x5ff7000 SIZE=10240 Elf loading was succeeded:0x0 - 0xfd68 : 63.</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>単体ロボット向けシミュレータ使用方法 使用手順詳細 single-robot-HackEV(v2.1)を使用している場合(Windows, Mac向け) 使用しているUnityパッケージが single-robot-HackEV(v2.1) の場合は，
-こちらの使用手順をご参照ください．
-使用手順 シミュレーションに関わるチューニングについてはこちらをご参照ください．
-チューニングについて(single-robot-HackEV(v2.0)を使用している場合) single-robot-HackEV(v2.0)を使用している場合 使用しているUnityパッケージが single-robot-HackEV(v2.0) の場合は，
-こちらの使用手順をご参照ください．
-V850版 ARM版 シミュレーションに関わるチューニングについてはこちらをご参照ください．
-チューニングについて(single-robot-HackEV(v2.0)を使用している場合) single-robot-HackEV または ev3rt-simple-robotを使用している場合 使用しているUnityパッケージが single-robot-HackEV または ev3rt-simple-robot の場合は，
-こちらの使用手順をご参照ください．
-V850版 ARM版 シミュレーションに関わるチューニングについてはこちらをご参照ください．
-チューニングについて</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</guid><description>WSLのインストール Windows版の場合はWSLをインストールいただく必要があります．
-※注意点として，現時点(2020/6月)時点では，WSL2はご利用いただけません(WSL2とUnity間でUDP通信できないため)．
-WSLのインストール方法は色々なサイトで紹介されておりますので，Ubuntu 18.04 LTSをインストールください．
-以下のサイト等が参考になるかと思います．
-https://qiita.com/Aruneko/items/c79810b0b015bebf30bb インストールが完了したら，aptパッケージを更新しておきます．
-(更新しないと後ほど行うgccのインストールで失敗することがあるためです)
-$ sudo apt update aptパッケージを更新したら，あらかじめ以下が使用できるようにインストールしておきます
-gcc make $ sudo apt install build-essential</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</guid><description>Rubyのインストール v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります． ※EV3ロボット制御アプリをビルドする際に必要となります．
-Homebrewを使用してインストールします．
-$ brew install ruby</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/</guid><description>Rubyのインストール v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります． ※EV3ロボット制御アプリをビルドする際に必要となります．
-$ sudo apt install ruby</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/</guid><description>athrill2のインストール athrill2のインストール手順 athrill のチェックアウト athrill-target のチェックアウト コンパイラのインストール ビルド＆インストール athrill のチェックアウト athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．
-共通コードのチェックアウトは，以下の通りです．
-$ git clone https://github.com/toppers/athrill.git athrill-target のチェックアウト CPUアーキに依存するコードは，athrill-target側で管理しています． 今回のARM対応版は，ここにあります．
-$ git clone https://github.com/toppers/athrill-target-ARMv7-A.git なお，athrill と athrill-targetを以下のフォルダ構成にしてください．
-.├── athrill└── athrill-target-ARMv7-A コンパイラのインストール Linux の方は，gcc をインストールください．
-Windows の方は，WSL上で gcc をインストールください．
-Mac の方は，clang をインストールください．
-ビルド＆インストール ビルド方法ですが，端末上でathrill-target-ARMv7-A に移動してください．
-Linux/Windowsの方は，さらに build_linux に移動してください．
-Macの方は，build_mac に移動してください．
-移動終わったら，以下コマンド実行するだけです．
-make timer32=true cleanmake timer32=true ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．
-$ ls -l ../../athrill/bin/linux/athrill2-rwxr-xr-x 1 user staff 628260 2 2 16:40 .</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</guid><description>athrill2のインストール athrill2のインストール手順 athrill のチェックアウト athrill-target のチェックアウト コンパイラのインストール ビルド＆インストール athrill のチェックアウト athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．
-共通コードのチェックアウトは，以下の通りです．
-$ git clone https://github.com/toppers/athrill.git athrill-target のチェックアウト CPUアーキに依存するコードは，athrill-target側で管理しています．
-今回のV850対応版は，ここにあります．
-$ git clone https://github.com/toppers/athrill-target-v850e2m.git なお，athrill と athrill-targetを以下のフォルダ構成にしてください．
-.├── athrill└── athrill-target-v850e2m コンパイラのインストール Linux の方は，gcc をインストールください．
-Windows の方は，WSL上で gcc をインストールください．
-Mac の方は，clang をインストールください．
-ビルド＆インストール ビルド方法ですが，端末上でathrill-target-v850e2m に移動してください．
-Linux/Windowsの方は，さらに build_linux に移動してください．
-Macの方は，build_mac に移動してください．
-移動終わったら，以下コマンド実行するだけです．
-make timer32=true cleanmake timer32=true ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．
-$ ls -l ../../athrill/bin/linux/athrill2-rwxr-xr-x 1 user staff 628260 2 2 16:40 .</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</guid><description>linux版64bit gccコンパイラ(ライブラリ含む)のインストール ARM版のathrill2を利用される場合は，以下のサイトを参考にコンパイラおよびライブラリをインストールください．
-Windows(WSL)
-https://www.yokoweb.net/2018/03/07/wsl-ubuntu-arm-gcc/ Linux
-https://www.yokoweb.net/2018/05/16/ubuntu-18_04-gcc-arm-install/ Mac
-https://www.yokoweb.net/2018/05/16/macos-gcc-arm-brew-install/</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</guid><description>linux版64bit gccコンパイラ(ライブラリ含む)のインストール v850版のathrill2を利用される場合は，以下のサイトからコンパイラおよびライブラリ(athrill-gcc-package.tar.gz)をダウンロードください．
-https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1 $ tar xzvf athrill-gcc-package.tar.gz$ cd athrill-gcc-package/$ tar xzvf athrill-gcc.tar.gz$ ls usr/local/athrill-gcc/bin include lib libexec share v850-elf 解凍後，usr/local/athrill-gccを /usr/local 直下に移動してください．
-$ sudo mv usr/local/athrill-gcc /usr/local あとは，.bashrc に以下のパスを設定するだけです．
-export PATH=/usr/local/athrill-gcc/bin/:${PATH}export LD_LIBRARY_PATH=/usr/local/athrill-gcc:/usr/local/athrill-gcc/lib:${LD_LIBRARY_PATH} 設定後は，パスの有効化を忘れずに行ってください．
-source ${HOME}/.bashrc</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/</guid><description>箱庭用 EV3RT 開発環境のダウンロード 任意のフォルダ上で，athrillサンプル(athrill-sample)のプログラムを git clone してください．
-なお，cloneする場所は，以下のように athrillと同じフォルダ階層で実施してください．
-|---athril|---athrill-target-ARMv7-A└---ev3rt-athrill-ARMv7-A clone方法は以下の通りです．
-$ git clone https://github.com/toppers/ev3rt-athrill-ARMv7-A.git</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_v850/</guid><description>箱庭用 EV3RT 開発環境のダウンロード 任意のフォルダ上で，athrillサンプル(athrill-sample)のプログラムを git clone してください．
-なお，cloneする場所は，以下のように athrillと同じフォルダ階層で実施してください．
-|---athril|---athrill-target-v850e2m└---ev3rt-athrill-v850e2m clone方法は以下の通りです．
-$ git clone https://github.com/toppers/ev3rt-athrill-v850e2m.git サンプルアプリケーションのダウンロード 2種類のサンプルアプリケーションを用意しています．
-こちらから git clone いただき，hakoniwa-scenario-samples/single-robot配下の全てのフォルダを
-ev3rt-athrill-v850e2m/sdk/workspace に配置ください．
-$ git clone https://github.com/toppers/hakoniwa-scenario-samples.git</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/</guid><description>EV3ロボット制御プログラム 現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．
-※まだ暫定構成です．
-ARM版のathrill2を利用される場合は，以下のフォルダで作業してください．
-$ ls ev3rt-athrill-ARMv7-A/sdk/OBJ1.1/app.c app.h device_config_mmap.txt Makefile memory_mmap.txt simstart.bashapp.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt unity_mmap.bin 現状は，app.c/main_task で直接制御を行っています．
-コード断片は以下の通りです．
-while(1) {/*** PID controller*/#define white 100#define black 50static float lasterror = 0, integral = 0;static float midpoint = (white - black) / 2 + black;{float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);integral = error + integral * 0.3;float steer = 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</guid><description>EV3ロボット制御プログラム 現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．
-v850版のathrill2を利用される場合は，以下のフォルダで作業してください．
-$ ls ev3rt-athrill-v850e2m/sdk/workspace/line_trace/app.c app.h device_config_mmap.txt log.txt memory_mmap.txt unity_mmap.binapp.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt または
-$ ls ev3rt-athrill-v850e2m/sdk/workspace/color_sensor/app.c app.h device_config_mmap.txt log.txt memory_mmap.txt unity_mmap.binapp.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt 現状は，app.c/main_task で直接制御を行っています．
-コード断片は以下の通りです．(line_traceの場合)
-while(1) {/*** PID controller*/#define white 100#define black 10static float lasterror = 0, integral = 0;static float midpoint = (white - black) / 2 + black;{float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);integral = error + integral * 0.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityパッケージのダウンロード 単体ロボット向けシミュレータで使用するUnityパッケージを2種類用意してあります． どちらかのパッケージをご選択いただき，ダウンロードを行ってください．
-使用するUnityパッケージ 説明 single-robot-HackEV HackEVを模した走行体モデルを使用しています ev3rt-simple-robot シンプルな走行体モデルを使用しています single-robot-HackEV(v2.0) 上記２つのモデルを含んでおり自由に選択できます single-robot-HackEV(v2.1) single-robot-HackEV(v2.0)の内容に加え，シミュレータのコンフィグ機能，バイナリ実行機能を追加したものとなっております．(Windows, Mac対応済み．Linux版は開発中です) それぞれ下記からダウンロードしてください
-single-robot-HackEV.unitypackage https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v1.0 ev3rt-simple-robot.unitypackage https://github.com/toppers/hakoniwa-Unity-SimpleCar/releases single-robot-HackEV.unitypackage(v2.0) https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.0 single-robot-HackEV.unitypackage(v2.1) (Windows, Mac対応済み) https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.1 使用するUnityのパッケージによって，設定画面のレイアウトが異なりますため，
-ご選択いただいたUnityパッケージに合わせた導入手順をご参照ください
-Unityのインストール・パッケージのインポート・通信方式の切替方法 single-robot-HackEV(v2.1) を使用する場合 single-robot-HackEV(v2.0) を使用する場合 single-robot-HackEV または ev3rt-simple-robot を使用する場合</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
-以下のサイト等が参考になるかと思います．
-https://tech-camp.in/note/technology/44408/ ※動作確認はUnity 2020.1.0b9(64bit)で行っております．
-使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．
-Unityパッケージのインポート Unity 起動 まず，インストールしたUnityを起動してください．
-無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．
-次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．
-成功すると，以下のようにUnityが起動します．
-Unityパッケージのインポート ※画像はsingle-robot-HackEV.unitypackageをインポートする際のものになります
-Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Package&amp;hellip;」と選択し，任意の unitypackageファイルを選択してください．
-成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．
-成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます． Toppers_Courseをダブルクリックすると下図の画面が現れます．
-次に，シミュレーションに関わる設定を変更します．
-Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
-「Time」
-Fixed Timestep を 0.001に， Time Scale を 0.6に設定します．
-※ev3rt-simple-robot.unitypackageを使用する場合で，もしシミュレーションの動作が
-遅い場合には，Fixed Timestep を 0.01に，EV3 Motor(Script)のIntervalを 0.0005に
-設定してください．
-「Quality」
-OtherのVSync Count を Don&amp;rsquo;t Sync に設定します．
-これでインポート作業終了です．
-通信方式の切替方法 athrillとUnity間での通信方式によって設定が異なります． ご自身の環境に合わせて，どちらかの通信方式をご選択ください．
-UDP版を使用する場合はこちら MMAP版を使用する場合はこちら MMAPについて MMAPにすると嬉しい点としては以下が挙げられます．
-UDP のように通信ロストは発生しない(シミュレーション精度向上につながる) Unity と athrill 間のやりとりは共有メモリベースなので，高速になる(と思われる) 上記のとおり，精度向上と高速性を期待して試行してみましたが，精度は良くなりました(速度はあまり変化ないような?)． ただし，デメリットとして以下が挙げられます．
-1マシン前提での構成を余儀なくされる UDPであれば，athrillを別PCに配置して負荷分散可能ですので．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
-以下のサイト等が参考になるかと思います．
-https://tech-camp.in/note/technology/44408/ ※動作確認はUnity 2020.1.0b9(64bit)で行っております．
-使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．
-Unityパッケージのインポート Unity 起動 まず，インストールしたUnityを起動してください．
-無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．
-次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．
-成功すると，以下のようにUnityが起動します．
-Unityパッケージのインポート ※画像はsingle-robot-HackEV.unitypackageをインポートする際のものになります
-Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Package&amp;hellip;」と選択し，任意の unitypackageファイルを選択してください．
-成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．
-成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます． Toppers_Courseをダブルクリックすると下図の画面が現れます．
-次に，シミュレーションに関わる設定を変更します．
-Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
-「Time」
-Fixed Timestep を 0.001に， Time Scale を 0.6に設定します．
-※ev3rt-simple-robot.unitypackageを使用する場合で，もしシミュレーションの動作が
-遅い場合には，Fixed Timestep を 0.01に，EV3 Motor(Script)のIntervalを 0.0005に
-設定してください．
-「Quality」
-OtherのVSync Count を Don&amp;rsquo;t Sync に設定します．
-これでインポート作業終了です．
-通信方式の切替方法 athrillとUnity間での通信方式によって設定が異なります． ご自身の環境に合わせて，どちらかの通信方式をご選択ください．
-UDP版を使用する場合はこちら MMAP版を使用する場合はこちら MMAPについて MMAPにすると嬉しい点としては以下が挙げられます．
-UDP のように通信ロストは発生しない(シミュレーション精度向上につながる) Unity と athrill 間のやりとりは共有メモリベースなので，高速になる(と思われる) 上記のとおり，精度向上と高速性を期待して試行してみましたが，精度は良くなりました(速度はあまり変化ないような?)． ただし，デメリットとして以下が挙げられます．
-1マシン前提での構成を余儀なくされる UDPであれば，athrillを別PCに配置して負荷分散可能ですので．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</guid><description>Unityのインストール・パッケージのインポート・通信方式の切替方法 Unityのインストール Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．
-以下のサイト等が参考になるかと思います．
-https://tech-camp.in/note/technology/44408/ ※動作確認はUnity 2020.1.0b9(64bit)で行っております．
-使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．
-Unityパッケージのインポート Unity 起動 まず，インストールしたUnityを起動してください．
-無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．
-次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．
-成功すると，以下のようにUnityが起動します．
-Unityパッケージのインポート ※画像はsingle-robot-HackEV.unitypackageをインポートする際のものになります
-Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Package&amp;hellip;」と選択し，任意の unitypackageファイルを選択してください．
-成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．
-成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます． Toppers_Courseをダブルクリックすると下図の画面が現れます．
-次に，シミュレーションに関わる設定を変更します．
-Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
-「Time」
-Fixed Timestep を 0.001に， Time Scale を 0.6に設定します．
-※ev3rt-simple-robot.unitypackageを使用する場合で，もしシミュレーションの動作が
-遅い場合には，Fixed Timestep を 0.01に，EV3 Motor(Script)のIntervalを 0.0005に
-設定してください．
-「Quality」
-OtherのVSync Count を Don&amp;rsquo;t Sync に設定します．
-これでインポート作業終了です．
-通信方式の切替方法 athrillとUnity間での通信方式に設定を行います．
-設定はconfig.jsonという設定ファイルを作成し，設定を行います．
-config.json の設定例(通信方式がMMAPの場合) 設定するファイルパスは全て絶対パスで記述します．
-{ &amp;#34;AthrillPath&amp;#34;:&amp;#34;/mnt/c/project/esm/athrill/bin/linux/athrill2&amp;#34;, &amp;#34;TerminalPath&amp;#34;:&amp;#34;C:\\Windows\\System32\\wsl.exe&amp;#34;, &amp;#34;robots&amp;#34;:[ { &amp;#34;RobotName&amp;#34;:&amp;#34;RoboModel&amp;#34;, &amp;#34;WorkspacePathWin&amp;#34;:&amp;#34;C:\\project\\esm\\ev3rt-athrill-v850e2m\\sdk\\workspace&amp;#34;, &amp;#34;WorkspacePathUnix&amp;#34;:&amp;#34;/mnt/c/project/esm/ev3rt-athrill-v850e2m/sdk/workspace&amp;#34;, &amp;#34;ApplicationName&amp;#34;:&amp;#34;touch_sensor&amp;#34;, &amp;#34;BinaryName&amp;#34;:&amp;#34;asp&amp;#34; } ] } config.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
-Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
-「Player」
-Other SettingのScripting Define Symbols にVDEV_IO_MMAPと設定します．
-MMAP用パラメータ設定 ※なお，このページで紹介しているUnity画面の画像はWindows版のものです
-設定する場所は，Unity の以下のスクリプト・パラメータ(Filepath)部分です．
-インポート直後ですと，[EV3 Actuator] と [EV3 Sensor]の Filepath は空白です．
-ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．
-MMAPファイル自体は，以下の２ファイルがapp.cと同じフォルダに含まれています．
-athrill_mmap.bin unity_mmap.bin unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定してください(設定例：下図)．
-athrill_mmap.bin の絶対ファイルパスを，[EV3 Actuator]のFilepathに設定してください(設定例：下図)．
-例えば，v850版を使用するという前提でev3rt-athrill-v850e2mのローカルリポジトリが，
-C:\project\hakoniwaにあり，実行したいアプリケーションのフォルダがline_traceの場合は，
-以下のパスを設定します．
-[EV3 Actuator]のFilePath
-C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\unity_mmap.bin
-[EV3 Sensor]のFilePath
-C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\athrill_mmap.bin
-以上でMMAPの設定は終わりです．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap_v2.0/</guid><description>MMAP用Unity設定 UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．
-Unity のメニューから，「Edit」⇒「Project Settings」を選択します．
-「Player」
-Other SettingのScripting Define Symbols にVDEV_IO_MMAPと設定します．
-MMAP用パラメータ設定 ※なお，このページで紹介しているUnity画面の画像はWindows版のものです
-HierarchyビューでRobot配下のRoboModelを選択してください．
-すると画面右のInspectorビューに[Io Writer (Script)]と[Io Reader (Script)]の項目が表示されます.
-インポート直後ですと，[Io Writer (Script)] と [Io Reader (Script)]の Filepath は空白です．
-ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．
-MMAPファイル自体は，以下の２ファイルがapp.cと同じフォルダに含まれています．
-athrill_mmap.bin unity_mmap.bin unity_mmap.bin の絶対ファイルパスを，[Io Writer (Script)]のFilepathに設定してください(設定例：下図)．
-athrill_mmap.bin の絶対ファイルパスを，[Io Reader (Script)]のFilepathに設定してください(設定例：下図)．
-例えば，v850版を使用するという前提でev3rt-athrill-v850e2mのローカルリポジトリが，
-C:\project\hakoniwaにあり，実行したいアプリケーションのフォルダがline_traceの場合は，
-以下のパスを設定します．
-[Io Writer (Script)]のFilePath
-C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\unity_mmap.bin
-[Io Reader (Script)]のFilePath
-C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\athrill_mmap.bin
-以上でMMAPの設定は終わりです．</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</guid><description>UDP用Unity設定 UnityとathrillをUDPで通信する場合は，Unity側で以下の設定を行います．
-HierarchyビューでRobot配下のRoboModel_3を選択してください．
-すると画面右のInspectorビューに[EV3 Motor (Script)]の項目が表示されます.
-表示されたら，項目内のプロパティMax Diff Timeを40000に変更します．
-UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
-※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．
-説明する上でのIPアドレスの構成例 Unity側のIPアドレス：192.168.11.32
-athrill側のIPアドレス：192.168.11.20
-なお，IPアドレスの確認方法は以下のやり方でわかります．
-お使いのPCがLinux/WSLの場合 ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．
-$ ifconfigeth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96inet addr:192.168.11.32 Bcast:192.168.11.255 Mask:255.255.255.0inet6 addr: fe80::cc6d:70d3:a934:a61b/64 Scope:UnknownUP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1RX packets:0 errors:0 dropped:0 overruns:0 frame:0TX packets:0 errors:0 dropped:0 overruns:0 carrier:0collisions:0RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．
-&amp;gt; ipconfigWindows IP 構成イーサネット アダプター イーサネット:リンクローカル IPv6 アドレス.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</guid><description>UDP用パラメータ設定 UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．
-※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．
-説明する上でのIPアドレスの構成例 Unity側のIPアドレス：192.168.11.32
-athrill側のIPアドレス：192.168.11.20
-なお，IPアドレスの確認方法は以下のやり方でわかります．
-お使いのPCがLinux/WSLの場合 ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．
-$ ifconfigeth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96inet addr:192.168.11.32 Bcast:192.168.11.255 Mask:255.255.255.0inet6 addr: fe80::cc6d:70d3:a934:a61b/64 Scope:UnknownUP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1RX packets:0 errors:0 dropped:0 overruns:0 frame:0TX packets:0 errors:0 dropped:0 overruns:0 carrier:0collisions:0RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) お使いのPCがWindowsの場合 Windows PowerShell を開いて，ipconfigを叩きます．
-&amp;gt; ipconfigWindows IP 構成イーサネット アダプター イーサネット:リンクローカル IPv6 アドレス.</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index/</guid><description>単体ロボット向けシミュレータ導入手順 開発プラットフォームとターゲットCPU 開発プラットフォームは，Windows/Linux/Mac です．
-ターゲットCPUはV850/ARMの2種類が存在します．
-ご自身の環境に合わせて，プラットフォームやターゲットCPUをご選択ください．
-基本的な導入の流れは変わりありませんが，開発プラットフォームやターゲットCPU毎に
-細かい箇所での導入手順が異なります．
-対応するプラットフォーム/ターゲットCPUの導入手順をご確認ください．
-Windows V850版 ARM版 Linux V850版 ARM版 Mac V850版（非対応です） ARM版</description></item><item><title>単体ロボット向けシミュレータ導入手順(Linux/ARM編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-arm/</guid><description>単体ロボット向けシミュレータ導入手順(Linux/ARM編) 導入の流れ athrill2のインストール linux版64bit gccコンパイラ(ライブラリ含む)のインストール 箱庭用 EV3RT 開発環境のダウンロード サンプルアプリケーションの紹介 Unityのインストール・設定</description></item><item><title>単体ロボット向けシミュレータ導入手順(Linux/V850編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-v850/</guid><description>単体ロボット向けシミュレータ導入手順(Linux/V850編) 導入の流れ Rubyのインストール athrill2のインストール linux版64bit gccコンパイラ(ライブラリ含む)のインストール 箱庭用 EV3RT 開発環境のダウンロード サンプルアプリケーションの紹介 Unityのインストール・設定</description></item><item><title>単体ロボット向けシミュレータ導入手順(Mac/ARM編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-mac-arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-mac-arm/</guid><description>単体ロボット向けシミュレータ導入手順(Mac/ARM編) 導入の流れ athrill2のインストール linux版64bit gccコンパイラ(ライブラリ含む)のインストール 箱庭用 EV3RT 開発環境のダウンロード サンプルアプリケーションの紹介 Unityのインストール・設定</description></item><item><title>単体ロボット向けシミュレータ導入手順(Windows/ARM編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-arm/</guid><description>単体ロボット向けシミュレータ導入手順(Windows/ARM編) 導入の流れ WSLのインストール athrill2のインストール linux版64bit gccコンパイラ(ライブラリ含む)のインストール 箱庭用 EV3RT 開発環境のダウンロード サンプルアプリケーションの紹介 Unityのインストール・設定</description></item><item><title>単体ロボット向けシミュレータ導入手順(Windows/V850編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-v850/</guid><description>単体ロボット向けシミュレータ導入手順(Windows/V850編) 導入の流れ WSLのインストール Rubyのインストール athrill2のインストール linux版64bit gccコンパイラ(ライブラリ含む)のインストール 箱庭用 EV3RT 開発環境のダウンロード サンプルアプリケーションの紹介 Unityのインストール・設定</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>箱庭</title><link>https://toppers.github.io/hakoniwa/</link><description>Recent content on 箱庭</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sat, 14 May 2022 13:26:38 +0900</lastBuildDate><atom:link href="https://toppers.github.io/hakoniwa/index.xml" rel="self" type="application/rss+xml"/><item><title>箱庭のアーキテクチャ</title><link>https://toppers.github.io/hakoniwa/getting-started/architecture-overview/</link><pubDate>Sat, 14 May 2022 13:26:27 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/architecture-overview/</guid><description>&lt;h3 id="前提環境">前提環境&lt;/h3>
+&lt;p>&lt;a href="https://github.com/toppers/hakoniwa-ros2sim">箱庭 ROS シミュレータ:hakoniwa-ros2sim&lt;/a>
+を例題に解説するため、このチュートリアルが終わっておりプロジェクトが参照できることが望ましいです。&lt;/p>
+&lt;h3 id="ros向け箱庭のシステム構成">ROS向け箱庭のシステム構成&lt;/h3>
+&lt;p>ros2simのプロジェクトでは、Unity上のTortleBot3(tb3)をROS2のアプリから制御するシミュレーションを行います。
+以下にWindows/WSL2でのシステム構成を示しています。大まかには制御対象であるUnity上のtb3とそれを制御するtb3ctrlがROSで通信しています。&lt;/p>
+&lt;p>&lt;img alt="ROS向け箱庭のシステム構成" src="https://toppers.github.io/hakoniwa/hakoniwa/img/getting-started/ros2sim_overview.png">&lt;/p>
+&lt;h3 id="フォルダ構成">フォルダ構成&lt;/h3>
+&lt;p>githubからCloneしたプロジェクトのフォルダ構成は以下のようになっています。主に/ros2/workspace, /ros2/unityを扱えばよく、
+他のフォルダは本説明には含まれないため一旦無視してください。&lt;/p>
+&lt;ul>
+&lt;li>hakowani-ros2sim/
+&lt;ul>
+&lt;li>ros2/
+&lt;ul>
+&lt;li>workspace/ : ROSのワークスペース。Docker上にマウントされる&lt;/li>
+&lt;li>unity/tb3/ : Unityのプロジェクト&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>workspace/はROSのワークスペースで、ここに制御用のROSアプリを作成します。src下にはいくつかアプリが入っていますが、
+tb3ロボットを制御しているのはtb3フォルダ下のソースとなります。
+プログラムを修正した場合は&lt;code>bash build.bash&lt;/code>を行うことでビルドされアプリが更新されます。&lt;/p>
+&lt;p>unity/はUnityプロジェクトが入っており、Unity Editorからtb3フォルダを開くと読み込めます。
+cloneしたすぐの状態では、すべてのアセットは揃っておらずhako-install.bashによって必要なアセットのダウンロードや設定を行います。&lt;/p>
+&lt;h3 id="チュートリアルでの操作による挙動">チュートリアルでの操作による挙動&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>$ bash docker/pull-image.bash&lt;/code> : 本プロジェクトで用いるROSが入ったDockerイメージの取得を行っています。&lt;/li>
+&lt;li>&lt;code>$ bash docker/run.bash&lt;/code> : 取得したDockerのコンテナを作成しbashでログインします。またこの時カレントディレクトリにworkspace以下をマウントしています。&lt;/li>
+&lt;li>&lt;code># bash hako-install.bash&lt;/code> : unityフォルダにUnityのプロジェクトを展開すると共に、ROSと繋ぐための初期設定を行います。&lt;/li>
+&lt;li>&lt;code>(Terminal A)$ bash run.bash&lt;/code> : Dockerコンテナを起動しbashでログインします。&lt;/li>
+&lt;li>&lt;code>(Terminal A)# bash launch.bash&lt;/code> : UnityとROSで通信するための、ROS-TCP-Endpointを起動します。またUnityプロジェクトにはこのプログラムと対になる&lt;/li>
+&lt;li>&lt;code>(Terminal B)$ bash attach.bash&lt;/code> : Terminal Aで立ち上げたコンテナに入ります。&lt;/li>
+&lt;li>&lt;code>(Terminal B)# bash run.bash&lt;/code> : ロボットを制御するROSアプリのtb3ctrlを実行します。このプログラムのソースはworkspace/src/tb3/src/tb3ctrl.cppです。&lt;/li>
+&lt;/ul>
+&lt;h3 id="heading">&lt;/h3></description></item><item><title>Technical Background</title><link>https://toppers.github.io/hakoniwa/en/docs/background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/background/</guid><description>&lt;p>The Internet of Things (IoT) is the mixed martial art of information technology.
+It is because IoT systems are composed of diverse and large numbers of information devices that are intricately intertwined through network communications, requiring many engineers from various technical fields to gather together and pool their wisdom to build an IoT system.&lt;/p>
+&lt;p>Consider, as an example, an autonomous driving system.
+It crosses various technical domains as follows.&lt;/p></description></item><item><title>技術的背景</title><link>https://toppers.github.io/hakoniwa/docs/background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/background/</guid><description>&lt;p>IoT (Internet of Things) は，情報技術の総合格闘技と言えます．&lt;br>
+IoTシステムは，多様かつ大量の情報機器が，ネットワーク通信を介して密接に絡み合っています．
+様々な技術分野から多くの技術者が集まり，みんなで英知を結集してIoTシステムを構築する必要があります．&lt;/p>
+&lt;p>例えば自動運転システムの例を考えてみましょう．このように様々な技術領域を横断しています．&lt;/p>
+&lt;ul>
+&lt;li>組込み系
+&lt;ul>
+&lt;li>自動運転の判断処理を実現するソフトウェアの開発&lt;/li>
+&lt;li>ECU間の通信機構の開発&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>制御系
+&lt;ul>
+&lt;li>メカやエレキを制御するECUハードウェアの開発&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>IT・ネットワーク系
+&lt;ul>
+&lt;li>Web UI・スマホアプリケーションの開発&lt;/li>
+&lt;li>ビッグデータの統計処理を担うクラウドサーバの管理・保守&lt;/li>
+&lt;li>車車間・機器間の効率的な通信制御の実現&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>アプリケーション系
+&lt;ul>
+&lt;li>配車管理や交通流管理アプリの開発&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/back1.png " border="" width="600" />
+&lt;/figure>
+
+&lt;p>このようなIoTシステムを構築する際の課題として，下記が考えられます．&lt;/p>
+&lt;ul>
+&lt;li>問題発生経路の複雑化
+&lt;ul>
+&lt;li>全体結合しないと見えない問題が多数潜んでいる&lt;/li>
+&lt;li>様々な機器間の整合性を取れない&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>原因調査の複雑化
+&lt;ul>
+&lt;li>どこで何がおこっているのか調査困難&lt;/li>
+&lt;li>そもそもデバッグすること自体が難しい&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>実証実験のコスト増
+&lt;ul>
+&lt;li>実証実験は手軽に実施できない&lt;/li>
+&lt;li>各分野のエンジニアの総動員&lt;/li>
+&lt;li>手間，時間，費用がかかる&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>次に，ロボットを活用したIoTサービスの構築時に起こりえる課題を考えてみましょう．&lt;/p></description></item><item><title>Concept</title><link>https://toppers.github.io/hakoniwa/en/docs/concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/concept/</guid><description>&lt;p>The concept of Hakoniwa is &lt;strong>&amp;ldquo;Put mixed things as you like, and try various concepts with ease !&amp;rdquo;&lt;/strong>&lt;/p>
+&lt;p>We provide a virtual environment, which makes it easy to combine and demonstrate different software and services when developing IoT, automated driving systems, cloud robotics systems, etc.&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/concept1.en.png " border="" width="700" />
+&lt;/figure>
+
+&lt;p>We envision a use scenario where engineers from diverse fields gather to develop IoT systems. &lt;br>
+The &amp;ldquo;box&amp;rdquo; simulates the events and states of complex federated IoT systems according to the desired scenario.
+And, by just replacing the &amp;ldquo;assets&amp;rdquo; that are the system components of Hakoniwa, the user can arbitrarily change the validation&amp;rsquo;s target / abstraction level / accuracy.&lt;/p></description></item><item><title>コンセプト</title><link>https://toppers.github.io/hakoniwa/docs/concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/concept/</guid><description>&lt;p>箱庭のコンセプトは &lt;strong>「箱の中に，様々なモノをみんなの好みで配置して，いろいろ試せる！」&lt;/strong> です．&lt;/p>
+&lt;p>IoTや自動運転システム，クラウドロボティクスシステムを開発する際に，仮想環境である箱庭上に様々なソフトウェアやサービスを持ち寄って，机上で実証実験できる場を提供します．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/concept1.png " border="" width="700" />
+&lt;/figure>
+
+&lt;p>想定している利用シーンは，多様な分野から技術者が集まるIoTシステムの開発現場です． &lt;br>
+IoTの各要素が連携される複雑なシステムの事象や状態を，「箱」の中ではシナリオに応じた同じ挙動が再現されるようにします．
+そして，箱庭のシステム構成要素である「アセット」を差し替えることで，検証の対象／抽象度／レベルを任意に変更することができます．
+また，システム環境の視点（評価観点）や抽象度を，各技術者の分野や立場に応じて切り替えられるようにします．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/concept2.png " border="" width="600" />
+&lt;/figure>
+
+&lt;p>なお箱庭の語源は，名園や山水を模したミニチュアの庭園に由来します．
+盆景や盆栽に類するもので，江戸時代後半から明治時代にかけて流行したといわれています．&lt;/p></description></item><item><title>Our Goal</title><link>https://toppers.github.io/hakoniwa/en/docs/aimat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/aimat/</guid><description>&lt;p>Our goal is to establish a &lt;strong>simulation environment and ecosystem&lt;/strong> for engineers who develop/provide massive and complex IoT systems.&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/aimat1.en.png " border="" width="700" />
+&lt;/figure>
+
+&lt;p>Hakoniwa&amp;rsquo;s target is an information system with various devices connected by a network.
+We envision IoT applications in various fields, such as autonomous driving, logistics, and space development.&lt;/p>
+&lt;p>Hakoniwa targets the following users&lt;/p></description></item><item><title>目指すところ</title><link>https://toppers.github.io/hakoniwa/docs/aimat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/aimat/</guid><description>&lt;p>大規模かつ複雑なIoTシステムを開発／提供する技術者のための &lt;strong>シミュレーション環境とエコシステム&lt;/strong> を構築することを目指しています．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/aimat1.png " border="" width="700" />
+&lt;/figure>
+
+&lt;p>箱庭のターゲットは，様々な機器がネットワークで接続された情報システムです．
+自動運転や物流，宇宙分野など，IoTの様々な分野を想定しています．&lt;/p>
+&lt;p>箱庭は，次の利用者のための環境です．&lt;/p>
+&lt;ul>
+&lt;li>システム開発者：IoTシステムとその構成要素を開発する技術者&lt;/li>
+&lt;li>サービス提供者：IoTを活用してシステムサービスの提供を進める技術者&lt;/li>
+&lt;li>箱庭アセットの開発者および提供者
+&lt;ul>
+&lt;li>アセットとは，箱庭のシステム構成要素のことを指します．&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>箱庭プロジェクトの目指す強みと新しさとしては，IoTの各要素である箱庭アセットをそれぞれ連携させて，対象システムを&lt;strong>任意の精度で検証可能&lt;/strong>とすることです．
+そして，箱庭の利用者の技術領域や評価対象に応じて，アセットを差し替えることで，&lt;strong>検証の対象／抽象度／レベルを任意に変更できる&lt;/strong>ようにします．&lt;/p></description></item><item><title>Hakoniwa Core</title><link>https://toppers.github.io/hakoniwa/en/docs/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/core/</guid><description>&lt;p>The four core functions of Hakoniwa are as follows.&lt;/p>
+&lt;ol>
+&lt;li>Scheduling&lt;/li>
+&lt;li>Synchronization and Communication&lt;/li>
+&lt;li>Time Management&lt;/li>
+&lt;li>Asset Management&lt;/li>
+&lt;/ol>
+&lt;p>Also, we believe that the following functional characteristics are essential for Hakoniwa&amp;rsquo;s core functions.&lt;/p>
+&lt;ol>
+&lt;li>Componentization&lt;/li>
+&lt;li>Visualization&lt;/li>
+&lt;li>Event Driven&lt;/li>
+&lt;li>Automation&lt;/li>
+&lt;/ol>
+&lt;p>The core functions and functional characteristics of Hakoniwa are still under design study in the WG while developing the &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes/">prototype model&lt;/a>.
+We will add more details as we progress.&lt;/p></description></item><item><title>箱庭コア技術</title><link>https://toppers.github.io/hakoniwa/docs/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/core/</guid><description>&lt;p>箱庭の核となるカーネルは，次の4種類であると考えています．&lt;/p>
+&lt;ol>
+&lt;li>スケジューリング&lt;/li>
+&lt;li>同期・通信&lt;/li>
+&lt;li>時間管理&lt;/li>
+&lt;li>アセット管理&lt;/li>
+&lt;/ol>
+&lt;p>また，箱庭コア機能が備えるべき重要な機能特性は，次のものがあると考えています．&lt;/p>
+&lt;ol>
+&lt;li>コンポーネント化&lt;/li>
+&lt;li>可視化&lt;/li>
+&lt;li>イベント駆動化&lt;/li>
+&lt;li>自動化&lt;/li>
+&lt;/ol>
+&lt;p>箱庭のコア機能と機能特性については，&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes/">プロトタイプモデル&lt;/a>の開発を進めながら，WG内での設計検討を続けているところです．
+詳細が固まりましたら，追って解説を加えていきます．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/core1.png " border="" width="700" />
+&lt;/figure></description></item><item><title>Underlying technology</title><link>https://toppers.github.io/hakoniwa/en/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/technical/</guid><description>&lt;h3 id="toppers-kernel">TOPPERS Kernel&lt;/h3>
+&lt;p>Developed by the &lt;a href="https://toppers.jp">TOPPERS Project&lt;/a>, it is an open-source real-time kernel that extends the standard profile of the µITRON4.0 specification.
+It primarily targeted embedded systems that require high reliability, safety, and real-time performance.&lt;/p>
+&lt;p>&lt;a href="https://toppers.jp/">&lt;img alt="TOPPERS" src="https://www.toppers.jp/imgs/logo.gif">&lt;/a>&lt;/p>
+&lt;h3 id="athrill">Athrill&lt;/h3>
+&lt;p>The CPU instruction set simulator is the core of Hakoniwa. &lt;br>
+Members of Hokoniwa WG mainly develop it. It enables debugging and functional verification of the behavior of embedded microcontrollers and peripherals at the instruction level. Currently, V850/RH850 and ARMv7-A are mainly supported.&lt;/p></description></item><item><title>技術要素</title><link>https://toppers.github.io/hakoniwa/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/technical/</guid><description>&lt;h3 id="toppersカーネル">TOPPERSカーネル&lt;/h3>
+&lt;p>&lt;a href="https://toppers.jp">TOPPERSプロジェクト&lt;/a>により開発されている，μITRON4.0仕様のスタンダードプロファイルを拡張した，オープンソースのリアルタイムカーネルです．
+主な適用対象は，高い信頼性・安全性・リアルタイム性を要求される組込みシステムです．&lt;/p>
+&lt;p>&lt;a href="https://toppers.jp/">&lt;img alt="TOPPERS" src="https://www.toppers.jp/imgs/logo.gif">&lt;/a>&lt;/p>
+&lt;h3 id="athrill">Athrill&lt;/h3>
+&lt;p>箱庭の核である，CPU命令セットシミュレータです． &lt;br>
+箱庭WGメンバが中心となって開発を進めています．組込みマイコンおよびペリフェラルの挙動を命令レベルでデバッグ・機能検証することができます．現在はV850/RH850およびARMv7-Aが主なサポート対象です．&lt;/p>
+&lt;p>TOPPERSライセンスのもと，オープンソースで開発を進めています．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/toppers/athrill">https://github.com/toppers/athrill&lt;/a>&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;a href="https://github.com/toppers/athrill ">
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/athrill.png " border="" width="200" />
+ &lt;/a>
+&lt;/figure>
+
+&lt;h3 id="mros">mROS&lt;/h3>
+&lt;p>ROS(Robot Operating System)の組込み向け軽量実行環境です．ホストPC上のROSマスタおよびROSノードに対する，組込みマイコンからの出版購読型通信を実現します．&lt;a href="http://www.hal.ipc.i.u-tokyo.ac.jp">東京大学 情報理工学系研究科 システム情報第8研究室&lt;/a>が中心となって開発を進めています． &lt;br>
+&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes/multi-robot">複数ロボットの連携制御シミュレーション&lt;/a>のようなシステムでの活用を想定しています．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/mROS-base">https://github.com/mROS-base&lt;/a>&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;a href="https://github.com/mROS-base ">
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/mROS.png " border="" width="300" />
+ &lt;/a>
+&lt;/figure>
+
+&lt;h3 id="rdbox">RDBOX&lt;/h3>
+&lt;p>RDBOX (Robotics Developers BOX)は，ROSロボットやIoTに最適化した，Kubernetesクラスタとセキュアで拡張性の高いWi-Fiネットワークを自動構築するためのフレームワークです．シミュレーション環境と現実の作業環境をブリッジすることを目指しています．株式会社インテックの&lt;a href="https://rdbox-intec.github.io/homepage_jp/">RDBOX Project&lt;/a>で開発されています． &lt;br>
+&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes/harmony-robot">ロボット間協調動作向けプロトタイプモデル&lt;/a>の構築において，箱庭との連携を進めています．&lt;/p></description></item><item><title>Roadmap</title><link>https://toppers.github.io/hakoniwa/en/docs/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/roadmap/</guid><description>&lt;p>Hokoniwa WG is working on &amp;ldquo;big goals, little by little.&amp;rdquo;&lt;/p>
+&lt;p>Our current main activity is to create &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/en/prototypes">prototype models&lt;/a> to realize the concept and to examine the technology.
+All of these R&amp;amp;D results are released as OSS.
+We desire continuous maturation of the core technologies and expansion of the various functions of Hakoniwa by sharing each prototype model and receiving feedback on it.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>The Hakoniwa Project is engaged in research and development, first constructing and disseminating educational packages and then expanding into product development.
+We have a big vision, but to be honest, we are somewhat short on the workforce.
+We are looking for various technical personnel (especially those with knowledge of cloud technologies and visualization asset development) to help us grow Hakoniwa.&lt;/p></description></item><item><title>ロードマップ</title><link>https://toppers.github.io/hakoniwa/docs/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/roadmap/</guid><description>&lt;p>箱庭は &lt;strong>「でっかく語って少しずつ育てて」&lt;/strong> います．&lt;/p>
+&lt;p>現在のプロジェクトの活動の中心としては，コンセプトの実現と技術研鑽のために&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes">プロトタイプモデル&lt;/a>を構築中です．
+これらの研究開発は，すべてOSSとして公開しながら進めていきます．
+皆さまにそれぞれのプロトタイプモデルをご利用いただき，そしてフィードバックを得ながら，箱庭コア技術の成熟と様々な機能拡充を進めていきたいと考えています．&lt;/p>
+&lt;p>&lt;img alt="roadmap" src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/roadmap1.png">&lt;/p>
+&lt;p>箱庭プロジェクトは，まずは教育用途でのパッケージ構築と普及を図っていますが，製品開発への展開も視野に入れて研究開発を進めています．
+壮大な構想を掲げていますが，全くマンパワーは足りていないのが実情です．
+箱庭の成長のためにも，特にクラウド技術や可視化アセット開発に知見をお持ちの方に参画いただきたいと考えています．&lt;/p>
+&lt;p>箱庭WGの狙いや趣旨にご賛同いただける方の参画をお待ちしています．
+活動としては，月１回のオンラインでの定例会合と、年２回の技術検討合宿を実施しています．
+また，日常的な議論や情報共有と開発にはSlack，GitHubおよびGoogle Driveを活用しています．&lt;/p>
+&lt;p>Slack等での議論に参加したい方，活動内容へのご要望をお持ちの方，コア技術や各アセットの開発などに参加したい方，
+箱庭WGの活動で期待される技術成果を活用したい方，製品開発に展開してみたい方，
+ぜひとも&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/contact/">問合せ先&lt;/a>よりご連絡ください．&lt;/p></description></item><item><title>制御プログラムの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/app-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/app-customize/</guid><description>&lt;h3 id="ソースコードの場所">ソースコードの場所&lt;/h3>
+&lt;p>今回のサンプルのtb3の制御プログラムは、
+&lt;code>/ros2/workspace/src/tb3/src/tb3ctrl.cpp&lt;/code> に配置されています。
+詳細は実際のコードを見て頂くとして主要な部分を紹介していきます。ページの最後にコードの抜粋を示します。&lt;/p>
+&lt;h3 id="制御プログラムの概要">制御プログラムの概要&lt;/h3>
+&lt;p>Unity上のロボットと制御プログラムとは、ROSで通信しています。
+Unity上のロボットからはレーザースキャナから周囲360°の距離データが送られてきます。制御プログラムからはロボットの移動量を送信します。&lt;/p>
+&lt;p>この制御プログラムは、壁沿いに周回するような制御を行っています。do_forwardで前方の距離が一定以上あれば前進し、turn_rightでは右側の距離が一定以上であれば旋回します。&lt;/p>
+&lt;p>このように制御部分は非常に小さく、他はROSで通信するためのボイラープレートとなっています。
+制御部分のパラメータを変えることで、自由にロボットを制御することができます。いろいろと書き換えて試してみてください。
+なお、コードを書き換えた後は、Dockerのコンテナ内でbuild.bashを実行してプログラムのコンパイルを行ってください。&lt;/p>
+&lt;h3 id="制御プログラムの抜粋">制御プログラムの抜粋&lt;/h3>
+&lt;pre tabindex="0">&lt;code>// ロボットのレーザースキャナから受け取る360°周囲の距離データ
+typedef struct {
+ double ranges[360];
+} ScanDataType;
+static ScanDataType scan_data;
+
+// レーザースキャナから受け取ったデータのROSのコールバック関数。取得したデータをscan_data変数に保持する。
+static void scanCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg) {
+ int i;
+ for (i = 0; i &amp;lt; 360; i++) {
+ scan_data.ranges[i] = msg-&amp;gt;ranges[i];
+ }
+ return;
+}
+
+// Unity上のロボットの制御値
+static geometry_msgs::msg::Twist cmd_vel;
+
+static float get_forward_distance(void) {
+ ... // 前方向の一定角度のうち一番近い距離を取得
+}
+
+static float get_right_distance(void) {
+ ... // 右側の一定角度のうち一番近い距離を取得
+}
+
+static bool do_forward(void) {
+ ... // 前方向に移動指示。cmd_vel.linear.x（前後方向）を増加させ送信
+}
+
+static bool turn_right(void) {
+ ... // 右転回を指示。cmd_vel.angular.z値(ロボットの垂直軸回転角)を増加して送信
+}
+
+static void do_control(void) {
+ ... // 周囲の距離に応じて処理を判定する
+}
+
+using namespace std::chrono_literals;
+
+int main(int argc, char **argv) {
+ char buffer[3][4096];
+
+ // UnityとROSで連携するためのTOPIC名の設定
+ if (argc &amp;gt; 1) {
+ sprintf(buffer[0], &amp;#34;%s_tb3_node&amp;#34;, argv[1]);
+ sprintf(buffer[1], &amp;#34;%s_cmd_vel&amp;#34;, argv[1]);
+ sprintf(buffer[2], &amp;#34;%s_scan&amp;#34;, argv[1]);
+ printf(&amp;#34;START: %s\n&amp;#34;, argv[1]);
+ }
+ else {
+ sprintf(buffer[0], &amp;#34;tb3_node&amp;#34;);
+ sprintf(buffer[1], &amp;#34;cmd_vel&amp;#34;);
+ sprintf(buffer[2], &amp;#34;scan&amp;#34;);
+ printf(&amp;#34;START\n&amp;#34;);
+ }
+ rclcpp::init(argc, argv);
+
+ // ROSのPublisher, Subscriberの生成
+ auto node = rclcpp::Node::make_shared(buffer[0]);
+ auto publisher =
+ node-&amp;gt;create_publisher&amp;lt;geometry_msgs::msg::Twist&amp;gt;(buffer[1], 1);
+ auto subscriber = node-&amp;gt;create_subscription&amp;lt;sensor_msgs::msg::LaserScan&amp;gt;(
+ buffer[2], 1, scanCallback);
+
+ rclcpp::WallRate rate(10ms);
+
+ // 制御ループ
+ while (rclcpp::ok()) {
+ do_control();
+ publisher-&amp;gt;publish(cmd_vel);
+
+ rclcpp::spin_some(node);
+ rate.sleep();
+ }
+ return 0;
+}
+&lt;/code>&lt;/pr</description></item><item><title>Microcomputer-controlled robot simulation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/single-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/single-robot/</guid><description>&lt;p>This is a Hakoniwa prototype model with one SBC, designed based on the challenges of &lt;a href="https://www.etrobo.jp/">ET Robocon&lt;/a>.
+This prototype can verify by linking the program&amp;rsquo;s behavior on the embedded microcontroller with the robot&amp;rsquo;s behavior.&lt;/p>
+&lt;h3 id="design-intent-from-a-technical-study-perspective">Design intent from a technical study perspective&lt;/h3>
+&lt;ul>
+&lt;li>Study on how to integrate between physical simulators and microcomputer simulators&lt;/li>
+&lt;li>Study of time synchronization between different simulators&lt;/li>
+&lt;/ul>
+&lt;h3 id="other-design-intent">Other design intent&lt;/h3>
+&lt;ul>
+&lt;li>Promote Hakoniwa to ET Robot contenst participants (PR activities)&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelA.en.png " border="" width="700" />
+&lt;/figure>
+
+&lt;h3 id="installation--usage">Installation &amp;amp; Usage&lt;/h3>
+&lt;p>A trial package with minimal configuration and procedures is available in the GitHub repository below.
+We encourage you to try it out.&lt;/p></description></item><item><title>マイコン制御ロボットシミュレーション</title><link>https://toppers.github.io/hakoniwa/prototypes/single-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/prototypes/single-robot/</guid><description>&lt;p>単体のSBCで構成される単体ロボットを対象とした箱庭プロトタイプモデルです．&lt;a href="https://www.etrobo.jp/">ETロボコン&lt;/a>を題材としています．
+組込みマイコン上のプログラムの振る舞いを，ロボット上の挙動と連携させて検証を進めることができます．&lt;/p>
+&lt;h3 id="技術研鑽視点での狙い">技術研鑽視点での狙い&lt;/h3>
+&lt;ul>
+&lt;li>物理シミュレータとマイコンシミュレータ間の連携方法の検討&lt;/li>
+&lt;li>異なるシミュレータ間の時間同期の検討&lt;/li>
+&lt;/ul>
+&lt;h3 id="その他の狙い">その他の狙い&lt;/h3>
+&lt;ul>
+&lt;li>ETロボコンユーザ層に箱庭を広める（広報活動）&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelA.png " border="" width="700" />
+&lt;/figure>
+
+&lt;h3 id="導入方法と使用方法">導入方法と使用方法&lt;/h3>
+&lt;p>最小の構成と手順で単体ロボット向けシミュレータを試行できるパッケージを，下記のGitHubリポジトリで公開しています．ぜひ試してみてください．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/toppers/hakoniwa-single_robot">toppers/hakoniwa-single_robot: 箱庭プロトタイプモデルA：単体ロボット向けシミュレータ&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="動作例のデモ">動作例のデモ&lt;/h3>
+&lt;p>&lt;img alt="modelAdemo" src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo.gif">&lt;/p>
+&lt;p>&lt;img alt="modelAdemo1" src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo1.gif">&lt;/p>
+&lt;p>&lt;img alt="modelAdemo2" src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo2.gif">&lt;/p>
+&lt;hr>
+&lt;h4 id="謝辞特記事項">謝辞・特記事項：&lt;/h4>
+&lt;p>Unityパッケージの設計と作成にあたっては，宝塚大学 東京メディア芸術学部 吉岡章夫准教授および学部生の杉﨑涼志さん，木村明美さん，千葉純平さんにご協力いただきました．&lt;/p>
+&lt;p>HackEVのUnityアセットは，ETロボコン実行委員会より提供いただいたデータを基に作成しています．実行委員会の皆さまに深く感謝いたします．&lt;br>
+ただし本アセットはETロボコンの本番環境とは異なりますので，大会に参加予定の方はご注意ください．また，本アセットは，個人利用または教育利用に限定してご利用ください．&lt;/p></description></item><item><title>コースの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/env-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/env-customize/</guid><description>&lt;h3 id="執筆中">執筆中&lt;/h3></description></item><item><title>ROS controlled robot simulation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/ros-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/ros-robot/</guid><description>&lt;p>This prototype model uses ROS/ROS2 to collaborate with multiple and single robots.
+This prototype is lighter than Gazebo, often used with ROS, and allows for easy customization of robots and environments in Unity and the introduction of URDF format models.&lt;/p>
+&lt;h3 id="design-intent-from-a-technical-study-perspective">Design intent from a technical study perspective&lt;/h3>
+&lt;ul>
+&lt;li>Running simulations using ROS, which is commonly used for robot control&lt;/li>
+&lt;li>Study on how to coordinate with other robots&lt;/li>
+&lt;/ul>
+&lt;h3 id="other-design-intent">Other design intent&lt;/h3>
+&lt;ul>
+&lt;li>Introduce robots controlled by ROS to create a simulation environment that mixes multiple control mechanisms&lt;/li>
+&lt;/ul>
+&lt;h3 id="installation--usage">Installation &amp;amp; Usage&lt;/h3>
+&lt;p>A trial package with minimal configuration and procedures is available in the GitHub repository below.
+We encourage you to try it out.&lt;/p></description></item><item><title>ROS制御ロボットシミュレーション</title><link>https://toppers.github.io/hakoniwa/prototypes/ros-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/prototypes/ros-robot/</guid><description>&lt;p>ロボットの制御にROS/ROS2を用いた箱庭プロトタイプモデルです．単体のロボットだけでなく，複数のロボットの連携動作も可能です．
+ROSで一般的に用いられているGazeboよりも軽量でロボットや環境もUnity上で容易にカスタマイズすることができ、URDF形式のモデルの導入も行うことができます。&lt;/p>
+&lt;h3 id="技術研鑽視点での狙い">技術研鑽視点での狙い&lt;/h3>
+&lt;ul>
+&lt;li>一般的なロボット制御に用いられているROSも含めたシミュレーションの実行&lt;/li>
+&lt;li>複数のロボットを連携させたシミュレーションの実行&lt;/li>
+&lt;/ul>
+&lt;h3 id="その他の狙い">その他の狙い&lt;/h3>
+&lt;ul>
+&lt;li>ROSのロボットも導入可能とすることで、複数の制御機構が混在したシミュレーション環境を実現する&lt;/li>
+&lt;/ul>
+&lt;h3 id="導入方法と使用方法">導入方法と使用方法&lt;/h3>
+&lt;p>最小の構成と手順で試行できるパッケージを，下記のGitHubリポジトリで公開しています．ぜひ試してみてください．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/toppers/hakoniwa-ros2sim">toppers/hakoniwa-ros2sim: 箱庭 ROS シミュレータ&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="動作例のデモ">動作例のデモ&lt;/h3>
+&lt;p>&lt;img alt="modelROSdemo" src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelROS.gif">&lt;/p>
+&lt;hr>
+&lt;h4 id="謝辞特記事項">謝辞・特記事項：&lt;/h4>
+&lt;p>TurtleBot3 の Unity パッケージの設計と作成にあたっては，宝塚大学 東京メディア芸術学部 吉岡章夫准教授および学部生の杉崎涼志さん，木村明美さんにご協力いただきました．&lt;/p>
+&lt;p>TurtleBot3 のUnity アセットは，株式会社ロボティズ様より提供いただいたデータを基に作成しています．ご協力いただき深く感謝いたします．&lt;/p></description></item><item><title>ロボットのカスタマイズ方法</title><link>https://toppers.github.io/hakoniwa/getting-started/robot-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/robot-customize/</guid><description>&lt;h3 id="執筆中">執筆中&lt;/h3></description></item><item><title>Simulation of collaborative operation of multiple robots</title><link>https://toppers.github.io/hakoniwa/en/prototypes/multi-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/multi-robot/</guid><description>&lt;p>This prototype model simulates multiple robots and control programs in the same environment.
+This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Unity environments and even time synchronization among assets and uses VR technology to dive into the simulation environment for verification.&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelBoverview.en.png " border="" width="700" />
+&lt;/figure>
+
+&lt;h3 id="design-intent-from-a-technical-study-perspective">Design intent from a technical study perspective&lt;/h3>
+&lt;ul>
+&lt;li>Study of methods of collaboration in multiple environments (e.g., simulation time synchronization)&lt;/li>
+&lt;li>Study on how visualize communication among Hakoniwa assets (including ROS/ROS2 collaboration)/ROS2連携含む）&lt;/li>
+&lt;li>Study of mechanisms to augment Hakoniwa assets&lt;/li>
+&lt;/ul>
+&lt;h3 id="other-design-intent">Other design intent&lt;/h3>
+&lt;ul>
+&lt;li>Promote Hakoniwa to the ROS user base (PR activities)&lt;/li>
+&lt;/ul>
+&lt;h3 id="installation--usage">Installation &amp;amp; Usage&lt;/h3>
+&lt;p>Various demos are available at the following Github repository. Try them out.&lt;/p></description></item><item><title>複数ロボットの連携制御シミュレーション</title><link>https://toppers.github.io/hakoniwa/prototypes/multi-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/prototypes/multi-robot/</guid><description>&lt;p>複数のロボット，複数の制御プログラムによるシミュレーションを同じ環境で行うプロトタイプモデルです．
+UnityのPhotonライブラリを用いて複数のUnity環境の同期を行っており，加えてアセット間の時間同期も実現しています．
+またVRによるシミュレーション環境へのダイブも試行しています．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelBoverview.png " border="" width="700" />
+&lt;/figure>
+
+&lt;h3 id="技術研鑽視点での狙い">技術研鑽視点での狙い&lt;/h3>
+&lt;ul>
+&lt;li>マルチ環境での連携方法検討（シミュレーション時間同期等）&lt;/li>
+&lt;li>箱庭アセット間の通信可視化方法の検討（ROS/ROS2連携含む）&lt;/li>
+&lt;li>箱庭アセットの仕組み検討&lt;/li>
+&lt;/ul>
+&lt;h3 id="その他の狙い">その他の狙い&lt;/h3>
+&lt;ul>
+&lt;li>ROSユーザ層に箱庭を広める（広報活動）&lt;/li>
+&lt;/ul>
+&lt;h3 id="導入方法と使用方法">導入方法と使用方法&lt;/h3>
+&lt;p>以下のGithubリポジトリにて，各種デモを公開しています．ぜひお試し下さい．&lt;/p>
+&lt;p>‐ &lt;a href="https://github.com/toppers/hakoniwa-ros-multiplay">toppers/hakoniwa-ros-multiplay&lt;/a>&lt;/p>
+&lt;h3 id="動作例のデモ">動作例のデモ&lt;/h3>
+&lt;ul>
+&lt;li>photonによる複数ロボットの連携
+&lt;video controls src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelBdemo1.mp4" >
+&lt;/li>
+&lt;li>Oculus Questとの接続の様子
+&lt;video controls src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelBdemo2.mp4" >
+&lt;/li>
+&lt;li>VRで箱庭内に入った様子
+&lt;video controls src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelBdemo3.mp4" >
+&lt;/li>
+&lt;/ul></description></item><item><title>Simulation of inter-robot cooperative operation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/harmony-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/harmony-robot/</guid><description>&lt;p>This is a Hakoniwa prototype model for integration of cloud computing and robotics.&lt;/p>
+&lt;h3 id="design-intent-from-a-technical-study-perspective">Design intent from a technical study perspective&lt;/h3>
+&lt;ul>
+&lt;li>Study of specific methods of cloud computing integration&lt;/li>
+&lt;li>Study on how to coordinate with other robots (challenge to more complex robot operation/interference)&lt;/li>
+&lt;li>Study of mechanisms to augment Hakoniwa assets&lt;/li>
+&lt;/ul>
+&lt;h3 id="other-design-intent">Other design intent&lt;/h3>
+&lt;ul>
+&lt;li>Interaction with RDBOX ( establish a track record of Hakoniwa as a development virtual environment)&lt;/li>
+&lt;li>Promote Hakoniwa to the RDBOX user base (PR activities)&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelC.en.png " border="" width="700" />
+&lt;/figure>
+
+&lt;p>The prototype model is currently under development. So please wait for its release.&lt;/p></description></item><item><title>ロボット間協調動作シミュレーション</title><link>https://toppers.github.io/hakoniwa/prototypes/harmony-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/prototypes/harmony-robot/</guid><description>&lt;p>クラウドとロボティクスとの連携を目指した箱庭プロトタイプモデルです．&lt;/p>
+&lt;h3 id="技術研鑽視点での狙い">技術研鑽視点での狙い&lt;/h3>
+&lt;ul>
+&lt;li>クラウド連携方法検討&lt;/li>
+&lt;li>ロボット間の連携方法検討（より複雑なロボットの動き/干渉に挑戦）&lt;/li>
+&lt;li>箱庭アセットを増やす仕組みの検討&lt;/li>
+&lt;/ul>
+&lt;h3 id="その他の狙い">その他の狙い&lt;/h3>
+&lt;ul>
+&lt;li>RDBOX連携（開発支援仮想環境としての箱庭の実績作り）&lt;/li>
+&lt;li>RDBOXユーザ層に箱庭を広める（広報活動）&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelC.png " border="" width="700" />
+&lt;/figure>
+
+&lt;p>現在，本プロトタイプモデルの実現に向けて鋭意開発中です．公開までしばしお待ちください．&lt;/p></description></item><item><title>Repository List</title><link>https://toppers.github.io/hakoniwa/en/repositories/</link><pubDate>Wed, 26 Aug 2020 15:09:42 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/en/repositories/</guid><description>&lt;h3 id="hakoniwa">Hakoniwa&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Links&lt;/th>
+ &lt;th style="text-align: left">Outline&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa">hakoniwa&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Repository for general support handling and content management of this website&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-single_robot">hakoniwa-single_robot&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Package that can try &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes/single-robot">Hakoniwa Prototype Model A: Simulator for Single Robot&lt;/a> with minimum configuration and procedures&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-ros2sim">hakoniwa-ros2sim&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Environment for easy simulation of ROS 2 programs on Hakoniwa&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-core">hakoniwa-core&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Repository for prototype development of &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/docs/core">Hakoniwa Core Function&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="athrill">Athrill&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Links&lt;/th>
+ &lt;th style="text-align: left">Outline&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/athrill">athrill&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Athrill core (target-independent part)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/athrill-device">athrill-device&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">athrill device for external shared library.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/athrill-target-v850e2m">athrill-target-v850e2m&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">v850e2m Target dependencies for Athrill&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/athrill-target-ARMv7-A">athrill-target-ARMv7-A&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">ARMv7-A Target dependencies for Athrill&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/athrill-target-rh850f1x">athrill-target-rh850f1x&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">rh850f1x Target dependencies for Athrill&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/athrill-gcc-v850e2m">athrill-gcc-v850e2m&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">gcc package for Athrill V850E2M target&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="toppers-kernel">TOPPERS kernel&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Links&lt;/th>
+ &lt;th style="text-align: left">Outline&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/ev3rt-athrill-v850e2m">ev3rt-athrill-v850e2m&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">V850E2M version of TOPPERS/EV3RT platform for Athrill&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/ev3rt-athrill-ARMv7-A">ev3rt-athrill-ARMv7-A&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Arm v7-A version of TOPPERS/EV3RT platform for Athrill&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/asp-athrill-mbed">asp-athrill-mbed&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Package of TOPPERS/ASP kernel and Mbed library for Athrill&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="unity">Unity&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Links&lt;/th>
+ &lt;th style="text-align: left">Outline&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-Unity-Package">hakoniwa-Unity-Package&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Unity Asset Package for Hakoniwa&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="mros">mROS&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Links&lt;/th>
+ &lt;th style="text-align: left">Outline&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/mROS-base/mROS">mROS&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">A lightweight runtime environment of ROS 1 nodes onto embedded devices&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/mROS-base/mros2">mROS 2&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">A lightweight runtime environment of ROS 1 nodes onto embedded devices&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="samples">Samples&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">Links&lt;/th>
+ &lt;th style="text-align: left">Outline&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-scenario-samples">hakoniwa-scenario-samples&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Sample collection of Hakoniwa behavior scenarios&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>リポジトリ一覧</title><link>https://toppers.github.io/hakoniwa/repositories/</link><pubDate>Wed, 26 Aug 2020 15:09:42 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/repositories/</guid><description>&lt;h3 id="箱庭本体">箱庭本体&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">略称・リンク&lt;/th>
+ &lt;th style="text-align: left">概要&lt;/th>
+ &lt;th style="text-align: left">備考&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa">hakoniwa&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">全般的なサポート対応と本Webサイトのコンテンツ管理のためのリポジトリ&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-single_robot">hakoniwa-single_robot&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes/single-robot">箱庭プロトタイプモデルA：単体ロボット向けシミュレータ&lt;/a>を最小の構成・手順で試行できるパッケージ&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-ros2sim">hakoniwa-ros2sim&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">箱庭上で ROS 2 プログラムを手軽にシミュレーションできる環境&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-core">hakoniwa-core&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/docs/core">箱庭コア機能&lt;/a>の試作開発用リポジトリ&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-document">hakoniwa-document&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">TOPPERS/箱庭 利用者向けの公式ドキュメント&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-core-cpp-client">hakoniwa-core-cpp-client&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/docs/core">箱庭コア機能&lt;/a>のC言語API&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-conductor">hakoniwa-conductor&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">分散環境における箱庭実現のための調停プロセス&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-bridge">hakoniwa-bridge&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">リアル（エッジ）とバーチャル（箱庭）を接続するための通信モジュール&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-webserver">hakoniwa-webserver&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">箱庭PDUをWebSocket経由でブラウザ上で可視化&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="athrill">Athrill&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">略称・リンク&lt;/th>
+ &lt;th style="text-align: left">概要&lt;/th>
+ &lt;th style="text-align: left">備考&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/athrill">athrill&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Athrill本体(ターゲット非依存部)&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/athrill-device">athrill-device&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">外部デバイス連携のためのgRPCライブラリ&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/athrill-target-v850e2m">athrill-target-v850e2m&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Athrill V850E2Mターゲット依存部&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/athrill-target-ARMv7-A">athrill-target-ARMv7-A&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Athrill ARMv7-Aターゲット依存部&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/athrill-target-rh850f1x">athrill-target-rh850f1x&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Athrill RH850F1xターゲット依存部&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/athrill-gcc-v850e2m">athrill-gcc-v850e2m&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Athrill V850E2Mターゲット対応のgccパッケージ&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="toppers-kernel">TOPPERS kernel&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">略称・リンク&lt;/th>
+ &lt;th style="text-align: left">概要&lt;/th>
+ &lt;th style="text-align: left">備考&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/ev3rt-athrill-v850e2m">ev3rt-athrill-v850e2m&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">TOPPERS/EV3RTプラットフォームのAthrill向けV850E2M版&lt;/td>
+ &lt;td style="text-align: left">ASP3カーネルを代用&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/ev3rt-athrill-ARMv7-A">ev3rt-athrill-ARMv7-A&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">TOPPERS/EV3RTプラットフォームのAthrill向けARMv7-A版&lt;/td>
+ &lt;td style="text-align: left">ASP3カーネルを代用&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/asp-athrill-mbed">asp-athrill-mbed&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Athrill向けTOPPERS/ASPカーネルとmbedライブラリのパッケージ&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/asp3-athrill-v850e2m">asp3-athrill-v850e2m&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Athrill向けTOPPERS/ASP3カーネルのパッケージ&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="unity">Unity&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">略称・リンク&lt;/th>
+ &lt;th style="text-align: left">概要&lt;/th>
+ &lt;th style="text-align: left">備考&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-Unity-Package">hakoniwa-Unity-Package&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">箱庭向けのUnityアセット・パッケージ&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-unity-drone-model">hakoniwa-unity-drone-model&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">PX4と連携可能なUnityドローンシミュレータ&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="mros">mROS&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">略称・リンク&lt;/th>
+ &lt;th style="text-align: left">概要&lt;/th>
+ &lt;th style="text-align: left">備考&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/mROS-base/mROS">mROS&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">組込みデバイス向けROS 1ノード軽量実行環境&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/mROS-base/mros2">mROS 2&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">組込みデバイス向けROS 2ノード軽量実行環境&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="samples">Samples&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">略称・リンク&lt;/th>
+ &lt;th style="text-align: left">概要&lt;/th>
+ &lt;th style="text-align: left">備考&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-scenario-samples">hakoniwa-scenario-samples&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">箱庭の動作シナリオのサンプル集&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-px4sim">hakoniwa-px4sim&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">PX4と連携可能なドローンのプラントモデル用シミュレーション環境&lt;/td>
+ &lt;td style="text-align: left">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>SNS &amp; Contact</title><link>https://toppers.github.io/hakoniwa/en/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/contact/</guid><description>&lt;h3 id="invitation-to-hakoniwa-wg">Invitation to Hakoniwa WG&lt;/h3>
+&lt;p>We welcome the participation of those who agree with the purpose of the Hakoniwa WG.
+If you would like to participate in discussions on Slack, have requests for our activities, develop core technologies and assets, or utilize the technical outcomes of the Hakoniwa WG and employ them in product development, etc., don&amp;rsquo;t hesitate to get in touch with us.&lt;/p>
+&lt;pre tabindex="0">&lt;code>Email: hakoniwa.toppers_at_gmail.com (Replace _at_ with @)
+&lt;/code>&lt;/pr</description></item><item><title>SNS・問合せ先</title><link>https://toppers.github.io/hakoniwa/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/contact/</guid><description>&lt;h3 id="箱庭の活動への参画のお誘い">箱庭の活動への参画のお誘い&lt;/h3>
+&lt;p>箱庭WGの狙いや趣旨にご賛同いただける方の参画をお待ちしています。
+Slack等での議論に参加したい方、活動内容へのご要望をお持ちの方、コア技術や各アセットの開発などに参加したい方、
+箱庭WGの活動で期待される技術成果を活用したい方、製品開発に展開してみたい方、
+ぜひともお声がけください。&lt;/p>
+&lt;pre tabindex="0">&lt;code>Email: hakoniwa.toppers_at_gmail.com (_at_ を@ に置き換えてください)
+&lt;/code>&lt;/pre>&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/hakoniwa-flyer2022.pdf">箱庭WGの活動紹介（2022年度版）&lt;/a>もご参照ください。&lt;/p>
+&lt;h4 id="箱庭フォーラム利用方法について質問したり技術的な相談をしたい">箱庭フォーラム：利用方法について質問したり、技術的な相談をしたい&lt;/h4>
+&lt;p>箱庭に関わる開発者や技術者、ユーザのためのSNSになることを目指して、&lt;a href="https://github.com/toppers/hakoniwa/discussions">GitHub Discussions&lt;/a>を運用しています。&lt;/p>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/prototypes/">箱庭プロトタイプモデル&lt;/a>の導入・利用にあたって不明な点や技術的な質問（Athrillを含む要素技術単体に関する質問も歓迎）や、箱庭の活用方法のアイデアや関係する全般的な話題の提供も歓迎します。&lt;/p>
+&lt;p>次のカテゴリを用意していますので、適切と思われるものを選択して投稿してください。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/toppers/hakoniwa/discussions/categories/announcements">Announcements&lt;/a>: 箱庭メンバからの最新情報のお知らせ&lt;/li>
+&lt;li>&lt;a href="https://github.com/toppers/hakoniwa/discussions/categories/general">General&lt;/a>: 箱庭や要素技術に関する全般的な話題の提供 a.k.a 雑談場所&lt;/li>
+&lt;li>&lt;a href="https://github.com/toppers/hakoniwa/discussions/categories/idea-request">Idea&amp;amp;Request&lt;/a>: 箱庭こう使えない？こう使いたい！のアイデアを話し合いましょう&lt;/li>
+&lt;li>&lt;a href="https://github.com/toppers/hakoniwa/discussions/categories/inquiry">Inquiry&lt;/a>: 箱庭WGへの関する問合せや活動参画の希望など（技術的な質問は&amp;quot;Q&amp;amp;A&amp;quot;をご利用ください）&lt;/li>
+&lt;li>&lt;a href="https://github.com/toppers/hakoniwa/discussions/categories/q-a">Q&amp;amp;A&lt;/a>: 技術的な質問（Athrillを含む要素技術単体に関する質問も歓迎！箱庭プロトタイプモデルの試用で発生したトラブルなどお知らせください）&lt;/li>
+&lt;/ul>
+&lt;h4 id="箱庭もくもく会箱庭の開発をしてみたりあれこれ雑談してみたい">箱庭もくもく会：箱庭の開発をしてみたり、あれこれ雑談してみたい&lt;/h4>
+&lt;p>箱庭のもくもく会を不定期に開催しています。connpassにて一般公開しており、箱庭WGの開発メンバも参加しています。ご興味のある方は、下記グループページの「メンバーになる」をクリックしてグループに参加いただくと開催情報がキャッチアップできます。&lt;br>
+&lt;a href="https://hakoniwa.connpass.com/">https://hakoniwa.connpass.com/&lt;/a>&lt;/p>
+&lt;p>もくもく会とは、各自のやりたいことや知りたいことを持ち寄って、まず自己紹介とやりたいことの表明を行い、それぞれ自由にやりたいことを進めて、そして最後にはもくもくの進捗を共有する会です。&lt;/p>
+&lt;ul>
+&lt;li>箱庭のことはいろいろなイベントで見聞きして気になっているんだけど,,,&lt;/li>
+&lt;li>よし動かしてみよう！と思っているけども幾数月,,,&lt;/li>
+&lt;li>箱庭はさておき Unity x ROS がとっても気になる！！&lt;/li>
+&lt;/ul>
+&lt;p>という方々、ぜひともご参加ください。&lt;br>
+特に定まった議題などはありませんので、とりま開発メンバと雑談してみたい方々の参加も大歓迎です。&lt;/p>
+&lt;h4 id="wgメンバとして参画したい">WGメンバとして参画したい&lt;/h4>
+&lt;p>箱庭WGは、&lt;a href="https://toppers.jp/">TOPPERSプロジェクト&lt;/a>のワーキンググループとして活動しています。&lt;br>
+箱庭WGのメンバに加入される場合は、原則としてTOPPERSプロジェクトへの入会もお願いしています。
+また、TOPPERSプロジェクト会員向けの限定イベントの開催や、箱庭WG活動成果の早期公開なども検討しています。&lt;/p></description></item><item><title>ショーケース</title><link>https://toppers.github.io/hakoniwa/showcase/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/showcase/</guid><description>&lt;h3 id="箱庭コンセプトムービー2021">「箱庭」コンセプトムービー2021&lt;/h3>
+&lt;p>2021年6月時点での箱庭の成果物で実現できることを、デモ動画としてまとめました。&lt;/p>
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/89PjrCqILj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>
+
+
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/showcase/#top">このページの先頭に戻る&lt;/a>&lt;/p>
+&lt;h3 id="シミュレーション環境箱庭を使ったrosロボットのci継続的インテグレーション">シミュレーション環境：箱庭を使ったROSロボットのCI（継続的インテグレーション）&lt;/h3>
+&lt;p>クラウドネイティブ環境上に構築した「箱庭」と合わせて、コミュニティ版GitLab（MIT Licence）が提供する、ソースコード管理機能及び、CI Runner機能を使ってCI（Continuous Integration，継続的インテグレーション）を実現しています。&lt;/p>
+&lt;p>クラウドネイティブ環境はOSSである&lt;a href="https://github.com/rdbox-intec/rdbox">RDBOX（Robotics Developer BOX）&lt;/a>を使って構築しています。&lt;/p>
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/9OTbq5J1QH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>
+
+
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/showcase/#top">このページの先頭に戻る&lt;/a>&lt;/p>
+&lt;h3 id="monoistでの連載">MONOistでの連載&lt;/h3>
+&lt;p>モノづくりスペシャリストのための情報ポータル「&lt;a href="https://monoist.atmarkit.co.jp/">MONOist&lt;/a>」に連載記事を寄稿しています。&lt;br>
+「&lt;a href="https://monoist.atmarkit.co.jp/mn/series/23683/">仮想環境を使ったクラウド時代の組み込み開発のススメ&lt;/a>」という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介しています。ぜひご覧ください。&lt;/p>
+&lt;ul>
+&lt;li>第1回「&lt;a href="https://monoist.atmarkit.co.jp/mn/articles/2105/25/news005.html">IoTシステムの開発はなぜ難しいのか、ITと組み込みの相克を克服せよ&lt;/a>」 (2021年05月25日 10時00分 公開)&lt;/li>
+&lt;li>第2回「&lt;a href="https://monoist.atmarkit.co.jp/mn/articles/2106/28/news012.html">日本の伝統を受け継ぐ仮想環境「箱庭」でIoTシステムの統合開発を加速する&lt;/a>」 (2021年06月28日 10時00分 公開)&lt;/li>
+&lt;li>第3回「&lt;a href="https://monoist.atmarkit.co.jp/mn/articles/2107/28/news016.html">組み込みエンジニアも知っておきたい「クラウドネイティブ」とは&lt;/a>」 (2021年07月28日 10時00分 公開)&lt;/li>
+&lt;li>第4回「&lt;a href="https://monoist.atmarkit.co.jp/mn/articles/2108/30/news016.html">クラウドネイティブで実現する、シミュレーションと実機テストのボーダーレス開発&lt;/a>」 (2021年08月30日 10時00分 公開)&lt;/li>
+&lt;li>第5回「&lt;a href="https://monoist.atmarkit.co.jp/mn/articles/2109/29/news006.html">誰もが手軽にROSロボット／IoTシステムの開発に取り組める「RDBOX」とは&lt;/a>」 (2021年09月29日 10時00分 公開)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/showcase/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>シミュレーションに関するチューニング</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</guid><description>&lt;h1 id="変更可能なパラメータ">変更可能なパラメータ&lt;/h1>
+&lt;h2 id="ev3のパラメータについて">EV3のパラメータについて&lt;/h2>
+&lt;hr>
+&lt;p>今回のシミュレーション環境(Unity側)にはいくつかパラメータがありますので，その説明を行います．&lt;/p>
+&lt;p>まず，パラメータを参照するには，Hierarchyビューで，「EV3」を選択してください(下図)．&lt;/p>
+&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F11a57fef-9e2d-e0a0-ef76-af5f71fc5d09.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=2fdf76b9af97446c26fe08b5e484d631">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F11a57fef-9e2d-e0a0-ef76-af5f71fc5d09.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=2fdf76b9af97446c26fe08b5e484d631">&lt;/a>&lt;/p>
+&lt;p>すると，InspectorビューにEV3のパラメータが表示されます．&lt;/p>
+&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F835e61c2-0ec6-b955-3e32-01ba535a1860.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=34989dc74c297f1639308d77c4282ba6">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F835e61c2-0ec6-b955-3e32-01ba535a1860.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=34989dc74c297f1639308d77c4282ba6">&lt;/a>&lt;/p>
+&lt;p>以下，変更可能なパラメータを説明します(説明されていないものは変更しないでください)．
+※これらのパラメータは，シミュレーション実行時に動的に変更も可能なものもあります．&lt;/p>
+&lt;h2 id="ev3-actuatorscript">EV3 Actuator(Script)&lt;/h2>
+&lt;hr>
+&lt;h3 id="port動的変更不可">Port(動的変更不可)&lt;/h3>
+&lt;p>Unity側のUDP受信ポート番号です．デフォルトでは54001です．&lt;/p>
+&lt;p>この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．&lt;/p>
+&lt;pre tabindex="0">&lt;code>DEBUG_FUNC_VDEV_TX_PORTNO 54001
+&lt;/code>&lt;/pre>&lt;p>device_config.txt は，app.cと同じフォルダにあります．&lt;/p>
+&lt;h2 id="ev3-sensorscript">EV3 Sensor(Script)&lt;/h2>
+&lt;hr>
+&lt;h3 id="host動的変更不可">Host(動的変更不可)&lt;/h3>
+&lt;p>Athrillの配置マシンのIPアドレスです．
+Unityと同じマシン上に配置する場合は，デフォルト値のままで良いです．&lt;/p>
+&lt;p>マシン負荷が高く，athrillとUnityを別マシンで動かす場合は，このIPアドレスを変更して対応ください．&lt;/p>
+&lt;h3 id="port動的変更不可-1">Port(動的変更不可)&lt;/h3>
+&lt;p>Athrill側のUDP受信ポート番号です．デフォルトでは54002です．&lt;/p>
+&lt;p>この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．&lt;/p>
+&lt;pre tabindex="0">&lt;code>DEBUG_FUNC_VDEV_RX_PORTNO 54002
+&lt;/code>&lt;/pre>&lt;p>device_config.txt は，app.cと同じフォルダにあります．&lt;/p>
+&lt;h2 id="ev3-motorscript">EV3 Motor(Script)&lt;/h2>
+&lt;hr>
+&lt;h3 id="power-const動的変更可">Power Const(動的変更可)&lt;/h3>
+&lt;p>EV3のモータのパワーです．デフォルトで40としていますが，値を変更できます．&lt;/p></description></item><item><title>シミュレーションに関するチューニング</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/</guid><description>&lt;h2 id="single-robot-hackevv20の追加要素について">single-robot-HackEV(v2.0)の追加要素について&lt;/h2>
+&lt;hr>
+&lt;h3 id="hakoniwaクラスの追加">Hakoniwaクラスの追加&lt;/h3>
+&lt;p>&lt;code>single-robot-HackEV(v2.0)&lt;/code> では&lt;code>Hakoniwa&lt;/code>クラスが設けられました．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_hierarchy_view_v2.0.png " border="" width="400" />
+&lt;/figure>
+
+&lt;p>&lt;code>Hakoniwa&lt;/code>クラスはシミュレーション環境全体に関わる情報を持っています．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_hakoniwa_field.png " border="" width="400" />
+&lt;/figure>
+
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">主なフィールド&lt;/th>
+ &lt;th style="text-align: left">説明&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">Max Diff Time&lt;/td>
+ &lt;td style="text-align: left">athrillとUnityのシミュレーション時間の最大許容誤差時間&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">Dbg Diff Time Msec&lt;/td>
+ &lt;td style="text-align: left">現在のathrillとUnityのシミュレーション時間の誤差(msec)&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="robotの配置方法">Robotの配置方法&lt;/h3>
+&lt;p>&lt;code>single-robot-HackEV(v2.0)&lt;/code>ではあらかじめ用意されたいくつかのロボットモデルを&lt;br>
+ユーザの方が任意に配置することが出来ます．&lt;/p></description></item><item><title>チュートリアル</title><link>https://toppers.github.io/hakoniwa/tutorial/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial/</guid><description>&lt;h2 id="箱庭チュートリアル会とは">箱庭チュートリアル会とは？&lt;/h2>
+&lt;p>箱庭WGのメンバが持ち回りで担当して、自身の取り組みや最新の動向、そしていろんな野望などなどを、自由に語り尽くします！&lt;br>
+皆さんでフランクに情報交換や議論などできればと思っています。&lt;/p>
+&lt;p>本ページでは、チュートリアル会のスライド資料や&lt;a href="https://www.youtube.com/playlist?list=PLvZDKbhDfoh0CI3K4u0zjUbDKMHJqxbNb">動画アーカイブ&lt;/a>などを公開しています。&lt;/p>
+&lt;h2 id="箱庭入門会とは">箱庭入門会とは？&lt;/h2>
+&lt;p>主に初めて箱庭に触れる方を対象として、箱庭の全体像やアーキテクチャ、アセットの作成方法などを紹介する会です。
+Getting Startedな内容になっていて、自分好みのシミュレーション環境を構築する方法を学ぶことができます。
+すでに箱庭を知っている方も復習に最適な連弾シリーズの形式です。 30分程度のミニセミナー形式で下記の項目をひとつずつの内容を進めていき、解説パートは&lt;a href="https://www.youtube.com/playlist?list=PLvZDKbhDfoh2VO6nlYgKKQjdA74LcXw5I">動画アーカイブ&lt;/a>として公開しています。&lt;/p>
+&lt;h3 id="入門会-10-ドローンシミュレータのunity機体をカスタマイズする">入門会 #10 ドローンシミュレータのUnity機体をカスタマイズする&lt;/h3>
+&lt;pre tabindex="0">&lt;code>箱庭ドローンのUnityワールド/機体をカスタマイズする方法を解説します。
+
+- Unity
+ - Unityシーン/スクリプト
+ - Unityプリミティブ素材、コライダー
+ - Unityアセットストア
+ - Unityプロジェクト
+- 箱庭
+ - 箱庭ドローンのUnityプロジェクト
+ - 箱庭ドローンのUnityシーン
+ - 箱庭ドローンのプレハブ
+ - カスタマイズ
+ - 箱庭ワールド
+ - 箱庭ドローン
+ - リポジトリ管理方法
+&lt;/code>&lt;/pr</description></item><item><title>トピックス・イベント案内</title><link>https://toppers.github.io/hakoniwa/topics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/topics/</guid><description>&lt;h3 id="2024年">2024年&lt;/h3>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/topics/#top">このページの先頭に戻る&lt;/a>&lt;/p>
+&lt;h3 id="2023年">2023年&lt;/h3>
+&lt;ul>
+&lt;li>2023年9月26日(火)に開催された &lt;a href="https://roscon.jp/">ROSCon JP 2023&lt;/a> に、TOPPERSプロジェクト／箱庭WGはブロンズスポンサーとして協賛しました。
+&lt;ul>
+&lt;li>ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する開発者会議の日本版です。今回は、TOPPERSプロジェクトにおいてROSコミュニティに貢献している内容として、箱庭によるROSアプリケーションの仮想シミュレーション環境や、TOPPERSカーネルを活用した組込みマイコン向けのROS 2ノード実行環境などを展示しました。&lt;/li>
+&lt;li>参加レポートおよび展示内容の紹介は、&lt;a href="https://hakoniwa-lab.net/2023/09/27/blog-rosconjp2023/">箱庭ラボ ブログ：ROSCon JP 2023で「リアルとバーチャルを融合する技術・箱庭 &amp;amp; mROS 2」を紹介してきました&lt;/a>をご覧ください。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://hakoniwa.connpass.com/">箱庭のconnpassイベント&lt;/a>&lt;/strong> を不定期に実施しています。もくもく会や茶話会、チュートリアル会などを一般公開で実施しており、箱庭WGの開発メンバも参加しています。
+&lt;ul>
+&lt;li>もくもく会：各自のやりたいことや知りたいことを持ち寄って、まず自己紹介を交えてやりたいことを表明し、そして「もくもく」とそれぞれ自由にやりたいことを進めて、そして最後には進捗を共有する会です。&lt;/li>
+&lt;li>茶話会では：ランチタイムやアフターファイブに開催予定で、各自でお弁当や飲み物を準備して、箱庭に関係しそうなネタや最近の活動の進捗などをゆるく議論（というより雑談）する会です。ロボットやIoTの仮想化／シミュレーションなど、箱庭に限らないネタもばんばん取り上げます。&lt;/li>
+&lt;li>チュートリアル会：箱庭WGのメンバが持ち回りで担当して、自身の取り組みや最新の動向、そしていろんな野望などなどを、自由に語り尽くします！皆さんでフランクに情報交換や議論などできればと思っています。&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial/">チュートリアル&lt;/a>のページにて、スライド資料や動画アーカイブなどを公開しています。&lt;/li>
+&lt;li>箱庭のことはいろいろなイベントで見聞きして気になっているんだけど,,, よし動かしてみよう！と思っているけども幾数月,,, 箱庭はさておき Unity x ROS がとっても気になる！！という方々、ぜひともご参加ください。特に定まった議題などはありませんので、とりま開発メンバと雑談してみたい方々の参加も大歓迎です。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;ul>
+&lt;li>箱庭WG主査の森崇を職務執行者として、2023年8月1日に&lt;a href="https://hakoniwa-lab.net/">合同会社箱庭ラボ&lt;/a>を設立しました。
+&lt;ul>
+&lt;li>箱庭ラボの目標は、誰でも手軽に箱庭を体験できる環境を創出することです。長年TOPPERSプロジェクトとして開発してきたオープンソース仮想空間「箱庭」でエンジニアが自身の開発成果を共有し、枠組みや境界を越えて共創することで新しい価値を生み出すことを目指しています。この夢のような箱庭の実現に向けて、TOPPERS/箱庭の開発を推進し、先端の生成AI技術活用や箱庭プラットフォームの整備、さらにはチュートリアル会の開催やドキュメント整備等を通じて箱庭コミュニティを育てていきます。&lt;/li>
+&lt;li>&lt;a href="https://hakoniwa-lab.net/information/">Informationのブログページ&lt;/a>では、箱庭の最新の開発状況や活動内容について紹介しています。ぜひご覧ください。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>モノづくりスペシャリストのための情報ポータル「&lt;a href="https://monoist.atmarkit.co.jp/">MONOist&lt;/a>」に連載記事を寄稿しています。&lt;br>
+&lt;strong>「&lt;a href="https://monoist.atmarkit.co.jp/mn/series/23683/">仮想環境を使ったクラウド時代の組み込み開発のススメ&lt;/a>」&lt;/strong> という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介しています。ぜひご覧ください。&lt;/li>
+&lt;/ul>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/topics/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>トピックス・イベント案内</title><link>https://toppers.github.io/hakoniwa/update/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/update/</guid><description>&lt;h3 id="2024年">2024年&lt;/h3>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/update/#top">このページの先頭に戻る&lt;/a>&lt;/p>
+&lt;h3 id="2023年">2023年&lt;/h3>
+&lt;ul>
+&lt;li>2023.07.25
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial/">チュートリアル&lt;/a>のページを作成しました。connpassにて開催している箱庭チュートリアル会のスライド資料や動画アーカイブなどを公開しています。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2023.07.23
+&lt;ul>
+&lt;li>箱庭WGにおける研究開発の成果が&lt;a href="https://www.rsj.or.jp/pub/jrsj/about.html">日本ロボット学会誌&lt;/a>にレター論文として採録されました！
+&lt;ul>
+&lt;li>高瀬 英希, 細合 晋太郎, 福田 竜也, 高田 光隆, 久保秋 真, 森 崇, &lt;strong>hakoniwa-ros2sim：仮想環境を活用したROS 2アプリケーションのシミュレーション手法&lt;/strong>, 日本ロボット学会誌, 2023年41巻4号, pp. 399-402 (2023).&lt;/li>
+&lt;li>論文公開先： &lt;a href="https://www.jstage.jst.go.jp/article/jrsj/41/4/41_41_399/_article/-char/ja">https://www.jstage.jst.go.jp/article/jrsj/41/4/41_41_399/_article/-char/ja&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>箱庭WGの活動成果「箱庭上でROS 2プログラムを手軽にシミュレーションできるhakoniwa-ros2simの一般公開」が TOPPERS of the YEAR 2023 を受賞しました！&lt;/li>
+&lt;li>2022年6月30日(金)に開催された&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/#toppers%E3%82%AB%E3%83%B3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B92023">TOPPERSカンファレンス2023の講演資料・動画&lt;/a>を掲載しました。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2023.01.07
+&lt;ul>
+&lt;li>2022年度&lt;a href="https://www.toppers.jp/contest.html">TOPPERS活用アイデア・アプリケーション開発コンテスト&lt;/a>のアプリケーション開発部門において、金賞を受賞しました。&lt;/li>
+&lt;li>受賞作品として&lt;a href="https://github.com/toppers/hakoniwa-ecu-multiplay">hakoniwa-ecu-multiplay&lt;/a>を公開しています。ぜひお試しください。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/update/#top">このページの先頭に戻る&lt;/a>&lt;/p>
+&lt;h3 id="2022年">2022年&lt;/h3>
+&lt;ul>
+&lt;li>2022.09.08
+&lt;ul>
+&lt;li>2022年9月1日(木)-2日(金)に開催された&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/#swest24">SWEST24 (第24回 組込みシステム技術に関するサマーワークショップ)&lt;/a>にて実施したセッションの資料を掲載しました。&lt;/li>
+&lt;li>2022年9月5日(月)-9日(金)に開催された&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/#rsj2022">RSJ2022 (第40回 日本ロボット学会学術講演会)&lt;/a>にて実施したセッションの資料を掲載しました。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022.08.27
+&lt;ul>
+&lt;li>2022年8月26日(金)に開催された&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/#ros-japan-ug-47-%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF%E7%89%B9%E9%9B%86">ROS Japan UG #47 シミュレータ特集！&lt;/a>の講演資料を公開しました。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022.06.27
+&lt;ul>
+&lt;li>2022年6月25日(土)に開催された&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/#2022%E5%B9%B4%E5%BA%A6-et%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B3%E5%90%91%E3%81%91-toppers%E6%B4%BB%E7%94%A8%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC">ETロボコン向け TOPPERS活用セミナー&lt;/a>の講義資料と動画を公開しました。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022.06.15
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/en/">本Webサイトの英語版&lt;/a>を公開しました。&lt;/li>
+&lt;li>2022年6月10日(金)に開催された&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/#toppers%E3%82%AB%E3%83%B3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B92022">TOPPERSカンファレンス2022の講演資料・動画&lt;/a>を掲載しました。
+&lt;ul>
+&lt;li>「箱庭WGの活動紹介」 高田光隆（箱庭WG/名古屋大学）&lt;/li>
+&lt;li>「ゲーム技術（VR/Photon）がもたらす箱庭ワールドの now and future」 森 崇（(株)永和マネジメント）&lt;/li>
+&lt;li>「mROS 2：ロボットソフトウェアの組込みデバイス向け軽量実行環境」 高瀬英希（東京大学）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022.06.02
+&lt;ul>
+&lt;li>2022年5月28日(土)に開催された&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/#%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%AB%E3%83%B3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9-2022-nagoya">オープンソースカンファレンス 2022 Nagoya&lt;/a>にて実施したセッションの資料を掲載しました。YouTube動画も公開されています。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022.05.26
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/getting-started">Getting Started&lt;/a> のページを公開しました。&lt;a href="https://github.com/toppers/hakoniwa-ros2sim">hakoniwa-ros2sim&lt;/a> を題材として、箱庭を用いたシミュレーションの進め方やカスタマイズ方法を案内していきます。コンテンツ内容は随時更新・追加していきますので、ぜひご確認ください。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2022.05.09
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/toppers/hakoniwa-ros2sim">hakoniwa-ros2sim&lt;/a> を公開しました。箱庭上で ROS 2 プログラムを手軽にシミュレーションできます。ぜひお試しください。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/update/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>技術情報・発表資料</title><link>https://toppers.github.io/hakoniwa/technical-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/</guid><description>&lt;h2 id="最新の技術情報">最新の技術情報&lt;/h2>
+&lt;h3 id="qiita記事">Qiita記事&lt;/h3>
+&lt;p>最新の開発状況は、主にQiitaで発信しています。&lt;br>
+次のタグやOrganizationをフォローされると、最新情報が得やすくなります．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://qiita.com/tags/%e7%ae%b1%e5%ba%ad">tag: 箱庭&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://qiita.com/tags/athrill">tag: athrill&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://qiita.com/tags/mROS">tag: mROS&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://qiita.com/organizations/toppers">organization: TOPPERSプロジェクト&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>なお、Qiita記事では開発途上の試行版であったり古い情報が記載されていることがあります。&lt;/p>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/#top">このページの先頭に戻る&lt;/a>&lt;/p>
+&lt;h2 id="講演資料や動画など">講演資料や動画など&lt;/h2>
+&lt;h3 id="toppersカンファレンス2023">TOPPERSカンファレンス2023&lt;/h3>
+&lt;p>2022年6月30日(金)に開催された&lt;a href="https://toppers.jp/conference2023.html">TOPPERSカンファレンス2023&lt;/a>の講演資料です。 &lt;br>
+箱庭WGの活動紹介、最新の開発状況とプラットフォーム化に向けた新たな展開について紹介しました。&lt;/p>
+&lt;h4 id="箱庭-update-2023">箱庭 Update 2023&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/TOPPERSConf2023-1.pdf">講演資料 (PDFファイル)
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/TOPPERSConf2023-1.png " border="1" width="400" />
+&lt;/figure>
+&lt;/a>&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/n7dR4cJzDpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="toppers箱庭の新たな展開プラットフォーム化への一歩">TOPPERS/箱庭の新たな展開：プラットフォーム化への一歩&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/TOPPERSConf2023-2.pdf">講演資料 (PDFファイル)
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/TOPPERSConf2023-2.png " border="1" width="400" />
+&lt;/figure>
+&lt;/a>&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ZdCYpDSk0qI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順arm版">単体ロボット向けシミュレータ使用手順(ARM版)&lt;/h1>
+&lt;h2 id="使用手順">使用手順&lt;/h2>
+&lt;ol>
+&lt;li>環境変数の設定(Mac版のみ)&lt;/li>
+&lt;li>cfgフォルダの配置(初回起動時のみ)&lt;/li>
+&lt;li>EV3ロボット制御プログラムのビルド&lt;/li>
+&lt;li>Unityのシミュレータの起動&lt;/li>
+&lt;li>athrillの起動&lt;/li>
+&lt;/ol>
+&lt;h2 id="環境変数の設定mac版のみ">環境変数の設定(Mac版のみ)&lt;/h2>
+&lt;hr>
+&lt;p>Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．&lt;/p>
+&lt;pre tabindex="0">&lt;code>export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major
+&lt;/code>&lt;/pre>&lt;h2 id="cfgフォルダの配置初回起動時のみ">cfgフォルダの配置(初回起動時のみ)&lt;/h2>
+&lt;hr>
+&lt;p>cfg ファイルの配置(Mac版の場合)&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ pwd 
+&amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A
+$ mkdir cfg/cfg
+$ cp cfg/cfg-mac cfg/cfg/cfg
+$ chmod +x cfg/cfg/cfg
+&lt;/code>&lt;/pre>&lt;p>cfg ファイルの配置(Windows\Linux版の場合)&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ pwd 
+&amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A
+$ mkdir cfg/cfg
+$ cp cfg/cfg-linux-64 cfg/cfg/cfg
+$ chmod +x cfg/cfg/cfg
+&lt;/code>&lt;/pre>&lt;h2 id="ev3ロボット制御プログラムのビルド">EV3ロボット制御プログラムのビルド&lt;/h2>
+&lt;hr>
+&lt;p>ターミナル上で，&lt;code>ev3rt-athrill-ARMv7-A/sdk/OBJ1.1&lt;/code>に移動して，&lt;br>
+EV3ロボット制御プログラムをビルドしましょう．&lt;/p>
+&lt;p>ビルドするには，以下のコマンドを実行してください．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順arm版">単体ロボット向けシミュレータ使用手順(ARM版)&lt;/h1>
+&lt;h2 id="使用手順">使用手順&lt;/h2>
+&lt;ol>
+&lt;li>環境変数の設定(Mac版のみ)&lt;/li>
+&lt;li>cfgフォルダの配置(初回起動時のみ)&lt;/li>
+&lt;li>EV3ロボット制御プログラムのビルド&lt;/li>
+&lt;li>Unityのシミュレータの起動&lt;/li>
+&lt;li>athrillの起動&lt;/li>
+&lt;/ol>
+&lt;h2 id="環境変数の設定mac版のみ">環境変数の設定(Mac版のみ)&lt;/h2>
+&lt;hr>
+&lt;p>Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．&lt;/p>
+&lt;pre tabindex="0">&lt;code>export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major
+&lt;/code>&lt;/pre>&lt;h2 id="cfgフォルダの配置初回起動時のみ">cfgフォルダの配置(初回起動時のみ)&lt;/h2>
+&lt;hr>
+&lt;p>cfg ファイルの配置(Mac版の場合)&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ pwd 
+&amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A
+$ mkdir cfg/cfg
+$ cp cfg/cfg-mac cfg/cfg/cfg
+$ chmod +x cfg/cfg/cfg
+&lt;/code>&lt;/pre>&lt;p>cfg ファイルの配置(Windows\Linux版の場合)&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ pwd 
+&amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A
+$ mkdir cfg/cfg
+$ cp cfg/cfg-linux-64 cfg/cfg/cfg
+$ chmod +x cfg/cfg/cfg
+&lt;/code>&lt;/pre>&lt;h2 id="ev3ロボット制御プログラムのビルド">EV3ロボット制御プログラムのビルド&lt;/h2>
+&lt;hr>
+&lt;p>ターミナル上で，&lt;code>ev3rt-athrill-ARMv7-A/sdk/OBJ1.1&lt;/code>に移動して，&lt;br>
+EV3ロボット制御プログラムをビルドしましょう．&lt;/p>
+&lt;p>ビルドするには，以下のコマンドを実行してください．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順">単体ロボット向けシミュレータ使用手順&lt;/h1>
+&lt;h2 id="v21での変更点について">V2.1での変更点について&lt;/h2>
+&lt;p>v2.1 で，Unityでのシミュレーション実行をビルドしてバイナリ実行できるようになりました．&lt;br>
+バイナリ実行でシミュレーション実行を行う場合，&lt;/p>
+&lt;ul>
+&lt;li>Unityシミュレーションの実行，&lt;/li>
+&lt;li>athrillの実行&lt;/li>
+&lt;/ul>
+&lt;p>をひとまとめにして実行することができます．&lt;/p>
+&lt;p>なお，従来の使用方法でもシミュレーションを実行することは可能ですので，&lt;br>
+その場合は下記をご参照いただき，使用してください．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/">V850版&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/">ARM版&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>これ以降は，バイナリ実行を行うための手順の紹介となります．&lt;/p>
+&lt;h2 id="使用手順">使用手順&lt;/h2>
+&lt;ol>
+&lt;li>ビルド設定&lt;/li>
+&lt;li>ビルドの実行，config.jsonの配置&lt;/li>
+&lt;li>シミュレーションの実行&lt;/li>
+&lt;/ol>
+&lt;h2 id="ビルド設定">ビルド設定&lt;/h2>
+&lt;hr>
+&lt;p>ビルドを実施する前に，バイナリ実行時のウィンドウサイズに関する設定を行います．&lt;br>
+Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p>
+&lt;p>「Player」&lt;br>
+&lt;code>Resolution and Presentation&lt;/code>の&lt;code>Fullscreen Mode&lt;/code> を&lt;code>Windowed&lt;/code>と設定します．
+その下の詳細なウィンドウサイズは基本そのままでもよいですが，サイズを変更したい場合は，&lt;br>
+お使いの環境に合わせて変更してください．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_build_setting.png " border="" width="600" />
+&lt;/figure>
+
+&lt;h2 id="ビルドの実行configjsonの配置">ビルドの実行，config.jsonの配置&lt;/h2>
+&lt;hr>
+&lt;p>設定が完了したら，Unityプロジェクトのビルドを行います．&lt;br>
+Unity のメニューから，「File」⇒「Build Settings」を選択します．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順v850版">単体ロボット向けシミュレータ使用手順(V850版)&lt;/h1>
+&lt;h2 id="使用手順">使用手順&lt;/h2>
+&lt;ol>
+&lt;li>EV3ロボット制御プログラムのビルド&lt;/li>
+&lt;li>Unityのシミュレータの起動&lt;/li>
+&lt;li>athrillの起動&lt;/li>
+&lt;/ol>
+&lt;h2 id="ev3ロボット制御プログラムのビルド">EV3ロボット制御プログラムのビルド&lt;/h2>
+&lt;hr>
+&lt;p>&lt;code>ev3rt-athrill-v850e2m/sdk/workspace&lt;/code> に移動して，&lt;br>
+EV3ロボット制御プログラムをビルドしましょう．&lt;/p>
+&lt;p>ビルドするには，以下のコマンドを実行してください．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ make img=＜アプリケーションフォルダ名＞ clean
+$ make img=＜アプリケーションフォルダ名＞
+&lt;/code>&lt;/pre>&lt;p>例：&lt;code>line_trace&lt;/code>というアプリケーションフォルダのプログラムをビルドする場合&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ make img=line_trace clean
+$ make img=line_trace
+&lt;/code>&lt;/pre>&lt;p>ビルド成功すると，asp というバイナリができます．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ ls asp
+asp
+&lt;/code>&lt;/pre>&lt;h2 id="unityのシミュレータの起動">Unityのシミュレータの起動&lt;/h2>
+&lt;hr>
+&lt;p>&lt;strong>※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong>&lt;/p>
+&lt;p>次に，Unityをシミュレーションモードにします．
+Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;/a>　ボタンを押下してください．&lt;/p>
+&lt;p>成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
+&lt;/figure>
+
+&lt;h2 id="athrillの起動">athrillの起動&lt;/h2>
+&lt;hr>
+&lt;p>最後に，athrillを起動しましょう．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順v850版">単体ロボット向けシミュレータ使用手順(V850版)&lt;/h1>
+&lt;h2 id="使用手順">使用手順&lt;/h2>
+&lt;ol>
+&lt;li>EV3ロボット制御プログラムのビルド&lt;/li>
+&lt;li>Unityのシミュレータの起動&lt;/li>
+&lt;li>athrillの起動&lt;/li>
+&lt;/ol>
+&lt;h2 id="ev3ロボット制御プログラムのビルド">EV3ロボット制御プログラムのビルド&lt;/h2>
+&lt;hr>
+&lt;p>&lt;code>ev3rt-athrill-v850e2m/sdk/workspace&lt;/code> に移動して，&lt;br>
+EV3ロボット制御プログラムをビルドしましょう．&lt;/p>
+&lt;p>ビルドするには，以下のコマンドを実行してください．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ make img=＜アプリケーションフォルダ名＞ clean
+$ make img=＜アプリケーションフォルダ名＞
+&lt;/code>&lt;/pre>&lt;p>例：&lt;code>line_trace&lt;/code>というアプリケーションフォルダのプログラムをビルドする場合&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ make img=line_trace clean
+$ make img=line_trace
+&lt;/code>&lt;/pre>&lt;p>ビルド成功すると，asp というバイナリができます．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ ls asp
+asp
+&lt;/code>&lt;/pre>&lt;h2 id="unityのシミュレータの起動">Unityのシミュレータの起動&lt;/h2>
+&lt;hr>
+&lt;p>&lt;strong>※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong>&lt;/p>
+&lt;p>次に，Unityをシミュレーションモードにします．
+Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;/a>　ボタンを押下してください．&lt;/p>
+&lt;p>成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
+&lt;/figure>
+
+&lt;h2 id="athrillの起動">athrillの起動&lt;/h2>
+&lt;hr>
+&lt;p>最後に，athrillを起動しましょう．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用方法">単体ロボット向けシミュレータ使用方法&lt;/h1>
+&lt;h2 id="使用手順詳細">使用手順詳細&lt;/h2>
+&lt;hr>
+&lt;h3 id="single-robot-hackevv21を使用している場合windows-mac向け">single-robot-HackEV(v2.1)を使用している場合(Windows, Mac向け)&lt;/h3>
+&lt;p>使用しているUnityパッケージが &lt;code>single-robot-HackEV(v2.1)&lt;/code> の場合は，&lt;br>
+こちらの使用手順をご参照ください．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/">使用手順&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>シミュレーションに関わるチューニングについてはこちらをご参照ください．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/">チューニングについて(single-robot-HackEV(v2.0)を使用している場合)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="single-robot-hackevv20を使用している場合">single-robot-HackEV(v2.0)を使用している場合&lt;/h3>
+&lt;p>使用しているUnityパッケージが &lt;code>single-robot-HackEV(v2.0)&lt;/code> の場合は，&lt;br>
+こちらの使用手順をご参照ください．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/">V850版&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/">ARM版&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>シミュレーションに関わるチューニングについてはこちらをご参照ください．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/">チューニングについて(single-robot-HackEV(v2.0)を使用している場合)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="single-robot-hackev-または-ev3rt-simple-robotを使用している場合">single-robot-HackEV または ev3rt-simple-robotを使用している場合&lt;/h3>
+&lt;p>使用しているUnityパッケージが &lt;code>single-robot-HackEV&lt;/code> または &lt;code>ev3rt-simple-robot&lt;/code> の場合は，&lt;br>
+こちらの使用手順をご参照ください．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/">V850版&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/">ARM版&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>シミュレーションに関わるチューニングについてはこちらをご参照ください．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/">チューニングについて&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</guid><description>&lt;h1 id="wslのインストール">WSLのインストール&lt;/h1>
+&lt;hr>
+&lt;p>Windows版の場合はWSLをインストールいただく必要があります．&lt;br>
+※注意点として，現時点(2020/6月)時点では，WSL2はご利用いただけません(WSL2とUnity間でUDP通信できないため)．&lt;/p>
+&lt;p>WSLのインストール方法は色々なサイトで紹介されておりますので，Ubuntu 18.04 LTSをインストールください．&lt;/p>
+&lt;p>以下のサイト等が参考になるかと思います．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://qiita.com/Aruneko/items/c79810b0b015bebf30bb">https://qiita.com/Aruneko/items/c79810b0b015bebf30bb&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>インストールが完了したら，aptパッケージを更新しておきます．&lt;br>
+(更新しないと後ほど行うgccのインストールで失敗することがあるためです)&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ sudo apt update
+&lt;/code>&lt;/pre>&lt;p>aptパッケージを更新したら，あらかじめ以下が使用できるようにインストールしておきます&lt;/p>
+&lt;ul>
+&lt;li>gcc&lt;/li>
+&lt;li>make&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>$ sudo apt install build-essential
+&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</guid><description>&lt;h1 id="rubyのインストール">Rubyのインストール&lt;/h1>
+&lt;hr>
+&lt;p>v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります．
+※EV3ロボット制御アプリをビルドする際に必要となります．&lt;/p>
+&lt;p>Homebrewを使用してインストールします．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ brew install ruby
+&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/</guid><description>&lt;h1 id="rubyのインストール">Rubyのインストール&lt;/h1>
+&lt;hr>
+&lt;p>v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります．
+※EV3ロボット制御アプリをビルドする際に必要となります．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ sudo apt install ruby
+&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/</guid><description>&lt;h1 id="athrill2のインストール">athrill2のインストール&lt;/h1>
+&lt;h2 id="athrill2のインストール手順">athrill2のインストール手順&lt;/h2>
+&lt;hr>
+&lt;ul>
+&lt;li>athrill のチェックアウト&lt;/li>
+&lt;li>athrill-target のチェックアウト&lt;/li>
+&lt;li>コンパイラのインストール&lt;/li>
+&lt;li>ビルド＆インストール&lt;/li>
+&lt;/ul>
+&lt;h2 id="athrill-のチェックアウト">athrill のチェックアウト&lt;/h2>
+&lt;hr>
+&lt;p>athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．&lt;/p>
+&lt;p>共通コードのチェックアウトは，以下の通りです．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/athrill.git
+&lt;/code>&lt;/pre>&lt;h2 id="athrill-target-のチェックアウト">athrill-target のチェックアウト&lt;/h2>
+&lt;hr>
+&lt;p>CPUアーキに依存するコードは，athrill-target側で管理しています．
+今回のARM対応版は，ここにあります．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/athrill-target-ARMv7-A.git
+&lt;/code>&lt;/pre>&lt;p>なお，athrill と athrill-targetを以下のフォルダ構成にしてください．&lt;/p>
+&lt;pre tabindex="0">&lt;code>.
+├── athrill
+└── athrill-target-ARMv7-A
+&lt;/code>&lt;/pre>&lt;h2 id="コンパイラのインストール">コンパイラのインストール&lt;/h2>
+&lt;hr>
+&lt;p>Linux の方は，gcc をインストールください．&lt;br>
+Windows の方は，WSL上で gcc をインストールください．&lt;br>
+Mac の方は，clang をインストールください．&lt;/p>
+&lt;h2 id="ビルドインストール">ビルド＆インストール&lt;/h2>
+&lt;hr>
+&lt;p>ビルド方法ですが，端末上でathrill-target-ARMv7-A に移動してください．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</guid><description>&lt;h1 id="athrill2のインストール">athrill2のインストール&lt;/h1>
+&lt;h2 id="athrill2のインストール手順">athrill2のインストール手順&lt;/h2>
+&lt;hr>
+&lt;ul>
+&lt;li>athrill のチェックアウト&lt;/li>
+&lt;li>athrill-target のチェックアウト&lt;/li>
+&lt;li>コンパイラのインストール&lt;/li>
+&lt;li>ビルド＆インストール&lt;/li>
+&lt;/ul>
+&lt;h2 id="athrill-のチェックアウト">athrill のチェックアウト&lt;/h2>
+&lt;hr>
+&lt;p>athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．&lt;/p>
+&lt;p>共通コードのチェックアウトは，以下の通りです．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/athrill.git
+&lt;/code>&lt;/pre>&lt;h2 id="athrill-target-のチェックアウト">athrill-target のチェックアウト&lt;/h2>
+&lt;hr>
+&lt;p>CPUアーキに依存するコードは，athrill-target側で管理しています．&lt;br>
+今回のV850対応版は，ここにあります．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/athrill-target-v850e2m.git
+&lt;/code>&lt;/pre>&lt;p>なお，athrill と athrill-targetを以下のフォルダ構成にしてください．&lt;/p>
+&lt;pre tabindex="0">&lt;code>.
+├── athrill
+└── athrill-target-v850e2m
+&lt;/code>&lt;/pre>&lt;h2 id="コンパイラのインストール">コンパイラのインストール&lt;/h2>
+&lt;hr>
+&lt;p>Linux の方は，gcc をインストールください．&lt;br>
+Windows の方は，WSL上で gcc をインストールください．&lt;br>
+Mac の方は，clang をインストールください．&lt;/p>
+&lt;h2 id="ビルドインストール">ビルド＆インストール&lt;/h2>
+&lt;hr>
+&lt;p>ビルド方法ですが，端末上でathrill-target-v850e2m に移動してください．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</guid><description>&lt;h1 id="linux版64bit-gccコンパイラライブラリ含むのインストール">linux版64bit gccコンパイラ(ライブラリ含む)のインストール&lt;/h1>
+&lt;hr>
+&lt;p>ARM版のathrill2を利用される場合は，以下のサイトを参考にコンパイラおよびライブラリをインストールください．&lt;/p>
+&lt;p>Windows(WSL)&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.yokoweb.net/2018/03/07/wsl-ubuntu-arm-gcc/">https://www.yokoweb.net/2018/03/07/wsl-ubuntu-arm-gcc/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Linux&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.yokoweb.net/2018/05/16/ubuntu-18_04-gcc-arm-install/">https://www.yokoweb.net/2018/05/16/ubuntu-18_04-gcc-arm-install/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Mac&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.yokoweb.net/2018/05/16/macos-gcc-arm-brew-install/">https://www.yokoweb.net/2018/05/16/macos-gcc-arm-brew-install/&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</guid><description>&lt;h1 id="linux版64bit-gccコンパイラライブラリ含むのインストール">linux版64bit gccコンパイラ(ライブラリ含む)のインストール&lt;/h1>
+&lt;hr>
+&lt;p>v850版のathrill2を利用される場合は，以下のサイトからコンパイラおよびライブラリ(athrill-gcc-package.tar.gz)をダウンロードください．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1">https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>$ tar xzvf athrill-gcc-package.tar.gz
+$ cd athrill-gcc-package/
+$ tar xzvf athrill-gcc.tar.gz
+$ ls usr/local/athrill-gcc/
+bin include lib libexec share v850-elf
+&lt;/code>&lt;/pre>&lt;p>解凍後，usr/local/athrill-gccを /usr/local 直下に移動してください．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ sudo mv usr/local/athrill-gcc /usr/local
+&lt;/code>&lt;/pre>&lt;p>あとは，.bashrc に以下のパスを設定するだけです．&lt;/p>
+&lt;pre tabindex="0">&lt;code>export PATH=/usr/local/athrill-gcc/bin/:${PATH}
+export LD_LIBRARY_PATH=/usr/local/athrill-gcc:/usr/local/athrill-gcc/lib:${LD_LIBRARY_PATH}
+&lt;/code>&lt;/pre>&lt;p>設定後は，パスの有効化を忘れずに行ってください．&lt;/p>
+&lt;pre tabindex="0">&lt;code>source ${HOME}/.bashrc
+&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/</guid><description>&lt;h1 id="箱庭用-ev3rt-開発環境のダウンロード">箱庭用 EV3RT 開発環境のダウンロード&lt;/h1>
+&lt;p>任意のフォルダ上で，athrillサンプル(athrill-sample)のプログラムを git clone してください．&lt;/p>
+&lt;p>なお，cloneする場所は，以下のように athrillと同じフォルダ階層で実施してください．&lt;/p>
+&lt;pre tabindex="0">&lt;code> |---athril
+ |---athrill-target-ARMv7-A
+ └---ev3rt-athrill-ARMv7-A
+&lt;/code>&lt;/pre>&lt;p>clone方法は以下の通りです．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/ev3rt-athrill-ARMv7-A.git
+&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_v850/</guid><description>&lt;h1 id="箱庭用-ev3rt-開発環境のダウンロード">箱庭用 EV3RT 開発環境のダウンロード&lt;/h1>
+&lt;p>任意のフォルダ上で，athrillサンプル(athrill-sample)のプログラムを git clone してください．&lt;/p>
+&lt;p>なお，cloneする場所は，以下のように athrillと同じフォルダ階層で実施してください．&lt;/p>
+&lt;pre tabindex="0">&lt;code> |---athril
+ |---athrill-target-v850e2m
+ └---ev3rt-athrill-v850e2m
+&lt;/code>&lt;/pre>&lt;p>clone方法は以下の通りです．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/ev3rt-athrill-v850e2m.git
+&lt;/code>&lt;/pre>&lt;h2 id="サンプルアプリケーションのダウンロード">サンプルアプリケーションのダウンロード&lt;/h2>
+&lt;hr>
+&lt;p>2種類のサンプルアプリケーションを用意しています．&lt;/p>
+&lt;p>こちらから git clone いただき，&lt;code>hakoniwa-scenario-samples/single-robot&lt;/code>配下の全てのフォルダを&lt;br>
+&lt;code>ev3rt-athrill-v850e2m/sdk/workspace&lt;/code> に配置ください．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/hakoniwa-scenario-samples.git
+&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/</guid><description>&lt;h3 id="ev3ロボット制御プログラム">EV3ロボット制御プログラム&lt;/h3>
+&lt;p>現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．&lt;br>
+※まだ暫定構成です．&lt;/p>
+&lt;p>ARM版のathrill2を利用される場合は，以下のフォルダで作業してください．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ ls ev3rt-athrill-ARMv7-A/sdk/OBJ1.1/
+app.c app.h device_config_mmap.txt Makefile memory_mmap.txt simstart.bash
+app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt unity_mmap.bin
+&lt;/code>&lt;/pre>&lt;p>現状は，app.c/main_task で直接制御を行っています．&lt;br>
+コード断片は以下の通りです．&lt;/p>
+&lt;pre tabindex="0">&lt;code> while(1) {
+
+ /**
+ * PID controller
+ */
+#define white 100
+#define black 50
+ static float lasterror = 0, integral = 0;
+ static float midpoint = (white - black) / 2 + black;
+ {
+ float error = midpoint - ev3_color_sensor_get_reflect(EV3_PORT_1);
+ integral = error + integral * 0.3;
+ float steer = 0.6 * error + 0.3 * integral + 1 * (error - lasterror);
+ ev3_motor_steer(left_motor, right_motor, 10, steer);
+ lasterror = error;
+
+ debug_var = ev3_gyro_sensor_get_angle(EV3_PORT_4);
+
+ int distance = ev3_ultrasonic_sensor_get_distance(EV3_PORT_2);
+ debug_var2 = distance;
+ if (distance &amp;lt;= 100) {
+ ev3_motor_stop(left_motor, false);
+ ev3_motor_stop(right_motor, false);
+ }
+ }
+ tslp_tsk(100); /* 100msec */
+
+ }
+}
+&lt;/code>&lt;/pr</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</guid><description>&lt;h3 id="ev3ロボット制御プログラム">EV3ロボット制御プログラム&lt;/h3>
+&lt;p>現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．&lt;/p>
+&lt;p>v850版のathrill2を利用される場合は，以下のフォルダで作業してください．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ ls ev3rt-athrill-v850e2m/sdk/workspace/line_trace/
+app.c app.h device_config_mmap.txt log.txt memory_mmap.txt unity_mmap.bin
+app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt
+&lt;/code>&lt;/pre>&lt;p>または&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ ls ev3rt-athrill-v850e2m/sdk/workspace/color_sensor/
+app.c app.h device_config_mmap.txt log.txt memory_mmap.txt unity_mmap.bin
+app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt
+&lt;/code>&lt;/pr</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</guid><description>&lt;h1 id="unityのインストールパッケージのインポート通信方式の切替方法">Unityのインストール・パッケージのインポート・通信方式の切替方法&lt;/h1>
+&lt;h2 id="unityパッケージのダウンロード">Unityパッケージのダウンロード&lt;/h2>
+&lt;hr>
+&lt;p>単体ロボット向けシミュレータで使用するUnityパッケージを2種類用意してあります．
+どちらかのパッケージをご選択いただき，ダウンロードを行ってください．&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">使用するUnityパッケージ&lt;/th>
+ &lt;th style="text-align: left">説明&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">single-robot-HackEV&lt;/td>
+ &lt;td style="text-align: left">HackEVを模した走行体モデルを使用しています&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">ev3rt-simple-robot&lt;/td>
+ &lt;td style="text-align: left">シンプルな走行体モデルを使用しています&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">single-robot-HackEV(v2.0)&lt;/td>
+ &lt;td style="text-align: left">上記２つのモデルを含んでおり自由に選択できます&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">single-robot-HackEV(v2.1)&lt;/td>
+ &lt;td style="text-align: left">single-robot-HackEV(v2.0)の内容に加え，シミュレータのコンフィグ機能，バイナリ実行機能を追加したものとなっております．(Windows, Mac対応済み．Linux版は開発中です)&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>それぞれ下記からダウンロードしてください&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</guid><description>&lt;h1 id="unityのインストールパッケージのインポート通信方式の切替方法">Unityのインストール・パッケージのインポート・通信方式の切替方法&lt;/h1>
+&lt;h2 id="unityのインストール">Unityのインストール&lt;/h2>
+&lt;hr>
+&lt;p>Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．&lt;/p>
+&lt;p>以下のサイト等が参考になるかと思います．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://tech-camp.in/note/technology/44408/">https://tech-camp.in/note/technology/44408/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>※動作確認は&lt;code>Unity 2020.1.0b9(64bit)&lt;/code>で行っております．&lt;br>
+　使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．&lt;/p>
+&lt;h2 id="unityパッケージのインポート">Unityパッケージのインポート&lt;/h2>
+&lt;hr>
+&lt;h3 id="unity-起動">Unity 起動&lt;/h3>
+&lt;p>まず，インストールしたUnityを起動してください．&lt;br>
+無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_invoke.png " border="" width="800" />
+&lt;/figure>
+
+&lt;p>次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_create_project.png " border="" width="800" />
+&lt;/figure>
+
+&lt;p>成功すると，以下のようにUnityが起動します．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_start.png " border="" width="800" />
+&lt;/figure>
+
+&lt;h3 id="unityパッケージのインポート-1">Unityパッケージのインポート&lt;/h3>
+&lt;p>※画像は&lt;code>single-robot-HackEV.unitypackage&lt;/code>をインポートする際のものになります&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</guid><description>&lt;h1 id="unityのインストールパッケージのインポート通信方式の切替方法">Unityのインストール・パッケージのインポート・通信方式の切替方法&lt;/h1>
+&lt;h2 id="unityのインストール">Unityのインストール&lt;/h2>
+&lt;hr>
+&lt;p>Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．&lt;/p>
+&lt;p>以下のサイト等が参考になるかと思います．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://tech-camp.in/note/technology/44408/">https://tech-camp.in/note/technology/44408/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>※動作確認は&lt;code>Unity 2020.1.0b9(64bit)&lt;/code>で行っております．&lt;br>
+　使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．&lt;/p>
+&lt;h2 id="unityパッケージのインポート">Unityパッケージのインポート&lt;/h2>
+&lt;hr>
+&lt;h3 id="unity-起動">Unity 起動&lt;/h3>
+&lt;p>まず，インストールしたUnityを起動してください．&lt;br>
+無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_invoke.png " border="" width="800" />
+&lt;/figure>
+
+&lt;p>次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_create_project.png " border="" width="800" />
+&lt;/figure>
+
+&lt;p>成功すると，以下のようにUnityが起動します．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_start.png " border="" width="800" />
+&lt;/figure>
+
+&lt;h3 id="unityパッケージのインポート-1">Unityパッケージのインポート&lt;/h3>
+&lt;p>※画像は&lt;code>single-robot-HackEV.unitypackage&lt;/code>をインポートする際のものになります&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</guid><description>&lt;h1 id="unityのインストールパッケージのインポート通信方式の切替方法">Unityのインストール・パッケージのインポート・通信方式の切替方法&lt;/h1>
+&lt;h2 id="unityのインストール">Unityのインストール&lt;/h2>
+&lt;hr>
+&lt;p>Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．&lt;/p>
+&lt;p>以下のサイト等が参考になるかと思います．&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://tech-camp.in/note/technology/44408/">https://tech-camp.in/note/technology/44408/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>※動作確認は&lt;code>Unity 2020.1.0b9(64bit)&lt;/code>で行っております．&lt;br>
+　使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．&lt;/p>
+&lt;h2 id="unityパッケージのインポート">Unityパッケージのインポート&lt;/h2>
+&lt;hr>
+&lt;h3 id="unity-起動">Unity 起動&lt;/h3>
+&lt;p>まず，インストールしたUnityを起動してください．&lt;br>
+無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_invoke.png " border="" width="800" />
+&lt;/figure>
+
+&lt;p>次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_create_project.png " border="" width="800" />
+&lt;/figure>
+
+&lt;p>成功すると，以下のようにUnityが起動します．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_start.png " border="" width="800" />
+&lt;/figure>
+
+&lt;h3 id="unityパッケージのインポート-1">Unityパッケージのインポート&lt;/h3>
+&lt;p>※画像は&lt;code>single-robot-HackEV.unitypackage&lt;/code>をインポートする際のものになります&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>&lt;h1 id="mmap用unity設定">MMAP用Unity設定&lt;/h1>
+&lt;p>UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．&lt;/p>
+&lt;p>Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p>
+&lt;p>「Player」&lt;br>
+&lt;code>Other Setting&lt;/code>の&lt;code>Scripting Define Symbols&lt;/code> に&lt;code>VDEV_IO_MMAP&lt;/code>と設定します．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_setting_player_mmap.png " border="" width="700" />
+&lt;/figure>
+
+&lt;h1 id="mmap用パラメータ設定">MMAP用パラメータ設定&lt;/h1>
+&lt;p>※なお，このページで紹介しているUnity画面の画像はWindows版のものです&lt;/p>
+&lt;p>設定する場所は，Unity の以下のスクリプト・パラメータ(Filepath)部分です．&lt;/p>
+&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Feed2a22a-e74b-9e8f-0774-6ca34783a6e4.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=b6a404498493184bdc1bcfe3d2749bad">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Feed2a22a-e74b-9e8f-0774-6ca34783a6e4.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=b6a404498493184bdc1bcfe3d2749bad">&lt;/a>&lt;/p>
+&lt;p>インポート直後ですと，[EV3 Actuator] と [EV3 Sensor]の Filepath は空白です．&lt;br>
+ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．&lt;/p>
+&lt;p>MMAPファイル自体は，以下の２ファイルが&lt;code>app.c&lt;/code>と同じフォルダに含まれています．&lt;/p>
+&lt;ul>
+&lt;li>athrill_mmap.bin&lt;/li>
+&lt;li>unity_mmap.bin&lt;/li>
+&lt;/ul>
+&lt;p>unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定してください(設定例：下図)．&lt;/p>
+&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=c00912d532173b48318ebd94f6deec5a">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=c00912d532173b48318ebd94f6deec5a">&lt;/a>&lt;/p>
+&lt;p>athrill_mmap.bin の絶対ファイルパスを，[EV3 Actuator]のFilepathに設定してください(設定例：下図)．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap_v2.0/</guid><description>&lt;h1 id="mmap用unity設定">MMAP用Unity設定&lt;/h1>
+&lt;p>UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．&lt;/p>
+&lt;p>Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p>
+&lt;p>「Player」&lt;br>
+&lt;code>Other Setting&lt;/code>の&lt;code>Scripting Define Symbols&lt;/code> に&lt;code>VDEV_IO_MMAP&lt;/code>と設定します．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_setting_player_mmap.png " border="" width="700" />
+&lt;/figure>
+
+&lt;h1 id="mmap用パラメータ設定">MMAP用パラメータ設定&lt;/h1>
+&lt;p>※なお，このページで紹介しているUnity画面の画像はWindows版のものです&lt;/p>
+&lt;p>&lt;code>Hierarchy&lt;/code>ビューで&lt;code>Robot&lt;/code>配下の&lt;code>RoboModel&lt;/code>を選択してください．&lt;br>
+すると画面右の&lt;code>Inspector&lt;/code>ビューに[Io Writer (Script)]と[Io Reader (Script)]の項目が表示されます.&lt;/p>
+&lt;p>
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_hierarchy_view_robo_v2.0.png " border="" width="300" />
+&lt;/figure>
+
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_setting_mmap_emp.png " border="" width="300" />
+&lt;/figure>
+&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</guid><description>&lt;h1 id="udp用unity設定">UDP用Unity設定&lt;/h1>
+&lt;p>UnityとathrillをUDPで通信する場合は，Unity側で以下の設定を行います．&lt;/p>
+&lt;p>&lt;code>Hierarchy&lt;/code>ビューで&lt;code>Robot&lt;/code>配下の&lt;code>RoboModel_3&lt;/code>を選択してください．&lt;br>
+すると画面右の&lt;code>Inspector&lt;/code>ビューに[EV3 Motor (Script)]の項目が表示されます.&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_hierarchy_view.png " border="" width="300" />
+&lt;/figure>
+
+&lt;p>表示されたら，項目内のプロパティ&lt;code>Max Diff Time&lt;/code>を40000に変更します．&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_fix_maxdifftime.png " border="" width="350" />
+&lt;/figure>
+
+&lt;h1 id="udp用パラメータ設定">UDP用パラメータ設定&lt;/h1>
+&lt;p>UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．&lt;/p>
+&lt;p>&lt;strong>※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．&lt;/strong>&lt;/p>
+&lt;h3 id="説明する上でのipアドレスの構成例">説明する上でのIPアドレスの構成例&lt;/h3>
+&lt;p>Unity側のIPアドレス：192.168.11.32&lt;br>
+athrill側のIPアドレス：192.168.11.20&lt;/p>
+&lt;p>なお，IPアドレスの確認方法は以下のやり方でわかります．&lt;/p>
+&lt;h4 id="お使いのpcがlinuxwslの場合">お使いのPCがLinux/WSLの場合&lt;/h4>
+&lt;p>ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ ifconfig
+eth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96
+ inet addr:192.168.11.32 Bcast:192.168.11.255 Mask:255.255.255.0
+ inet6 addr: fe80::cc6d:70d3:a934:a61b/64 Scope:Unknown
+ UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
+ RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+ TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+ collisions:0
+ RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
+&lt;/code>&lt;/pr</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</guid><description>&lt;h1 id="udp用パラメータ設定">UDP用パラメータ設定&lt;/h1>
+&lt;p>UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．&lt;/p>
+&lt;p>&lt;strong>※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．&lt;/strong>&lt;/p>
+&lt;h3 id="説明する上でのipアドレスの構成例">説明する上でのIPアドレスの構成例&lt;/h3>
+&lt;p>Unity側のIPアドレス：192.168.11.32&lt;br>
+athrill側のIPアドレス：192.168.11.20&lt;/p>
+&lt;p>なお，IPアドレスの確認方法は以下のやり方でわかります．&lt;/p>
+&lt;h4 id="お使いのpcがlinuxwslの場合">お使いのPCがLinux/WSLの場合&lt;/h4>
+&lt;p>ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ ifconfig
+eth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96
+ inet addr:192.168.11.32 Bcast:192.168.11.255 Mask:255.255.255.0
+ inet6 addr: fe80::cc6d:70d3:a934:a61b/64 Scope:Unknown
+ UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
+ RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+ TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+ collisions:0
+ RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
+&lt;/code>&lt;/pr</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ導入手順">単体ロボット向けシミュレータ導入手順&lt;/h1>
+&lt;h2 id="開発プラットフォームとターゲットcpu">開発プラットフォームとターゲットCPU&lt;/h2>
+&lt;hr>
+&lt;p>開発プラットフォームは，Windows/Linux/Mac です．&lt;br>
+ターゲットCPUはV850/ARMの2種類が存在します．&lt;br>
+ご自身の環境に合わせて，プラットフォームやターゲットCPUをご選択ください．&lt;/p>
+&lt;p>基本的な導入の流れは変わりありませんが，開発プラットフォームやターゲットCPU毎に&lt;br>
+細かい箇所での導入手順が異なります．&lt;br>
+対応するプラットフォーム/ターゲットCPUの導入手順をご確認ください．&lt;/p>
+&lt;ul>
+&lt;li>Windows
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-v850/">V850版&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-arm/">ARM版&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Linux
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-v850/">V850版&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-arm/">ARM版&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Mac
+&lt;ul>
+&lt;li>V850版（非対応です）&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-mac-arm/">ARM版&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>単体ロボット向けシミュレータ導入手順(Linux/ARM編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-arm/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ導入手順linuxarm編">単体ロボット向けシミュレータ導入手順(Linux/ARM編)&lt;/h1>
+&lt;h2 id="導入の流れ">導入の流れ&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/">athrill2のインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/">linux版64bit gccコンパイラ(ライブラリ含む)のインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/">箱庭用 EV3RT 開発環境のダウンロード&lt;/a>
+&lt;ol>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/">サンプルアプリケーションの紹介&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/">Unityのインストール・設定&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>単体ロボット向けシミュレータ導入手順(Linux/V850編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-linux-v850/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ導入手順linuxv850編">単体ロボット向けシミュレータ導入手順(Linux/V850編)&lt;/h1>
+&lt;h2 id="導入の流れ">導入の流れ&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/">Rubyのインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/">athrill2のインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/">linux版64bit gccコンパイラ(ライブラリ含む)のインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_v850/">箱庭用 EV3RT 開発環境のダウンロード&lt;/a>
+&lt;ol>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/">サンプルアプリケーションの紹介&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/">Unityのインストール・設定&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>単体ロボット向けシミュレータ導入手順(Mac/ARM編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-mac-arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-mac-arm/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ導入手順macarm編">単体ロボット向けシミュレータ導入手順(Mac/ARM編)&lt;/h1>
+&lt;h2 id="導入の流れ">導入の流れ&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/">athrill2のインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/">linux版64bit gccコンパイラ(ライブラリ含む)のインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/">箱庭用 EV3RT 開発環境のダウンロード&lt;/a>
+&lt;ol>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/">サンプルアプリケーションの紹介&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/">Unityのインストール・設定&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>単体ロボット向けシミュレータ導入手順(Windows/ARM編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-arm/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ導入手順windowsarm編">単体ロボット向けシミュレータ導入手順(Windows/ARM編)&lt;/h1>
+&lt;h2 id="導入の流れ">導入の流れ&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/">WSLのインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/">athrill2のインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/">linux版64bit gccコンパイラ(ライブラリ含む)のインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/">箱庭用 EV3RT 開発環境のダウンロード&lt;/a>
+&lt;ol>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/">サンプルアプリケーションの紹介&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/">Unityのインストール・設定&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>単体ロボット向けシミュレータ導入手順(Windows/V850編)</title><link>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup/single-robot-setup-index-windows-v850/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ導入手順windowsv850編">単体ロボット向けシミュレータ導入手順(Windows/V850編)&lt;/h1>
+&lt;h2 id="導入の流れ">導入の流れ&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/">WSLのインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/">Rubyのインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/">athrill2のインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/">linux版64bit gccコンパイラ(ライブラリ含む)のインストール&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_v850/">箱庭用 EV3RT 開発環境のダウンロード&lt;/a>
+&lt;ol>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/">サンプルアプリケーションの紹介&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/">Unityのインストール・設定&lt;/a>&lt;/li>
+&lt;/ol></description></item></channel></rss>

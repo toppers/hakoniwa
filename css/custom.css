@@ -5,20 +5,52 @@
   content: "";
   clear: both;
 }
+
 .xPrevNextLink_prev {
   display: block;
   float: left;
 }
+
 .xPrevNextLink_prev::before {
   content: "≪";
 }
+
 .xPrevNextLink_next {
   display: block;
   float: right;
   text-align: right;
 
 }
+
 .xPrevNextLink_next::after {
   content: "≫";
 }
-  
+
+#top-nav-extra ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#top-nav-extra ul li {
+  display: block;
+  margin-bottom: 10px;
+  /* 各項目の間にスペースを追加したい場合 */
+}
+
+#top-nav-extra ul li a {
+  display: block;
+}
+
+#top {
+  padding: 0 16px !important;
+}
+
+#top #top-nav-main {
+  padding-left: 0px !important;
+  border-left: none !important;
+}
+
+#top #top-brand {
+  margin-right: 16px !important;
+}

@@ -1,40 +1,42 @@
 <div class="show-sm">
-    <div id="nav-toggle-box">
-      <div id="nav-toggle-brand">
-        <a href={{ "" | relURL }}>{{ .Site.Title }}</a>
-      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
-    </div>
+  <div id="nav-toggle-box">
+    <div id="nav-toggle-brand">
+      <div id="top-brand">
+        <a href={{ "" | relURL }} title="home"><img src={{ "img/hakoniwa/icon-70x70.png"  | relURL }}></a>
+      </div>
+    </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
   </div>
-  <div class="hide-sm" id="top">
-    <div id="top-brand">
-      <a href={{ "" | relURL }} title="home"><img src={{ "img/hakoniwa/icon-70x70.png"  | relURL }}></a>
-    </div>
-    <nav id="top-nav-main">
-      <ul>
-       {{ $currentPage := . }}
-       {{ range .Site.Menus.main }}
-    <li><a href="{{ .URL }}" {{if  $currentPage.IsMenuCurrent "main" . }} class="active"{{end}}>{{ .Name }}</a></li>
-    {{end}}
-      </ul>
-    </nav>
-    <nav id="top-nav-extra"> 
-      <ul>
-        {{ range .Site.Menus.extra }} 
-          <li>
-            <a href="{{ .Permalink }}">{{ .Name }}</a>
-          </li>
-        {{ end }}  
-        {{ if .Site.IsMultiLingual }}
-          {{ range .Site.Languages }}
-          {{ if eq . $.Site.Language }}
-            <li><a href="#" class="active language">{{ .LanguageName }}</a></li>
-          {{ else }}
-            {{ range $.Translations }}
-            <li><a href="{{ .Permalink }}" class="">{{ .Language.LanguageName }}</a></li>
-            {{ end }}
-          {{ end }}
-          {{ end }}
-        {{ end }}
-      </ul>
-    </nav>
+</div>
+<div class="hide-sm" id="top">
+  <div id="top-brand">
+    <a href={{ "" | relURL }} title="home"><img src={{ "img/hakoniwa/icon-70x70.png"  | relURL }}></a>
   </div>
+  <nav id="top-nav-main">
+    <ul>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}" {{if  $currentPage.IsMenuCurrent "main" . }} class="active" {{end}}>{{ .Name }}</a></li>
+      {{end}}
+    </ul>
+  </nav>
+  <nav id="top-nav-extra">
+    <ul style="display: block;">
+      {{ range .Site.Menus.extra }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+      {{ if .Site.IsMultiLingual }}
+      {{ range .Site.Languages }}
+      {{ if eq . $.Site.Language }}
+      <li><a href="#" class="active language">{{ .LanguageName }}</a></li>
+      {{ else }}
+      {{ range $.Translations }}
+      <li><a href="{{ .Permalink }}" class="">{{ .Language.LanguageName }}</a></li>
+      {{ end }}
+      {{ end }}
+      {{ end }}
+      {{ end }}
+    </ul>
+  </nav>
+</div>

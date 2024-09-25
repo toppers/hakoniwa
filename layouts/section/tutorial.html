@@ -1,0 +1,25 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+
+{{ define "main" }}
+
+<div id="hero" class="wrap">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.bref }}</p>
+</div>
+<div id="kube-component" class="content">
+    {{ partial "toc" .}}
+
+    {{ .Content}}
+    {{  partial "prev-next" . }}
+    <!-- Inject script tag in this template  -->
+    {{if .Params.script}}
+    {{ $script := (delimit (slice "scripts" .Params.script) "/")}}
+    {{ partial (string $script) .}}
+    {{end }}
+</div>
+
+{{ end }}
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}

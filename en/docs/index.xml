@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>What is Hakoniwa on Hakoniwa</title><link>https://toppers.github.io/hakoniwa/en/docs/</link><description>Recent content in What is Hakoniwa on Hakoniwa</description><generator>Hugo</generator><language>en</language><atom:link href="https://toppers.github.io/hakoniwa/en/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Technical Background</title><link>https://toppers.github.io/hakoniwa/en/docs/background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/background/</guid><description>&lt;p>The Internet of Things (IoT) is the mixed martial art of information technology.
 It is because IoT systems are composed of diverse and large numbers of information devices that are intricately intertwined through network communications, requiring many engineers from various technical fields to gather together and pool their wisdom to build an IoT system.&lt;/p>
 &lt;p>Consider, as an example, an autonomous driving system.
-It crosses various technical domains as follows.&lt;/p></description></item><item><title>Concept</title><link>https://toppers.github.io/hakoniwa/en/docs/concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/concept/</guid><description>&lt;p>The concept of Hakoniwa is &lt;strong>&amp;ldquo;Put mixed things as you like, and try various concepts with ease !&amp;rdquo;&lt;/strong>&lt;/p>
+It crosses various technical domains as follows.&lt;/p>
+&lt;ul>
+&lt;li>Embedded Systems
+&lt;ul>
+&lt;li>Development of autonomous determination software for driving&lt;/li>
+&lt;li>Development of communication system between ECUs&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Control Systems
+&lt;ul>
+&lt;li>Development of ECU hardware to control mechanical and electrical systems&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>IT &amp;amp; Network
+&lt;ul>
+&lt;li>Development of Web UI and smartphone applications&lt;/li>
+&lt;li>Management and maintenance of cloud servers for statistical processing of big data&lt;/li>
+&lt;li>Realization of efficient inter-vehicle and inter-device communication control&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>application Systems
+&lt;ul>
+&lt;li>Development of vehicle assignment management and traffic flow management applications&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/back1.en.png " border="" width="600" />
+&lt;/figure>
+
+&lt;p>However, we face the following challenges to realizing such an IoT system.&lt;/p></description></item><item><title>Concept</title><link>https://toppers.github.io/hakoniwa/en/docs/concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/concept/</guid><description>&lt;p>The concept of Hakoniwa is &lt;strong>&amp;ldquo;Put mixed things as you like, and try various concepts with ease !&amp;rdquo;&lt;/strong>&lt;/p>
 &lt;p>We provide a virtual environment, which makes it easy to combine and demonstrate different software and services when developing IoT, automated driving systems, cloud robotics systems, etc.&lt;/p>
 
 
@@ -20,7 +52,18 @@ And, by just replacing the &amp;ldquo;assets&amp;rdquo; that are the system comp
 
 &lt;p>Hakoniwa&amp;rsquo;s target is an information system with various devices connected by a network.
 We envision IoT applications in various fields, such as autonomous driving, logistics, and space development.&lt;/p>
-&lt;p>Hakoniwa targets the following users&lt;/p></description></item><item><title>Hakoniwa Core</title><link>https://toppers.github.io/hakoniwa/en/docs/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/core/</guid><description>&lt;p>The four core functions of Hakoniwa are as follows.&lt;/p>
+&lt;p>Hakoniwa targets the following users&lt;/p>
+&lt;ul>
+&lt;li>System developers: engineers who develop IoT systems and their components&lt;/li>
+&lt;li>Service providers: Engineers who promote the provision of system services using the IoT.&lt;/li>
+&lt;li>Developers and providers of Hakoniwa assets
+&lt;ul>
+&lt;li>Assets here refer to the system components of Hakoniwa.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>The strength and novelty of the Hakoniwa project is the ability to verify the target system with &lt;strong>arbitrary accuracy&lt;/strong> by linking the Hakoniwa Asset.
+Then, according to technical domain and evaluation target, users can replace the Hakoniwa assets and verify them at any &lt;strong>target / abstraction level / accuracy&lt;/strong>.&lt;/p></description></item><item><title>Hakoniwa Core</title><link>https://toppers.github.io/hakoniwa/en/docs/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/core/</guid><description>&lt;p>The four core functions of Hakoniwa are as follows.&lt;/p>
 &lt;ol>
 &lt;li>Scheduling&lt;/li>
 &lt;li>Synchronization and Communication&lt;/li>
@@ -35,7 +78,12 @@ We envision IoT applications in various fields, such as autonomous driving, logi
 &lt;li>Automation&lt;/li>
 &lt;/ol>
 &lt;p>The core functions and functional characteristics of Hakoniwa are still under design study in the WG while developing the &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes/">prototype model&lt;/a>.
-We will add more details as we progress.&lt;/p></description></item><item><title>Underlying technology</title><link>https://toppers.github.io/hakoniwa/en/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/technical/</guid><description>&lt;h3 id="toppers-kernel">TOPPERS Kernel&lt;/h3>
+We will add more details as we progress.&lt;/p>
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/core1.en.png " border="" width="800" />
+&lt;/figure></description></item><item><title>Underlying technology</title><link>https://toppers.github.io/hakoniwa/en/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/technical/</guid><description>&lt;h3 id="toppers-kernel">TOPPERS Kernel&lt;/h3>
 &lt;p>Developed by the &lt;a href="https://toppers.jp">TOPPERS Project&lt;/a>, it is an open-source real-time kernel that extends the standard profile of the µITRON4.0 specification.
 It primarily targeted embedded systems that require high reliability, safety, and real-time performance.&lt;/p>
 &lt;p>&lt;a href="https://toppers.jp/">&lt;img alt="TOPPERS" src="https://www.toppers.jp/imgs/logo.gif">&lt;/a>&lt;/p>

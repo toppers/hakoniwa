@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>箱庭入門会 on 箱庭</title><link>https://toppers.github.io/hakoniwa/introduction-party/</link><description>Recent content in 箱庭入門会 on 箱庭</description><generator>Hugo</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/introduction-party/index.xml" rel="self" type="application/rss+xml"/><item><title>入門会 #1</title><link>https://toppers.github.io/hakoniwa/introduction-party/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/1/</guid><description>&lt;h3 id="入門会-1-まずは箱庭ってなに">入門会 #1 まずは箱庭ってなに？？&lt;/h3>
+&lt;pre tabindex="0">&lt;code>「箱庭？」という人向けに、下の情報を紹介します。
+- 箱庭とは何か
+- 箱庭の構想
+- 箱庭の適用事例
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2024/4/4(木)&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/LQdUQ1RMg2w?si=BckD1E7qyKHYayNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (Docswell)&lt;br>
+
+&lt;script async class="docswell-embed" src="https://bcdn.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/Z8GXLL/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/Z8GXLL-hakoniwa-overview">Hakoniwa-overview by @kanetugu2015&lt;/a>&lt;/div>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/1/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #2</title><link>https://toppers.github.io/hakoniwa/introduction-party/2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/2/</guid><description>&lt;h3 id="入門会-2-アーキテクチャを理解する">入門会 #2 アーキテクチャを理解する&lt;/h3>
+&lt;pre tabindex="0">&lt;code>箱庭の全体設計情報を整理します。
+
+- アーキテクチャ
+- 箱庭アセット
+- アーキテクチャ詳細
+- ネットワーク構成とインフラストラクチャ
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2024/4/4(木)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/314428/">https://hakoniwa.connpass.com/event/314428/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/kvgNpvQ_JKA?si=RgVJLGdNlb_-uvwn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (Docswell)&lt;br>
+
+&lt;script async class="docswell-embed" src="https://bcdn.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/538X4Y/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/538X4Y-hakoniwa-design">Hakoniwa-design by @kanetugu2015&lt;/a>&lt;/div>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/2/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #3</title><link>https://toppers.github.io/hakoniwa/introduction-party/3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/3/</guid><description>&lt;h3 id="入門会-3-アセット同士が通信する仕組み">入門会 #3 アセット同士が通信する仕組み&lt;/h3>
+&lt;pre tabindex="0">&lt;code>箱庭アセット間の通信データであるPDUの情報を整理します．
+
+- 箱庭のPDU(Protocol Data Unit)とは何か
+- 箱庭の通信プロトコル・アーキテクチャ
+- 箱庭アセットと箱庭PDUチャネルについて
+- 箱庭PDUデータの作成方法
+- 箱庭PDUデータの組み込み方法
+- 箱庭PDUデータのアクセス方法
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2024/4/30(火)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/317311/">https://hakoniwa.connpass.com/event/317311/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/h91OSVR5Le4?si=AAHu3wjwgx2OrEaZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (Docswell)&lt;br>
+
+&lt;script async class="docswell-embed" src="https://bcdn.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/ZQ8VN7/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/ZQ8VN7-hakoniwa-pdu">Hakoniwa-pdu by @kanetugu2015&lt;/a>&lt;/div>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/3/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #4</title><link>https://toppers.github.io/hakoniwa/introduction-party/4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/4/</guid><description>&lt;h3 id="入門会-4-unityを箱庭視点で使ってみる">入門会 #4 Unityを箱庭視点で使ってみる&lt;/h3>
+&lt;pre tabindex="0">&lt;code>箱庭のUnityを利用する上で，Unityの基本的な使い方について情報を整理します。
+
+- Unityとは何か
+- Unityエディタの画面構成
+- 基本的な操作方法
+- Unityで物理シミュレーションするための基礎知識箱庭の全体設計情報を整理します
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2024/5/16(木)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/317312/">https://hakoniwa.connpass.com/event/317312/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/GAB7B1HBeh0?si=jsXAShwUCoJghBIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (Docswell)&lt;br>
+
+&lt;script async class="docswell-embed" src="https://bcdn.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/KJLJNV/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/KJLJNV-hakoniwa-tutorial-unity">Hakoniwa-tutorial-unity by @kanetugu2015&lt;/a>&lt;/div>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/4/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #5</title><link>https://toppers.github.io/hakoniwa/introduction-party/5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/5/</guid><description>&lt;h3 id="入門会-5-unityを箱庭アセットとして利用する">入門会 #5 Unityを箱庭アセットとして利用する&lt;/h3>
+&lt;pre tabindex="0">&lt;code>Unityを箱庭アセットとして利用するための情報を整理します．
+
+- ロボットを動かすためのUnityの構造
+- 箱庭があると何が嬉しくなるのか
+- 箱庭が提供する機能(フレームワーク)
+- 箱庭でのロボット設計・実装方法
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2024/5/23(木)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/317313/">https://hakoniwa.connpass.com/event/317313/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/XVb5AkH-Jlo?si=aDYP7wC6KtqoTEXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (Docswell)&lt;br>
+
+&lt;script async class="docswell-embed" src="https://bcdn.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/57VXLD/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/57VXLD-hakoniwa-unity">Hakoniwa-unity by @kanetugu2015&lt;/a>&lt;/div>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/5/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #6</title><link>https://toppers.github.io/hakoniwa/introduction-party/6/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/6/</guid><description>&lt;h3 id="入門会-6-unityの箱庭アセットを作る">入門会 #6 Unityの箱庭アセットを作る&lt;/h3>
+&lt;pre tabindex="0">&lt;code>Unityの箱庭アセットを作るための情報を解説します．
+
+- 前提とする環境
+- Githubリポジトリ情報
+- 箱庭Unity環境のインストール方法
+- Workシーンの説明
+- 箱庭Unityアセットの作成手順
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2024/6/6(木)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/320182/">https://hakoniwa.connpass.com/event/320182/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Hika9tbLp1Q?si=R4HTDNmUy-G9YvMR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (Docswell)&lt;br>
+
+&lt;script async class="docswell-embed" src="https://bcdn.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/ZM1E9N/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/ZM1E9N-hakoniwa-unity-asset">Hakoniwa-unity-asset by @kanetugu2015&lt;/a>&lt;/div>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/6/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #7</title><link>https://toppers.github.io/hakoniwa/introduction-party/7/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/7/</guid><description>&lt;h3 id="入門会-7-pythonで箱庭アセットを作る">入門会 #7 Pythonで箱庭アセットを作る&lt;/h3>
+&lt;pre tabindex="0">&lt;code>Pythonで箱庭アセット作るための情報を解説します．
+
+- 前提とする環境
+- GitHubリポジトリ情報
+- 箱庭Python環境のインストール方法
+- 箱庭Python APIの概要説明
+- 箱庭Python APIのサンプルプログラム説明
+- 箱庭UnityアセットをPythonで制御してみよう
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2024/6/13(木)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/320183/">https://hakoniwa.connpass.com/event/320183/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/fUNCFxUoc98?si=-nbFK8Xedf6CLmYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (Docswell)&lt;br>
+
+&lt;script async class="docswell-embed" src="https://bcdn.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/5EN2WG/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/5EN2WG-hakoniwa-python-asset">Hakoniwa-python-asset by @kanetugu2015&lt;/a>&lt;/div>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/7/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #8</title><link>https://toppers.github.io/hakoniwa/introduction-party/8/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/8/</guid><description>&lt;h3 id="入門会-8-ドローンシミュレータのアーキテクチャを理解する">入門会 #8 ドローンシミュレータのアーキテクチャを理解する&lt;/h3>
+&lt;pre tabindex="0">&lt;code>箱庭ドローンシミュレータのアーキテクチャ情報を以下の観点で解説します．
+
+- 箱庭ドローン・アプリケーション構成
+- 箱庭ドローン・アプリ
+- 箱庭ドローン・Python アプリとは
+- 箱庭ドローン・Python APIライブラリとは
+- 箱庭ドローン・Unity ワールド/機体
+- 箱庭ドローン・Unity ワールドとは
+- 箱庭ドローン・Unity 機体とは
+- 参考情報 -PythonとUnity間の通信データ（箱庭PDUデータ）の説明
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2024/6/20(木)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/320184/">https://hakoniwa.connpass.com/event/320184/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/M4NnXsrCjl4?si=2MgU5kZLH6fxxxMe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (Docswell)&lt;br>
+
+&lt;script async class="docswell-embed" src="https://bcdn.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/5Q86WE/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/5Q86WE-2024-05-17-141919">Hakoniwa-drone-architecture by @kanetugu2015&lt;/a>&lt;/div>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/8/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #9</title><link>https://toppers.github.io/hakoniwa/introduction-party/9/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/9/</guid><description>&lt;h3 id="入門会-9-ドローンシミュレータをpythonで制御する">入門会 #9 ドローンシミュレータをPythonで制御する&lt;/h3>
+&lt;pre tabindex="0">&lt;code>箱庭ドローンを操作するPythonプログラムの作成方法を解説します。
+
+- 箱庭ドローン・Python API 操作のユースケース説明
+- ユースケース毎のAPI実装方法説明
+- 機体を離陸する
+- 機体の現在位置を取得する
+- 機体を目的地へ移動する
+- 機体で荷物を運ぶ
+- 機体のカメラで撮影する
+- 機体のレーザセンサ(LiDAR)で周辺の障害物を検出する
+- 機体を着陸する
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2024/6/26(水)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/323041/">https://hakoniwa.connpass.com/event/323041/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/_aEsu2j7n74?si=Kx_tA3pN_euIoqgg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (Docswell)&lt;br>
+
+&lt;script async class="docswell-embed" src="https://bcdn.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/524RVN/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/524RVN-2024-05-18-111952">Hakoniwa-drone-program by @kanetugu2015&lt;/a>&lt;/div>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/9/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #10</title><link>https://toppers.github.io/hakoniwa/introduction-party/10/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/10/</guid><description>&lt;h3 id="入門会-10-ドローンシミュレータのunity機体をカスタマイズする">入門会 #10 ドローンシミュレータのUnity機体をカスタマイズする&lt;/h3>
+&lt;pre tabindex="0">&lt;code>箱庭ドローンのUnityワールド/機体をカスタマイズする方法を解説します。
+
+- Unity
+ - Unityシーン/スクリプト
+ - Unityプリミティブ素材、コライダー
+ - Unityアセットストア
+ - Unityプロジェクト
+- 箱庭
+ - 箱庭ドローンのUnityプロジェクト
+ - 箱庭ドローンのUnityシーン
+ - 箱庭ドローンのプレハブ
+ - カスタマイズ
+ - 箱庭ワールド
+ - 箱庭ドローン
+ - リポジトリ管理方法
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2024/7/1(月)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/323046/">https://hakoniwa.connpass.com/event/323046/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/E7C3Ji3ktoI?si=J7ffFp0PAAuKdL1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (Docswell)&lt;br>
+
+&lt;script async class="docswell-embed" src="https://bcdn.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/KXYR8Y/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/KXYR8Y-2024-05-19-160903">Hakoniwa-drone-unity by @kanetugu2015&lt;/a>&lt;/div>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/10/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item></channel></rss>

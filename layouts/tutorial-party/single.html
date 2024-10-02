@@ -19,6 +19,9 @@
     {{ $script := (delimit (slice "scripts" .Params.script) "/")}}
     {{ partial (string $script) .}}
     {{end }}
+    <div style="text-align: center;">
+      <a href="../">目次に戻る</a>
+    </div>
   </div>
 </div>
 {{ end }}

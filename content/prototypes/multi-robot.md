@@ -33,10 +33,10 @@ UnityのPhotonライブラリを用いて複数のUnity環境の同期を行っ�
 ‐ [toppers/hakoniwa-ros-multiplay](https://github.com/toppers/hakoniwa-ros-multiplay)
 
 ### 動作例のデモ
+
 - photonによる複数ロボットの連携
 {{< video src="/img/prototypes/modelBdemo1.mp4">}}
 - Oculus Questとの接続の様子
 {{< video src="/img/prototypes/modelBdemo2.mp4">}}
 - VRで箱庭内に入った様子
 {{< video src="/img/prototypes/modelBdemo3.mp4">}}
-

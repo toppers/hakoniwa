@@ -1743,117 +1743,117 @@ Email: secretariat_at_toppers.jp (_at_ を@ に置き換えてください)
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">氏名&lt;/th>
- &lt;th style="text-align: left">主な役割&lt;/th>
- &lt;th style="text-align: left">所属&lt;/th>
- &lt;th style="text-align: left">SNS&lt;/th>
+ &lt;th>氏名&lt;/th>
+ &lt;th>主な役割&lt;/th>
+ &lt;th>所属&lt;/th>
+ &lt;th>SNS&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">森 崇&lt;/td>
- &lt;td style="text-align: left">主査 全体統括、Athrill&lt;/td>
- &lt;td style="text-align: left">永和システムマネジメント/箱庭ラボ&lt;/td>
- &lt;td style="text-align: left">
- &lt;a href="https://github.com/tmori" target="_blank">
+ &lt;td>森 崇&lt;/td>
+ &lt;td>主査 全体統括、Athrill&lt;/td>
+ &lt;td>永和システムマネジメント/箱庭ラボ&lt;/td>
+ &lt;td>
+&lt;a href="https://github.com/tmori" target="_blank" style="text-decoration: none;">
  &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/GitHub-Mark-32px.png" width="24">
- &lt;/a>
- &lt;a href="https://twitter.com/kanetugu2020" target="_blank">
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/Twitter_Social_Icon_Circle_Color.png" width="24">
- &lt;/a>
- &lt;a href="https://www.facebook.com/takashi.mori.520562" target="_blank">
+&lt;/a>
+&lt;a href="https://twitter.com/kanetugu2020" target="_blank" style="text-decoration: none;">
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/X_logo_black.png" style="height: 24px;">
+&lt;/a>
+&lt;a href="https://www.facebook.com/takashi.mori.520562" target="_blank" style="text-decoration: none;">
  &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/f_logo_RGB-Blue_58.png" width="24">
- &lt;/a>&lt;/td>
+&lt;/a>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">高瀬 英希&lt;/td>
- &lt;td style="text-align: left">mROS、ROS、IoT&lt;/td>
- &lt;td style="text-align: left">東京大学/JSTさきがけ&lt;/td>
- &lt;td style="text-align: left">
- &lt;a href="https://github.com/takasehideki" target="_blank">
+ &lt;td>高瀬 英希&lt;/td>
+ &lt;td>mROS、ROS、IoT&lt;/td>
+ &lt;td>東京大学/JSTさきがけ&lt;/td>
+ &lt;td>
+&lt;a href="https://github.com/takasehideki" target="_blank" style="text-decoration: none;">
  &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/GitHub-Mark-32px.png" width="24">
- &lt;/a>
- &lt;a href="https://twitter.com/takasehideki" target="_blank">
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/Twitter_Social_Icon_Circle_Color.png" width="24">
- &lt;/a>
- &lt;a href="https://www.facebook.com/takasehideki" target="_blank">
+&lt;/a>
+&lt;a href="https://twitter.com/takasehideki" target="_blank" style="text-decoration: none;">
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/X_logo_black.png" style="height: 24px;">
+&lt;/a>
+&lt;a href="https://www.facebook.com/takasehideki" target="_blank" style="text-decoration: none;">
  &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/f_logo_RGB-Blue_58.png" width="24">
- &lt;/a>&lt;/td>
+&lt;/a>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">細合 晋太郎&lt;/td>
- &lt;td style="text-align: left">IDE、モデリング、可視化、クラウド&lt;/td>
- &lt;td style="text-align: left">東京大学&lt;/td>
- &lt;td style="text-align: left">
- &lt;a href="https://github.com/s-hosoai" target="_blank">
+ &lt;td>細合 晋太郎&lt;/td>
+ &lt;td>IDE、モデリング、可視化、クラウド&lt;/td>
+ &lt;td>東京大学&lt;/td>
+ &lt;td>
+&lt;a href="https://github.com/s-hosoai" target="_blank" style="text-decoration: none;">
  &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/GitHub-Mark-32px.png" width="24">
- &lt;/a>
- &lt;a href="https://twitter.com/ShintaroHosoai" target="_blank">
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/Twitter_Social_Icon_Circle_Color.png" width="24">
- &lt;/a>
- &lt;a href="https://www.facebook.com/shintaro.hosoai" target="_blank">
+&lt;/a>
+&lt;a href="https://twitter.com/ShintaroHosoai" target="_blank" style="text-decoration: none;">
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/X_logo_black.png" style="height: 24px;">
+&lt;/a>
+&lt;a href="https://www.facebook.com/shintaro.hosoai" target="_blank" style="text-decoration: none;">
  &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/f_logo_RGB-Blue_58.png" width="24">
- &lt;/a>&lt;/td>
+&lt;/a>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">高田 光隆&lt;/td>
- &lt;td style="text-align: left">カーネル、応用検討&lt;/td>
- &lt;td style="text-align: left">名古屋大学NCES&lt;/td>
- &lt;td style="text-align: left">
- &lt;a href="https://github.com/mitsut" target="_blank">
+ &lt;td>高田 光隆&lt;/td>
+ &lt;td>カーネル、応用検討&lt;/td>
+ &lt;td>名古屋大学NCES&lt;/td>
+ &lt;td>
+&lt;a href="https://github.com/mitsut" target="_blank" style="text-decoration: none;">
  &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/GitHub-Mark-32px.png" width="24">
- &lt;/a>
- &lt;a href="https://twitter.com/mitsu48" target="_blank">
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/Twitter_Social_Icon_Circle_Color.png" width="24">
- &lt;/a>
- &lt;a href="https://www.linkedin.com/in/mitsu48" target="_blank">
+&lt;/a>
+&lt;a href="https://twitter.com/mitsu48" target="_blank" style="text-decoration: none;">
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/X_logo_black.png" style="height: 24px;">
+&lt;/a>
+&lt;a href="https://www.linkedin.com/in/mitsu48" target="_blank" style="text-decoration: none;">
  &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/LI-In-Bug.png" width="24">
- &lt;/a>&lt;/td>
+&lt;/a>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">福田 ⻯也&lt;/td>
- &lt;td style="text-align: left">クラウド、ロボティクス&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">
- &lt;a href="https://twitter.com/fudekunjp" target="_blank">
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/Twitter_Social_Icon_Circle_Color.png" width="24">
- &lt;/a>
- &lt;a href="https://www.linkedin.com/in/fudekunjp" target="_blank">
+ &lt;td>福田 ⻯也&lt;/td>
+ &lt;td>クラウド、ロボティクス&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>
+&lt;a href="https://twitter.com/fudekunjp" target="_blank" style="text-decoration: none;">
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/X_logo_black.png" style="height: 24px;">
+&lt;/a>
+&lt;a href="https://www.linkedin.com/in/fudekunjp" target="_blank" style="text-decoration: none;">
  &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/LI-In-Bug.png" width="24">
- &lt;/a>&lt;/td>
+&lt;/a>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">小森 顕博&lt;/td>
- &lt;td style="text-align: left">可視化&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
- &lt;td style="text-align: left">
- &lt;a href="https://github.com/comoc" target="_blank">
+ &lt;td>小森 顕博&lt;/td>
+ &lt;td>可視化&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>
+&lt;a href="https://github.com/comoc" target="_blank" style="text-decoration: none;">
  &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/GitHub-Mark-32px.png" width="24">
- &lt;/a>
- &lt;a href="https://twitter.com/comocc" target="_blank">
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/Twitter_Social_Icon_Circle_Color.png" width="24">
- &lt;/a>&lt;/td>
+&lt;/a>
+&lt;a href="https://twitter.com/comocc" target="_blank" style="text-decoration: none;">
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/X_logo_black.png" style="height: 24px;">
+&lt;/a>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">久保秋 真&lt;/td>
- &lt;td style="text-align: left">モデリング、応用検討&lt;/td>
- &lt;td style="text-align: left">チェンジビジョン&lt;/td>
- &lt;td style="text-align: left">
- &lt;a href="https://github.com/kuboaki" target="_blank">
+ &lt;td>久保秋 真&lt;/td>
+ &lt;td>モデリング、応用検討&lt;/td>
+ &lt;td>チェンジビジョン&lt;/td>
+ &lt;td>
+&lt;a href="https://github.com/kuboaki" target="_blank" style="text-decoration: none;">
  &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/GitHub-Mark-32px.png" width="24">
- &lt;/a>
- &lt;a href="https://twitter.com/kuboaki" target="_blank">
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/Twitter_Social_Icon_Circle_Color.png" width="24">
- &lt;/a>
- &lt;a href="https://www.facebook.com/kuboaki" target="_blank">
+&lt;/a>
+&lt;a href="https://twitter.com/kuboaki" target="_blank" style="text-decoration: none;">
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/X_logo_black.png" style="height: 24px;">
+&lt;/a>
+&lt;a href="https://www.facebook.com/kuboaki" target="_blank" style="text-decoration: none;">
  &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/common/f_logo_RGB-Blue_58.png" width="24">
- &lt;/a>&lt;/td>
+&lt;/a>&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">國井 雄介&lt;/td>
- &lt;td style="text-align: left">デジタルツイン活用&lt;/td>
- &lt;td style="text-align: left">クレスコ 　　&lt;/td>
- &lt;td style="text-align: left">&lt;/td>
+ &lt;td>國井 雄介&lt;/td>
+ &lt;td>デジタルツイン活用&lt;/td>
+ &lt;td>クレスコ 　　&lt;/td>
+ &lt;td>&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -1973,18 +1973,18 @@ Rgb_r,g,b には，カラーセンサで取得できる数値を表示してい�
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">主なフィールド&lt;/th>
- &lt;th style="text-align: left">説明&lt;/th>
+ &lt;th>主なフィールド&lt;/th>
+ &lt;th>説明&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">Max Diff Time&lt;/td>
- &lt;td style="text-align: left">athrillとUnityのシミュレーション時間の最大許容誤差時間&lt;/td>
+ &lt;td>Max Diff Time&lt;/td>
+ &lt;td>athrillとUnityのシミュレーション時間の最大許容誤差時間&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">Dbg Diff Time Msec&lt;/td>
- &lt;td style="text-align: left">現在のathrillとUnityのシミュレーション時間の誤差(msec)&lt;/td>
+ &lt;td>Dbg Diff Time Msec&lt;/td>
+ &lt;td>現在のathrillとUnityのシミュレーション時間の誤差(msec)&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -2795,26 +2795,26 @@ app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">使用するUnityパッケージ&lt;/th>
- &lt;th style="text-align: left">説明&lt;/th>
+ &lt;th>使用するUnityパッケージ&lt;/th>
+ &lt;th>説明&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">single-robot-HackEV&lt;/td>
- &lt;td style="text-align: left">HackEVを模した走行体モデルを使用しています&lt;/td>
+ &lt;td>single-robot-HackEV&lt;/td>
+ &lt;td>HackEVを模した走行体モデルを使用しています&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">ev3rt-simple-robot&lt;/td>
- &lt;td style="text-align: left">シンプルな走行体モデルを使用しています&lt;/td>
+ &lt;td>ev3rt-simple-robot&lt;/td>
+ &lt;td>シンプルな走行体モデルを使用しています&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">single-robot-HackEV(v2.0)&lt;/td>
- &lt;td style="text-align: left">上記２つのモデルを含んでおり自由に選択できます&lt;/td>
+ &lt;td>single-robot-HackEV(v2.0)&lt;/td>
+ &lt;td>上記２つのモデルを含んでおり自由に選択できます&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">single-robot-HackEV(v2.1)&lt;/td>
- &lt;td style="text-align: left">single-robot-HackEV(v2.0)の内容に加え，シミュレータのコンフィグ機能，バイナリ実行機能を追加したものとなっております．(Windows, Mac対応済み．Linux版は開発中です)&lt;/td>
+ &lt;td>single-robot-HackEV(v2.1)&lt;/td>
+ &lt;td>single-robot-HackEV(v2.0)の内容に加え，シミュレータのコンフィグ機能，バイナリ実行機能を追加したものとなっております．(Windows, Mac対応済み．Linux版は開発中です)&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>

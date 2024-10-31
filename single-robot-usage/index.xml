@@ -81,18 +81,18 @@ Rgb_r,g,b には，カラーセンサで取得できる数値を表示してい�
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">主なフィールド&lt;/th>
- &lt;th style="text-align: left">説明&lt;/th>
+ &lt;th>主なフィールド&lt;/th>
+ &lt;th>説明&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">Max Diff Time&lt;/td>
- &lt;td style="text-align: left">athrillとUnityのシミュレーション時間の最大許容誤差時間&lt;/td>
+ &lt;td>Max Diff Time&lt;/td>
+ &lt;td>athrillとUnityのシミュレーション時間の最大許容誤差時間&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">Dbg Diff Time Msec&lt;/td>
- &lt;td style="text-align: left">現在のathrillとUnityのシミュレーション時間の誤差(msec)&lt;/td>
+ &lt;td>Dbg Diff Time Msec&lt;/td>
+ &lt;td>現在のathrillとUnityのシミュレーション時間の誤差(msec)&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>

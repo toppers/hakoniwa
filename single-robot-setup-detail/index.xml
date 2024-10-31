@@ -239,26 +239,26 @@ app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">使用するUnityパッケージ&lt;/th>
- &lt;th style="text-align: left">説明&lt;/th>
+ &lt;th>使用するUnityパッケージ&lt;/th>
+ &lt;th>説明&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">single-robot-HackEV&lt;/td>
- &lt;td style="text-align: left">HackEVを模した走行体モデルを使用しています&lt;/td>
+ &lt;td>single-robot-HackEV&lt;/td>
+ &lt;td>HackEVを模した走行体モデルを使用しています&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">ev3rt-simple-robot&lt;/td>
- &lt;td style="text-align: left">シンプルな走行体モデルを使用しています&lt;/td>
+ &lt;td>ev3rt-simple-robot&lt;/td>
+ &lt;td>シンプルな走行体モデルを使用しています&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">single-robot-HackEV(v2.0)&lt;/td>
- &lt;td style="text-align: left">上記２つのモデルを含んでおり自由に選択できます&lt;/td>
+ &lt;td>single-robot-HackEV(v2.0)&lt;/td>
+ &lt;td>上記２つのモデルを含んでおり自由に選択できます&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">single-robot-HackEV(v2.1)&lt;/td>
- &lt;td style="text-align: left">single-robot-HackEV(v2.0)の内容に加え，シミュレータのコンフィグ機能，バイナリ実行機能を追加したものとなっております．(Windows, Mac対応済み．Linux版は開発中です)&lt;/td>
+ &lt;td>single-robot-HackEV(v2.1)&lt;/td>
+ &lt;td>single-robot-HackEV(v2.0)の内容に加え，シミュレータのコンフィグ機能，バイナリ実行機能を追加したものとなっております．(Windows, Mac対応済み．Linux版は開発中です)&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>

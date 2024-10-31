@@ -8,7 +8,7 @@
 
 ## Preview on localhost
 
-    $ hugo server -D
+    $ hugo server -D --logLevel debug
 
 or Reviewing the generated content.
 

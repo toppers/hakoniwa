@@ -18,7 +18,19 @@ draft = false
 [もっと見る](topics)
 
 ### 更新情報
-
+- 2024.10.31
+  - リポジトリの更新リリース情報です。
+    - [hakoniwa-px4sim v2.7.0](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.7.0) (2024.10.27)
+      - Windows版インストーラ対応
+      - Python APIの機能拡張
+      - 環境シミュレーション機能（例：風の影響）の追加
+      - 箱庭ドローンシミュレータのWebブラウザ対応
+      - Python向け制御プログラムのリファクタリング
+      - ARデバイス対応
+      - 各種マニュアルのブラッシュアップ
+    - [hakoniwa-unity-drone-model v2.2.0](https://github.com/toppers/hakoniwa-unity-drone-model/releases/tag/v2.2.0) (2024.10.20)
+      - PC向けアプリ
+      - AR体験向けアプリ
 - 2024.08.24
   - リポジトリの更新リリース情報です。
     - [hakoniwa-unity-drone-model v2.1.1](https://github.com/toppers/hakoniwa-unity-drone-model/releases/tag/v2.1.1) (2024.08.15)

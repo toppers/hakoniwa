@@ -22,6 +22,18 @@ In the series titled "[Recommendations for Embedded Development in the Cloud Age
 -->
 
 ### What's New
-
+- 2024.10.31
+  - Release Updates
+    - [hakoniwa-px4sim v2.7.0](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.7.0) (2024.10.27)
+      - Support for Windows installer
+      - Extension of Python API functionality
+      - Addition of environmental simulation features (e.g., wind effects)
+      - Web browser support for Hakoniwa drone simulator
+      - Refactoring of control programs for Python
+      - Support for AR devices
+      - Refinement of various manuals
+    - [hakoniwa-unity-drone-model v2.2.0](https://github.com/toppers/hakoniwa-unity-drone-model/releases/tag/v2.2.0) (2024.10.20)
+      - For PC application
+      - For AR (Meta Quest3) application
 - 2022.06.15
   - The English version of this site has been published.

@@ -191,6 +191,26 @@ This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Uni
  &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-core">hakoniwa-core&lt;/a>&lt;/td>
  &lt;td style="text-align: left">Repository for prototype development of &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/docs/core">Hakoniwa Core Function&lt;/a>&lt;/td>
  &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-document">hakoniwa-document&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Official documentation for TOPPERS/Hakoniwa users&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-core-cpp-client">hakoniwa-core-cpp-client&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">C language API for &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/docs/core">Hakoniwa Core Function&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-conductor">hakoniwa-conductor&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Arbitration process for realizing Hakoniwa in a distributed environment&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-bridge">hakoniwa-bridge&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Communication module for connecting real (edge) and virtual (Hakoniwa) environments&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-webserver">hakoniwa-webserver&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Visualize Hakoniwa PDU on a browser via WebSocket&lt;/td>
+ &lt;/tr>
  &lt;/tbody>
 &lt;/table>
 &lt;h3 id="athrill">Athrill&lt;/h3>
@@ -249,6 +269,10 @@ This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Uni
  &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/asp-athrill-mbed">asp-athrill-mbed&lt;/a>&lt;/td>
  &lt;td style="text-align: left">Package of TOPPERS/ASP kernel and Mbed library for Athrill&lt;/td>
  &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/asp3-athrill-v850e2m">asp3-athrill-v850e2m&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Package of TOPPERS/ASP3 kernel for Athrill&lt;/td>
+ &lt;/tr>
  &lt;/tbody>
 &lt;/table>
 &lt;h3 id="unity">Unity&lt;/h3>
@@ -263,6 +287,10 @@ This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Uni
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-Unity-Package">hakoniwa-Unity-Package&lt;/a>&lt;/td>
  &lt;td style="text-align: left">Unity Asset Package for Hakoniwa&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-unity-drone-model">hakoniwa-unity-drone-model&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Unity drone simulator that can be linked with PX4&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -281,7 +309,7 @@ This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Uni
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/mROS-base/mros2">mROS 2&lt;/a>&lt;/td>
- &lt;td style="text-align: left">A lightweight runtime environment of ROS 1 nodes onto embedded devices&lt;/td>
+ &lt;td style="text-align: left">A lightweight runtime environment of ROS 2 nodes onto embedded devices&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -297,6 +325,10 @@ This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Uni
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-scenario-samples">hakoniwa-scenario-samples&lt;/a>&lt;/td>
  &lt;td style="text-align: left">Sample collection of Hakoniwa behavior scenarios&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-px4sim">hakoniwa-px4sim&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Simulation environment for drone plant models that can be linked with PX4&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table></description></item><item><title>SNS &amp; Contact</title><link>https://toppers.github.io/hakoniwa/en/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/contact/</guid><description>&lt;h3 id="invitation-to-hakoniwa-wg">Invitation to Hakoniwa WG&lt;/h3>

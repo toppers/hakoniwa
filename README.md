@@ -21,18 +21,6 @@
 - [Inquiry](https://github.com/toppers/hakoniwa/discussions/categories/inquiry): 箱庭WGへの関する問合せや活動参画の希望など（技術的な質問は"Q&A"をご利用ください）
 - [Q&A](https://github.com/toppers/hakoniwa/discussions/categories/q-a): 技術的な質問（Athrillを含む要素技術単体に関する質問も歓迎！箱庭プロトタイプモデルの試用で発生したトラブルなどお知らせください）
 
-
-### 箱庭の利用方法の質問や技術的な問合せについて
-
-箱庭の狙いやコンセプトを実現するための技術開発の促進や，これらを試行・実証することを目的として，箱庭のプロトタイプモデルを開発しています．箱庭WGのWebサイトでは，プロトタイプモデルの導入方法・利用方法を紹介しています．
-
-- https://toppers.github.io/hakoniwa/prototypes/
-
-プロトタイプモデルの導入・利用にあたって不明な点や質問がありましたら，次のいずれかの方法でお問合せください．
-
-1. GitHub Discussionsの[Q&A Category](https://github.com/toppers/hakoniwa/discussions/categories/q-a)
-2. 本リポジトリの[Issues](https://github.com/toppers/hakoniwa/issues)
-
 ### Webサイトの運用
 
 主に本リポジトリで管理しているソースコード類は，[箱庭WGのWebサイト](https://toppers.github.io/hakoniwa/)の運用に利用しています．

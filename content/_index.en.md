@@ -22,6 +22,14 @@ In the series titled "[Recommendations for Embedded Development in the Cloud Age
 -->
 
 ### What's New
+- 2024.11.30
+  - Release Updates
+    - [hakoniwa-px4sim v2.8.0](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.7.1) (2024.11.29)
+    - [hakoniwa-px4sim v2.7.1](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.7.1) (2024.11.15)
+    - [hakoniwa-unity-drone-model v2.2.1](https://github.com/toppers/hakoniwa-unity-drone-model/releases/tag/v2.2.1)  (2024.11.4)
+      - New architecture support for Hakoniwa PDU communication library
+      - WebGL luggage support
+      - WebSocket support for QUEST3
 - 2024.10.31
   - Release Updates
     - [hakoniwa-px4sim v2.7.0](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.7.0) (2024.10.27)

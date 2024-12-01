@@ -21,6 +21,14 @@ draft = false
 [もっと見る](topics)
 
 ### 更新情報
+- 2024.11.30
+  - リポジトリの更新リリース情報です。
+    - [hakoniwa-px4sim v2.7.1](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.7.1) (2024.11.15)
+      - バグFIX
+    - [hakoniwa-unity-drone-model v2.2.1](https://github.com/toppers/hakoniwa-unity-drone-model/releases/tag/v2.2.1)  (2024.11.4)
+      - 箱庭PDU通信ライブラリの新アーキテクチャ対応
+      - WebGLの荷物対応
+      - QUEST3のWebSocket対応
 - 2024.10.31
   - リポジトリの更新リリース情報です。
     - [hakoniwa-px4sim v2.7.0](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.7.0) (2024.10.27)

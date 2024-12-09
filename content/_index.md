@@ -8,9 +8,9 @@ draft = false
 
 ### トピックス・イベント案内
 
-- 2024年12月8日(日)に **現地開催オフラインイベント** を開催します！
-  - **[箱庭まつり #2 〜 今年の怒涛の成果を見て触れて総まとめ 〜 忘年会もあるよ](https://hakoniwa.connpass.com/event/336520/)**
-  - **ふるってご参加ください！**
+- 2024年12月8日(日)に 現地開催オフラインイベント を開催しました
+  - [箱庭まつり #2 〜 今年の怒涛の成果を見て触れて総まとめ 〜 忘年会もあるよ](https://hakoniwa.connpass.com/event/336520/)
+  - [アーカイブはYoutube](https://youtube.com/playlist?list=PLvZDKbhDfoh0TEnTo9NyI46qmxcIUw_HN&si=8F3T1PPXb5oIaXGE)からご覧いただけます。
 - 2024年08月10日(土)に 現地開催オフラインイベント を開催しました
   - [箱庭まつり #1 〜ドローン！デジタルツイン！箱庭のセカイを体験しよう〜](https://hakoniwa.connpass.com/event/323118/)
   - [アーカイブはYoutube](https://youtube.com/playlist?list=PLvZDKbhDfoh1EMBdcNBYH0RV1wSFJycW4&si=twOGQgIgvae_5MpR)からご覧いただけます。

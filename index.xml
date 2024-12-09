@@ -800,7 +800,44 @@ We are looking for various technical personnel (especially those with knowledge 
 また，日常的な議論や情報共有と開発にはSlack，GitHubおよびGoogle Driveを活用しています．&lt;/p>
 &lt;p>Slack等での議論に参加したい方，活動内容へのご要望をお持ちの方，コア技術や各アセットの開発などに参加したい方，
 箱庭WGの活動で期待される技術成果を活用したい方，製品開発に展開してみたい方，
-ぜひとも&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/contact/">問合せ先&lt;/a>よりご連絡ください．&lt;/p></description></item><item><title>制御プログラムの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/app-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/app-customize/</guid><description>&lt;h3 id="ソースコードの場所">ソースコードの場所&lt;/h3>
+ぜひとも&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/contact/">問合せ先&lt;/a>よりご連絡ください．&lt;/p></description></item><item><title>2024年</title><link>https://toppers.github.io/hakoniwa/technical-links/2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/2024/</guid><description>&lt;h3 id="roscon-2024">ROSCon 2024&lt;/h3>
+&lt;p>&lt;strong>&lt;a href="https://roscon.ros.org/2024/">ROSCon 2024&lt;/a>&lt;/strong> が2023年10月21日(月)-23日(水)に開催され、箱庭WGのメンバが発表を行いました。
+ROSConは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する世界的な開発者会議です。&lt;/p>
+&lt;h4 id="the-state-of-hakoniwalt">The State of Hakoniwa(LT)&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>発表資料 (Speaker Deck)
+ 
+&lt;iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/78f77b6fd29a441384b08dec9123a5c9" title="The State of Hakoniwa" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777">&lt;/iframe>
+
+&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>動画 (Vimeo)&lt;br>
+
+&lt;div style="padding:56.25% 0 0 0;position:relative;">&lt;iframe src="https://player.vimeo.com/video/1026038503?badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479#t=32m30s" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Day 1⚡Lightning Talks⚡">&lt;/iframe>&lt;/div>&lt;script src="https://player.vimeo.com/api/player.js">&lt;/script>
+
+&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/2024/#top">このページの先頭に戻る&lt;/a>&lt;/p>
+&lt;h3 id="roscon-jp-2024">ROSCon JP 2024&lt;/h3>
+&lt;p>&lt;strong>&lt;a href="https://roscon.jp/2024/">ROSCon JP 2024&lt;/a>&lt;/strong> が2024年9月25日(水)に東京で開催され、箱庭WGのメンバが発表を行いました。&lt;/p>
+&lt;h4 id="ドローンpx4をデジタルツインへと導く箱庭技術">ドローン／PX4をデジタルツインへと導く箱庭技術&lt;/h4>
+&lt;ul>
+&lt;li>動画 (Vimeo)&lt;/li>
+&lt;/ul>
+
+&lt;iframe src="https://player.vimeo.com/video/1029114843?h=1e3b03e43c" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>&lt;/iframe>
+
+
+&lt;ul>
+&lt;li>
+&lt;p>発表資料 (Docswell)
+ 
+&lt;script async class="docswell-embed" src="https://www.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/5V11QX/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/5V11QX-ROSConJP2024-hakoniwa">ROSConJP2024-hakoniwa by @kanetugu2015&lt;/a>&lt;/div>
+
+&lt;/p></description></item><item><title>制御プログラムの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/app-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/app-customize/</guid><description>&lt;h3 id="ソースコードの場所">ソースコードの場所&lt;/h3>
 &lt;p>今回のサンプルのtb3の制御プログラムは、
 &lt;code>/ros2/workspace/src/tb3/src/tb3ctrl.cpp&lt;/code> に配置されています。
 詳細は実際のコードを見て頂くとして主要な部分を紹介していきます。ページの最後にコードの抜粋を示します。&lt;/p>
@@ -889,45 +926,53 @@ int main(int argc, char **argv) {
  }
  return 0;
 }
-&lt;/code>&lt;/pre></description></item><item><title>2023年</title><link>https://toppers.github.io/hakoniwa/technical-links/2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/2023/</guid><description>&lt;h3 id="toppersカンファレンス2023">TOPPERSカンファレンス2023&lt;/h3>
-&lt;p>2022年6月30日(金)に開催された&lt;a href="https://toppers.jp/conference2023.html">TOPPERSカンファレンス2023&lt;/a>の講演資料です。
-箱庭WGの活動紹介、最新の開発状況とプラットフォーム化に向けた新たな展開について紹介しました。&lt;/p>
-&lt;h4 id="箱庭-update-2023">箱庭 Update 2023&lt;/h4>
+&lt;/code>&lt;/pre></description></item><item><title>2023年</title><link>https://toppers.github.io/hakoniwa/technical-links/2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/2023/</guid><description>&lt;h3 id="si2023">SI2023&lt;/h3>
+&lt;p>&lt;strong>&lt;a href="https://sice-si.org/si2023/">SI2023(第24回計測自動制御学会システムインテグレーション部門講演会)&lt;/a>&lt;/strong> が2023年12月14日(木)-16日(土)に開催され、箱庭WGのメンバが発表を行いました。&lt;/p>
+&lt;h4 id="箱庭技術への-mros-2-通信機能の統合によるリアルとバーチャルの融合体験を実現するシステムアーキテクチャの検討">箱庭技術への mROS 2 通信機能の統合によるリアルとバーチャルの融合体験を実現するシステムアーキテクチャの検討&lt;/h4>
 &lt;ul>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/TOPPERSConf2023-1.pdf">講演資料 (PDFファイル)
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/SI2023.pdf">発表資料 (PDFファイル)
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/TOPPERSConf2023-1.png " border="1" width="400" />
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/SI2023.png " border="1" width="400" />
 &lt;/figure>
+
 &lt;/a>&lt;/li>
-&lt;li>動画 (YouTube)&lt;br>
-
-
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/n7dR4cJzDpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
-
-&lt;/li>
-&lt;/ul>
-&lt;h4 id="toppers箱庭の新たな展開プラットフォーム化への一歩">TOPPERS/箱庭の新たな展開：プラットフォーム化への一歩&lt;/h4>
-&lt;ul>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/TOPPERSConf2023-2.pdf">講演資料 (PDFファイル)
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/SI2023-poster.pdf">ポスター (PDFファイル)
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/TOPPERSConf2023-2.png " border="1" width="400" />
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/SI2023-poster.png " border="1" width="400" />
 &lt;/figure>
+
 &lt;/a>&lt;/li>
-&lt;li>動画 (YouTube)&lt;br>
-
-
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ZdCYpDSk0qI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
-
-&lt;/li>
 &lt;/ul>
 &lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/2023/#top">このページの先頭に戻る&lt;/a>&lt;/p>
-&lt;h3 id="著作権に係る注意事項">著作権に係る注意事項&lt;/h3>
-&lt;p>本ページに掲載されている情報処理学会に投稿された論文について、著作権は情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「情報処理学会倫理綱領」に従うことをお願いいたします。&lt;a href="http://www.ipsj.or.jp/copyright/ronbun/copyright.html">情報処理学会著作権規程&lt;/a>もご参照ください。&lt;/p>
-&lt;p>The copyright of papers published from the Information Processing Society of Japan (IPSJ) and attached in this page is retained by IPSJ. This material is published on this web site with the agreement of the author(s) and the IPSJ. Please be complied with Copyright Law of Japan and the Code of Ethics of the IPSJ if any users wish to reproduce, make derivative work, distribute or make available to the public any part or whole thereof.&lt;/p></description></item><item><title>Microcomputer-controlled robot simulation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/single-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/single-robot/</guid><description>&lt;p>This is a Hakoniwa prototype model with one SBC, designed based on the challenges of &lt;a href="https://www.etrobo.jp/">ET Robocon&lt;/a>.
+&lt;h3 id="edgetech2023">EdgeTech+2023&lt;/h3>
+&lt;p>&lt;strong>&lt;a href="https://www.jasa.or.jp/expo/2023/">EdgeTech+2023&lt;/a>&lt;/strong> が2023年11月15日(水)-17日(金)に開催され、箱庭WGのメンバが発表を行いました。&lt;/p>
+&lt;h4 id="シミュレーションハブ箱庭が切り拓く技術融合の未来">シミュレーションハブ箱庭が切り拓く技術融合の未来&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/EdgeTech2023-hakoniwa.pdf">発表資料 (PDFファイル)
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/EdgeTech2023-hakoniwa.png " border="1" width="400" />
+&lt;/figure>
+
+&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/2023/#top">このページの先頭に戻る&lt;/a>&lt;/p>
+&lt;h3 id="roscon-2023">ROSCon 2023&lt;/h3>
+&lt;p>&lt;strong>&lt;a href="https://roscon.ros.org/2023/">ROSCon 2023&lt;/a>&lt;/strong> が2023年10月18日(水)-20日(金)に開催され、箱庭WGのメンバが発表を行いました。
+ROSConは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する世界的な開発者会議です。&lt;/p>
+&lt;h4 id="an-integrated-distributed-simulation-environment-weaving-by-hakoniwa-and-mros-2">An Integrated Distributed Simulation Environment weaving by Hakoniwa and mROS 2&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>発表資料 (Speaker Deck)
+ 
+&lt;iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/f9fc711a518a46d7983f8f6867f83eb9" title="An Integrated Distributed Simulation Environment weaving by Hakoniwa and mROS 2" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777">&lt;/iframe>
+
+&lt;/p></description></item><item><title>Microcomputer-controlled robot simulation</title><link>https://toppers.github.io/hakoniwa/en/prototypes/single-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/prototypes/single-robot/</guid><description>&lt;p>This is a Hakoniwa prototype model with one SBC, designed based on the challenges of &lt;a href="https://www.etrobo.jp/">ET Robocon&lt;/a>.
 This prototype can verify by linking the program&amp;rsquo;s behavior on the embedded microcontroller with the robot&amp;rsquo;s behavior.&lt;/p>
 &lt;h3 id="design-intent-from-a-technical-study-perspective">Design intent from a technical study perspective&lt;/h3>
 &lt;ul>
@@ -978,7 +1023,7 @@ We encourage you to try it out.&lt;/p></description></item><item><title>マイ�
 &lt;p>HackEVのUnityアセットは，ETロボコン実行委員会より提供いただいたデータを基に作成しています．実行委員会の皆さまに深く感謝いたします．&lt;br>
 ただし本アセットはETロボコンの本番環境とは異なりますので，大会に参加予定の方はご注意ください．また，本アセットは，個人利用または教育利用に限定してご利用ください．&lt;/p></description></item><item><title>コースの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/env-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/env-customize/</guid><description>&lt;h3 id="執筆中">執筆中&lt;/h3></description></item><item><title>2022年</title><link>https://toppers.github.io/hakoniwa/technical-links/2022/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/2022/</guid><description>&lt;h3 id="roscon-2022">ROSCon 2022&lt;/h3>
 &lt;p>&lt;strong>&lt;a href="https://roscon.ros.org/2022/">ROSCon 2022&lt;/a>&lt;/strong> が2022年10月20日(木)-21日(金)に開催され、箱庭WGのメンバが発表を行いました。
-ROSConは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する世界的な開発者会議の日本版です。&lt;/p>
+ROSConは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する世界的な開発者会議です。&lt;/p>
 &lt;h4 id="mros-2-yet-another-runtime-environment-onto-embedded-devices">mROS 2: yet another runtime environment onto embedded devices&lt;/h4>
 &lt;ul>
 &lt;li>講演資料 (Speaker Deck)&lt;br>

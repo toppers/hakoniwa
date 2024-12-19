@@ -21,6 +21,15 @@ draft = false
 [もっと見る](topics)
 
 ### 更新情報
+- 2024.12.19
+  - リポジトリの更新リリース情報
+    - [hakoniwa-px4sim v2.8.0](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.8.0) (2024.12.14)
+      - バッテリー機能
+      - 箱庭ARブリッジ機能
+      - 箱庭ブリッジ(MAVLINK)
+      - 東尋坊3Dモデルの公開
+  - [技術情報・発表資料](/hakoniwa/technical-links/)のページの情報を更新しました。
+    - SI2024(第25回計測自動制御学会システムインテグレーション部門講演会) が2024年12月18日(水)-20日(金)に開催され、箱庭WGのメンバが発表を行いました。
 - 2024.11.30
   - リポジトリの更新リリース情報です。
     - [hakoniwa-px4sim v2.7.1](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.7.1) (2024.11.15)

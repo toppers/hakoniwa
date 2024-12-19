@@ -22,6 +22,15 @@ In the series titled "[Recommendations for Embedded Development in the Cloud Age
 -->
 
 ### What's New
+- 2024.12.19
+  - Release Updates
+    - [hakoniwa-px4sim v2.8.0](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.8.0) (2024.12.14)
+      - Battery function
+      - Hakoniwa AR bridge
+      - Hakoniwa bridge(MAVLINK)
+      - Tohjinbo 3D Modeling
+  - [Technical Information](/hakoniwa/technical-links/) (Japances only)
+    - Our member gave presentations in SI2024.
 - 2024.11.30
   - Release Updates
     - [hakoniwa-px4sim v2.7.1](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.7.1) (2024.11.15)

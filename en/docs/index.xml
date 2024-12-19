@@ -86,7 +86,7 @@ We will add more details as we progress.&lt;/p>
 &lt;/figure></description></item><item><title>Underlying technology</title><link>https://toppers.github.io/hakoniwa/en/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/technical/</guid><description>&lt;h3 id="toppers-kernel">TOPPERS Kernel&lt;/h3>
 &lt;p>Developed by the &lt;a href="https://toppers.jp">TOPPERS Project&lt;/a>, it is an open-source real-time kernel that extends the standard profile of the µITRON4.0 specification.
 It primarily targeted embedded systems that require high reliability, safety, and real-time performance.&lt;/p>
-&lt;p>&lt;a href="https://toppers.jp/">&lt;img alt="TOPPERS" src="https://www.toppers.jp/imgs/logo.gif">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://toppers.jp/">&lt;img src="https://www.toppers.jp/imgs/logo.gif" alt="TOPPERS">&lt;/a>&lt;/p>
 &lt;h3 id="athrill">Athrill&lt;/h3>
 &lt;p>The CPU instruction set simulator is the core of Hakoniwa. &lt;br>
 Members of Hokoniwa WG mainly develop it. It enables debugging and functional verification of the behavior of embedded microcontrollers and peripherals at the instruction level. Currently, V850/RH850 and ARMv7-A are mainly supported.&lt;/p></description></item><item><title>Roadmap</title><link>https://toppers.github.io/hakoniwa/en/docs/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/roadmap/</guid><description>&lt;p>Hokoniwa WG is working on &amp;ldquo;big goals, little by little.&amp;rdquo;&lt;/p>

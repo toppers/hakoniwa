@@ -4,7 +4,7 @@
 &lt;h3 id="ros向け箱庭のシステム構成">ROS向け箱庭のシステム構成&lt;/h3>
 &lt;p>ros2simのプロジェクトでは、Unity上のTortleBot3(tb3)をROS2のアプリから制御するシミュレーションを行います。
 以下にWindows/WSL2でのシステム構成を示しています。大まかには制御対象であるUnity上のtb3とそれを制御するtb3ctrlがROSで通信しています。&lt;/p>
-&lt;p>&lt;img alt="ROS向け箱庭のシステム構成" src="https://toppers.github.io/hakoniwa/hakoniwa/img/getting-started/ros2sim_overview.png">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/getting-started/ros2sim_overview.png" alt="ROS向け箱庭のシステム構成">&lt;/p>
 &lt;h3 id="フォルダ構成">フォルダ構成&lt;/h3>
 &lt;p>githubからCloneしたプロジェクトのフォルダ構成は以下のようになっています。主に/ros2/workspace, /ros2/unityを扱えばよく、
 他のフォルダは本説明には含まれないため一旦無視してください。&lt;/p>

@@ -21,9 +21,9 @@
 &lt;li>&lt;a href="https://github.com/toppers/hakoniwa-single_robot">toppers/hakoniwa-single_robot: 箱庭プロトタイプモデルA：単体ロボット向けシミュレータ&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="動作例のデモ">動作例のデモ&lt;/h3>
-&lt;p>&lt;img alt="modelAdemo" src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo.gif">&lt;/p>
-&lt;p>&lt;img alt="modelAdemo1" src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo1.gif">&lt;/p>
-&lt;p>&lt;img alt="modelAdemo2" src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo2.gif">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo.gif" alt="modelAdemo">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo1.gif" alt="modelAdemo1">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo2.gif" alt="modelAdemo2">&lt;/p>
 &lt;hr>
 &lt;h4 id="謝辞特記事項">謝辞・特記事項：&lt;/h4>
 &lt;p>Unityパッケージの設計と作成にあたっては，宝塚大学 東京メディア芸術学部 吉岡章夫准教授および学部生の杉﨑涼志さん，木村明美さん，千葉純平さんにご協力いただきました．&lt;/p>
@@ -45,7 +45,7 @@ ROSで一般的に用いられているGazeboよりも軽量でロボットや�
 &lt;li>&lt;a href="https://github.com/toppers/hakoniwa-ros2sim">toppers/hakoniwa-ros2sim: 箱庭 ROS シミュレータ&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="動作例のデモ">動作例のデモ&lt;/h3>
-&lt;p>&lt;img alt="modelROSdemo" src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelROS.gif">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelROS.gif" alt="modelROSdemo">&lt;/p>
 &lt;hr>
 &lt;h4 id="謝辞特記事項">謝辞・特記事項：&lt;/h4>
 &lt;p>TurtleBot3 の Unity パッケージの設計と作成にあたっては，宝塚大学 東京メディア芸術学部 吉岡章夫准教授および学部生の杉崎涼志さん，木村明美さんにご協力いただきました．&lt;/p>

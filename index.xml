@@ -425,7 +425,7 @@ https://hakoniwa-lab.net/2023/09/27/blog-rosconjp2023/
 &lt;h3 id="ros向け箱庭のシステム構成">ROS向け箱庭のシステム構成&lt;/h3>
 &lt;p>ros2simのプロジェクトでは、Unity上のTortleBot3(tb3)をROS2のアプリから制御するシミュレーションを行います。
 以下にWindows/WSL2でのシステム構成を示しています。大まかには制御対象であるUnity上のtb3とそれを制御するtb3ctrlがROSで通信しています。&lt;/p>
-&lt;p>&lt;img alt="ROS向け箱庭のシステム構成" src="https://toppers.github.io/hakoniwa/hakoniwa/img/getting-started/ros2sim_overview.png">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/getting-started/ros2sim_overview.png" alt="ROS向け箱庭のシステム構成">&lt;/p>
 &lt;h3 id="フォルダ構成">フォルダ構成&lt;/h3>
 &lt;p>githubからCloneしたプロジェクトのフォルダ構成は以下のようになっています。主に/ros2/workspace, /ros2/unityを扱えばよく、
 他のフォルダは本説明には含まれないため一旦無視してください。&lt;/p>
@@ -705,13 +705,13 @@ We will add more details as we progress.&lt;/p>
 &lt;/figure></description></item><item><title>Underlying technology</title><link>https://toppers.github.io/hakoniwa/en/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/technical/</guid><description>&lt;h3 id="toppers-kernel">TOPPERS Kernel&lt;/h3>
 &lt;p>Developed by the &lt;a href="https://toppers.jp">TOPPERS Project&lt;/a>, it is an open-source real-time kernel that extends the standard profile of the µITRON4.0 specification.
 It primarily targeted embedded systems that require high reliability, safety, and real-time performance.&lt;/p>
-&lt;p>&lt;a href="https://toppers.jp/">&lt;img alt="TOPPERS" src="https://www.toppers.jp/imgs/logo.gif">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://toppers.jp/">&lt;img src="https://www.toppers.jp/imgs/logo.gif" alt="TOPPERS">&lt;/a>&lt;/p>
 &lt;h3 id="athrill">Athrill&lt;/h3>
 &lt;p>The CPU instruction set simulator is the core of Hakoniwa. &lt;br>
 Members of Hokoniwa WG mainly develop it. It enables debugging and functional verification of the behavior of embedded microcontrollers and peripherals at the instruction level. Currently, V850/RH850 and ARMv7-A are mainly supported.&lt;/p></description></item><item><title>技術要素</title><link>https://toppers.github.io/hakoniwa/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/technical/</guid><description>&lt;h3 id="toppersカーネル">TOPPERSカーネル&lt;/h3>
 &lt;p>&lt;a href="https://toppers.jp">TOPPERSプロジェクト&lt;/a>により開発されている，μITRON4.0仕様のスタンダードプロファイルを拡張した，オープンソースのリアルタイムカーネルです．
 主な適用対象は，高い信頼性・安全性・リアルタイム性を要求される組込みシステムです．&lt;/p>
-&lt;p>&lt;a href="https://toppers.jp/">&lt;img alt="TOPPERS" src="https://www.toppers.jp/imgs/logo.gif">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://toppers.jp/">&lt;img src="https://www.toppers.jp/imgs/logo.gif" alt="TOPPERS">&lt;/a>&lt;/p>
 &lt;h3 id="athrill">Athrill&lt;/h3>
 &lt;p>箱庭の核である，CPU命令セットシミュレータです． &lt;br>
 箱庭WGメンバが中心となって開発を進めています．組込みマイコンおよびペリフェラルの挙動を命令レベルでデバッグ・機能検証することができます．現在はV850/RH850およびARMv7-Aが主なサポート対象です．&lt;/p>
@@ -791,7 +791,7 @@ We are looking for various technical personnel (especially those with knowledge 
 &lt;p>現在のプロジェクトの活動の中心としては，コンセプトの実現と技術研鑽のために&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes">プロトタイプモデル&lt;/a>を構築中です．
 これらの研究開発は，すべてOSSとして公開しながら進めていきます．
 皆さまにそれぞれのプロトタイプモデルをご利用いただき，そしてフィードバックを得ながら，箱庭コア技術の成熟と様々な機能拡充を進めていきたいと考えています．&lt;/p>
-&lt;p>&lt;img alt="roadmap" src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/roadmap1.png">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/roadmap1.png" alt="roadmap">&lt;/p>
 &lt;p>箱庭プロジェクトは，まずは教育用途でのパッケージ構築と普及を図っていますが，製品開発への展開も視野に入れて研究開発を進めています．
 壮大な構想を掲げていますが，全くマンパワーは足りていないのが実情です．
 箱庭の成長のためにも，特にクラウド技術や可視化アセット開発に知見をお持ちの方に参画いただきたいと考えています．&lt;/p>
@@ -800,7 +800,29 @@ We are looking for various technical personnel (especially those with knowledge 
 また，日常的な議論や情報共有と開発にはSlack，GitHubおよびGoogle Driveを活用しています．&lt;/p>
 &lt;p>Slack等での議論に参加したい方，活動内容へのご要望をお持ちの方，コア技術や各アセットの開発などに参加したい方，
 箱庭WGの活動で期待される技術成果を活用したい方，製品開発に展開してみたい方，
-ぜひとも&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/contact/">問合せ先&lt;/a>よりご連絡ください．&lt;/p></description></item><item><title>2024年</title><link>https://toppers.github.io/hakoniwa/technical-links/2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/2024/</guid><description>&lt;h3 id="roscon-2024">ROSCon 2024&lt;/h3>
+ぜひとも&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/contact/">問合せ先&lt;/a>よりご連絡ください．&lt;/p></description></item><item><title>2024年</title><link>https://toppers.github.io/hakoniwa/technical-links/2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/2024/</guid><description>&lt;h3 id="si2024">SI2024&lt;/h3>
+&lt;p>&lt;strong>&lt;a href="https://sice-si.org/si2024/">SI2024(第25回計測自動制御学会システムインテグレーション部門講演会)&lt;/a>&lt;/strong> が2024年12月18日(水)-20日(金)に開催され、箱庭WGのメンバが発表を行いました。&lt;/p>
+&lt;h4 id="宇宙ドメインにおけるマルチシステムを横断する箱庭技術を活用したシミュレーション環境の提案">宇宙ドメインにおけるマルチシステムを横断する箱庭技術を活用したシミュレーション環境の提案&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/SI2024.pdf">発表資料 (PDFファイル)
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/SI2024.png " border="1" width="400" />
+&lt;/figure>
+
+&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/SI2024-poster.pdf">ポスター (PDFファイル)
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/SI2024-poster.png " border="1" width="400" />
+&lt;/figure>
+
+&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/2024/#top">このページの先頭に戻る&lt;/a>&lt;/p>
+&lt;h3 id="roscon-2024">ROSCon 2024&lt;/h3>
 &lt;p>&lt;strong>&lt;a href="https://roscon.ros.org/2024/">ROSCon 2024&lt;/a>&lt;/strong> が2023年10月21日(月)-23日(水)に開催され、箱庭WGのメンバが発表を行いました。
 ROSConは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する世界的な開発者会議です。&lt;/p>
 &lt;h4 id="the-state-of-hakoniwalt">The State of Hakoniwa(LT)&lt;/h4>
@@ -816,26 +838,6 @@ ROSConは、ロボット開発プラットフォームであるROS（Robot Opera
 &lt;p>動画 (Vimeo)&lt;br>
 
 &lt;div style="padding:56.25% 0 0 0;position:relative;">&lt;iframe src="https://player.vimeo.com/video/1026038503?badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479#t=32m30s" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Day 1⚡Lightning Talks⚡">&lt;/iframe>&lt;/div>&lt;script src="https://player.vimeo.com/api/player.js">&lt;/script>
-
-&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/2024/#top">このページの先頭に戻る&lt;/a>&lt;/p>
-&lt;h3 id="roscon-jp-2024">ROSCon JP 2024&lt;/h3>
-&lt;p>&lt;strong>&lt;a href="https://roscon.jp/2024/">ROSCon JP 2024&lt;/a>&lt;/strong> が2024年9月25日(水)に東京で開催され、箱庭WGのメンバが発表を行いました。&lt;/p>
-&lt;h4 id="ドローンpx4をデジタルツインへと導く箱庭技術">ドローン／PX4をデジタルツインへと導く箱庭技術&lt;/h4>
-&lt;ul>
-&lt;li>動画 (Vimeo)&lt;/li>
-&lt;/ul>
-
-&lt;iframe src="https://player.vimeo.com/video/1029114843?h=1e3b03e43c" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>&lt;/iframe>
-
-
-&lt;ul>
-&lt;li>
-&lt;p>発表資料 (Docswell)
- 
-&lt;script async class="docswell-embed" src="https://www.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/5V11QX/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/5V11QX-ROSConJP2024-hakoniwa">ROSConJP2024-hakoniwa by @kanetugu2015&lt;/a>&lt;/div>
 
 &lt;/p></description></item><item><title>制御プログラムの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/app-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/app-customize/</guid><description>&lt;h3 id="ソースコードの場所">ソースコードの場所&lt;/h3>
 &lt;p>今回のサンプルのtb3の制御プログラムは、
@@ -1014,9 +1016,9 @@ We encourage you to try it out.&lt;/p></description></item><item><title>マイ�
 &lt;li>&lt;a href="https://github.com/toppers/hakoniwa-single_robot">toppers/hakoniwa-single_robot: 箱庭プロトタイプモデルA：単体ロボット向けシミュレータ&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="動作例のデモ">動作例のデモ&lt;/h3>
-&lt;p>&lt;img alt="modelAdemo" src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo.gif">&lt;/p>
-&lt;p>&lt;img alt="modelAdemo1" src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo1.gif">&lt;/p>
-&lt;p>&lt;img alt="modelAdemo2" src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo2.gif">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo.gif" alt="modelAdemo">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo1.gif" alt="modelAdemo1">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo2.gif" alt="modelAdemo2">&lt;/p>
 &lt;hr>
 &lt;h4 id="謝辞特記事項">謝辞・特記事項：&lt;/h4>
 &lt;p>Unityパッケージの設計と作成にあたっては，宝塚大学 東京メディア芸術学部 吉岡章夫准教授および学部生の杉﨑涼志さん，木村明美さん，千葉純平さんにご協力いただきました．&lt;/p>
@@ -1072,7 +1074,7 @@ ROSで一般的に用いられているGazeboよりも軽量でロボットや�
 &lt;li>&lt;a href="https://github.com/toppers/hakoniwa-ros2sim">toppers/hakoniwa-ros2sim: 箱庭 ROS シミュレータ&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="動作例のデモ">動作例のデモ&lt;/h3>
-&lt;p>&lt;img alt="modelROSdemo" src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelROS.gif">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelROS.gif" alt="modelROSdemo">&lt;/p>
 &lt;hr>
 &lt;h4 id="謝辞特記事項">謝辞・特記事項：&lt;/h4>
 &lt;p>TurtleBot3 の Unity パッケージの設計と作成にあたっては，宝塚大学 東京メディア芸術学部 吉岡章夫准教授および学部生の杉崎涼志さん，木村明美さんにご協力いただきました．&lt;/p>
@@ -1200,9 +1202,9 @@ UnityのPhotonライブラリを用いて複数のUnity環境の同期を行っ�
 &lt;li>高瀬英希（京都大学／JSTさきがけ）, 細合晋太郎（チェンジビジョン）, 高田光隆（名古屋大学）, 庭野正義（アイコムシステック）, 辻悠斗・森崇（永和システムマネジメント）&lt;/li>
 &lt;li>情報処理学会研究報告組込みシステム（EMB）, Vol. 2020-EMB-55, No. 3, pp. 1-7 (2020).&lt;/li>
 &lt;li>概要：IoTの新たな時代を迎え，開発現場では様々な機器が絡んだ複雑なシステムと向き合う必要がある．我々は，このようなシステムを効率的にシミュレーションできる環境である「箱庭」の研究開発の構想に取り組んでいる．本環境では，IoT システムの全体像を机上で仮想化できるようにして，多様な領域からの技術者が集まって構築される IoT システムの振る舞いや問題経路を，各自の開発対象や興味から多様に観察できるようにする．本稿では，これまで我々が検討を進めてきた「箱庭」の狙いや基本構想を紹介する．その後，これらを実証する応用事例として開発を進めているプロトタイプについて共有する．最後に，単体ロボットを題材としたプロトタイプの開発状況を紹介し，その技術的有意点を議論する．&lt;/li>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/IPSJ-EMB20055003.pdf">発表論文&lt;/a> / &lt;a href="https://ipsj.ixsq.nii.ac.jp/ej/index.php?active_action=repository_view_main_item_detail&amp;page_id=13&amp;block_id=8&amp;item_id=208717&amp;item_no=1">情報処理学会 電子図書館&lt;/a>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/IPSJ-EMB20055003.pdf">発表論文&lt;/a> / &lt;a href="https://ipsj.ixsq.nii.ac.jp/ej/index.php?active_action=repository_view_main_item_detail&amp;amp;page_id=13&amp;amp;block_id=8&amp;amp;item_id=208717&amp;amp;item_no=1">情報処理学会 電子図書館&lt;/a>
 &lt;ul>
-&lt;li>本論文PDFファイルの二次利用にあたっては&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/2020/#著作権に係る注意事項">著作権に係る注意事項&lt;/a>をご確認ください。&lt;/li>
+&lt;li>本論文PDFファイルの二次利用にあたっては&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/2020/#%e8%91%97%e4%bd%9c%e6%a8%a9%e3%81%ab%e4%bf%82%e3%82%8b%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a0%85">著作権に係る注意事項&lt;/a>をご確認ください。&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/IPSJ-EMB55-slide.pdf">発表資料 (PDFファイル)
@@ -1972,9 +1974,9 @@ Email: secretariat_at_toppers.jp (_at_ を@ に置き換えてください)
 &lt;hr>
 &lt;p>今回のシミュレーション環境(Unity側)にはいくつかパラメータがありますので，その説明を行います．&lt;/p>
 &lt;p>まず，パラメータを参照するには，Hierarchyビューで，「EV3」を選択してください(下図)．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F11a57fef-9e2d-e0a0-ef76-af5f71fc5d09.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=2fdf76b9af97446c26fe08b5e484d631">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F11a57fef-9e2d-e0a0-ef76-af5f71fc5d09.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=2fdf76b9af97446c26fe08b5e484d631">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F11a57fef-9e2d-e0a0-ef76-af5f71fc5d09.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=2fdf76b9af97446c26fe08b5e484d631">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F11a57fef-9e2d-e0a0-ef76-af5f71fc5d09.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=2fdf76b9af97446c26fe08b5e484d631" alt="image.png">&lt;/a>&lt;/p>
 &lt;p>すると，InspectorビューにEV3のパラメータが表示されます．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F835e61c2-0ec6-b955-3e32-01ba535a1860.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=34989dc74c297f1639308d77c4282ba6">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F835e61c2-0ec6-b955-3e32-01ba535a1860.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=34989dc74c297f1639308d77c4282ba6">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F835e61c2-0ec6-b955-3e32-01ba535a1860.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=34989dc74c297f1639308d77c4282ba6">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F835e61c2-0ec6-b955-3e32-01ba535a1860.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=34989dc74c297f1639308d77c4282ba6" alt="image.png">&lt;/a>&lt;/p>
 &lt;p>以下，変更可能なパラメータを説明します(説明されていないものは変更しないでください)．
 ※これらのパラメータは，シミュレーション実行時に動的に変更も可能なものもあります．&lt;/p>
 &lt;h2 id="ev3-actuatorscript">EV3 Actuator(Script)&lt;/h2>
@@ -2020,15 +2022,15 @@ Unityと同じマシン上に配置する場合は，デフォルト値のまま
 ON/OFFのさせ方は単純で，HierachyビューでON/OFFしたいライトを選択します．&lt;/p>
 &lt;p>すると，Inspectorビューに下図のように「Light」のチェックボックスが見えます．
 このチェックボックスを外せばOFFになります．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fd14a2c69-1a29-7e92-9281-db2f2c6dfeb0.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=6cce316ca8400bfc1fd70ee8d93784b5">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fd14a2c69-1a29-7e92-9281-db2f2c6dfeb0.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=6cce316ca8400bfc1fd70ee8d93784b5">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fd14a2c69-1a29-7e92-9281-db2f2c6dfeb0.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=6cce316ca8400bfc1fd70ee8d93784b5">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fd14a2c69-1a29-7e92-9281-db2f2c6dfeb0.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=6cce316ca8400bfc1fd70ee8d93784b5" alt="image.png">&lt;/a>&lt;/p>
 &lt;h2 id="カラーセンサの状態">カラーセンサの状態&lt;/h2>
 &lt;hr>
 &lt;p>パラメータではないですが，カラーセンサの認識している状態を知りたくなることがあるかと思います．
 そのため，カラーセンサの認識している値をUnityのパラメータ表示機能を利用して可視化しています．&lt;/p>
 &lt;p>参照するには，下図のようにHierarchyビューでColorSensorを選択してください．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fb1a7d803-a262-07bb-d2e3-cfdc188ae9ab.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=435eebd6c23b9982645643c53f8dc4c1">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fb1a7d803-a262-07bb-d2e3-cfdc188ae9ab.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=435eebd6c23b9982645643c53f8dc4c1">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fb1a7d803-a262-07bb-d2e3-cfdc188ae9ab.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=435eebd6c23b9982645643c53f8dc4c1">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fb1a7d803-a262-07bb-d2e3-cfdc188ae9ab.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=435eebd6c23b9982645643c53f8dc4c1" alt="image.png">&lt;/a>&lt;/p>
 &lt;p>そうすると，Inspectorビューに下図のように認識値(Rgb)が表示されます．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F487343b4-2303-046a-f819-42f058143bf7.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=17d4a51db5055db1f82b7a47bc56651c">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F487343b4-2303-046a-f819-42f058143bf7.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=17d4a51db5055db1f82b7a47bc56651c">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F487343b4-2303-046a-f819-42f058143bf7.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=17d4a51db5055db1f82b7a47bc56651c">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F487343b4-2303-046a-f819-42f058143bf7.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=17d4a51db5055db1f82b7a47bc56651c" alt="image.png">&lt;/a>&lt;/p>
 &lt;p>Rgbは，現在認識している色をそのまま表示しています．
 Rgb_r,g,b には，カラーセンサで取得できる数値を表示しています．&lt;/p></description></item><item><title>シミュレーションに関するチューニング</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/</guid><description>&lt;h2 id="single-robot-hackevv20の追加要素について">single-robot-HackEV(v2.0)の追加要素について&lt;/h2>
 &lt;hr>
@@ -2290,7 +2292,7 @@ asp
 &lt;hr>
 &lt;p>&lt;strong>※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong>&lt;/p>
 &lt;p>次に，Unityをシミュレーションモードにします．
-Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;/a>　ボタンを押下してください．&lt;/p>
+Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986" alt="image.png">&lt;/a>　ボタンを押下してください．&lt;/p>
 &lt;p>成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p>
 
 
@@ -2347,7 +2349,7 @@ asp
 &lt;hr>
 &lt;p>&lt;strong>※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong>&lt;/p>
 &lt;p>次に，Unityをシミュレーションモードにします．
-Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;/a>　ボタンを押下してください．&lt;/p>
+Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986" alt="image.png">&lt;/a>　ボタンを押下してください．&lt;/p>
 &lt;p>成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p>
 
 
@@ -2483,7 +2485,7 @@ asp
 &lt;hr>
 &lt;p>&lt;strong>※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong>&lt;/p>
 &lt;p>次に，Unityをシミュレーションモードにします．
-Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;/a>　ボタンを押下してください．&lt;/p>
+Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986" alt="image.png">&lt;/a>　ボタンを押下してください．&lt;/p>
 &lt;p>成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p>
 
 
@@ -2550,7 +2552,7 @@ asp
 &lt;hr>
 &lt;p>&lt;strong>※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong>&lt;/p>
 &lt;p>次に，Unityをシミュレーションモードにします．
-Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;/a>　ボタンを押下してください．&lt;/p>
+Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986" alt="image.png">&lt;/a>　ボタンを押下してください．&lt;/p>
 &lt;p>成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p>
 
 
@@ -3180,7 +3182,7 @@ Toppers_Courseをダブルクリックすると下図の画面が現れます．
 &lt;h1 id="mmap用パラメータ設定">MMAP用パラメータ設定&lt;/h1>
 &lt;p>※なお，このページで紹介しているUnity画面の画像はWindows版のものです&lt;/p>
 &lt;p>設定する場所は，Unity の以下のスクリプト・パラメータ(Filepath)部分です．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Feed2a22a-e74b-9e8f-0774-6ca34783a6e4.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=b6a404498493184bdc1bcfe3d2749bad">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Feed2a22a-e74b-9e8f-0774-6ca34783a6e4.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=b6a404498493184bdc1bcfe3d2749bad">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Feed2a22a-e74b-9e8f-0774-6ca34783a6e4.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=b6a404498493184bdc1bcfe3d2749bad">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Feed2a22a-e74b-9e8f-0774-6ca34783a6e4.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=b6a404498493184bdc1bcfe3d2749bad" alt="image.png">&lt;/a>&lt;/p>
 &lt;p>インポート直後ですと，[EV3 Actuator] と [EV3 Sensor]の Filepath は空白です．&lt;br>
 ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．&lt;/p>
 &lt;p>MMAPファイル自体は，以下の２ファイルが&lt;code>app.c&lt;/code>と同じフォルダに含まれています．&lt;/p>
@@ -3189,9 +3191,9 @@ Toppers_Courseをダブルクリックすると下図の画面が現れます．
 &lt;li>unity_mmap.bin&lt;/li>
 &lt;/ul>
 &lt;p>unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定してください(設定例：下図)．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=c00912d532173b48318ebd94f6deec5a">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=c00912d532173b48318ebd94f6deec5a">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=c00912d532173b48318ebd94f6deec5a">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=c00912d532173b48318ebd94f6deec5a" alt="image.png">&lt;/a>&lt;/p>
 &lt;p>athrill_mmap.bin の絶対ファイルパスを，[EV3 Actuator]のFilepathに設定してください(設定例：下図)．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fbac2a522-ef60-83de-3847-593907d4caa3.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=7b5daec21b535117b589967d8817fa69">&lt;img alt="image.png" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fbac2a522-ef60-83de-3847-593907d4caa3.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=7b5daec21b535117b589967d8817fa69">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fbac2a522-ef60-83de-3847-593907d4caa3.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=7b5daec21b535117b589967d8817fa69">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fbac2a522-ef60-83de-3847-593907d4caa3.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=7b5daec21b535117b589967d8817fa69" alt="image.png">&lt;/a>&lt;/p>
 &lt;p>例えば，v850版を使用するという前提で&lt;code>ev3rt-athrill-v850e2m&lt;/code>のローカルリポジトリが，&lt;br>
 &lt;code>C:\project\hakoniwa&lt;/code>にあり，実行したいアプリケーションのフォルダが&lt;code>line_trace&lt;/code>の場合は，&lt;br>
 以下のパスを設定します．&lt;/p>

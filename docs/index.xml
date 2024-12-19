@@ -130,7 +130,7 @@ IoTの各要素が連携される複雑なシステムの事象や状態を，�
 &lt;/figure></description></item><item><title>技術要素</title><link>https://toppers.github.io/hakoniwa/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/technical/</guid><description>&lt;h3 id="toppersカーネル">TOPPERSカーネル&lt;/h3>
 &lt;p>&lt;a href="https://toppers.jp">TOPPERSプロジェクト&lt;/a>により開発されている，μITRON4.0仕様のスタンダードプロファイルを拡張した，オープンソースのリアルタイムカーネルです．
 主な適用対象は，高い信頼性・安全性・リアルタイム性を要求される組込みシステムです．&lt;/p>
-&lt;p>&lt;a href="https://toppers.jp/">&lt;img alt="TOPPERS" src="https://www.toppers.jp/imgs/logo.gif">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://toppers.jp/">&lt;img src="https://www.toppers.jp/imgs/logo.gif" alt="TOPPERS">&lt;/a>&lt;/p>
 &lt;h3 id="athrill">Athrill&lt;/h3>
 &lt;p>箱庭の核である，CPU命令セットシミュレータです． &lt;br>
 箱庭WGメンバが中心となって開発を進めています．組込みマイコンおよびペリフェラルの挙動を命令レベルでデバッグ・機能検証することができます．現在はV850/RH850およびARMv7-Aが主なサポート対象です．&lt;/p>
@@ -202,7 +202,7 @@ IoTの各要素が連携される複雑なシステムの事象や状態を，�
 &lt;p>現在のプロジェクトの活動の中心としては，コンセプトの実現と技術研鑽のために&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes">プロトタイプモデル&lt;/a>を構築中です．
 これらの研究開発は，すべてOSSとして公開しながら進めていきます．
 皆さまにそれぞれのプロトタイプモデルをご利用いただき，そしてフィードバックを得ながら，箱庭コア技術の成熟と様々な機能拡充を進めていきたいと考えています．&lt;/p>
-&lt;p>&lt;img alt="roadmap" src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/roadmap1.png">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/roadmap1.png" alt="roadmap">&lt;/p>
 &lt;p>箱庭プロジェクトは，まずは教育用途でのパッケージ構築と普及を図っていますが，製品開発への展開も視野に入れて研究開発を進めています．
 壮大な構想を掲げていますが，全くマンパワーは足りていないのが実情です．
 箱庭の成長のためにも，特にクラウド技術や可視化アセット開発に知見をお持ちの方に参画いただきたいと考えています．&lt;/p>

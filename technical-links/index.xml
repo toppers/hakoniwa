@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術情報・発表資料 on 箱庭</title><link>https://toppers.github.io/hakoniwa/technical-links/</link><description>Recent content in 技術情報・発表資料 on 箱庭</description><generator>Hugo</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/technical-links/index.xml" rel="self" type="application/rss+xml"/><item><title>2024年</title><link>https://toppers.github.io/hakoniwa/technical-links/2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/2024/</guid><description>&lt;h3 id="roscon-2024">ROSCon 2024&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術情報・発表資料 on 箱庭</title><link>https://toppers.github.io/hakoniwa/technical-links/</link><description>Recent content in 技術情報・発表資料 on 箱庭</description><generator>Hugo</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/technical-links/index.xml" rel="self" type="application/rss+xml"/><item><title>2024年</title><link>https://toppers.github.io/hakoniwa/technical-links/2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/2024/</guid><description>&lt;h3 id="si2024">SI2024&lt;/h3>
+&lt;p>&lt;strong>&lt;a href="https://sice-si.org/si2024/">SI2024(第25回計測自動制御学会システムインテグレーション部門講演会)&lt;/a>&lt;/strong> が2024年12月18日(水)-20日(金)に開催され、箱庭WGのメンバが発表を行いました。&lt;/p>
+&lt;h4 id="宇宙ドメインにおけるマルチシステムを横断する箱庭技術を活用したシミュレーション環境の提案">宇宙ドメインにおけるマルチシステムを横断する箱庭技術を活用したシミュレーション環境の提案&lt;/h4>
+&lt;ul>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/SI2024.pdf">発表資料 (PDFファイル)
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/SI2024.png " border="1" width="400" />
+&lt;/figure>
+
+&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/SI2024-poster.pdf">ポスター (PDFファイル)
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/SI2024-poster.png " border="1" width="400" />
+&lt;/figure>
+
+&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/2024/#top">このページの先頭に戻る&lt;/a>&lt;/p>
+&lt;h3 id="roscon-2024">ROSCon 2024&lt;/h3>
 &lt;p>&lt;strong>&lt;a href="https://roscon.ros.org/2024/">ROSCon 2024&lt;/a>&lt;/strong> が2023年10月21日(月)-23日(水)に開催され、箱庭WGのメンバが発表を行いました。
 ROSConは、ロボット開発プラットフォームであるROS（Robot Operating System）に関する世界的な開発者会議です。&lt;/p>
 &lt;h4 id="the-state-of-hakoniwalt">The State of Hakoniwa(LT)&lt;/h4>
@@ -14,26 +36,6 @@ ROSConは、ロボット開発プラットフォームであるROS（Robot Opera
 &lt;p>動画 (Vimeo)&lt;br>
 
 &lt;div style="padding:56.25% 0 0 0;position:relative;">&lt;iframe src="https://player.vimeo.com/video/1026038503?badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479#t=32m30s" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Day 1⚡Lightning Talks⚡">&lt;/iframe>&lt;/div>&lt;script src="https://player.vimeo.com/api/player.js">&lt;/script>
-
-&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/2024/#top">このページの先頭に戻る&lt;/a>&lt;/p>
-&lt;h3 id="roscon-jp-2024">ROSCon JP 2024&lt;/h3>
-&lt;p>&lt;strong>&lt;a href="https://roscon.jp/2024/">ROSCon JP 2024&lt;/a>&lt;/strong> が2024年9月25日(水)に東京で開催され、箱庭WGのメンバが発表を行いました。&lt;/p>
-&lt;h4 id="ドローンpx4をデジタルツインへと導く箱庭技術">ドローン／PX4をデジタルツインへと導く箱庭技術&lt;/h4>
-&lt;ul>
-&lt;li>動画 (Vimeo)&lt;/li>
-&lt;/ul>
-
-&lt;iframe src="https://player.vimeo.com/video/1029114843?h=1e3b03e43c" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>&lt;/iframe>
-
-
-&lt;ul>
-&lt;li>
-&lt;p>発表資料 (Docswell)
- 
-&lt;script async class="docswell-embed" src="https://www.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="https://www.docswell.com/slide/5V11QX/embed" data-aspect="0.5625">&lt;/script>&lt;div class="docswell-link">&lt;a href="https://www.docswell.com/s/kanetugu2015/5V11QX-ROSConJP2024-hakoniwa">ROSConJP2024-hakoniwa by @kanetugu2015&lt;/a>&lt;/div>
 
 &lt;/p></description></item><item><title>2023年</title><link>https://toppers.github.io/hakoniwa/technical-links/2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/technical-links/2023/</guid><description>&lt;h3 id="si2023">SI2023&lt;/h3>
 &lt;p>&lt;strong>&lt;a href="https://sice-si.org/si2023/">SI2023(第24回計測自動制御学会システムインテグレーション部門講演会)&lt;/a>&lt;/strong> が2023年12月14日(木)-16日(土)に開催され、箱庭WGのメンバが発表を行いました。&lt;/p>
@@ -174,9 +176,9 @@ ROSCon JPは、ロボット開発プラットフォームであるROS（Robot Op
 &lt;li>高瀬英希（京都大学／JSTさきがけ）, 細合晋太郎（チェンジビジョン）, 高田光隆（名古屋大学）, 庭野正義（アイコムシステック）, 辻悠斗・森崇（永和システムマネジメント）&lt;/li>
 &lt;li>情報処理学会研究報告組込みシステム（EMB）, Vol. 2020-EMB-55, No. 3, pp. 1-7 (2020).&lt;/li>
 &lt;li>概要：IoTの新たな時代を迎え，開発現場では様々な機器が絡んだ複雑なシステムと向き合う必要がある．我々は，このようなシステムを効率的にシミュレーションできる環境である「箱庭」の研究開発の構想に取り組んでいる．本環境では，IoT システムの全体像を机上で仮想化できるようにして，多様な領域からの技術者が集まって構築される IoT システムの振る舞いや問題経路を，各自の開発対象や興味から多様に観察できるようにする．本稿では，これまで我々が検討を進めてきた「箱庭」の狙いや基本構想を紹介する．その後，これらを実証する応用事例として開発を進めているプロトタイプについて共有する．最後に，単体ロボットを題材としたプロトタイプの開発状況を紹介し，その技術的有意点を議論する．&lt;/li>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/IPSJ-EMB20055003.pdf">発表論文&lt;/a> / &lt;a href="https://ipsj.ixsq.nii.ac.jp/ej/index.php?active_action=repository_view_main_item_detail&amp;page_id=13&amp;block_id=8&amp;item_id=208717&amp;item_no=1">情報処理学会 電子図書館&lt;/a>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/IPSJ-EMB20055003.pdf">発表論文&lt;/a> / &lt;a href="https://ipsj.ixsq.nii.ac.jp/ej/index.php?active_action=repository_view_main_item_detail&amp;amp;page_id=13&amp;amp;block_id=8&amp;amp;item_id=208717&amp;amp;item_no=1">情報処理学会 電子図書館&lt;/a>
 &lt;ul>
-&lt;li>本論文PDFファイルの二次利用にあたっては&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/2020/#著作権に係る注意事項">著作権に係る注意事項&lt;/a>をご確認ください。&lt;/li>
+&lt;li>本論文PDFファイルの二次利用にあたっては&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/2020/#%e8%91%97%e4%bd%9c%e6%a8%a9%e3%81%ab%e4%bf%82%e3%82%8b%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a0%85">著作権に係る注意事項&lt;/a>をご確認ください。&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/IPSJ-EMB55-slide.pdf">発表資料 (PDFファイル)

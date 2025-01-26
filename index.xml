@@ -1,20 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>箱庭</title><link>https://toppers.github.io/hakoniwa/</link><description>Recent content on 箱庭</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sat, 14 May 2022 13:26:38 +0900</lastBuildDate><atom:link href="https://toppers.github.io/hakoniwa/index.xml" rel="self" type="application/rss+xml"/><item><title>#1</title><link>https://toppers.github.io/hakoniwa/tutorial-party/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/1/</guid><description>&lt;h3 id="1-rdbox-解体新書-iotでこんなんできまっせ">#1 RDBOX 解体新書① 〜IoTでこんなんできまっせ！〜&lt;/h3>
-&lt;pre tabindex="0">&lt;code>箱庭では初！シンギュラリティを支えるIT基盤こと「RDBOX」のイベントを開催します．
-
-ロボットって導入ハードル高いですよね！？ということで、まずは身近なIoT機器を想定して遊んでいきましょう！仮想ネットワークや各種認証認可技術を使った高度なシステム構成も、RDBOXがあればイントラで気軽にRUN！
-
-athrillとの組み合わせで、本格的な組み込みIoT機器開発のお役にも立てるはず！？
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>開催日：2022/12/13(火)&lt;/li>
-&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/267822/">https://hakoniwa.connpass.com/event/267822/&lt;/a>&lt;/li>
-&lt;li>担当： &lt;a href="https://twitter.com/fudekunJP">@fudekunJP&lt;/a> さん&lt;/li>
-&lt;li>関連情報：
-&lt;ul>
-&lt;li>&lt;a href="https://rdbox-intec.github.io/homepage_jp/">RDBOX紹介ページ&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/1/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #1</title><link>https://toppers.github.io/hakoniwa/introduction-party/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/1/</guid><description>&lt;h3 id="入門会-1-まずは箱庭ってなに">入門会 #1 まずは箱庭ってなに？？&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>箱庭</title><link>https://toppers.github.io/hakoniwa/</link><description>Recent content on 箱庭</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sat, 14 May 2022 13:26:38 +0900</lastBuildDate><atom:link href="https://toppers.github.io/hakoniwa/index.xml" rel="self" type="application/rss+xml"/><item><title>入門会 #1</title><link>https://toppers.github.io/hakoniwa/introduction-party/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/1/</guid><description>&lt;h3 id="入門会-1-まずは箱庭ってなに">入門会 #1 まずは箱庭ってなに？？&lt;/h3>
 &lt;pre tabindex="0">&lt;code>「箱庭？」という人向けに、下の情報を紹介します。
 - 箱庭とは何か
 - 箱庭の構想
@@ -34,24 +18,7 @@ athrillとの組み合わせで、本格的な組み込みIoT機器開発のお�
 
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/1/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#2</title><link>https://toppers.github.io/hakoniwa/tutorial-party/2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/2/</guid><description>&lt;h3 id="2-箱庭でロボットの強化学習にトライ">#2 箱庭でロボットの強化学習にトライ&lt;/h3>
-&lt;pre tabindex="0">&lt;code>箱庭WGでは，ただいま絶賛大hot!! なトピックとして，ロボットの強化学習のための仮想環境の構築にトライしています．
-まだできたてホヤホヤですが，どこよりも早く！この開発の最新状況をご紹介します．
-
-そもそも箱庭ってなんだっけ？の方もぜひご参加ください．
-これが育っていくとどんな未来が拡がるのか，みなさんで妄想してみませんか？？
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>開催日：2023/02/18(土)&lt;/li>
-&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/275029/">https://hakoniwa.connpass.com/event/275029/&lt;/a>&lt;/li>
-&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
-&lt;li>関連情報：
-&lt;ul>
-&lt;li>&lt;a href="https://twitter.com/kanetugu2020/status/1618538671933882369">Tweetによるデモ動画&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://qiita.com/kanetugu2018/items/ee9b2bf0596a35e42b03">Qiita記事（100LGTMを突破！）： Unity + Python + 箱庭でロボットを強化学習させてみよう！&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/2/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #2</title><link>https://toppers.github.io/hakoniwa/introduction-party/2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/2/</guid><description>&lt;h3 id="入門会-2-アーキテクチャを理解する">入門会 #2 アーキテクチャを理解する&lt;/h3>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/1/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #2</title><link>https://toppers.github.io/hakoniwa/introduction-party/2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/2/</guid><description>&lt;h3 id="入門会-2-アーキテクチャを理解する">入門会 #2 アーキテクチャを理解する&lt;/h3>
 &lt;pre tabindex="0">&lt;code>箱庭の全体設計情報を整理します。
 
 - アーキテクチャ
@@ -74,32 +41,7 @@ athrillとの組み合わせで、本格的な組み込みIoT機器開発のお�
 
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/2/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#3</title><link>https://toppers.github.io/hakoniwa/tutorial-party/3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/3/</guid><description>&lt;h3 id="3-箱庭とunityで組み立てるオレオレロボットのはじめかた">#3 箱庭とUnityで組み立てるオレオレロボットのはじめかた&lt;/h3>
-&lt;pre tabindex="0">&lt;code>今回は初心に戻って，Unity上でのロボットを作る方法と箱庭との繋ぎ方を１から解説します． この会に参加すれば自分だけのオリジナルロボットが作れるようになるかもっ？
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>開催日：2023/04/17(月)&lt;/li>
-&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/279508/">https://hakoniwa.connpass.com/event/279508/&lt;/a>&lt;/li>
-&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
-&lt;li>関連情報：
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/tmori/unity-tutorial">ハンズオンの事前準備方法の案内&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/connpass_hakoniwa_tutorial_3.pdf">スライド資料 (PDFファイル)
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/connpass_hakoniwa_tutorial_3.png " border="1" width="400" />
-&lt;/figure>
-&lt;/a>&lt;/li>
-&lt;li>動画 (YouTube)&lt;br>
-
-
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/QAd4jFCkiBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
-
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/3/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #3</title><link>https://toppers.github.io/hakoniwa/introduction-party/3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/3/</guid><description>&lt;h3 id="入門会-3-アセット同士が通信する仕組み">入門会 #3 アセット同士が通信する仕組み&lt;/h3>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/2/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #3</title><link>https://toppers.github.io/hakoniwa/introduction-party/3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/3/</guid><description>&lt;h3 id="入門会-3-アセット同士が通信する仕組み">入門会 #3 アセット同士が通信する仕組み&lt;/h3>
 &lt;pre tabindex="0">&lt;code>箱庭アセット間の通信データであるPDUの情報を整理します．
 
 - 箱庭のPDU(Protocol Data Unit)とは何か
@@ -124,29 +66,7 @@ athrillとの組み合わせで、本格的な組み込みIoT機器開発のお�
 
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/3/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#4</title><link>https://toppers.github.io/hakoniwa/tutorial-party/4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/4/</guid><description>&lt;h3 id="4-箱庭とunityですすめるオレオレロボットの動かしかた">#4 箱庭とUnityですすめるオレオレロボットの動かしかた&lt;/h3>
-&lt;pre tabindex="0">&lt;code>前回のチュートリアル#3の続編です．
-Unity上でいちから作ったロボットを箱庭に繋いで，その動作の制御・シミュレーションを行う方法をイチから解説します．
-この会に参加すれば自分だけのオリジナルロボットが箱庭で動かせるようになるかも？
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>開催日：2023/05/08(月)&lt;/li>
-&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/281931/">https://hakoniwa.connpass.com/event/281931/&lt;/a>&lt;/li>
-&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/connpass_hakoniwa_tutorial_4.pdf">スライド資料 (PDFファイル)
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/connpass_hakoniwa_tutorial_4.png " border="1" width="400" />
-&lt;/figure>
-&lt;/a>&lt;/li>
-&lt;li>動画 (YouTube)&lt;br>
-
-
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/E7ncMLElKRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
-
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/4/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #4</title><link>https://toppers.github.io/hakoniwa/introduction-party/4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/4/</guid><description>&lt;h3 id="入門会-4-unityを箱庭視点で使ってみる">入門会 #4 Unityを箱庭視点で使ってみる&lt;/h3>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/3/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #4</title><link>https://toppers.github.io/hakoniwa/introduction-party/4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/4/</guid><description>&lt;h3 id="入門会-4-unityを箱庭視点で使ってみる">入門会 #4 Unityを箱庭視点で使ってみる&lt;/h3>
 &lt;pre tabindex="0">&lt;code>箱庭のUnityを利用する上で，Unityの基本的な使い方について情報を整理します。
 
 - Unityとは何か
@@ -169,35 +89,7 @@ Unity上でいちから作ったロボットを箱庭に繋いで，その動作
 
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/4/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#5</title><link>https://toppers.github.io/hakoniwa/tutorial-party/5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/5/</guid><description>&lt;h3 id="5-組込みやさんが考えるコモングラウンドってなんなん">#5 組込みやさんが考えるコモングラウンド！！ってなんなん？&lt;/h3>
-&lt;pre tabindex="0">&lt;code>「コモングラウンド（共有基盤）」とは，「ヒトとロボットが共通認識を持つ未来社会をつくる」ことを掲げた考え方です． 東京大学生産技術研究所特任教授，建築家（noiz / gluon）の豊田啓介先生が推進している「コモングラウンドリビングラボ」という団体が，この考え方を次世代都市の空間情報プラットフォームとして実際に社会実装することに取り組んでいます．
-
-- コモングラウンドリビングラボ： https://www.cgll.osaka
-- 豊田先生がコモングラウンドを語っている動画： https://www.youtube.com/watch?v=AroDQWw26IA
-
-この考えに共感し，JASA技術本部では「コモングラウンド委員会」が立ち上がるそうです！6月の「箱庭茶話会」でも話題に挙がって盛り上がり，箱庭WGメンバも「デジタルツインのその先だ！」っと興味津々になっています:D
-
-でも，この「コモングラウンド」ってなんなん？？
-委員長としてコモングラウンド委員会を立ち上げるy-kuniiさんに，組込みやさんとしてのアツい思いを語っていただきます！
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>開催日：2023/07/20(木)&lt;/li>
-&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/287863/">https://hakoniwa.connpass.com/event/287863/&lt;/a>&lt;/li>
-&lt;li>担当： y-kuniiさん&lt;/li>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/connpass_hakoniwa_tutorial_5.pdf">スライド資料 (PDFファイル)
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/connpass_hakoniwa_tutorial_5.png " border="1" width="400" />
-&lt;/figure>
-&lt;/a>&lt;/li>
-&lt;li>動画 (YouTube)&lt;br>
-
-
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/PUIiGdFVALw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
-
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/5/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #5</title><link>https://toppers.github.io/hakoniwa/introduction-party/5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/5/</guid><description>&lt;h3 id="入門会-5-unityを箱庭アセットとして利用する">入門会 #5 Unityを箱庭アセットとして利用する&lt;/h3>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/4/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #5</title><link>https://toppers.github.io/hakoniwa/introduction-party/5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/5/</guid><description>&lt;h3 id="入門会-5-unityを箱庭アセットとして利用する">入門会 #5 Unityを箱庭アセットとして利用する&lt;/h3>
 &lt;pre tabindex="0">&lt;code>Unityを箱庭アセットとして利用するための情報を整理します．
 
 - ロボットを動かすためのUnityの構造
@@ -220,25 +112,7 @@ Unity上でいちから作ったロボットを箱庭に繋いで，その動作
 
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/5/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#6</title><link>https://toppers.github.io/hakoniwa/tutorial-party/6/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/6/</guid><description>&lt;h3 id="6-swestとrsjで発表してきたネタを再演する会">#6 SWESTとRSJで発表してきたネタを再演する会&lt;/h3>
-&lt;pre tabindex="0">&lt;code>この夏に箱庭の研究開発の成果を発表してきました！
-- SWEST25 『複数ロボットシミュレーションのSTAMP/STPAでの活用』
-- RSJ2023 『オープンソース仮想シミュレーション環境「箱庭」による強化学習への対応の検討』
-
-今回のチュートリアル会では，これらの発表内容を箱庭ラバーズな皆さまに再演いたしました！
-学会では発表できなかった内容も交えて？時間無制限一本勝負？で，ざっくばらんにここだけの話しを聞けるかも？？
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>開催日：2023/09/20(水)&lt;/li>
-&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/294089/">https://hakoniwa.connpass.com/event/294089/&lt;/a>&lt;/li>
-&lt;li>担当： kuboakiさん, s-hosoaiさん&lt;/li>
-&lt;li>動画 (YouTube)&lt;br>
-
-
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/bR2lI-M63Yk?si=x2syO50uKpfYEecA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
-
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/6/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #6</title><link>https://toppers.github.io/hakoniwa/introduction-party/6/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/6/</guid><description>&lt;h3 id="入門会-6-unityの箱庭アセットを作る">入門会 #6 Unityの箱庭アセットを作る&lt;/h3>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/5/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #6</title><link>https://toppers.github.io/hakoniwa/introduction-party/6/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/6/</guid><description>&lt;h3 id="入門会-6-unityの箱庭アセットを作る">入門会 #6 Unityの箱庭アセットを作る&lt;/h3>
 &lt;pre tabindex="0">&lt;code>Unityの箱庭アセットを作るための情報を解説します．
 
 - 前提とする環境
@@ -262,36 +136,7 @@ Unity上でいちから作ったロボットを箱庭に繋いで，その動作
 
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/6/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#7</title><link>https://toppers.github.io/hakoniwa/tutorial-party/7/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/7/</guid><description>&lt;h3 id="7-rosconで世界デビューしてきた会">#7 ROSConで世界デビューしてきた！会&lt;/h3>
-&lt;pre tabindex="0">&lt;code>なんと箱庭が世界デビュー！！🎉
-ROSCon 2023 というROSの世界的な開発者会議に講演提案が採択されて，発表してきまっす！！
-
-Title: An Integrated Distributed Simulation Environment weaving by Hakoniwa and mROS 2
-Abstract: In the era of IoT/Cloud Robotics, the need for collaborative development among engineers from various specialized fields, such as embedded systems, control, and AI, has become increasingly crucial. However, it is not easy to integrate each engineer&amp;#39;s diverse technical fields, development languages, and environments. In this talk, we show a successful implementation of an integrated distributed simulation environment using &amp;#34;Hakoniwa&amp;#34; and &amp;#34;mROS 2&amp;#34;. This environment allows engineers to leverage their familiar development setups while working together, enabling seamless collaboration in robotics development.
-今回のチュートリアル会では，この発表内容を，もちろん日本語で！再演いたしまっす！
-この発表の成果談だけでなく，ROSConで他にどんな発表があったの？ていうか現地で参加してみてどうだったん？？てきな土産話しも聞けるかも？？
-
-なお発表中では，ROSCon JP 2023でご披露した「リアルとバーチャルの融合！」的なコチラのデモも紹介予定です．このお話しも深掘りして披露する予定です（たぶん
-
-箱庭ラボ ブログ：ROSCon JP 2023で「リアルとバーチャルを融合する技術・箱庭 &amp;amp; mROS 2」を紹介してきました
-https://hakoniwa-lab.net/2023/09/27/blog-rosconjp2023/
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>開催日：2023/10/25(水)&lt;/li>
-&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/297032/">https://hakoniwa.connpass.com/event/297032/&lt;/a>&lt;/li>
-&lt;li>担当： takasehideki&lt;/li>
-&lt;li>動画 (YouTube)&lt;br>
-
-
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/TqlPygZAzhs?si=gCnZ0cUJ79O8Qope" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
-
-&lt;/li>
-&lt;li>スライド資料 (SpeakerDeck)&lt;br>
-
-&lt;iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/f9fc711a518a46d7983f8f6867f83eb9" title="An Integrated Distributed Simulation Environment weaving by Hakoniwa and mROS 2" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777">&lt;/iframe>
-
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/7/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #7</title><link>https://toppers.github.io/hakoniwa/introduction-party/7/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/7/</guid><description>&lt;h3 id="入門会-7-pythonで箱庭アセットを作る">入門会 #7 Pythonで箱庭アセットを作る&lt;/h3>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/6/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #7</title><link>https://toppers.github.io/hakoniwa/introduction-party/7/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/7/</guid><description>&lt;h3 id="入門会-7-pythonで箱庭アセットを作る">入門会 #7 Pythonで箱庭アセットを作る&lt;/h3>
 &lt;pre tabindex="0">&lt;code>Pythonで箱庭アセット作るための情報を解説します．
 
 - 前提とする環境
@@ -316,33 +161,7 @@ https://hakoniwa-lab.net/2023/09/27/blog-rosconjp2023/
 
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/7/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#8</title><link>https://toppers.github.io/hakoniwa/tutorial-party/8/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/8/</guid><description>&lt;h3 id="8-なんなら宇宙に飛び出すぜ会">#8 なんなら宇宙に飛び出すぜ！会&lt;/h3>
-&lt;pre tabindex="0">&lt;code>なんなら箱庭は宇宙に飛び出しまっす！！🚀
-10月17日(火)-20日(金)に富山で開催された第67回宇宙科学技術連合講演会（通称 宇科連） にて，次の発表を行いました！！
-
-- オープンソース仮想環境「箱庭」を用いた搭載ソフトウェアへの適用
-- ○高田 光隆(名大), 細合 晋太郎, 高瀬 英希(東大), 福田 竜也(インテック), 久保秋 真(チェンジビジョン), 森 崇(永和システムマネジメント)
-- 概要(英文のみ): When using simulations in flight software development, most cases are created on a project-by-project basis or use the environment provided by the platform. We have been researching and developing “Hakoniwa,” a virtual simulation environment for the IoT / Cloud Robotics area. We present a case study of its use in education and its application to SpaceWireOS, one of the onboard software platforms.
-
-今回のチュートリアル会では，この発表内容を，箱庭ラバーズの皆さまに再演いたしまっす！
-学会では発表できなかった内容も交えて？箱庭WGが抱く宇宙への壮大なる野望も含めて？時間無制限一本勝負！でお届けします．ざっくばらんにここだけの話しを聞けるかも？？ 宇宙で箱庭が適用できないかなと思った経緯などを語って一緒に箱庭を考える仲間が増えてほしいなー
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>開催日：2023/11/08(水)&lt;/li>
-&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/300492/">https://hakoniwa.connpass.com/event/300492/&lt;/a>&lt;/li>
-&lt;li>担当： mitsu48さん&lt;/li>
-&lt;li>動画 (YouTube)&lt;br>
-
-
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/re9nRLNtI-M?si=7bztjDfPIb2AT1qv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
-
-&lt;/li>
-&lt;li>スライド資料 (SlideShare)&lt;br>
-
-&lt;iframe src="//www.slideshare.net/slideshow/embed_code/key/o09ysTtYz8Udd" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> &lt;/iframe> &lt;div style="margin-bottom:5px"> &lt;strong> &lt;a href="//www.slideshare.net/MitsutakaTakada/hakoniwaspaceukaren" title="hakoniwa-space-ukaren" target="_blank">hakoniwa-space-ukaren&lt;/a> &lt;/strong> from &lt;strong>&lt;a href="//www.slideshare.net/MitsutakaTakada" target="_blank">Center for Embedded Computing Systems, Nagoya Univ.&lt;/a>&lt;/strong> &lt;/div>
-
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/8/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #8</title><link>https://toppers.github.io/hakoniwa/introduction-party/8/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/8/</guid><description>&lt;h3 id="入門会-8-ドローンシミュレータのアーキテクチャを理解する">入門会 #8 ドローンシミュレータのアーキテクチャを理解する&lt;/h3>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/7/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #8</title><link>https://toppers.github.io/hakoniwa/introduction-party/8/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/8/</guid><description>&lt;h3 id="入門会-8-ドローンシミュレータのアーキテクチャを理解する">入門会 #8 ドローンシミュレータのアーキテクチャを理解する&lt;/h3>
 &lt;pre tabindex="0">&lt;code>箱庭ドローンシミュレータのアーキテクチャ情報を以下の観点で解説します．
 
 - 箱庭ドローン・アプリケーション構成
@@ -369,29 +188,7 @@ https://hakoniwa-lab.net/2023/09/27/blog-rosconjp2023/
 
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/8/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#9</title><link>https://toppers.github.io/hakoniwa/tutorial-party/9/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/9/</guid><description>&lt;h3 id="9-箱庭ドローンシミュレータを徹底解剖する会">#9 箱庭ドローンシミュレータを徹底解剖！する会&lt;/h3>
-&lt;pre tabindex="0">&lt;code>今回のチュートリアル会では、オープンソースを使ったドローンシミュレータの作り方を徹底解説します！ドローンの飛行の仕組みから始めて、必要なソフトウェアや開発環境/ツール類などを一巡りします。フライトコントローラ向けのファームウェアとしては、PX4というオープンソースを使います。物理的な機体の動きの再現は、物理式をベースにイチからC言語でコーディングします。機体の動きのビジュアライズには、個人向けにフリーで利用できるUnityやUnreal Engineを使います。そして、これらの要素技術を組み合わせる仕組みには、箱庭というオープンソースを使います。
-&lt;/code>&lt;/pre>&lt;ul>
-&lt;li>開催日：2024/2/15(木)&lt;/li>
-&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/308790/">https://hakoniwa.connpass.com/event/308790/&lt;/a>&lt;/li>
-&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん、hiranabe さん&lt;/li>
-&lt;li>動画 (YouTube)&lt;br>
-
-
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Xlg_FIMfOfs?si=qYo9wLcz7xCCWqlZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
-
-&lt;/li>
-&lt;li>スライド資料 (SpeakerDeck)&lt;br>
-
-&lt;iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/f7dc312e2525473ea5f910a09d2bb672?slide=1" title="Mastering Drone Simulation with Hakoniwa: Step-by-Step Guide" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777">&lt;/iframe>
-
-&lt;/li>
-&lt;/ul>
-
-&lt;iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/a50db5a415bf4d4e9b3ebc21274b9d49?slide=1" title="Math, Physics, and Dynamics of Drone in Hakoniwa" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 395;" data-ratio="1.4177215189873418">&lt;/iframe>
-
-
-&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/9/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #9</title><link>https://toppers.github.io/hakoniwa/introduction-party/9/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/9/</guid><description>&lt;h3 id="入門会-9-ドローンシミュレータをpythonで制御する">入門会 #9 ドローンシミュレータをPythonで制御する&lt;/h3>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/introduction-party/8/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>入門会 #9</title><link>https://toppers.github.io/hakoniwa/introduction-party/9/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/9/</guid><description>&lt;h3 id="入門会-9-ドローンシミュレータをpythonで制御する">入門会 #9 ドローンシミュレータをPythonで制御する&lt;/h3>
 &lt;pre tabindex="0">&lt;code>箱庭ドローンを操作するPythonプログラムの作成方法を解説します。
 
 - 箱庭ドローン・Python API 操作のユースケース説明
@@ -783,8 +580,6 @@ Members of Hokoniwa WG mainly develop it. It enables debugging and functional ve
 &lt;p>Our current main activity is to create &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/en/prototypes">prototype models&lt;/a> to realize the concept and to examine the technology.
 All of these R&amp;amp;D results are released as OSS.
 We desire continuous maturation of the core technologies and expansion of the various functions of Hakoniwa by sharing each prototype model and receiving feedback on it.&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
 &lt;p>The Hakoniwa Project is engaged in research and development, first constructing and disseminating educational packages and then expanding into product development.
 We have a big vision, but to be honest, we are somewhat short on the workforce.
 We are looking for various technical personnel (especially those with knowledge of cloud technologies and visualization asset development) to help us grow Hakoniwa.&lt;/p></description></item><item><title>ロードマップ</title><link>https://toppers.github.io/hakoniwa/docs/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/docs/roadmap/</guid><description>&lt;p>箱庭は &lt;strong>「でっかく語って少しずつ育てて」&lt;/strong> います．&lt;/p>
@@ -1412,7 +1207,210 @@ TOPPERS/SESSAMEパビリオンにおいて、箱庭WGの活動紹介をパネル
 &lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/technical-links/2018/#top">このページの先頭に戻る&lt;/a>&lt;/p>
 &lt;h3 id="著作権に係る注意事項">著作権に係る注意事項&lt;/h3>
 &lt;p>本ページに掲載されている情報処理学会に投稿された論文について、著作権は情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「情報処理学会倫理綱領」に従うことをお願いいたします。&lt;a href="http://www.ipsj.or.jp/copyright/ronbun/copyright.html">情報処理学会著作権規程&lt;/a>もご参照ください。&lt;/p>
-&lt;p>The copyright of papers published from the Information Processing Society of Japan (IPSJ) and attached in this page is retained by IPSJ. This material is published on this web site with the agreement of the author(s) and the IPSJ. Please be complied with Copyright Law of Japan and the Code of Ethics of the IPSJ if any users wish to reproduce, make derivative work, distribute or make available to the public any part or whole thereof.&lt;/p></description></item><item><title>Repository List</title><link>https://toppers.github.io/hakoniwa/en/repositories/</link><pubDate>Wed, 26 Aug 2020 15:09:42 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/en/repositories/</guid><description>&lt;h3 id="hakoniwa">Hakoniwa&lt;/h3>
+&lt;p>The copyright of papers published from the Information Processing Society of Japan (IPSJ) and attached in this page is retained by IPSJ. This material is published on this web site with the agreement of the author(s) and the IPSJ. Please be complied with Copyright Law of Japan and the Code of Ethics of the IPSJ if any users wish to reproduce, make derivative work, distribute or make available to the public any part or whole thereof.&lt;/p></description></item><item><title>#9</title><link>https://toppers.github.io/hakoniwa/tutorial-party/9/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/9/</guid><description>&lt;h3 id="9-箱庭ドローンシミュレータを徹底解剖する会">#9 箱庭ドローンシミュレータを徹底解剖！する会&lt;/h3>
+&lt;pre tabindex="0">&lt;code>今回のチュートリアル会では、オープンソースを使ったドローンシミュレータの作り方を徹底解説します！ドローンの飛行の仕組みから始めて、必要なソフトウェアや開発環境/ツール類などを一巡りします。フライトコントローラ向けのファームウェアとしては、PX4というオープンソースを使います。物理的な機体の動きの再現は、物理式をベースにイチからC言語でコーディングします。機体の動きのビジュアライズには、個人向けにフリーで利用できるUnityやUnreal Engineを使います。そして、これらの要素技術を組み合わせる仕組みには、箱庭というオープンソースを使います。
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2024/2/15(木)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/308790/">https://hakoniwa.connpass.com/event/308790/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん、hiranabe さん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Xlg_FIMfOfs?si=qYo9wLcz7xCCWqlZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (SpeakerDeck)&lt;br>
+
+&lt;iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/f7dc312e2525473ea5f910a09d2bb672?slide=1" title="Mastering Drone Simulation with Hakoniwa: Step-by-Step Guide" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777">&lt;/iframe>
+
+&lt;/li>
+&lt;/ul>
+
+&lt;iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/a50db5a415bf4d4e9b3ebc21274b9d49?slide=1" title="Math, Physics, and Dynamics of Drone in Hakoniwa" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 395;" data-ratio="1.4177215189873418">&lt;/iframe>
+
+
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/9/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#8</title><link>https://toppers.github.io/hakoniwa/tutorial-party/8/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/8/</guid><description>&lt;h3 id="8-なんなら宇宙に飛び出すぜ会">#8 なんなら宇宙に飛び出すぜ！会&lt;/h3>
+&lt;pre tabindex="0">&lt;code>なんなら箱庭は宇宙に飛び出しまっす！！🚀
+10月17日(火)-20日(金)に富山で開催された第67回宇宙科学技術連合講演会（通称 宇科連） にて，次の発表を行いました！！
+
+- オープンソース仮想環境「箱庭」を用いた搭載ソフトウェアへの適用
+- ○高田 光隆(名大), 細合 晋太郎, 高瀬 英希(東大), 福田 竜也(インテック), 久保秋 真(チェンジビジョン), 森 崇(永和システムマネジメント)
+- 概要(英文のみ): When using simulations in flight software development, most cases are created on a project-by-project basis or use the environment provided by the platform. We have been researching and developing “Hakoniwa,” a virtual simulation environment for the IoT / Cloud Robotics area. We present a case study of its use in education and its application to SpaceWireOS, one of the onboard software platforms.
+
+今回のチュートリアル会では，この発表内容を，箱庭ラバーズの皆さまに再演いたしまっす！
+学会では発表できなかった内容も交えて？箱庭WGが抱く宇宙への壮大なる野望も含めて？時間無制限一本勝負！でお届けします．ざっくばらんにここだけの話しを聞けるかも？？ 宇宙で箱庭が適用できないかなと思った経緯などを語って一緒に箱庭を考える仲間が増えてほしいなー
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2023/11/08(水)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/300492/">https://hakoniwa.connpass.com/event/300492/&lt;/a>&lt;/li>
+&lt;li>担当： mitsu48さん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/re9nRLNtI-M?si=7bztjDfPIb2AT1qv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (SlideShare)&lt;br>
+
+&lt;iframe src="//www.slideshare.net/slideshow/embed_code/key/o09ysTtYz8Udd" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> &lt;/iframe> &lt;div style="margin-bottom:5px"> &lt;strong> &lt;a href="//www.slideshare.net/MitsutakaTakada/hakoniwaspaceukaren" title="hakoniwa-space-ukaren" target="_blank">hakoniwa-space-ukaren&lt;/a> &lt;/strong> from &lt;strong>&lt;a href="//www.slideshare.net/MitsutakaTakada" target="_blank">Center for Embedded Computing Systems, Nagoya Univ.&lt;/a>&lt;/strong> &lt;/div>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/8/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#7</title><link>https://toppers.github.io/hakoniwa/tutorial-party/7/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/7/</guid><description>&lt;h3 id="7-rosconで世界デビューしてきた会">#7 ROSConで世界デビューしてきた！会&lt;/h3>
+&lt;pre tabindex="0">&lt;code>なんと箱庭が世界デビュー！！🎉
+ROSCon 2023 というROSの世界的な開発者会議に講演提案が採択されて，発表してきまっす！！
+
+Title: An Integrated Distributed Simulation Environment weaving by Hakoniwa and mROS 2
+Abstract: In the era of IoT/Cloud Robotics, the need for collaborative development among engineers from various specialized fields, such as embedded systems, control, and AI, has become increasingly crucial. However, it is not easy to integrate each engineer&amp;#39;s diverse technical fields, development languages, and environments. In this talk, we show a successful implementation of an integrated distributed simulation environment using &amp;#34;Hakoniwa&amp;#34; and &amp;#34;mROS 2&amp;#34;. This environment allows engineers to leverage their familiar development setups while working together, enabling seamless collaboration in robotics development.
+今回のチュートリアル会では，この発表内容を，もちろん日本語で！再演いたしまっす！
+この発表の成果談だけでなく，ROSConで他にどんな発表があったの？ていうか現地で参加してみてどうだったん？？てきな土産話しも聞けるかも？？
+
+なお発表中では，ROSCon JP 2023でご披露した「リアルとバーチャルの融合！」的なコチラのデモも紹介予定です．このお話しも深掘りして披露する予定です（たぶん
+
+箱庭ラボ ブログ：ROSCon JP 2023で「リアルとバーチャルを融合する技術・箱庭 &amp;amp; mROS 2」を紹介してきました
+https://hakoniwa-lab.net/2023/09/27/blog-rosconjp2023/
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2023/10/25(水)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/297032/">https://hakoniwa.connpass.com/event/297032/&lt;/a>&lt;/li>
+&lt;li>担当： takasehideki&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/TqlPygZAzhs?si=gCnZ0cUJ79O8Qope" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;li>スライド資料 (SpeakerDeck)&lt;br>
+
+&lt;iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/f9fc711a518a46d7983f8f6867f83eb9" title="An Integrated Distributed Simulation Environment weaving by Hakoniwa and mROS 2" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777">&lt;/iframe>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/7/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#6</title><link>https://toppers.github.io/hakoniwa/tutorial-party/6/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/6/</guid><description>&lt;h3 id="6-swestとrsjで発表してきたネタを再演する会">#6 SWESTとRSJで発表してきたネタを再演する会&lt;/h3>
+&lt;pre tabindex="0">&lt;code>この夏に箱庭の研究開発の成果を発表してきました！
+- SWEST25 『複数ロボットシミュレーションのSTAMP/STPAでの活用』
+- RSJ2023 『オープンソース仮想シミュレーション環境「箱庭」による強化学習への対応の検討』
+
+今回のチュートリアル会では，これらの発表内容を箱庭ラバーズな皆さまに再演いたしました！
+学会では発表できなかった内容も交えて？時間無制限一本勝負？で，ざっくばらんにここだけの話しを聞けるかも？？
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2023/09/20(水)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/294089/">https://hakoniwa.connpass.com/event/294089/&lt;/a>&lt;/li>
+&lt;li>担当： kuboakiさん, s-hosoaiさん&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/bR2lI-M63Yk?si=x2syO50uKpfYEecA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/6/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#5</title><link>https://toppers.github.io/hakoniwa/tutorial-party/5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/5/</guid><description>&lt;h3 id="5-組込みやさんが考えるコモングラウンドってなんなん">#5 組込みやさんが考えるコモングラウンド！！ってなんなん？&lt;/h3>
+&lt;pre tabindex="0">&lt;code>「コモングラウンド（共有基盤）」とは，「ヒトとロボットが共通認識を持つ未来社会をつくる」ことを掲げた考え方です． 東京大学生産技術研究所特任教授，建築家（noiz / gluon）の豊田啓介先生が推進している「コモングラウンドリビングラボ」という団体が，この考え方を次世代都市の空間情報プラットフォームとして実際に社会実装することに取り組んでいます．
+
+- コモングラウンドリビングラボ： https://www.cgll.osaka
+- 豊田先生がコモングラウンドを語っている動画： https://www.youtube.com/watch?v=AroDQWw26IA
+
+この考えに共感し，JASA技術本部では「コモングラウンド委員会」が立ち上がるそうです！6月の「箱庭茶話会」でも話題に挙がって盛り上がり，箱庭WGメンバも「デジタルツインのその先だ！」っと興味津々になっています:D
+
+でも，この「コモングラウンド」ってなんなん？？
+委員長としてコモングラウンド委員会を立ち上げるy-kuniiさんに，組込みやさんとしてのアツい思いを語っていただきます！
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2023/07/20(木)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/287863/">https://hakoniwa.connpass.com/event/287863/&lt;/a>&lt;/li>
+&lt;li>担当： y-kuniiさん&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/connpass_hakoniwa_tutorial_5.pdf">スライド資料 (PDFファイル)
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/connpass_hakoniwa_tutorial_5.png " border="1" width="400" />
+&lt;/figure>
+&lt;/a>&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/PUIiGdFVALw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/5/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#4</title><link>https://toppers.github.io/hakoniwa/tutorial-party/4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/4/</guid><description>&lt;h3 id="4-箱庭とunityですすめるオレオレロボットの動かしかた">#4 箱庭とUnityですすめるオレオレロボットの動かしかた&lt;/h3>
+&lt;pre tabindex="0">&lt;code>前回のチュートリアル#3の続編です．
+Unity上でいちから作ったロボットを箱庭に繋いで，その動作の制御・シミュレーションを行う方法をイチから解説します．
+この会に参加すれば自分だけのオリジナルロボットが箱庭で動かせるようになるかも？
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2023/05/08(月)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/281931/">https://hakoniwa.connpass.com/event/281931/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/connpass_hakoniwa_tutorial_4.pdf">スライド資料 (PDFファイル)
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/connpass_hakoniwa_tutorial_4.png " border="1" width="400" />
+&lt;/figure>
+&lt;/a>&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/E7ncMLElKRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/4/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#3</title><link>https://toppers.github.io/hakoniwa/tutorial-party/3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/3/</guid><description>&lt;h3 id="3-箱庭とunityで組み立てるオレオレロボットのはじめかた">#3 箱庭とUnityで組み立てるオレオレロボットのはじめかた&lt;/h3>
+&lt;pre tabindex="0">&lt;code>今回は初心に戻って，Unity上でのロボットを作る方法と箱庭との繋ぎ方を１から解説します． この会に参加すれば自分だけのオリジナルロボットが作れるようになるかもっ？
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2023/04/17(月)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/279508/">https://hakoniwa.connpass.com/event/279508/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>関連情報：
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/tmori/unity-tutorial">ハンズオンの事前準備方法の案内&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/doc/connpass_hakoniwa_tutorial_3.pdf">スライド資料 (PDFファイル)
+
+
+&lt;figure>
+ &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/doc/connpass_hakoniwa_tutorial_3.png " border="1" width="400" />
+&lt;/figure>
+&lt;/a>&lt;/li>
+&lt;li>動画 (YouTube)&lt;br>
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/QAd4jFCkiBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>
+
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/3/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#2</title><link>https://toppers.github.io/hakoniwa/tutorial-party/2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/2/</guid><description>&lt;h3 id="2-箱庭でロボットの強化学習にトライ">#2 箱庭でロボットの強化学習にトライ&lt;/h3>
+&lt;pre tabindex="0">&lt;code>箱庭WGでは，ただいま絶賛大hot!! なトピックとして，ロボットの強化学習のための仮想環境の構築にトライしています．
+まだできたてホヤホヤですが，どこよりも早く！この開発の最新状況をご紹介します．
+
+そもそも箱庭ってなんだっけ？の方もぜひご参加ください．
+これが育っていくとどんな未来が拡がるのか，みなさんで妄想してみませんか？？
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2023/02/18(土)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/275029/">https://hakoniwa.connpass.com/event/275029/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/kanetugu2020">@kanetugu2020&lt;/a> さん&lt;/li>
+&lt;li>関連情報：
+&lt;ul>
+&lt;li>&lt;a href="https://twitter.com/kanetugu2020/status/1618538671933882369">Tweetによるデモ動画&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://qiita.com/kanetugu2018/items/ee9b2bf0596a35e42b03">Qiita記事（100LGTMを突破！）： Unity + Python + 箱庭でロボットを強化学習させてみよう！&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/2/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>#1</title><link>https://toppers.github.io/hakoniwa/tutorial-party/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/tutorial-party/1/</guid><description>&lt;h3 id="1-rdbox-解体新書-iotでこんなんできまっせ">#1 RDBOX 解体新書① 〜IoTでこんなんできまっせ！〜&lt;/h3>
+&lt;pre tabindex="0">&lt;code>箱庭では初！シンギュラリティを支えるIT基盤こと「RDBOX」のイベントを開催します．
+
+ロボットって導入ハードル高いですよね！？ということで、まずは身近なIoT機器を想定して遊んでいきましょう！仮想ネットワークや各種認証認可技術を使った高度なシステム構成も、RDBOXがあればイントラで気軽にRUN！
+
+athrillとの組み合わせで、本格的な組み込みIoT機器開発のお役にも立てるはず！？
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>開催日：2022/12/13(火)&lt;/li>
+&lt;li>connpassイベントページ &lt;a href="https://hakoniwa.connpass.com/event/267822/">https://hakoniwa.connpass.com/event/267822/&lt;/a>&lt;/li>
+&lt;li>担当： &lt;a href="https://twitter.com/fudekunJP">@fudekunJP&lt;/a> さん&lt;/li>
+&lt;li>関連情報：
+&lt;ul>
+&lt;li>&lt;a href="https://rdbox-intec.github.io/homepage_jp/">RDBOX紹介ページ&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/tutorial-party/1/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>Repository List</title><link>https://toppers.github.io/hakoniwa/en/repositories/</link><pubDate>Wed, 26 Aug 2020 15:09:42 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/en/repositories/</guid><description>&lt;h3 id="hakoniwa">Hakoniwa&lt;/h3>
 &lt;table>
  &lt;thead>
  &lt;tr>
@@ -2163,8 +2161,6 @@ Rgb_r,g,b には，カラーセンサで取得できる数値を表示してい�
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
 &lt;ul>
 &lt;li>箱庭WG主査の森崇を職務執行者として、2023年8月1日に&lt;a href="https://hakoniwa-lab.net/">合同会社箱庭ラボ&lt;/a>を設立しました。
 &lt;ul>
@@ -2175,8 +2171,6 @@ Rgb_r,g,b には，カラーセンサで取得できる数値を表示してい�
 &lt;li>モノづくりスペシャリストのための情報ポータル「&lt;a href="https://monoist.atmarkit.co.jp/">MONOist&lt;/a>」に連載記事を寄稿しています。&lt;br>
 &lt;strong>「&lt;a href="https://monoist.atmarkit.co.jp/mn/series/23683/">仮想環境を使ったクラウド時代の組み込み開発のススメ&lt;/a>」&lt;/strong> という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介しています。ぜひご覧ください。&lt;/li>
 &lt;/ul>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
 &lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/topics/#top">このページの先頭に戻る&lt;/a>&lt;/p></description></item><item><title>トピックス・イベント案内</title><link>https://toppers.github.io/hakoniwa/update/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/update/</guid><description>&lt;h3 id="2024年">2024年&lt;/h3>
 &lt;p>&lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/update/#top">このページの先頭に戻る&lt;/a>&lt;/p>
 &lt;h3 id="2023年">2023年&lt;/h3>

@@ -22,6 +22,16 @@ In the series titled "[Recommendations for Embedded Development in the Cloud Age
 -->
 
 ### What's New
+- 2025.3.11
+  - Release Updates
+    - [hakoniwa-drone-core v2.0.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v2.0.0) (2025.3.7)
+      - Sample application for PX4 integration (<_os name_>-aircraft_service_px4)
+      - Sample application for Ardupilot integration (<_os name_>-aircraft_service_ardupilot)
+      - Sample application for Hakoniwa drone (<_os name_>-drone_servce_rc)
+      - Hakoniwa Drone Pro C library (hako_service_c)
+    - [hakoniwa-drone-core v1.0.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v1.0.0) (2025.2.3)
+    - [hakoniwa-sim-csharp v1.0.0](https://github.com/toppers/hakoniwa-sim-csharp/releases/tag/v1.0.0) (2025.1.4)
+    - [hakoniwa-pdu-csharp v1.0.0](https://github.com/toppers/hakoniwa-pdu-csharp/releases/tag/v1.0.0) (2025.1.4)
 - 2024.12.19
   - Release Updates
     - [hakoniwa-px4sim v2.8.0](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.8.0) (2024.12.14)

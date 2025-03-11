@@ -21,6 +21,16 @@ draft = false
 [もっと見る](topics)
 
 ### 更新情報
+- 2025.3.11
+  - リポジトリの更新リリース情報
+    - [hakoniwa-drone-core v2.0.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v2.0.0) (2025.3.7)
+      - PX4 連携のサンプルアプリ公開(<_os名_>-aircraft_service_px4)
+      - Ardupilot 連携のサンプルアプリ公開(<_os名_>-aircraft_service_ardupilot)
+      - 箱庭ドローンのサンプルアプリ公開(<_os名_>-drone_servce_rc)
+      - 箱庭ドローンPro Cライブラリ公開(hako_service_c)
+    - [hakoniwa-drone-core v1.0.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v1.0.0) (2025.2.3)
+    - [hakoniwa-sim-csharp v1.0.0](https://github.com/toppers/hakoniwa-sim-csharp/releases/tag/v1.0.0) (2025.1.4)
+    - [hakoniwa-pdu-csharp v1.0.0](https://github.com/toppers/hakoniwa-pdu-csharp/releases/tag/v1.0.0) (2025.1.4)
 - 2024.12.19
   - リポジトリの更新リリース情報
     - [hakoniwa-px4sim v2.8.0](https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.8.0) (2024.12.14)

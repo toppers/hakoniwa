@@ -4,7 +4,7 @@
 &lt;h3 id="ros向け箱庭のシステム構成">ROS向け箱庭のシステム構成&lt;/h3>
 &lt;p>ros2simのプロジェクトでは、Unity上のTortleBot3(tb3)をROS2のアプリから制御するシミュレーションを行います。
 以下にWindows/WSL2でのシステム構成を示しています。大まかには制御対象であるUnity上のtb3とそれを制御するtb3ctrlがROSで通信しています。&lt;/p>
-&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/getting-started/ros2sim_overview.png" alt="ROS向け箱庭のシステム構成">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/img/getting-started/ros2sim_overview.png" alt="ROS向け箱庭のシステム構成">&lt;/p>
 &lt;h3 id="フォルダ構成">フォルダ構成&lt;/h3>
 &lt;p>githubからCloneしたプロジェクトのフォルダ構成は以下のようになっています。主に/ros2/workspace, /ros2/unityを扱えばよく、
 他のフォルダは本説明には含まれないため一旦無視してください。&lt;/p>
@@ -35,7 +35,7 @@ cloneしたすぐの状態では、すべてのアセットは揃っておらず
 &lt;li>&lt;code>(Terminal B)$ bash attach.bash&lt;/code> : Terminal Aで立ち上げたコンテナに入ります。&lt;/li>
 &lt;li>&lt;code>(Terminal B)# bash run.bash&lt;/code> : ロボットを制御するROSアプリのtb3ctrlを実行します。このプログラムのソースはworkspace/src/tb3/src/tb3ctrl.cppです。&lt;/li>
 &lt;/ul>
-&lt;h3 id="heading">&lt;/h3></description></item><item><title>制御プログラムの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/app-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/app-customize/</guid><description>&lt;h3 id="ソースコードの場所">ソースコードの場所&lt;/h3>
+&lt;h3>&lt;/h3></description></item><item><title>制御プログラムの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/app-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/app-customize/</guid><description>&lt;h3 id="ソースコードの場所">ソースコードの場所&lt;/h3>
 &lt;p>今回のサンプルのtb3の制御プログラムは、
 &lt;code>/ros2/workspace/src/tb3/src/tb3ctrl.cpp&lt;/code> に配置されています。
 詳細は実際のコードを見て頂くとして主要な部分を紹介していきます。ページの最後にコードの抜粋を示します。&lt;/p>

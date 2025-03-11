@@ -30,7 +30,7 @@ It crosses various technical domains as follows.&lt;/p>
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/back1.en.png " border="" width="600" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/docs/back1.en.png " border="" width="600" />
 &lt;/figure>
 
 &lt;p>However, we face the following challenges to realizing such an IoT system.&lt;/p></description></item><item><title>Concept</title><link>https://toppers.github.io/hakoniwa/en/docs/concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/concept/</guid><description>&lt;p>The concept of Hakoniwa is &lt;strong>&amp;ldquo;Put mixed things as you like, and try various concepts with ease !&amp;rdquo;&lt;/strong>&lt;/p>
@@ -38,7 +38,7 @@ It crosses various technical domains as follows.&lt;/p>
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/concept1.en.png " border="" width="700" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/docs/concept1.en.png " border="" width="700" />
 &lt;/figure>
 
 &lt;p>We envision a use scenario where engineers from diverse fields gather to develop IoT systems. &lt;br>
@@ -47,7 +47,7 @@ And, by just replacing the &amp;ldquo;assets&amp;rdquo; that are the system comp
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/aimat1.en.png " border="" width="700" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/docs/aimat1.en.png " border="" width="700" />
 &lt;/figure>
 
 &lt;p>Hakoniwa&amp;rsquo;s target is an information system with various devices connected by a network.
@@ -77,12 +77,12 @@ Then, according to technical domain and evaluation target, users can replace the
 &lt;li>Event Driven&lt;/li>
 &lt;li>Automation&lt;/li>
 &lt;/ol>
-&lt;p>The core functions and functional characteristics of Hakoniwa are still under design study in the WG while developing the &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes/">prototype model&lt;/a>.
+&lt;p>The core functions and functional characteristics of Hakoniwa are still under design study in the WG while developing the &lt;a href="https://toppers.github.io/hakoniwa/prototypes/">prototype model&lt;/a>.
 We will add more details as we progress.&lt;/p>
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/docs/core1.en.png " border="" width="800" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/docs/core1.en.png " border="" width="800" />
 &lt;/figure></description></item><item><title>Underlying technology</title><link>https://toppers.github.io/hakoniwa/en/docs/technical/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/technical/</guid><description>&lt;h3 id="toppers-kernel">TOPPERS Kernel&lt;/h3>
 &lt;p>Developed by the &lt;a href="https://toppers.jp">TOPPERS Project&lt;/a>, it is an open-source real-time kernel that extends the standard profile of the µITRON4.0 specification.
 It primarily targeted embedded systems that require high reliability, safety, and real-time performance.&lt;/p>
@@ -90,7 +90,7 @@ It primarily targeted embedded systems that require high reliability, safety, an
 &lt;h3 id="athrill">Athrill&lt;/h3>
 &lt;p>The CPU instruction set simulator is the core of Hakoniwa. &lt;br>
 Members of Hokoniwa WG mainly develop it. It enables debugging and functional verification of the behavior of embedded microcontrollers and peripherals at the instruction level. Currently, V850/RH850 and ARMv7-A are mainly supported.&lt;/p></description></item><item><title>Roadmap</title><link>https://toppers.github.io/hakoniwa/en/docs/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/en/docs/roadmap/</guid><description>&lt;p>Hokoniwa WG is working on &amp;ldquo;big goals, little by little.&amp;rdquo;&lt;/p>
-&lt;p>Our current main activity is to create &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/en/prototypes">prototype models&lt;/a> to realize the concept and to examine the technology.
+&lt;p>Our current main activity is to create &lt;a href="https://toppers.github.io/hakoniwa/en/prototypes">prototype models&lt;/a> to realize the concept and to examine the technology.
 All of these R&amp;amp;D results are released as OSS.
 We desire continuous maturation of the core technologies and expansion of the various functions of Hakoniwa by sharing each prototype model and receiving feedback on it.&lt;/p>
 &lt;p>The Hakoniwa Project is engaged in research and development, first constructing and disseminating educational packages and then expanding into product development.
@@ -109,7 +109,7 @@ This prototype can verify by linking the program&amp;rsquo;s behavior on the emb
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelA.en.png " border="" width="700" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/prototypes/modelA.en.png " border="" width="700" />
 &lt;/figure>
 
 &lt;h3 id="installation--usage">Installation &amp;amp; Usage&lt;/h3>
@@ -132,7 +132,7 @@ This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Uni
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelBoverview.en.png " border="" width="700" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/prototypes/modelBoverview.en.png " border="" width="700" />
 &lt;/figure>
 
 &lt;h3 id="design-intent-from-a-technical-study-perspective">Design intent from a technical study perspective&lt;/h3>
@@ -161,7 +161,7 @@ This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Uni
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelC.en.png " border="" width="700" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/prototypes/modelC.en.png " border="" width="700" />
 &lt;/figure>
 
 &lt;p>The prototype model is currently under development. So please wait for its release.&lt;/p></description></item><item><title>Repository List</title><link>https://toppers.github.io/hakoniwa/en/repositories/</link><pubDate>Wed, 26 Aug 2020 15:09:42 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/en/repositories/</guid><description>&lt;h3 id="hakoniwa">Hakoniwa&lt;/h3>
@@ -179,7 +179,7 @@ This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Uni
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-single_robot">hakoniwa-single_robot&lt;/a>&lt;/td>
- &lt;td style="text-align: left">Package that can try &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/prototypes/single-robot">Hakoniwa Prototype Model A: Simulator for Single Robot&lt;/a> with minimum configuration and procedures&lt;/td>
+ &lt;td style="text-align: left">Package that can try &lt;a href="https://toppers.github.io/hakoniwa/prototypes/single-robot">Hakoniwa Prototype Model A: Simulator for Single Robot&lt;/a> with minimum configuration and procedures&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-ros2sim">hakoniwa-ros2sim&lt;/a>&lt;/td>
@@ -187,7 +187,7 @@ This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Uni
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-core">hakoniwa-core&lt;/a>&lt;/td>
- &lt;td style="text-align: left">Repository for prototype development of &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/docs/core">Hakoniwa Core Function&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">Repository for prototype development of &lt;a href="https://toppers.github.io/hakoniwa/docs/core">Hakoniwa Core Function&lt;/a>&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-document">hakoniwa-document&lt;/a>&lt;/td>
@@ -195,7 +195,7 @@ This prototype uses Unity&amp;rsquo;s Photon library to synchronize multiple Uni
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-core-cpp-client">hakoniwa-core-cpp-client&lt;/a>&lt;/td>
- &lt;td style="text-align: left">C language API for &lt;a href="https://toppers.github.io/hakoniwa/hakoniwa/docs/core">Hakoniwa Core Function&lt;/a>&lt;/td>
+ &lt;td style="text-align: left">C language API for &lt;a href="https://toppers.github.io/hakoniwa/docs/core">Hakoniwa Core Function&lt;/a>&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/toppers/hakoniwa-conductor">hakoniwa-conductor&lt;/a>&lt;/td>

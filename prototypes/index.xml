@@ -12,7 +12,7 @@
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelA.png " border="" width="700" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/prototypes/modelA.png " border="" width="700" />
 &lt;/figure>
 
 &lt;h3 id="導入方法と使用方法">導入方法と使用方法&lt;/h3>
@@ -21,9 +21,9 @@
 &lt;li>&lt;a href="https://github.com/toppers/hakoniwa-single_robot">toppers/hakoniwa-single_robot: 箱庭プロトタイプモデルA：単体ロボット向けシミュレータ&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="動作例のデモ">動作例のデモ&lt;/h3>
-&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo.gif" alt="modelAdemo">&lt;/p>
-&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo1.gif" alt="modelAdemo1">&lt;/p>
-&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelAdemo2.gif" alt="modelAdemo2">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/img/prototypes/modelAdemo.gif" alt="modelAdemo">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/img/prototypes/modelAdemo1.gif" alt="modelAdemo1">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/img/prototypes/modelAdemo2.gif" alt="modelAdemo2">&lt;/p>
 &lt;hr>
 &lt;h4 id="謝辞特記事項">謝辞・特記事項：&lt;/h4>
 &lt;p>Unityパッケージの設計と作成にあたっては，宝塚大学 東京メディア芸術学部 吉岡章夫准教授および学部生の杉﨑涼志さん，木村明美さん，千葉純平さんにご協力いただきました．&lt;/p>
@@ -45,7 +45,7 @@ ROSで一般的に用いられているGazeboよりも軽量でロボットや�
 &lt;li>&lt;a href="https://github.com/toppers/hakoniwa-ros2sim">toppers/hakoniwa-ros2sim: 箱庭 ROS シミュレータ&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="動作例のデモ">動作例のデモ&lt;/h3>
-&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelROS.gif" alt="modelROSdemo">&lt;/p>
+&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/img/prototypes/modelROS.gif" alt="modelROSdemo">&lt;/p>
 &lt;hr>
 &lt;h4 id="謝辞特記事項">謝辞・特記事項：&lt;/h4>
 &lt;p>TurtleBot3 の Unity パッケージの設計と作成にあたっては，宝塚大学 東京メディア芸術学部 吉岡章夫准教授および学部生の杉崎涼志さん，木村明美さんにご協力いただきました．&lt;/p>
@@ -55,7 +55,7 @@ UnityのPhotonライブラリを用いて複数のUnity環境の同期を行っ�
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelBoverview.png " border="" width="700" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/prototypes/modelBoverview.png " border="" width="700" />
 &lt;/figure>
 
 &lt;h3 id="技術研鑽視点での狙い">技術研鑽視点での狙い&lt;/h3>
@@ -74,13 +74,13 @@ UnityのPhotonライブラリを用いて複数のUnity環境の同期を行っ�
 &lt;h3 id="動作例のデモ">動作例のデモ&lt;/h3>
 &lt;ul>
 &lt;li>photonによる複数ロボットの連携
-&lt;video controls src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelBdemo1.mp4" >
+&lt;video controls src="https://toppers.github.io/hakoniwa/img/prototypes/modelBdemo1.mp4" >
 &lt;/li>
 &lt;li>Oculus Questとの接続の様子
-&lt;video controls src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelBdemo2.mp4" >
+&lt;video controls src="https://toppers.github.io/hakoniwa/img/prototypes/modelBdemo2.mp4" >
 &lt;/li>
 &lt;li>VRで箱庭内に入った様子
-&lt;video controls src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelBdemo3.mp4" >
+&lt;video controls src="https://toppers.github.io/hakoniwa/img/prototypes/modelBdemo3.mp4" >
 &lt;/li>
 &lt;/ul></description></item><item><title>ロボット間協調動作シミュレーション</title><link>https://toppers.github.io/hakoniwa/prototypes/harmony-robot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/prototypes/harmony-robot/</guid><description>&lt;p>クラウドとロボティクスとの連携を目指した箱庭プロトタイプモデルです．&lt;/p>
 &lt;h3 id="技術研鑽視点での狙い">技術研鑽視点での狙い&lt;/h3>
@@ -97,7 +97,7 @@ UnityのPhotonライブラリを用いて複数のUnity環境の同期を行っ�
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/prototypes/modelC.png " border="" width="700" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/prototypes/modelC.png " border="" width="700" />
 &lt;/figure>
 
 &lt;p>現在，本プロトタイプモデルの実現に向けて鋭意開発中です．公開までしばしお待ちください．&lt;/p></description></item></channel></rss>

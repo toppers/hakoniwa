@@ -68,14 +68,14 @@ Rgb_r,g,b には，カラーセンサで取得できる数値を表示してい�
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_hierarchy_view_v2.0.png " border="" width="400" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_hierarchy_view_v2.0.png " border="" width="400" />
 &lt;/figure>
 
 &lt;p>&lt;code>Hakoniwa&lt;/code>クラスはシミュレーション環境全体に関わる情報を持っています．&lt;/p>
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_hakoniwa_field.png " border="" width="400" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_hakoniwa_field.png " border="" width="400" />
 &lt;/figure>
 
 &lt;table>
@@ -103,7 +103,7 @@ Rgb_r,g,b には，カラーセンサで取得できる数値を表示してい�
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_prefabs.png " border="" width="600" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_prefabs.png " border="" width="600" />
 &lt;/figure>
 &lt;/p>
 &lt;p>これらのロボットモデルを&lt;code>Hierarchy&lt;/code>ビューの&lt;code>Robot&lt;/code>配下にドラッグ＆ドロップすることで
@@ -111,7 +111,7 @@ Rgb_r,g,b には，カラーセンサで取得できる数値を表示してい�
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_set_robot.gif " border="" width="800" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_set_robot.gif " border="" width="800" />
 &lt;/figure>
 
 &lt;hr>
@@ -123,56 +123,56 @@ Rgb_r,g,b には，カラーセンサで取得できる数値を表示してい�
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_ultrasonic_sensor.png " border="" width="300" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_ultrasonic_sensor.png " border="" width="300" />
 &lt;/figure>
 
 &lt;p>&lt;code>Ultrasonic Sensor&lt;/code>の&lt;code>Distance Value&lt;/code>でセンサ範囲を調整できます．&lt;/p>
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_setting_ultrasonic_sensor.png " border="" width="300" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_ultrasonic_sensor.png " border="" width="300" />
 &lt;/figure>
 
 &lt;h4 id="モーター">モーター&lt;/h4>
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_tire.png " border="" width="300" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_tire.png " border="" width="300" />
 &lt;/figure>
 
 &lt;p>&lt;code>Rigidbody&lt;/code>の&lt;code>Mass&lt;/code>でタイヤの重さを，&lt;code>Angular Drag&lt;/code>で回転時の抵抗値を調整できます．&lt;/p>
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_setting_tire.png " border="" width="300" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_tire.png " border="" width="300" />
 &lt;/figure>
 
 &lt;h4 id="カラーセンサ">カラーセンサ&lt;/h4>
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_color_sensor.png " border="" width="300" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_color_sensor.png " border="" width="300" />
 &lt;/figure>
 
 &lt;p>&lt;code>Physical Camera&lt;/code>の&lt;code>Sensor Size&lt;/code>でセンシング範囲を調整できます．&lt;/p>
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_setting_color_sensor.png " border="" width="300" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_color_sensor.png " border="" width="300" />
 &lt;/figure>
 
 &lt;h4 id="センサ用ライト">センサ用ライト&lt;/h4>
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_spot_light.png " border="" width="300" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_spot_light.png " border="" width="300" />
 &lt;/figure>
 
 &lt;p>&lt;code>Light&lt;/code>の&lt;code>Range&lt;/code>で光が届く範囲の距離を，&lt;code>SpotAngle&lt;/code>で光が届く範囲の広さを調整できます．&lt;/p>
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_setting_spot_light.png " border="" width="300" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_spot_light.png " border="" width="300" />
 &lt;/figure></description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順arm版">単体ロボット向けシミュレータ使用手順(ARM版)&lt;/h1>
 &lt;h2 id="使用手順">使用手順&lt;/h2>
 &lt;ol>
@@ -218,7 +218,7 @@ Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
 &lt;/figure>
 
 &lt;h2 id="athrillの起動">athrillの起動&lt;/h2>
@@ -275,7 +275,7 @@ Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
 &lt;/figure>
 
 &lt;h2 id="athrillの起動">athrillの起動&lt;/h2>
@@ -320,7 +320,7 @@ Unity のメニューから，「Edit」⇒「Project Settings」を選択しま
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_build_setting.png " border="" width="600" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_build_setting.png " border="" width="600" />
 &lt;/figure>
 
 &lt;h2 id="ビルドの実行configjsonの配置">ビルドの実行，config.jsonの配置&lt;/h2>
@@ -333,14 +333,14 @@ Unity のメニューから，「File」⇒「Build Settings」を選択しま�
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_build_platform_setting.png " border="" width="600" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_build_platform_setting.png " border="" width="600" />
 &lt;/figure>
 
 &lt;p>設定を終えたら，&lt;code>Build&lt;/code>を押下してビルドを実行します．&lt;/p>
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_build.png " border="" width="400" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_build.png " border="" width="400" />
 &lt;/figure>
 
 &lt;p>すると，どの場所にビルドしたバイナリを配置するか，選択ダイアログが表示されますので，
@@ -350,7 +350,7 @@ Unity のメニューから，「File」⇒「Build Settings」を選択しま�
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_build_import.png " border="" width="400" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_build_import.png " border="" width="400" />
 &lt;/figure>
 
 &lt;p>フォルダを選択すると，ビルドが実行されます．&lt;/p>
@@ -411,7 +411,7 @@ Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
 &lt;/figure>
 
 &lt;h2 id="athrillの起動">athrillの起動&lt;/h2>
@@ -478,7 +478,7 @@ Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2
 
 
 &lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
 &lt;/figure>
 
 &lt;h2 id="athrillの起動">athrillの起動&lt;/h2>

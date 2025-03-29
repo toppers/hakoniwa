@@ -22,6 +22,12 @@ In the series titled "[Recommendations for Embedded Development in the Cloud Age
 -->
 
 ### What's New
+- 2025.3.29
+  - Repository updates and release information
+    - [hakoniwa-drone-core v3.0.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.0.0) (2025.3.26)
+      - Released Hakoniwa drone simulator for events at Osaka Expo
+      - Published user manuals and samples that can be used with/without Hakoniwa features
+      - Binary packages for Windows / Mac / Linux
 - 2025.3.11
   - Release Updates
     - [hakoniwa-drone-core v2.0.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v2.0.0) (2025.3.7)

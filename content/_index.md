@@ -21,6 +21,12 @@ draft = false
 [もっと見る](topics)
 
 ### 更新情報
+- 2025.3.29
+  - リポジトリの更新リリース情報
+    - [hakoniwa-drone-core v3.0.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.0.0) (2025.3.26)
+      - 大阪万博向けのイベントで利用する箱庭ドローンシミュレータの公開
+      - 箱庭機能あり/無しの両方で利用できるように利用手順書とサンプルを公開
+      - Windows / Mac / Linux のバイナリパッケージ
 - 2025.3.11
   - リポジトリの更新リリース情報
     - [hakoniwa-drone-core v2.0.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v2.0.0) (2025.3.7)

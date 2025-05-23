@@ -24,7 +24,7 @@ In the series titled "[Recommendations for Embedded Development in the Cloud Age
 ### What's New
 - 2025.5.23
   - Repository updates and release information
-    - [hakoniwa-drone-core v3.0.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.0.0) (2025.5.18)
+    - [hakoniwa-drone-core v3.0.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.0.1) (2025.5.18)
       - Binary packages for Windows / Mac / Linux
       - Python library for Windows
 - 2025.3.29

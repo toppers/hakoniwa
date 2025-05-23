@@ -23,7 +23,7 @@ draft = false
 ### 更新情報
 - 2025.5.23
   - リポジトリの更新リリース情報
-    - [hakoniwa-drone-core v3.0.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.0.0) (2025.5.18)
+    - [hakoniwa-drone-core v3.0.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.0.1) (2025.5.18)
       - Windows / Mac / Linux のバイナリパッケージのアップデート
       - Windows Pythonライブラリのアップデート
 - 2025.3.29

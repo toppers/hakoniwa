@@ -1,53 +1,53 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getting started on 箱庭</title><link>https://toppers.github.io/hakoniwa/getting-started/</link><description>Recent content in Getting started on 箱庭</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sat, 14 May 2022 13:26:38 +0900</lastBuildDate><atom:link href="https://toppers.github.io/hakoniwa/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>箱庭のアーキテクチャ</title><link>https://toppers.github.io/hakoniwa/getting-started/architecture-overview/</link><pubDate>Sat, 14 May 2022 13:26:27 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/architecture-overview/</guid><description>&lt;h3 id="前提環境">前提環境&lt;/h3>
-&lt;p>&lt;a href="https://github.com/toppers/hakoniwa-ros2sim">箱庭 ROS シミュレータ:hakoniwa-ros2sim&lt;/a>
-を例題に解説するため、このチュートリアルが終わっておりプロジェクトが参照できることが望ましいです。&lt;/p>
-&lt;h3 id="ros向け箱庭のシステム構成">ROS向け箱庭のシステム構成&lt;/h3>
-&lt;p>ros2simのプロジェクトでは、Unity上のTortleBot3(tb3)をROS2のアプリから制御するシミュレーションを行います。
-以下にWindows/WSL2でのシステム構成を示しています。大まかには制御対象であるUnity上のtb3とそれを制御するtb3ctrlがROSで通信しています。&lt;/p>
-&lt;p>&lt;img src="https://toppers.github.io/hakoniwa/img/getting-started/ros2sim_overview.png" alt="ROS向け箱庭のシステム構成">&lt;/p>
-&lt;h3 id="フォルダ構成">フォルダ構成&lt;/h3>
-&lt;p>githubからCloneしたプロジェクトのフォルダ構成は以下のようになっています。主に/ros2/workspace, /ros2/unityを扱えばよく、
-他のフォルダは本説明には含まれないため一旦無視してください。&lt;/p>
-&lt;ul>
-&lt;li>hakowani-ros2sim/
-&lt;ul>
-&lt;li>ros2/
-&lt;ul>
-&lt;li>workspace/ : ROSのワークスペース。Docker上にマウントされる&lt;/li>
-&lt;li>unity/tb3/ : Unityのプロジェクト&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>workspace/はROSのワークスペースで、ここに制御用のROSアプリを作成します。src下にはいくつかアプリが入っていますが、
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getting started on 箱庭</title><link>https://toppers.github.io/hakoniwa/getting-started/</link><description>Recent content in Getting started on 箱庭</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sat, 14 May 2022 13:26:38 +0900</lastBuildDate><atom:link href="https://toppers.github.io/hakoniwa/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>箱庭のアーキテクチャ</title><link>https://toppers.github.io/hakoniwa/getting-started/architecture-overview/</link><pubDate>Sat, 14 May 2022 13:26:27 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/architecture-overview/</guid><description>&lt;h3 id="前提環境"&gt;前提環境&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/toppers/hakoniwa-ros2sim"&gt;箱庭 ROS シミュレータ:hakoniwa-ros2sim&lt;/a&gt;
+を例題に解説するため、このチュートリアルが終わっておりプロジェクトが参照できることが望ましいです。&lt;/p&gt;
+&lt;h3 id="ros向け箱庭のシステム構成"&gt;ROS向け箱庭のシステム構成&lt;/h3&gt;
+&lt;p&gt;ros2simのプロジェクトでは、Unity上のTortleBot3(tb3)をROS2のアプリから制御するシミュレーションを行います。
+以下にWindows/WSL2でのシステム構成を示しています。大まかには制御対象であるUnity上のtb3とそれを制御するtb3ctrlがROSで通信しています。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://toppers.github.io/hakoniwa/img/getting-started/ros2sim_overview.png" alt="ROS向け箱庭のシステム構成"&gt;&lt;/p&gt;
+&lt;h3 id="フォルダ構成"&gt;フォルダ構成&lt;/h3&gt;
+&lt;p&gt;githubからCloneしたプロジェクトのフォルダ構成は以下のようになっています。主に/ros2/workspace, /ros2/unityを扱えばよく、
+他のフォルダは本説明には含まれないため一旦無視してください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hakowani-ros2sim/
+&lt;ul&gt;
+&lt;li&gt;ros2/
+&lt;ul&gt;
+&lt;li&gt;workspace/ : ROSのワークスペース。Docker上にマウントされる&lt;/li&gt;
+&lt;li&gt;unity/tb3/ : Unityのプロジェクト&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;workspace/はROSのワークスペースで、ここに制御用のROSアプリを作成します。src下にはいくつかアプリが入っていますが、
 tb3ロボットを制御しているのはtb3フォルダ下のソースとなります。
-プログラムを修正した場合は&lt;code>bash build.bash&lt;/code>を行うことでビルドされアプリが更新されます。&lt;/p>
-&lt;p>unity/はUnityプロジェクトが入っており、Unity Editorからtb3フォルダを開くと読み込めます。
-cloneしたすぐの状態では、すべてのアセットは揃っておらずhako-install.bashによって必要なアセットのダウンロードや設定を行います。&lt;/p>
-&lt;h3 id="チュートリアルでの操作による挙動">チュートリアルでの操作による挙動&lt;/h3>
-&lt;ul>
-&lt;li>&lt;code>$ bash docker/pull-image.bash&lt;/code> : 本プロジェクトで用いるROSが入ったDockerイメージの取得を行っています。&lt;/li>
-&lt;li>&lt;code>$ bash docker/run.bash&lt;/code> : 取得したDockerのコンテナを作成しbashでログインします。またこの時カレントディレクトリにworkspace以下をマウントしています。&lt;/li>
-&lt;li>&lt;code># bash hako-install.bash&lt;/code> : unityフォルダにUnityのプロジェクトを展開すると共に、ROSと繋ぐための初期設定を行います。&lt;/li>
-&lt;li>&lt;code>(Terminal A)$ bash run.bash&lt;/code> : Dockerコンテナを起動しbashでログインします。&lt;/li>
-&lt;li>&lt;code>(Terminal A)# bash launch.bash&lt;/code> : UnityとROSで通信するための、ROS-TCP-Endpointを起動します。またUnityプロジェクトにはこのプログラムと対になる&lt;/li>
-&lt;li>&lt;code>(Terminal B)$ bash attach.bash&lt;/code> : Terminal Aで立ち上げたコンテナに入ります。&lt;/li>
-&lt;li>&lt;code>(Terminal B)# bash run.bash&lt;/code> : ロボットを制御するROSアプリのtb3ctrlを実行します。このプログラムのソースはworkspace/src/tb3/src/tb3ctrl.cppです。&lt;/li>
-&lt;/ul>
-&lt;h3>&lt;/h3></description></item><item><title>制御プログラムの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/app-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/app-customize/</guid><description>&lt;h3 id="ソースコードの場所">ソースコードの場所&lt;/h3>
-&lt;p>今回のサンプルのtb3の制御プログラムは、
-&lt;code>/ros2/workspace/src/tb3/src/tb3ctrl.cpp&lt;/code> に配置されています。
-詳細は実際のコードを見て頂くとして主要な部分を紹介していきます。ページの最後にコードの抜粋を示します。&lt;/p>
-&lt;h3 id="制御プログラムの概要">制御プログラムの概要&lt;/h3>
-&lt;p>Unity上のロボットと制御プログラムとは、ROSで通信しています。
-Unity上のロボットからはレーザースキャナから周囲360°の距離データが送られてきます。制御プログラムからはロボットの移動量を送信します。&lt;/p>
-&lt;p>この制御プログラムは、壁沿いに周回するような制御を行っています。do_forwardで前方の距離が一定以上あれば前進し、turn_rightでは右側の距離が一定以上であれば旋回します。&lt;/p>
-&lt;p>このように制御部分は非常に小さく、他はROSで通信するためのボイラープレートとなっています。
+プログラムを修正した場合は&lt;code&gt;bash build.bash&lt;/code&gt;を行うことでビルドされアプリが更新されます。&lt;/p&gt;
+&lt;p&gt;unity/はUnityプロジェクトが入っており、Unity Editorからtb3フォルダを開くと読み込めます。
+cloneしたすぐの状態では、すべてのアセットは揃っておらずhako-install.bashによって必要なアセットのダウンロードや設定を行います。&lt;/p&gt;
+&lt;h3 id="チュートリアルでの操作による挙動"&gt;チュートリアルでの操作による挙動&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$ bash docker/pull-image.bash&lt;/code&gt; : 本プロジェクトで用いるROSが入ったDockerイメージの取得を行っています。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ bash docker/run.bash&lt;/code&gt; : 取得したDockerのコンテナを作成しbashでログインします。またこの時カレントディレクトリにworkspace以下をマウントしています。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;# bash hako-install.bash&lt;/code&gt; : unityフォルダにUnityのプロジェクトを展開すると共に、ROSと繋ぐための初期設定を行います。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(Terminal A)$ bash run.bash&lt;/code&gt; : Dockerコンテナを起動しbashでログインします。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(Terminal A)# bash launch.bash&lt;/code&gt; : UnityとROSで通信するための、ROS-TCP-Endpointを起動します。またUnityプロジェクトにはこのプログラムと対になる&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(Terminal B)$ bash attach.bash&lt;/code&gt; : Terminal Aで立ち上げたコンテナに入ります。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(Terminal B)# bash run.bash&lt;/code&gt; : ロボットを制御するROSアプリのtb3ctrlを実行します。このプログラムのソースはworkspace/src/tb3/src/tb3ctrl.cppです。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;/h3&gt;</description></item><item><title>制御プログラムの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/app-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/app-customize/</guid><description>&lt;h3 id="ソースコードの場所"&gt;ソースコードの場所&lt;/h3&gt;
+&lt;p&gt;今回のサンプルのtb3の制御プログラムは、
+&lt;code&gt;/ros2/workspace/src/tb3/src/tb3ctrl.cpp&lt;/code&gt; に配置されています。
+詳細は実際のコードを見て頂くとして主要な部分を紹介していきます。ページの最後にコードの抜粋を示します。&lt;/p&gt;
+&lt;h3 id="制御プログラムの概要"&gt;制御プログラムの概要&lt;/h3&gt;
+&lt;p&gt;Unity上のロボットと制御プログラムとは、ROSで通信しています。
+Unity上のロボットからはレーザースキャナから周囲360°の距離データが送られてきます。制御プログラムからはロボットの移動量を送信します。&lt;/p&gt;
+&lt;p&gt;この制御プログラムは、壁沿いに周回するような制御を行っています。do_forwardで前方の距離が一定以上あれば前進し、turn_rightでは右側の距離が一定以上であれば旋回します。&lt;/p&gt;
+&lt;p&gt;このように制御部分は非常に小さく、他はROSで通信するためのボイラープレートとなっています。
 制御部分のパラメータを変えることで、自由にロボットを制御することができます。いろいろと書き換えて試してみてください。
-なお、コードを書き換えた後は、Dockerのコンテナ内でbuild.bashを実行してプログラムのコンパイルを行ってください。&lt;/p>
-&lt;h3 id="制御プログラムの抜粋">制御プログラムの抜粋&lt;/h3>
-&lt;pre tabindex="0">&lt;code>// ロボットのレーザースキャナから受け取る360°周囲の距離データ
+なお、コードを書き換えた後は、Dockerのコンテナ内でbuild.bashを実行してプログラムのコンパイルを行ってください。&lt;/p&gt;
+&lt;h3 id="制御プログラムの抜粋"&gt;制御プログラムの抜粋&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;// ロボットのレーザースキャナから受け取る360°周囲の距離データ
 typedef struct {
  double ranges[360];
 } ScanDataType;
@@ -124,4 +124,4 @@ int main(int argc, char **argv) {
  }
  return 0;
 }
-&lt;/code>&lt;/pre></description></item><item><title>コースの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/env-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/env-customize/</guid><description>&lt;h3 id="執筆中">執筆中&lt;/h3></description></item><item><title>ロボットのカスタマイズ方法</title><link>https://toppers.github.io/hakoniwa/getting-started/robot-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/robot-customize/</guid><description>&lt;h3 id="執筆中">執筆中&lt;/h3></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>コースの変更方法</title><link>https://toppers.github.io/hakoniwa/getting-started/env-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/env-customize/</guid><description>&lt;h3 id="執筆中"&gt;執筆中&lt;/h3&gt;</description></item><item><title>ロボットのカスタマイズ方法</title><link>https://toppers.github.io/hakoniwa/getting-started/robot-customize/</link><pubDate>Sat, 14 May 2022 13:26:38 +0900</pubDate><guid>https://toppers.github.io/hakoniwa/getting-started/robot-customize/</guid><description>&lt;h3 id="執筆中"&gt;執筆中&lt;/h3&gt;</description></item></channel></rss>

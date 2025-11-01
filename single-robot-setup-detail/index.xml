@@ -1,176 +1,176 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Single-Robot-Setup-Details on 箱庭</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/</link><description>Recent content in Single-Robot-Setup-Details on 箱庭</description><generator>Hugo</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/index.xml" rel="self" type="application/rss+xml"/><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</guid><description>&lt;h1 id="wslのインストール">WSLのインストール&lt;/h1>
-&lt;hr>
-&lt;p>Windows版の場合はWSLをインストールいただく必要があります．&lt;br>
-※注意点として，現時点(2020/6月)時点では，WSL2はご利用いただけません(WSL2とUnity間でUDP通信できないため)．&lt;/p>
-&lt;p>WSLのインストール方法は色々なサイトで紹介されておりますので，Ubuntu 18.04 LTSをインストールください．&lt;/p>
-&lt;p>以下のサイト等が参考になるかと思います．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://qiita.com/Aruneko/items/c79810b0b015bebf30bb">https://qiita.com/Aruneko/items/c79810b0b015bebf30bb&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>インストールが完了したら，aptパッケージを更新しておきます．&lt;br>
-(更新しないと後ほど行うgccのインストールで失敗することがあるためです)&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ sudo apt update
-&lt;/code>&lt;/pre>&lt;p>aptパッケージを更新したら，あらかじめ以下が使用できるようにインストールしておきます&lt;/p>
-&lt;ul>
-&lt;li>gcc&lt;/li>
-&lt;li>make&lt;/li>
-&lt;/ul>
-&lt;pre tabindex="0">&lt;code>$ sudo apt install build-essential
-&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</guid><description>&lt;h1 id="rubyのインストール">Rubyのインストール&lt;/h1>
-&lt;hr>
-&lt;p>v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります．
-※EV3ロボット制御アプリをビルドする際に必要となります．&lt;/p>
-&lt;p>Homebrewを使用してインストールします．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ brew install ruby
-&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/</guid><description>&lt;h1 id="rubyのインストール">Rubyのインストール&lt;/h1>
-&lt;hr>
-&lt;p>v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります．
-※EV3ロボット制御アプリをビルドする際に必要となります．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ sudo apt install ruby
-&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/</guid><description>&lt;h1 id="athrill2のインストール">athrill2のインストール&lt;/h1>
-&lt;h2 id="athrill2のインストール手順">athrill2のインストール手順&lt;/h2>
-&lt;hr>
-&lt;ul>
-&lt;li>athrill のチェックアウト&lt;/li>
-&lt;li>athrill-target のチェックアウト&lt;/li>
-&lt;li>コンパイラのインストール&lt;/li>
-&lt;li>ビルド＆インストール&lt;/li>
-&lt;/ul>
-&lt;h2 id="athrill-のチェックアウト">athrill のチェックアウト&lt;/h2>
-&lt;hr>
-&lt;p>athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．&lt;/p>
-&lt;p>共通コードのチェックアウトは，以下の通りです．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/athrill.git
-&lt;/code>&lt;/pre>&lt;h2 id="athrill-target-のチェックアウト">athrill-target のチェックアウト&lt;/h2>
-&lt;hr>
-&lt;p>CPUアーキに依存するコードは，athrill-target側で管理しています．
-今回のARM対応版は，ここにあります．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/athrill-target-ARMv7-A.git
-&lt;/code>&lt;/pre>&lt;p>なお，athrill と athrill-targetを以下のフォルダ構成にしてください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Single-Robot-Setup-Details on 箱庭</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/</link><description>Recent content in Single-Robot-Setup-Details on 箱庭</description><generator>Hugo</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/index.xml" rel="self" type="application/rss+xml"/><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/10_wsl_install/</guid><description>&lt;h1 id="wslのインストール"&gt;WSLのインストール&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Windows版の場合はWSLをインストールいただく必要があります．&lt;br&gt;
+※注意点として，現時点(2020/6月)時点では，WSL2はご利用いただけません(WSL2とUnity間でUDP通信できないため)．&lt;/p&gt;
+&lt;p&gt;WSLのインストール方法は色々なサイトで紹介されておりますので，Ubuntu 18.04 LTSをインストールください．&lt;/p&gt;
+&lt;p&gt;以下のサイト等が参考になるかと思います．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://qiita.com/Aruneko/items/c79810b0b015bebf30bb"&gt;https://qiita.com/Aruneko/items/c79810b0b015bebf30bb&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;インストールが完了したら，aptパッケージを更新しておきます．&lt;br&gt;
+(更新しないと後ほど行うgccのインストールで失敗することがあるためです)&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ sudo apt update
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;aptパッケージを更新したら，あらかじめ以下が使用できるようにインストールしておきます&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;gcc&lt;/li&gt;
+&lt;li&gt;make&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ sudo apt install build-essential
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_mac/</guid><description>&lt;h1 id="rubyのインストール"&gt;Rubyのインストール&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります．
+※EV3ロボット制御アプリをビルドする際に必要となります．&lt;/p&gt;
+&lt;p&gt;Homebrewを使用してインストールします．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ brew install ruby
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/20_ruby_install_win_linux/</guid><description>&lt;h1 id="rubyのインストール"&gt;Rubyのインストール&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;v850版をご利用される場合は，RTOSがASP3になりますので，Rubyをインストールいただく必要があります．
+※EV3ロボット制御アプリをビルドする際に必要となります．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ sudo apt install ruby
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_arm/</guid><description>&lt;h1 id="athrill2のインストール"&gt;athrill2のインストール&lt;/h1&gt;
+&lt;h2 id="athrill2のインストール手順"&gt;athrill2のインストール手順&lt;/h2&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;athrill のチェックアウト&lt;/li&gt;
+&lt;li&gt;athrill-target のチェックアウト&lt;/li&gt;
+&lt;li&gt;コンパイラのインストール&lt;/li&gt;
+&lt;li&gt;ビルド＆インストール&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="athrill-のチェックアウト"&gt;athrill のチェックアウト&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．&lt;/p&gt;
+&lt;p&gt;共通コードのチェックアウトは，以下の通りです．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ git clone https://github.com/toppers/athrill.git
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="athrill-target-のチェックアウト"&gt;athrill-target のチェックアウト&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;CPUアーキに依存するコードは，athrill-target側で管理しています．
+今回のARM対応版は，ここにあります．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ git clone https://github.com/toppers/athrill-target-ARMv7-A.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;なお，athrill と athrill-targetを以下のフォルダ構成にしてください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;.
 ├── athrill
 └── athrill-target-ARMv7-A
-&lt;/code>&lt;/pre>&lt;h2 id="コンパイラのインストール">コンパイラのインストール&lt;/h2>
-&lt;hr>
-&lt;p>Linux の方は，gcc をインストールください．&lt;br>
-Windows の方は，WSL上で gcc をインストールください．&lt;br>
-Mac の方は，clang をインストールください．&lt;/p>
-&lt;h2 id="ビルドインストール">ビルド＆インストール&lt;/h2>
-&lt;hr>
-&lt;p>ビルド方法ですが，端末上でathrill-target-ARMv7-A に移動してください．&lt;/p>
-&lt;p>Linux/Windowsの方は，さらに build_linux に移動してください．&lt;br>
-Macの方は，build_mac に移動してください．&lt;/p>
-&lt;p>移動終わったら，以下コマンド実行するだけです．&lt;/p>
-&lt;pre tabindex="0">&lt;code>make timer32=true clean
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="コンパイラのインストール"&gt;コンパイラのインストール&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Linux の方は，gcc をインストールください．&lt;br&gt;
+Windows の方は，WSL上で gcc をインストールください．&lt;br&gt;
+Mac の方は，clang をインストールください．&lt;/p&gt;
+&lt;h2 id="ビルドインストール"&gt;ビルド＆インストール&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;ビルド方法ですが，端末上でathrill-target-ARMv7-A に移動してください．&lt;/p&gt;
+&lt;p&gt;Linux/Windowsの方は，さらに build_linux に移動してください．&lt;br&gt;
+Macの方は，build_mac に移動してください．&lt;/p&gt;
+&lt;p&gt;移動終わったら，以下コマンド実行するだけです．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;make timer32=true clean
 make timer32=true
-&lt;/code>&lt;/pre>&lt;p>ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ ls -l ../../athrill/bin/linux/athrill2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ ls -l ../../athrill/bin/linux/athrill2
 -rwxr-xr-x 1 user staff 628260 2 2 16:40 ../../../athrill/bin/linux/athrill2
-&lt;/code>&lt;/pre>&lt;p>そして，このパスを .bashrcに登録してもらえれば，インストール終了です．&lt;br>
-以下，設定例です．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</guid><description>&lt;h1 id="athrill2のインストール">athrill2のインストール&lt;/h1>
-&lt;h2 id="athrill2のインストール手順">athrill2のインストール手順&lt;/h2>
-&lt;hr>
-&lt;ul>
-&lt;li>athrill のチェックアウト&lt;/li>
-&lt;li>athrill-target のチェックアウト&lt;/li>
-&lt;li>コンパイラのインストール&lt;/li>
-&lt;li>ビルド＆インストール&lt;/li>
-&lt;/ul>
-&lt;h2 id="athrill-のチェックアウト">athrill のチェックアウト&lt;/h2>
-&lt;hr>
-&lt;p>athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．&lt;/p>
-&lt;p>共通コードのチェックアウトは，以下の通りです．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/athrill.git
-&lt;/code>&lt;/pre>&lt;h2 id="athrill-target-のチェックアウト">athrill-target のチェックアウト&lt;/h2>
-&lt;hr>
-&lt;p>CPUアーキに依存するコードは，athrill-target側で管理しています．&lt;br>
-今回のV850対応版は，ここにあります．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/athrill-target-v850e2m.git
-&lt;/code>&lt;/pre>&lt;p>なお，athrill と athrill-targetを以下のフォルダ構成にしてください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;そして，このパスを .bashrcに登録してもらえれば，インストール終了です．&lt;br&gt;
+以下，設定例です．&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/30_athrill2_install_v850/</guid><description>&lt;h1 id="athrill2のインストール"&gt;athrill2のインストール&lt;/h1&gt;
+&lt;h2 id="athrill2のインストール手順"&gt;athrill2のインストール手順&lt;/h2&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;athrill のチェックアウト&lt;/li&gt;
+&lt;li&gt;athrill-target のチェックアウト&lt;/li&gt;
+&lt;li&gt;コンパイラのインストール&lt;/li&gt;
+&lt;li&gt;ビルド＆インストール&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="athrill-のチェックアウト"&gt;athrill のチェックアウト&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;athrill は，設計上，CPUアーキに依存しない共通コードとCPU依存するコードを分離しています．&lt;/p&gt;
+&lt;p&gt;共通コードのチェックアウトは，以下の通りです．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ git clone https://github.com/toppers/athrill.git
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="athrill-target-のチェックアウト"&gt;athrill-target のチェックアウト&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;CPUアーキに依存するコードは，athrill-target側で管理しています．&lt;br&gt;
+今回のV850対応版は，ここにあります．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ git clone https://github.com/toppers/athrill-target-v850e2m.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;なお，athrill と athrill-targetを以下のフォルダ構成にしてください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;.
 ├── athrill
 └── athrill-target-v850e2m
-&lt;/code>&lt;/pre>&lt;h2 id="コンパイラのインストール">コンパイラのインストール&lt;/h2>
-&lt;hr>
-&lt;p>Linux の方は，gcc をインストールください．&lt;br>
-Windows の方は，WSL上で gcc をインストールください．&lt;br>
-Mac の方は，clang をインストールください．&lt;/p>
-&lt;h2 id="ビルドインストール">ビルド＆インストール&lt;/h2>
-&lt;hr>
-&lt;p>ビルド方法ですが，端末上でathrill-target-v850e2m に移動してください．&lt;/p>
-&lt;p>Linux/Windowsの方は，さらに build_linux に移動してください．&lt;br>
-Macの方は，build_mac に移動してください．&lt;/p>
-&lt;p>移動終わったら，以下コマンド実行するだけです．&lt;/p>
-&lt;pre tabindex="0">&lt;code>make timer32=true clean
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="コンパイラのインストール"&gt;コンパイラのインストール&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Linux の方は，gcc をインストールください．&lt;br&gt;
+Windows の方は，WSL上で gcc をインストールください．&lt;br&gt;
+Mac の方は，clang をインストールください．&lt;/p&gt;
+&lt;h2 id="ビルドインストール"&gt;ビルド＆インストール&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;ビルド方法ですが，端末上でathrill-target-v850e2m に移動してください．&lt;/p&gt;
+&lt;p&gt;Linux/Windowsの方は，さらに build_linux に移動してください．&lt;br&gt;
+Macの方は，build_mac に移動してください．&lt;/p&gt;
+&lt;p&gt;移動終わったら，以下コマンド実行するだけです．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;make timer32=true clean
 make timer32=true
-&lt;/code>&lt;/pre>&lt;p>ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ ls -l ../../athrill/bin/linux/athrill2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ビルド成功すると，athrill側の bin/linux 配下に athrill2 というバイナリが配置されるはずです．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ ls -l ../../athrill/bin/linux/athrill2
 -rwxr-xr-x 1 user staff 628260 2 2 16:40 ../../../athrill/bin/linux/athrill2
-&lt;/code>&lt;/pre>&lt;p>そして，このパスを .bashrcに登録してもらえれば，インストール終了です．&lt;br>
-以下，設定例です．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</guid><description>&lt;h1 id="linux版64bit-gccコンパイラライブラリ含むのインストール">linux版64bit gccコンパイラ(ライブラリ含む)のインストール&lt;/h1>
-&lt;hr>
-&lt;p>ARM版のathrill2を利用される場合は，以下のサイトを参考にコンパイラおよびライブラリをインストールください．&lt;/p>
-&lt;p>Windows(WSL)&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://www.yokoweb.net/2018/03/07/wsl-ubuntu-arm-gcc/">https://www.yokoweb.net/2018/03/07/wsl-ubuntu-arm-gcc/&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Linux&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://www.yokoweb.net/2018/05/16/ubuntu-18_04-gcc-arm-install/">https://www.yokoweb.net/2018/05/16/ubuntu-18_04-gcc-arm-install/&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Mac&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://www.yokoweb.net/2018/05/16/macos-gcc-arm-brew-install/">https://www.yokoweb.net/2018/05/16/macos-gcc-arm-brew-install/&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</guid><description>&lt;h1 id="linux版64bit-gccコンパイラライブラリ含むのインストール">linux版64bit gccコンパイラ(ライブラリ含む)のインストール&lt;/h1>
-&lt;hr>
-&lt;p>v850版のathrill2を利用される場合は，以下のサイトからコンパイラおよびライブラリ(athrill-gcc-package.tar.gz)をダウンロードください．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1">https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;pre tabindex="0">&lt;code>$ tar xzvf athrill-gcc-package.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;そして，このパスを .bashrcに登録してもらえれば，インストール終了です．&lt;br&gt;
+以下，設定例です．&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_arm/</guid><description>&lt;h1 id="linux版64bit-gccコンパイラライブラリ含むのインストール"&gt;linux版64bit gccコンパイラ(ライブラリ含む)のインストール&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;ARM版のathrill2を利用される場合は，以下のサイトを参考にコンパイラおよびライブラリをインストールください．&lt;/p&gt;
+&lt;p&gt;Windows(WSL)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.yokoweb.net/2018/03/07/wsl-ubuntu-arm-gcc/"&gt;https://www.yokoweb.net/2018/03/07/wsl-ubuntu-arm-gcc/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Linux&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.yokoweb.net/2018/05/16/ubuntu-18_04-gcc-arm-install/"&gt;https://www.yokoweb.net/2018/05/16/ubuntu-18_04-gcc-arm-install/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mac&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.yokoweb.net/2018/05/16/macos-gcc-arm-brew-install/"&gt;https://www.yokoweb.net/2018/05/16/macos-gcc-arm-brew-install/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/40_gcc_install_v850/</guid><description>&lt;h1 id="linux版64bit-gccコンパイラライブラリ含むのインストール"&gt;linux版64bit gccコンパイラ(ライブラリ含む)のインストール&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;v850版のathrill2を利用される場合は，以下のサイトからコンパイラおよびライブラリ(athrill-gcc-package.tar.gz)をダウンロードください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1"&gt;https://github.com/toppers/athrill-gcc-v850e2m/releases/tag/v1.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ tar xzvf athrill-gcc-package.tar.gz
 $ cd athrill-gcc-package/
 $ tar xzvf athrill-gcc.tar.gz
 $ ls usr/local/athrill-gcc/
 bin include lib libexec share v850-elf
-&lt;/code>&lt;/pre>&lt;p>解凍後，usr/local/athrill-gccを /usr/local 直下に移動してください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ sudo mv usr/local/athrill-gcc /usr/local
-&lt;/code>&lt;/pre>&lt;p>あとは，.bashrc に以下のパスを設定するだけです．&lt;/p>
-&lt;pre tabindex="0">&lt;code>export PATH=/usr/local/athrill-gcc/bin/:${PATH}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;解凍後，usr/local/athrill-gccを /usr/local 直下に移動してください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ sudo mv usr/local/athrill-gcc /usr/local
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;あとは，.bashrc に以下のパスを設定するだけです．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;export PATH=/usr/local/athrill-gcc/bin/:${PATH}
 export LD_LIBRARY_PATH=/usr/local/athrill-gcc:/usr/local/athrill-gcc/lib:${LD_LIBRARY_PATH}
-&lt;/code>&lt;/pre>&lt;p>設定後は，パスの有効化を忘れずに行ってください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>source ${HOME}/.bashrc
-&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/</guid><description>&lt;h1 id="箱庭用-ev3rt-開発環境のダウンロード">箱庭用 EV3RT 開発環境のダウンロード&lt;/h1>
-&lt;p>任意のフォルダ上で，athrillサンプル(athrill-sample)のプログラムを git clone してください．&lt;/p>
-&lt;p>なお，cloneする場所は，以下のように athrillと同じフォルダ階層で実施してください．&lt;/p>
-&lt;pre tabindex="0">&lt;code> |---athril
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;設定後は，パスの有効化を忘れずに行ってください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;source ${HOME}/.bashrc
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_arm/</guid><description>&lt;h1 id="箱庭用-ev3rt-開発環境のダウンロード"&gt;箱庭用 EV3RT 開発環境のダウンロード&lt;/h1&gt;
+&lt;p&gt;任意のフォルダ上で，athrillサンプル(athrill-sample)のプログラムを git clone してください．&lt;/p&gt;
+&lt;p&gt;なお，cloneする場所は，以下のように athrillと同じフォルダ階層で実施してください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt; |---athril
  |---athrill-target-ARMv7-A
  └---ev3rt-athrill-ARMv7-A
-&lt;/code>&lt;/pre>&lt;p>clone方法は以下の通りです．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/ev3rt-athrill-ARMv7-A.git
-&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_v850/</guid><description>&lt;h1 id="箱庭用-ev3rt-開発環境のダウンロード">箱庭用 EV3RT 開発環境のダウンロード&lt;/h1>
-&lt;p>任意のフォルダ上で，athrillサンプル(athrill-sample)のプログラムを git clone してください．&lt;/p>
-&lt;p>なお，cloneする場所は，以下のように athrillと同じフォルダ階層で実施してください．&lt;/p>
-&lt;pre tabindex="0">&lt;code> |---athril
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;clone方法は以下の通りです．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ git clone https://github.com/toppers/ev3rt-athrill-ARMv7-A.git
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/50_hakoniwa_ev3rt_install_v850/</guid><description>&lt;h1 id="箱庭用-ev3rt-開発環境のダウンロード"&gt;箱庭用 EV3RT 開発環境のダウンロード&lt;/h1&gt;
+&lt;p&gt;任意のフォルダ上で，athrillサンプル(athrill-sample)のプログラムを git clone してください．&lt;/p&gt;
+&lt;p&gt;なお，cloneする場所は，以下のように athrillと同じフォルダ階層で実施してください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt; |---athril
  |---athrill-target-v850e2m
  └---ev3rt-athrill-v850e2m
-&lt;/code>&lt;/pre>&lt;p>clone方法は以下の通りです．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/ev3rt-athrill-v850e2m.git
-&lt;/code>&lt;/pre>&lt;h2 id="サンプルアプリケーションのダウンロード">サンプルアプリケーションのダウンロード&lt;/h2>
-&lt;hr>
-&lt;p>2種類のサンプルアプリケーションを用意しています．&lt;/p>
-&lt;p>こちらから git clone いただき，&lt;code>hakoniwa-scenario-samples/single-robot&lt;/code>配下の全てのフォルダを&lt;br>
-&lt;code>ev3rt-athrill-v850e2m/sdk/workspace&lt;/code> に配置ください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ git clone https://github.com/toppers/hakoniwa-scenario-samples.git
-&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/</guid><description>&lt;h3 id="ev3ロボット制御プログラム">EV3ロボット制御プログラム&lt;/h3>
-&lt;p>現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．&lt;br>
-※まだ暫定構成です．&lt;/p>
-&lt;p>ARM版のathrill2を利用される場合は，以下のフォルダで作業してください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ ls ev3rt-athrill-ARMv7-A/sdk/OBJ1.1/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;clone方法は以下の通りです．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ git clone https://github.com/toppers/ev3rt-athrill-v850e2m.git
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="サンプルアプリケーションのダウンロード"&gt;サンプルアプリケーションのダウンロード&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;2種類のサンプルアプリケーションを用意しています．&lt;/p&gt;
+&lt;p&gt;こちらから git clone いただき，&lt;code&gt;hakoniwa-scenario-samples/single-robot&lt;/code&gt;配下の全てのフォルダを&lt;br&gt;
+&lt;code&gt;ev3rt-athrill-v850e2m/sdk/workspace&lt;/code&gt; に配置ください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ git clone https://github.com/toppers/hakoniwa-scenario-samples.git
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_arm/</guid><description>&lt;h3 id="ev3ロボット制御プログラム"&gt;EV3ロボット制御プログラム&lt;/h3&gt;
+&lt;p&gt;現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．&lt;br&gt;
+※まだ暫定構成です．&lt;/p&gt;
+&lt;p&gt;ARM版のathrill2を利用される場合は，以下のフォルダで作業してください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ ls ev3rt-athrill-ARMv7-A/sdk/OBJ1.1/
 app.c app.h device_config_mmap.txt Makefile memory_mmap.txt simstart.bash
 app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt unity_mmap.bin
-&lt;/code>&lt;/pre>&lt;p>現状は，app.c/main_task で直接制御を行っています．&lt;br>
-コード断片は以下の通りです．&lt;/p>
-&lt;pre tabindex="0">&lt;code> while(1) {
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;現状は，app.c/main_task で直接制御を行っています．&lt;br&gt;
+コード断片は以下の通りです．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt; while(1) {
 
  /**
  * PID controller
@@ -199,19 +199,19 @@ app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt unity_mmap.bi
 
  }
 }
-&lt;/code>&lt;/pre>&lt;p>上記のアプリケーション実装時の注意点として，以下があります．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</guid><description>&lt;h3 id="ev3ロボット制御プログラム">EV3ロボット制御プログラム&lt;/h3>
-&lt;p>現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．&lt;/p>
-&lt;p>v850版のathrill2を利用される場合は，以下のフォルダで作業してください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ ls ev3rt-athrill-v850e2m/sdk/workspace/line_trace/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上記のアプリケーション実装時の注意点として，以下があります．&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/51_ev3rt_app_introduction_v850/</guid><description>&lt;h3 id="ev3ロボット制御プログラム"&gt;EV3ロボット制御プログラム&lt;/h3&gt;
+&lt;p&gt;現時点の制御プログラムの開発フォルダは以下のフォルダで，制御プログラムは app.c です．&lt;/p&gt;
+&lt;p&gt;v850版のathrill2を利用される場合は，以下のフォルダで作業してください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ ls ev3rt-athrill-v850e2m/sdk/workspace/line_trace/
 app.c app.h device_config_mmap.txt log.txt memory_mmap.txt unity_mmap.bin
 app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt
-&lt;/code>&lt;/pre>&lt;p>または&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ ls ev3rt-athrill-v850e2m/sdk/workspace/color_sensor/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;または&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ ls ev3rt-athrill-v850e2m/sdk/workspace/color_sensor/
 app.c app.h device_config_mmap.txt log.txt memory_mmap.txt unity_mmap.bin
 app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt
-&lt;/code>&lt;/pre>&lt;p>現状は，app.c/main_task で直接制御を行っています．&lt;br>
-コード断片は以下の通りです．(line_traceの場合)&lt;/p>
-&lt;pre tabindex="0">&lt;code> while(1) {
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;現状は，app.c/main_task で直接制御を行っています．&lt;br&gt;
+コード断片は以下の通りです．(line_traceの場合)&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt; while(1) {
 
  /**
  * PID controller
@@ -231,429 +231,429 @@ app.cfg athrill_mmap.bin device_config.txt Makefile.inc memory.txt
 
  }
 }
-&lt;/code>&lt;/pre>&lt;p>上記のアプリケーション実装時の注意点として，以下があります．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</guid><description>&lt;h1 id="unityのインストールパッケージのインポート通信方式の切替方法">Unityのインストール・パッケージのインポート・通信方式の切替方法&lt;/h1>
-&lt;h2 id="unityパッケージのダウンロード">Unityパッケージのダウンロード&lt;/h2>
-&lt;hr>
-&lt;p>単体ロボット向けシミュレータで使用するUnityパッケージを2種類用意してあります．
-どちらかのパッケージをご選択いただき，ダウンロードを行ってください．&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>使用するUnityパッケージ&lt;/th>
- &lt;th>説明&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>single-robot-HackEV&lt;/td>
- &lt;td>HackEVを模した走行体モデルを使用しています&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>ev3rt-simple-robot&lt;/td>
- &lt;td>シンプルな走行体モデルを使用しています&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>single-robot-HackEV(v2.0)&lt;/td>
- &lt;td>上記２つのモデルを含んでおり自由に選択できます&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>single-robot-HackEV(v2.1)&lt;/td>
- &lt;td>single-robot-HackEV(v2.0)の内容に加え，シミュレータのコンフィグ機能，バイナリ実行機能を追加したものとなっております．(Windows, Mac対応済み．Linux版は開発中です)&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;p>それぞれ下記からダウンロードしてください&lt;/p>
-&lt;ul>
-&lt;li>single-robot-HackEV.unitypackage
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v1.0">https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v1.0&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>ev3rt-simple-robot.unitypackage
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/toppers/hakoniwa-Unity-SimpleCar/releases">https://github.com/toppers/hakoniwa-Unity-SimpleCar/releases&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>single-robot-HackEV.unitypackage(v2.0)
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.0">https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.0&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>single-robot-HackEV.unitypackage(v2.1) (Windows, Mac対応済み)
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.1">https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.1&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;p>使用するUnityのパッケージによって，設定画面のレイアウトが異なりますため，&lt;br>
-ご選択いただいたUnityパッケージに合わせた導入手順をご参照ください&lt;/p>
-&lt;ul>
-&lt;li>Unityのインストール・パッケージのインポート・通信方式の切替方法
-&lt;ul>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/">single-robot-HackEV(v2.1) を使用する場合&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/">single-robot-HackEV(v2.0) を使用する場合&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/">single-robot-HackEV または ev3rt-simple-robot を使用する場合&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</guid><description>&lt;h1 id="unityのインストールパッケージのインポート通信方式の切替方法">Unityのインストール・パッケージのインポート・通信方式の切替方法&lt;/h1>
-&lt;h2 id="unityのインストール">Unityのインストール&lt;/h2>
-&lt;hr>
-&lt;p>Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．&lt;/p>
-&lt;p>以下のサイト等が参考になるかと思います．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://tech-camp.in/note/technology/44408/">https://tech-camp.in/note/technology/44408/&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>※動作確認は&lt;code>Unity 2020.1.0b9(64bit)&lt;/code>で行っております．&lt;br>
-　使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．&lt;/p>
-&lt;h2 id="unityパッケージのインポート">Unityパッケージのインポート&lt;/h2>
-&lt;hr>
-&lt;h3 id="unity-起動">Unity 起動&lt;/h3>
-&lt;p>まず，インストールしたUnityを起動してください．&lt;br>
-無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_invoke.png " border="" width="800" />
-&lt;/figure>
-
-&lt;p>次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_create_project.png " border="" width="800" />
-&lt;/figure>
-
-&lt;p>成功すると，以下のようにUnityが起動します．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_start.png " border="" width="800" />
-&lt;/figure>
-
-&lt;h3 id="unityパッケージのインポート-1">Unityパッケージのインポート&lt;/h3>
-&lt;p>※画像は&lt;code>single-robot-HackEV.unitypackage&lt;/code>をインポートする際のものになります&lt;/p>
-&lt;p>Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Package&amp;hellip;」と選択し，任意の unitypackageファイルを選択してください．&lt;/p>
-&lt;p>成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．&lt;/p>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上記のアプリケーション実装時の注意点として，以下があります．&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install/</guid><description>&lt;h1 id="unityのインストールパッケージのインポート通信方式の切替方法"&gt;Unityのインストール・パッケージのインポート・通信方式の切替方法&lt;/h1&gt;
+&lt;h2 id="unityパッケージのダウンロード"&gt;Unityパッケージのダウンロード&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;単体ロボット向けシミュレータで使用するUnityパッケージを2種類用意してあります．
+どちらかのパッケージをご選択いただき，ダウンロードを行ってください．&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;使用するUnityパッケージ&lt;/th&gt;
+ &lt;th&gt;説明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;single-robot-HackEV&lt;/td&gt;
+ &lt;td&gt;HackEVを模した走行体モデルを使用しています&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ev3rt-simple-robot&lt;/td&gt;
+ &lt;td&gt;シンプルな走行体モデルを使用しています&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;single-robot-HackEV(v2.0)&lt;/td&gt;
+ &lt;td&gt;上記２つのモデルを含んでおり自由に選択できます&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;single-robot-HackEV(v2.1)&lt;/td&gt;
+ &lt;td&gt;single-robot-HackEV(v2.0)の内容に加え，シミュレータのコンフィグ機能，バイナリ実行機能を追加したものとなっております．(Windows, Mac対応済み．Linux版は開発中です)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;それぞれ下記からダウンロードしてください&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;single-robot-HackEV.unitypackage
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v1.0"&gt;https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ev3rt-simple-robot.unitypackage
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-Unity-SimpleCar/releases"&gt;https://github.com/toppers/hakoniwa-Unity-SimpleCar/releases&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;single-robot-HackEV.unitypackage(v2.0)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.0"&gt;https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;single-robot-HackEV.unitypackage(v2.1) (Windows, Mac対応済み)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.1"&gt;https://github.com/toppers/hakoniwa-Unity-HackEV/releases/tag/v2.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;使用するUnityのパッケージによって，設定画面のレイアウトが異なりますため，&lt;br&gt;
+ご選択いただいたUnityパッケージに合わせた導入手順をご参照ください&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unityのインストール・パッケージのインポート・通信方式の切替方法
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/"&gt;single-robot-HackEV(v2.1) を使用する場合&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/"&gt;single-robot-HackEV(v2.0) を使用する場合&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/"&gt;single-robot-HackEV または ev3rt-simple-robot を使用する場合&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v1.0/</guid><description>&lt;h1 id="unityのインストールパッケージのインポート通信方式の切替方法"&gt;Unityのインストール・パッケージのインポート・通信方式の切替方法&lt;/h1&gt;
+&lt;h2 id="unityのインストール"&gt;Unityのインストール&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．&lt;/p&gt;
+&lt;p&gt;以下のサイト等が参考になるかと思います．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://tech-camp.in/note/technology/44408/"&gt;https://tech-camp.in/note/technology/44408/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;※動作確認は&lt;code&gt;Unity 2020.1.0b9(64bit)&lt;/code&gt;で行っております．&lt;br&gt;
+　使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．&lt;/p&gt;
+&lt;h2 id="unityパッケージのインポート"&gt;Unityパッケージのインポート&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="unity-起動"&gt;Unity 起動&lt;/h3&gt;
+&lt;p&gt;まず，インストールしたUnityを起動してください．&lt;br&gt;
+無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_invoke.png " border="" width="800" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_create_project.png " border="" width="800" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;成功すると，以下のようにUnityが起動します．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_start.png " border="" width="800" /&gt;
+&lt;/figure&gt;
+
+&lt;h3 id="unityパッケージのインポート-1"&gt;Unityパッケージのインポート&lt;/h3&gt;
+&lt;p&gt;※画像は&lt;code&gt;single-robot-HackEV.unitypackage&lt;/code&gt;をインポートする際のものになります&lt;/p&gt;
+&lt;p&gt;Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Package&amp;hellip;」と選択し，任意の unitypackageファイルを選択してください．&lt;/p&gt;
+&lt;p&gt;成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_import.png " border="" width="300" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_import.png " border="" width="300" /&gt;
+&lt;/figure&gt;
 
-&lt;p>成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます．
-Toppers_Courseをダブルクリックすると下図の画面が現れます．&lt;/p>
+&lt;p&gt;成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます．
+Toppers_Courseをダブルクリックすると下図の画面が現れます．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_HackEV.png " border="" width="900" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_HackEV.png " border="" width="900" /&gt;
+&lt;/figure&gt;
 
-&lt;p>次に，シミュレーションに関わる設定を変更します．&lt;/p>
-&lt;p>Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p>
-&lt;p>「Time」&lt;br>
-&lt;code>Fixed Timestep&lt;/code> を 0.001に，
-&lt;code>Time Scale&lt;/code> を 0.6に設定します．&lt;/p>
+&lt;p&gt;次に，シミュレーションに関わる設定を変更します．&lt;/p&gt;
+&lt;p&gt;Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p&gt;
+&lt;p&gt;「Time」&lt;br&gt;
+&lt;code&gt;Fixed Timestep&lt;/code&gt; を 0.001に，
+&lt;code&gt;Time Scale&lt;/code&gt; を 0.6に設定します．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_time.png " border="" width="700" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_time.png " border="" width="700" /&gt;
+&lt;/figure&gt;
 
-&lt;p>※&lt;code>ev3rt-simple-robot.unitypackage&lt;/code>を使用する場合で，もしシミュレーションの動作が&lt;br>
-遅い場合には，&lt;code>Fixed Timestep&lt;/code> を 0.01に，EV3 Motor(Script)の&lt;code>Interval&lt;/code>を 0.0005に&lt;br>
-設定してください．&lt;/p>
-&lt;p>「Quality」&lt;br>
-&lt;code>Other&lt;/code>の&lt;code>VSync Count&lt;/code> を Don&amp;rsquo;t Sync に設定します．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_quality.png " border="" width="700" />
-&lt;/figure>
-
-&lt;p>これでインポート作業終了です．&lt;/p>
-&lt;h2 id="通信方式の切替方法">通信方式の切替方法&lt;/h2>
-&lt;hr>
-&lt;p>athrillとUnity間での通信方式によって設定が異なります．
-ご自身の環境に合わせて，どちらかの通信方式をご選択ください．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</guid><description>&lt;h1 id="unityのインストールパッケージのインポート通信方式の切替方法">Unityのインストール・パッケージのインポート・通信方式の切替方法&lt;/h1>
-&lt;h2 id="unityのインストール">Unityのインストール&lt;/h2>
-&lt;hr>
-&lt;p>Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．&lt;/p>
-&lt;p>以下のサイト等が参考になるかと思います．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://tech-camp.in/note/technology/44408/">https://tech-camp.in/note/technology/44408/&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>※動作確認は&lt;code>Unity 2020.1.0b9(64bit)&lt;/code>で行っております．&lt;br>
-　使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．&lt;/p>
-&lt;h2 id="unityパッケージのインポート">Unityパッケージのインポート&lt;/h2>
-&lt;hr>
-&lt;h3 id="unity-起動">Unity 起動&lt;/h3>
-&lt;p>まず，インストールしたUnityを起動してください．&lt;br>
-無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．&lt;/p>
+&lt;p&gt;※&lt;code&gt;ev3rt-simple-robot.unitypackage&lt;/code&gt;を使用する場合で，もしシミュレーションの動作が&lt;br&gt;
+遅い場合には，&lt;code&gt;Fixed Timestep&lt;/code&gt; を 0.01に，EV3 Motor(Script)の&lt;code&gt;Interval&lt;/code&gt;を 0.0005に&lt;br&gt;
+設定してください．&lt;/p&gt;
+&lt;p&gt;「Quality」&lt;br&gt;
+&lt;code&gt;Other&lt;/code&gt;の&lt;code&gt;VSync Count&lt;/code&gt; を Don&amp;rsquo;t Sync に設定します．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_quality.png " border="" width="700" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;これでインポート作業終了です．&lt;/p&gt;
+&lt;h2 id="通信方式の切替方法"&gt;通信方式の切替方法&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;athrillとUnity間での通信方式によって設定が異なります．
+ご自身の環境に合わせて，どちらかの通信方式をご選択ください．&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.0/</guid><description>&lt;h1 id="unityのインストールパッケージのインポート通信方式の切替方法"&gt;Unityのインストール・パッケージのインポート・通信方式の切替方法&lt;/h1&gt;
+&lt;h2 id="unityのインストール"&gt;Unityのインストール&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．&lt;/p&gt;
+&lt;p&gt;以下のサイト等が参考になるかと思います．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://tech-camp.in/note/technology/44408/"&gt;https://tech-camp.in/note/technology/44408/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;※動作確認は&lt;code&gt;Unity 2020.1.0b9(64bit)&lt;/code&gt;で行っております．&lt;br&gt;
+　使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．&lt;/p&gt;
+&lt;h2 id="unityパッケージのインポート"&gt;Unityパッケージのインポート&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="unity-起動"&gt;Unity 起動&lt;/h3&gt;
+&lt;p&gt;まず，インストールしたUnityを起動してください．&lt;br&gt;
+無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_invoke.png " border="" width="800" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_invoke.png " border="" width="800" /&gt;
+&lt;/figure&gt;
 
-&lt;p>次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．&lt;/p>
+&lt;p&gt;次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_create_project.png " border="" width="800" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_create_project.png " border="" width="800" /&gt;
+&lt;/figure&gt;
 
-&lt;p>成功すると，以下のようにUnityが起動します．&lt;/p>
+&lt;p&gt;成功すると，以下のようにUnityが起動します．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_start.png " border="" width="800" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_start.png " border="" width="800" /&gt;
+&lt;/figure&gt;
 
-&lt;h3 id="unityパッケージのインポート-1">Unityパッケージのインポート&lt;/h3>
-&lt;p>※画像は&lt;code>single-robot-HackEV.unitypackage&lt;/code>をインポートする際のものになります&lt;/p>
-&lt;p>Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Package&amp;hellip;」と選択し，任意の unitypackageファイルを選択してください．&lt;/p>
-&lt;p>成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．&lt;/p>
+&lt;h3 id="unityパッケージのインポート-1"&gt;Unityパッケージのインポート&lt;/h3&gt;
+&lt;p&gt;※画像は&lt;code&gt;single-robot-HackEV.unitypackage&lt;/code&gt;をインポートする際のものになります&lt;/p&gt;
+&lt;p&gt;Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Package&amp;hellip;」と選択し，任意の unitypackageファイルを選択してください．&lt;/p&gt;
+&lt;p&gt;成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_import.png " border="" width="300" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_import.png " border="" width="300" /&gt;
+&lt;/figure&gt;
 
-&lt;p>成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます．
-Toppers_Courseをダブルクリックすると下図の画面が現れます．&lt;/p>
+&lt;p&gt;成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます．
+Toppers_Courseをダブルクリックすると下図の画面が現れます．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_HackEV.png " border="" width="900" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_HackEV.png " border="" width="900" /&gt;
+&lt;/figure&gt;
 
-&lt;p>次に，シミュレーションに関わる設定を変更します．&lt;/p>
-&lt;p>Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p>
-&lt;p>「Time」&lt;br>
-&lt;code>Fixed Timestep&lt;/code> を 0.001に，
-&lt;code>Time Scale&lt;/code> を 0.6に設定します．&lt;/p>
+&lt;p&gt;次に，シミュレーションに関わる設定を変更します．&lt;/p&gt;
+&lt;p&gt;Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p&gt;
+&lt;p&gt;「Time」&lt;br&gt;
+&lt;code&gt;Fixed Timestep&lt;/code&gt; を 0.001に，
+&lt;code&gt;Time Scale&lt;/code&gt; を 0.6に設定します．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_time.png " border="" width="700" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_time.png " border="" width="700" /&gt;
+&lt;/figure&gt;
 
-&lt;p>※&lt;code>ev3rt-simple-robot.unitypackage&lt;/code>を使用する場合で，もしシミュレーションの動作が&lt;br>
-遅い場合には，&lt;code>Fixed Timestep&lt;/code> を 0.01に，EV3 Motor(Script)の&lt;code>Interval&lt;/code>を 0.0005に&lt;br>
-設定してください．&lt;/p>
-&lt;p>「Quality」&lt;br>
-&lt;code>Other&lt;/code>の&lt;code>VSync Count&lt;/code> を Don&amp;rsquo;t Sync に設定します．&lt;/p>
+&lt;p&gt;※&lt;code&gt;ev3rt-simple-robot.unitypackage&lt;/code&gt;を使用する場合で，もしシミュレーションの動作が&lt;br&gt;
+遅い場合には，&lt;code&gt;Fixed Timestep&lt;/code&gt; を 0.01に，EV3 Motor(Script)の&lt;code&gt;Interval&lt;/code&gt;を 0.0005に&lt;br&gt;
+設定してください．&lt;/p&gt;
+&lt;p&gt;「Quality」&lt;br&gt;
+&lt;code&gt;Other&lt;/code&gt;の&lt;code&gt;VSync Count&lt;/code&gt; を Don&amp;rsquo;t Sync に設定します．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_quality.png " border="" width="700" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_quality.png " border="" width="700" /&gt;
+&lt;/figure&gt;
 
-&lt;p>これでインポート作業終了です．&lt;/p>
-&lt;h2 id="通信方式の切替方法">通信方式の切替方法&lt;/h2>
-&lt;hr>
-&lt;p>athrillとUnity間での通信方式によって設定が異なります．
-ご自身の環境に合わせて，どちらかの通信方式をご選択ください．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</guid><description>&lt;h1 id="unityのインストールパッケージのインポート通信方式の切替方法">Unityのインストール・パッケージのインポート・通信方式の切替方法&lt;/h1>
-&lt;h2 id="unityのインストール">Unityのインストール&lt;/h2>
-&lt;hr>
-&lt;p>Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．&lt;/p>
-&lt;p>以下のサイト等が参考になるかと思います．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://tech-camp.in/note/technology/44408/">https://tech-camp.in/note/technology/44408/&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>※動作確認は&lt;code>Unity 2020.1.0b9(64bit)&lt;/code>で行っております．&lt;br>
-　使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．&lt;/p>
-&lt;h2 id="unityパッケージのインポート">Unityパッケージのインポート&lt;/h2>
-&lt;hr>
-&lt;h3 id="unity-起動">Unity 起動&lt;/h3>
-&lt;p>まず，インストールしたUnityを起動してください．&lt;br>
-無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_invoke.png " border="" width="800" />
-&lt;/figure>
-
-&lt;p>次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_create_project.png " border="" width="800" />
-&lt;/figure>
-
-&lt;p>成功すると，以下のようにUnityが起動します．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_start.png " border="" width="800" />
-&lt;/figure>
-
-&lt;h3 id="unityパッケージのインポート-1">Unityパッケージのインポート&lt;/h3>
-&lt;p>※画像は&lt;code>single-robot-HackEV.unitypackage&lt;/code>をインポートする際のものになります&lt;/p>
-&lt;p>Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Package&amp;hellip;」と選択し，任意の unitypackageファイルを選択してください．&lt;/p>
-&lt;p>成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_import.png " border="" width="300" />
-&lt;/figure>
-
-&lt;p>成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます．
-Toppers_Courseをダブルクリックすると下図の画面が現れます．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_HackEV.png " border="" width="900" />
-&lt;/figure>
-
-&lt;p>次に，シミュレーションに関わる設定を変更します．&lt;/p>
-&lt;p>Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p>
-&lt;p>「Time」&lt;br>
-&lt;code>Fixed Timestep&lt;/code> を 0.001に，
-&lt;code>Time Scale&lt;/code> を 0.6に設定します．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_time.png " border="" width="700" />
-&lt;/figure>
-
-&lt;p>※&lt;code>ev3rt-simple-robot.unitypackage&lt;/code>を使用する場合で，もしシミュレーションの動作が&lt;br>
-遅い場合には，&lt;code>Fixed Timestep&lt;/code> を 0.01に，EV3 Motor(Script)の&lt;code>Interval&lt;/code>を 0.0005に&lt;br>
-設定してください．&lt;/p>
-&lt;p>「Quality」&lt;br>
-&lt;code>Other&lt;/code>の&lt;code>VSync Count&lt;/code> を Don&amp;rsquo;t Sync に設定します．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_quality.png " border="" width="700" />
-&lt;/figure>
-
-&lt;p>これでインポート作業終了です．&lt;/p>
-&lt;h2 id="通信方式の切替方法">通信方式の切替方法&lt;/h2>
-&lt;hr>
-&lt;p>athrillとUnity間での通信方式に設定を行います．&lt;br>
-設定は&lt;code>config.json&lt;/code>という設定ファイルを作成し，設定を行います．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>&lt;h1 id="mmap用unity設定">MMAP用Unity設定&lt;/h1>
-&lt;p>UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．&lt;/p>
-&lt;p>Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p>
-&lt;p>「Player」&lt;br>
-&lt;code>Other Setting&lt;/code>の&lt;code>Scripting Define Symbols&lt;/code> に&lt;code>VDEV_IO_MMAP&lt;/code>と設定します．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_player_mmap.png " border="" width="700" />
-&lt;/figure>
-
-&lt;h1 id="mmap用パラメータ設定">MMAP用パラメータ設定&lt;/h1>
-&lt;p>※なお，このページで紹介しているUnity画面の画像はWindows版のものです&lt;/p>
-&lt;p>設定する場所は，Unity の以下のスクリプト・パラメータ(Filepath)部分です．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Feed2a22a-e74b-9e8f-0774-6ca34783a6e4.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=b6a404498493184bdc1bcfe3d2749bad">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Feed2a22a-e74b-9e8f-0774-6ca34783a6e4.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=b6a404498493184bdc1bcfe3d2749bad" alt="image.png">&lt;/a>&lt;/p>
-&lt;p>インポート直後ですと，[EV3 Actuator] と [EV3 Sensor]の Filepath は空白です．&lt;br>
-ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．&lt;/p>
-&lt;p>MMAPファイル自体は，以下の２ファイルが&lt;code>app.c&lt;/code>と同じフォルダに含まれています．&lt;/p>
-&lt;ul>
-&lt;li>athrill_mmap.bin&lt;/li>
-&lt;li>unity_mmap.bin&lt;/li>
-&lt;/ul>
-&lt;p>unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定してください(設定例：下図)．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=c00912d532173b48318ebd94f6deec5a">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=c00912d532173b48318ebd94f6deec5a" alt="image.png">&lt;/a>&lt;/p>
-&lt;p>athrill_mmap.bin の絶対ファイルパスを，[EV3 Actuator]のFilepathに設定してください(設定例：下図)．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fbac2a522-ef60-83de-3847-593907d4caa3.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=7b5daec21b535117b589967d8817fa69">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fbac2a522-ef60-83de-3847-593907d4caa3.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=7b5daec21b535117b589967d8817fa69" alt="image.png">&lt;/a>&lt;/p>
-&lt;p>例えば，v850版を使用するという前提で&lt;code>ev3rt-athrill-v850e2m&lt;/code>のローカルリポジトリが，&lt;br>
-&lt;code>C:\project\hakoniwa&lt;/code>にあり，実行したいアプリケーションのフォルダが&lt;code>line_trace&lt;/code>の場合は，&lt;br>
-以下のパスを設定します．&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>[EV3 Actuator]のFilePath&lt;br>
-&lt;code>C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\unity_mmap.bin&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>[EV3 Sensor]のFilePath&lt;br>
-&lt;code>C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\athrill_mmap.bin&lt;/code>&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>以上でMMAPの設定は終わりです．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap_v2.0/</guid><description>&lt;h1 id="mmap用unity設定">MMAP用Unity設定&lt;/h1>
-&lt;p>UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．&lt;/p>
-&lt;p>Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p>
-&lt;p>「Player」&lt;br>
-&lt;code>Other Setting&lt;/code>の&lt;code>Scripting Define Symbols&lt;/code> に&lt;code>VDEV_IO_MMAP&lt;/code>と設定します．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_player_mmap.png " border="" width="700" />
-&lt;/figure>
-
-&lt;h1 id="mmap用パラメータ設定">MMAP用パラメータ設定&lt;/h1>
-&lt;p>※なお，このページで紹介しているUnity画面の画像はWindows版のものです&lt;/p>
-&lt;p>&lt;code>Hierarchy&lt;/code>ビューで&lt;code>Robot&lt;/code>配下の&lt;code>RoboModel&lt;/code>を選択してください．&lt;br>
-すると画面右の&lt;code>Inspector&lt;/code>ビューに[Io Writer (Script)]と[Io Reader (Script)]の項目が表示されます.&lt;/p>
-&lt;p>
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_hierarchy_view_robo_v2.0.png " border="" width="300" />
-&lt;/figure>
-
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_mmap_emp.png " border="" width="300" />
-&lt;/figure>
-&lt;/p>
-&lt;p>インポート直後ですと，[Io Writer (Script)] と [Io Reader (Script)]の Filepath は空白です．&lt;br>
-ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．&lt;/p>
-&lt;p>MMAPファイル自体は，以下の２ファイルが&lt;code>app.c&lt;/code>と同じフォルダに含まれています．&lt;/p>
-&lt;ul>
-&lt;li>athrill_mmap.bin&lt;/li>
-&lt;li>unity_mmap.bin&lt;/li>
-&lt;/ul>
-&lt;p>unity_mmap.bin の絶対ファイルパスを，[Io Writer (Script)]のFilepathに設定してください(設定例：下図)．&lt;/p>
-&lt;p>athrill_mmap.bin の絶対ファイルパスを，[Io Reader (Script)]のFilepathに設定してください(設定例：下図)．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_mmap.png " border="" width="400" />
-&lt;/figure>
-
-&lt;p>例えば，v850版を使用するという前提で&lt;code>ev3rt-athrill-v850e2m&lt;/code>のローカルリポジトリが，&lt;br>
-&lt;code>C:\project\hakoniwa&lt;/code>にあり，実行したいアプリケーションのフォルダが&lt;code>line_trace&lt;/code>の場合は，&lt;br>
-以下のパスを設定します．&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>[Io Writer (Script)]のFilePath&lt;br>
-&lt;code>C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\unity_mmap.bin&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>[Io Reader (Script)]のFilePath&lt;br>
-&lt;code>C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\athrill_mmap.bin&lt;/code>&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>以上でMMAPの設定は終わりです．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</guid><description>&lt;h1 id="udp用unity設定">UDP用Unity設定&lt;/h1>
-&lt;p>UnityとathrillをUDPで通信する場合は，Unity側で以下の設定を行います．&lt;/p>
-&lt;p>&lt;code>Hierarchy&lt;/code>ビューで&lt;code>Robot&lt;/code>配下の&lt;code>RoboModel_3&lt;/code>を選択してください．&lt;br>
-すると画面右の&lt;code>Inspector&lt;/code>ビューに[EV3 Motor (Script)]の項目が表示されます.&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_hierarchy_view.png " border="" width="300" />
-&lt;/figure>
-
-&lt;p>表示されたら，項目内のプロパティ&lt;code>Max Diff Time&lt;/code>を40000に変更します．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_fix_maxdifftime.png " border="" width="350" />
-&lt;/figure>
-
-&lt;h1 id="udp用パラメータ設定">UDP用パラメータ設定&lt;/h1>
-&lt;p>UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．&lt;/p>
-&lt;p>&lt;strong>※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．&lt;/strong>&lt;/p>
-&lt;h3 id="説明する上でのipアドレスの構成例">説明する上でのIPアドレスの構成例&lt;/h3>
-&lt;p>Unity側のIPアドレス：192.168.11.32&lt;br>
-athrill側のIPアドレス：192.168.11.20&lt;/p>
-&lt;p>なお，IPアドレスの確認方法は以下のやり方でわかります．&lt;/p>
-&lt;h4 id="お使いのpcがlinuxwslの場合">お使いのPCがLinux/WSLの場合&lt;/h4>
-&lt;p>ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ ifconfig
+&lt;p&gt;これでインポート作業終了です．&lt;/p&gt;
+&lt;h2 id="通信方式の切替方法"&gt;通信方式の切替方法&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;athrillとUnity間での通信方式によって設定が異なります．
+ご自身の環境に合わせて，どちらかの通信方式をご選択ください．&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/60_unity_install_v2.1/</guid><description>&lt;h1 id="unityのインストールパッケージのインポート通信方式の切替方法"&gt;Unityのインストール・パッケージのインポート・通信方式の切替方法&lt;/h1&gt;
+&lt;h2 id="unityのインストール"&gt;Unityのインストール&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Unityのインストール方法は色々なサイト・書籍で紹介されておりますので，インストールください．&lt;/p&gt;
+&lt;p&gt;以下のサイト等が参考になるかと思います．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://tech-camp.in/note/technology/44408/"&gt;https://tech-camp.in/note/technology/44408/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;※動作確認は&lt;code&gt;Unity 2020.1.0b9(64bit)&lt;/code&gt;で行っております．&lt;br&gt;
+　使用する場合はこれ以降のバージョンのUnityをインストールすることをお勧めします．&lt;/p&gt;
+&lt;h2 id="unityパッケージのインポート"&gt;Unityパッケージのインポート&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="unity-起動"&gt;Unity 起動&lt;/h3&gt;
+&lt;p&gt;まず，インストールしたUnityを起動してください．&lt;br&gt;
+無事起動すると以下のような画面が出ますので，右上の「新規作成」を選択し新規プロジェクト作成します．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_invoke.png " border="" width="800" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;次の選択画面で，「プロジェクト名」に適当なプロジェクト名を設定して，「作成」ボタンを押下してください．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_create_project.png " border="" width="800" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;成功すると，以下のようにUnityが起動します．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_start.png " border="" width="800" /&gt;
+&lt;/figure&gt;
+
+&lt;h3 id="unityパッケージのインポート-1"&gt;Unityパッケージのインポート&lt;/h3&gt;
+&lt;p&gt;※画像は&lt;code&gt;single-robot-HackEV.unitypackage&lt;/code&gt;をインポートする際のものになります&lt;/p&gt;
+&lt;p&gt;Unity のメニューから，「Assets」⇒「Import Package」⇒「Custom Package&amp;hellip;」と選択し，任意の unitypackageファイルを選択してください．&lt;/p&gt;
+&lt;p&gt;成功すると，下図の画面がポップアップされますので，素直に「Import」ボタンを押下してください．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_import.png " border="" width="300" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;成功するとProject/Scenes配下にToppers_Courseというシーンが追加されます．
+Toppers_Courseをダブルクリックすると下図の画面が現れます．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_HackEV.png " border="" width="900" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;次に，シミュレーションに関わる設定を変更します．&lt;/p&gt;
+&lt;p&gt;Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p&gt;
+&lt;p&gt;「Time」&lt;br&gt;
+&lt;code&gt;Fixed Timestep&lt;/code&gt; を 0.001に，
+&lt;code&gt;Time Scale&lt;/code&gt; を 0.6に設定します．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_time.png " border="" width="700" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;※&lt;code&gt;ev3rt-simple-robot.unitypackage&lt;/code&gt;を使用する場合で，もしシミュレーションの動作が&lt;br&gt;
+遅い場合には，&lt;code&gt;Fixed Timestep&lt;/code&gt; を 0.01に，EV3 Motor(Script)の&lt;code&gt;Interval&lt;/code&gt;を 0.0005に&lt;br&gt;
+設定してください．&lt;/p&gt;
+&lt;p&gt;「Quality」&lt;br&gt;
+&lt;code&gt;Other&lt;/code&gt;の&lt;code&gt;VSync Count&lt;/code&gt; を Don&amp;rsquo;t Sync に設定します．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_quality.png " border="" width="700" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;これでインポート作業終了です．&lt;/p&gt;
+&lt;h2 id="通信方式の切替方法"&gt;通信方式の切替方法&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;athrillとUnity間での通信方式に設定を行います．&lt;br&gt;
+設定は&lt;code&gt;config.json&lt;/code&gt;という設定ファイルを作成し，設定を行います．&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap/</guid><description>&lt;h1 id="mmap用unity設定"&gt;MMAP用Unity設定&lt;/h1&gt;
+&lt;p&gt;UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．&lt;/p&gt;
+&lt;p&gt;Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p&gt;
+&lt;p&gt;「Player」&lt;br&gt;
+&lt;code&gt;Other Setting&lt;/code&gt;の&lt;code&gt;Scripting Define Symbols&lt;/code&gt; に&lt;code&gt;VDEV_IO_MMAP&lt;/code&gt;と設定します．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_player_mmap.png " border="" width="700" /&gt;
+&lt;/figure&gt;
+
+&lt;h1 id="mmap用パラメータ設定"&gt;MMAP用パラメータ設定&lt;/h1&gt;
+&lt;p&gt;※なお，このページで紹介しているUnity画面の画像はWindows版のものです&lt;/p&gt;
+&lt;p&gt;設定する場所は，Unity の以下のスクリプト・パラメータ(Filepath)部分です．&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Feed2a22a-e74b-9e8f-0774-6ca34783a6e4.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=b6a404498493184bdc1bcfe3d2749bad"&gt;&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Feed2a22a-e74b-9e8f-0774-6ca34783a6e4.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=b6a404498493184bdc1bcfe3d2749bad" alt="image.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;インポート直後ですと，[EV3 Actuator] と [EV3 Sensor]の Filepath は空白です．&lt;br&gt;
+ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．&lt;/p&gt;
+&lt;p&gt;MMAPファイル自体は，以下の２ファイルが&lt;code&gt;app.c&lt;/code&gt;と同じフォルダに含まれています．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;athrill_mmap.bin&lt;/li&gt;
+&lt;li&gt;unity_mmap.bin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;unity_mmap.bin の絶対ファイルパスを，[EV3 Sensor]のFilepathに設定してください(設定例：下図)．&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=c00912d532173b48318ebd94f6deec5a"&gt;&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F95b47a49-4904-16dd-f568-09d285afd2a1.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=c00912d532173b48318ebd94f6deec5a" alt="image.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;athrill_mmap.bin の絶対ファイルパスを，[EV3 Actuator]のFilepathに設定してください(設定例：下図)．&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fbac2a522-ef60-83de-3847-593907d4caa3.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=7b5daec21b535117b589967d8817fa69"&gt;&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fbac2a522-ef60-83de-3847-593907d4caa3.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=7b5daec21b535117b589967d8817fa69" alt="image.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;例えば，v850版を使用するという前提で&lt;code&gt;ev3rt-athrill-v850e2m&lt;/code&gt;のローカルリポジトリが，&lt;br&gt;
+&lt;code&gt;C:\project\hakoniwa&lt;/code&gt;にあり，実行したいアプリケーションのフォルダが&lt;code&gt;line_trace&lt;/code&gt;の場合は，&lt;br&gt;
+以下のパスを設定します．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;[EV3 Actuator]のFilePath&lt;br&gt;
+&lt;code&gt;C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\unity_mmap.bin&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[EV3 Sensor]のFilePath&lt;br&gt;
+&lt;code&gt;C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\athrill_mmap.bin&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上でMMAPの設定は終わりです．&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_mmap_v2.0/</guid><description>&lt;h1 id="mmap用unity設定"&gt;MMAP用Unity設定&lt;/h1&gt;
+&lt;p&gt;UnityとathrillをMMAPで通信する場合は，Unity側で以下の設定を行います．&lt;/p&gt;
+&lt;p&gt;Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p&gt;
+&lt;p&gt;「Player」&lt;br&gt;
+&lt;code&gt;Other Setting&lt;/code&gt;の&lt;code&gt;Scripting Define Symbols&lt;/code&gt; に&lt;code&gt;VDEV_IO_MMAP&lt;/code&gt;と設定します．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_player_mmap.png " border="" width="700" /&gt;
+&lt;/figure&gt;
+
+&lt;h1 id="mmap用パラメータ設定"&gt;MMAP用パラメータ設定&lt;/h1&gt;
+&lt;p&gt;※なお，このページで紹介しているUnity画面の画像はWindows版のものです&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Hierarchy&lt;/code&gt;ビューで&lt;code&gt;Robot&lt;/code&gt;配下の&lt;code&gt;RoboModel&lt;/code&gt;を選択してください．&lt;br&gt;
+すると画面右の&lt;code&gt;Inspector&lt;/code&gt;ビューに[Io Writer (Script)]と[Io Reader (Script)]の項目が表示されます.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_hierarchy_view_robo_v2.0.png " border="" width="300" /&gt;
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_mmap_emp.png " border="" width="300" /&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;インポート直後ですと，[Io Writer (Script)] と [Io Reader (Script)]の Filepath は空白です．&lt;br&gt;
+ここに設定する値としては，athrillとUnity間で通信するためのMMAPファイルの絶対パスを指定します．&lt;/p&gt;
+&lt;p&gt;MMAPファイル自体は，以下の２ファイルが&lt;code&gt;app.c&lt;/code&gt;と同じフォルダに含まれています．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;athrill_mmap.bin&lt;/li&gt;
+&lt;li&gt;unity_mmap.bin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;unity_mmap.bin の絶対ファイルパスを，[Io Writer (Script)]のFilepathに設定してください(設定例：下図)．&lt;/p&gt;
+&lt;p&gt;athrill_mmap.bin の絶対ファイルパスを，[Io Reader (Script)]のFilepathに設定してください(設定例：下図)．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_mmap.png " border="" width="400" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;例えば，v850版を使用するという前提で&lt;code&gt;ev3rt-athrill-v850e2m&lt;/code&gt;のローカルリポジトリが，&lt;br&gt;
+&lt;code&gt;C:\project\hakoniwa&lt;/code&gt;にあり，実行したいアプリケーションのフォルダが&lt;code&gt;line_trace&lt;/code&gt;の場合は，&lt;br&gt;
+以下のパスを設定します．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;[Io Writer (Script)]のFilePath&lt;br&gt;
+&lt;code&gt;C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\unity_mmap.bin&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[Io Reader (Script)]のFilePath&lt;br&gt;
+&lt;code&gt;C:\project\hakoniwa\ev3rt-athrill-v850e2m\sdk\workspace\line_trace\athrill_mmap.bin&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上でMMAPの設定は終わりです．&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp/</guid><description>&lt;h1 id="udp用unity設定"&gt;UDP用Unity設定&lt;/h1&gt;
+&lt;p&gt;UnityとathrillをUDPで通信する場合は，Unity側で以下の設定を行います．&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Hierarchy&lt;/code&gt;ビューで&lt;code&gt;Robot&lt;/code&gt;配下の&lt;code&gt;RoboModel_3&lt;/code&gt;を選択してください．&lt;br&gt;
+すると画面右の&lt;code&gt;Inspector&lt;/code&gt;ビューに[EV3 Motor (Script)]の項目が表示されます.&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_hierarchy_view.png " border="" width="300" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;表示されたら，項目内のプロパティ&lt;code&gt;Max Diff Time&lt;/code&gt;を40000に変更します．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_fix_maxdifftime.png " border="" width="350" /&gt;
+&lt;/figure&gt;
+
+&lt;h1 id="udp用パラメータ設定"&gt;UDP用パラメータ設定&lt;/h1&gt;
+&lt;p&gt;UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="説明する上でのipアドレスの構成例"&gt;説明する上でのIPアドレスの構成例&lt;/h3&gt;
+&lt;p&gt;Unity側のIPアドレス：192.168.11.32&lt;br&gt;
+athrill側のIPアドレス：192.168.11.20&lt;/p&gt;
+&lt;p&gt;なお，IPアドレスの確認方法は以下のやり方でわかります．&lt;/p&gt;
+&lt;h4 id="お使いのpcがlinuxwslの場合"&gt;お使いのPCがLinux/WSLの場合&lt;/h4&gt;
+&lt;p&gt;ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ ifconfig
 eth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96
  inet addr:192.168.11.32 Bcast:192.168.11.255 Mask:255.255.255.0
  inet6 addr: fe80::cc6d:70d3:a934:a61b/64 Scope:Unknown
@@ -662,17 +662,17 @@ eth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96
  TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
  collisions:0
  RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
-&lt;/code>&lt;/pre>&lt;h4 id="お使いのpcがwindowsの場合">お使いのPCがWindowsの場合&lt;/h4>
-&lt;p>Windows PowerShell を開いて，ipconfigを叩きます．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</guid><description>&lt;h1 id="udp用パラメータ設定">UDP用パラメータ設定&lt;/h1>
-&lt;p>UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．&lt;/p>
-&lt;p>&lt;strong>※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．&lt;/strong>&lt;/p>
-&lt;h3 id="説明する上でのipアドレスの構成例">説明する上でのIPアドレスの構成例&lt;/h3>
-&lt;p>Unity側のIPアドレス：192.168.11.32&lt;br>
-athrill側のIPアドレス：192.168.11.20&lt;/p>
-&lt;p>なお，IPアドレスの確認方法は以下のやり方でわかります．&lt;/p>
-&lt;h4 id="お使いのpcがlinuxwslの場合">お使いのPCがLinux/WSLの場合&lt;/h4>
-&lt;p>ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ ifconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="お使いのpcがwindowsの場合"&gt;お使いのPCがWindowsの場合&lt;/h4&gt;
+&lt;p&gt;Windows PowerShell を開いて，ipconfigを叩きます．&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ導入手順</title><link>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-setup-detail/61_unity_install_udp_v2.0/</guid><description>&lt;h1 id="udp用パラメータ設定"&gt;UDP用パラメータ設定&lt;/h1&gt;
+&lt;p&gt;UnityとathrillをUDPで通信する場合は，以下のパラメータを設定する必要があります．&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;※ただし，1台のPCでシミュレーションを実行する場合は，以下の設定は不要です．&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="説明する上でのipアドレスの構成例"&gt;説明する上でのIPアドレスの構成例&lt;/h3&gt;
+&lt;p&gt;Unity側のIPアドレス：192.168.11.32&lt;br&gt;
+athrill側のIPアドレス：192.168.11.20&lt;/p&gt;
+&lt;p&gt;なお，IPアドレスの確認方法は以下のやり方でわかります．&lt;/p&gt;
+&lt;h4 id="お使いのpcがlinuxwslの場合"&gt;お使いのPCがLinux/WSLの場合&lt;/h4&gt;
+&lt;p&gt;ターミナル上で ifconfig コマンドを叩いて，ethernetの inet addr の値を確認します．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ ifconfig
 eth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96
  inet addr:192.168.11.32 Bcast:192.168.11.255 Mask:255.255.255.0
  inet6 addr: fe80::cc6d:70d3:a934:a61b/64 Scope:Unknown
@@ -681,9 +681,9 @@ eth0 Link encap:Ethernet HWaddr 54:ee:75:b4:3c:96
  TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
  collisions:0
  RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
-&lt;/code>&lt;/pre>&lt;h4 id="お使いのpcがwindowsの場合">お使いのPCがWindowsの場合&lt;/h4>
-&lt;p>Windows PowerShell を開いて，ipconfigを叩きます．&lt;/p>
-&lt;pre tabindex="0">&lt;code>&amp;gt; ipconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="お使いのpcがwindowsの場合"&gt;お使いのPCがWindowsの場合&lt;/h4&gt;
+&lt;p&gt;Windows PowerShell を開いて，ipconfigを叩きます．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;&amp;gt; ipconfig
 
 Windows IP 構成
 
@@ -694,6 +694,6 @@ Windows IP 構成
  IPv4 アドレス . . . . . . . . . . . .: 192.168.11.32
  サブネット マスク . . . . . . . . . .: 255.255.255.0
  デフォルト ゲートウェイ . . . . . . .: 192.168.11.1
-&lt;/code>&lt;/pre>&lt;h3 id="athrillのパラメータ">athrillのパラメータ&lt;/h3>
-&lt;p>athrillを実行するフォルダ配下に，athrill制御用のパラメータ設定ファイル device_config.txt があります．&lt;br>
-そこに，以下のようにIPアドレスを定義してください．&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="athrillのパラメータ"&gt;athrillのパラメータ&lt;/h3&gt;
+&lt;p&gt;athrillを実行するフォルダ配下に，athrill制御用のパラメータ設定ファイル device_config.txt があります．&lt;br&gt;
+そこに，以下のようにIPアドレスを定義してください．&lt;/p&gt;</description></item></channel></rss>

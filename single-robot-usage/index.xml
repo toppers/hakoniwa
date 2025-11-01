@@ -1,429 +1,429 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Single-Robot-Usages on 箱庭</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/</link><description>Recent content in Single-Robot-Usages on 箱庭</description><generator>Hugo</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/single-robot-usage/index.xml" rel="self" type="application/rss+xml"/><item><title>シミュレーションに関するチューニング</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</guid><description>&lt;h1 id="変更可能なパラメータ">変更可能なパラメータ&lt;/h1>
-&lt;h2 id="ev3のパラメータについて">EV3のパラメータについて&lt;/h2>
-&lt;hr>
-&lt;p>今回のシミュレーション環境(Unity側)にはいくつかパラメータがありますので，その説明を行います．&lt;/p>
-&lt;p>まず，パラメータを参照するには，Hierarchyビューで，「EV3」を選択してください(下図)．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F11a57fef-9e2d-e0a0-ef76-af5f71fc5d09.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=2fdf76b9af97446c26fe08b5e484d631">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F11a57fef-9e2d-e0a0-ef76-af5f71fc5d09.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=2fdf76b9af97446c26fe08b5e484d631" alt="image.png">&lt;/a>&lt;/p>
-&lt;p>すると，InspectorビューにEV3のパラメータが表示されます．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F835e61c2-0ec6-b955-3e32-01ba535a1860.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=34989dc74c297f1639308d77c4282ba6">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F835e61c2-0ec6-b955-3e32-01ba535a1860.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=34989dc74c297f1639308d77c4282ba6" alt="image.png">&lt;/a>&lt;/p>
-&lt;p>以下，変更可能なパラメータを説明します(説明されていないものは変更しないでください)．
-※これらのパラメータは，シミュレーション実行時に動的に変更も可能なものもあります．&lt;/p>
-&lt;h2 id="ev3-actuatorscript">EV3 Actuator(Script)&lt;/h2>
-&lt;hr>
-&lt;h3 id="port動的変更不可">Port(動的変更不可)&lt;/h3>
-&lt;p>Unity側のUDP受信ポート番号です．デフォルトでは54001です．&lt;/p>
-&lt;p>この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>DEBUG_FUNC_VDEV_TX_PORTNO 54001
-&lt;/code>&lt;/pre>&lt;p>device_config.txt は，app.cと同じフォルダにあります．&lt;/p>
-&lt;h2 id="ev3-sensorscript">EV3 Sensor(Script)&lt;/h2>
-&lt;hr>
-&lt;h3 id="host動的変更不可">Host(動的変更不可)&lt;/h3>
-&lt;p>Athrillの配置マシンのIPアドレスです．
-Unityと同じマシン上に配置する場合は，デフォルト値のままで良いです．&lt;/p>
-&lt;p>マシン負荷が高く，athrillとUnityを別マシンで動かす場合は，このIPアドレスを変更して対応ください．&lt;/p>
-&lt;h3 id="port動的変更不可-1">Port(動的変更不可)&lt;/h3>
-&lt;p>Athrill側のUDP受信ポート番号です．デフォルトでは54002です．&lt;/p>
-&lt;p>この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>DEBUG_FUNC_VDEV_RX_PORTNO 54002
-&lt;/code>&lt;/pre>&lt;p>device_config.txt は，app.cと同じフォルダにあります．&lt;/p>
-&lt;h2 id="ev3-motorscript">EV3 Motor(Script)&lt;/h2>
-&lt;hr>
-&lt;h3 id="power-const動的変更可">Power Const(動的変更可)&lt;/h3>
-&lt;p>EV3のモータのパワーです．デフォルトで40としていますが，値を変更できます．&lt;/p>
-&lt;p>ただ，あまり大きい値を設定しすぎるとUnity側の問題か，物理的にありえないのかよくわかりませんが，EVロボットが吹っ飛びますので，ご注意ください．．．&lt;/p>
-&lt;h2 id="照明のonoffについて">照明のON/OFFについて&lt;/h2>
-&lt;hr>
-&lt;p>今回のデモでは，照明を３個用意しています．&lt;/p>
-&lt;ul>
-&lt;li>全体照明１個
-&lt;ul>
-&lt;li>Directional Light&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>スポットライト２個
-&lt;ul>
-&lt;li>Spot Light1&lt;/li>
-&lt;li>Spot Light2&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>それぞれの照明はシミュレーション実行時にON/OFFできます．
-ON/OFFのさせ方は単純で，HierachyビューでON/OFFしたいライトを選択します．&lt;/p>
-&lt;p>すると，Inspectorビューに下図のように「Light」のチェックボックスが見えます．
-このチェックボックスを外せばOFFになります．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fd14a2c69-1a29-7e92-9281-db2f2c6dfeb0.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=6cce316ca8400bfc1fd70ee8d93784b5">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fd14a2c69-1a29-7e92-9281-db2f2c6dfeb0.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=6cce316ca8400bfc1fd70ee8d93784b5" alt="image.png">&lt;/a>&lt;/p>
-&lt;h2 id="カラーセンサの状態">カラーセンサの状態&lt;/h2>
-&lt;hr>
-&lt;p>パラメータではないですが，カラーセンサの認識している状態を知りたくなることがあるかと思います．
-そのため，カラーセンサの認識している値をUnityのパラメータ表示機能を利用して可視化しています．&lt;/p>
-&lt;p>参照するには，下図のようにHierarchyビューでColorSensorを選択してください．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fb1a7d803-a262-07bb-d2e3-cfdc188ae9ab.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=435eebd6c23b9982645643c53f8dc4c1">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fb1a7d803-a262-07bb-d2e3-cfdc188ae9ab.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=435eebd6c23b9982645643c53f8dc4c1" alt="image.png">&lt;/a>&lt;/p>
-&lt;p>そうすると，Inspectorビューに下図のように認識値(Rgb)が表示されます．&lt;/p>
-&lt;p>&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F487343b4-2303-046a-f819-42f058143bf7.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=17d4a51db5055db1f82b7a47bc56651c">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F487343b4-2303-046a-f819-42f058143bf7.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=17d4a51db5055db1f82b7a47bc56651c" alt="image.png">&lt;/a>&lt;/p>
-&lt;p>Rgbは，現在認識している色をそのまま表示しています．
-Rgb_r,g,b には，カラーセンサで取得できる数値を表示しています．&lt;/p></description></item><item><title>シミュレーションに関するチューニング</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/</guid><description>&lt;h2 id="single-robot-hackevv20の追加要素について">single-robot-HackEV(v2.0)の追加要素について&lt;/h2>
-&lt;hr>
-&lt;h3 id="hakoniwaクラスの追加">Hakoniwaクラスの追加&lt;/h3>
-&lt;p>&lt;code>single-robot-HackEV(v2.0)&lt;/code> では&lt;code>Hakoniwa&lt;/code>クラスが設けられました．&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Single-Robot-Usages on 箱庭</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/</link><description>Recent content in Single-Robot-Usages on 箱庭</description><generator>Hugo</generator><language>ja</language><atom:link href="https://toppers.github.io/hakoniwa/single-robot-usage/index.xml" rel="self" type="application/rss+xml"/><item><title>シミュレーションに関するチューニング</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/</guid><description>&lt;h1 id="変更可能なパラメータ"&gt;変更可能なパラメータ&lt;/h1&gt;
+&lt;h2 id="ev3のパラメータについて"&gt;EV3のパラメータについて&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;今回のシミュレーション環境(Unity側)にはいくつかパラメータがありますので，その説明を行います．&lt;/p&gt;
+&lt;p&gt;まず，パラメータを参照するには，Hierarchyビューで，「EV3」を選択してください(下図)．&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F11a57fef-9e2d-e0a0-ef76-af5f71fc5d09.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=2fdf76b9af97446c26fe08b5e484d631"&gt;&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F11a57fef-9e2d-e0a0-ef76-af5f71fc5d09.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=2fdf76b9af97446c26fe08b5e484d631" alt="image.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;すると，InspectorビューにEV3のパラメータが表示されます．&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F835e61c2-0ec6-b955-3e32-01ba535a1860.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=34989dc74c297f1639308d77c4282ba6"&gt;&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F835e61c2-0ec6-b955-3e32-01ba535a1860.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=34989dc74c297f1639308d77c4282ba6" alt="image.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以下，変更可能なパラメータを説明します(説明されていないものは変更しないでください)．
+※これらのパラメータは，シミュレーション実行時に動的に変更も可能なものもあります．&lt;/p&gt;
+&lt;h2 id="ev3-actuatorscript"&gt;EV3 Actuator(Script)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="port動的変更不可"&gt;Port(動的変更不可)&lt;/h3&gt;
+&lt;p&gt;Unity側のUDP受信ポート番号です．デフォルトでは54001です．&lt;/p&gt;
+&lt;p&gt;この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;DEBUG_FUNC_VDEV_TX_PORTNO 54001
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;device_config.txt は，app.cと同じフォルダにあります．&lt;/p&gt;
+&lt;h2 id="ev3-sensorscript"&gt;EV3 Sensor(Script)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="host動的変更不可"&gt;Host(動的変更不可)&lt;/h3&gt;
+&lt;p&gt;Athrillの配置マシンのIPアドレスです．
+Unityと同じマシン上に配置する場合は，デフォルト値のままで良いです．&lt;/p&gt;
+&lt;p&gt;マシン負荷が高く，athrillとUnityを別マシンで動かす場合は，このIPアドレスを変更して対応ください．&lt;/p&gt;
+&lt;h3 id="port動的変更不可-1"&gt;Port(動的変更不可)&lt;/h3&gt;
+&lt;p&gt;Athrill側のUDP受信ポート番号です．デフォルトでは54002です．&lt;/p&gt;
+&lt;p&gt;この値を変更する場合は，athrill側のパラメータ定義ファイル(device_config.txt)の以下も変更してください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;DEBUG_FUNC_VDEV_RX_PORTNO 54002
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;device_config.txt は，app.cと同じフォルダにあります．&lt;/p&gt;
+&lt;h2 id="ev3-motorscript"&gt;EV3 Motor(Script)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="power-const動的変更可"&gt;Power Const(動的変更可)&lt;/h3&gt;
+&lt;p&gt;EV3のモータのパワーです．デフォルトで40としていますが，値を変更できます．&lt;/p&gt;
+&lt;p&gt;ただ，あまり大きい値を設定しすぎるとUnity側の問題か，物理的にありえないのかよくわかりませんが，EVロボットが吹っ飛びますので，ご注意ください．．．&lt;/p&gt;
+&lt;h2 id="照明のonoffについて"&gt;照明のON/OFFについて&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;今回のデモでは，照明を３個用意しています．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;全体照明１個
+&lt;ul&gt;
+&lt;li&gt;Directional Light&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;スポットライト２個
+&lt;ul&gt;
+&lt;li&gt;Spot Light1&lt;/li&gt;
+&lt;li&gt;Spot Light2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;それぞれの照明はシミュレーション実行時にON/OFFできます．
+ON/OFFのさせ方は単純で，HierachyビューでON/OFFしたいライトを選択します．&lt;/p&gt;
+&lt;p&gt;すると，Inspectorビューに下図のように「Light」のチェックボックスが見えます．
+このチェックボックスを外せばOFFになります．&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fd14a2c69-1a29-7e92-9281-db2f2c6dfeb0.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=6cce316ca8400bfc1fd70ee8d93784b5"&gt;&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fd14a2c69-1a29-7e92-9281-db2f2c6dfeb0.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=6cce316ca8400bfc1fd70ee8d93784b5" alt="image.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="カラーセンサの状態"&gt;カラーセンサの状態&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;パラメータではないですが，カラーセンサの認識している状態を知りたくなることがあるかと思います．
+そのため，カラーセンサの認識している値をUnityのパラメータ表示機能を利用して可視化しています．&lt;/p&gt;
+&lt;p&gt;参照するには，下図のようにHierarchyビューでColorSensorを選択してください．&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fb1a7d803-a262-07bb-d2e3-cfdc188ae9ab.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=435eebd6c23b9982645643c53f8dc4c1"&gt;&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2Fb1a7d803-a262-07bb-d2e3-cfdc188ae9ab.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=435eebd6c23b9982645643c53f8dc4c1" alt="image.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;そうすると，Inspectorビューに下図のように認識値(Rgb)が表示されます．&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F487343b4-2303-046a-f819-42f058143bf7.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=17d4a51db5055db1f82b7a47bc56651c"&gt;&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F487343b4-2303-046a-f819-42f058143bf7.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=17d4a51db5055db1f82b7a47bc56651c" alt="image.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Rgbは，現在認識している色をそのまま表示しています．
+Rgb_r,g,b には，カラーセンサで取得できる数値を表示しています．&lt;/p&gt;</description></item><item><title>シミュレーションに関するチューニング</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/</guid><description>&lt;h2 id="single-robot-hackevv20の追加要素について"&gt;single-robot-HackEV(v2.0)の追加要素について&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="hakoniwaクラスの追加"&gt;Hakoniwaクラスの追加&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;single-robot-HackEV(v2.0)&lt;/code&gt; では&lt;code&gt;Hakoniwa&lt;/code&gt;クラスが設けられました．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_hierarchy_view_v2.0.png " border="" width="400" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_hierarchy_view_v2.0.png " border="" width="400" /&gt;
+&lt;/figure&gt;
 
-&lt;p>&lt;code>Hakoniwa&lt;/code>クラスはシミュレーション環境全体に関わる情報を持っています．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_hakoniwa_field.png " border="" width="400" />
-&lt;/figure>
-
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>主なフィールド&lt;/th>
- &lt;th>説明&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>Max Diff Time&lt;/td>
- &lt;td>athrillとUnityのシミュレーション時間の最大許容誤差時間&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Dbg Diff Time Msec&lt;/td>
- &lt;td>現在のathrillとUnityのシミュレーション時間の誤差(msec)&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h3 id="robotの配置方法">Robotの配置方法&lt;/h3>
-&lt;p>&lt;code>single-robot-HackEV(v2.0)&lt;/code>ではあらかじめ用意されたいくつかのロボットモデルを&lt;br>
-ユーザの方が任意に配置することが出来ます．&lt;/p>
-&lt;p>Project/Prefabs配下にいくつかのロボットモデルを用意しています．
+&lt;p&gt;&lt;code&gt;Hakoniwa&lt;/code&gt;クラスはシミュレーション環境全体に関わる情報を持っています．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_prefabs.png " border="" width="600" />
-&lt;/figure>
-&lt;/p>
-&lt;p>これらのロボットモデルを&lt;code>Hierarchy&lt;/code>ビューの&lt;code>Robot&lt;/code>配下にドラッグ＆ドロップすることで
-簡単に配置することができます．&lt;/p>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_hakoniwa_field.png " border="" width="400" /&gt;
+&lt;/figure&gt;
+
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;主なフィールド&lt;/th&gt;
+ &lt;th&gt;説明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Max Diff Time&lt;/td&gt;
+ &lt;td&gt;athrillとUnityのシミュレーション時間の最大許容誤差時間&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Dbg Diff Time Msec&lt;/td&gt;
+ &lt;td&gt;現在のathrillとUnityのシミュレーション時間の誤差(msec)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="robotの配置方法"&gt;Robotの配置方法&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;single-robot-HackEV(v2.0)&lt;/code&gt;ではあらかじめ用意されたいくつかのロボットモデルを&lt;br&gt;
+ユーザの方が任意に配置することが出来ます．&lt;/p&gt;
+&lt;p&gt;Project/Prefabs配下にいくつかのロボットモデルを用意しています．
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_set_robot.gif " border="" width="800" />
-&lt;/figure>
-
-&lt;hr>
-&lt;h2 id="変更可能なパラメータ">変更可能なパラメータ&lt;/h2>
-&lt;hr>
-&lt;h3 id="robot-のパラメータについて">Robot のパラメータについて&lt;/h3>
-&lt;hr>
-&lt;h4 id="超音波センサ">超音波センサ&lt;/h4>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_prefabs.png " border="" width="600" /&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;これらのロボットモデルを&lt;code&gt;Hierarchy&lt;/code&gt;ビューの&lt;code&gt;Robot&lt;/code&gt;配下にドラッグ＆ドロップすることで
+簡単に配置することができます．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_ultrasonic_sensor.png " border="" width="300" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_set_robot.gif " border="" width="800" /&gt;
+&lt;/figure&gt;
 
-&lt;p>&lt;code>Ultrasonic Sensor&lt;/code>の&lt;code>Distance Value&lt;/code>でセンサ範囲を調整できます．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_ultrasonic_sensor.png " border="" width="300" />
-&lt;/figure>
-
-&lt;h4 id="モーター">モーター&lt;/h4>
+&lt;hr&gt;
+&lt;h2 id="変更可能なパラメータ"&gt;変更可能なパラメータ&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="robot-のパラメータについて"&gt;Robot のパラメータについて&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h4 id="超音波センサ"&gt;超音波センサ&lt;/h4&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_tire.png " border="" width="300" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_ultrasonic_sensor.png " border="" width="300" /&gt;
+&lt;/figure&gt;
 
-&lt;p>&lt;code>Rigidbody&lt;/code>の&lt;code>Mass&lt;/code>でタイヤの重さを，&lt;code>Angular Drag&lt;/code>で回転時の抵抗値を調整できます．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_tire.png " border="" width="300" />
-&lt;/figure>
-
-&lt;h4 id="カラーセンサ">カラーセンサ&lt;/h4>
+&lt;p&gt;&lt;code&gt;Ultrasonic Sensor&lt;/code&gt;の&lt;code&gt;Distance Value&lt;/code&gt;でセンサ範囲を調整できます．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_color_sensor.png " border="" width="300" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_ultrasonic_sensor.png " border="" width="300" /&gt;
+&lt;/figure&gt;
 
-&lt;p>&lt;code>Physical Camera&lt;/code>の&lt;code>Sensor Size&lt;/code>でセンシング範囲を調整できます．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_color_sensor.png " border="" width="300" />
-&lt;/figure>
-
-&lt;h4 id="センサ用ライト">センサ用ライト&lt;/h4>
+&lt;h4 id="モーター"&gt;モーター&lt;/h4&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_spot_light.png " border="" width="300" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_tire.png " border="" width="300" /&gt;
+&lt;/figure&gt;
 
-&lt;p>&lt;code>Light&lt;/code>の&lt;code>Range&lt;/code>で光が届く範囲の距離を，&lt;code>SpotAngle&lt;/code>で光が届く範囲の広さを調整できます．&lt;/p>
+&lt;p&gt;&lt;code&gt;Rigidbody&lt;/code&gt;の&lt;code&gt;Mass&lt;/code&gt;でタイヤの重さを，&lt;code&gt;Angular Drag&lt;/code&gt;で回転時の抵抗値を調整できます．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_spot_light.png " border="" width="300" />
-&lt;/figure></description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順arm版">単体ロボット向けシミュレータ使用手順(ARM版)&lt;/h1>
-&lt;h2 id="使用手順">使用手順&lt;/h2>
-&lt;ol>
-&lt;li>環境変数の設定(Mac版のみ)&lt;/li>
-&lt;li>cfgフォルダの配置(初回起動時のみ)&lt;/li>
-&lt;li>EV3ロボット制御プログラムのビルド&lt;/li>
-&lt;li>Unityのシミュレータの起動&lt;/li>
-&lt;li>athrillの起動&lt;/li>
-&lt;/ol>
-&lt;h2 id="環境変数の設定mac版のみ">環境変数の設定(Mac版のみ)&lt;/h2>
-&lt;hr>
-&lt;p>Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．&lt;/p>
-&lt;pre tabindex="0">&lt;code>export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major
-&lt;/code>&lt;/pre>&lt;h2 id="cfgフォルダの配置初回起動時のみ">cfgフォルダの配置(初回起動時のみ)&lt;/h2>
-&lt;hr>
-&lt;p>cfg ファイルの配置(Mac版の場合)&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ pwd 
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_tire.png " border="" width="300" /&gt;
+&lt;/figure&gt;
+
+&lt;h4 id="カラーセンサ"&gt;カラーセンサ&lt;/h4&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_color_sensor.png " border="" width="300" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;code&gt;Physical Camera&lt;/code&gt;の&lt;code&gt;Sensor Size&lt;/code&gt;でセンシング範囲を調整できます．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_color_sensor.png " border="" width="300" /&gt;
+&lt;/figure&gt;
+
+&lt;h4 id="センサ用ライト"&gt;センサ用ライト&lt;/h4&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_spot_light.png " border="" width="300" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;code&gt;Light&lt;/code&gt;の&lt;code&gt;Range&lt;/code&gt;で光が届く範囲の距離を，&lt;code&gt;SpotAngle&lt;/code&gt;で光が届く範囲の広さを調整できます．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_setting_spot_light.png " border="" width="300" /&gt;
+&lt;/figure&gt;</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順arm版"&gt;単体ロボット向けシミュレータ使用手順(ARM版)&lt;/h1&gt;
+&lt;h2 id="使用手順"&gt;使用手順&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;環境変数の設定(Mac版のみ)&lt;/li&gt;
+&lt;li&gt;cfgフォルダの配置(初回起動時のみ)&lt;/li&gt;
+&lt;li&gt;EV3ロボット制御プログラムのビルド&lt;/li&gt;
+&lt;li&gt;Unityのシミュレータの起動&lt;/li&gt;
+&lt;li&gt;athrillの起動&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="環境変数の設定mac版のみ"&gt;環境変数の設定(Mac版のみ)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="cfgフォルダの配置初回起動時のみ"&gt;cfgフォルダの配置(初回起動時のみ)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;cfg ファイルの配置(Mac版の場合)&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ pwd 
 &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A
 $ mkdir cfg/cfg
 $ cp cfg/cfg-mac cfg/cfg/cfg
 $ chmod +x cfg/cfg/cfg
-&lt;/code>&lt;/pre>&lt;p>cfg ファイルの配置(Windows\Linux版の場合)&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ pwd 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;cfg ファイルの配置(Windows\Linux版の場合)&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ pwd 
 &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A
 $ mkdir cfg/cfg
 $ cp cfg/cfg-linux-64 cfg/cfg/cfg
 $ chmod +x cfg/cfg/cfg
-&lt;/code>&lt;/pre>&lt;h2 id="ev3ロボット制御プログラムのビルド">EV3ロボット制御プログラムのビルド&lt;/h2>
-&lt;hr>
-&lt;p>ターミナル上で，&lt;code>ev3rt-athrill-ARMv7-A/sdk/OBJ1.1&lt;/code>に移動して，&lt;br>
-EV3ロボット制御プログラムをビルドしましょう．&lt;/p>
-&lt;p>ビルドするには，以下のコマンドを実行してください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>make clean;make
-&lt;/code>&lt;/pre>&lt;p>ビルド成功すると，asp というバイナリができます．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ ls asp
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="ev3ロボット制御プログラムのビルド"&gt;EV3ロボット制御プログラムのビルド&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;ターミナル上で，&lt;code&gt;ev3rt-athrill-ARMv7-A/sdk/OBJ1.1&lt;/code&gt;に移動して，&lt;br&gt;
+EV3ロボット制御プログラムをビルドしましょう．&lt;/p&gt;
+&lt;p&gt;ビルドするには，以下のコマンドを実行してください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;make clean;make
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ビルド成功すると，asp というバイナリができます．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ ls asp
 asp
-&lt;/code>&lt;/pre>&lt;h2 id="unityのシミュレータの起動">Unityのシミュレータの起動&lt;/h2>
-&lt;hr>
-&lt;p>&lt;strong>※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong>&lt;/p>
-&lt;p>次に，Unityをシミュレーションモードにします．
-Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986" alt="image.png">&lt;/a>　ボタンを押下してください．&lt;/p>
-&lt;p>成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p>
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="unityのシミュレータの起動"&gt;Unityのシミュレータの起動&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;次に，Unityをシミュレーションモードにします．
+Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986"&gt;&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986" alt="image.png"&gt;&lt;/a&gt;　ボタンを押下してください．&lt;/p&gt;
+&lt;p&gt;成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_run.png " border="" width="900" /&gt;
+&lt;/figure&gt;
 
-&lt;h2 id="athrillの起動">athrillの起動&lt;/h2>
-&lt;hr>
-&lt;p>最後に，athrillを起動しましょう．&lt;/p>
-&lt;p>&lt;code>ev3rt-athrill-ARMv7-A/sdk/OBJ1.1&lt;/code>に移動して，以下のコマンドを実行してください．&lt;/p>
-&lt;ul>
-&lt;li>unityとの通信が UDP の場合&lt;/li>
-&lt;/ul>
-&lt;p>UDP版の場合&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp
-&lt;/code>&lt;/pre>&lt;p>MMAP版の場合&lt;/p></description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順arm版">単体ロボット向けシミュレータ使用手順(ARM版)&lt;/h1>
-&lt;h2 id="使用手順">使用手順&lt;/h2>
-&lt;ol>
-&lt;li>環境変数の設定(Mac版のみ)&lt;/li>
-&lt;li>cfgフォルダの配置(初回起動時のみ)&lt;/li>
-&lt;li>EV3ロボット制御プログラムのビルド&lt;/li>
-&lt;li>Unityのシミュレータの起動&lt;/li>
-&lt;li>athrillの起動&lt;/li>
-&lt;/ol>
-&lt;h2 id="環境変数の設定mac版のみ">環境変数の設定(Mac版のみ)&lt;/h2>
-&lt;hr>
-&lt;p>Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．&lt;/p>
-&lt;pre tabindex="0">&lt;code>export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major
-&lt;/code>&lt;/pre>&lt;h2 id="cfgフォルダの配置初回起動時のみ">cfgフォルダの配置(初回起動時のみ)&lt;/h2>
-&lt;hr>
-&lt;p>cfg ファイルの配置(Mac版の場合)&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ pwd 
+&lt;h2 id="athrillの起動"&gt;athrillの起動&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;最後に，athrillを起動しましょう．&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ev3rt-athrill-ARMv7-A/sdk/OBJ1.1&lt;/code&gt;に移動して，以下のコマンドを実行してください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;unityとの通信が UDP の場合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;UDP版の場合&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;MMAP版の場合&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ使用手順(ARM版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順arm版"&gt;単体ロボット向けシミュレータ使用手順(ARM版)&lt;/h1&gt;
+&lt;h2 id="使用手順"&gt;使用手順&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;環境変数の設定(Mac版のみ)&lt;/li&gt;
+&lt;li&gt;cfgフォルダの配置(初回起動時のみ)&lt;/li&gt;
+&lt;li&gt;EV3ロボット制御プログラムのビルド&lt;/li&gt;
+&lt;li&gt;Unityのシミュレータの起動&lt;/li&gt;
+&lt;li&gt;athrillの起動&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="環境変数の設定mac版のみ"&gt;環境変数の設定(Mac版のみ)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Mac版の場合，gccインストールフォルダの環境変数の設定が必要になります．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;export GCC_PATH=&amp;lt;gccインストールフォルダ&amp;gt;/gcc-arm-none-eabi-9-2019-q4-major
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="cfgフォルダの配置初回起動時のみ"&gt;cfgフォルダの配置(初回起動時のみ)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;cfg ファイルの配置(Mac版の場合)&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ pwd 
 &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A
 $ mkdir cfg/cfg
 $ cp cfg/cfg-mac cfg/cfg/cfg
 $ chmod +x cfg/cfg/cfg
-&lt;/code>&lt;/pre>&lt;p>cfg ファイルの配置(Windows\Linux版の場合)&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ pwd 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;cfg ファイルの配置(Windows\Linux版の場合)&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ pwd 
 &amp;lt;インストールフォルダ&amp;gt;/ev3rt-athrill-ARMv7-A
 $ mkdir cfg/cfg
 $ cp cfg/cfg-linux-64 cfg/cfg/cfg
 $ chmod +x cfg/cfg/cfg
-&lt;/code>&lt;/pre>&lt;h2 id="ev3ロボット制御プログラムのビルド">EV3ロボット制御プログラムのビルド&lt;/h2>
-&lt;hr>
-&lt;p>ターミナル上で，&lt;code>ev3rt-athrill-ARMv7-A/sdk/OBJ1.1&lt;/code>に移動して，&lt;br>
-EV3ロボット制御プログラムをビルドしましょう．&lt;/p>
-&lt;p>ビルドするには，以下のコマンドを実行してください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>make clean;make
-&lt;/code>&lt;/pre>&lt;p>ビルド成功すると，asp というバイナリができます．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ ls asp
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="ev3ロボット制御プログラムのビルド"&gt;EV3ロボット制御プログラムのビルド&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;ターミナル上で，&lt;code&gt;ev3rt-athrill-ARMv7-A/sdk/OBJ1.1&lt;/code&gt;に移動して，&lt;br&gt;
+EV3ロボット制御プログラムをビルドしましょう．&lt;/p&gt;
+&lt;p&gt;ビルドするには，以下のコマンドを実行してください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;make clean;make
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ビルド成功すると，asp というバイナリができます．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ ls asp
 asp
-&lt;/code>&lt;/pre>&lt;h2 id="unityのシミュレータの起動">Unityのシミュレータの起動&lt;/h2>
-&lt;hr>
-&lt;p>&lt;strong>※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong>&lt;/p>
-&lt;p>次に，Unityをシミュレーションモードにします．
-Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986" alt="image.png">&lt;/a>　ボタンを押下してください．&lt;/p>
-&lt;p>成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p>
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="unityのシミュレータの起動"&gt;Unityのシミュレータの起動&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;次に，Unityをシミュレーションモードにします．
+Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986"&gt;&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986" alt="image.png"&gt;&lt;/a&gt;　ボタンを押下してください．&lt;/p&gt;
+&lt;p&gt;成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_run.png " border="" width="900" /&gt;
+&lt;/figure&gt;
 
-&lt;h2 id="athrillの起動">athrillの起動&lt;/h2>
-&lt;hr>
-&lt;p>最後に，athrillを起動しましょう．&lt;/p>
-&lt;p>&lt;code>ev3rt-athrill-ARMv7-A/sdk/OBJ1.1&lt;/code>に移動して，以下のコマンドを実行してください．&lt;/p>
-&lt;ul>
-&lt;li>unityとの通信が UDP の場合&lt;/li>
-&lt;/ul>
-&lt;p>UDP版の場合&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp
-&lt;/code>&lt;/pre>&lt;p>MMAP版の場合&lt;/p></description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順">単体ロボット向けシミュレータ使用手順&lt;/h1>
-&lt;h2 id="v21での変更点について">V2.1での変更点について&lt;/h2>
-&lt;p>v2.1 で，Unityでのシミュレーション実行をビルドしてバイナリ実行できるようになりました．&lt;br>
-バイナリ実行でシミュレーション実行を行う場合，&lt;/p>
-&lt;ul>
-&lt;li>Unityシミュレーションの実行，&lt;/li>
-&lt;li>athrillの実行&lt;/li>
-&lt;/ul>
-&lt;p>をひとまとめにして実行することができます．&lt;/p>
-&lt;p>なお，従来の使用方法でもシミュレーションを実行することは可能ですので，&lt;br>
-その場合は下記をご参照いただき，使用してください．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/">V850版&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/">ARM版&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>これ以降は，バイナリ実行を行うための手順の紹介となります．&lt;/p>
-&lt;h2 id="使用手順">使用手順&lt;/h2>
-&lt;ol>
-&lt;li>ビルド設定&lt;/li>
-&lt;li>ビルドの実行，config.jsonの配置&lt;/li>
-&lt;li>シミュレーションの実行&lt;/li>
-&lt;/ol>
-&lt;h2 id="ビルド設定">ビルド設定&lt;/h2>
-&lt;hr>
-&lt;p>ビルドを実施する前に，バイナリ実行時のウィンドウサイズに関する設定を行います．&lt;br>
-Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p>
-&lt;p>「Player」&lt;br>
-&lt;code>Resolution and Presentation&lt;/code>の&lt;code>Fullscreen Mode&lt;/code> を&lt;code>Windowed&lt;/code>と設定します．
-その下の詳細なウィンドウサイズは基本そのままでもよいですが，サイズを変更したい場合は，&lt;br>
-お使いの環境に合わせて変更してください．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_build_setting.png " border="" width="600" />
-&lt;/figure>
-
-&lt;h2 id="ビルドの実行configjsonの配置">ビルドの実行，config.jsonの配置&lt;/h2>
-&lt;hr>
-&lt;p>設定が完了したら，Unityプロジェクトのビルドを行います．&lt;br>
-Unity のメニューから，「File」⇒「Build Settings」を選択します．&lt;/p>
-&lt;p>Platform は[PC,Mac &amp;amp; Linux Standalone]のままとします．&lt;br>
-&lt;code>Architecture&lt;/code>は実行するPCのアーキテクチャに合わせて設定しますが，&lt;br>
-どちらか分からないという方は，&lt;code>x86_64&lt;/code>を選択してください．&lt;/p>
+&lt;h2 id="athrillの起動"&gt;athrillの起動&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;最後に，athrillを起動しましょう．&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ev3rt-athrill-ARMv7-A/sdk/OBJ1.1&lt;/code&gt;に移動して，以下のコマンドを実行してください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;unityとの通信が UDP の場合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;UDP版の場合&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;MMAP版の場合&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順"&gt;単体ロボット向けシミュレータ使用手順&lt;/h1&gt;
+&lt;h2 id="v21での変更点について"&gt;V2.1での変更点について&lt;/h2&gt;
+&lt;p&gt;v2.1 で，Unityでのシミュレーション実行をビルドしてバイナリ実行できるようになりました．&lt;br&gt;
+バイナリ実行でシミュレーション実行を行う場合，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unityシミュレーションの実行，&lt;/li&gt;
+&lt;li&gt;athrillの実行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;をひとまとめにして実行することができます．&lt;/p&gt;
+&lt;p&gt;なお，従来の使用方法でもシミュレーションを実行することは可能ですので，&lt;br&gt;
+その場合は下記をご参照いただき，使用してください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/"&gt;V850版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/"&gt;ARM版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これ以降は，バイナリ実行を行うための手順の紹介となります．&lt;/p&gt;
+&lt;h2 id="使用手順"&gt;使用手順&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;ビルド設定&lt;/li&gt;
+&lt;li&gt;ビルドの実行，config.jsonの配置&lt;/li&gt;
+&lt;li&gt;シミュレーションの実行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="ビルド設定"&gt;ビルド設定&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;ビルドを実施する前に，バイナリ実行時のウィンドウサイズに関する設定を行います．&lt;br&gt;
+Unity のメニューから，「Edit」⇒「Project Settings」を選択します．&lt;/p&gt;
+&lt;p&gt;「Player」&lt;br&gt;
+&lt;code&gt;Resolution and Presentation&lt;/code&gt;の&lt;code&gt;Fullscreen Mode&lt;/code&gt; を&lt;code&gt;Windowed&lt;/code&gt;と設定します．
+その下の詳細なウィンドウサイズは基本そのままでもよいですが，サイズを変更したい場合は，&lt;br&gt;
+お使いの環境に合わせて変更してください．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_build_platform_setting.png " border="" width="600" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_build_setting.png " border="" width="600" /&gt;
+&lt;/figure&gt;
 
-&lt;p>設定を終えたら，&lt;code>Build&lt;/code>を押下してビルドを実行します．&lt;/p>
-
-
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_build.png " border="" width="400" />
-&lt;/figure>
-
-&lt;p>すると，どの場所にビルドしたバイナリを配置するか，選択ダイアログが表示されますので，
-任意の場所を選択します．&lt;br>
-今回は例として，ビルドするUnityプロジェクトのあるフォルダ内に，&lt;code>Build&lt;/code>フォルダを作成し，&lt;br>
-その中にビルドしたバイナリを配置するようにします．&lt;/p>
+&lt;h2 id="ビルドの実行configjsonの配置"&gt;ビルドの実行，config.jsonの配置&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;設定が完了したら，Unityプロジェクトのビルドを行います．&lt;br&gt;
+Unity のメニューから，「File」⇒「Build Settings」を選択します．&lt;/p&gt;
+&lt;p&gt;Platform は[PC,Mac &amp;amp; Linux Standalone]のままとします．&lt;br&gt;
+&lt;code&gt;Architecture&lt;/code&gt;は実行するPCのアーキテクチャに合わせて設定しますが，&lt;br&gt;
+どちらか分からないという方は，&lt;code&gt;x86_64&lt;/code&gt;を選択してください．&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_build_import.png " border="" width="400" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_build_platform_setting.png " border="" width="600" /&gt;
+&lt;/figure&gt;
 
-&lt;p>フォルダを選択すると，ビルドが実行されます．&lt;/p>
-&lt;hr>
-&lt;p>ビルドが完了したら，バイナリが出力されたフォルダ(今回の例では&lt;code>Build&lt;/code>フォルダ)内に&lt;br>
-先ほど，Unityプロジェクトフォルダ配下に配置した&lt;strong>config.json&lt;/strong>をコピーします．&lt;/p>
-&lt;h2 id="制御アプリのビルド">制御アプリのビルド&lt;/h2>
-&lt;hr>
-&lt;p>シミュレーションの実行の前に制御アプリのビルドを行います．&lt;br>
-ビルド手順は，以下の&lt;code>EV3ロボット制御プログラムのビルド&lt;/code>をご参照ください．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/">V850版&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/">ARM版&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h3 id="memory_mmaptxtの編集通信方式にmmapを使用する場合のみ">memory_mmap.txtの編集(通信方式にMMAPを使用する場合のみ)&lt;/h3>
-&lt;hr>
-&lt;p>制御アプリのビルドが完了したら，Unityバイナリ実行のためにアプリケーションフォルダにある&lt;br>
-&lt;code>memory_mmap.txt&lt;/code>を編集します．&lt;br>
-使用するMMAPファイルのパスを記述するのですが，Unityバイナリを使用する場合には，&lt;br>
-MMAPファイルのパスを&lt;strong>絶対パス&lt;/strong>で記述するように変更します．&lt;/p>
-&lt;p>&lt;strong>例：アプリケーション名が&lt;code>line_tarce&lt;/code>の場合のmemory_mmap.txt&lt;/strong>&lt;/p>
-&lt;pre tabindex="0">&lt;code>ROM, 0x00000000, 512
+&lt;p&gt;設定を終えたら，&lt;code&gt;Build&lt;/code&gt;を押下してビルドを実行します．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_build.png " border="" width="400" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;すると，どの場所にビルドしたバイナリを配置するか，選択ダイアログが表示されますので，
+任意の場所を選択します．&lt;br&gt;
+今回は例として，ビルドするUnityプロジェクトのあるフォルダ内に，&lt;code&gt;Build&lt;/code&gt;フォルダを作成し，&lt;br&gt;
+その中にビルドしたバイナリを配置するようにします．&lt;/p&gt;
+
+
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_build_import.png " border="" width="400" /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;フォルダを選択すると，ビルドが実行されます．&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;ビルドが完了したら，バイナリが出力されたフォルダ(今回の例では&lt;code&gt;Build&lt;/code&gt;フォルダ)内に&lt;br&gt;
+先ほど，Unityプロジェクトフォルダ配下に配置した&lt;strong&gt;config.json&lt;/strong&gt;をコピーします．&lt;/p&gt;
+&lt;h2 id="制御アプリのビルド"&gt;制御アプリのビルド&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;シミュレーションの実行の前に制御アプリのビルドを行います．&lt;br&gt;
+ビルド手順は，以下の&lt;code&gt;EV3ロボット制御プログラムのビルド&lt;/code&gt;をご参照ください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/"&gt;V850版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/"&gt;ARM版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="memory_mmaptxtの編集通信方式にmmapを使用する場合のみ"&gt;memory_mmap.txtの編集(通信方式にMMAPを使用する場合のみ)&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;制御アプリのビルドが完了したら，Unityバイナリ実行のためにアプリケーションフォルダにある&lt;br&gt;
+&lt;code&gt;memory_mmap.txt&lt;/code&gt;を編集します．&lt;br&gt;
+使用するMMAPファイルのパスを記述するのですが，Unityバイナリを使用する場合には，&lt;br&gt;
+MMAPファイルのパスを&lt;strong&gt;絶対パス&lt;/strong&gt;で記述するように変更します．&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例：アプリケーション名が&lt;code&gt;line_tarce&lt;/code&gt;の場合のmemory_mmap.txt&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;ROM, 0x00000000, 512
 RAM, 0x00200000, 512
 RAM, 0x05FF7000, 10240
 RAM, 0x07FF7000, 10240
 MMAP, 0x40000000, /mnt/c/project/hakoniwa/ev3rt-athrill-v850e2m/sdk/workspace/line_trace/athrill_mmap.bin
 MMAP, 0x40010000, /mnt/c/project/hakoniwa/ev3rt-athrill-v850e2m/sdk/workspace/line_trace/unity_mmap.bin
-&lt;/code>&lt;/pre>&lt;h2 id="シミュレーションの実行">シミュレーションの実行&lt;/h2>
-&lt;hr>
-&lt;p>ビルドが完了したら，シミュレーションを実行します．&lt;br>
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="シミュレーションの実行"&gt;シミュレーションの実行&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;ビルドが完了したら，シミュレーションを実行します．&lt;br&gt;
 先ほど選択したフォルダにビルドしたバイナリが作成されていますので，
-&lt;code>&amp;lt;プロジェクト名&amp;gt;.exe&lt;/code>または&lt;code>&amp;lt;プロジェクト名&amp;gt;.app&lt;/code>のファイルを実行することでシミュレータが起動します．&lt;/p></description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順v850版">単体ロボット向けシミュレータ使用手順(V850版)&lt;/h1>
-&lt;h2 id="使用手順">使用手順&lt;/h2>
-&lt;ol>
-&lt;li>EV3ロボット制御プログラムのビルド&lt;/li>
-&lt;li>Unityのシミュレータの起動&lt;/li>
-&lt;li>athrillの起動&lt;/li>
-&lt;/ol>
-&lt;h2 id="ev3ロボット制御プログラムのビルド">EV3ロボット制御プログラムのビルド&lt;/h2>
-&lt;hr>
-&lt;p>&lt;code>ev3rt-athrill-v850e2m/sdk/workspace&lt;/code> に移動して，&lt;br>
-EV3ロボット制御プログラムをビルドしましょう．&lt;/p>
-&lt;p>ビルドするには，以下のコマンドを実行してください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ make img=＜アプリケーションフォルダ名＞ clean
+&lt;code&gt;&amp;lt;プロジェクト名&amp;gt;.exe&lt;/code&gt;または&lt;code&gt;&amp;lt;プロジェクト名&amp;gt;.app&lt;/code&gt;のファイルを実行することでシミュレータが起動します．&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順v850版"&gt;単体ロボット向けシミュレータ使用手順(V850版)&lt;/h1&gt;
+&lt;h2 id="使用手順"&gt;使用手順&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;EV3ロボット制御プログラムのビルド&lt;/li&gt;
+&lt;li&gt;Unityのシミュレータの起動&lt;/li&gt;
+&lt;li&gt;athrillの起動&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="ev3ロボット制御プログラムのビルド"&gt;EV3ロボット制御プログラムのビルド&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;code&gt;ev3rt-athrill-v850e2m/sdk/workspace&lt;/code&gt; に移動して，&lt;br&gt;
+EV3ロボット制御プログラムをビルドしましょう．&lt;/p&gt;
+&lt;p&gt;ビルドするには，以下のコマンドを実行してください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ make img=＜アプリケーションフォルダ名＞ clean
 $ make img=＜アプリケーションフォルダ名＞
-&lt;/code>&lt;/pre>&lt;p>例：&lt;code>line_trace&lt;/code>というアプリケーションフォルダのプログラムをビルドする場合&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ make img=line_trace clean
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;例：&lt;code&gt;line_trace&lt;/code&gt;というアプリケーションフォルダのプログラムをビルドする場合&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ make img=line_trace clean
 $ make img=line_trace
-&lt;/code>&lt;/pre>&lt;p>ビルド成功すると，asp というバイナリができます．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ ls asp
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ビルド成功すると，asp というバイナリができます．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ ls asp
 asp
-&lt;/code>&lt;/pre>&lt;h2 id="unityのシミュレータの起動">Unityのシミュレータの起動&lt;/h2>
-&lt;hr>
-&lt;p>&lt;strong>※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong>&lt;/p>
-&lt;p>次に，Unityをシミュレーションモードにします．
-Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986" alt="image.png">&lt;/a>　ボタンを押下してください．&lt;/p>
-&lt;p>成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p>
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="unityのシミュレータの起動"&gt;Unityのシミュレータの起動&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;次に，Unityをシミュレーションモードにします．
+Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986"&gt;&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986" alt="image.png"&gt;&lt;/a&gt;　ボタンを押下してください．&lt;/p&gt;
+&lt;p&gt;成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_run.png " border="" width="900" /&gt;
+&lt;/figure&gt;
 
-&lt;h2 id="athrillの起動">athrillの起動&lt;/h2>
-&lt;hr>
-&lt;p>最後に，athrillを起動しましょう．&lt;/p>
-&lt;p>&lt;code>ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞&lt;/code>に移動して，以下のコマンドを実行してください．&lt;/p>
-&lt;p>UDP版の場合&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp
-&lt;/code>&lt;/pre>&lt;p>MMAP版の場合&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp
-&lt;/code>&lt;/pre>&lt;p>成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．&lt;/p>
-&lt;pre tabindex="0">&lt;code>core id num=1
+&lt;h2 id="athrillの起動"&gt;athrillの起動&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;最後に，athrillを起動しましょう．&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞&lt;/code&gt;に移動して，以下のコマンドを実行してください．&lt;/p&gt;
+&lt;p&gt;UDP版の場合&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;MMAP版の場合&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;core id num=1
 ROM : START=0x0 SIZE=512
 RAM : START=0x5ff7000 SIZE=10240
 Elf loading was succeeded:0x0 - 0xfd68 : 63.360 KB
@@ -449,48 +449,48 @@ brick_dri initialized.
 Powered by TOPPERS/HRP2 RTOS
 Initialization is completed..
 System logging task is started.
-&lt;/code>&lt;/pre></description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順v850版">単体ロボット向けシミュレータ使用手順(V850版)&lt;/h1>
-&lt;h2 id="使用手順">使用手順&lt;/h2>
-&lt;ol>
-&lt;li>EV3ロボット制御プログラムのビルド&lt;/li>
-&lt;li>Unityのシミュレータの起動&lt;/li>
-&lt;li>athrillの起動&lt;/li>
-&lt;/ol>
-&lt;h2 id="ev3ロボット制御プログラムのビルド">EV3ロボット制御プログラムのビルド&lt;/h2>
-&lt;hr>
-&lt;p>&lt;code>ev3rt-athrill-v850e2m/sdk/workspace&lt;/code> に移動して，&lt;br>
-EV3ロボット制御プログラムをビルドしましょう．&lt;/p>
-&lt;p>ビルドするには，以下のコマンドを実行してください．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ make img=＜アプリケーションフォルダ名＞ clean
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>単体ロボット向けシミュレータ使用手順(V850版)</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用手順v850版"&gt;単体ロボット向けシミュレータ使用手順(V850版)&lt;/h1&gt;
+&lt;h2 id="使用手順"&gt;使用手順&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;EV3ロボット制御プログラムのビルド&lt;/li&gt;
+&lt;li&gt;Unityのシミュレータの起動&lt;/li&gt;
+&lt;li&gt;athrillの起動&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="ev3ロボット制御プログラムのビルド"&gt;EV3ロボット制御プログラムのビルド&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;code&gt;ev3rt-athrill-v850e2m/sdk/workspace&lt;/code&gt; に移動して，&lt;br&gt;
+EV3ロボット制御プログラムをビルドしましょう．&lt;/p&gt;
+&lt;p&gt;ビルドするには，以下のコマンドを実行してください．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ make img=＜アプリケーションフォルダ名＞ clean
 $ make img=＜アプリケーションフォルダ名＞
-&lt;/code>&lt;/pre>&lt;p>例：&lt;code>line_trace&lt;/code>というアプリケーションフォルダのプログラムをビルドする場合&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ make img=line_trace clean
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;例：&lt;code&gt;line_trace&lt;/code&gt;というアプリケーションフォルダのプログラムをビルドする場合&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ make img=line_trace clean
 $ make img=line_trace
-&lt;/code>&lt;/pre>&lt;p>ビルド成功すると，asp というバイナリができます．&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ ls asp
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ビルド成功すると，asp というバイナリができます．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ ls asp
 asp
-&lt;/code>&lt;/pre>&lt;h2 id="unityのシミュレータの起動">Unityのシミュレータの起動&lt;/h2>
-&lt;hr>
-&lt;p>&lt;strong>※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong>&lt;/p>
-&lt;p>次に，Unityをシミュレーションモードにします．
-Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986">&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986" alt="image.png">&lt;/a>　ボタンを押下してください．&lt;/p>
-&lt;p>成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p>
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="unityのシミュレータの起動"&gt;Unityのシミュレータの起動&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;※必ず，athrillの起動より先にUnityのシミュレータの起動を行ってください&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;次に，Unityをシミュレーションモードにします．
+Unityの画面上で&lt;a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986"&gt;&lt;img src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F244147%2F1365fe63-28e1-0b02-e615-91b1f23724b9.png?ixlib=rb-1.2.2&amp;amp;auto=format&amp;amp;gif-q=60&amp;amp;q=75&amp;amp;s=d95a1ef03fd2f1640baf832491fcc986" alt="image.png"&gt;&lt;/a&gt;　ボタンを押下してください．&lt;/p&gt;
+&lt;p&gt;成功すると，下図のような画面に切り替わります．(画像は single-robot-HackEV.unitypackage の場合)&lt;/p&gt;
 
 
-&lt;figure>
- &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_run.png " border="" width="900" />
-&lt;/figure>
+&lt;figure&gt;
+ &lt;img src="https://toppers.github.io/hakoniwa/img/single-robot/unity_run.png " border="" width="900" /&gt;
+&lt;/figure&gt;
 
-&lt;h2 id="athrillの起動">athrillの起動&lt;/h2>
-&lt;hr>
-&lt;p>最後に，athrillを起動しましょう．&lt;/p>
-&lt;p>&lt;code>ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞&lt;/code>に移動して，以下のコマンドを実行してください．&lt;/p>
-&lt;p>UDP版の場合&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp
-&lt;/code>&lt;/pre>&lt;p>MMAP版の場合&lt;/p>
-&lt;pre tabindex="0">&lt;code>$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp
-&lt;/code>&lt;/pre>&lt;p>成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．&lt;/p>
-&lt;pre tabindex="0">&lt;code>core id num=1
+&lt;h2 id="athrillの起動"&gt;athrillの起動&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;最後に，athrillを起動しましょう．&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ev3rt-athrill-v850e2m/sdk/workspace/＜アプリケーションフォルダ＞&lt;/code&gt;に移動して，以下のコマンドを実行してください．&lt;/p&gt;
+&lt;p&gt;UDP版の場合&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ athrill2 -c1 -t -1 -m memory.txt -d device_config.txt ../asp
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;MMAP版の場合&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$ athrill2 -c1 -t -1 -m memory_mmap.txt -d device_config_mmap.txt ../asp
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;成功すると，以下のログが出力され，Unity上のEV3ロボットが動き始めます．&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;core id num=1
 ROM : START=0x0 SIZE=512
 RAM : START=0x5ff7000 SIZE=10240
 Elf loading was succeeded:0x0 - 0xfd68 : 63.360 KB
@@ -516,42 +516,42 @@ brick_dri initialized.
 Powered by TOPPERS/HRP2 RTOS
 Initialization is completed..
 System logging task is started.
-&lt;/code>&lt;/pre>&lt;h2 id="シミュレータのデバッグ">シミュレータのデバッグ&lt;/h2>
-&lt;hr>
-&lt;p>下記のコマンドでathrillを実行すると，デバッグモードで実行することができます&lt;/p></description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用方法">単体ロボット向けシミュレータ使用方法&lt;/h1>
-&lt;h2 id="使用手順詳細">使用手順詳細&lt;/h2>
-&lt;hr>
-&lt;h3 id="single-robot-hackevv21を使用している場合windows-mac向け">single-robot-HackEV(v2.1)を使用している場合(Windows, Mac向け)&lt;/h3>
-&lt;p>使用しているUnityパッケージが &lt;code>single-robot-HackEV(v2.1)&lt;/code> の場合は，&lt;br>
-こちらの使用手順をご参照ください．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/">使用手順&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>シミュレーションに関わるチューニングについてはこちらをご参照ください．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/">チューニングについて(single-robot-HackEV(v2.0)を使用している場合)&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h3 id="single-robot-hackevv20を使用している場合">single-robot-HackEV(v2.0)を使用している場合&lt;/h3>
-&lt;p>使用しているUnityパッケージが &lt;code>single-robot-HackEV(v2.0)&lt;/code> の場合は，&lt;br>
-こちらの使用手順をご参照ください．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/">V850版&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/">ARM版&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>シミュレーションに関わるチューニングについてはこちらをご参照ください．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/">チューニングについて(single-robot-HackEV(v2.0)を使用している場合)&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h3 id="single-robot-hackev-または-ev3rt-simple-robotを使用している場合">single-robot-HackEV または ev3rt-simple-robotを使用している場合&lt;/h3>
-&lt;p>使用しているUnityパッケージが &lt;code>single-robot-HackEV&lt;/code> または &lt;code>ev3rt-simple-robot&lt;/code> の場合は，&lt;br>
-こちらの使用手順をご参照ください．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/">V850版&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/">ARM版&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>シミュレーションに関わるチューニングについてはこちらをご参照ください．&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/">チューニングについて&lt;/a>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="シミュレータのデバッグ"&gt;シミュレータのデバッグ&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;下記のコマンドでathrillを実行すると，デバッグモードで実行することができます&lt;/p&gt;</description></item><item><title>単体ロボット向けシミュレータ使用方法</title><link>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/single-robot-usage/single-robot-usage-index/</guid><description>&lt;h1 id="単体ロボット向けシミュレータ使用方法"&gt;単体ロボット向けシミュレータ使用方法&lt;/h1&gt;
+&lt;h2 id="使用手順詳細"&gt;使用手順詳細&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id="single-robot-hackevv21を使用している場合windows-mac向け"&gt;single-robot-HackEV(v2.1)を使用している場合(Windows, Mac向け)&lt;/h3&gt;
+&lt;p&gt;使用しているUnityパッケージが &lt;code&gt;single-robot-HackEV(v2.1)&lt;/code&gt; の場合は，&lt;br&gt;
+こちらの使用手順をご参照ください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v2.1/"&gt;使用手順&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;シミュレーションに関わるチューニングについてはこちらをご参照ください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/"&gt;チューニングについて(single-robot-HackEV(v2.0)を使用している場合)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="single-robot-hackevv20を使用している場合"&gt;single-robot-HackEV(v2.0)を使用している場合&lt;/h3&gt;
+&lt;p&gt;使用しているUnityパッケージが &lt;code&gt;single-robot-HackEV(v2.0)&lt;/code&gt; の場合は，&lt;br&gt;
+こちらの使用手順をご参照ください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850_v2.0/"&gt;V850版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm_v2.0/"&gt;ARM版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;シミュレーションに関わるチューニングについてはこちらをご参照ください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params_v2.0/"&gt;チューニングについて(single-robot-HackEV(v2.0)を使用している場合)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="single-robot-hackev-または-ev3rt-simple-robotを使用している場合"&gt;single-robot-HackEV または ev3rt-simple-robotを使用している場合&lt;/h3&gt;
+&lt;p&gt;使用しているUnityパッケージが &lt;code&gt;single-robot-HackEV&lt;/code&gt; または &lt;code&gt;ev3rt-simple-robot&lt;/code&gt; の場合は，&lt;br&gt;
+こちらの使用手順をご参照ください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_v850/"&gt;V850版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/01_usage_arm/"&gt;ARM版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;シミュレーションに関わるチューニングについてはこちらをご参照ください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/single-robot-usage/02_changed_params/"&gt;チューニングについて&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

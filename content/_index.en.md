@@ -22,6 +22,88 @@ In the series titled "[Recommendations for Embedded Development in the Cloud Age
 -->
 
 ### What's New
+- 2025.11.1
+  - Repository updates and release information
+    - [toppers/hakoniwa-ros2pdu 2.2.1](https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/2.2.1) (2025.10.23)
+      - Bug fixes
+    - [toppers/hakoniwa-drone-core v3.4.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.4.0) (2025.10.22)
+      - Added MuJoCo integration feature
+      - Added Gemini integration feature
+      - Added Scratch integration feature
+      - Feature updates for Hakoniwa Drone PRO users
+    - [toppers/hakoniwa-drone-core v3.3.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.3.1) (2025.10.22)
+    - [toppers/hakoniwa-core-cpp v1.1.1](https://github.com/toppers/hakoniwa-core-cpp/releases/tag/v1.1.1) (2025.10.16)
+    - [toppers/hakoniwa-ros2pdu v2.2.0](https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/v2.2.0) (2025.10.16)
+      - JavaScript support
+    - [toppers/hakoniwa-pdu-csharp v2.0.1](https://github.com/toppers/hakoniwa-pdu-csharp/releases/tag/v2.0.1) (2025.10.16)
+    - [toppers/hakoniwa-webserver v1.0.1](https://github.com/toppers/hakoniwa-webserver/releases/tag/v1.0.1) (2025.10.16)
+    - [toppers/hakoniwa-bridge v2.0.1](https://github.com/toppers/hakoniwa-bridge/releases/tag/v2.0.1) (2025.10.16)
+- 2025.9.11
+  - Repository updates and release information
+    - [toppers/hakoniwa-drone-core v3.3.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.3.0) (2025.9.11)
+    - [toppers/hakoniwa-drone-core v3.2.2](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.2.2) (2025.9.11)
+    - [toppers/hakoniwa-drone-core v3.2.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.2.1) (2025.8.15)
+      - Renewed Hakoniwa core from [old version](https://github.com/toppers/hakoniwa-core-cpp-client) to [new version](https://github.com/hakoniwalab/hakoniwa-core-pro)
+      - Data reception event feature
+      - RPC service feature
+- 2025.7.29
+  - Repository updates and release information
+    - [toppers/hakoniwa-drone-core v3.2.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.2.0) (2025.7.29)
+      * Added license guide (including PRO version link)
+      * Explicitly stated Unreal Engine support
+      * Added introduction section for Drone API and External Environment API
+      * Added comparison with other OSS (flexibility, open design philosophy)
+    - [toppers/hakoniwa-sim-csharp v2.0.0](https://github.com/toppers/hakoniwa-sim-csharp/releases/tag/v2.0.0) (2025.7.29)
+      - package.json version updated from 1.0.0 to 1.2.3
+      - Added Plugins/linux directory and libshakoc.so with meta files
+      - Updated binaries for Windows (shakoc.dll) and macOS (libconductor.dylib, libshakoc.dylib)
+    - [toppers/hakoniwa-pdu-csharp v2.0.0](https://github.com/toppers/hakoniwa-pdu-csharp/releases/tag/v2.0.0) (2025.7.29)
+      - Added multiple new PDU classes including Mavlink-related messages (HakoHeartbeat, HakoSystemTime) and monitor camera-related messages (MonitorCameraCmd, MonitorCameraData)
+      - Added classes for atmospheric and boundary conditions (DisturbanceAtm, DisturbanceBoundary) as new fields in the Disturbance class
+      - Added message and packet classes for service communication (AddTwoIntsRequest, etc.)
+      - Added DroneStatus class to hold drone state
+      - Updated many existing message files including Time with added using statements and field modifications
+      - Updated encoding process to use DynamicAllocator for dynamic allocation, introducing mechanism to expand variable-length array data to heap area
+      - package.json version updated from 1.0.0 to 1.4.0
+    - [toppers/hakoniwa-webserver v1.0.0](https://github.com/toppers/hakoniwa-webserver/releases/tag/v1.0.0) (2025.7.29)
+      - Support for PDU request reception
+      - Added processing to register requests to server when RequestPduRead is received in WebSocket implementation
+      - Implemented _send_packet() and send_packet_threadsafe() for asynchronous transmission
+      - Added on-demand PDU read queue to HakoPduServer
+      - Added new script real_time_syncher.py for real-time synchronization
+      - WebSocket implementation now holds and sets event loop at startup
+    - [toppers/hakoniwa-ros2pdu v2.1.0](https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/v2.1.0) (2025.7.29)
+      - Added Python language support
+      - Added feature to auto-generate PDU (Protocol Data Unit) Python classes
+      - Added numerous libraries, templates, and utilities for PDU read/write and conversion in Python
+      - Added Hakoniwa service message feature
+      - Added new message types (hako_srv_msgs) for request and response like ROS Service
+      - Added new messages: Disturbance (disturbance), DroneStatus (drone state), MonitorCamera (monitor camera)
+      - Enhanced testing
+      - Updated documentation
+      - Refactored and fixed bugs in PDU binary ↔ structure conversion processing
+    - [toppers/hakoniwa-core-cpp-client v2.0.1](https://github.com/toppers/hakoniwa-core-cpp-client/releases/tag/v2.0.1) (2025.7.29)
+      - Added disturbance feature
+      - Added offset settings to Hako monitor camera
+    - [toppers/hakoniwa-drone-core v3.1.9-1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.1.9-1) (2025.7.25)
+- 2025.6.27
+  - Repository updates and release information
+    - [toppers/hakoniwa-drone-core v3.1.9](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.1.9) (2025.6.27)
+    - [toppers/hakoniwa-conductor v2.0.0](https://github.com/toppers/hakoniwa-conductor/releases/tag/v2.0.0) (2025.6.26)
+      - Compatible with latest version of Hakoniwa core functionality
+      - Rebuilt test environment with docker compose
+      - Maintained README
+- 2025.5.29
+  - Repository updates and release information
+    - [toppers/hakoniwa-drone-core v3.1.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.1.0) (2025.5.29)
+      - Official support for external environment (wind, temperature)
+      - Python API integration support for WSL/Docker
+      - Major update for Unity WebAvatar (hakoniwa-unity-drone version is [v3.1.0](https://github.com/hakoniwalab/hakoniwa-unity-drone/releases/tag/v3.1.0))
+      - Camera, LiDAR, collision detection, battery support
+      - Cargo transport, game controller support
+      - Bug fixes for Hakoniwa Drone PRO binaries, etc.
+      - Updated Windows binaries (win.zip)
+      - Windows Python libraries (python.zip) - Required when integrating with sharesim
 - 2025.5.23
   - Repository updates and release information
     - [hakoniwa-drone-core v3.0.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.0.1) (2025.5.18)

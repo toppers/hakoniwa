@@ -22,6 +22,14 @@ In the series titled "[Recommendations for Embedded Development in the Cloud Age
 -->
 
 ### What's New
+
+- 2025.12.22
+  - Repository updates and release information
+    - [toppers/hakoniwa-ros2pdu v2.2.2](https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/v2.2.2) (2025.12.22)
+    - [toppers/hakoniwa-pdu-csharp v2.0.2](https://github.com/toppers/hakoniwa-pdu-csharp/releases/tag/v2.0.2) (2025.12.22)
+    - [toppers/hakoniwa-drone-core v3.4.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.4.1) (2025.12.22)
+    - [toppers/hakoniwa-drone-core v3.5.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.5.0) (2025.12.22)
+      - [Release note](https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v3.5.0.md)
 - 2025.11.1
   - Repository updates and release information
     - [toppers/hakoniwa-ros2pdu 2.2.1](https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/2.2.1) (2025.10.23)

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>箱庭</title><link>https://toppers.github.io/hakoniwa/</link><description>Recent content on 箱庭</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sat, 14 May 2022 13:26:38 +0900</lastBuildDate><atom:link href="https://toppers.github.io/hakoniwa/index.xml" rel="self" type="application/rss+xml"/><item><title>入門会 #1</title><link>https://toppers.github.io/hakoniwa/introduction-party/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/1/</guid><description>&lt;h3 id="入門会-1-まずは箱庭ってなに"&gt;入門会 #1 まずは箱庭ってなに？？&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>箱庭</title><link>https://toppers.github.io/hakoniwa/</link><description>Recent content on 箱庭</description><generator>Hugo</generator><language>ja-jp</language><lastBuildDate>Sat, 14 May 2022 13:26:38 +0900</lastBuildDate><atom:link href="https://toppers.github.io/hakoniwa/index.xml" rel="self" type="application/rss+xml"/><item><title>入門会 #1</title><link>https://toppers.github.io/hakoniwa/introduction-party/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/introduction-party/1/</guid><description>&lt;h3 id="入門会-1-まずは箱庭ってなに"&gt;入門会 #1 まずは箱庭ってなに？？&lt;/h3&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;「箱庭？」という人向けに、下の情報を紹介します。
 - 箱庭とは何か
 - 箱庭の構想
@@ -2325,77 +2325,135 @@ Rgb_r,g,b には，カラーセンサで取得できる数値を表示してい�
 &lt;strong&gt;「&lt;a href="https://monoist.atmarkit.co.jp/mn/series/23683/"&gt;仮想環境を使ったクラウド時代の組み込み開発のススメ&lt;/a&gt;」&lt;/strong&gt; という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介しています。ぜひご覧ください。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="https://toppers.github.io/hakoniwa/topics/#top"&gt;このページの先頭に戻る&lt;/a&gt;&lt;/p&gt;</description></item><item><title>トピックス・イベント案内</title><link>https://toppers.github.io/hakoniwa/update/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/update/</guid><description>&lt;h3 id="2024年"&gt;2024年&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://toppers.github.io/hakoniwa/update/#top"&gt;このページの先頭に戻る&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="2023年"&gt;2023年&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;2023.07.25
+&lt;li&gt;2024.12.19
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/tutorial/"&gt;チュートリアル&lt;/a&gt;のページを作成しました。connpassにて開催している箱庭チュートリアル会のスライド資料や動画アーカイブなどを公開しています。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;2023.07.23
+&lt;li&gt;リポジトリの更新リリース情報
 &lt;ul&gt;
-&lt;li&gt;箱庭WGにおける研究開発の成果が&lt;a href="https://www.rsj.or.jp/pub/jrsj/about.html"&gt;日本ロボット学会誌&lt;/a&gt;にレター論文として採録されました！
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.8.0"&gt;hakoniwa-px4sim v2.8.0&lt;/a&gt; (2024.12.14)
 &lt;ul&gt;
-&lt;li&gt;高瀬 英希, 細合 晋太郎, 福田 竜也, 高田 光隆, 久保秋 真, 森 崇, &lt;strong&gt;hakoniwa-ros2sim：仮想環境を活用したROS 2アプリケーションのシミュレーション手法&lt;/strong&gt;, 日本ロボット学会誌, 2023年41巻4号, pp. 399-402 (2023).&lt;/li&gt;
-&lt;li&gt;論文公開先： &lt;a href="https://www.jstage.jst.go.jp/article/jrsj/41/4/41_41_399/_article/-char/ja"&gt;https://www.jstage.jst.go.jp/article/jrsj/41/4/41_41_399/_article/-char/ja&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;箱庭WGの活動成果「箱庭上でROS 2プログラムを手軽にシミュレーションできるhakoniwa-ros2simの一般公開」が TOPPERS of the YEAR 2023 を受賞しました！&lt;/li&gt;
-&lt;li&gt;2022年6月30日(金)に開催された&lt;a href="https://toppers.github.io/hakoniwa/technical-links/#toppers%E3%82%AB%E3%83%B3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B92023"&gt;TOPPERSカンファレンス2023の講演資料・動画&lt;/a&gt;を掲載しました。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;2023.01.07
-&lt;ul&gt;
-&lt;li&gt;2022年度&lt;a href="https://www.toppers.jp/contest.html"&gt;TOPPERS活用アイデア・アプリケーション開発コンテスト&lt;/a&gt;のアプリケーション開発部門において、金賞を受賞しました。&lt;/li&gt;
-&lt;li&gt;受賞作品として&lt;a href="https://github.com/toppers/hakoniwa-ecu-multiplay"&gt;hakoniwa-ecu-multiplay&lt;/a&gt;を公開しています。ぜひお試しください。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://toppers.github.io/hakoniwa/update/#top"&gt;このページの先頭に戻る&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="2022年"&gt;2022年&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;2022.09.08
-&lt;ul&gt;
-&lt;li&gt;2022年9月1日(木)-2日(金)に開催された&lt;a href="https://toppers.github.io/hakoniwa/technical-links/#swest24"&gt;SWEST24 (第24回 組込みシステム技術に関するサマーワークショップ)&lt;/a&gt;にて実施したセッションの資料を掲載しました。&lt;/li&gt;
-&lt;li&gt;2022年9月5日(月)-9日(金)に開催された&lt;a href="https://toppers.github.io/hakoniwa/technical-links/#rsj2022"&gt;RSJ2022 (第40回 日本ロボット学会学術講演会)&lt;/a&gt;にて実施したセッションの資料を掲載しました。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;2022.08.27
-&lt;ul&gt;
-&lt;li&gt;2022年8月26日(金)に開催された&lt;a href="https://toppers.github.io/hakoniwa/technical-links/#ros-japan-ug-47-%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF%E7%89%B9%E9%9B%86"&gt;ROS Japan UG #47 シミュレータ特集！&lt;/a&gt;の講演資料を公開しました。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;2022.06.27
-&lt;ul&gt;
-&lt;li&gt;2022年6月25日(土)に開催された&lt;a href="https://toppers.github.io/hakoniwa/technical-links/#2022%E5%B9%B4%E5%BA%A6-et%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B3%E5%90%91%E3%81%91-toppers%E6%B4%BB%E7%94%A8%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC"&gt;ETロボコン向け TOPPERS活用セミナー&lt;/a&gt;の講義資料と動画を公開しました。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;2022.06.15
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/en/"&gt;本Webサイトの英語版&lt;/a&gt;を公開しました。&lt;/li&gt;
-&lt;li&gt;2022年6月10日(金)に開催された&lt;a href="https://toppers.github.io/hakoniwa/technical-links/#toppers%E3%82%AB%E3%83%B3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B92022"&gt;TOPPERSカンファレンス2022の講演資料・動画&lt;/a&gt;を掲載しました。
-&lt;ul&gt;
-&lt;li&gt;「箱庭WGの活動紹介」 高田光隆（箱庭WG/名古屋大学）&lt;/li&gt;
-&lt;li&gt;「ゲーム技術（VR/Photon）がもたらす箱庭ワールドの now and future」 森 崇（(株)永和マネジメント）&lt;/li&gt;
-&lt;li&gt;「mROS 2：ロボットソフトウェアの組込みデバイス向け軽量実行環境」 高瀬英希（東京大学）&lt;/li&gt;
+&lt;li&gt;バッテリー機能&lt;/li&gt;
+&lt;li&gt;箱庭ARブリッジ機能&lt;/li&gt;
+&lt;li&gt;箱庭ブリッジ(MAVLINK)&lt;/li&gt;
+&lt;li&gt;東尋坊3Dモデルの公開&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;2022.06.02
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/technical-links/"&gt;技術情報・発表資料&lt;/a&gt;のページの情報を更新しました。
 &lt;ul&gt;
-&lt;li&gt;2022年5月28日(土)に開催された&lt;a href="https://toppers.github.io/hakoniwa/technical-links/#%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%AB%E3%83%B3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9-2022-nagoya"&gt;オープンソースカンファレンス 2022 Nagoya&lt;/a&gt;にて実施したセッションの資料を掲載しました。YouTube動画も公開されています。&lt;/li&gt;
+&lt;li&gt;SI2024(第25回計測自動制御学会システムインテグレーション部門講演会) が2024年12月18日(水)-20日(金)に開催され、箱庭WGのメンバが発表を行いました。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;2022.05.26
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/getting-started"&gt;Getting Started&lt;/a&gt; のページを公開しました。&lt;a href="https://github.com/toppers/hakoniwa-ros2sim"&gt;hakoniwa-ros2sim&lt;/a&gt; を題材として、箱庭を用いたシミュレーションの進め方やカスタマイズ方法を案内していきます。コンテンツ内容は随時更新・追加していきますので、ぜひご確認ください。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;2022.05.09
+&lt;li&gt;2024.11.30
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-ros2sim"&gt;hakoniwa-ros2sim&lt;/a&gt; を公開しました。箱庭上で ROS 2 プログラムを手軽にシミュレーションできます。ぜひお試しください。&lt;/li&gt;
+&lt;li&gt;リポジトリの更新リリース情報です。
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.7.1"&gt;hakoniwa-px4sim v2.7.1&lt;/a&gt; (2024.11.15)
+&lt;ul&gt;
+&lt;li&gt;バグFIX&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-unity-drone-model/releases/tag/v2.2.1"&gt;hakoniwa-unity-drone-model v2.2.1&lt;/a&gt; (2024.11.4)
+&lt;ul&gt;
+&lt;li&gt;箱庭PDU通信ライブラリの新アーキテクチャ対応&lt;/li&gt;
+&lt;li&gt;WebGLの荷物対応&lt;/li&gt;
+&lt;li&gt;QUEST3のWebSocket対応&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2024.10.31
+&lt;ul&gt;
+&lt;li&gt;リポジトリの更新リリース情報です。
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.7.0"&gt;hakoniwa-px4sim v2.7.0&lt;/a&gt; (2024.10.27)
+&lt;ul&gt;
+&lt;li&gt;Windows版インストーラ対応&lt;/li&gt;
+&lt;li&gt;Python APIの機能拡張&lt;/li&gt;
+&lt;li&gt;環境シミュレーション機能（例：風の影響）の追加&lt;/li&gt;
+&lt;li&gt;箱庭ドローンシミュレータのWebブラウザ対応&lt;/li&gt;
+&lt;li&gt;Python向け制御プログラムのリファクタリング&lt;/li&gt;
+&lt;li&gt;ARデバイス対応&lt;/li&gt;
+&lt;li&gt;各種マニュアルのブラッシュアップ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-unity-drone-model/releases/tag/v2.2.0"&gt;hakoniwa-unity-drone-model v2.2.0&lt;/a&gt; (2024.10.20)
+&lt;ul&gt;
+&lt;li&gt;PC向けアプリ&lt;/li&gt;
+&lt;li&gt;AR体験向けアプリ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2024.08.24
+&lt;ul&gt;
+&lt;li&gt;リポジトリの更新リリース情報です。
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-unity-drone-model/releases/tag/v2.1.1"&gt;hakoniwa-unity-drone-model v2.1.1&lt;/a&gt; (2024.08.15)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.6.0"&gt;hakoniwa-px4sim v2.6.0&lt;/a&gt; (2024.08.07)
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 22.0.4の正式対応&lt;/li&gt;
+&lt;li&gt;ログリプレイ機能の追加&lt;/li&gt;
+&lt;li&gt;ドローン制御プログラムの評価ツールの追加&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-digital-twin/releases/tag/digital-twin-real-model"&gt;hakoniwa-digital-twin&lt;/a&gt; (2024.07.01)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;新規のリポジトリ情報です。
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-webserver"&gt;hakoniwa-webserver&lt;/a&gt; (2024.08.23)
+&lt;ul&gt;
+&lt;li&gt;箱庭PDUをWebSocket経由でブラウザ上で可視化します。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/baremetal-athrill-v850e2m"&gt;baremetal-athrill-v850e2m&lt;/a&gt; (2024.08.10)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/asp3-athrill-v850e2m"&gt;asp3-athrill-v850e2m&lt;/a&gt; (2024.08.10)
+&lt;ul&gt;
+&lt;li&gt;Athrill向けTOPPERS/ASP3カーネルのパッケージ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2024.07.12
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/tutorial/"&gt;チュートリアル&lt;/a&gt;のページの情報を更新しました。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/tutorial/"&gt;チュートリアル&lt;/a&gt;のページに箱庭入門会の動画アーカイブと資料を公開しました。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2024.06.24
+&lt;ul&gt;
+&lt;li&gt;リポジトリの更新リリース情報です。
+&lt;ul&gt;
+&lt;li&gt;箱庭PDUで可変長データを対応しました。そのためPDUの構造が変更になりバージョンをv2系にしています。1系と2系の混在ではPDUの通信ができませんのでご注意ください。他の変更内容については各リポジトリのリリースノートを参照ください。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.5.0"&gt;hakoniwa-px4sim v2.5.0&lt;/a&gt; (2024.06.25)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-unity-drone-model/releases/tag/v2.1.0"&gt;hakoniwa-unity-drone-model v2.1.0&lt;/a&gt; (2024.06.25)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-unity-tb3model/releases/tag/v2.0.0"&gt;hakoniwa-unity-tb3model v2.0.0&lt;/a&gt; (2024.06.23)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-px4sim/releases/tag/v2.4.0"&gt;hakoniwa-px4sim v2.4.0&lt;/a&gt; (2024.06.14)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-bridge/releases/tag/v2.0.0"&gt;hakoniwa-bridge v2.0.0&lt;/a&gt; (2024.06.14)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-core-cpp-client/releases/tag/v2.0.0"&gt;hakoniwa-core-cpp-client v2.0.0&lt;/a&gt; (2024.06.14)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-unity-simasset-plugin/releases/tag/v2.0.0"&gt;hakoniwa-unity-simasset-plugin v2.0.0&lt;/a&gt; (2024.06.14)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/v2.0.0"&gt;hakoniwa-ros2pdu v2.0.0&lt;/a&gt; (2024.06.14)&lt;/li&gt;
+&lt;li&gt;v1系のリリースとなります。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-unity-simasset-plugin/releases/tag/v1.0.1"&gt;hakoniwa-unity-simasset-plugin v1.0.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/v1.1.1"&gt;hakoniwa-ros2pdu v1.1.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-core-cpp-client/releases/tag/v1.3.1"&gt;hakoniwa-core-cpp-client v1.3.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2024.05.16
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://toppers.github.io/hakoniwa/repositories/"&gt;リポジトリ一覧&lt;/a&gt;に開発中のリポジトリを追加しました。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

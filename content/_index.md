@@ -30,16 +30,16 @@ draft = false
   - リポジトリの更新リリース情報
     - [toppers/hakoniwa-drone-core v3.7.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.7.0) (2026.4.10)
       - [リリースノート](https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v3.7.0.md)
+- 2026.3.14
+  - リポジトリの更新リリース情報
+    - [toppers/hakoniwa-drone-core v3.6.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.6.1) (2026.3.14)
+      - [リリースノート](https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v3.6.1.md)
 - 2026.3.9
   - リポジトリの更新リリース情報
     - [toppers/hakoniwa-core-cpp v1.2.0](https://github.com/toppers/hakoniwa-core-cpp/releases/tag/v1.2.0) (2026.3.9)
     - [toppers/hakoniwa-pdu-csharp v2.1.0](https://github.com/toppers/hakoniwa-pdu-csharp/releases/tag/v2.1.0) (2026.3.9)
     - [toppers/hakoniwa-drone-core v3.6.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.6.0) (2026.3.9)
       - [リリースノート](https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v3.6.0.md)
-- 2026.3.14
-  - リポジトリの更新リリース情報
-    - [toppers/hakoniwa-drone-core v3.6.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.6.1) (2026.3.14)
-      - [リリースノート](https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v3.6.1.md)
 
 - 2025.12.22
   - リポジトリの更新リリース情報

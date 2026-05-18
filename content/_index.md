@@ -22,6 +22,12 @@ draft = false
 
 ### 更新情報
 
+- 2026.5.17
+  - リポジトリの更新リリース情報
+    - [toppers/hakoniwa-ecu-multiplay v1.3.0](https://github.com/toppers/hakoniwa-ecu-multiplay/releases/tag/v1.3.0) (2026.5.17)
+      - コンテナイメージを Docker Hubから GHCR へ移行
+      - `atk2-sc1`・`a-comstack`・`a-rtegen` を subtree として取り込み
+      - README に目次・A-RTEGEN ビルド手順・環境変数説明を追加
 - 2026.5.7
   - リポジトリの更新リリース情報
     - [hakoniwalab/hakoniwa-pdu-python v1.2.3](https://github.com/hakoniwalab/hakoniwa-pdu-python/releases/tag/v1.2.3) (2026.5.7)
@@ -33,20 +39,13 @@ draft = false
 - 2026.5.5
   - リポジトリの更新リリース情報
     - [toppers/hakoniwa-drone-core v3.8.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.8.0) (2026.5.5)
-      - リリースノート：
-      - https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v3.8.0.md
+      - [リリースノート](https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v3.8.0.md)
 - 2026.5.3
   - リポジトリの更新リリース情報
     - [hakoniwalab/hakoniwa-mujoco-robots v1.2.0](https://github.com/hakoniwalab/hakoniwa-mujoco-robots/releases/tag/v1.2.0) (2026.5.3)
 - 2026.5.2
   - リポジトリの更新リリース情報
     - [hakoniwalab/hakoniwa-godot v0.0.1](https://github.com/hakoniwalab/hakoniwa-godot/releases/tag/v0.0.1) (2026.5.2)
-- 2026.5.17
-  - リポジトリの更新リリース情報
-    - [toppers/hakoniwa-ecu-multiplay v1.3.0](https://github.com/toppers/hakoniwa-ecu-multiplay/releases/tag/v1.3.0) (2026.5.17)
-      - コンテナイメージを Docker Hubから GHCR へ移行
-      - `atk2-sc1`・`a-comstack`・`a-rtegen` を subtree として取り込み
-      - README に目次・A-RTEGEN ビルド手順・環境変数説明を追加
 - 2026.4.23
   - リポジトリの更新リリース情報
     - [toppers/hakoniwa-drone-core v3.7.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.7.1) (2026.4.23)

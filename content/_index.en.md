@@ -23,6 +23,30 @@ In the series titled "[Recommendations for Embedded Development in the Cloud Age
 
 ### What's New
 
+- 2026.5.17
+  - Repository updates and release information
+    - [toppers/hakoniwa-ecu-multiplay v1.3.0](https://github.com/toppers/hakoniwa-ecu-multiplay/releases/tag/v1.3.0) (2026.5.17)
+      - Migrated container images from Docker Hub to GHCR
+      - Incorporated `atk2-sc1`, `a-comstack`, and `a-rtegen` as subtrees
+      - Added table of contents, A-RTEGEN build instructions, and environment variable descriptions to README
+- 2026.5.7
+  - Repository updates and release information
+    - [hakoniwalab/hakoniwa-pdu-python v1.2.3](https://github.com/hakoniwalab/hakoniwa-pdu-python/releases/tag/v1.2.3) (2026.5.7)
+    - [hakoniwalab/hakoniwa-pdu-rpc v1.0.0](https://github.com/hakoniwalab/hakoniwa-pdu-rpc/releases/tag/v1.0.0) (2026.5.7)
+    - [hakoniwalab/hakoniwa-pdu-endpoint v1.0.1](https://github.com/hakoniwalab/hakoniwa-pdu-endpoint/releases/tag/v1.0.1) (2026.5.7)
+- 2026.5.6
+  - Repository updates and release information
+    - [hakoniwalab/hakoniwa-core-pro v1.2.0](https://github.com/hakoniwalab/hakoniwa-core-pro/releases/tag/v1.2.0) (2026.5.6)
+- 2026.5.5
+  - Repository updates and release information
+    - [toppers/hakoniwa-drone-core v3.8.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.8.0) (2026.5.5)
+      - [Release note](https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v3.8.0.md)
+- 2026.5.3
+  - Repository updates and release information
+    - [hakoniwalab/hakoniwa-mujoco-robots v1.2.0](https://github.com/hakoniwalab/hakoniwa-mujoco-robots/releases/tag/v1.2.0) (2026.5.3)
+- 2026.5.2
+  - Repository updates and release information
+    - [hakoniwalab/hakoniwa-godot v0.0.1](https://github.com/hakoniwalab/hakoniwa-godot/releases/tag/v0.0.1) (2026.5.2)
 - 2026.4.23
   - Repository updates and release information
     - [toppers/hakoniwa-drone-core v3.7.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.7.1) (2026.4.23)

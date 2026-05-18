@@ -2324,7 +2324,222 @@ Rgb_r,g,b には，カラーセンサで取得できる数値を表示してい�
 &lt;li&gt;モノづくりスペシャリストのための情報ポータル「&lt;a href="https://monoist.atmarkit.co.jp/"&gt;MONOist&lt;/a&gt;」に連載記事を寄稿しています。&lt;br&gt;
 &lt;strong&gt;「&lt;a href="https://monoist.atmarkit.co.jp/mn/series/23683/"&gt;仮想環境を使ったクラウド時代の組み込み開発のススメ&lt;/a&gt;」&lt;/strong&gt; という連載タイトルにて、箱庭の活動を織り交ぜながらこれからのIoTシステム開発の姿を紹介しています。ぜひご覧ください。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://toppers.github.io/hakoniwa/topics/#top"&gt;このページの先頭に戻る&lt;/a&gt;&lt;/p&gt;</description></item><item><title>トピックス・イベント案内</title><link>https://toppers.github.io/hakoniwa/update/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/update/</guid><description>&lt;h3 id="2024年"&gt;2024年&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://toppers.github.io/hakoniwa/topics/#top"&gt;このページの先頭に戻る&lt;/a&gt;&lt;/p&gt;</description></item><item><title>トピックス・イベント案内</title><link>https://toppers.github.io/hakoniwa/update/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://toppers.github.io/hakoniwa/update/</guid><description>&lt;h3 id="2025年"&gt;2025年&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;2025.12.22
+&lt;ul&gt;
+&lt;li&gt;リポジトリの更新リリース情報
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/v2.2.2"&gt;toppers/hakoniwa-ros2pdu v2.2.2&lt;/a&gt; (2025.12.22)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-pdu-csharp/releases/tag/v2.0.2"&gt;toppers/hakoniwa-pdu-csharp v2.0.2&lt;/a&gt; (2025.12.22)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.4.1"&gt;toppers/hakoniwa-drone-core v3.4.1&lt;/a&gt; (2025.12.22)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.5.0"&gt;toppers/hakoniwa-drone-core v3.5.0&lt;/a&gt; (2025.12.22)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v3.5.0.md"&gt;リリースノート&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2025.11.1
+&lt;ul&gt;
+&lt;li&gt;リポジトリの更新リリース情報
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/2.2.1"&gt;toppers/hakoniwa-ros2pdu 2.2.1&lt;/a&gt; (2025.10.23)
+&lt;ul&gt;
+&lt;li&gt;不具合修正&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.4.0"&gt;toppers/hakoniwa-drone-core v3.4.0&lt;/a&gt; (2025.10.22)
+&lt;ul&gt;
+&lt;li&gt;MuJoCo 連携機能の追加&lt;/li&gt;
+&lt;li&gt;Gemini 連携機能の追加&lt;/li&gt;
+&lt;li&gt;Scratch 連携機能の追加&lt;/li&gt;
+&lt;li&gt;箱庭ドローンPROユーザ向けの機能アップデート&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.3.1"&gt;toppers/hakoniwa-drone-core v3.3.1&lt;/a&gt; (2025.10.22)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-core-cpp/releases/tag/v1.1.1"&gt;toppers/hakoniwa-core-cpp v1.1.1&lt;/a&gt; (2025.10.16)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/v2.2.0"&gt;toppers/hakoniwa-ros2pdu v2.2.0&lt;/a&gt; (2025.10.16)
+&lt;ul&gt;
+&lt;li&gt;javascript 対応&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-pdu-csharp/releases/tag/v2.0.1"&gt;toppers/hakoniwa-pdu-csharp v2.0.1&lt;/a&gt; (2025.10.16)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-webserver/releases/tag/v1.0.1"&gt;toppers/hakoniwa-webserver v1.0.1&lt;/a&gt; (2025.10.16)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-bridge/releases/tag/v2.0.1"&gt;toppers/hakoniwa-bridge v2.0.1&lt;/a&gt; (2025.10.16)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2025.9.11
+&lt;ul&gt;
+&lt;li&gt;リポジトリの更新リリース情報
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.3.0"&gt;toppers/hakoniwa-drone-core v3.3.0&lt;/a&gt; (2025.9.11)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.2.2"&gt;toppers/hakoniwa-drone-core v3.2.2&lt;/a&gt; (2025.9.11)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.2.1"&gt;toppers/hakoniwa-drone-core v3.2.1&lt;/a&gt; (2025.8.15)
+&lt;ul&gt;
+&lt;li&gt;箱庭コアを&lt;a href="https://github.com/toppers/hakoniwa-core-cpp-client"&gt;旧版&lt;/a&gt;から&lt;a href="https://github.com/hakoniwalab/hakoniwa-core-pro"&gt;新版&lt;/a&gt; へ刷新した&lt;/li&gt;
+&lt;li&gt;データ受信イベント機能&lt;/li&gt;
+&lt;li&gt;RPCサービス機能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2025.7.29
+&lt;ul&gt;
+&lt;li&gt;リポジトリの更新リリース情報
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.2.0"&gt;toppers/hakoniwa-drone-core v3.2.0&lt;/a&gt; (2025.7.29)
+&lt;ul&gt;
+&lt;li&gt;ライセンス案内の追加（PRO版リンク含む）&lt;/li&gt;
+&lt;li&gt;Unreal Engine 対応の明記&lt;/li&gt;
+&lt;li&gt;ドローンAPI・外部環境APIの紹介セクション追加&lt;/li&gt;
+&lt;li&gt;他OSSとの比較追加（柔軟性、開かれた設計思想）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-sim-csharp/releases/tag/v2.0.0"&gt;toppers/hakoniwa-sim-csharp v2.0.0&lt;/a&gt; (2025.7.29)
+&lt;ul&gt;
+&lt;li&gt;package.json のバージョンが 1.0.0 → 1.2.3 へ&lt;/li&gt;
+&lt;li&gt;Plugins/linux ディレクトリと libshakoc.so、およびメタファイルが追加されています&lt;/li&gt;
+&lt;li&gt;Windows (shakoc.dll) や macOS (libconductor.dylib, libshakoc.dylib) 向けバイナリが更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-pdu-csharp/releases/tag/v2.0.0"&gt;toppers/hakoniwa-pdu-csharp v2.0.0&lt;/a&gt; (2025.7.29)
+&lt;ul&gt;
+&lt;li&gt;HakoHeartbeat や HakoSystemTime などの Mavlink 系メッセージ、監視カメラ関連 (MonitorCameraCmd, MonitorCameraData) など複数の PDU クラスが新規追加&lt;/li&gt;
+&lt;li&gt;DisturbanceAtm、DisturbanceBoundary といった大気・境界条件を表すクラスが追加され、Disturbance クラスに新フィールドとして追加&lt;/li&gt;
+&lt;li&gt;AddTwoIntsRequest 等、サービス通信のためのメッセージとパケットクラスが新設&lt;/li&gt;
+&lt;li&gt;ドローン状態を保持する DroneStatus クラスが追加&lt;/li&gt;
+&lt;li&gt;Time など多くの既存メッセージファイルに using 句の追加やフィールド修正&lt;/li&gt;
+&lt;li&gt;動的確保を行う DynamicAllocator を用いたエンコード処理へと更新され、可変長配列データをヒープ領域に展開する仕組みが導入&lt;/li&gt;
+&lt;li&gt;package.json のバージョンが 1.0.0 から 1.4.0 へ更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-webserver/releases/tag/v1.0.0"&gt;toppers/hakoniwa-webserver v1.0.0&lt;/a&gt; (2025.7.29)
+&lt;ul&gt;
+&lt;li&gt;PDU リクエスト受信に対応&lt;/li&gt;
+&lt;li&gt;WebSocket 実装で RequestPduRead 受信時にサーバへリクエストを登録する処理を追加&lt;/li&gt;
+&lt;li&gt;非同期送信用に _send_packet() と send_packet_threadsafe() を実装&lt;/li&gt;
+&lt;li&gt;HakoPduServer にオンデマンド PDU 読み出しキューを追加&lt;/li&gt;
+&lt;li&gt;リアルタイム同期用スクリプト real_time_syncher.py を新規追加&lt;/li&gt;
+&lt;li&gt;WebSocket 実装でイベントループを保持し、起動時に設定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-ros2pdu/releases/tag/v2.1.0"&gt;toppers/hakoniwa-ros2pdu v2.1.0&lt;/a&gt; (2025.7.29)
+&lt;ul&gt;
+&lt;li&gt;Python言語サポートの追加&lt;/li&gt;
+&lt;li&gt;PDU (Protocol Data Unit) のPythonクラスを自動生成する機能が追加&lt;/li&gt;
+&lt;li&gt;PythonでPDUの読み書きや変換を行うためのライブラリ、テンプレート、ユーティリティが多数追加&lt;/li&gt;
+&lt;li&gt;Hakoniwaサービスメッセージ機能の追加&lt;/li&gt;
+&lt;li&gt;ROSのServiceのように、リクエストとレスポンスを行うための新しいメッセージ型 (hako_srv_msgs) が追加&lt;/li&gt;
+&lt;li&gt;新しいメッセージの追加:Disturbance (外乱)、DroneStatus (ドローン状態)、MonitorCamera (監視カメラ)&lt;/li&gt;
+&lt;li&gt;テストの拡充&lt;/li&gt;
+&lt;li&gt;ドキュメントの更新&lt;/li&gt;
+&lt;li&gt;PDUのバイナリ↔構造体変換処理のリファクタリングとバグ修正&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-core-cpp-client/releases/tag/v2.0.1"&gt;toppers/hakoniwa-core-cpp-client v2.0.1&lt;/a&gt; (2025.7.29)
+&lt;ul&gt;
+&lt;li&gt;外乱（disturbance）機能の追加&lt;/li&gt;
+&lt;li&gt;Hakoモニターカメラへのオフセット設定の追加&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.1.9-1"&gt;toppers/hakoniwa-drone-core v3.1.9-1&lt;/a&gt; (2025.7.25)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2025.6.27
+&lt;ul&gt;
+&lt;li&gt;リポジトリの更新リリース情報
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.1.9"&gt;toppers/hakoniwa-drone-core v3.1.9&lt;/a&gt; (2025.6.27)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-conductor/releases/tag/v2.0.0"&gt;toppers/hakoniwa-conductor v2.0.0&lt;/a&gt; (2025.6.26)
+&lt;ul&gt;
+&lt;li&gt;最新バージョンの箱庭コア機能に対応&lt;/li&gt;
+&lt;li&gt;テスト環境を docker compose で再構築&lt;/li&gt;
+&lt;li&gt;READMEの整備&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2025.5.29
+&lt;ul&gt;
+&lt;li&gt;リポジトリの更新リリース情報
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.1.0"&gt;toppers/hakoniwa-drone-core v3.1.0&lt;/a&gt; (2025.5.29)
+&lt;ul&gt;
+&lt;li&gt;外部環境（風、温度）の正式サポート&lt;/li&gt;
+&lt;li&gt;WSL/DockerでのPython API連携対応&lt;/li&gt;
+&lt;li&gt;UnityのWebAvatarの大幅アップデート(hakoniwa-unity-droneのバージョンは&lt;a href="https://github.com/hakoniwalab/hakoniwa-unity-drone/releases/tag/v3.1.0"&gt;v3.1.0&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;カメラ、LiDAR, 衝突検出、バッテリー対応、&lt;/li&gt;
+&lt;li&gt;荷物運搬、ゲームコントローラ対応&lt;/li&gt;
+&lt;li&gt;箱庭ドローンPROバイナリの不具合修正等&lt;/li&gt;
+&lt;li&gt;Windowsバイナリのアップデート(win.zip)&lt;/li&gt;
+&lt;li&gt;Windows Pythonライブラリ群(python.zip) 　※sharesim で連携する場合は必要となります。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2025.5.23
+&lt;ul&gt;
+&lt;li&gt;リポジトリの更新リリース情報
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.0.1"&gt;hakoniwa-drone-core v3.0.1&lt;/a&gt; (2025.5.18)
+&lt;ul&gt;
+&lt;li&gt;Windows / Mac / Linux のバイナリパッケージのアップデート&lt;/li&gt;
+&lt;li&gt;Windows Pythonライブラリのアップデート&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2025.3.29
+&lt;ul&gt;
+&lt;li&gt;リポジトリの更新リリース情報
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.0.0"&gt;hakoniwa-drone-core v3.0.0&lt;/a&gt; (2025.3.26)
+&lt;ul&gt;
+&lt;li&gt;大阪万博向けのイベントで利用する箱庭ドローンシミュレータの公開&lt;/li&gt;
+&lt;li&gt;箱庭機能あり/無しの両方で利用できるように利用手順書とサンプルを公開&lt;/li&gt;
+&lt;li&gt;Windows / Mac / Linux のバイナリパッケージ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2025.3.11
+&lt;ul&gt;
+&lt;li&gt;リポジトリの更新リリース情報
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v2.0.0"&gt;hakoniwa-drone-core v2.0.0&lt;/a&gt; (2025.3.7)
+&lt;ul&gt;
+&lt;li&gt;PX4 連携のサンプルアプリ公開(&amp;lt;&lt;em&gt;os名&lt;/em&gt;&amp;gt;-aircraft_service_px4)&lt;/li&gt;
+&lt;li&gt;Ardupilot 連携のサンプルアプリ公開(&amp;lt;&lt;em&gt;os名&lt;/em&gt;&amp;gt;-aircraft_service_ardupilot)&lt;/li&gt;
+&lt;li&gt;箱庭ドローンのサンプルアプリ公開(&amp;lt;&lt;em&gt;os名&lt;/em&gt;&amp;gt;-drone_servce_rc)&lt;/li&gt;
+&lt;li&gt;箱庭ドローンPro Cライブラリ公開(hako_service_c)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-drone-core/releases/tag/v1.0.0"&gt;hakoniwa-drone-core v1.0.0&lt;/a&gt; (2025.2.3)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-sim-csharp/releases/tag/v1.0.0"&gt;hakoniwa-sim-csharp v1.0.0&lt;/a&gt; (2025.1.4)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toppers/hakoniwa-pdu-csharp/releases/tag/v1.0.0"&gt;hakoniwa-pdu-csharp v1.0.0&lt;/a&gt; (2025.1.4)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2024年"&gt;2024年&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;2024.12.19
 &lt;ul&gt;

@@ -23,6 +23,21 @@ In the series titled "[Recommendations for Embedded Development in the Cloud Age
 
 ### What's New
 
+- 2026.6.18
+  - Repository updates and release information
+    - [toppers/hakoniwa-drone-core v4.0.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v4.0.0) (2026.6.18)
+      - [Release notes](https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v4.0.0.md)
+- 2026.6.17
+  - Repository updates and release information
+    - [toppers/hakoniwa-drone-core v3.8.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.8.1) (2026.6.17)
+    - [hakoniwalab/hakoniwa-core-pro v1.3.0](https://github.com/hakoniwalab/hakoniwa-core-pro/releases/tag/v1.3.0) (2026.6.17)
+- 2026.5.31
+  - Repository updates and release information
+    - [hakoniwalab/hakoniwa-mujoco-robots v1.3.0](https://github.com/hakoniwalab/hakoniwa-mujoco-robots/releases/tag/v1.3.0) (2026.5.31)
+      - Support for the latest Hakoniwa core features (incompatible change; the core must be reinstalled)
+- 2026.5.30
+  - Repository updates and release information
+    - [hakoniwalab/hakoniwa-core-pro v1.2.1](https://github.com/hakoniwalab/hakoniwa-core-pro/releases/tag/v1.2.1) (2026.5.30)
 - 2026.5.17
   - Repository updates and release information
     - [toppers/hakoniwa-ecu-multiplay v1.3.0](https://github.com/toppers/hakoniwa-ecu-multiplay/releases/tag/v1.3.0) (2026.5.17)

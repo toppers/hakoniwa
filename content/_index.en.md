@@ -26,7 +26,7 @@ In the series titled "[Recommendations for Embedded Development in the Cloud Age
 - 2026.6.18
   - Repository updates and release information
     - [toppers/hakoniwa-drone-core v4.0.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v4.0.0) (2026.6.18)
-      - [Release notes](https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v4.0.0.md)
+      - [Release note](https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v4.0.0.md)
 - 2026.6.17
   - Repository updates and release information
     - [toppers/hakoniwa-drone-core v3.8.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.8.1) (2026.6.17)

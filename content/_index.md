@@ -8,6 +8,9 @@ draft = false
 
 ### トピックス・イベント案内
 
+- 2026年8月13日(木)に オンラインイベント を開催します
+  - [箱庭 × AI Night ― AIが箱庭を使い始める夜 ―](https://hakoniwa.connpass.com/event/402284/)
+
 [もっと見る](topics)
 
 ### 更新情報

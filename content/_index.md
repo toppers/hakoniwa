@@ -22,6 +22,21 @@ draft = false
 
 ### 更新情報
 
+- 2026.6.18
+  - リポジトリの更新リリース情報
+    - [toppers/hakoniwa-drone-core v4.0.0](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v4.0.0) (2026.6.18)
+      - [リリースノート](https://github.com/toppers/hakoniwa-drone-core/blob/main/docs/upgrade_v4.0.0.md)
+- 2026.6.17
+  - リポジトリの更新リリース情報
+    - [toppers/hakoniwa-drone-core v3.8.1](https://github.com/toppers/hakoniwa-drone-core/releases/tag/v3.8.1) (2026.6.17)
+    - [hakoniwalab/hakoniwa-core-pro v1.3.0](https://github.com/hakoniwalab/hakoniwa-core-pro/releases/tag/v1.3.0) (2026.6.17)
+- 2026.5.31
+  - リポジトリの更新リリース情報
+    - [hakoniwalab/hakoniwa-mujoco-robots v1.3.0](https://github.com/hakoniwalab/hakoniwa-mujoco-robots/releases/tag/v1.3.0) (2026.5.31)
+      - 箱庭コア機能の最新機能対応（非互換になるので、コア機能の再インストールが必要）
+- 2026.5.30
+  - リポジトリの更新リリース情報
+    - [hakoniwalab/hakoniwa-core-pro v1.2.1](https://github.com/hakoniwalab/hakoniwa-core-pro/releases/tag/v1.2.1) (2026.5.30)
 - 2026.5.17
   - リポジトリの更新リリース情報
     - [toppers/hakoniwa-ecu-multiplay v1.3.0](https://github.com/toppers/hakoniwa-ecu-multiplay/releases/tag/v1.3.0) (2026.5.17)
